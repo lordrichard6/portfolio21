@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import Link from 'next/link'
 
 import { Variables } from "../../assets/variables";
 import logo from "../../public/icon.png";
@@ -20,10 +21,11 @@ export default function Navbar() {
         </LogoContainer>
         <ItemsContainer>
           <li>
-            <a>Home</a>
+            <Link href='/' ><a>Home</a></Link>
+            
           </li>
           <li>
-            <a>myProjects</a>
+          <Link href='/projects' ><a>myProjects</a></Link>
           </li>
           <li>
             <a>mySkills</a>
@@ -76,6 +78,7 @@ const ItemsContainer = styled.ul`
   font-size: 1.8rem;
   font-weight: 200;
   margin: 0;
+  z-index: 2;
   li {
     padding-right: 1rem;
     padding-left: 1rem;
