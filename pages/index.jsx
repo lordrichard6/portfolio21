@@ -7,6 +7,8 @@ import Header from '../components/_homepage/Header'
 import AboutMe from '../components/_homepage/AboutMe'
 import MyPassions from '../components/_homepage/MyPassions'
 
+import Footer from '../components/Footer'
+
 export default function Home() {
   return (
     <MainContainer>
@@ -19,6 +21,7 @@ export default function Home() {
       <Header />
       <AboutMe />
       <MyPassions />
+      <Footer />
     </MainContainer>
   );
 }

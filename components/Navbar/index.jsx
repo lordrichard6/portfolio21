@@ -28,10 +28,10 @@ export default function Navbar() {
           <Link href='/projects' ><a>myProjects</a></Link>
           </li>
           <li>
-            <a>mySkills</a>
+          <Link href='/skills' ><a>mySkills</a></Link>
           </li>
           <li>
-            <a>myBlog</a>
+          <Link href='/404' ><a>myBlog</a></Link>
           </li>
         </ItemsContainer>
       </InnerContainer>

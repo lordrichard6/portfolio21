@@ -1,20 +1,22 @@
 import styled from "styled-components";
 
 import Navbar from "../components/Navbar";
-import Header from "../components/_projects/Header";
-import Developer from "../components/_projects/Developer";
-import Designer from "../components/_projects/Designer";
-import Photoshop from "../components/_projects/Photoshop";
+import Header from "../components/_skills/Header";
+import SkillsExp from '../components/_skills/Skills&Experience'
+import Techs from '../components/_skills/Techs'
+import Education from '../components/_skills/Education'
+
+
 import Footer from '../components/Footer'
 
-export default function ProjectsPage() {
+export default function SkillsPage() {
     return (
         <PageContainer>
             <Navbar />
             <Header />
-            <Developer />
-            <Designer />
-            <Photoshop />
+            <SkillsExp />
+            <Techs />
+            <Education />
             <Footer />
         </PageContainer>
     )
