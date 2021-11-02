@@ -12,18 +12,18 @@ export default function FormComponent() {
         <input
           type="text"
           name="name"
-          value='name'
+          // value='name'
           placeholder="Name"
         />
         <input
           type="email"
           name="email"
-          value='email'
+          // value='email'
           placeholder="Email"
         />
         <textarea
           name="message"
-          value='message'
+          // value='message'
           placeholder="Message"
         />
       </form>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faReact,
@@ -24,7 +25,7 @@ export default function Footer() {
         <SectionContainer>
           <HeaderTitle>Thanks for visiting</HeaderTitle>
           <LogoContainer>
-            <img src={logo} alt="logo" />
+            <Image src={logo} alt="paulo reizinho" />
             <h2>Paulo Reizinho</h2>
           </LogoContainer>
           <SmallText>This website is powered by:</SmallText>

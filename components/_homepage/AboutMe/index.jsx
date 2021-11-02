@@ -18,7 +18,7 @@ export default function AboutMe() {
         <h1>About me</h1>
         <p>
           My name is Paulo Reizinho, is was born in 1986 in a small town in the
-          middle of Portugal but I'm currently living in Swiss land more
+          middle of Portugal but I`m currently living in Swiss land more
           precisely in Zurich.
           <br />
           <br />
@@ -30,11 +30,11 @@ export default function AboutMe() {
           what it takes.
           <br />
           <br />
-          Well, I've been learning web Development since 2019 with highs and
+          Well, I`ve been learning web Development since 2019 with highs and
           lows. Focusing on the front-end with a special interest in the design
-          of visually appealing UI and an intuitive UX so people don't get lost.
+          of visually appealing UI and an intuitive UX so people don`t get lost.
           My main tech is React, but my learning journey will never stop, but
-          I'm leaning more to Next.js. I do my designs with Figma and Photoshop,
+          I`m leaning more to Next.js. I do my designs with Figma and Photoshop,
           for styling I like to use a hybrid approach with styled-components and
           tailwind, which bring a organized and maintainable code and beautifull
           to look at.
@@ -44,7 +44,7 @@ export default function AboutMe() {
         </p>
       </LeftContainer>
       <RightContainer>
-        <Image src={picture} objectFit="cover" />
+        <Image src={picture} alt='paulo lopes reizinho' objectFit="cover" />
       </RightContainer>
     </SectionContainer>
   );

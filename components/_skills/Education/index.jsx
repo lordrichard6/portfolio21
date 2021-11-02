@@ -7,9 +7,9 @@ export default function Education() {
   return (
     <PageContainer>
       <SectionTitle>Courses</SectionTitle>
-      {courses.map((n, index) => {
+      {courses.map((n, i) => {
         return (
-          <InnerContainer>
+          <InnerContainer key={i}>
             <CourseTitle>{n.title}</CourseTitle>
             <TextSchool>{n.school}</TextSchool>
             <TextBase>

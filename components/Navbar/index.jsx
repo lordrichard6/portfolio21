@@ -17,7 +17,7 @@ export default function Navbar() {
       />
       <InnerContainer>
         <LogoContainer>
-          <Image src={logo} height="60px" width="60px" />
+          <Image src={logo} alt="paulo lopes reizinho" height="60px" width="60px" />
         </LogoContainer>
         <ItemsContainer>
           <li>

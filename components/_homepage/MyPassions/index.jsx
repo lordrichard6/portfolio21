@@ -17,6 +17,7 @@ export default function MyPassions() {
               objectPosition="center"
               width={400}
               height={300}
+              alt='picture'
             />
           </Picture>
           <Text>
@@ -44,6 +45,7 @@ export default function MyPassions() {
               objectPosition="center"
               width={400}
               height={300}
+              alt='picture'
             />
           </Picture>
         </Hobby>
@@ -55,6 +57,7 @@ export default function MyPassions() {
               objectPosition="center"
               width={400}
               height={300}
+              alt='picture'
             />
           </Picture>
           <Text>
@@ -82,6 +85,7 @@ export default function MyPassions() {
               objectPosition="center"
               width={400}
               height={300}
+              alt='picture'
             />
           </Picture>
         </Hobby>

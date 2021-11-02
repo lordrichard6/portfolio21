@@ -9,16 +9,56 @@ export default function Photoshop() {
     <SectionContainer>
       <h1>Photoshop</h1>
       <Projects>
-        <Image src={picture} objectFit="cover" objectPosition="center" />
-        <Image src={picture} objectFit="cover" objectPosition="center" />
-        <Image src={picture} objectFit="cover" objectPosition="center" />
-        <Image src={picture} objectFit="cover" objectPosition="center" />
+        <Image
+          src={picture}
+          objectFit="cover"
+          objectPosition="center"
+          alt="picture"
+        />
+        <Image
+          src={picture}
+          objectFit="cover"
+          objectPosition="center"
+          alt="picture"
+        />
+        <Image
+          src={picture}
+          objectFit="cover"
+          objectPosition="center"
+          alt="picture"
+        />
+        <Image
+          src={picture}
+          objectFit="cover"
+          objectPosition="center"
+          alt="picture"
+        />
       </Projects>
       <Projects>
-        <Image src={picture} objectFit="cover" objectPosition="center" />
-        <Image src={picture} objectFit="cover" objectPosition="center" />
-        <Image src={picture} objectFit="cover" objectPosition="center" />
-        <Image src={picture} objectFit="cover" objectPosition="center" />
+        <Image
+          src={picture}
+          objectFit="cover"
+          objectPosition="center"
+          alt="picture"
+        />
+        <Image
+          src={picture}
+          objectFit="cover"
+          objectPosition="center"
+          alt="picture"
+        />
+        <Image
+          src={picture}
+          objectFit="cover"
+          objectPosition="center"
+          alt="picture"
+        />
+        <Image
+          src={picture}
+          objectFit="cover"
+          objectPosition="center"
+          alt="picture"
+        />
       </Projects>
     </SectionContainer>
   );

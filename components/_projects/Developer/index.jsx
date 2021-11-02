@@ -13,8 +13,7 @@ export default function Developer() {
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
       </MainProject>
       <SecondaryProjects>
@@ -22,15 +21,13 @@ export default function Developer() {
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
         <Image
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
       </SecondaryProjects>
       <OtherProjects>
@@ -38,29 +35,25 @@ export default function Developer() {
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
         <Image
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
         <Image
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
         <Image
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
       </OtherProjects>
       <OtherProjects>
@@ -68,29 +61,25 @@ export default function Developer() {
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
         <Image
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
         <Image
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
         <Image
           src={picture}
           objectFit="cover"
           objectPosition="center"
-          //   width={400}
-        //   height={1200}
+          alt='picture'
         />
       </OtherProjects>
     </SectionContainer>

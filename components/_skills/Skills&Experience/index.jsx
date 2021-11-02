@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Image from "next/image";
 
 import { Variables } from '../../../assets/variables'
 import { ProgressBar } from './progressBar'
@@ -12,17 +13,17 @@ export default function SkillsExp() {
                     <Title>Skills &<br />Experience</Title>
                     <p>
                         Based on my personal choice and time spent learning, I have stronger skills on the front-end,
-                        the visual aspect is of big importance and on that I feel like a "Monet" looking to create my
-                        "Lady with the Umbrella". <br/>
+                        the visual aspect is of big importance and on that I feel like a Monet looking to create my
+                        Lady with the Umbrella. <br/>
                         I have learned HTML and CSS, then went on to Javascript, then Sass. I decided to go to React as
-                        my framework(library) of choice, not because of it's popularity, but because of it's component
+                        my framework(library) of choice, not because of it`s popularity, but because of it`s component
                         based structure and workflow. <br/>
-                        But anyway, i don't mean to leave you on a cliffhanger but if you
+                        But anyway, i don`t mean to leave you on a cliffhanger but if you
                         want to hear more about my learning path and work experience, feel free to contact me.
 
                     </p>
                 </InnerSection>
-                <img src={logo} alt="logo" />
+                <Image src={logo} alt="logo" />
             </LeftSection>
             <RightSection>
                 <InnerSection>

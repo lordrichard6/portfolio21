@@ -27,7 +27,7 @@ export default function Header() {
         </Title>
         {/* <Animation /> */}
         <SubTitle>
-        "Solutions don't come easy"
+        Solutions don`t come easy
         </SubTitle>
       </SloganContainer>
     </SectionContainer>

@@ -16,14 +16,17 @@ export default function Techs() {
       />
       <h1>Techs</h1>
       <IconsContainer>
-        {techs.map((n) => {
+        {/* {techs.map((n) => {
           return (
             <Icon>
               <img src={n.icon} alt={n.desc} height={100} />
               <h2>{n.name}</h2>
             </Icon>
           );
-        })}
+        })} */}
+        <Icon>
+          <Image src="../../../assets/images/skills/react.png" alt="react" height={100}/>
+        </Icon>
       </IconsContainer>
     </PageContainer>
   );
