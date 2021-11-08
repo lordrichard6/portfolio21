@@ -1,5 +1,7 @@
 import styled from "styled-components";
+import React, {useState} from 'react'
 
+import Sidebar from "../components/Navbar/sidebar"
 import Navbar from "../components/Navbar";
 import Header from "../components/_projects/Header";
 import Developer from "../components/_projects/Developer";
@@ -8,9 +10,16 @@ import Photoshop from "../components/_projects/Photoshop";
 import Footer from '../components/Footer'
 
 export default function ProjectsPage() {
+    const [isOpen, setIsOpen] = useState(false)
+
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
+
     return (
         <PageContainer>
-            <Navbar />
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+            <Navbar toggle={toggle} />
             <Header />
             <Developer />
             <Designer />

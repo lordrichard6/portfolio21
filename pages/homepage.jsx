@@ -3,14 +3,13 @@ import React, { useState } from "react";
 
 import Sidebar from "../components/Navbar/sidebar";
 import Navbar from "../components/Navbar";
-import Header from "../components/_skills/Header";
-import SkillsExp from "../components/_skills/Skills&Experience";
-import Techs from "../components/_skills/Techs";
-import Education from "../components/_skills/Education";
+import Header from "../components/_homepage/Header";
+import AboutMe from "../components/_homepage/AboutMe";
+import MyPassions from "../components/_homepage/MyPassions";
 
 import Footer from "../components/Footer";
 
-export default function SkillsPage() {
+export default function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -18,19 +17,18 @@ export default function SkillsPage() {
   };
 
   return (
-    <PageContainer>
+    <HomepageContainer>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Header />
-      <SkillsExp />
-      <Techs />
-      <Education />
+      <AboutMe />
+      <MyPassions />
       <Footer />
-    </PageContainer>
+    </HomepageContainer>
   );
 }
 
-const PageContainer = styled.div`
+const HomepageContainer = styled.div`
   margin: 0;
   width: 100vw;
   min-height: 100vh;

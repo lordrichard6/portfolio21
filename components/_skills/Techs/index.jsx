@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { techs } from "../../../assets/static";
+// import { techs } from "../../../assets/static";
 import { Variables } from "../../../assets/variables";
 import pattern from "../../../assets/images/pattern.png";
 
@@ -25,7 +25,7 @@ export default function Techs() {
           );
         })} */}
         <Icon>
-          <Image src="../../../assets/images/skills/react.png" alt="react" height={100}/>
+          {/* <Image src="../../../assets/images/skills/react.png" alt="react" height={100}/> */}
         </Icon>
       </IconsContainer>
     </PageContainer>
