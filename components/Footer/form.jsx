@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FiMail } from "react-icons/fi";
 
 
 export default function FormComponent() {
@@ -29,7 +30,7 @@ export default function FormComponent() {
       </form>
       <SubmitButton type="submit">
           <Icon>
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FiMail />
           </Icon>
       </SubmitButton>
     </FormContainer>
@@ -74,9 +75,6 @@ const SubmitButton = styled.button`
     align-self: center;
     border-radius: 0.125rem;
     border: 0;
-    padding: 0.4rem;
-    /* padding-left: 0.25rem;
-    padding-right: 0.25rem; */
     margin: 0.25rem;
     background-color: #3c444f;
     color: #eee;
@@ -85,6 +83,7 @@ const SubmitButton = styled.button`
 const Icon = styled.div`
     width: 1rem;
     display: inline-block;
+    font-size: 1.2rem;
 `;
 
 const EmailSend = styled.p`

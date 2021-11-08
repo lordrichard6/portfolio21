@@ -14,38 +14,40 @@ export default function AboutMe() {
         objectFit="cover"
         objectPosition="center"
       />
-      <LeftContainer>
-        <h1>About me</h1>
-        <p>
-          My name is Paulo Reizinho, is was born in 1986 in a small town in the
-          middle of Portugal but I`m currently living in Swiss land more
-          precisely in Zurich.
-          <br />
-          <br />
-          I took Administration with focus in accounting but thing is, in which
-          i learned quite a lot and adopted an organized methodology. Anyway, I
-          love coding and the challenges that come with it specially when you
-          find a solution for an hard problem. Course is never to late to change
-          careers and create great things on the process provided that you have
-          what it takes.
-          <br />
-          <br />
-          Well, I`ve been learning web Development since 2019 with highs and
-          lows. Focusing on the front-end with a special interest in the design
-          of visually appealing UI and an intuitive UX so people don`t get lost.
-          My main tech is React, but my learning journey will never stop, but
-          I`m leaning more to Next.js. I do my designs with Figma and Photoshop,
-          for styling I like to use a hybrid approach with styled-components and
-          tailwind, which bring a organized and maintainable code and beautifull
-          to look at.
-          <br />
-          <br />
-          Any more info please contact me, all my contacts are in the footer.
-        </p>
-      </LeftContainer>
-      <RightContainer>
-        <Image src={picture} alt='paulo lopes reizinho' objectFit="cover" />
-      </RightContainer>
+      <InnerContainer>
+        <LeftContainer>
+          <h1>About me</h1>
+          <p>
+            My name is Paulo Reizinho, is was born in 1986 in a small town in
+            the middle of Portugal but I`m currently living in Swiss land more
+            precisely in Zurich.
+            <br />
+            <br />
+            I took Administration with focus in accounting but thing is, in
+            which i learned quite a lot and adopted an organized methodology.
+            Anyway, I love coding and the challenges that come with it specially
+            when you find a solution for an hard problem. Course is never to
+            late to change careers and create great things on the process
+            provided that you have what it takes.
+            <br />
+            <br />
+            Well, I`ve been learning web Development since 2019 with highs and
+            lows. Focusing on the front-end with a special interest in the
+            design of visually appealing UI and an intuitive UX so people don`t
+            get lost. My main tech is React, but my learning journey will never
+            stop, but I`m leaning more to Next.js. I do my designs with Figma
+            and Photoshop, for styling I like to use a hybrid approach with
+            styled-components and tailwind, which bring a organized and
+            maintainable code and beautifull to look at.
+            <br />
+            <br />
+            Any more info please contact me, all my contacts are in the footer.
+          </p>
+        </LeftContainer>
+        <RightContainer>
+          <Image src={picture} alt="paulo lopes reizinho" objectFit="cover" />
+        </RightContainer>
+      </InnerContainer>
     </SectionContainer>
   );
 }
@@ -53,16 +55,13 @@ export default function AboutMe() {
 const SectionContainer = styled.div`
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  /* padding-left: 8rem;
-  padding-right: 8rem; */
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  /* max-height: 100vh; */
+  padding: 5rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* align-items: center; */
-  background-color: ${Variables.primary};
+  align-items: center;
+  background: ${Variables.primary};
 `;
 
 const BG = styled(Image)`
@@ -70,9 +69,17 @@ const BG = styled(Image)`
   opacity: 0.1;
 `;
 
+const InnerContainer = styled.div`
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
 const LeftContainer = styled.div`
-  width: 40%;
-  height: 100%;
+  z-index: 1;
+  width: 50%;
   margin-right: 0.5rem;
   color: #eee;
   h1 {
@@ -80,15 +87,19 @@ const LeftContainer = styled.div`
     font-weight: 800;
   }
   p {
-    font-weight: normal;
+    font-weight: 400;
     font-size: 1.4rem;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 1.3rem;
+    }
   }
 `;
 
 const RightContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 50%;
   height: 100%;
   margin-left: 0.5rem;
 `;

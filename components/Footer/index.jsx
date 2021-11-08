@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { FaReact, FaHouseUser, FaPhoneAlt, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+import { HiMail } from "react-icons/hi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faReact,
@@ -25,13 +27,13 @@ export default function Footer() {
         <SectionContainer>
           <HeaderTitle>Thanks for visiting</HeaderTitle>
           <LogoContainer>
-            <Image src={logo} alt="paulo reizinho" />
+            <Image src={logo} alt="paulo reizinho" height={100} width={100}/>
             <h2>Paulo Reizinho</h2>
           </LogoContainer>
           <SmallText>This website is powered by:</SmallText>
           <IconContainer>
             <Icon>
-              <FontAwesomeIcon icon={faReact} />
+              <FaReact />
             </Icon>
           </IconContainer>
           <Button>
@@ -52,38 +54,38 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedin} />
+              <FaLinkedin />
             </Icon>
             <Icon
               href="https://www.instagram.com/l0rdr1chard/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faInstagram} />
+              <FaInstagram />
             </Icon>
             <Icon
               href="https://github.com/lordrichard6/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faGithubSquare} />
+              <FaGithub />
             </Icon>
           </IconContainer>
           <HorizontalContainer>
             <BlueIcon>
-              <FontAwesomeIcon icon={faDungeon} />
+              <FaHouseUser />
             </BlueIcon>
             <SmallText>Currently living in Zurich</SmallText>
           </HorizontalContainer>
           <HorizontalContainer>
             <BlueIcon>
-              <FontAwesomeIcon icon={faEnvelope} />
+              <HiMail />
             </BlueIcon>
             <SmallText>paulolopesreizinho@gmail.com</SmallText>
           </HorizontalContainer>
           <HorizontalContainer>
             <BlueIcon>
-              <FontAwesomeIcon icon={faPhoneAlt} />
+              <FaPhoneAlt />
             </BlueIcon>
             <SmallText>+41 78 798 95 33</SmallText>
           </HorizontalContainer>
@@ -143,7 +145,10 @@ const LogoContainer = styled.div`
   }
 `;
 
-const SmallText = styled.p``;
+const SmallText = styled.p`
+  /* margin-bottom: 0; */
+  justify-items: center;
+`;
 
 const Button = styled.button`
   background-color: ${Variables.primary};
@@ -151,10 +156,7 @@ const Button = styled.button`
     color: #eee;
     font-size: 1rem;
     border-radius: 0.375rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.3rem;
-    padding-right: 0.3rem;
+    padding:0.5rem 0.4rem;
     border: 0;
 `;
 
@@ -166,10 +168,12 @@ const IconContainer = styled.div`
 `;
 
 const Icon = styled.a`
-  display: block;
-  width: 2.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 2.5rem; */
+  margin:0.5rem;
+  font-size: 2rem;
 `;
 
 const HorizontalContainer = styled.div`
@@ -184,11 +188,12 @@ const BlueIcon = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2.25rem;
+  /* width: 2.25rem; */
   border-radius: 9999px;
   color: #eee;
   padding: 0.5rem;
   margin-right: 0.5rem;
+  font-size: 1.5rem;
 `;
 
 const BottomContainer = styled.div`

@@ -96,16 +96,13 @@ export default function MyPassions() {
 
 const SectionContainer = styled.div`
   width: 100%;
-  min-height: 100vh;
-  /* padding-left: 8rem;
-  padding-right: 8rem; */
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: ${Variables.primary};
+
   h1 {
     font-size: 4rem;
     font-weight: 800;
@@ -118,6 +115,10 @@ const HobbiesContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+  }
   h2 {
       font-weight: 600;
       font-size: 2rem;
@@ -125,6 +126,10 @@ const HobbiesContainer = styled.div`
   p {
     font-weight: normal;
     font-size: 1.4rem;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 1.3rem;
+    }
   }
 `;
 

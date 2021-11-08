@@ -35,18 +35,17 @@ export default function Header() {
 }
 
 const SectionContainer = styled.div`
+  width: 100%;
+  min-height: 100vh;
   position: relative;
-  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  min-height: 100vh;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  align-items: center;
 `;
 
 const SloganContainer = styled.div`
+  width: 80%;
   display: flex;
   flex-direction: column;
   z-index: 1;
