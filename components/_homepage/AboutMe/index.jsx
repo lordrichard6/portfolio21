@@ -75,6 +75,10 @@ const InnerContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 390px) {
+    flex-direction: column;
+  }
 `;
 
 const LeftContainer = styled.div`
@@ -82,9 +86,18 @@ const LeftContainer = styled.div`
   width: 50%;
   margin-right: 0.5rem;
   color: #eee;
+
+  @media screen and (max-width: 390px) {
+    width: 100%;
+    margin: 0;
+  }
   h1 {
     font-size: 4rem;
     font-weight: 800;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 3.5rem;
+    }
   }
   p {
     font-weight: 400;
@@ -102,4 +115,9 @@ const RightContainer = styled.div`
   width: 50%;
   height: 100%;
   margin-left: 0.5rem;
+
+  @media screen and (max-width: 390px) {
+    width: 100%;
+    margin: 0;
+  }
 `;

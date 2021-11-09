@@ -2,6 +2,14 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import picture from "../../../assets/images/projects/sky_02.jpg";
+import project_01 from "../../../assets/images/projects/leftBastards_logo.jpg";
+import project_02 from "../../../assets/images/projects/patricia_logo.jpg";
+import project_03 from "../../../assets/images/projects/patricia_vector.jpg";
+import project_04 from "../../../assets/images/projects/patricia_draw.jpg";
+import project_05 from "../../../assets/images/projects/me_logo.jpg";
+import project_06 from "../../../assets/images/projects/me_vector.jpg";
+import project_07 from "../../../assets/images/projects/me_comic.jpg";
+import project_08 from "../../../assets/images/projects/sardinha_logo.jpg";
 import { Variables } from "../../../assets/variables";
 
 export default function Photoshop() {
@@ -10,25 +18,25 @@ export default function Photoshop() {
       <h1>Photoshop</h1>
       <Projects>
         <Image
-          src={picture}
+          src={project_01}
           objectFit="cover"
           objectPosition="center"
           alt="picture"
         />
         <Image
-          src={picture}
+          src={project_02}
           objectFit="cover"
           objectPosition="center"
           alt="picture"
         />
         <Image
-          src={picture}
+          src={project_03}
           objectFit="cover"
           objectPosition="center"
           alt="picture"
         />
         <Image
-          src={picture}
+          src={project_04}
           objectFit="cover"
           objectPosition="center"
           alt="picture"
@@ -36,25 +44,25 @@ export default function Photoshop() {
       </Projects>
       <Projects>
         <Image
-          src={picture}
+          src={project_05}
           objectFit="cover"
           objectPosition="center"
           alt="picture"
         />
         <Image
-          src={picture}
+          src={project_06}
           objectFit="cover"
           objectPosition="center"
           alt="picture"
         />
         <Image
-          src={picture}
+          src={project_07}
           objectFit="cover"
           objectPosition="center"
           alt="picture"
         />
         <Image
-          src={picture}
+          src={project_08}
           objectFit="cover"
           objectPosition="center"
           alt="picture"

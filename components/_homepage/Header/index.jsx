@@ -58,6 +58,10 @@ const Title = styled.div`
   color: #eee;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.8rem;
+  }
 `;
 
 const SubTitle = styled.h2`
@@ -65,6 +69,10 @@ const SubTitle = styled.h2`
   font-weight: normal;
   color: #eee;
   letter-spacing: 0.2em;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const Background = styled(Image)`

@@ -17,7 +17,7 @@ export default function MyPassions() {
               objectPosition="center"
               width={400}
               height={300}
-              alt='picture'
+              alt="picture"
             />
           </Picture>
           <Text>
@@ -29,7 +29,7 @@ export default function MyPassions() {
             </p>
           </Text>
         </Hobby>
-        <Hobby>
+        <HobbyReverse>
           <Text>
             <h2>Hobby #2</h2>
             <p>
@@ -45,10 +45,10 @@ export default function MyPassions() {
               objectPosition="center"
               width={400}
               height={300}
-              alt='picture'
+              alt="picture"
             />
           </Picture>
-        </Hobby>
+        </HobbyReverse>
         <Hobby>
           <Picture>
             <Image
@@ -57,7 +57,7 @@ export default function MyPassions() {
               objectPosition="center"
               width={400}
               height={300}
-              alt='picture'
+              alt="picture"
             />
           </Picture>
           <Text>
@@ -69,7 +69,7 @@ export default function MyPassions() {
             </p>
           </Text>
         </Hobby>
-        <Hobby>
+        <HobbyReverse>
           <Text>
             <h2>Hobby #4</h2>
             <p>
@@ -85,10 +85,10 @@ export default function MyPassions() {
               objectPosition="center"
               width={400}
               height={300}
-              alt='picture'
+              alt="picture"
             />
           </Picture>
-        </Hobby>
+        </HobbyReverse>
       </HobbiesContainer>
     </SectionContainer>
   );
@@ -106,6 +106,10 @@ const SectionContainer = styled.div`
   h1 {
     font-size: 4rem;
     font-weight: 800;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 3.5rem;
+    }
   }
 `;
 
@@ -120,8 +124,12 @@ const HobbiesContainer = styled.div`
     width: 80%;
   }
   h2 {
-      font-weight: 600;
-      font-size: 2rem;
+    font-weight: 600;
+    font-size: 2rem;
+
+    @media screen and (max-width: 400px) {
+      margin: 0 1rem;
+    }
   }
   p {
     font-weight: normal;
@@ -136,17 +144,38 @@ const HobbiesContainer = styled.div`
 const Hobby = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
 `;
 
+const HobbyReverse = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column-reverse;
+  }
+`;
 
 const Picture = styled.div`
   width: 50%;
-  padding: 1rem;
+  padding: 0 1rem;
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
 `;
 
 const Text = styled.div`
   width: 50%;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+  }
 `;
