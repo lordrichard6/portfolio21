@@ -13,60 +13,64 @@ import project_08 from "../../../assets/images/projects/sardinha_logo.jpg";
 import { Variables } from "../../../assets/variables";
 
 export default function Photoshop() {
+  const data = [
+    {
+      id: 1,
+      imgSrc: project_01,
+      alt: "project",
+    },
+    {
+      id: 2,
+      imgSrc: project_02,
+      alt: "project",
+    },
+    {
+      id: 3,
+      imgSrc: project_03,
+      alt: "project",
+    },
+    {
+      id: 4,
+      imgSrc: project_04,
+      alt: "project",
+    },
+    {
+      id: 5,
+      imgSrc: project_05,
+      alt: "project",
+    },
+    {
+      id: 6,
+      imgSrc: project_06,
+      alt: "project",
+    },
+    {
+      id: 7,
+      imgSrc: project_07,
+      alt: "project",
+    },
+    {
+      id: 8,
+      imgSrc: project_08,
+      alt: "project",
+    },
+  ];
+
   return (
     <SectionContainer>
       <h1>Photoshop</h1>
       <Projects>
-        <Image
-          src={project_01}
-          objectFit="cover"
-          objectPosition="center"
-          alt="picture"
-        />
-        <Image
-          src={project_02}
-          objectFit="cover"
-          objectPosition="center"
-          alt="picture"
-        />
-        <Image
-          src={project_03}
-          objectFit="cover"
-          objectPosition="center"
-          alt="picture"
-        />
-        <Image
-          src={project_04}
-          objectFit="cover"
-          objectPosition="center"
-          alt="picture"
-        />
-      </Projects>
-      <Projects>
-        <Image
-          src={project_05}
-          objectFit="cover"
-          objectPosition="center"
-          alt="picture"
-        />
-        <Image
-          src={project_06}
-          objectFit="cover"
-          objectPosition="center"
-          alt="picture"
-        />
-        <Image
-          src={project_07}
-          objectFit="cover"
-          objectPosition="center"
-          alt="picture"
-        />
-        <Image
-          src={project_08}
-          objectFit="cover"
-          objectPosition="center"
-          alt="picture"
-        />
+        {data.map((item, index) => {
+          return (
+            <Image
+              key={index}
+              src={item.imgSrc}
+              objectFit="cover"
+              objectPosition="center"
+              alt={item.alt}
+            />
+          );
+        })}
       </Projects>
     </SectionContainer>
   );
@@ -88,8 +92,6 @@ const SectionContainer = styled.div`
 
 const Projects = styled.div`
   width: 100%;
-  max-height: 60vh;
-  min-height: 60vh;
-  display: flex;
-  flex-direction: row;
+  column-count: 4;
+  gap: 0;
 `;

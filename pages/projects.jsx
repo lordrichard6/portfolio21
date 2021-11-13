@@ -9,6 +9,8 @@ import Designer from "../components/_projects/Designer";
 import Photoshop from "../components/_projects/Photoshop";
 import Footer from '../components/Footer'
 
+import Variables from "../assets/variables"
+
 export default function ProjectsPage() {
     const [isOpen, setIsOpen] = useState(false)
 
@@ -36,5 +38,6 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #0094B5;
   /* overflow-x: hidden; */
 `;
