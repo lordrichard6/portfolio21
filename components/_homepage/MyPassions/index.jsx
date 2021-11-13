@@ -5,90 +5,63 @@ import { Variables } from "../../../assets/variables";
 import hobby01 from "../../../assets/images/homepage/sky_01.jpg";
 
 export default function MyPassions() {
+  const data = [
+    {
+      title: "hobby#1",
+      imgSrc: hobby01,
+      alt: "image",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
+      className: "hobby",
+    },
+    {
+      title: "hobby#2",
+      imgSrc: hobby01,
+      alt: "image",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
+      className: "hobby-reverse",
+    },
+    {
+      title: "hobby#3",
+      imgSrc: hobby01,
+      alt: "image",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
+      className: "hobby",
+    },
+    {
+      title: "hobby#4",
+      imgSrc: hobby01,
+      alt: "image",
+      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
+      className: "hobby-reverse",
+    },
+  ];
+
   return (
     <SectionContainer>
       <h1>My Passions</h1>
       <HobbiesContainer>
-        <Hobby>
-          <Picture>
-            <Image
-              src={hobby01}
-              objectFit="cover"
-              objectPosition="center"
-              width={400}
-              height={300}
-              alt="picture"
-            />
-          </Picture>
-          <Text>
-            <h2>Hobby #1</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
-              amet dis lacus, sit pellentesque cras mus faucibus. Morbi tempus
-              malesuada quisque pulvinar mattis arcu.{" "}
-            </p>
-          </Text>
-        </Hobby>
-        <HobbyReverse>
-          <Text>
-            <h2>Hobby #2</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
-              amet dis lacus, sit pellentesque cras mus faucibus. Morbi tempus
-              malesuada quisque pulvinar mattis arcu.{" "}
-            </p>
-          </Text>
-          <Picture>
-            <Image
-              src={hobby01}
-              objectFit="cover"
-              objectPosition="center"
-              width={400}
-              height={300}
-              alt="picture"
-            />
-          </Picture>
-        </HobbyReverse>
-        <Hobby>
-          <Picture>
-            <Image
-              src={hobby01}
-              objectFit="cover"
-              objectPosition="center"
-              width={400}
-              height={300}
-              alt="picture"
-            />
-          </Picture>
-          <Text>
-            <h2>Hobby #3</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
-              amet dis lacus, sit pellentesque cras mus faucibus. Morbi tempus
-              malesuada quisque pulvinar mattis arcu.{" "}
-            </p>
-          </Text>
-        </Hobby>
-        <HobbyReverse>
-          <Text>
-            <h2>Hobby #4</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum
-              amet dis lacus, sit pellentesque cras mus faucibus. Morbi tempus
-              malesuada quisque pulvinar mattis arcu.{" "}
-            </p>
-          </Text>
-          <Picture>
-            <Image
-              src={hobby01}
-              objectFit="cover"
-              objectPosition="center"
-              width={400}
-              height={300}
-              alt="picture"
-            />
-          </Picture>
-        </HobbyReverse>
+        {data.map((item, i) => {
+          return (
+            <div className={item.className} key={i}>
+              <Picture>
+                <Image
+                  src={item.imgSrc}
+                  objectFit="cover"
+                  objectPosition="center"
+                  width={400}
+                  height={300}
+                  alt={item.alt}
+                />
+              </Picture>
+              <Text>
+                <h2>{item.title}</h2>
+                <p>
+                  {item.text}
+                </p>
+              </Text>
+            </div>
+          );
+        })}
       </HobbiesContainer>
     </SectionContainer>
   );
@@ -123,6 +96,23 @@ const HobbiesContainer = styled.div`
   @media screen and (max-width: 1024px) {
     width: 80%;
   }
+  .hobby {
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width: 400px) {
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+  }
+  .hobby-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @media screen and (max-width: 400px) {
+      flex-direction: column;
+    }
+  }
   h2 {
     font-weight: 600;
     font-size: 2rem;
@@ -138,25 +128,6 @@ const HobbiesContainer = styled.div`
     @media screen and (max-width: 1024px) {
       font-size: 1.3rem;
     }
-  }
-`;
-
-const Hobby = styled.div`
-  display: flex;
-  flex-direction: row;
-
-  @media screen and (max-width: 400px) {
-    flex-direction: column;
-    margin-bottom: 1rem;
-  }
-`;
-
-const HobbyReverse = styled.div`
-  display: flex;
-  flex-direction: row;
-
-  @media screen and (max-width: 400px) {
-    flex-direction: column-reverse;
   }
 `;
 

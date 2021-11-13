@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { BsArrowDownLeftCircleFill } from "react-icons/bs";
-import picture from "../../../assets/images/projects/sky_02.jpg";
 import fastRent from "../../../assets/images/projects/dev/p10-min.jpg";
 import lastPortfolio from "../../../assets/images/projects/dev/p09-min.jpg";
 import skyTours from "../../../assets/images/projects/dev/p06-min.jpg";
@@ -123,10 +122,9 @@ export default function Developer() {
       <MainProject>
         {data.main.map((item, index) => {
           return (
-            <ProjectWrapper>
+            <ProjectWrapper key={index}>
               <ImageWrapper>
                 <Image
-                  key={index}
                   src={item.image}
                   objectFit="cover"
                   objectPosition="center"
@@ -156,10 +154,9 @@ export default function Developer() {
       <SecondaryProjects>
         {data.secondary.map((item, index) => {
           return (
-            <ProjectWrapper>
+            <ProjectWrapper key={index}>
               <ImageWrapper>
                 <Image
-                  key={index}
                   src={item.image}
                   objectFit="cover"
                   objectPosition="center"
@@ -189,10 +186,9 @@ export default function Developer() {
       <OtherProjects>
         {data.other.map((item, index) => {
           return (
-            <ProjectWrapper>
+            <ProjectWrapper key={index}>
               <ImageWrapper>
                 <Image
-                  key={index}
                   src={item.image}
                   objectFit="cover"
                   objectPosition="center"

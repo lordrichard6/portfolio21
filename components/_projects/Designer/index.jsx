@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { BsArrowDownLeftCircleFill } from "react-icons/bs";
 import project_portfolio from "../../../assets/images/projects/project_portfolio.jpg";
 import project_leftBastards from "../../../assets/images/projects/project_leftBastards.jpg";
 import project_patricia from "../../../assets/images/projects/project_patricia.jpg";
@@ -44,7 +43,6 @@ export default function Designer() {
                   src={item.imgSrc}
                   objectFit="cover"
                   objectPosition="center"
-                  // layout="fill"
                   alt={item.alt}
                 />
               </ImageWrapper>
@@ -68,7 +66,6 @@ export default function Designer() {
 
 const SectionContainer = styled.div`
   width: 100%;
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -84,7 +81,7 @@ const ProjectsContainer = styled.div`
   width: 100%;
   column-count: 3;
   gap: 0;
-`
+`;
 
 const ProjectWrapper = styled.div`
   position: relative;

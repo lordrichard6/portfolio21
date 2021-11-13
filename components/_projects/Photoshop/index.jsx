@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import picture from "../../../assets/images/projects/sky_02.jpg";
 import project_01 from "../../../assets/images/projects/leftBastards_logo.jpg";
 import project_02 from "../../../assets/images/projects/patricia_logo.jpg";
 import project_03 from "../../../assets/images/projects/patricia_vector.jpg";

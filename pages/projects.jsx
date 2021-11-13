@@ -1,34 +1,34 @@
 import styled from "styled-components";
-import React, {useState} from 'react'
+import React, { useState } from "react";
 
-import Sidebar from "../components/Navbar/sidebar"
+import Sidebar from "../components/Navbar/sidebar";
 import Navbar from "../components/Navbar";
 import Header from "../components/_projects/Header";
 import Developer from "../components/_projects/Developer";
 import Designer from "../components/_projects/Designer";
 import Photoshop from "../components/_projects/Photoshop";
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 
-import Variables from "../assets/variables"
+import { Variables } from "../assets/variables";
 
 export default function ProjectsPage() {
-    const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
-    setIsOpen(!isOpen)
-  }
+    setIsOpen(!isOpen);
+  };
 
-    return (
-        <PageContainer>
-            <Sidebar isOpen={isOpen} toggle={toggle} />
-            <Navbar toggle={toggle} />
-            <Header />
-            <Developer />
-            <Designer />
-            <Photoshop />
-            <Footer />
-        </PageContainer>
-    )
+  return (
+    <PageContainer>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
+      <Header />
+      <Developer />
+      <Designer />
+      <Photoshop />
+      <Footer />
+    </PageContainer>
+  );
 }
 
 const PageContainer = styled.div`
@@ -38,6 +38,6 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #0094B5;
+  background: ${Variables.primary};
   /* overflow-x: hidden; */
 `;

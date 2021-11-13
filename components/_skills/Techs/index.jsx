@@ -16,7 +16,6 @@ import {
 import {
   SiGraphql,
   SiDjango,
-  
   SiNextdotjs,
   SiTypescript,
   SiHtml5,
@@ -29,6 +28,80 @@ import { Variables } from "../../../assets/variables";
 import pattern from "../../../assets/images/pattern.png";
 
 export default function Techs() {
+  const data = [
+    {
+      icon: <FaReact />,
+      name: "react",
+    },
+    {
+      icon: <SiNextdotjs />,
+      name: "next",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "typescript",
+    },
+    {
+      icon: <SiHtml5 />,
+      name: "html",
+    },
+    {
+      icon: <FaCss3 />,
+      name: "css",
+    },
+    {
+      icon: <SiJavascript />,
+      name: "javascript",
+    },
+    {
+      icon: <FaNodeJs />,
+      name: "node",
+    },
+    {
+      icon: <SiAdobephotoshop />,
+      name: "photoshop",
+    },
+    {
+      icon: <FaFigma />,
+      name: "figma",
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: "tailwind",
+    },
+    {
+      icon: <SiStyledcomponents />,
+      name: "styled components",
+    },
+    {
+      icon: <FaNpm />,
+      name: "npm",
+    },
+    {
+      icon: <FaYarn />,
+      name: "yarn",
+    },
+    {
+      icon: <FaGitAlt />,
+      name: "git",
+    },
+    {
+      icon: <FaPython />,
+      name: "python",
+    },
+    {
+      icon: <SiDjango />,
+      name: "django",
+    },
+    {
+      icon: <FaSass />,
+      name: "sass",
+    },
+    {
+      icon: <SiGraphql />,
+      name: "graphql",
+    },
+  ];
   return (
     <PageContainer>
       <BG
@@ -39,78 +112,14 @@ export default function Techs() {
       />
       <h1>Techs</h1>
       <IconsContainer>
-        <Icon>
-          <FaReact />
-          <h2>react</h2>
-        </Icon>
-        <Icon>
-          <SiNextdotjs />
-          <h2>next</h2>
-        </Icon>
-        <Icon>
-          <SiTypescript />
-          <h2>typescript</h2>
-        </Icon>
-        <Icon>
-          <SiHtml5 />
-          <h2>html</h2>
-        </Icon>
-        <Icon>
-          <FaCss3 />
-          <h2>css</h2>
-        </Icon>
-        <Icon>
-          <SiJavascript />
-          <h2>javascript</h2>
-        </Icon>
-        <Icon>
-          <FaNodeJs />
-          <h2>node</h2>
-        </Icon>
-        <Icon>
-          <SiAdobephotoshop />
-          <h2>photoshop</h2>
-        </Icon>
-        <Icon>
-          <FaFigma />
-          <h2>figma</h2>
-        </Icon>
-        <Icon>
-          <SiTailwindcss />
-          <h2>tailwind</h2>
-        </Icon>
-        <Icon>
-          <SiStyledcomponents />
-          <h2>styled components</h2>
-        </Icon>
-        <Icon>
-          <FaNpm />
-          <h2>npm</h2>
-        </Icon>
-        <Icon>
-          <FaYarn />
-          <h2>yarn</h2>
-        </Icon>
-        <Icon>
-          <FaGitAlt />
-          <h2>git</h2>
-        </Icon>
-        <Icon>
-          <FaPython />
-          <h2>python</h2>
-        </Icon>
-        <Icon>
-          <SiDjango />
-          <h2>django</h2>
-        </Icon>
-        <Icon>
-          <FaSass />
-          <h2>sass</h2>
-        </Icon>
-        <Icon>
-          <SiGraphql />
-          <h2>graphql</h2>
-        </Icon>
+        {data.map((item, i) => {
+          return (
+            <Icon key={i}>
+              {item.icon}
+              <h2>{item.name}</h2>
+            </Icon>
+          );
+        })}
       </IconsContainer>
     </PageContainer>
   );
