@@ -2,27 +2,13 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import { Colors } from "../../../assets/variables";
-import pattern from "../../../assets/images/pattern.png";
-import picture from "../../../assets/images/homepage/blue_01.jpg";
+import { aboutMe } from "../../../assets/data";
 
 export default function AboutMe() {
-  const data = {
-    title: "About Me",
-    text01:
-      "My name is Paulo Reizinho, is was born in 1986 in a small town in the middle of Portugal but I`m currently living in Swiss land more precisely in Zurich.",
-    text02:
-      "I took Administration with focus in accounting but thing is, in which i learned quite a lot and adopted an organized methodology. Anyway, I love coding and the challenges that come with it specially when you find a solution for an hard problem. Course is never to late to change careers and create great things on the process provided that you have what it takes.",
-    text03:
-      "Well, I`ve been learning web Development since 2019 with highs and lows. Focusing on the front-end with a special interest in the design of visually appealing UI and an intuitive UX so people don`t get lost. My main tech is React, but my learning journey will never stop, but I`m leaning more to Next.js. I do my designs with Figma and Photoshop, for styling I like to use a hybrid approach with styled-components and tailwind, which bring a organized and maintainable code and beautifull to look at.",
-    text04:
-      "Any more info please contact me, all my contacts are in the footer.",
-    sideImg: picture,
-    imgAlt: "paulo lopes reizinho",
-  };
   return (
     <SectionContainer>
       <BG
-        src={pattern}
+        src={aboutMe.pattern}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
@@ -30,22 +16,22 @@ export default function AboutMe() {
       />
       <InnerContainer>
         <LeftContainer>
-          <h1>{data.title}</h1>
+          <h1>{aboutMe.title}</h1>
           <p>
-            {data.text01}
+            {aboutMe.text01}
             <br />
             <br />
-            {data.text02}
+            {aboutMe.text02}
             <br />
             <br />
-            {data.text03}
+            {aboutMe.text03}
             <br />
             <br />
-            {data.text04}
+            {aboutMe.text04}
           </p>
         </LeftContainer>
         <RightContainer>
-          <Image src={data.sideImg} alt={data.imgAlt} objectFit="cover" />
+          <Image src={aboutMe.sideImg} alt={aboutMe.imgAlt} objectFit="cover" />
         </RightContainer>
       </InnerContainer>
     </SectionContainer>

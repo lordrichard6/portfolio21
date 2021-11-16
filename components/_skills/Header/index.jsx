@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import ReactTypingEffect from "react-typing-effect";
 
-import background from "../../../assets/images/skills/header_03.jpg";
+import { skillsHeader } from "../../../assets/data";
 import { Colors } from "../../../assets/variables";
 // import Animation from './animation'
 
@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <SectionContainer>
       <Background
-        src={background}
+        src={skillsHeader.backgroundImage}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
@@ -42,7 +42,6 @@ const Title = styled.div`
   font-weight: 400;
   color: ${Colors.primary};
   text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.secondary};
-  /* color: #eee; */
   display: flex;
   flex-direction: column;
 

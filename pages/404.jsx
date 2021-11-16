@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Image from "next/image";
 import Link from 'next/link'
 
-import { Variables } from '../assets/variables'
+import { Colors } from '../assets/variables'
 import logo from '../public/icon.png'
 
 export default function Page404() {
@@ -27,7 +27,7 @@ const PageContainer = styled.div`
 
 const Title = styled.h1`
         margin: 0;
-        color: ${Variables.primary};
+        color: ${Colors.primary};
         font-size: 3.25rem;
         font-weight: 400;
         letter-spacing: 0.1em;

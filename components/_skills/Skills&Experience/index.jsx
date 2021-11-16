@@ -1,21 +1,11 @@
 import styled from "styled-components";
-import Image from "next/image";
+// import Image from "next/image";
 
+import { skillsAndExperience, skillsExperience } from "../../../assets/data";
 import { Colors } from "../../../assets/variables";
 import { ProgressBar } from "./progressBar";
-import logo from "../../../public/icon.png";
 
 export default function SkillsExp() {
-  const data = {
-    title: "Skills & Experience",
-    text01:
-      "Based on my personal choice and time spent learning, I have stronger skills on the front-end, the visual aspect is of big importance and on that I feel like a Monet looking to create my Lady with the Umbrella.",
-    text02:
-      " have learned HTML and CSS, then went on to Javascript, then Sass. I decided to go to React as my framework(library) of choice, not because of it`s popularity, but because of it`s component based structure and workflow.",
-    text03:
-      "But anyway, i don`t mean to leave you on a cliffhanger but if you want to hear more about my learning path and work experience, feel free to contact me.",
-  };
-
   const skillsBarData = [
     {
       title: "Front-End",
@@ -34,25 +24,18 @@ export default function SkillsExp() {
       progress: 80,
     },
   ];
-  const expData = [
-    {
-      title: "Front-End",
-      company: "Feinheit",
-      period: "2019 - 2020",
-      text: "An Agency for webdesign, online markting, campaining, social media, CMS and IT Infrastructure.",
-    },
-  ];
+
   return (
     <SectionContainer>
       <LeftSection>
         <InnerSection>
-          <Title>{data.title}</Title>
+          <Title>{skillsAndExperience.title}</Title>
           <p>
-            {data.text01}
+            {skillsAndExperience.text01}
             <br />
-            {data.text02}
+            {skillsAndExperience.text02}
             <br />
-            {data.text03}
+            {skillsAndExperience.text03}
           </p>
         </InnerSection>
         {/* <Image src={logo} alt="logo" /> */}
@@ -70,10 +53,10 @@ export default function SkillsExp() {
             })}
           </SkillsContainer>
           <ExperienceContainer>
-            <h2>{expData[0].title}</h2>
-            <h3>{expData[0].company}</h3>
-            <p>{expData[0].period}</p>
-            <p>{expData[0].text}</p>
+            <h2>{skillsExperience[0].title}</h2>
+            <h3>{skillsExperience[0].company}</h3>
+            <p>{skillsExperience[0].period}</p>
+            <p>{skillsExperience[0].text}</p>
           </ExperienceContainer>
         </InnerSection>
       </RightSection>

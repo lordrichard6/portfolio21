@@ -2,18 +2,19 @@ import styled from "styled-components";
 import Image from "next/image";
 import ReactTypingEffect from "react-typing-effect";
 
-import background from "../../../assets/images/projects/header_02.jpg";
-import { Variables } from "../../../assets/variables";
+import { projectsHeader } from "../../../assets/data";
+import { Colors } from "../../../assets/variables";
 // import Animation from './animation'
 
 export default function Header() {
   return (
     <SectionContainer>
       <Background
-        src={background}
+        src={projectsHeader.backgroundImage}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
+        alt="painting of van goth"
       />
       <Title>
         <ReactTypingEffect text="myProjects" speed={120} eraseDelay={700} />
@@ -33,6 +34,7 @@ const SectionContainer = styled.div`
   width: 100%;
   min-height: 100vh;
   padding-left: 8rem;
+  
   @media screen and (max-width: 390px) {
     padding: 0;
     align-items: center;
@@ -46,9 +48,8 @@ const Title = styled.div`
   z-index: 1;
   font-size: 4rem;
   font-weight: 400;
-  color: ${Variables.primary};
-  /* color: #eee; */
-  /* flex-direction: column; */
+  color: ${Colors.primary};
+
   @media screen and (min-width: 2560px) {
     font-size: 5rem;
   }

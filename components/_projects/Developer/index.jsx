@@ -3,135 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { BsArrowDownLeftCircleFill } from "react-icons/bs";
-import fastRent from "../../../assets/images/projects/dev/p10-min.jpg";
-import lastPortfolio from "../../../assets/images/projects/dev/p09-min.jpg";
-import skyTours from "../../../assets/images/projects/dev/p06-min.jpg";
-import hulu from "../../../assets/images/projects/dev/p08-min.jpg";
-import trainedMonkeys from "../../../assets/images/projects/dev/p05-min.jpg";
-import paulsEngine from "../../../assets/images/projects/dev/p07-min.jpg";
-import netflix from "../../../assets/images/projects/dev/p02-min.jpg";
-import sphere from "../../../assets/images/projects/dev/p11-min.jpg";
-import comicPortfolio from "../../../assets/images/projects/dev/p14-min.jpg";
-import blueVariant from "../../../assets/images/projects/dev/latest_01.jpg";
-import leftBastards from "../../../assets/images/projects/dev/latest_03.jpg";
-import sardinha from "../../../assets/images/projects/dev/latest_02.jpg";
-import myPortfolio from "../../../assets/images/projects/dev/latest_04.jpg";
 
-import { Variables } from "../../../assets/variables";
+import { projectsDev } from "../../../assets/data";
+import { Colors } from "../../../assets/variables";
 
 export default function Developer() {
-  const data = {
-    // main: [
-    //   {
-    //     id: 1,
-    //     image: sardinha,
-    //     alt: "patricia project",
-    //     title: "Private Chauffeur",
-    //     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-    //     link: "https://patricia-vila-nova.vercel.app/",
-    //   },
-    // ],
-    secondary: [
-      {
-        id: 1,
-        image: sardinha,
-        alt: "patricia project",
-        title: "Private Chauffeur",
-        text: "A project for a friend that has her own driving service.",
-        link: "https://patricia-vila-nova.vercel.app/",
-      },
-      {
-        id: 2,
-        image: myPortfolio,
-        alt: "paulo reizinho portfolio",
-        title: "Portfolio",
-        text: "This very own website a marvel of design.",
-        link: "/",
-      },
-      {
-        id: 3,
-        image: leftBastards,
-        alt: "left bastards",
-        title: "Left Bastards",
-        text: "The official website of the car lovers group called, Left Bastards",
-        link: "https://patricia-vila-nova.vercel.app/",
-      },
-      {
-        id: 4,
-        image: blueVariant,
-        alt: "paulo reizinho portfolio",
-        title: "Portfolio old",
-        text: "The first version of this website's design",
-        link: "https://lordrichard-cv-blue.netlify.app/",
-      },
-    ],
-    other: [
-      {
-        id: 1,
-        image: fastRent,
-        alt: "car rental website",
-        title: "FastRent",
-        text: "A beautifull car rental website made with React using typescript. Used styled-components together with tailwind to style the page.",
-        link: "https://lordrichard-rentfast.netlify.app/",
-      },
-      {
-        id: 2,
-        image: lastPortfolio,
-        alt: "old portfolio",
-        title: "An old Portfolio",
-        text: "Created with React.js with and elengant and simplistic design",
-        link: "https://reizinhocv.netlify.app/",
-      },
-      {
-        id: 3,
-        image: skyTours,
-        alt: "world tours website",
-        title: "Skytours",
-        text: "This project was initially built using html and Sass, then later I converted to React maintaning the Sass styling system, elegant design of a tours agency.",
-        link: "https://reizinho-skytours.netlify.com/",
-      },
-      {
-        id: 4,
-        image: hulu,
-        alt: "movie streaming platform hulu",
-        title: "Hulu clone",
-        text: "Built with Next.js imitating the design of the famous movie streaming platform Hulu, using the database of an API movie site TMDB.",
-        link: "https://hulu-clone-rosy.vercel.app/",
-      },
-      {
-        id: 5,
-        image: trainedMonkeys,
-        alt: "eshop for trained monkeys",
-        title: "Monkey Circus",
-        text: "A mocking E-comerce to sell monkeys, with a credit card payment implemented.",
-        link: "https://monkeycircus-2z4e865i4.now.sh",
-      },
-      {
-        id: 6,
-        image: comicPortfolio,
-        alt: "portfolio design based on comics",
-        title: "Comic Portfolio",
-        text: "A very creative portfolio with a comic theme.",
-        link: "https://new-cv-parallax.netlify.app/",
-      },
-      {
-        id: 7,
-        image: sphere,
-        alt: "three.js project",
-        title: "The Sphere",
-        text: "My first play with Three.js.",
-        link: "https://lordrichard-threejs-sphere.netlify.app/",
-      },
-      {
-        id: 8,
-        image: paulsEngine,
-        alt: "google api used",
-        title: "Paul's Engine",
-        text: "A project build with Next.js using the google search API.",
-        link: "https://paul-search.vercel.app/",
-      },
-    ],
-  };
 
   return (
     <SectionContainer>
@@ -169,7 +45,7 @@ export default function Developer() {
         })}
       </MainProject> */}
       <SecondaryProjects>
-        {data.secondary.map((item, index) => {
+        {projectsDev.secondary.map((item, index) => {
           return (
             <ProjectWrapper key={index}>
               <ImageWrapper>
@@ -201,7 +77,7 @@ export default function Developer() {
         })}
       </SecondaryProjects>
       <OtherProjects>
-        {data.other.map((item, index) => {
+        {projectsDev.other.map((item, index) => {
           return (
             <ProjectWrapper key={index}>
               <ImageWrapper>
@@ -243,7 +119,7 @@ const SectionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${Variables.white};
+  color: ${Colors.white};
   h1 {
     font-size: 4rem;
     font-weight: 400;
@@ -403,7 +279,7 @@ const ProjectWrapper = styled.div`
     }
   }
   p {
-    color: ${Variables.white};
+    color: ${Colors.white};
     line-height: 1.2;
     opacity: 0;
     transform: translateY(10px);
@@ -426,7 +302,7 @@ const ProjectWrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: ${Variables.white};
+    color: ${Colors.white};
     line-height: 1.2;
     opacity: 0;
     transform: translateY(10px);

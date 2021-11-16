@@ -2,48 +2,14 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import { Colors } from "../../../assets/variables";
-import hobby_01 from "../../../assets/images/homepage/hobby_01.jpg";
-import hobby_02 from "../../../assets/images/homepage/hobby_02.jpg";
-import hobby_03 from "../../../assets/images/homepage/hobby_03.jpg";
-import hobby_04 from "../../../assets/images/homepage/hobby_04.jpg";
+import { hobbies } from "../../../assets/data";
 
 export default function MyPassions() {
-  const data = [
-    {
-      title: "hobby#1",
-      imgSrc: hobby_01,
-      alt: "image",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
-      className: "hobby",
-    },
-    {
-      title: "hobby#2",
-      imgSrc: hobby_02,
-      alt: "image",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
-      className: "hobby-reverse",
-    },
-    {
-      title: "hobby#3",
-      imgSrc: hobby_03,
-      alt: "image",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
-      className: "hobby",
-    },
-    {
-      title: "hobby#4",
-      imgSrc: hobby_04,
-      alt: "image",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
-      className: "hobby-reverse",
-    },
-  ];
-
   return (
     <SectionContainer>
       <h1>My Passions</h1>
       <HobbiesContainer>
-        {data.map((item, i) => {
+        {hobbies.map((item, i) => {
           return (
             <div className={item.className} key={i}>
               <Picture>
@@ -51,16 +17,12 @@ export default function MyPassions() {
                   src={item.imgSrc}
                   objectFit="cover"
                   objectPosition="center"
-                  // width={400}
-                  // height={300}
                   alt={item.alt}
                 />
               </Picture>
               <Text>
                 <h2>{item.title}</h2>
-                <p>
-                  {item.text}
-                </p>
+                <p>{item.text}</p>
               </Text>
             </div>
           );

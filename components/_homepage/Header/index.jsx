@@ -2,8 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import ReactTypingEffect from "react-typing-effect";
 
-import background from "../../../assets/images/homepage/header_01.jpg";
-import logo from "../../../public/logo_white.png";
+import { homeHeader } from "../../../assets/data";
 import { Colors } from "../../../assets/variables";
 // import Animation from './animation'
 
@@ -11,10 +10,11 @@ export default function Header() {
   return (
     <SectionContainer>
       <Background
-        src={background}
+        src={homeHeader.backgroundImage}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
+        alt="sky is not the limit"
       />
       <InnerContainer>
         <SloganContainer>
@@ -28,10 +28,10 @@ export default function Header() {
             />
           </Title>
           {/* <Animation /> */}
-          <SubTitle>Solutions don`t come easy</SubTitle>
+          <SubTitle>{homeHeader.subTitle}</SubTitle>
         </SloganContainer>
         <ImageContainer>
-          <Image src={logo} alt="logo" />
+          <Image src={homeHeader.logo} alt="lopes logo" />
         </ImageContainer>
       </InnerContainer>
     </SectionContainer>

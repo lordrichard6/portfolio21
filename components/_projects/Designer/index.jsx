@@ -1,41 +1,15 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import project_portfolio from "../../../assets/images/projects/project_portfolio.png";
-import project_leftBastards from "../../../assets/images/projects/project_leftBastards.png";
-import project_patricia from "../../../assets/images/projects/project_patricia.png";
-import { Variables } from "../../../assets/variables";
+import { projectsDesign } from "../../../assets/data";
+import { Colors } from "../../../assets/variables";
 
 export default function Designer() {
-  let data = [
-    {
-      id: 1,
-      imgSrc: project_portfolio,
-      alt: "the mockups of this website",
-      title: "This website mockups",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-    },
-    {
-      id: 2,
-      imgSrc: project_leftBastards,
-      alt: "the mockups of the left bastards website",
-      title: "Left Bastards mockups",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-    },
-    {
-      id: 3,
-      imgSrc: project_patricia,
-      alt: "the mockups of patricia website",
-      title: "Private Chauffeur mockups",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-    },
-  ];
-
   return (
     <SectionContainer>
       <h1>Designer</h1>
       <ProjectsContainer>
-        {data.map((item, index) => {
+        {projectsDesign.map((item, index) => {
           return (
             <ProjectWrapper key={index}>
               <ImageWrapper>
@@ -70,7 +44,7 @@ const SectionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${Variables.white};
+  color: ${Colors.white};
   h1 {
     font-size: 4rem;
     font-weight: 400;
@@ -191,7 +165,7 @@ const ProjectWrapper = styled.div`
     }
   }
   p {
-    color: ${Variables.white};
+    color: ${Colors.white};
     line-height: 1.2;
     opacity: 0;
     transform: translateY(10px);
@@ -203,7 +177,7 @@ const ProjectWrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: ${Variables.white};
+    color: ${Colors.white};
     line-height: 1.2;
     opacity: 0;
     transform: translateY(10px);
