@@ -15,103 +15,120 @@ import comicPortfolio from "../../../assets/images/projects/dev/p14-min.jpg";
 import blueVariant from "../../../assets/images/projects/dev/latest_01.jpg";
 import leftBastards from "../../../assets/images/projects/dev/latest_03.jpg";
 import sardinha from "../../../assets/images/projects/dev/latest_02.jpg";
+import myPortfolio from "../../../assets/images/projects/dev/latest_04.jpg";
 
 import { Variables } from "../../../assets/variables";
 
 export default function Developer() {
   const data = {
-    main: [
+    // main: [
+    //   {
+    //     id: 1,
+    //     image: sardinha,
+    //     alt: "patricia project",
+    //     title: "Private Chauffeur",
+    //     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
+    //     link: "https://patricia-vila-nova.vercel.app/",
+    //   },
+    // ],
+    secondary: [
       {
         id: 1,
         image: sardinha,
         alt: "patricia project",
         title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-        link: "https://patricia-vila-nova.vercel.app/",
-      },
-    ],
-    secondary: [
-      {
-        id: 1,
-        image: leftBastards,
-        alt: "left bastards",
-        title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
+        text: "A project for a friend that has her own driving service.",
         link: "https://patricia-vila-nova.vercel.app/",
       },
       {
         id: 2,
-        image: blueVariant,
-        alt: "my portfolio",
-        title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
+        image: myPortfolio,
+        alt: "paulo reizinho portfolio",
+        title: "Portfolio",
+        text: "This very own website a marvel of design.",
+        link: "/",
+      },
+      {
+        id: 3,
+        image: leftBastards,
+        alt: "left bastards",
+        title: "Left Bastards",
+        text: "The official website of the car lovers group called, Left Bastards",
         link: "https://patricia-vila-nova.vercel.app/",
+      },
+      {
+        id: 4,
+        image: blueVariant,
+        alt: "paulo reizinho portfolio",
+        title: "Portfolio old",
+        text: "The first version of this website's design",
+        link: "https://lordrichard-cv-blue.netlify.app/",
       },
     ],
     other: [
       {
         id: 1,
         image: fastRent,
-        alt: "car rental",
-        title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-        link: "https://patricia-vila-nova.vercel.app/",
+        alt: "car rental website",
+        title: "FastRent",
+        text: "A beautifull car rental website made with React using typescript. Used styled-components together with tailwind to style the page.",
+        link: "https://lordrichard-rentfast.netlify.app/",
       },
       {
         id: 2,
         image: lastPortfolio,
-        alt: "my last portfolio",
-        title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-        link: "https://patricia-vila-nova.vercel.app/",
+        alt: "old portfolio",
+        title: "An old Portfolio",
+        text: "Created with React.js with and elengant and simplistic design",
+        link: "https://reizinhocv.netlify.app/",
       },
       {
         id: 3,
         image: skyTours,
         alt: "world tours website",
-        title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-        link: "https://patricia-vila-nova.vercel.app/",
+        title: "Skytours",
+        text: "This project was initially built using html and Sass, then later I converted to React maintaning the Sass styling system, elegant design of a tours agency.",
+        link: "https://reizinho-skytours.netlify.com/",
       },
       {
         id: 4,
         image: hulu,
         alt: "movie streaming platform hulu",
-        title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-        link: "https://patricia-vila-nova.vercel.app/",
+        title: "Hulu clone",
+        text: "Built with Next.js imitating the design of the famous movie streaming platform Hulu, using the database of an API movie site TMDB.",
+        link: "https://hulu-clone-rosy.vercel.app/",
       },
       {
         id: 5,
         image: trainedMonkeys,
-        alt: "eshop for mtrained monkeys",
-        title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-        link: "https://patricia-vila-nova.vercel.app/",
+        alt: "eshop for trained monkeys",
+        title: "Monkey Circus",
+        text: "A mocking E-comerce to sell monkeys, with a credit card payment implemented.",
+        link: "https://monkeycircus-2z4e865i4.now.sh",
       },
       {
         id: 6,
         image: comicPortfolio,
         alt: "portfolio design based on comics",
-        title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-        link: "https://patricia-vila-nova.vercel.app/",
+        title: "Comic Portfolio",
+        text: "A very creative portfolio with a comic theme.",
+        link: "https://new-cv-parallax.netlify.app/",
       },
       {
         id: 7,
         image: sphere,
         alt: "three.js project",
-        title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-        link: "https://patricia-vila-nova.vercel.app/",
+        title: "The Sphere",
+        text: "My first play with Three.js.",
+        link: "https://lordrichard-threejs-sphere.netlify.app/",
       },
       {
         id: 8,
         image: paulsEngine,
         alt: "google api used",
-        title: "Private Chauffeur",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-        link: "https://patricia-vila-nova.vercel.app/",
+        title: "Paul's Engine",
+        text: "A project build with Next.js using the google search API.",
+        link: "https://paul-search.vercel.app/",
       },
     ],
   };
@@ -119,7 +136,7 @@ export default function Developer() {
   return (
     <SectionContainer>
       <h1>Developer</h1>
-      <MainProject>
+      {/* <MainProject>
         {data.main.map((item, index) => {
           return (
             <ProjectWrapper key={index}>
@@ -127,7 +144,7 @@ export default function Developer() {
                 <Image
                   src={item.image}
                   objectFit="cover"
-                  objectPosition="center"
+                  objectPosition="bottom"
                   alt={item.alt}
                 />
               </ImageWrapper>
@@ -150,7 +167,7 @@ export default function Developer() {
             </ProjectWrapper>
           );
         })}
-      </MainProject>
+      </MainProject> */}
       <SecondaryProjects>
         {data.secondary.map((item, index) => {
           return (
@@ -202,10 +219,10 @@ export default function Developer() {
                 <span></span>
                 <span></span>
                 <span></span>
-                <h2>{item.title}</h2>
-                <p>{item.text}</p>
+                <h2 className="small-title">{item.title}</h2>
+                <p className="small-text">{item.text}</p>
                 <div className="link-wrap">
-                  <h3>Go to website</h3>
+                  <h3 className="mobile-none">Go to website</h3>
                   <Link href={item.link}>
                     <BsArrowDownLeftCircleFill className="link" />
                   </Link>
@@ -230,21 +247,29 @@ const SectionContainer = styled.div`
   h1 {
     font-size: 4rem;
     font-weight: 400;
+    text-shadow: 1px 2px 4px #00000081;
   }
 `;
 
-const MainProject = styled.div`
-  width: 100vw;
-  max-height: 80vh;
-  display: flex;
-  justify-content: center;
-`;
+// const MainProject = styled.div`
+//   width: 100vw;
+//   height: 80vh;
+//   display: flex;
+//   justify-content: center;
+// `;
 
 const SecondaryProjects = styled.div`
   width: 100%;
-  max-height: 50vh;
-  display: flex;
-  flex-direction: row;
+  /* max-height: 50vh; */
+  /* display: flex; */
+  columns: 2;
+  gap: 0;
+  /* flex-direction: row; */
+
+  @media screen and (max-width: 390px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const OtherProjects = styled.div`
@@ -252,6 +277,10 @@ const OtherProjects = styled.div`
   /* height: 60vh; */
   column-count: 4;
   gap: 0;
+
+  @media screen and (max-width: 390px) {
+    columns: 2;
+  }
 `;
 
 const ProjectWrapper = styled.div`
@@ -259,6 +288,24 @@ const ProjectWrapper = styled.div`
   text-align: center;
   overflow: hidden;
 
+  .small-text {
+    @media screen and (max-width: 390px) {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+  }
+  .small-title {
+    @media screen and (max-width: 390px) {
+      font-size: 1rem;
+      margin: 2px;
+      margin-bottom: 4px;
+    }
+  }
+  .mobile-none {
+    @media screen and (max-width: 390px) {
+      display: none;
+    }
+  }
   .overlay {
     position: absolute;
     top: 0;
@@ -276,7 +323,7 @@ const ProjectWrapper = styled.div`
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    filter: blur(5px);
+    /* filter: blur(5px); */
 
     transform: skewX(-30deg);
     transition: 0.5s;
@@ -349,6 +396,11 @@ const ProjectWrapper = styled.div`
     transition: 0.5s;
     transition-timing-function: linear;
     transform: translateY(-10px);
+
+    @media screen and (min-width: 2560px) {
+      font-size: 3rem;
+      letter-spacing: 10px;
+    }
   }
   p {
     color: ${Variables.white};
@@ -357,6 +409,17 @@ const ProjectWrapper = styled.div`
     transform: translateY(10px);
     transition: 0.5s;
     transition-timing-function: linear;
+
+    @media screen and (min-width: 2560px) {
+      font-size: 1.6rem;
+      /* letter-spacing: 10px; */
+    }
+  }
+  h3 {
+    @media screen and (min-width: 2560px) {
+      font-size: 1.8rem;
+      /* letter-spacing: 10px; */
+    }
   }
   .link-wrap {
     display: flex;
@@ -410,6 +473,7 @@ const ProjectWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   position: relative;
+  display: flex;
   width: 100%;
   height: 100%;
 `;

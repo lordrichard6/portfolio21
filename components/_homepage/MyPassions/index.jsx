@@ -1,35 +1,38 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { Variables } from "../../../assets/variables";
-import hobby01 from "../../../assets/images/homepage/sky_01.jpg";
+import { Colors } from "../../../assets/variables";
+import hobby_01 from "../../../assets/images/homepage/hobby_01.jpg";
+import hobby_02 from "../../../assets/images/homepage/hobby_02.jpg";
+import hobby_03 from "../../../assets/images/homepage/hobby_03.jpg";
+import hobby_04 from "../../../assets/images/homepage/hobby_04.jpg";
 
 export default function MyPassions() {
   const data = [
     {
       title: "hobby#1",
-      imgSrc: hobby01,
+      imgSrc: hobby_01,
       alt: "image",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
       className: "hobby",
     },
     {
       title: "hobby#2",
-      imgSrc: hobby01,
+      imgSrc: hobby_02,
       alt: "image",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
       className: "hobby-reverse",
     },
     {
       title: "hobby#3",
-      imgSrc: hobby01,
+      imgSrc: hobby_03,
       alt: "image",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
       className: "hobby",
     },
     {
       title: "hobby#4",
-      imgSrc: hobby01,
+      imgSrc: hobby_04,
       alt: "image",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
       className: "hobby-reverse",
@@ -48,8 +51,8 @@ export default function MyPassions() {
                   src={item.imgSrc}
                   objectFit="cover"
                   objectPosition="center"
-                  width={400}
-                  height={300}
+                  // width={400}
+                  // height={300}
                   alt={item.alt}
                 />
               </Picture>
@@ -74,11 +77,12 @@ const SectionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${Variables.primary};
+  color: ${Colors.primary};
 
   h1 {
     font-size: 4rem;
     font-weight: 800;
+    text-shadow: 1px 2px 3px #00000081;
 
     @media screen and (max-width: 1024px) {
       font-size: 3.5rem;
@@ -87,18 +91,21 @@ const SectionContainer = styled.div`
 `;
 
 const HobbiesContainer = styled.div`
-  width: 60%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 1rem 0;
 
-  @media screen and (max-width: 1024px) {
-    width: 80%;
+  @media screen and (min-width: 2560px) {
+    width: 50%;
   }
+
   .hobby {
     display: flex;
     flex-direction: row;
+    padding: 1rem 0;
 
     @media screen and (max-width: 400px) {
       flex-direction: column;
@@ -108,6 +115,7 @@ const HobbiesContainer = styled.div`
   .hobby-reverse {
     display: flex;
     flex-direction: row-reverse;
+    padding: 1rem 0;
 
     @media screen and (max-width: 400px) {
       flex-direction: column;
@@ -132,7 +140,9 @@ const HobbiesContainer = styled.div`
 `;
 
 const Picture = styled.div`
+  display: flex;
   width: 50%;
+  height: auto;
   padding: 0 1rem;
 
   @media screen and (max-width: 400px) {

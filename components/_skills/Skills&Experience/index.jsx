@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import { Variables } from "../../../assets/variables";
+import { Colors } from "../../../assets/variables";
 import { ProgressBar } from "./progressBar";
 import logo from "../../../public/icon.png";
 
@@ -83,12 +83,14 @@ export default function SkillsExp() {
 
 const SectionContainer = styled.div`
   width: 80%;
-  min-height: 100vh;
   display: flex;
   flex-direction: row;
-  color: ${Variables.primary};
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  color: ${Colors.primary};
+  margin: 4rem 0;
+
+  @media screen and (max-width: 390px) {
+    flex-direction: column;
+  }
 `;
 
 const LeftSection = styled.div`
@@ -96,6 +98,10 @@ const LeftSection = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 390px) {
+    width: 100%;
+  }
 `;
 
 const RightSection = styled.div`
@@ -104,6 +110,10 @@ const RightSection = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
+
+  @media screen and (max-width: 390px) {
+    width: 100%;
+  }
   h2 {
     font-weight: 600;
   }
@@ -125,6 +135,10 @@ const SkillsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-self: center;
+  justify-content: center;
+  .width {
+    width: 100%;
+  }
 `;
 
 const ExperienceContainer = styled.div`
@@ -153,4 +167,5 @@ const Title = styled.h1`
   margin-top: 0;
   font-size: 4rem;
   font-weight: 400;
+  text-shadow: 1px 2px 4px #00000081;
 `;

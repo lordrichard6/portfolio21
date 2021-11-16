@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-import { courses } from "../../../assets/static";
-import { Variables } from "../../../assets/variables";
+import { education } from "../../../assets/data";
+import { Colors } from "../../../assets/variables";
 
 export default function Education() {
   return (
     <PageContainer>
-      <SectionTitle>Courses</SectionTitle>
-      {courses.map((n, i) => {
+      <SectionTitle>Education</SectionTitle>
+      {education.map((n, i) => {
         return (
           <InnerContainer key={i}>
             <CourseTitle>{n.title}</CourseTitle>
@@ -29,8 +29,8 @@ const PageContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 `;
 
 const InnerContainer = styled.div`
@@ -48,14 +48,18 @@ const SectionTitle = styled.h1`
   margin-top: 0;
   font-size: 4rem;
   font-weight: 400;
-  color: ${Variables.primary};
+  color: ${Colors.primary};
 `;
 
 const CourseTitle = styled.h1`
   font-size: 1.5rem;
   margin-top: 0;
   font-weight: 400;
-  color: ${Variables.primary};
+  color: ${Colors.primary};
+
+  @media screen and (min-width: 2560px) {
+    font-size: 2.6rem;
+  }
 `;
 
 const TextSchool = styled.p`
@@ -63,9 +67,17 @@ const TextSchool = styled.p`
   margin: 0;
   font-weight: 600;
   color: rgba(107, 114, 128);
+
+  @media screen and (min-width: 2560px) {
+    font-size: 1.8rem;
+  }
 `;
 
 const TextBase = styled.p`
   margin: 0;
   color: rgba(107, 114, 128);
+
+  @media screen and (min-width: 2560px) {
+    font-size: 1.4rem;
+  }
 `;

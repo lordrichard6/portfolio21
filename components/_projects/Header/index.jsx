@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import ReactTypingEffect from "react-typing-effect";
 
-import background from "../../../assets/images/projects/sky_02.jpg";
+import background from "../../../assets/images/projects/header_02.jpg";
 import { Variables } from "../../../assets/variables";
 // import Animation from './animation'
 
@@ -29,11 +29,17 @@ const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   min-height: 100vh;
   padding-left: 8rem;
-  padding-right: 8rem;
+  @media screen and (max-width: 390px) {
+    padding: 0;
+    align-items: center;
+  }
+  @media screen and (min-width: 2560px) {
+    padding-left: 20rem;
+  }
 `;
 
 const Title = styled.div`
@@ -42,8 +48,10 @@ const Title = styled.div`
   font-weight: 400;
   color: ${Variables.primary};
   /* color: #eee; */
-  display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  @media screen and (min-width: 2560px) {
+    font-size: 5rem;
+  }
 `;
 
 const Background = styled(Image)`

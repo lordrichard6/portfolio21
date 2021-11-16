@@ -2,21 +2,9 @@ import styled from "styled-components";
 import Image from "next/image";
 import { FaReact, FaHouseUser, FaPhoneAlt, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faReact,
-  faLinkedin,
-  faInstagram,
-  faGithubSquare,
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faEnvelope,
-  faPhoneAlt,
-  faDungeon,
-} from "@fortawesome/free-solid-svg-icons";
 
-import logo from "../../public/icon.png";
-import { Variables } from "../../assets/variables";
+import logo from "../../public/logo_blue.png";
+import { Colors } from "../../assets/variables";
 import FormComponent from "./form";
 // import { FormComponent } from './formJS'
 
@@ -28,7 +16,7 @@ export default function Footer() {
           <HeaderTitle>Thanks for visiting</HeaderTitle>
           <LogoContainer>
             <Image src={logo} alt="paulo reizinho" height={100} width={100}/>
-            <h2>Paulo Reizinho</h2>
+            <h2>Paulo Lopes</h2>
           </LogoContainer>
           <SmallText>This website is powered by:</SmallText>
           <IconContainer>
@@ -103,7 +91,7 @@ export default function Footer() {
 
 const FooterContainer = styled.div`
   width: 100%;
-  background-color: ${Variables.secondary};
+  background-color: ${Colors.secondary};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,6 +103,11 @@ const InnerContainer = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
+  @media screen and (max-width: 390px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const SectionContainer = styled.div`
@@ -137,21 +130,14 @@ const LogoContainer = styled.div`
   img {
     width: 2rem;
   }
-
-  h2 {
-    /* width: 33.333333%;
-        font-size: 1.5rem;
-        line-height: 1.625; */
-  }
 `;
 
 const SmallText = styled.p`
-  /* margin-bottom: 0; */
   justify-items: center;
 `;
 
 const Button = styled.button`
-  background-color: ${Variables.primary};
+  background-color: ${Colors.primary};
     align-self: center;
     color: #eee;
     font-size: 1rem;
@@ -161,7 +147,7 @@ const Button = styled.button`
 `;
 
 const IconContainer = styled.div`
-  color: ${Variables.primary};
+  color: ${Colors.primary};
   width: 100%;
   display: flex;
   justify-content: center;
@@ -171,7 +157,6 @@ const Icon = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 2.5rem; */
   margin:0.5rem;
   font-size: 2rem;
 `;
@@ -179,16 +164,18 @@ const Icon = styled.a`
 const HorizontalContainer = styled.div`
   width: 100%;
     display: flex;
-    /* justify-content: flex-start; */
     align-items: center;
+
+    @media screen and (max-width: 390px) {
+      width: 80%;
+    }
 `;
 
 const BlueIcon = styled.span`
-  background-color: ${Variables.primary};
+  background-color: ${Colors.primary};
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 2.25rem; */
   border-radius: 9999px;
   color: #eee;
   padding: 0.5rem;

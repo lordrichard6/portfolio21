@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { FaTimes } from "react-icons/fa";
-import { Variables } from "../../assets/variables";
+import { Colors } from "../../assets/variables";
 import pattern from "../../assets/images/pattern.png";
 
 export default function Sidebar({isOpen, toggle}) {
@@ -36,11 +36,11 @@ export default function Sidebar({isOpen, toggle}) {
               <a>mySkills</a>
             </Link>
           </NavItem>
-          <NavItem onClick={toggle}>
+          {/* <NavItem onClick={toggle}>
             <Link href="/404">
               <a>myBlog</a>
             </Link>
-          </NavItem>
+          </NavItem> */}
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
@@ -52,7 +52,7 @@ const SidebarContainer = styled.aside`
     z-index: 100;
     width: 100%;
     height: 100vh;
-    background: ${Variables.primary};
+    background: ${Colors.primary};
     display: grid;
     align-items: center;
     top: 0;
@@ -78,7 +78,7 @@ const Icon = styled.div`
 `;
 
 const CloseIcon = styled(FaTimes)`
-  color: #fff;
+  color: ${Colors.white};
 `;
 
 const SidebarWrapper = styled.div`
@@ -105,7 +105,7 @@ const NavItem = styled.div`
         transition: 0.2s ease-in-out;
         z-index: 200;
         cursor: pointer;
-        color: #fff;
+        color: ${Colors.white};
         font-size: 2rem;
         font-weight: 400;
         &:hover {

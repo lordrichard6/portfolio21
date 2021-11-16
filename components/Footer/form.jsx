@@ -38,7 +38,7 @@ export default function FormComponent() {
 }
 
 const FormContainer = styled.div`
-    max-width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;

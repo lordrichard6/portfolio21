@@ -1,4 +1,4 @@
-import { Variables } from '../../../assets/variables'
+import { Colors } from '../../../assets/variables'
 
 export const ProgressBar = ({ completed }) => {
     const containerStyles = {
@@ -11,7 +11,7 @@ export const ProgressBar = ({ completed }) => {
     const fillerStyles = {
         height: '100%',
         width: `${completed}%`,
-        backgroundColor: `${Variables.primary}`,
+        backgroundColor: `${Colors.primary}`,
         borderRadius: 'inherit',
         // textAlign: 'right'
     }

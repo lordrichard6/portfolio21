@@ -1,107 +1,11 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-// import { techs } from "../../../assets/static";
-import {
-  FaReact,
-  FaCss3,
-  FaNodeJs,
-  FaFigma,
-  FaYarn,
-  FaGitAlt,
-  FaPython,
-  FaSass,
-  FaNpm,
-} from "react-icons/fa";
-import {
-  SiGraphql,
-  SiDjango,
-  SiNextdotjs,
-  SiTypescript,
-  SiHtml5,
-  SiJavascript,
-  SiAdobephotoshop,
-  SiTailwindcss,
-  SiStyledcomponents,
-} from "react-icons/si";
-import { Variables } from "../../../assets/variables";
+import { tech } from "../../../assets/data";
+import { Colors } from "../../../assets/variables";
 import pattern from "../../../assets/images/pattern.png";
 
 export default function Techs() {
-  const data = [
-    {
-      icon: <FaReact />,
-      name: "react",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next",
-    },
-    {
-      icon: <SiTypescript />,
-      name: "typescript",
-    },
-    {
-      icon: <SiHtml5 />,
-      name: "html",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css",
-    },
-    {
-      icon: <SiJavascript />,
-      name: "javascript",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node",
-    },
-    {
-      icon: <SiAdobephotoshop />,
-      name: "photoshop",
-    },
-    {
-      icon: <FaFigma />,
-      name: "figma",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind",
-    },
-    {
-      icon: <SiStyledcomponents />,
-      name: "styled components",
-    },
-    {
-      icon: <FaNpm />,
-      name: "npm",
-    },
-    {
-      icon: <FaYarn />,
-      name: "yarn",
-    },
-    {
-      icon: <FaGitAlt />,
-      name: "git",
-    },
-    {
-      icon: <FaPython />,
-      name: "python",
-    },
-    {
-      icon: <SiDjango />,
-      name: "django",
-    },
-    {
-      icon: <FaSass />,
-      name: "sass",
-    },
-    {
-      icon: <SiGraphql />,
-      name: "graphql",
-    },
-  ];
   return (
     <PageContainer>
       <BG
@@ -112,7 +16,7 @@ export default function Techs() {
       />
       <h1>Techs</h1>
       <IconsContainer>
-        {data.map((item, i) => {
+        {tech.map((item, i) => {
           return (
             <Icon key={i}>
               {item.icon}
@@ -131,15 +35,17 @@ const PageContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  margin:0 2rem;
+  padding: 6rem 0;
   color: #eee;
-  background: ${Variables.primary};
+  background: ${Colors.primary};
+
+  @media screen and (min-width: 2560px) {
+    font-size: 2.6rem;
+  }
   h1 {
     margin-top: 0;
     font-size: 4rem;
@@ -158,6 +64,10 @@ const IconsContainer = styled.div`
   place-items: center;
   margin-left: 4rem;
   margin-right: 4rem;
+
+  @media screen and (max-width: 390px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   img {
     width: auto;
     height: 2rem;
@@ -173,9 +83,17 @@ const Icon = styled.div`
   font-size: 4rem;
   text-align: center;
   z-index: 1;
+
+  @media screen and (min-width: 2560px) {
+    font-size: 5rem;
+  }
   h2 {
     font-size: 1.5rem;
     margin: 0;
+
+    @media screen and (min-width: 2560px) {
+    font-size: 2rem;
+  }
   }
 `;
 

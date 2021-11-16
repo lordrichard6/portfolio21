@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Paulo Reizinho</title>
         <meta name="description" content="Paulo Reizinho Developer Portfolio" />
-        <link rel="icon" href="/icon.png" />
+        <link rel="icon" href="/logo_black.png" />
       </Head>
       <HomePage />
     </>

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import project_portfolio from "../../../assets/images/projects/project_portfolio.jpg";
-import project_leftBastards from "../../../assets/images/projects/project_leftBastards.jpg";
-import project_patricia from "../../../assets/images/projects/project_patricia.jpg";
+import project_portfolio from "../../../assets/images/projects/project_portfolio.png";
+import project_leftBastards from "../../../assets/images/projects/project_leftBastards.png";
+import project_patricia from "../../../assets/images/projects/project_patricia.png";
 import { Variables } from "../../../assets/variables";
 
 export default function Designer() {
@@ -12,21 +12,21 @@ export default function Designer() {
       id: 1,
       imgSrc: project_portfolio,
       alt: "the mockups of this website",
-      title: "This website",
+      title: "This website mockups",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
     },
     {
       id: 2,
       imgSrc: project_leftBastards,
       alt: "the mockups of the left bastards website",
-      title: "This website",
+      title: "Left Bastards mockups",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
     },
     {
       id: 3,
       imgSrc: project_patricia,
       alt: "the mockups of patricia website",
-      title: "This website",
+      title: "Private Chauffeur mockups",
       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
     },
   ];
@@ -54,7 +54,7 @@ export default function Designer() {
                 <span></span>
                 <span></span>
                 <h2>{item.title}</h2>
-                <p>{item.text}</p>
+                {/* <p>{item.text}</p> */}
               </div>
             </ProjectWrapper>
           );
@@ -70,10 +70,11 @@ const SectionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${Variables.primary};
+  color: ${Variables.white};
   h1 {
     font-size: 4rem;
     font-weight: 400;
+    text-shadow: 1px 2px 4px #00000081;
   }
 `;
 
@@ -81,6 +82,11 @@ const ProjectsContainer = styled.div`
   width: 100%;
   column-count: 3;
   gap: 0;
+
+  @media screen and (max-width: 390px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const ProjectWrapper = styled.div`
@@ -95,19 +101,19 @@ const ProjectWrapper = styled.div`
     width: 100%;
     height: 100%;
     background-blend-mode: color-burn;
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.5);
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    /* box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.5); */
   }
   .overlay2 {
     position: absolute;
-    top: 0;
+    top: 35%;
     left: -150%;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 30%;
     background-color: rgba(0, 0, 0, 0.7);
-    filter: blur(5px);
+    /* filter: blur(5px); */
 
-    transform: skewX(-20deg);
+    transform: skewX(-5deg);
     transition: 0.5s;
   }
   .text {
@@ -118,7 +124,7 @@ const ProjectWrapper = styled.div`
     width: 80%;
     color: black;
     box-sizing: border-box;
-    padding: 25px;
+    padding: 10px;
     z-index: 100;
     text-shadow: 5px 5px 10px black;
 
@@ -171,13 +177,18 @@ const ProjectWrapper = styled.div`
     position: relative;
     color: #eee;
     font-size: 1.5rem;
-    text-transform: uppercase;
-    margin-bottom: 0;
+    /* text-transform: uppercase; */
+    margin-bottom: 1rem;
     letter-spacing: 1px;
     opacity: 0;
     transition: 0.5s;
     transition-timing-function: linear;
-    transform: translateY(-10px);
+    transform: translateY(-0px);
+
+    @media screen and (min-width: 2560px) {
+      font-size: 3rem;
+      letter-spacing: 10px;
+    }
   }
   p {
     color: ${Variables.white};
@@ -206,7 +217,7 @@ const ProjectWrapper = styled.div`
   }
   &:hover {
     .overlay2 {
-      left: 0%;
+      left: 5%;
       /* filter: blur(12px); */
     }
     .text {

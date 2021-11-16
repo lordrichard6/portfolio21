@@ -2,9 +2,9 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Variables } from "../../assets/variables";
+import { Colors } from "../../assets/variables";
 import { FaBars } from "react-icons/fa";
-import logo from "../../public/icon.png";
+import logo from "../../public/logo_blue.png";
 import pattern from "../../assets/images/pattern.png";
 
 export default function Navbar({ toggle }) {
@@ -24,8 +24,6 @@ export default function Navbar({ toggle }) {
           <Image
             src={logo}
             alt="paulo lopes reizinho"
-            height="60px"
-            width="60px"
           />
         </LogoContainer>
         <NavMenu>
@@ -44,11 +42,11 @@ export default function Navbar({ toggle }) {
               <a>mySkills</a>
             </Link>
           </NavItem>
-          <NavItem>
+          {/* <NavItem>
             <Link href="/404">
               <a>myBlog</a>
             </Link>
-          </NavItem>
+          </NavItem> */}
         </NavMenu>
       </NavbarContainer>
     </Nav>
@@ -58,12 +56,12 @@ export default function Navbar({ toggle }) {
 const Nav = styled.nav`
   position: relative;
   margin: 0;
-  padding: 8px;
+  padding: 2px;
   display: flex;
   justify-content: center;
   width: 100%;
   z-index: 2;
-  background-color: ${Variables.primary};
+  background-color: ${Colors.primary};
 
   @media screen and (max-width: 1024px) {
     transition: 0.8s all ease;
@@ -81,6 +79,9 @@ const NavbarContainer = styled.div`
   align-items: center;
   width: 80%;
   @media screen and (max-width: 1024px) {
+  }
+  @media screen and (min-width: 1080px) {
+    width: 70%;
   }
 `;
 
@@ -102,6 +103,13 @@ const MobileIcon = styled.div`
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
+  width: 80px;
+  height: 80px;
+
+  @media screen and (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 const NavMenu = styled.ul`
