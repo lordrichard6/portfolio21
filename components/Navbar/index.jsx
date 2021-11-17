@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import Image from "next/image";
-import Link from "next/link";
 
+import NavItems from './navItems'
+import Logo from "./logo";
 import { Colors } from "../../assets/variables";
 import { FaBars } from "react-icons/fa";
-import logo from "../../public/logo_blue.png";
 import pattern from "../../assets/images/pattern.png";
 
 export default function Navbar({ toggle }) {
   return (
-    <Nav id='top'>
+    <Nav id="top">
       <BG
         src={pattern}
         layout="fill"
@@ -20,34 +20,8 @@ export default function Navbar({ toggle }) {
         <MobileIcon onClick={toggle}>
           <FaBars />
         </MobileIcon>
-        <LogoContainer>
-          <Image
-            src={logo}
-            alt="paulo lopes reizinho"
-          />
-        </LogoContainer>
-        <NavMenu>
-          <NavItem>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/projects">
-              <a>myProjects</a>
-            </Link>
-          </NavItem>
-          <NavItem>
-            <Link href="/skills">
-              <a>mySkills</a>
-            </Link>
-          </NavItem>
-          {/* <NavItem>
-            <Link href="/404">
-              <a>myBlog</a>
-            </Link>
-          </NavItem> */}
-        </NavMenu>
+        <Logo />
+        <NavItems />
       </NavbarContainer>
     </Nav>
   );
@@ -60,10 +34,10 @@ const Nav = styled.nav`
   display: flex;
   justify-content: center;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
   background-color: ${Colors.primary};
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1440px) {
     transition: 0.8s all ease;
   }
 `;
@@ -78,9 +52,8 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 80%;
-  @media screen and (max-width: 1024px) {
-  }
-  @media screen and (min-width: 1080px) {
+
+  @media screen and (min-width: 1440px) {
     width: 70%;
   }
 `;
@@ -88,53 +61,19 @@ const NavbarContainer = styled.div`
 const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 390px) {
+    transform: translate(-100%, 40%)!important;
+    font-size: 1.8rem !important;
+  }
+  @media screen and (max-width: 810px) {
     display: block;
     position: absolute;
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 2rem;
     cursor: pointer;
     color: #fff;
   }
 `;
 
-const LogoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 80px;
-  height: 80px;
-
-  @media screen and (max-width: 768px) {
-    width: 60px;
-    height: 60px;
-  }
-`;
-
-const NavMenu = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  list-style: none;
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 200;
-  margin: 0;
-  z-index: 2;
-
-  @media screen and (max-width: 1024px) {
-    display: none;
-  }
-`;
-
-const NavItem = styled.li`
-  padding-right: 1rem;
-  padding-left: 1rem;
-  a {
-    cursor: pointer;
-
-    &:hover {
-    }
-  }
-`;
