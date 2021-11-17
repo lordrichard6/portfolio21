@@ -7,6 +7,7 @@ import Header from "../components/_skills/Header";
 import SkillsExp from "../components/_skills/Skills&Experience";
 import Techs from "../components/_skills/Techs";
 import Education from "../components/_skills/Education";
+import Sponsor from '../components/_skills/Sponsor'
 
 import Footer from "../components/Footer";
 
@@ -25,6 +26,7 @@ export default function SkillsPage() {
       <SkillsExp />
       <Techs />
       <Education />
+      <Sponsor />
       <Footer />
     </PageContainer>
   );
