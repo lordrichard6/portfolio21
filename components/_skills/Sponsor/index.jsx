@@ -52,9 +52,14 @@ const InnerContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 390px) {
+    flex-direction: column;
+  }
 `;
 
 const ImageWrapper = styled.a`
   width: 10rem;
   cursor: pointer;
+  margin: 2rem 0;
 `;
