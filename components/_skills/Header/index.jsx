@@ -31,9 +31,13 @@ const SectionContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding-left: 8rem;
   padding-right: 8rem;
+
+  @media screen and (max-width: 390px) {
+    height: 45rem;
+  }
 `;
 
 const Title = styled.div`

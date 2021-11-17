@@ -27,7 +27,7 @@ export default function BannerProjects() {
 
 const SectionContainer = styled.section`
   width: 100%;
-  height: 40vh;
+  height: 25rem;
   position: relative;
   display: flex;
   justify-content: center;

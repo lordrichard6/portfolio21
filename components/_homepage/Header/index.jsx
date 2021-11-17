@@ -40,11 +40,15 @@ export default function Header() {
 
 const SectionContainer = styled.section`
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 6rem 0;
+  @media screen and (max-width: 500px) {
+    height: 100%;
+  }
 `;
 
 const InnerContainer = styled.div`

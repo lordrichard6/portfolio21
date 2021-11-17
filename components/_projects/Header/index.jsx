@@ -32,12 +32,13 @@ const SectionContainer = styled.div`
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding-left: 8rem;
   
   @media screen and (max-width: 390px) {
     padding: 0;
     align-items: center;
+    height: 45rem;
   }
   @media screen and (min-width: 2560px) {
     padding-left: 20rem;
