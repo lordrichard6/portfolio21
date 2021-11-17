@@ -9,7 +9,7 @@ import pattern from "../../assets/images/pattern.png";
 
 export default function Navbar({ toggle }) {
   return (
-    <Nav>
+    <Nav id='top'>
       <BG
         src={pattern}
         layout="fill"

@@ -6,6 +6,8 @@ import Navbar from "../components/Navbar";
 import Header from "../components/_homepage/Header";
 import AboutMe from "../components/_homepage/AboutMe";
 import MyPassions from "../components/_homepage/MyPassions";
+import BannerProjects from "../components/banners/projects"; 
+import BannerSkills from "../components/banners/skills";
 
 import Footer from "../components/Footer";
 
@@ -23,6 +25,8 @@ export default function HomePage() {
       <Header />
       <AboutMe />
       <MyPassions />
+      <BannerProjects />
+      <BannerSkills />
       <Footer />
     </HomepageContainer>
   );

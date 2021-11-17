@@ -38,7 +38,7 @@ export default function Header() {
   );
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.section`
   width: 100%;
   min-height: 100vh;
   position: relative;

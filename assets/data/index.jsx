@@ -1,5 +1,6 @@
 // IMPORTS
 import pattern from "../images/pattern.png";
+import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
 // Home
 import backgroundHome from "../images/homepage/header_01.jpg";
@@ -61,6 +62,21 @@ import {
   SiTailwindcss,
   SiStyledcomponents,
 } from "react-icons/si";
+// Banners ---------------------------------------------------------------
+export const bannerProjects = {
+  backgroundImage: backgroundHome,
+  logo: logoWhite,
+  text: "Go to Projects page",
+  icon: <BsFillArrowRightSquareFill />
+};
+
+export const bannerSkills = {
+  backgroundImage: backgroundHome,
+  logo: logoWhite,
+  text: "Go to Education page",
+  icon: <BsFillArrowRightSquareFill />
+};
+
 // Home ---------------------------------------------------------------
 export const homeHeader = {
   backgroundImage: backgroundHome,
@@ -84,31 +100,31 @@ export const aboutMe = {
 
 export const hobbies = [
   {
-    title: "hobby#1",
+    title: "Creating Software",
     imgSrc: hobby_01,
-    alt: "image",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
+    alt: "computer",
+    text: "Being able to express creativity without barriers, I allow myself to be tested in try to create website with the most modern and elegant design, animations and features in which I am constantly tested. \nI like the challenges in the implementation of new technologies and figure out the best best(cleanest) way to implement it.",
     className: "hobby",
   },
   {
-    title: "hobby#2",
+    title: "Fitness",
     imgSrc: hobby_02,
-    alt: "image",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
+    alt: "gym",
+    text: "It is no mystery that to keep your mind sharp and your health strong that exercising regurarly it is a must, but I go beyond and make this as a passion. More than lifting weights for maintnance I strive to get stronger and enjoy the whole process.",
     className: "hobby-reverse",
   },
   {
-    title: "hobby#3",
+    title: "Hiking and Exploring",
     imgSrc: hobby_03,
-    alt: "image",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
+    alt: "hiking",
+    text: "Being able to disconnect from the routine and go away from the nonStop city life is quite important. To me going into to nature helps me recharge my mental energy and keep a balance on the stress levels. Being on the top of a mountain, breathe clean air, look at the horizon gives a sensation of lightness and freedom.",
     className: "hobby",
   },
   {
-    title: "hobby#4",
+    title: "My inner Ramsey",
     imgSrc: hobby_04,
-    alt: "image",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime hic sapiente tempora. Molestiae aliquid assumenda ratione dolorum possimus iste, rem, natus, numquam eum maxime pariatur! Quod inventore vel facere hic.",
+    alt: "cooking",
+    text: "It is common sense that health depends greatly on what you eat, since fitness is quite important to me, I always was interested in cooking. Being able to achieve good results in the gym depends greatly on what I put in my mouth, course I don't follow a strict diet, I like to enjoy life and eat a greasy burger with chips, but the process of cooking is a lot of fun, creating recipies and invent new ones.",
     className: "hobby-reverse",
   },
 ];
@@ -116,7 +132,7 @@ export const hobbies = [
 // Projects ---------------------------------------------------------------
 export const projectsHeader = {
   backgroundImage: backgroundProjects,
-}
+};
 
 export const projectsDev = {
   // main: [
@@ -275,13 +291,13 @@ export const projectsCreative = [
     id: 4,
     imgSrc: creative_04,
     alt: "project",
-  }
+  },
 ];
 
 // Skills ---------------------------------------------------------------
 export const skillsHeader = {
   backgroundImage: backgroundSkills,
-}
+};
 
 export const skillsAndExperience = {
   title: "Skills & Experience",
