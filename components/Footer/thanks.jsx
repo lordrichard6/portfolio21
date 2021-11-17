@@ -13,7 +13,7 @@ export default function Thanks() {
         <Image src={logo} alt="paulo reizinho" height={100} width={100} />
       </LogoContainer>
       <IconContainer>
-      <p>This website is powered by:</p>
+        <p>This website is powered by:</p>
         <Icon>
           <SiNextdotjs />
         </Icon>
@@ -31,6 +31,11 @@ const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 390px) {
+    order: 3;
+    margin-bottom: 1rem;
+  }
   h1 {
     font-weight: 400;
     text-decoration: underline;
@@ -69,5 +74,3 @@ const Button = styled.button`
   padding: 0.5rem 0.4rem;
   border: 0;
 `;
-
-

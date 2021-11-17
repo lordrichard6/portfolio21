@@ -64,6 +64,11 @@ const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 390px) {
+    order: 2;
+    margin:2rem 0;
+  }
   h1 {
     font-weight: 400;
     text-decoration: underline;

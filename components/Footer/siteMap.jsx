@@ -30,7 +30,8 @@ const SectionContainer = styled.div`
   align-items: center;
 
   @media screen and (max-width: 390px) {
-    margin: 2rem 0;
+    order: 1;
+    margin-top: 1rem;
   }
   h1 {
     font-weight: 400;
