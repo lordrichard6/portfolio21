@@ -18,23 +18,20 @@ export default function Contacts() {
         <Icon
           href="https://www.linkedin.com/in/pauloreizinho/"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          <FaLinkedin />
+          <FaLinkedin alt='github paulo reizinho profile'/>
         </Icon>
         <Icon
           href="https://www.instagram.com/l0rdr1chard/"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          <FaInstagram />
+          <FaInstagram alt='instagram paulo reizinho profile'/>
         </Icon>
         <Icon
           href="https://github.com/lordrichard6/"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          <FaGithub />
+          <FaGithub alt='github paulo reizinho profile'/> 
         </Icon>
       </IconContainer>
 

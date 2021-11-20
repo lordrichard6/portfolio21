@@ -2,6 +2,10 @@
 import pattern from "../images/pattern.png";
 import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
+// BANNERS
+import bannerProj from '../images/homepage/banner_01.jpg'
+import bannerEdu from '../images/homepage/banner_02.jpg'
+
 // Home
 import backgroundHome from "../images/homepage/header_01.jpg";
 import logoWhite from "../../public/logo_white.png";
@@ -64,14 +68,16 @@ import {
 } from "react-icons/si";
 // Banners ---------------------------------------------------------------
 export const bannerProjects = {
-  backgroundImage: backgroundHome,
+  backgroundImage: bannerProj,
+  alt: 'city zurich',
   logo: logoWhite,
   text: "Go to Projects page",
   icon: <BsFillArrowRightSquareFill />
 };
 
 export const bannerSkills = {
-  backgroundImage: backgroundHome,
+  backgroundImage: bannerEdu,
+  alt: 'lisbon portugal',
   logo: logoWhite,
   text: "Go to Education page",
   icon: <BsFillArrowRightSquareFill />

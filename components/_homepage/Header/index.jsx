@@ -14,7 +14,7 @@ export default function Header() {
         layout="fill"
         objectFit="cover"
         objectPosition="center"
-        alt="sky is not the limit"
+        alt="paulo reizinho header"
       />
       <InnerContainer>
         <SloganContainer>
@@ -31,7 +31,7 @@ export default function Header() {
           <SubTitle>{homeHeader.subTitle}</SubTitle>
         </SloganContainer>
         <ImageContainer>
-          <Image src={homeHeader.logo} alt="lopes logo" />
+          <Image src={homeHeader.logo} alt="paulo reizinho logo" />
         </ImageContainer>
       </InnerContainer>
     </SectionContainer>
@@ -91,7 +91,6 @@ const Title = styled.div`
   font-size: 4rem;
   font-weight: 400;
   text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary};
-  /* color: ${Colors.primary}; */
   color: #eee;
   display: flex;
   flex-direction: column;

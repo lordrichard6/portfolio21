@@ -1,24 +1,17 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import NavItems from './navItems'
+import NavItems from "./navItems";
 import Logo from "./logo";
 import { Colors } from "../../assets/variables";
 import { FaBars } from "react-icons/fa";
-import pattern from "../../assets/images/pattern.png";
 
 export default function Navbar({ toggle }) {
   return (
     <Nav id="top">
-      <BG
-        src={pattern}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-      />
       <NavbarContainer>
         <MobileIcon onClick={toggle}>
-          <FaBars />
+          <FaBars alt='burger menu'/>
         </MobileIcon>
         <Logo />
         <NavItems />
@@ -36,15 +29,11 @@ const Nav = styled.nav`
   width: 100%;
   z-index: 1;
   background-color: ${Colors.primary};
+  background: url("/pattern.png"), ${Colors.primary};
 
   @media screen and (max-width: 1440px) {
     transition: 0.8s all ease;
   }
-`;
-
-const BG = styled(Image)`
-  z-index: 0;
-  opacity: 0.1;
 `;
 
 const NavbarContainer = styled.div`
@@ -62,7 +51,7 @@ const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 390px) {
-    transform: translate(-100%, 40%)!important;
+    transform: translate(-100%, 40%) !important;
     font-size: 1.8rem !important;
   }
   @media screen and (max-width: 810px) {
@@ -76,4 +65,3 @@ const MobileIcon = styled.div`
     color: #fff;
   }
 `;
-

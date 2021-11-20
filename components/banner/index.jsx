@@ -2,23 +2,22 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 
-import { bannerSkills } from "../../assets/data";
 import { Colors } from "../../assets/variables";
 
-export default function BannerProjects() {
+export default function Banner({ imgSrc, alt, text, icon }) {
   return (
     <SectionContainer>
       <Background
-        src={bannerSkills.backgroundImage}
+        src={imgSrc}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
-        alt="sky is not the limit"
+        alt={alt}
       />
-      <Link href="/skills">
+      <Link href="/projects">
         <div className="link">
-          <h1>{bannerSkills.text}</h1>
-          <Icon>{bannerSkills.icon}</Icon>
+          <h1>{text}</h1>
+          <Icon>{icon}</Icon>
         </div>
       </Link>
     </SectionContainer>
@@ -37,10 +36,10 @@ const SectionContainer = styled.section`
     z-index: 1;
     font-weight: 400;
     font-size: 3rem;
-    text-shadow: 1px 2px 4px #00000081;
-    
+    text-shadow: 0px 0px 6px #000000b1;
+
     @media screen and (max-width: 390px) {
-        font-size: 2rem;
+      font-size: 2rem;
     }
   }
   .link {
@@ -58,14 +57,14 @@ const Background = styled(Image)`
 `;
 
 const Icon = styled.span`
-    padding-top: 1rem;
-    margin-left: 1rem;
-    font-size: 3rem;
-    display: flex;
-    align-self: center;
-    text-shadow: 1px 2px 4px #00000081;
+  padding-top: 1rem;
+  margin-left: 1rem;
+  font-size: 3rem;
+  display: flex;
+  align-self: center;
+  text-shadow: 1px 2px 4px #00000081;
 
-    @media screen and (max-width: 390px) {
-        font-size: 2rem;
-    }
+  @media screen and (max-width: 390px) {
+    font-size: 2rem;
+  }
 `;

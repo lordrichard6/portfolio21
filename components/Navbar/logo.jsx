@@ -8,7 +8,11 @@ import logo from "../../public/logo_black.png";
 export default function Logo() {
   return (
     <LogoContainer>
-      <LogoWrapper><Link href='/'><Image src={logo} alt="paulo lopes reizinho" /></Link></LogoWrapper>
+      <LogoWrapper>
+        <Link href="/">
+          <Image src={logo} alt="paulo lopes reizinho" />
+        </Link>
+      </LogoWrapper>
       <h1>Paulo Lopes Reizinho</h1>
     </LogoContainer>
   );
@@ -26,7 +30,7 @@ const LogoContainer = styled.div`
     margin: 0;
 
     @media screen and (max-width: 390px) {
-        display: none;
+      display: none;
     }
   }
 `;

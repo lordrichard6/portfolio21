@@ -67,7 +67,7 @@ export default function Developer() {
                 <p>{item.text}</p>
                 <div className="link-wrap">
                   <h3>Go to website</h3>
-                  <Link href={item.link}>
+                  <Link href={item.link} target="_blank">
                     <BsArrowDownLeftCircleFill className="link" />
                   </Link>
                 </div>
@@ -99,7 +99,7 @@ export default function Developer() {
                 <p className="small-text">{item.text}</p>
                 <div className="link-wrap">
                   <h3 className="mobile-none">Go to website</h3>
-                  <Link href={item.link}>
+                  <Link href={item.link} target="_blank">
                     <BsArrowDownLeftCircleFill className="link" />
                   </Link>
                 </div>

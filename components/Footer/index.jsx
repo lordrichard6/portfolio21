@@ -28,7 +28,8 @@ const FooterContainer = styled.footer`
   justify-content: center;
   align-items: center;
   color: #eee;
-  background-color: ${Colors.secondary};
+  /* background-color: ${Colors.secondary}; */
+  background: url("/pattern.png"), ${Colors.secondary};
 `;
 
 const InnerContainer = styled.div`

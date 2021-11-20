@@ -15,7 +15,7 @@ export default function Thanks() {
       <IconContainer>
         <p>This website is powered by:</p>
         <Icon>
-          <SiNextdotjs />
+          <SiNextdotjs alt="nextjs logo"/>
         </Icon>
       </IconContainer>
       <Button>

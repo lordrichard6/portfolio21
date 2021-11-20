@@ -7,13 +7,6 @@ import { aboutMe } from "../../../assets/data";
 export default function AboutMe() {
   return (
     <SectionContainer>
-      <BG
-        src={aboutMe.pattern}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        alt="background pattern"
-      />
       <InnerContainer>
         <LeftContainer>
           <h1>{aboutMe.title}</h1>
@@ -46,12 +39,8 @@ const SectionContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: ${Colors.primary};
-`;
-
-const BG = styled(Image)`
-  z-index: 0;
-  opacity: 0.1;
+  /* background: ${Colors.primary}; */
+  background: url("/pattern.png"), ${Colors.primary};
 `;
 
 const InnerContainer = styled.div`
@@ -85,7 +74,8 @@ const LeftContainer = styled.div`
   h1 {
     font-size: 4rem;
     font-weight: 800;
-    text-shadow: 1px 2px 4px #00000081;
+    text-shadow: -10px 10px 0px #2f3030b0, -20px 20px 0px #494b4b7f,
+      -30px 30px 0px #5858583d;
 
     @media screen and (max-width: 390px) {
       text-align: center;

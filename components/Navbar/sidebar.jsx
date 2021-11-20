@@ -52,7 +52,7 @@ const SidebarContainer = styled.aside`
     z-index: 100;
     width: 100%;
     height: 100vh;
-    background: ${Colors.primary};
+    /* background: ${Colors.primary}; */
     display: grid;
     align-items: center;
     top: 0;
@@ -60,6 +60,7 @@ const SidebarContainer = styled.aside`
     transition: 0.3s ease-in-out;
     opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
     top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+    background: url("/pattern.png"), ${Colors.primary};
 `;
 
 const Bg = styled(Image)`
