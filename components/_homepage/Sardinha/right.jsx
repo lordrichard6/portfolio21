@@ -31,7 +31,10 @@ export default function Right() {
         <Link href="https://www.facebook.com/sardinhadrive" target="_blank">
           <FaFacebookF className="hover" />
         </Link>
-        <Link href="https://www.linkedin.com/company/sardinha-drive" target="_blank">
+        <Link
+          href="https://www.linkedin.com/company/sardinha-drive"
+          target="_blank"
+        >
           <FaLinkedin className="hover" />
         </Link>
         <Link href="https://twitter.com/SardinhaDrive" target="_blank">
@@ -52,6 +55,7 @@ const RightContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 1;
+  margin: 4rem 0;
 
   @media screen and (max-width: 1024px) {
     width: 100%;
@@ -72,7 +76,8 @@ const ImageContainer = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    width: 100%;
+    order: 2;
+    width: 60%;
   }
 `;
 
@@ -85,6 +90,7 @@ const SubTitle = styled.h2`
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 
   @media screen and (max-width: 768px) {
+    order: 1;
     text-align: center;
   }
   @media screen and (min-width: 2560px) {
@@ -100,6 +106,11 @@ const Text = styled.h2`
   z-index: 1;
   text-align: center;
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+
+  @media screen and (max-width: 768px) {
+    order: 3;
+    text-align: center;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -110,6 +121,13 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: space-between;
+  margin: 2rem 0;
+
+  @media screen and (max-width: 768px) {
+    order: 4;
+    width: 80%;
+  }
+
   .hover {
     transition: 0.3s ease-in-out;
     cursor: pointer;

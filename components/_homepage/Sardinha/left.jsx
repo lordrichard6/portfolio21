@@ -10,17 +10,26 @@ export default function Left() {
   return (
     <LeftContainer>
       <FirstImage>
-        <Link href="https://www.linkedin.com/company/sardinha-drive" target="_blank">
+        <Link
+          href="https://www.linkedin.com/company/sardinha-drive"
+          target="_blank"
+        >
           <Image src={linkedin} alt="sardinha linkedin" />
         </Link>
       </FirstImage>
       <SecondImage>
-        <Link href="https://www.linkedin.com/company/sardinha-drive" target="_blank">
+        <Link
+          href="https://www.linkedin.com/company/sardinha-drive"
+          target="_blank"
+        >
           <Image src={facebook} alt="sardinha facebook" />
         </Link>
       </SecondImage>
       <ThirdImage>
-        <Link href="https://www.linkedin.com/company/sardinha-drive" target="_blank">
+        <Link
+          href="https://www.linkedin.com/company/sardinha-drive"
+          target="_blank"
+        >
           <Image src={website} alt="sardinha website" />
         </Link>
       </ThirdImage>
@@ -32,6 +41,7 @@ const LeftContainer = styled.div`
   position: relative;
   width: 50%;
   display: flex;
+  margin: 4rem 0;
   /* height: auto; */
   &:hover {
   }
@@ -42,6 +52,7 @@ const LeftContainer = styled.div`
     width: 100%;
   }
 `;
+
 const FirstImage = styled.div`
   width: 10rem;
   height: auto;
