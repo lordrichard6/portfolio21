@@ -12,6 +12,29 @@ import {
 import sardinha from "../../../assets/images/homepage/sardinha.png";
 
 export default function Right() {
+  const data = [
+    {
+      href: "https://www.instagram.com/sardinhadrive/",
+      icon: <FaInstagram className="hover" />,
+    },
+    {
+      href: "https://www.facebook.com/sardinhadrive",
+      icon: <FaFacebookF className="hover" />,
+    },
+    {
+      href: "https://www.linkedin.com/company/sardinha-drive",
+      icon: <FaLinkedin className="hover" />,
+    },
+    {
+      href: "https://twitter.com/SardinhaDrive",
+      icon: <FaTwitter className="hover" />,
+    },
+    {
+      href: "https://patricia-vila-nova.vercel.app/",
+      icon: <FaLaptop className="hover" />,
+    },
+  ];
+  
   return (
     <RightContainer>
       <ImageContainer>
@@ -25,24 +48,13 @@ export default function Right() {
         <br /> within Switzerland.
       </Text>
       <IconWrapper>
-        <Link href="https://www.instagram.com/sardinhadrive/" target="_blank">
-          <FaInstagram className="hover" />
-        </Link>
-        <Link href="https://www.facebook.com/sardinhadrive" target="_blank">
-          <FaFacebookF className="hover" />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/company/sardinha-drive"
-          target="_blank"
-        >
-          <FaLinkedin className="hover" />
-        </Link>
-        <Link href="https://twitter.com/SardinhaDrive" target="_blank">
-          <FaTwitter className="hover" />
-        </Link>
-        <Link href="https://patricia-vila-nova.vercel.app/" target="_blank">
-          <FaLaptop className="hover" />
-        </Link>
+        {data.map((item, i) => {
+          return (
+            <Link href={item.href} target="_blank">
+              {item.icon}
+            </Link>
+          );
+        })}
       </IconWrapper>
     </RightContainer>
   );
