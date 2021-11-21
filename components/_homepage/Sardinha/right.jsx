@@ -38,7 +38,7 @@ export default function Right() {
   return (
     <RightContainer>
       <ImageContainer>
-        <Link href="https://patricia-vila-nova.vercel.app/" target="_blank">
+        <Link href="https://patricia-vila-nova.vercel.app/" target="_blank" passHref>
           <Image src={sardinha} alt="sardinha logo" />
         </Link>
       </ImageContainer>
@@ -50,7 +50,7 @@ export default function Right() {
       <IconWrapper>
         {data.map((item, i) => {
           return (
-            <Link href={item.href} target="_blank">
+            <Link key={i} href={item.href} target="_blank" passHref>
               {item.icon}
             </Link>
           );

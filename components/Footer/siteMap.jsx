@@ -11,13 +11,13 @@ export default function SiteMap() {
       <LinkScroll to="top" smooth={true} duration={600} spy={true}>
         <h2>Go to Top</h2>
       </LinkScroll>
-      <Link href="/">
+      <Link href="/" passHref>
         <h2>Home</h2>
       </Link>
-      <Link href="/projects">
+      <Link href="/projects" passHref>
         <h2>Projects</h2>
       </Link>
-      <Link href="/projects">
+      <Link href="/skills" passHref>
         <h2>Skills</h2>
       </Link>
     </SectionContainer>

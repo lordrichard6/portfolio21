@@ -9,7 +9,7 @@ export default function Logo() {
   return (
     <LogoContainer>
       <LogoWrapper>
-        <Link href="/">
+        <Link href="/" passHref>
           <Image src={logo} alt="paulo lopes reizinho" />
         </Link>
       </LogoWrapper>

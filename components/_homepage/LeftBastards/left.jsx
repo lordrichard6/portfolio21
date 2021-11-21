@@ -10,7 +10,11 @@ export default function Left() {
   return (
     <LeftContainer>
       <FirstImage>
-        <Link href="https://www.instagram.com/left_bastards/" target="_blank">
+        <Link
+          href="https://www.instagram.com/left_bastards/"
+          target="_blank"
+          passHref
+        >
           <Image src={instagram} alt="left bastards instagram" />
         </Link>
       </FirstImage>
@@ -18,12 +22,13 @@ export default function Left() {
         <Link
           href="https://www.youtube.com/channel/UCFDqsXZSVve8LXMa5uevdyg"
           target="_blank"
+          passHref
         >
           <Image src={youtube} alt="left bastards youtube" />
         </Link>
       </SecondImage>
       <ThirdImage>
-        <Link href="https://left-bastards.vercel.app/" target="_blank">
+        <Link href="https://left-bastards.vercel.app/" target="_blank" passHref>
           <Image src={website} alt="left bastards website" />
         </Link>
       </ThirdImage>

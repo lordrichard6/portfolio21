@@ -47,7 +47,7 @@ export default function Right() {
       <IconWrapper>
         {data.map((item, i) => {
           return (
-            <Link key={i} href={item.href} target="_blank">
+            <Link key={i} href={item.href} target="_blank" passHref>
               {item.icon}
             </Link>
           );

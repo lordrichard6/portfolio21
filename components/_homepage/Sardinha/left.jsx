@@ -13,6 +13,7 @@ export default function Left() {
         <Link
           href="https://www.linkedin.com/company/sardinha-drive"
           target="_blank"
+          passHref
         >
           <Image src={linkedin} alt="sardinha linkedin" />
         </Link>
@@ -21,6 +22,7 @@ export default function Left() {
         <Link
           href="https://www.linkedin.com/company/sardinha-drive"
           target="_blank"
+          passHref
         >
           <Image src={facebook} alt="sardinha facebook" />
         </Link>
@@ -29,6 +31,7 @@ export default function Left() {
         <Link
           href="https://www.linkedin.com/company/sardinha-drive"
           target="_blank"
+          passHref
         >
           <Image src={website} alt="sardinha website" />
         </Link>
