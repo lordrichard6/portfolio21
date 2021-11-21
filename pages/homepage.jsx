@@ -6,6 +6,7 @@ import { bannerProjects, bannerSkills } from "../assets/data";
 import Header from "../components/_homepage/Header";
 import AboutMe from "../components/_homepage/AboutMe";
 import Sardinha from '../components/_homepage/Sardinha'
+import LeftBastards from '../components/_homepage/LeftBastards'
 import MyPassions from "../components/_homepage/MyPassions";
 import Banner from "../components/banner";
 
@@ -27,6 +28,7 @@ export default function HomePage() {
       <Header />
       <AboutMe />
       <Sardinha />
+      <LeftBastards />
       <MyPassions />
       <Banner
         imgSrc={bannerProjects.backgroundImage}

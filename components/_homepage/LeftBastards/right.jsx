@@ -4,53 +4,50 @@ import Link from "next/link";
 
 import {
   FaInstagram,
-  FaLinkedin,
   FaFacebookF,
-  FaTwitter,
   FaLaptop,
+  FaYoutubeSquare,
 } from "react-icons/fa";
-import sardinha from "../../../assets/images/homepage/sardinha.png";
+import { Colors } from "../../../assets/variables";
+import logo from "../../../assets/images/homepage/logo_gold.png";
 
 export default function Right() {
   const data = [
     {
-      href: "https://www.instagram.com/sardinhadrive/",
-      icon: <FaInstagram className="hover" alt='instagram sardinha drive'/>,
+      href: "https://www.instagram.com/left_bastards/",
+      icon: <FaInstagram className="hover" alt="instagram left bastards" />,
     },
     {
-      href: "https://www.facebook.com/sardinhadrive",
-      icon: <FaFacebookF className="hover" alt='facebook sardinha drive'/>,
+      href: "https://www.facebook.com/groups/728183861271658/?ref=share",
+      icon: <FaFacebookF className="hover" alt="facebook left bastards" />,
     },
     {
-      href: "https://www.linkedin.com/company/sardinha-drive",
-      icon: <FaLinkedin className="hover" alt='linkedin sardinha drive'/>,
+      href: "https://www.youtube.com/channel/UCFDqsXZSVve8LXMa5uevdyg",
+      icon: <FaYoutubeSquare className="hover" alt="youtube left bastards" />,
     },
     {
-      href: "https://twitter.com/SardinhaDrive",
-      icon: <FaTwitter className="hover" alt='twitter sardinha drive'/>,
-    },
-    {
-      href: "https://patricia-vila-nova.vercel.app/",
-      icon: <FaLaptop className="hover" alt='official website sardinha drive'/>,
+      href: "https://left-bastards.vercel.app/",
+      icon: <FaLaptop className="hover" alt="official website left bastards" />,
     },
   ];
-  
+
   return (
     <RightContainer>
       <ImageContainer>
         <Link href="https://patricia-vila-nova.vercel.app/" target="_blank">
-          <Image src={sardinha} alt="sardinha logo" />
+          <Image src={logo} alt="sardinha logo" />
         </Link>
       </ImageContainer>
-      <SubTitle>Sardinha Drive</SubTitle>
+      <SubTitle>Left Bastards</SubTitle>
       <Text>
-        They provide driving services
-        <br /> within Switzerland.
+        A group o people entusiastic about cars,
+        <br /> if you like road engines,
+        <br /> check them out
       </Text>
       <IconWrapper>
         {data.map((item, i) => {
           return (
-            <Link href={item.href} target="_blank">
+            <Link key={i} href={item.href} target="_blank">
               {item.icon}
             </Link>
           );
@@ -83,7 +80,7 @@ const ImageContainer = styled.div`
 
   &:hover {
     transform: scale(1.05) translateY(-0.5rem);
-    box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+    box-shadow: 0 2.5rem 4rem rgba(${Colors.dark}, 0.5);
     z-index: 20;
   }
 
@@ -95,8 +92,9 @@ const ImageContainer = styled.div`
 
 const SubTitle = styled.h2`
   font-size: 2rem;
-  font-weight: 600;
-  color: #eee;
+  font-weight: 400;
+  color: #caa82f;
+  text-transform: uppercase;
   letter-spacing: 0.2em;
   z-index: 1;
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
@@ -126,7 +124,7 @@ const Text = styled.h2`
 `;
 
 const IconWrapper = styled.div`
-  width: 50%;
+  width: 40%;
   font-size: 3rem;
   font-weight: 400;
   color: #eee;
@@ -146,8 +144,8 @@ const IconWrapper = styled.div`
 
     &:hover {
       transform: scale(1.05) translateY(-0.5rem);
-      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
-      color: #9f60cc;
+      box-shadow: 0 2.5rem 4rem rgba(${Colors.dark}, 0.5);
+      color: #caa82f;
       z-index: 20;
     }
   }
