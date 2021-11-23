@@ -25,10 +25,10 @@ export default function Developer() {
         })}
       </Projects>
       <OtherProjects>
-        {projectsDev.other.map((item, index) => {
+        {projectsDev.other.map((item, i) => {
           return (
             <Project
-              index={index}
+              key={i}
               src={item.image}
               alt={item.alt}
               title={item.title}
