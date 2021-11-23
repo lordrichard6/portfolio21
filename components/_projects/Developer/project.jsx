@@ -18,8 +18,10 @@ export default function Project({ src, alt, title, text, link, tech }) {
         <div className="icon">{tech}</div>
         {/* <p>{text}</p> */}
         <div className="link-wrap">
-          <Link href={link} target="_blank">
-            <Button />
+          <Link href={link}>
+            <a target="_blank">
+              <Button />
+            </a>
           </Link>
         </div>
       </div>
