@@ -5,7 +5,7 @@ import Right from "./right";
 
 export default function Sardinha() {
   return (
-    <SectionContainer>
+    <SectionContainer className="background-blue">
       <Title>
         <h1>Need a Chauffeur?</h1>
       </Title>
@@ -25,7 +25,8 @@ const SectionContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding: 6rem 0;
-  background: #062942;
+  background: url('/circuit_bg.svg'), #062942;
+  background-repeat: no-repeat;
 
   @media screen and (max-width: 500px) {
     height: 100%;

@@ -24,23 +24,31 @@ export default function Education() {
 }
 
 const PageContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  padding: 3rem 0;
+  background: url('/lines.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `;
 
 const InnerContainer = styled.div`
-  width: 80%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   background: #d1d5db;
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 764px) {
+    width: 80%;
+  }
 `;
 
 const SectionTitle = styled.h1`
@@ -48,14 +56,14 @@ const SectionTitle = styled.h1`
   margin-top: 0;
   font-size: 4rem;
   font-weight: 400;
-  color: ${Colors.primary};
+  color: ${Colors.dark};
 `;
 
 const CourseTitle = styled.h1`
   font-size: 1.5rem;
   margin-top: 0;
   font-weight: 400;
-  color: ${Colors.primary};
+  color: ${Colors.dark};
 
   @media screen and (min-width: 2560px) {
     font-size: 2.6rem;

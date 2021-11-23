@@ -9,21 +9,16 @@ import { Colors } from "../../../assets/variables";
 export default function Header() {
   return (
     <SectionContainer>
-      <Background
-        src={skillsHeader.backgroundImage}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-      />
       <Title>
         <ReactTypingEffect text="mySkills" speed={120} eraseDelay={700} />
       </Title>
+      <h1>The path to growth is attained only through efford and consistency.</h1>
       {/* <Animation /> */}
     </SectionContainer>
   );
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.header`
   position: relative;
   margin: 0;
   display: flex;
@@ -31,20 +26,31 @@ const SectionContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  height: 600px;
+  background: url('/header_skills.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
-  @media screen and (max-width: 390px) {
-    height: 45rem;
+  h1 {
+    font-weight: 400;
+    color: ${Colors.white};
+    width: 80%;
+    text-align: center;
+
+    @media screen and (max-width: 764px) {
+      font-size: 1.8rem;
+    }
   }
 `;
 
 const Title = styled.div`
+  width: 100%;
   z-index: 1;
+  text-align: center;
   font-size: 4rem;
   font-weight: 400;
-  color: ${Colors.primary};
+  color: ${Colors.white};
   text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.secondary};
   display: flex;
   flex-direction: column;
@@ -55,8 +61,4 @@ const Title = styled.div`
   @media screen and (min-width: 2560px) {
     font-size: 5rem;
   }
-`;
-
-const Background = styled(Image)`
-  z-index: 0;
 `;

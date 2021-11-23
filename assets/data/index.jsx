@@ -71,16 +71,14 @@ export const bannerProjects = {
   backgroundImage: bannerProj,
   alt: 'city zurich',
   logo: logoWhite,
-  text: "Go to Projects page",
-  icon: <BsFillArrowRightSquareFill />
+  text: "Projects page",
 };
 
 export const bannerSkills = {
   backgroundImage: bannerEdu,
   alt: 'lisbon portugal',
   logo: logoWhite,
-  text: "Go to Education page",
-  icon: <BsFillArrowRightSquareFill />
+  text: "Education page",
 };
 
 // Home ---------------------------------------------------------------
@@ -159,6 +157,7 @@ export const projectsDev = {
       title: "Private Chauffeur",
       text: "A project for a friend that has her own driving service.",
       link: "https://patricia-vila-nova.vercel.app/",
+      icon: <SiNextdotjs />
     },
     {
       id: 2,
@@ -167,6 +166,7 @@ export const projectsDev = {
       title: "Portfolio",
       text: "This very own website a marvel of design.",
       link: "/",
+      icon: <SiNextdotjs />
     },
     {
       id: 3,
@@ -174,7 +174,8 @@ export const projectsDev = {
       alt: "left bastards",
       title: "Left Bastards",
       text: "The official website of the car lovers group called, Left Bastards",
-      link: "https://patricia-vila-nova.vercel.app/",
+      link: "https://left-bastards.vercel.app/",
+      icon: <SiNextdotjs />
     },
     {
       id: 4,
@@ -183,6 +184,7 @@ export const projectsDev = {
       title: "Portfolio old",
       text: "The first version of this website's design",
       link: "https://lordrichard-cv-blue.netlify.app/",
+      icon: <FaReact />
     },
   ],
   other: [
@@ -193,6 +195,7 @@ export const projectsDev = {
       title: "FastRent",
       text: "A beautifull car rental website made with React using typescript. Used styled-components together with tailwind to style the page.",
       link: "https://lordrichard-rentfast.netlify.app/",
+      icon: <FaReact />
     },
     {
       id: 2,
@@ -201,6 +204,7 @@ export const projectsDev = {
       title: "An old Portfolio",
       text: "Created with React.js with and elengant and simplistic design",
       link: "https://reizinhocv.netlify.app/",
+      icon: <FaReact />
     },
     {
       id: 3,
@@ -209,6 +213,7 @@ export const projectsDev = {
       title: "Skytours",
       text: "This project was initially built using html and Sass, then later I converted to React maintaning the Sass styling system, elegant design of a tours agency.",
       link: "https://reizinho-skytours.netlify.com/",
+      icon: <FaReact />
     },
     {
       id: 4,
@@ -217,6 +222,7 @@ export const projectsDev = {
       title: "Hulu clone",
       text: "Built with Next.js imitating the design of the famous movie streaming platform Hulu, using the database of an API movie site TMDB.",
       link: "https://hulu-clone-rosy.vercel.app/",
+      icon: <SiNextdotjs />
     },
     {
       id: 5,
@@ -225,6 +231,7 @@ export const projectsDev = {
       title: "Monkey Circus",
       text: "A mocking E-comerce to sell monkeys, with a credit card payment implemented.",
       link: "https://monkeycircus-2z4e865i4.now.sh",
+      icon: <SiNextdotjs />
     },
     {
       id: 6,
@@ -233,6 +240,7 @@ export const projectsDev = {
       title: "Comic Portfolio",
       text: "A very creative portfolio with a comic theme.",
       link: "https://new-cv-parallax.netlify.app/",
+      icon: <FaReact />
     },
     {
       id: 7,
@@ -241,6 +249,7 @@ export const projectsDev = {
       title: "The Sphere",
       text: "My first play with Three.js.",
       link: "https://lordrichard-threejs-sphere.netlify.app/",
+      icon: <SiJavascript />
     },
     {
       id: 8,
@@ -249,6 +258,7 @@ export const projectsDev = {
       title: "Paul's Engine",
       text: "A project build with Next.js using the google search API.",
       link: "https://paul-search.vercel.app/",
+      icon: <SiNextdotjs />
     },
   ],
 };
@@ -260,6 +270,7 @@ export const projectsDesign = [
     alt: "the mockups of this website",
     title: "This website mockups",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
+    icon: <FaFigma />
   },
   {
     id: 2,
@@ -267,6 +278,7 @@ export const projectsDesign = [
     alt: "the mockups of the left bastards website",
     title: "Left Bastards mockups",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
+    icon: <FaFigma />
   },
   {
     id: 3,
@@ -274,6 +286,7 @@ export const projectsDesign = [
     alt: "the mockups of patricia website",
     title: "Private Chauffeur mockups",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
+    icon: <FaFigma />
   },
 ];
 

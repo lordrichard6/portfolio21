@@ -8,12 +8,6 @@ import pattern from "../../../assets/images/pattern.png";
 export default function Techs() {
   return (
     <PageContainer>
-      <BG
-        src={pattern}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-      />
       <h1>Techs</h1>
       <IconsContainer>
         {tech.map((item, i) => {
@@ -41,7 +35,10 @@ const PageContainer = styled.div`
   margin:0 2rem;
   padding: 6rem 0;
   color: #eee;
-  background: ${Colors.primary};
+  background: url("/circuit_tech.svg"), ${Colors.primary};
+  background-repeat: no-repeat;
+  background-position: right;
+  /* background-size: cover; */
 
   @media screen and (min-width: 2560px) {
     font-size: 2.6rem;
@@ -95,9 +92,4 @@ const Icon = styled.div`
     font-size: 2rem;
   }
   }
-`;
-
-const BG = styled(Image)`
-  z-index: 0;
-  opacity: 0.1;
 `;

@@ -28,7 +28,6 @@ const Nav = styled.nav`
   justify-content: center;
   width: 100%;
   z-index: 1;
-  background-color: ${Colors.primary};
   background: url("/pattern.png"), ${Colors.primary};
 
   @media screen and (max-width: 1440px) {

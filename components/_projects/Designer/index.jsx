@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { projectsDesign } from "../../../assets/data";
 import { Colors } from "../../../assets/variables";
+import Project from './project'
 
 export default function Designer() {
   return (
@@ -11,26 +12,13 @@ export default function Designer() {
       <ProjectsContainer>
         {projectsDesign.map((item, index) => {
           return (
-            <ProjectWrapper key={index}>
-              <ImageWrapper>
-                <Image
-                  src={item.imgSrc}
-                  objectFit="cover"
-                  objectPosition="center"
-                  alt={item.alt}
-                />
-              </ImageWrapper>
-              <div className="overlay"></div>
-              <div className="overlay2"></div>
-              <div className="text">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <h2>{item.title}</h2>
-                {/* <p>{item.text}</p> */}
-              </div>
-            </ProjectWrapper>
+            <Project
+              index={index}
+              src={item.imgSrc}
+              alt={item.alt}
+              title={item.title}
+              tech={item.icon}
+            />
           );
         })}
       </ProjectsContainer>

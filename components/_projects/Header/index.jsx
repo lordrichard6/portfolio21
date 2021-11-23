@@ -9,16 +9,10 @@ import { Colors } from "../../../assets/variables";
 export default function Header() {
   return (
     <SectionContainer>
-      <Background
-        src={projectsHeader.backgroundImage}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        alt="painting of van goth"
-      />
       <Title>
         <ReactTypingEffect text="myProjects" speed={120} eraseDelay={700} />
       </Title>
+      <h1>A man`s worth is what he can do with the weapons at hand.</h1>
       {/* <Animation /> */}
     </SectionContainer>
   );
@@ -30,32 +24,43 @@ const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
-  height: 100vh;
-  padding-left: 8rem;
-  
-  @media screen and (max-width: 390px) {
+  height: 40rem;
+  background: url("/header_projects.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media screen and (max-width: 764px) {
     padding: 0;
     align-items: center;
-    height: 45rem;
   }
   @media screen and (min-width: 2560px) {
-    padding-left: 20rem;
+    height: 50rem;
+  }
+
+  h1 {
+    font-weight: 400;
+    color: ${Colors.white};
+    width: 80%;
+    text-align: center;
+
+    @media screen and (max-width: 764px) {
+      font-size: 1.8rem;
+    }
   }
 `;
 
 const Title = styled.div`
+  width: 100%;
+  text-align: center;
   z-index: 1;
   font-size: 4rem;
   font-weight: 400;
-  color: ${Colors.primary};
+  color: ${Colors.white};
 
   @media screen and (min-width: 2560px) {
     font-size: 5rem;
   }
-`;
-
-const Background = styled(Image)`
-  z-index: 0;
 `;

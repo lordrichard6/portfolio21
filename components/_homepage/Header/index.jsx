@@ -30,7 +30,7 @@ export default function Header() {
           {/* <Animation /> */}
           <SubTitle>{homeHeader.subTitle}</SubTitle>
         </SloganContainer>
-        <ImageContainer>
+        <ImageContainer className="waitAnimate">
           <Image src={homeHeader.logo} alt="paulo reizinho logo" />
         </ImageContainer>
       </InnerContainer>
@@ -65,6 +65,23 @@ const InnerContainer = styled.div`
   @media screen and (min-width: 1080px) {
     width: 70%;
   }
+
+  .waitAnimate {
+  animation: waitAnimate 4s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes waitAnimate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 `;
 
 const SloganContainer = styled.div`

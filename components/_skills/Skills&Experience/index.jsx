@@ -27,49 +27,68 @@ export default function SkillsExp() {
 
   return (
     <SectionContainer>
-      <LeftSection>
-        <InnerSection>
-          <Title>{skillsAndExperience.title}</Title>
-          <p>
-            {skillsAndExperience.text01}
-            <br />
-            {skillsAndExperience.text02}
-            <br />
-            {skillsAndExperience.text03}
-          </p>
-        </InnerSection>
-        {/* <Image src={logo} alt="logo" /> */}
-      </LeftSection>
-      <RightSection>
-        <InnerSection>
-          <SkillsContainer>
-            {skillsBarData.map((item, i) => {
-              return (
-                <div key={i}>
-                  <h2>{item.title}</h2>
-                  <ProgressBar completed={item.progress} />
-                </div>
-              );
-            })}
-          </SkillsContainer>
-          <ExperienceContainer>
-            <h2>{skillsExperience[0].title}</h2>
-            <h3>{skillsExperience[0].company}</h3>
-            <p>{skillsExperience[0].period}</p>
-            <p>{skillsExperience[0].text}</p>
-          </ExperienceContainer>
-        </InnerSection>
-      </RightSection>
+      <InnerContainer>
+        <LeftSection>
+          <InnerSection>
+            <Title>{skillsAndExperience.title}</Title>
+            <p>
+              {skillsAndExperience.text01}
+              <br />
+              {skillsAndExperience.text02}
+              <br />
+              {skillsAndExperience.text03}
+            </p>
+          </InnerSection>
+          {/* <Image src={logo} alt="logo" /> */}
+        </LeftSection>
+        <RightSection>
+          <InnerSection>
+            <SkillsContainer>
+              {skillsBarData.map((item, i) => {
+                return (
+                  <div key={i}>
+                    <h2>{item.title}</h2>
+                    <ProgressBar completed={item.progress} />
+                  </div>
+                );
+              })}
+            </SkillsContainer>
+            <ExperienceContainer>
+              <h2>{skillsExperience[0].title}</h2>
+              <h3>{skillsExperience[0].company}</h3>
+              <p>{skillsExperience[0].period}</p>
+              <p>{skillsExperience[0].text}</p>
+            </ExperienceContainer>
+          </InnerSection>
+        </RightSection>
+      </InnerContainer>
     </SectionContainer>
   );
 }
 
 const SectionContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background: url("/clouds.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+
+  @media screen and (max-width: 390px) {
+    flex-direction: column;
+  }
+`;
+
+const InnerContainer = styled.div`
   width: 80%;
   display: flex;
   flex-direction: row;
-  color: ${Colors.primary};
-  margin: 4rem 0;
+  justify-content: center;
+  align-items: center;
+  color: ${Colors.dark};
 
   @media screen and (max-width: 390px) {
     flex-direction: column;
@@ -81,6 +100,7 @@ const LeftSection = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  
 
   @media screen and (max-width: 390px) {
     width: 100%;

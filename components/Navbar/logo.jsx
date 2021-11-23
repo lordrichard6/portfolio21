@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Colors } from "../../assets/variables";
-import logo from "../../public/logo_black.png";
+import logo from "../../public/logo_white.png";
 
 export default function Logo() {
   return (

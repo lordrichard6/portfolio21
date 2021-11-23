@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { Colors } from "../../../assets/variables";
 import { hobbies } from "../../../assets/data";
+import HobbyComponent from "./hobby";
 
 export default function MyPassions() {
   return (
@@ -11,20 +12,14 @@ export default function MyPassions() {
       <HobbiesContainer>
         {hobbies.map((item, i) => {
           return (
-            <div className={item.className} key={i}>
-              <Picture>
-                <Image
-                  src={item.imgSrc}
-                  objectFit="cover"
-                  objectPosition="center"
-                  alt={item.alt}
-                />
-              </Picture>
-              <Text>
-                <h2>{item.title}</h2>
-                <p>{item.text}</p>
-              </Text>
-            </div>
+            <HobbyComponent
+              i={i}
+              className={item.className}
+              imgSrc={item.imgSrc}
+              alt={item.alt}
+              title={item.title}
+              text={item.text}
+            />
           );
         })}
       </HobbiesContainer>
@@ -39,7 +34,8 @@ const SectionContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: ${Colors.primary};
+  color: ${Colors.white};
+  background: url("/pattern.png"), ${Colors.primary};
 
   h1 {
     font-size: 4rem;
@@ -82,43 +78,5 @@ const HobbiesContainer = styled.div`
     @media screen and (max-width: 400px) {
       flex-direction: column;
     }
-  }
-  h2 {
-    font-weight: 600;
-    font-size: 2rem;
-
-    @media screen and (max-width: 400px) {
-      margin: 0 1rem;
-    }
-  }
-  p {
-    font-weight: normal;
-    font-size: 1.4rem;
-
-    @media screen and (max-width: 1024px) {
-      font-size: 1.3rem;
-    }
-  }
-`;
-
-const Picture = styled.div`
-  display: flex;
-  width: 50%;
-  height: auto;
-  padding: 0 1rem;
-
-  @media screen and (max-width: 400px) {
-    width: 100%;
-  }
-`;
-
-const Text = styled.div`
-  width: 50%;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (max-width: 400px) {
-    width: 100%;
   }
 `;

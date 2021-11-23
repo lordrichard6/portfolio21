@@ -27,6 +27,10 @@ const SectionContainer = styled.section`
   padding: 6rem 0;
   background: #1d2124;
   font-family: 'Poppins', sans-serif;
+  background: url('/spotlight.svg'), #1d2124;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   @media screen and (max-width: 500px) {
     height: 100%;
@@ -60,6 +64,7 @@ const InnerContainer = styled.div`
   display: flex;
   flex-direction: row-reverse;
   /* align-items: flex-end; */
+
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;

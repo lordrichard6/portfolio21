@@ -4,18 +4,11 @@ import Link from "next/link";
 
 import { FaTimes } from "react-icons/fa";
 import { Colors } from "../../assets/variables";
-import pattern from "../../assets/images/pattern.png";
 
 export default function Sidebar({isOpen, toggle}) {
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
-      <Bg
-        src={pattern}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        alt="pattern"
-      />
+
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
@@ -63,10 +56,6 @@ const SidebarContainer = styled.aside`
     background: url("/pattern.png"), ${Colors.primary};
 `;
 
-const Bg = styled(Image)`
-  z-index: 0;
-  opacity: 0.1;
-`;
 
 const Icon = styled.div`
   position: absolute;

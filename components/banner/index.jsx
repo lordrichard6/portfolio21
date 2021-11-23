@@ -3,35 +3,43 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Colors } from "../../assets/variables";
+import Button from "./button";
 
-export default function Banner({ imgSrc, alt, text, icon }) {
+export default function Banner() {
   return (
     <SectionContainer>
-      <Background
-        src={imgSrc}
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        alt={alt}
-      />
-      <Link href="/projects">
-        <div className="link">
-          <h1>{text}</h1>
-          <Icon>{icon}</Icon>
-        </div>
-      </Link>
+      <InnerContainer>
+        <LeftContainer></LeftContainer>
+        <RightContainer>
+          <Link href="/projects">
+            <div className="link">
+              <Button text="Projects page" />
+            </div>
+          </Link>
+          <Link href="/skills">
+            <div className="link">
+              <Button text="Skills page" />
+            </div>
+          </Link>
+        </RightContainer>
+      </InnerContainer>
     </SectionContainer>
   );
 }
 
 const SectionContainer = styled.section`
   width: 100%;
-  height: 25rem;
+  height: 40rem;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   color: ${Colors.white};
+  background: url('/banner_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   h1 {
     z-index: 1;
     font-weight: 400;
@@ -43,7 +51,7 @@ const SectionContainer = styled.section`
     }
   }
   .link {
-    width: 80%;
+    width: 100%;
     cursor: pointer;
     z-index: 1;
     display: flex;
@@ -52,19 +60,17 @@ const SectionContainer = styled.section`
   }
 `;
 
-const Background = styled(Image)`
-  z-index: 0;
-`;
-
-const Icon = styled.span`
-  padding-top: 1rem;
-  margin-left: 1rem;
-  font-size: 3rem;
+const InnerContainer = styled.div`
+  width: 80%;
   display: flex;
-  align-self: center;
-  text-shadow: 1px 2px 4px #00000081;
-
-  @media screen and (max-width: 390px) {
-    font-size: 2rem;
-  }
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+const LeftContainer = styled.div``;
+const RightContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;

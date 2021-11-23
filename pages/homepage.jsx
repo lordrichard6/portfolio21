@@ -30,18 +30,7 @@ export default function HomePage() {
       <Sardinha />
       <LeftBastards />
       <MyPassions />
-      <Banner
-        imgSrc={bannerProjects.backgroundImage}
-        alt={bannerProjects.alt}
-        text={bannerProjects.text}
-        icon={bannerProjects.icon}
-      />
-      <Banner
-        imgSrc={bannerSkills.backgroundImage}
-        alt={bannerSkills.alt}
-        text={bannerSkills.text}
-        icon={bannerSkills.icon}
-      />
+      <Banner />
       <Footer />
     </HomepageContainer>
   );
