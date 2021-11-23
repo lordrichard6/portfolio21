@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 import { Colors } from "../../../assets/variables";
 import { hobbies } from "../../../assets/data";
@@ -13,7 +12,7 @@ export default function MyPassions() {
         {hobbies.map((item, i) => {
           return (
             <HobbyComponent
-              i={i}
+              key={i}
               className={item.className}
               imgSrc={item.imgSrc}
               alt={item.alt}

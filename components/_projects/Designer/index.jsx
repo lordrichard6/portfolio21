@@ -10,10 +10,10 @@ export default function Designer() {
     <SectionContainer>
       <h1>Designer</h1>
       <ProjectsContainer>
-        {projectsDesign.map((item, index) => {
+        {projectsDesign.map((item, i) => {
           return (
             <Project
-              index={index}
+              key={i}
               src={item.imgSrc}
               alt={item.alt}
               title={item.title}

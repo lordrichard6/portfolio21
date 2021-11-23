@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-export default function HobbyComponent({i, className, imgSrc, alt, title, text}) {
+export default function HobbyComponent({className, imgSrc, alt, title, text}) {
   return (
-    <div className={className} key={i}>
+    <div className={className}>
       <Picture>
         <Image
           src={imgSrc}

@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export default function Button() {
   return (
-    <ButtonContainer class="cssbuttons-io-button">
+    <ButtonContainer className="cssbuttons-io-button">
       <span>Visit</span>
-      <div class="liquid"></div>
+      <div className="liquid"></div>
     </ButtonContainer>
   );
 }

@@ -5,14 +5,15 @@ import { Colors } from "../../../assets/variables";
 import Project from "./project";
 
 export default function Developer() {
+  console.log(projectsDev.secondary.title)
   return (
     <SectionContainer>
       <h1>Developer</h1>
       <Projects>
-        {projectsDev.secondary.map((item, index) => {
+        {projectsDev.secondary.map((item, i) => {
           return (
             <Project
-              index={index}
+              key={i}
               src={item.image}
               alt={item.alt}
               title={item.title}

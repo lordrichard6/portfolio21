@@ -3,9 +3,9 @@ import Image from "next/image";
 
 import { Colors } from "../../../assets/variables";
 
-export default function Project({ index, src, alt, title, tech }) {
+export default function Project({ src, alt, title, tech }) {
   return (
-    <ProjectWrapper key={index}>
+    <ProjectWrapper>
       <ImageWrapper>
         <Image src={src} objectFit="cover" objectPosition="center" alt={alt} />
       </ImageWrapper>

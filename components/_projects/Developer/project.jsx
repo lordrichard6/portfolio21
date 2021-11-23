@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Colors } from "../../../assets/variables";
 import Button from "./button";
 
-export default function Project({ index, src, alt, title, text, link, tech }) {
+export default function Project({ src, alt, title, text, link, tech }) {
   return (
-    <ProjectWrapper key={index}>
+    <ProjectWrapper>
       <ImageWrapper>
         <Image src={src} objectFit="cover" objectPosition="center" alt={alt} />
       </ImageWrapper>
@@ -15,9 +15,7 @@ export default function Project({ index, src, alt, title, text, link, tech }) {
       <div className="overlay2"></div>
       <div className="text">
         <h2>{title}</h2>
-        <div className="icon">
-          {tech}
-        </div>
+        <div className="icon">{tech}</div>
         {/* <p>{text}</p> */}
         <div className="link-wrap">
           <Link href={link} target="_blank">
