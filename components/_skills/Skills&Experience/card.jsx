@@ -3,16 +3,16 @@ import styled from "styled-components";
 export default function Card({ title, company, period, text }) {
   return (
     <CardContainer>
-      <div class="face face1">
-        <div class="content">
-          <span class="stars"></span>
+      <div className="face face1">
+        <div className="content">
+          <span className="stars"></span>
           <h2>{title}</h2>
           <h3>{company}</h3>
           <p>{period}</p>
           <p>{text}</p>
         </div>
       </div>
-      <div class="face face2">
+      <div className="face face2">
         <h2>01</h2>
       </div>
     </CardContainer>

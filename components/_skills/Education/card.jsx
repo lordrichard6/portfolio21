@@ -4,9 +4,9 @@ export default function Card({ title, school, start, finish, text }) {
   return (
     <Container>
       <CardContainer>
-        <div class="face face1">
-          <div class="content">
-            <span class="stars"></span>
+        <div className="face face1">
+          <div className="content">
+            <span className="stars"></span>
             {/* <h2>{title}</h2> */}
             <h3>{school}</h3>
             <p>
@@ -15,7 +15,7 @@ export default function Card({ title, school, start, finish, text }) {
             <p>{text}</p>
           </div>
         </div>
-        <div class="face face2">
+        <div className="face face2">
           <h2>{title}</h2>
         </div>
       </CardContainer>
