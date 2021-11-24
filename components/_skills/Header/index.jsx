@@ -51,7 +51,7 @@ const Title = styled.div`
   font-size: 4rem;
   font-weight: 400;
   color: ${Colors.white};
-  text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.secondary};
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary};
   display: flex;
   flex-direction: column;
 

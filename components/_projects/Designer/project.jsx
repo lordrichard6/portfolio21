@@ -158,4 +158,6 @@ const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+  margin: 1rem;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 `;

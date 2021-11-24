@@ -45,6 +45,7 @@ const SectionContainer = styled.div`
     color: ${Colors.white};
     width: 80%;
     text-align: center;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary};
 
     @media screen and (max-width: 764px) {
       font-size: 1.8rem;
@@ -59,6 +60,7 @@ const Title = styled.div`
   font-size: 4rem;
   font-weight: 400;
   color: ${Colors.white};
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary};
 
   @media screen and (min-width: 2560px) {
     font-size: 5rem;
