@@ -26,6 +26,7 @@ const AniButton = styled.div`
     outline: transparent;
     position: relative;
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 
     @media screen and (max-width: 764px) {
       font-size: 2rem;
@@ -59,7 +60,9 @@ const AniButton = styled.div`
     animation-timing-function: steps(2, end);
   }
 
-  button:hover::after {
+  button:hover {
+    transform: scale(1.1) translateY(-0.5rem);
+      filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
     /* animation: 1s glitch infinite;
     animation-timing-function: steps(2, end); */
   }

@@ -12,7 +12,7 @@ export default function Techs() {
       <IconsContainer>
         {tech.map((item, i) => {
           return (
-            <Icon key={i}>
+            <Icon key={i} color={item.color}>
               {item.icon}
               <h2>{item.name}</h2>
             </Icon>
@@ -32,7 +32,7 @@ const PageContainer = styled.div`
   /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
-  margin:0 2rem;
+  margin: 0 2rem;
   padding: 6rem 0;
   color: #eee;
   background: url("/circuit_tech.svg"), ${Colors.primary};
@@ -84,12 +84,24 @@ const Icon = styled.div`
   @media screen and (min-width: 2560px) {
     font-size: 5rem;
   }
+
+  svg {
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    
+    :hover {
+      transform: scale(1.2);
+      color: ${(props) => props.color};
+      filter: drop-shadow(5px 5px 5px #1a1a1a);
+    }
+  }
+
   h2 {
     font-size: 1.5rem;
     margin: 0;
 
     @media screen and (min-width: 2560px) {
-    font-size: 2rem;
-  }
+      font-size: 2rem;
+    }
   }
 `;

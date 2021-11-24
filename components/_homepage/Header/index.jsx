@@ -98,6 +98,7 @@ const SloganContainer = styled.div`
 const ImageContainer = styled.div`
   width: 50%;
   height: auto;
+  filter: drop-shadow(10px 10px 5px #1a1a1a);
 
   @media screen and (max-width: 768px) {
     width: 100%;

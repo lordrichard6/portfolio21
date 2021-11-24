@@ -64,7 +64,7 @@ const FirstImage = styled.div`
 
   &:hover {
     transform: scale(1.05) translateY(-0.5rem);
-    box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
     z-index: 20;
   }
   @media screen and (min-width: 2024px) {
@@ -83,7 +83,7 @@ const SecondImage = styled.div`
 
   &:hover {
     transform: scale(1.05) translateY(-0.5rem);
-    box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
     z-index: 20;
   }
 
@@ -110,7 +110,7 @@ const ThirdImage = styled.div`
 
   &:hover {
     transform: scale(1.05) translateY(-0.5rem);
-    box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
     z-index: 20;
   }
 

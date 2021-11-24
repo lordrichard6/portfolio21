@@ -341,74 +341,92 @@ export const tech = [
   {
     icon: <FaReact />,
     name: "react",
+    color: '#02C6E9',
   },
   {
     icon: <SiNextdotjs />,
     name: "next",
+    color: '#000000',
   },
   {
     icon: <SiTypescript />,
     name: "typescript",
+    color: '#0074C2',
   },
   {
     icon: <SiHtml5 />,
     name: "html",
+    color: '#F25320',
   },
   {
     icon: <FaCss3 />,
     name: "css",
+    color: '#0066B6',
   },
   {
     icon: <SiJavascript />,
     name: "javascript",
+    color: '#EAD41C',
   },
   {
     icon: <FaNodeJs />,
     name: "node",
+    color: '#84BB00',
   },
   {
     icon: <SiAdobephotoshop />,
     name: "photoshop",
+    color: '#001C33',
   },
   {
     icon: <FaFigma />,
     name: "figma",
+    color: '#9A54F2',
   },
   {
     icon: <SiTailwindcss />,
     name: "tailwind",
+    color: '#419FAA',
   },
   {
     icon: <SiStyledcomponents />,
     name: "styled components",
+    color: '#9C538F',
   },
   {
     icon: <FaNpm />,
     name: "npm",
+    color: '#C13534',
   },
   {
     icon: <FaYarn />,
     name: "yarn",
+    color: '#1076A4',
   },
   {
     icon: <FaGitAlt />,
     name: "git",
+    color: '#E44D30',
   },
   {
     icon: <FaPython />,
     name: "python",
+    color: '#F0C540',
   },
   {
     icon: <SiDjango />,
     name: "django",
+    color: '#003729',
   },
   {
     icon: <FaSass />,
     name: "sass",
+    color: '#C26191',
   },
   {
     icon: <SiGraphql />,
     name: "graphql",
+    color: '#D60090',
   },
 ];
 

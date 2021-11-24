@@ -80,7 +80,7 @@ const ImageContainer = styled.div`
 
   &:hover {
     transform: scale(1.05) translateY(-0.5rem);
-    box-shadow: 0 2.5rem 4rem rgba(${Colors.dark}, 0.5);
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
     z-index: 20;
   }
 
@@ -143,8 +143,8 @@ const IconWrapper = styled.div`
     cursor: pointer;
 
     &:hover {
-      transform: scale(1.05) translateY(-0.5rem);
-      box-shadow: 0 2.5rem 4rem rgba(${Colors.dark}, 0.5);
+      transform: scale(1.1) translateY(-0.5rem);
+      filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
       color: #caa82f;
       z-index: 20;
     }
