@@ -1,16 +1,21 @@
-import Head from "next/head";
+import Header from "../components/_homepage/Header";
+import AboutMe from "../components/_homepage/AboutMe";
+import Sardinha from "../components/_homepage/Sardinha";
+import LeftBastards from "../components/_homepage/LeftBastards";
+import MyPassions from "../components/_homepage/MyPassions";
+import Banner from "../components/banner";
+import Layout from "../components/Layout";
 
-import HomePage from "./homepage";
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Paulo Reizinho</title>
-        <meta name="description" content="Paulo Reizinho Developer Portfolio" />
-        <link rel="icon" href="/logo_black.png" />
-      </Head>
-      <HomePage />
-    </>
+    <Layout>
+      <Header />
+      <AboutMe />
+      <Sardinha />
+      <LeftBastards />
+      <MyPassions />
+      <Banner />
+    </Layout>
   );
 }

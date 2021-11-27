@@ -1,24 +1,27 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { Link as LinkScroll } from "react-scroll";
+import useTranslation from "next-translate/useTranslation";
 
 import { Colors } from "../../assets/variables";
 
 export default function SiteMap() {
+  let { t } = useTranslation();
+
   return (
     <SectionContainer>
-      <h1>siteMap</h1>
+      <h1>{t("common:sitemap")}</h1>
       <LinkScroll to="top" smooth={true} duration={600} spy={true}>
-        <h2>Go to Top</h2>
+        <h2>{t("common:goTop")}</h2>
       </LinkScroll>
       <Link href="/" passHref>
-        <h2>Home</h2>
+        <h2>{t("common:home")}</h2>
       </Link>
       <Link href="/projects" passHref>
-        <h2>Projects</h2>
+        <h2>{t("common:projects")}</h2>
       </Link>
       <Link href="/skills" passHref>
-        <h2>Skills</h2>
+        <h2>{t("common:skills")}</h2>
       </Link>
     </SectionContainer>
   );

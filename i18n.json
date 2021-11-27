@@ -1,0 +1,12 @@
+{
+    "locales": [
+        "en",
+        "pt"
+    ],
+    "defaultLocale": "en",
+    "pages": {
+        "*": ["common", "home"],
+        "/projects": ["projects"],
+        "/skills": ["skills"]
+    }
+}

@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import useTranslation from "next-translate/useTranslation";
 
 import Left from "./left";
 import Right from "./right";
 
 export default function LeftBastards() {
+  let { t } = useTranslation();
+
   return (
     <SectionContainer>
       <Title>
-        <h1>You like cars?</h1>
+        <h1>{t("home:left_title")}</h1>
       </Title>
       <InnerContainer>
         <Left />

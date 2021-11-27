@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
 import {
   FaInstagram,
@@ -12,6 +13,8 @@ import { Colors } from "../../../assets/variables";
 import logo from "../../../assets/images/homepage/logo_gold.png";
 
 export default function Right() {
+  let { t } = useTranslation();
+
   const data = [
     {
       href: "https://www.instagram.com/left_bastards/",
@@ -39,11 +42,7 @@ export default function Right() {
         </Link>
       </ImageContainer>
       <SubTitle>Left Bastards</SubTitle>
-      <Text>
-        A group o people entusiastic about cars,
-        <br /> if you like road engines,
-        <br /> check them out
-      </Text>
+      <Text>{t("home:left_text")}</Text>
       <IconWrapper>
         {data.map((item, i) => {
           return (

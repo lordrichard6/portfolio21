@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import useTranslation from "next-translate/useTranslation";
 
 import { Colors } from "../../../assets/variables";
 import { hobbies } from "../../../assets/data";
 import HobbyComponent from "./hobby";
 
 export default function MyPassions() {
+  let { t } = useTranslation();
+
   return (
     <SectionContainer>
-      <h1>My Passions</h1>
+      <h1>{t("home:hobbies_title")}</h1>
       <HobbiesContainer>
         {hobbies.map((item, i) => {
           return (
@@ -16,8 +19,8 @@ export default function MyPassions() {
               className={item.className}
               imgSrc={item.imgSrc}
               alt={item.alt}
-              title={item.title}
-              text={item.text}
+              title={t(item.title)}
+              text={t(item.text)}
             />
           );
         })}

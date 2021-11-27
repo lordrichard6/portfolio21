@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import useTranslation from "next-translate/useTranslation";
 
 import {
   FaHouseUser,
@@ -11,27 +12,20 @@ import { HiMail } from "react-icons/hi";
 import { Colors } from "../../assets/variables";
 
 export default function Contacts() {
+  let { t } = useTranslation();
+
   return (
     <SectionContainer>
-      <h1>myInfo</h1>
+      <h1>{t("common:info")}</h1>
       <IconContainer>
-        <Icon
-          href="https://www.linkedin.com/in/pauloreizinho/"
-          target="_blank"
-        >
-          <FaLinkedin alt='github paulo reizinho profile'/>
+        <Icon href="https://www.linkedin.com/in/pauloreizinho/" target="_blank">
+          <FaLinkedin alt="github paulo reizinho profile" />
         </Icon>
-        <Icon
-          href="https://www.instagram.com/l0rdr1chard/"
-          target="_blank"
-        >
-          <FaInstagram alt='instagram paulo reizinho profile'/>
+        <Icon href="https://www.instagram.com/l0rdr1chard/" target="_blank">
+          <FaInstagram alt="instagram paulo reizinho profile" />
         </Icon>
-        <Icon
-          href="https://github.com/lordrichard6/"
-          target="_blank"
-        >
-          <FaGithub alt='github paulo reizinho profile'/> 
+        <Icon href="https://github.com/lordrichard6/" target="_blank">
+          <FaGithub alt="github paulo reizinho profile" />
         </Icon>
       </IconContainer>
 
@@ -39,7 +33,7 @@ export default function Contacts() {
         <BlueIcon>
           <FaHouseUser />
         </BlueIcon>
-        <p>Currently living in Zurich</p>
+        <p>{t("common:adress")}</p>
       </ContactWrapper>
       <ContactWrapper>
         <BlueIcon>
@@ -64,7 +58,7 @@ const SectionContainer = styled.section`
 
   @media screen and (max-width: 390px) {
     order: 2;
-    margin:2rem 0;
+    margin: 2rem 0;
   }
   h1 {
     font-weight: 400;
@@ -95,7 +89,7 @@ const ContactWrapper = styled.div`
   align-items: center;
 
   p {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   @media screen and (max-width: 390px) {

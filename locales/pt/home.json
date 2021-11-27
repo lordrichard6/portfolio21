@@ -1,0 +1,25 @@
+{
+    "header_01": "Programador",
+    "header_02": "Designer",
+    "header_03": "UI and UX Expert",
+    "header_slogan": "As soluçoes nao caem do ceu",
+    "about_title": "Sobre mim",
+    "about_text01": "O meu nome e Paulo Lopes Reizinho, nasci em 86 numa pequena vila no meio de Portugal mas estou actualmente a viver em terras suiças mais precisamente em Zurique.",
+    "about_text02": "Estudei administraçao com foco em contabilidade, em que aprendi bastante e adoptei uma metodologia de trabalho mais organizada. Mas adiante, descobri que gosto de programaçao mais tarde e os desafio que vem com isso, especialmente quando encotro a soluçao para um problema dificil. E claro que nunca e tarde para mudar de carreira e criar grandes coisas no processo tendo o que e preciso para tal.",
+    "about_text03": "Bom, estou a aprender desenvolvimento web desde 2019 com altos e baixos. Com foco em front-end e interesse especial em design de visualmente apelativos UI e intuitivos UX de maneira que facilite a sua navegaçao. A minha tecnologia principa e React.js, mas o caminho da aprendisagem nunca acaba, mas actualmente estou mais inclinado para Next.js. Utilizo o Figma e Photoshop para mockup e design, para dar cor ao website utilizo normalmente um abordagem hibrida de styled-components com tailwind, que me traz uma abordagem mais organizada e facil de manter e bonito de se ver.",
+    "about_text04": "Para mais informaçao, todos os meus contactos estao no footer.",
+    "sardinha_title":"Precisa de um condutor?",
+    "sardinha_text":"Providencia serviços de conduçao dentro da suiça",
+    "left_title": "Gostas de carros?",
+    "left_text": "Um grupo de pessoal entusiasta por carros, se gostas de motores da estrada, da uma olhadela!",
+
+    "hobbies_title": "Os meus hobbies",
+    "hobbies_title01": "Criar Websites",
+    "hobbies_title02": "Fitness",
+    "hobbies_title03": "Caminhar e explorar",
+    "hobbies_title04": "O meu Gordon interior",
+    "hobbies_text01": "A possibilidade de expressar a minha criatividade sem limite, premitir que eu me teste em tentar criar websites com um moderno e elegante design, animaçoes e recursos que testem constantemente a minha criatividade. Eu gosto de desafios e implementar novas tecnologias e tentar da melhor forma(mais limpa) implementar.",
+    "hobbies_text02": "Nao e misterio nenhum que para manter a mente sa e a saude forte que exercitar regularmente e importante, mas, eu vou alem disso e faço disso a minha paixao. Mais que levantar pesos para manter eu procuro ficar mais forte e apreciar todo o processo.",
+    "hobbies_text03": "Ser capaz de desconectar da rotina e fugir da vida da cidade e muito importante. Para mim ir de encontro a natureza ajuda-me a recarregar a energia mental e manter contolado o nivel de stress. Estar no topo de uma montanha, respirar ar puro, olhar no horizonte da-me a sensassao de leveza e liberdade.",
+    "hobbies_text04": "E senso comum que a saude depende muito do que comemos, e como o fitness e muito importante para mim, sempre me interessei por cozinhar. A capacidade de alcançar bons resultado no ginasio depende muito do que comemos, mas claro que nao sigo uma dieta restritiva, gosto dos prazeres da vida e comer um hamburger gorduroso com batatas, mas claro que o processo de cozinhar e divertido, recriar receitas da avo e inventar novas."
+}

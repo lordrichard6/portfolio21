@@ -1,18 +1,23 @@
 import styled from "styled-components";
-import Image from "next/image";
 import ReactTypingEffect from "react-typing-effect";
+import useTranslation from "next-translate/useTranslation";
 
-import { skillsHeader } from "../../../assets/data";
 import { Colors } from "../../../assets/variables";
 // import Animation from './animation'
 
 export default function Header() {
+  let { t } = useTranslation();
+
   return (
     <SectionContainer>
       <Title>
-        <ReactTypingEffect text="mySkills" speed={120} eraseDelay={700} />
+        <ReactTypingEffect
+          text={t("skills:header01")}
+          speed={120}
+          eraseDelay={700}
+        />
       </Title>
-      <h1>The path to growth is attained only through efford and consistency.</h1>
+      <h1>{t("skills:header02")}</h1>
       {/* <Animation /> */}
     </SectionContainer>
   );
@@ -27,7 +32,7 @@ const SectionContainer = styled.header`
   align-items: center;
   width: 100%;
   height: 600px;
-  background: url('/header_skills.jpg');
+  background: url("/header_skills.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

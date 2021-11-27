@@ -1,26 +1,29 @@
 import styled from "styled-components";
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 
 import { Colors } from "../../../assets/variables";
 import { aboutMe } from "../../../assets/data";
 
 export default function AboutMe() {
+  let { t } = useTranslation();
+
   return (
     <SectionContainer className="background">
       <InnerContainer>
         <LeftContainer>
-          <h1>{aboutMe.title}</h1>
+          <h1>{t("home:about_title")}</h1>
           <p>
-            {aboutMe.text01}
+            {t("home:about_text01")}
             <br />
             <br />
-            {aboutMe.text02}
+            {t("home:about_text02")}
             <br />
             <br />
-            {aboutMe.text03}
+            {t("home:about_text03")}
             <br />
             <br />
-            {aboutMe.text04}
+            {t("home:about_text04")}
           </p>
         </LeftContainer>
         <RightContainer>

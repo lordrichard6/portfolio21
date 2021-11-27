@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 import NavItems from "./navItems";
+import LangChange from './langChange'
 import Logo from "./logo";
 import { Colors } from "../../assets/variables";
 import { FaBars } from "react-icons/fa";
@@ -15,6 +15,7 @@ export default function Navbar({ toggle }) {
         </MobileIcon>
         <Logo />
         <NavItems />
+        <LangChange />
       </NavbarContainer>
     </Nav>
   );
@@ -30,7 +31,7 @@ const Nav = styled.nav`
   z-index: 1;
   background: url("/pattern.png"), ${Colors.primary};
 
-  @media screen and (max-width: 1440px) {
+  @media screen and (max-width: 1024px) {
     transition: 0.8s all ease;
   }
 `;
@@ -41,7 +42,7 @@ const NavbarContainer = styled.div`
   align-items: center;
   width: 80%;
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 2024px) {
     width: 70%;
   }
 `;
@@ -53,7 +54,7 @@ const MobileIcon = styled.div`
     transform: translate(-100%, 40%) !important;
     font-size: 1.8rem !important;
   }
-  @media screen and (max-width: 810px) {
+  @media screen and (max-width: 1024px) {
     display: block;
     position: absolute;
     top: 0;

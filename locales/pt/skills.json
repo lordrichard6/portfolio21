@@ -1,0 +1,22 @@
+{
+    "header01":"Capacidades",
+    "header02":"O caminho para o crescimento so e alcançado pelo esforço e consistencia.",
+    "S&E_title":"Capacidades & Experiencia",
+    "S&E_text01":"Com base na minha escolha pessoal e o tempo gato a estudar, acredito que tenho fortes capacidades no front-end, O aspecto visual e de enorme importancia pois eu sinto-me como Monet a procura da sua obra prima.",
+    "S&E_text02":"Aprendi HTML e CSS, depois passei para Javascript, e entao Sass. Decidi ir pelo caminho de React como o meu framework(library) de eleiçao, nao so pela sua crescente popularidade, mas tambem pela sua metodologia de trabalho.",
+    "S&E_text03":"Mas de qualquer forma, nao querendo deixar a historia pela metade se quiser saber mais sobre o meu caminho de aprendizagem e experiencia de trabalho, nao hesite em contactar-me.",
+
+    "exp01_title":"Front-End",
+    "exp01_text":"Uma agencia de webdesign, online markting, campanha politica, social media, consultadoria, CMS e IT infraestructuras.",
+
+    "ed01_title":"Administraçao",
+    "ed01_text":"Este curso aprendi contabilidade, matematica, negocios, etc. no qual trabalhei um ano com estagiario secretario.",
+    "ed02_title":"Programador web completo em 2019 - Zero a Mestre",
+    "ed02_text":"Um curso de 37 horas que me deu conhecimento em HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, React.js with Redux, PostgressSQL, SQL.",
+    "ed03_title":"CS50 - Introduçao a Ciencias Computacionais",
+    "ed03_text":"Excelente curso que aprofunda os conceitos basicos das Ciencias Computacionais como algoritmos e estructuras de dados, tambem C, Python e SQL.",
+    "ed04_title":"React moderno com redux",
+    "ed04_text":"52 horas de dor com conceitos avançados de REACT.js com redux.",
+    "ed05_title":"CSS e Sass Avançados",
+    "ed05_text":"Este curso ensina muitas tecnicas CSS, animaçoes CSS avançadas, Flexbox layouts, CSS Grid layouts e muito mais. 28 horas no total."
+}

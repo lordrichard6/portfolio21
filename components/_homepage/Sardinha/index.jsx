@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import useTranslation from "next-translate/useTranslation";
 
 import Left from "./left";
 import Right from "./right";
 
 export default function Sardinha() {
+  let { t } = useTranslation();
+
   return (
     <SectionContainer className="background-blue">
       <Title>
-        <h1>Need a Chauffeur?</h1>
+        <h1>{t("home:sardinha_title")}</h1>
       </Title>
       <InnerContainer>
         <Left />
@@ -25,7 +28,7 @@ const SectionContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding: 6rem 0;
-  background: url('/circuit_bg.svg'), #062942;
+  background: url("/circuit_bg.svg"), #062942;
   background-repeat: no-repeat;
 
   @media screen and (max-width: 500px) {

@@ -1,23 +1,21 @@
 import styled from "styled-components";
-// import Image from "next/image";
-
-import { skillsAndExperience } from "../../../assets/data";
-import { Colors } from "../../../assets/variables";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Left() {
+  let { t } = useTranslation();
+
   return (
     <LeftSection>
       <InnerSection>
-        <Title>{skillsAndExperience.title}</Title>
+        <Title>{t("skills:S&E_title")}</Title>
         <p>
-          {skillsAndExperience.text01}
+          {t("skills:S&E_text01")}
           <br />
-          {skillsAndExperience.text02}
+          {t("skills:S&E_text02")}
           <br />
-          {skillsAndExperience.text03}
+          {t("skills:S&E_text03")}
         </p>
       </InnerSection>
-      {/* <Image src={logo} alt="logo" /> */}
     </LeftSection>
   );
 }

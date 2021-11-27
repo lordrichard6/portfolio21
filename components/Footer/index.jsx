@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import useTranslation from "next-translate/useTranslation";
 
 import { Colors } from "../../assets/variables";
 import Thanks from "./thanks";
@@ -6,6 +7,8 @@ import SiteMap from "./siteMap";
 import Contacts from "./contacts";
 
 export default function Footer() {
+  let { t } = useTranslation(); 
+  
   return (
     <FooterContainer>
       <InnerContainer>
@@ -15,7 +18,7 @@ export default function Footer() {
       </InnerContainer>
       <CopyrightWrapper>
         <p>Copyright &copy; {new Date().getFullYear()} Paulo Lopes Reizinho.</p>
-        <p>All rights reserved.</p>
+        <p>{t('common:allRights')}</p>
       </CopyrightWrapper>
     </FooterContainer>
   );

@@ -1,18 +1,21 @@
 import styled from "styled-components";
 import Image from "next/image";
 import ReactTypingEffect from "react-typing-effect";
+import useTranslation from "next-translate/useTranslation";
 
 import { projectsHeader } from "../../../assets/data";
 import { Colors } from "../../../assets/variables";
 // import Animation from './animation'
 
 export default function Header() {
+  let { t } = useTranslation();
+
   return (
     <SectionContainer>
       <Title>
-        <ReactTypingEffect text="myProjects" speed={120} eraseDelay={700} />
+        <ReactTypingEffect text={t("projects:header01")} speed={120} eraseDelay={700} />
       </Title>
-      <h1>A man`s worth is what he can do with the weapons at hand.</h1>
+      <h1>{t("projects:header02")}</h1>
       {/* <Animation /> */}
     </SectionContainer>
   );

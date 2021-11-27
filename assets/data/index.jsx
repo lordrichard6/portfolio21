@@ -1,10 +1,9 @@
 // IMPORTS
 import pattern from "../images/pattern.png";
-import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
 // BANNERS
-import bannerProj from '../images/homepage/banner_01.jpg'
-import bannerEdu from '../images/homepage/banner_02.jpg'
+import bannerProj from "../images/homepage/banner_01.jpg";
+import bannerEdu from "../images/homepage/banner_02.jpg";
 
 // Home
 import backgroundHome from "../images/homepage/header_01.jpg";
@@ -69,14 +68,14 @@ import {
 // Banners ---------------------------------------------------------------
 export const bannerProjects = {
   backgroundImage: bannerProj,
-  alt: 'city zurich',
+  alt: "city zurich",
   logo: logoWhite,
   text: "Projects page",
 };
 
 export const bannerSkills = {
   backgroundImage: bannerEdu,
-  alt: 'lisbon portugal',
+  alt: "lisbon portugal",
   logo: logoWhite,
   text: "Education page",
 };
@@ -85,7 +84,6 @@ export const bannerSkills = {
 export const homeHeader = {
   backgroundImage: backgroundHome,
   logo: logoWhite,
-  subTitle: "Solutions don`t come easy",
 };
 
 export const aboutMe = {
@@ -104,31 +102,31 @@ export const aboutMe = {
 
 export const hobbies = [
   {
-    title: "Creating Software",
+    title: "home:hobbies_title01",
     imgSrc: hobby_01,
     alt: "computer",
-    text: "Being able to express creativity without barriers, I allow myself to be tested in try to create website with the most modern and elegant design, animations and features in which I am constantly tested. \nI like the challenges in the implementation of new technologies and figure out the best best(cleanest) way to implement it.",
+    text: "home:hobbies_text01",
     className: "hobby",
   },
   {
-    title: "Fitness",
+    title: "home:hobbies_title02",
     imgSrc: hobby_02,
     alt: "gym",
-    text: "It is no mystery that to keep your mind sharp and your health strong that exercising regurarly it is a must, but I go beyond and make this as a passion. More than lifting weights for maintnance I strive to get stronger and enjoy the whole process.",
+    text: "home:hobbies_text02",
     className: "hobby-reverse",
   },
   {
-    title: "Hiking and Exploring",
+    title: "home:hobbies_title03",
     imgSrc: hobby_03,
     alt: "hiking",
-    text: "Being able to disconnect from the routine and go away from the nonStop city life is quite important. To me going into to nature helps me recharge my mental energy and keep a balance on the stress levels. Being on the top of a mountain, breathe clean air, look at the horizon gives a sensation of lightness and freedom.",
+    text: "home:hobbies_text03",
     className: "hobby",
   },
   {
-    title: "My inner Ramsey",
+    title: "home:hobbies_title04",
     imgSrc: hobby_04,
     alt: "cooking",
-    text: "It is common sense that health depends greatly on what you eat, since fitness is quite important to me, I always was interested in cooking. Being able to achieve good results in the gym depends greatly on what I put in my mouth, course I don't follow a strict diet, I like to enjoy life and eat a greasy burger with chips, but the process of cooking is a lot of fun, creating recipies and invent new ones.",
+    text: "home:hobbies_text04",
     className: "hobby-reverse",
   },
 ];
@@ -157,7 +155,7 @@ export const projectsDev = {
       title: "Private Chauffeur",
       text: "A project for a friend that has her own driving service.",
       link: "https://patricia-vila-nova.vercel.app/",
-      icon: <SiNextdotjs />
+      icon: <SiNextdotjs />,
     },
     {
       id: 2,
@@ -166,7 +164,7 @@ export const projectsDev = {
       title: "Portfolio",
       text: "This very own website a marvel of design.",
       link: "/",
-      icon: <SiNextdotjs />
+      icon: <SiNextdotjs />,
     },
     {
       id: 3,
@@ -175,7 +173,7 @@ export const projectsDev = {
       title: "Left Bastards",
       text: "The official website of the car lovers group called, Left Bastards",
       link: "https://left-bastards.vercel.app/",
-      icon: <SiNextdotjs />
+      icon: <SiNextdotjs />,
     },
     {
       id: 4,
@@ -184,7 +182,7 @@ export const projectsDev = {
       title: "Portfolio old",
       text: "The first version of this website's design",
       link: "https://lordrichard-cv-blue.netlify.app/",
-      icon: <FaReact />
+      icon: <FaReact />,
     },
   ],
   other: [
@@ -195,7 +193,7 @@ export const projectsDev = {
       title: "FastRent",
       text: "A beautifull car rental website made with React using typescript. Used styled-components together with tailwind to style the page.",
       link: "https://lordrichard-rentfast.netlify.app/",
-      icon: <FaReact />
+      icon: <FaReact />,
     },
     {
       id: 2,
@@ -204,7 +202,7 @@ export const projectsDev = {
       title: "An old Portfolio",
       text: "Created with React.js with and elengant and simplistic design",
       link: "https://reizinhocv.netlify.app/",
-      icon: <FaReact />
+      icon: <FaReact />,
     },
     {
       id: 3,
@@ -213,7 +211,7 @@ export const projectsDev = {
       title: "Skytours",
       text: "This project was initially built using html and Sass, then later I converted to React maintaning the Sass styling system, elegant design of a tours agency.",
       link: "https://reizinho-skytours.netlify.com/",
-      icon: <FaReact />
+      icon: <FaReact />,
     },
     {
       id: 4,
@@ -222,7 +220,7 @@ export const projectsDev = {
       title: "Hulu clone",
       text: "Built with Next.js imitating the design of the famous movie streaming platform Hulu, using the database of an API movie site TMDB.",
       link: "https://hulu-clone-rosy.vercel.app/",
-      icon: <SiNextdotjs />
+      icon: <SiNextdotjs />,
     },
     {
       id: 5,
@@ -231,7 +229,7 @@ export const projectsDev = {
       title: "Monkey Circus",
       text: "A mocking E-comerce to sell monkeys, with a credit card payment implemented.",
       link: "https://monkeycircus-2z4e865i4.now.sh",
-      icon: <SiNextdotjs />
+      icon: <SiNextdotjs />,
     },
     {
       id: 6,
@@ -240,7 +238,7 @@ export const projectsDev = {
       title: "Comic Portfolio",
       text: "A very creative portfolio with a comic theme.",
       link: "https://new-cv-parallax.netlify.app/",
-      icon: <FaReact />
+      icon: <FaReact />,
     },
     {
       id: 7,
@@ -249,7 +247,7 @@ export const projectsDev = {
       title: "The Sphere",
       text: "My first play with Three.js.",
       link: "https://lordrichard-threejs-sphere.netlify.app/",
-      icon: <SiJavascript />
+      icon: <SiJavascript />,
     },
     {
       id: 8,
@@ -258,7 +256,7 @@ export const projectsDev = {
       title: "Paul's Engine",
       text: "A project build with Next.js using the google search API.",
       link: "https://paul-search.vercel.app/",
-      icon: <SiNextdotjs />
+      icon: <SiNextdotjs />,
     },
   ],
 };
@@ -270,7 +268,7 @@ export const projectsDesign = [
     alt: "the mockups of this website",
     title: "This website mockups",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-    icon: <FaFigma />
+    icon: <FaFigma />,
   },
   {
     id: 2,
@@ -278,7 +276,7 @@ export const projectsDesign = [
     alt: "the mockups of the left bastards website",
     title: "Left Bastards mockups",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-    icon: <FaFigma />
+    icon: <FaFigma />,
   },
   {
     id: 3,
@@ -286,7 +284,7 @@ export const projectsDesign = [
     alt: "the mockups of patricia website",
     title: "Private Chauffeur mockups",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-    icon: <FaFigma />
+    icon: <FaFigma />,
   },
 ];
 
@@ -330,10 +328,10 @@ export const skillsAndExperience = {
 
 export const skillsExperience = [
   {
-    title: "Front-End",
+    title: "skills:exp01_title",
     company: "Feinheit",
     period: "2019 - 2020",
-    text: "An Agency for webdesign, online markting, campaining, social media, CMS and IT Infrastructure.",
+    text: "skills:exp01_text",
   },
 ];
 
@@ -341,130 +339,130 @@ export const tech = [
   {
     icon: <FaReact />,
     name: "react",
-    color: '#02C6E9',
+    color: "#02C6E9",
   },
   {
     icon: <SiNextdotjs />,
     name: "next",
-    color: '#000000',
+    color: "#000000",
   },
   {
     icon: <SiTypescript />,
     name: "typescript",
-    color: '#0074C2',
+    color: "#0074C2",
   },
   {
     icon: <SiHtml5 />,
     name: "html",
-    color: '#F25320',
+    color: "#F25320",
   },
   {
     icon: <FaCss3 />,
     name: "css",
-    color: '#0066B6',
+    color: "#0066B6",
   },
   {
     icon: <SiJavascript />,
     name: "javascript",
-    color: '#EAD41C',
+    color: "#EAD41C",
   },
   {
     icon: <FaNodeJs />,
     name: "node",
-    color: '#84BB00',
+    color: "#84BB00",
   },
   {
     icon: <SiAdobephotoshop />,
     name: "photoshop",
-    color: '#001C33',
+    color: "#001C33",
   },
   {
     icon: <FaFigma />,
     name: "figma",
-    color: '#9A54F2',
+    color: "#9A54F2",
   },
   {
     icon: <SiTailwindcss />,
     name: "tailwind",
-    color: '#419FAA',
+    color: "#419FAA",
   },
   {
     icon: <SiStyledcomponents />,
     name: "styled components",
-    color: '#9C538F',
+    color: "#9C538F",
   },
   {
     icon: <FaNpm />,
     name: "npm",
-    color: '#C13534',
+    color: "#C13534",
   },
   {
     icon: <FaYarn />,
     name: "yarn",
-    color: '#1076A4',
+    color: "#1076A4",
   },
   {
     icon: <FaGitAlt />,
     name: "git",
-    color: '#E44D30',
+    color: "#E44D30",
   },
   {
     icon: <FaPython />,
     name: "python",
-    color: '#F0C540',
+    color: "#F0C540",
   },
   {
     icon: <SiDjango />,
     name: "django",
-    color: '#003729',
+    color: "#003729",
   },
   {
     icon: <FaSass />,
     name: "sass",
-    color: '#C26191',
+    color: "#C26191",
   },
   {
     icon: <SiGraphql />,
     name: "graphql",
-    color: '#D60090',
+    color: "#D60090",
   },
 ];
 
 // EDUCATION ---------------------------------------------------------------
 export const education = [
   {
-    title: "Administration",
+    title: "skills:ed01_title",
     start: "Sep 05",
     finish: "Sep 08",
     school: "IEFP Portugal",
-    text: "Administration thought me basic accounting, mathematics, business, etc. in which I worked for a year as a intern secretary/accountant.",
+    text: "skills:ed01_text",
   },
   {
-    title: "The Complete Web Developer in 2019 - Zero to Mastery",
+    title: "skills:ed02_title",
     start: "Apr 19",
     finish: "Sep 19",
     school: "Udemy",
-    text: "A course with 37 hours that gave me knowledge in HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, React.js with Redux, PostgressSQL, SQL.",
+    text: "skills:ed02_text",
   },
   {
-    title: "CS50 - Introdution to Computer Science",
+    title: "skills:ed03_title",
     start: "Dec 19",
     finish: "Mar 20",
     school: "EDX",
-    text: "Excelente course which goes deep in the basic concepts of computer science such as algorithms and data structures, also C, Python and SQL.",
+    text: "skills:ed03_text",
   },
   {
-    title: "Modern React with redux",
+    title: "skills:ed04_title",
     start: "Dec 20",
     finish: "Mar 21",
     school: "Udemy",
-    text: "52 hours of intense pain with advanced concepts of REACT.js with redux.",
+    text: "skills:ed04_text",
   },
   {
-    title: "Advanced CSS and Sass",
+    title: "skills:ed05_title",
     start: "Jan 21",
     finish: "Mar 21",
     school: "Udemy",
-    text: "This course teaches tons of modern CSS techniques, advanced CSS animations, Flexbox layouts, CSS Grid layouts and more. 28h in total.",
+    text: "skills:ed05_text",
   },
 ];

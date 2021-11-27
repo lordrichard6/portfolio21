@@ -1,14 +1,16 @@
 import styled from "styled-components";
+import useTranslation from "next-translate/useTranslation";
 
 import { projectsDev } from "../../../assets/data";
 import { Colors } from "../../../assets/variables";
 import Project from "./project";
 
 export default function Developer() {
-  console.log(projectsDev.secondary.title)
+  let { t } = useTranslation();
+
   return (
     <SectionContainer>
-      <h1>Developer</h1>
+      <h1>{t("projects:dev_title")}</h1>
       <Projects>
         {projectsDev.secondary.map((item, i) => {
           return (

@@ -1,11 +1,14 @@
 import styled from "styled-components";
-import Image from "next/image";
 import Link from "next/link";
+import useTranslation from 'next-translate/useTranslation'
 
 import { FaTimes } from "react-icons/fa";
 import { Colors } from "../../assets/variables";
+import LangChange from './langChange'
 
 export default function Sidebar({isOpen, toggle}) {
+  let {t} = useTranslation()
+
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
 
@@ -16,24 +19,26 @@ export default function Sidebar({isOpen, toggle}) {
         <SidebarMenu>
           <NavItem onClick={toggle}>
             <Link href="/">
-              <a>Home</a>
+              <a>{t('common:home')}</a>
             </Link>
           </NavItem>
           <NavItem onClick={toggle}>
             <Link href="/projects">
-              <a>myProjects</a>
+              <a>{t('common:projects')}</a>
             </Link>
           </NavItem>
           <NavItem onClick={toggle}>
             <Link href="/skills">
-              <a>mySkills</a>
+              <a>{t('common:skills')}</a>
             </Link>
           </NavItem>
+
           {/* <NavItem onClick={toggle}>
             <Link href="/404">
               <a>myBlog</a>
             </Link>
           </NavItem> */}
+          {/* <LangChange /> */}
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

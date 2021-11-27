@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import useTranslation from "next-translate/useTranslation";
 
 import { education } from "../../../assets/data";
 import { Colors } from "../../../assets/variables";
 import Card from "./card";
 
 export default function Education() {
+  let { t } = useTranslation();
+
   return (
     <PageContainer>
       <SectionTitle>Education</SectionTitle>
@@ -12,11 +15,11 @@ export default function Education() {
         return (
           <Card
             key={i}
-            title={n.title}
+            title={t(n.title)}
             school={n.school}
             start={n.start}
             finish={n.finish}
-            text={n.text}
+            text={t(n.text)}
           />
         );
       })}

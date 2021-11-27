@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Button() {
+  let { t } = useTranslation();
+
   return (
     <ButtonContainer>
-      <span>Visit</span>
+      <span>{t("projects:dev_button")}</span>
       <div className="liquid" />
     </ButtonContainer>
   );

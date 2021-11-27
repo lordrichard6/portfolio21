@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
 import {
   FaInstagram,
@@ -12,41 +13,46 @@ import {
 import sardinha from "../../../assets/images/homepage/sardinha.png";
 
 export default function Right() {
+  let { t } = useTranslation();
+
   const data = [
     {
       href: "https://www.instagram.com/sardinhadrive/",
-      icon: <FaInstagram className="hover" alt='instagram sardinha drive'/>,
+      icon: <FaInstagram className="hover" alt="instagram sardinha drive" />,
     },
     {
       href: "https://www.facebook.com/sardinhadrive",
-      icon: <FaFacebookF className="hover" alt='facebook sardinha drive'/>,
+      icon: <FaFacebookF className="hover" alt="facebook sardinha drive" />,
     },
     {
       href: "https://www.linkedin.com/company/sardinha-drive",
-      icon: <FaLinkedin className="hover" alt='linkedin sardinha drive'/>,
+      icon: <FaLinkedin className="hover" alt="linkedin sardinha drive" />,
     },
     {
       href: "https://twitter.com/SardinhaDrive",
-      icon: <FaTwitter className="hover" alt='twitter sardinha drive'/>,
+      icon: <FaTwitter className="hover" alt="twitter sardinha drive" />,
     },
     {
       href: "https://patricia-vila-nova.vercel.app/",
-      icon: <FaLaptop className="hover" alt='official website sardinha drive'/>,
+      icon: (
+        <FaLaptop className="hover" alt="official website sardinha drive" />
+      ),
     },
   ];
-  
+
   return (
     <RightContainer>
       <ImageContainer>
-        <Link href="https://patricia-vila-nova.vercel.app/" target="_blank" passHref>
+        <Link
+          href="https://patricia-vila-nova.vercel.app/"
+          target="_blank"
+          passHref
+        >
           <Image src={sardinha} alt="sardinha logo" />
         </Link>
       </ImageContainer>
       <SubTitle>Sardinha Drive</SubTitle>
-      <Text>
-        They provide driving services
-        <br /> within Switzerland.
-      </Text>
+      <Text>{t("home:sardinha_text")}</Text>
       <IconWrapper>
         {data.map((item, i) => {
           return (
@@ -111,6 +117,7 @@ const SubTitle = styled.h2`
 `;
 
 const Text = styled.h2`
+  width: 50%;
   font-size: 1.5rem;
   font-weight: 400;
   color: #eee;
@@ -122,6 +129,7 @@ const Text = styled.h2`
   @media screen and (max-width: 768px) {
     order: 3;
     text-align: center;
+    width: 100%;
   }
 `;
 

@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import Image from "next/image";
 import ReactTypingEffect from "react-typing-effect";
+import useTranslation from "next-translate/useTranslation";
 
 import { homeHeader } from "../../../assets/data";
 import { Colors } from "../../../assets/variables";
 // import Animation from './animation'
 
 export default function Header() {
+  let { t } = useTranslation();
+
   return (
     <SectionContainer>
       <Background
@@ -19,16 +22,24 @@ export default function Header() {
       <InnerContainer>
         <SloganContainer>
           <Title>
-            <ReactTypingEffect text="Developer" speed={120} eraseDelay={700} />
-            <ReactTypingEffect text="Designer" speed={140} eraseDelay={700} />
             <ReactTypingEffect
-              text="UI and UX Expert"
+              text={t("home:header_01")}
+              speed={120}
+              eraseDelay={700}
+            />
+            <ReactTypingEffect
+              text={t("home:header_02")}
+              speed={140}
+              eraseDelay={700}
+            />
+            <ReactTypingEffect
+              text={t("home:header_03")}
               speed={100}
               eraseDelay={700}
             />
           </Title>
           {/* <Animation /> */}
-          <SubTitle>{homeHeader.subTitle}</SubTitle>
+          <SubTitle>{t("home:header_slogan")}</SubTitle>
         </SloganContainer>
         <ImageContainer className="waitAnimate">
           <Image src={homeHeader.logo} alt="paulo reizinho logo" />
@@ -67,21 +78,21 @@ const InnerContainer = styled.div`
   }
 
   .waitAnimate {
-  animation: waitAnimate 4s ease-in-out infinite;
-  transform-origin: 50% 50%;
-}
+    animation: waitAnimate 4s ease-in-out infinite;
+    transform-origin: 50% 50%;
+  }
 
-@keyframes waitAnimate {
-  0% {
-    transform: translateY(0);
+  @keyframes waitAnimate {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 `;
 
 const SloganContainer = styled.div`

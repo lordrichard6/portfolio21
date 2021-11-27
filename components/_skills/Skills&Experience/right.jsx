@@ -1,12 +1,13 @@
 import styled from "styled-components";
-// import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 
 import { skillsExperience } from "../../../assets/data";
-import { Colors } from "../../../assets/variables";
 import { ProgressBar } from "./progressBar";
 import Card from "./card";
 
 export default function Right() {
+  let { t } = useTranslation();
+
   const skillsBarData = [
     {
       title: "Front-End",
@@ -40,10 +41,10 @@ export default function Right() {
           })}
         </SkillsContainer>
         <Card
-          title={skillsExperience[0].title}
+          title={t(skillsExperience[0].title)}
           company={skillsExperience[0].company}
           period={skillsExperience[0].period}
-          text={skillsExperience[0].text}
+          text={t(skillsExperience[0].text)}
         />
       </InnerSection>
     </RightSection>

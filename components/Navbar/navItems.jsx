@@ -1,22 +1,25 @@
 import styled from "styled-components";
 import Link from "next/link";
+import useTranslation from 'next-translate/useTranslation'
 
 export default function NavItems() {
+  let {t} = useTranslation()
+
   return (
     <NavMenu>
       <NavItem>
         <Link href="/">
-          <a>Home</a>
+          <a>{t('common:home')}</a>
         </Link>
       </NavItem>
       <NavItem>
         <Link href="/projects">
-          <a>myProjects</a>
+          <a>{t('common:projects')}</a>
         </Link>
       </NavItem>
       <NavItem>
         <Link href="/skills">
-          <a>mySkills</a>
+          <a>{t('common:skills')}</a>
         </Link>
       </NavItem>
       {/* <NavItem>
@@ -39,7 +42,7 @@ const NavMenu = styled.ul`
   margin: 0;
   z-index: 2;
 
-  @media screen and (max-width: 810px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
