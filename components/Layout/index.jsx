@@ -18,7 +18,7 @@ export default function Layout({ children }) {
       <Head>
         <title>Paulo Reizinho</title>
         <meta name="description" content="Paulo Reizinho Developer Portfolio" />
-        <meta name="google-site-verification" content="8IDesGYP_Ufe2qq1uJfBfsnncOnfGOlOG1V8ugw0QBw" />
+        <meta name="google-site-verification" content="fz36mAU8oe5cQ1weXZqrsHihiDBj-G6u72mdREUjVYk" />
         <link rel="icon" href="/logo_clean.png" />
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
