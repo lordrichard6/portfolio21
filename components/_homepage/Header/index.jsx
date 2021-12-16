@@ -78,8 +78,8 @@ const InnerContainer = styled.div`
   }
 
   .waitAnimate {
-    animation: waitAnimate 4s ease-in-out infinite;
-    transform-origin: 50% 50%;
+    /* animation: waitAnimate 4s ease-in-out infinite;
+    transform-origin: 50% 50%; */
   }
 
   @keyframes waitAnimate {
@@ -109,7 +109,7 @@ const SloganContainer = styled.div`
 const ImageContainer = styled.div`
   width: 50%;
   height: auto;
-  filter: drop-shadow(10px 10px 5px #1a1a1a);
+  /* filter: drop-shadow(10px 10px 5px #1a1a1a); */
 
   @media screen and (max-width: 768px) {
     width: 100%;

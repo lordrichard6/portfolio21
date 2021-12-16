@@ -18,11 +18,12 @@ export default function Layout({ children }) {
       <Head>
         <title>Paulo Reizinho</title>
         <meta name="description" content="Paulo Reizinho Developer Portfolio" />
-        <link rel="icon" href="/logo_black.png" />
+        <meta name="google-site-verification" content="8IDesGYP_Ufe2qq1uJfBfsnncOnfGOlOG1V8ugw0QBw" />
+        <link rel="icon" href="/logo_clean.png" />
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <MainContainer>{children}</MainContainer>
+        <MainContainer>{children}</MainContainer>
       <Footer />
     </>
   );
@@ -31,7 +32,6 @@ export default function Layout({ children }) {
 const MainContainer = styled.main`
   margin: 0;
   width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

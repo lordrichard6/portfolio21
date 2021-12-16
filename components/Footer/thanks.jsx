@@ -4,7 +4,7 @@ import useTranslation from "next-translate/useTranslation";
 
 import { SiNextdotjs } from "react-icons/si";
 import { Colors } from "../../assets/variables";
-import logo from "../../public/logo_white.png";
+import logo from "../../public/logo_clean.png";
 
 export default function Thanks() {
   let { t } = useTranslation();
@@ -95,6 +95,7 @@ const Button = styled.button`
   text-shadow: 0 0 0.5em var(--glow-color);
   position: relative;
   transition: all 0.3s;
+  margin: 1rem 0;
 
   &::after {
     pointer-events: none;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import NavItems from "./navItems";
-import LangChange from './langChange'
+import LangChange from "./langChange";
 import Logo from "./logo";
 import { Colors } from "../../assets/variables";
 import { FaBars } from "react-icons/fa";
@@ -11,11 +11,13 @@ export default function Navbar({ toggle }) {
     <Nav id="top">
       <NavbarContainer>
         <MobileIcon onClick={toggle}>
-          <FaBars alt='burger menu'/>
+          <FaBars alt="burger menu" />
         </MobileIcon>
         <Logo />
-        <NavItems />
-        <LangChange />
+        <ItemsWrapper>
+          <NavItems />
+          <LangChange />
+        </ItemsWrapper>
       </NavbarContainer>
     </Nav>
   );
@@ -64,4 +66,8 @@ const MobileIcon = styled.div`
     cursor: pointer;
     color: #fff;
   }
+`;
+
+const ItemsWrapper = styled.div`
+  display: flex;
 `;

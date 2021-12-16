@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from "next/image"
 import useTranslation from "next-translate/useTranslation";
 
 import {
@@ -7,9 +8,12 @@ import {
   FaInstagram,
   FaLinkedin,
   FaGithub,
+  FaDiscord,
+  FaWhatsapp
 } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import { Colors } from "../../assets/variables";
+import QRcode from '../../assets/images/qr.png';
 
 export default function Contacts() {
   let { t } = useTranslation();
@@ -27,10 +31,19 @@ export default function Contacts() {
         <Icon href="https://github.com/lordrichard6/" target="_blank">
           <FaGithub alt="github paulo reizinho profile" />
         </Icon>
+        <Icon href="https://discord.gg/2UPrkCUU" target="_blank">
+          <FaDiscord alt="discord paulo reizinho" />
+        </Icon>
+        <Icon href="https://wa.link/sru6m7" target="_blank">
+          <FaWhatsapp alt="whatsapp paulo reizinho" />
+        </Icon>
       </IconContainer>
 
       <ContactWrapper>
-        <BlueIcon>
+        <ImageWrapper>
+        <Image src={QRcode} alt="paulo reizinho qr" />
+        </ImageWrapper>
+        {/* <BlueIcon>
           <FaHouseUser />
         </BlueIcon>
         <p>{t("common:adress")}</p>
@@ -45,7 +58,7 @@ export default function Contacts() {
         <BlueIcon>
           <FaPhoneAlt />
         </BlueIcon>
-        <p>+41 78 798 95 33</p>
+        <p>+41 78 798 95 33</p> */}
       </ContactWrapper>
     </SectionContainer>
   );
@@ -56,7 +69,7 @@ const SectionContainer = styled.section`
   flex-direction: column;
   align-items: center;
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 764px) {
     order: 2;
     margin: 2rem 0;
   }
@@ -76,10 +89,13 @@ const IconContainer = styled.div`
 const Icon = styled.a`
   color: ${Colors.white};
   margin: 0.5rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  transition: 0.3s ease-in-out;
+
   &:hover {
     color: ${Colors.primary};
-    transition: 0.3s ease-in-out;
+    transform: scale(1.05) translateY(-0.5rem);
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
   }
 `;
 
@@ -87,6 +103,7 @@ const ContactWrapper = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
 
   p {
     font-size: 1.2rem;
@@ -108,3 +125,12 @@ const BlueIcon = styled.span`
   margin-right: 0.5rem;
   font-size: 1.5rem;
 `;
+
+const ImageWrapper = styled.div`
+  width: 50%;
+  height: auto;
+
+  @media screen and (max-width: 764px) {
+    display: none;
+  }
+`
