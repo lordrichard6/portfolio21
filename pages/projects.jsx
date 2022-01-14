@@ -38,6 +38,7 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: ${Colors.primary};
+  /* background: ${Colors.primary}; */
+  background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
   /* overflow-x: hidden; */
 `;

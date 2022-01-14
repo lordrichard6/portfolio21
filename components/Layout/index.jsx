@@ -18,12 +18,15 @@ export default function Layout({ children }) {
       <Head>
         <title>Paulo Reizinho</title>
         <meta name="description" content="Paulo Reizinho Developer Portfolio" />
-        <meta name="google-site-verification" content="fz36mAU8oe5cQ1weXZqrsHihiDBj-G6u72mdREUjVYk" />
+        <meta
+          name="google-site-verification"
+          content="fz36mAU8oe5cQ1weXZqrsHihiDBj-G6u72mdREUjVYk"
+        />
         <link rel="icon" href="/logo_clean.png" />
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-        <MainContainer>{children}</MainContainer>
+      <MainContainer>{children}</MainContainer>
       <Footer />
     </>
   );

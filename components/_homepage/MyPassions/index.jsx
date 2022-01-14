@@ -37,7 +37,8 @@ const SectionContainer = styled.div`
   justify-content: center;
   align-items: center;
   color: ${Colors.white};
-  background: url("/pattern.png"), ${Colors.primary};
+  /* background: url("/pattern.png"), ${Colors.primary}; */
+  background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
 
   h1 {
     font-size: 4rem;

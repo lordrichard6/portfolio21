@@ -43,7 +43,8 @@ const SectionContainer = styled.div`
   justify-content: center;
   align-items: center;
   /* background: ${Colors.primary}; */
-  background: url("/pattern.png"), ${Colors.primary};
+  /* background: url("/pattern.png"), ${Colors.primary}; */
+  background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
 `;
 
 const InnerContainer = styled.div`
