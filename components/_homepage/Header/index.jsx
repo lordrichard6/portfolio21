@@ -11,7 +11,7 @@ export default function Header() {
   let { t } = useTranslation();
 
   return (
-    <SectionContainer>
+    <SectionContainer id="top">
       <Background
         src={homeHeader.backgroundImage}
         layout="fill"

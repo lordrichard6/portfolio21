@@ -9,7 +9,7 @@ export default function Header() {
   let { t } = useTranslation();
 
   return (
-    <SectionContainer>
+    <SectionContainer id="top">
       <Title>
         <ReactTypingEffect
           text={t("skills:header01")}

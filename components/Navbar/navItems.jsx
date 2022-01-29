@@ -2,6 +2,8 @@ import styled from "styled-components";
 import Link from "next/link";
 import useTranslation from 'next-translate/useTranslation'
 
+import { Colors } from "../../assets/variables";
+
 export default function NavItems() {
   let {t} = useTranslation()
 

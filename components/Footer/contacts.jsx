@@ -11,9 +11,9 @@ import {
   FaDiscord,
   FaWhatsapp
 } from "react-icons/fa";
-import { HiMail } from "react-icons/hi";
+// import { HiMail } from "react-icons/hi";
 import { Colors } from "../../assets/variables";
-import QRcode from '../../assets/images/qr.png';
+// import QRcode from '../../assets/images/qr.png';
 
 export default function Contacts() {
   let { t } = useTranslation();
@@ -40,9 +40,14 @@ export default function Contacts() {
       </IconContainer>
 
       <ContactWrapper>
-        <ImageWrapper>
+      <Button>
+        <a href="https://drive.google.com/file/d/14Ou5up4Gowv7XMNx6ct1oUE7-1m5DK2s/view?usp=sharing">
+          {t("common:downloadCV")}
+        </a>
+      </Button>
+        {/* <ImageWrapper>
         <Image src={QRcode} alt="paulo reizinho qr" />
-        </ImageWrapper>
+        </ImageWrapper> */}
         {/* <BlueIcon>
           <FaHouseUser />
         </BlueIcon>
@@ -114,23 +119,81 @@ const ContactWrapper = styled.div`
   }
 `;
 
-const BlueIcon = styled.span`
-  background-color: ${Colors.primary};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 9999px;
-  color: ${Colors.white};
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-  font-size: 1.5rem;
+const Button = styled.button`
+  /* background-color: ${Colors.primary};
+  align-self: center;
+  color: #eee;
+  font-size: 1rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.4rem;
+  border: 0; */
+  --glow-color: rgb(217, 176, 255);
+  --glow-spread-color: rgba(191, 123, 255, 0.781);
+  --enhanced-glow-color: rgb(231, 206, 255);
+  --btn-color: rgb(100, 61, 136);
+  outline: none;
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  margin: 1rem 0;
+
+  &::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: 0.7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+  }
+
+  &:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em 0.25em var(--glow-color),
+      0 0 4em 2em var(--glow-spread-color),
+      inset 0 0 0.75em 0.25em var(--glow-color);
+  }
+
+  &:active {
+    box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+      0 0 2.5em 2em var(--glow-spread-color),
+      inset 0 0 0.5em 0.25em var(--glow-color);
+  }
 `;
 
-const ImageWrapper = styled.div`
-  width: 50%;
-  height: auto;
+// const BlueIcon = styled.span`
+//   background-color: ${Colors.primary};
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   border-radius: 9999px;
+//   color: ${Colors.white};
+//   padding: 0.5rem;
+//   margin-right: 0.5rem;
+//   font-size: 1.5rem;
+// `;
 
-  @media screen and (max-width: 764px) {
-    display: none;
-  }
-`
+// const ImageWrapper = styled.div`
+//   width: 50%;
+//   height: auto;
+
+//   @media screen and (max-width: 764px) {
+//     display: none;
+//   }
+// `

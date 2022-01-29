@@ -29,7 +29,7 @@ export default function Navbar({ toggle }) {
   }
 
   return (
-    <Nav id="top" className={navbarClasses.join(" ")}>
+    <Nav className={navbarClasses.join(" ")}>
       <NavbarContainer>
         <MobileIcon onClick={toggle}>
           <FaBars alt="burger menu" />

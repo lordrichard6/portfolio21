@@ -11,7 +11,7 @@ export default function Header() {
   let { t } = useTranslation();
 
   return (
-    <SectionContainer>
+    <SectionContainer id="top">
       <Title>
         <ReactTypingEffect text={t("projects:header01")} speed={120} eraseDelay={700} />
       </Title>
