@@ -38,5 +38,6 @@ const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
   /* overflow-x: hidden; */
 `;

@@ -11,7 +11,7 @@ import Sponsor from '../components/_skills/Sponsor'
 
 import Footer from "../components/Footer";
 
-export default function SkillsPage() {
+export default function GalleryPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -22,11 +22,7 @@ export default function SkillsPage() {
     <PageContainer>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <Header />
-      <SkillsExp />
-      <Techs />
-      <Education />
-      <Sponsor />
+      <h1>hello</h1>
       <Footer />
     </PageContainer>
   );
