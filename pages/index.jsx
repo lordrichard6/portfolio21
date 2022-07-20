@@ -11,8 +11,8 @@ export default function Home() {
     <Layout>
         <Header />
         <AboutMe />
-        <Sardinha />
-        <LeftBastards />
+        {/* <Sardinha />
+        <LeftBastards /> */}
         <MyPassions />
     </Layout>
   );
