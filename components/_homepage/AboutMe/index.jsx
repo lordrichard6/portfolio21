@@ -10,6 +10,7 @@ export default function AboutMe() {
 
   return (
     <SectionContainer className="background">
+      <BackgroundGradient></BackgroundGradient>
       <InnerContainer>
         <LeftContainer>
           <h1>{t("home:about_title")}</h1>
@@ -27,7 +28,7 @@ export default function AboutMe() {
           </p>
         </LeftContainer>
         <RightContainer>
-          <Image src={aboutMe.sideImg} alt={aboutMe.imgAlt} objectFit="cover" />
+          {/* <Image src={aboutMe.sideImg} alt={aboutMe.imgAlt} objectFit="cover" /> */}
         </RightContainer>
       </InnerContainer>
     </SectionContainer>
@@ -45,6 +46,14 @@ const SectionContainer = styled.div`
   /* background: ${Colors.primary}; */
   /* background: url("/pattern.png"), ${Colors.primary}; */
   background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
+`;
+
+const BackgroundGradient = styled.div`
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.2) 38.54%, rgba(0, 0, 0, 0) 100%);
 `;
 
 const InnerContainer = styled.div`
