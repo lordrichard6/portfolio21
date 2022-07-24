@@ -1,9 +1,15 @@
 import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
+import Image from "next/image";
 
 import { Colors } from "../../../assets/variables";
 import { hobbies } from "../../../assets/data";
 import HobbyComponent from "./hobby";
+import Hexagon from "../../../assets/images/homepage/hexagon_big.svg"
+import Hobby_01 from "../../../assets/images/homepage/hobby_01.png"
+import Hobby_02 from "../../../assets/images/homepage/hobby_02.png"
+import Hobby_03 from "../../../assets/images/homepage/hobby_03.png"
+import Hobby_04 from "../../../assets/images/homepage/hobby_04.png"
 
 export default function MyPassions() {
   let { t } = useTranslation();
@@ -11,26 +17,23 @@ export default function MyPassions() {
   return (
     <SectionContainer>
       <h1>{t("home:hobbies_title")}</h1>
-      <HobbiesContainer>
-        {hobbies.map((item, i) => {
-          return (
-            <HobbyComponent
-              key={i}
-              className={item.className}
-              imgSrc={item.imgSrc}
-              alt={item.alt}
-              title={t(item.title)}
-              text={t(item.text)}
-            />
-          );
-        })}
-      </HobbiesContainer>
+      <HexagonBig>
+      <Image src={Hexagon} alt="hexagon" />
+      </HexagonBig>
+      <HobbyElements>
+      <Image className="hobby hobby__01" src={Hobby_01} layout="fixed" alt="" />
+      <Image className="hobby hobby__02" src={Hobby_02} layout="fixed" alt="" />
+      <Image className="hobby hobby__03" src={Hobby_03} layout="fixed" alt="" />
+      <Image className="hobby hobby__04" src={Hobby_04} layout="fixed" alt="" />
+      </HobbyElements>
     </SectionContainer>
   );
 }
 
 const SectionContainer = styled.div`
+  position: relative;
   width: 100%;
+  min-height: 120vh;
   padding: 5rem 0;
   display: flex;
   flex-direction: column;
@@ -51,35 +54,17 @@ const SectionContainer = styled.div`
   }
 `;
 
-const HobbiesContainer = styled.div`
-  width: 80%;
+const HexagonBig = styled.div`
+  position: absolute;
+  left: -200px;
+`;
+
+const HobbyElements = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 0;
+  width: 100%;
 
-  @media screen and (min-width: 2560px) {
-    width: 50%;
-  }
-
-  .hobby {
-    display: flex;
-    flex-direction: row;
-    padding: 1rem 0;
-
-    @media screen and (max-width: 400px) {
-      flex-direction: column;
-      margin-bottom: 1rem;
-    }
-  }
-  .hobby-reverse {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 1rem 0;
-
-    @media screen and (max-width: 400px) {
-      flex-direction: column;
-    }
+  .hobby__02 {
+    margin-bottom: 4rem;
   }
 `;
