@@ -5,6 +5,7 @@ import Image from "next/image";
 import Sidebar from "../components/Navbar/sidebar";
 import Navbar from "../components/Navbar";
 import someImage from "../assets/images/homepage/hobby_02.jpg";
+import coolGuy from "../assets/images/homepage/gallery_cool.png";
 
 import Footer from "../components/Footer";
 
@@ -32,6 +33,9 @@ export default function GalleryPage() {
       </Quote>
       <GalleyWrapper>
         <div className="wrapper">
+          <div className="cool">
+            <Image src={coolGuy} alt="" objectFit="cover" />
+          </div>
           <div className="shape shape__01">
             <Image src={someImage} alt="" objectFit="cover" />
           </div>
@@ -119,11 +123,34 @@ const Quote = styled.div`
 `;
 
 const GalleyWrapper = styled.div`
-  height: 1200px;
+  height: 1400px;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 1200px) {
+    height: 1530px;
+  }
 
   .wrapper {
     position: relative;
+    margin-top: 200px;
+    width: 1450px;
+    height: fit-content;
+    @media screen and (max-width: 1600px) {
+      width: 1050px;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 855px;
+    }
+    @media screen and (max-width: 576px) {
+      width: 470px;
+    }
+  }
+
+  .cool {
+    position: absolute;
+    top: -208px;
+    left: 680px;
   }
 
   .group_01 {
@@ -161,9 +188,14 @@ const GalleyWrapper = styled.div`
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     background: #20303c;
     display: block;
-    height: 160px;
-    width: 188px;
+    height: 220px;
+    width: 248px;
     box-shadow: inset 0px 0px 190px rgb(0 0 0 / 90%);
+
+    @media screen and (max-width: 576px) {
+      height: 160px;
+      width: 188px;
+    }
     img {
       object-position: center;
       object-fit: cover;
@@ -282,8 +314,8 @@ const GalleyWrapper = styled.div`
       left: 1000px;
       top: 960px;
       @media screen and (max-width: 576px) {
-        left: 90px;
-        top: 840px;
+        left: -50px;
+        top: 1080px;
       }
     }
     &__14 {
@@ -298,8 +330,8 @@ const GalleyWrapper = styled.div`
       left: 1198px;
       top: 840px;
       @media screen and (max-width: 576px) {
-        left: 230px;
-        top: 760px;
+        left: -50px;
+        top: 920px;
       }
     }
     &__16 {
