@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import React, { useState } from "react";
+import Image from "next/image";
 
 import Sidebar from "../components/Navbar/sidebar";
 import Navbar from "../components/Navbar";
-import Header from "../components/_skills/Header";
-import SkillsExp from "../components/_skills/Skills&Experience";
-import Techs from "../components/_skills/Techs";
-import Education from "../components/_skills/Education";
-import Sponsor from '../components/_skills/Sponsor'
+import someImage from "../assets/images/homepage/hobby_02.jpg";
 
 import Footer from "../components/Footer";
 
@@ -22,8 +19,74 @@ export default function GalleryPage() {
     <PageContainer>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <h1>hello</h1>
-      <Footer />
+      <Header></Header>
+      <Quote>
+        <h2>
+          <strong>
+            {" "}
+            “Our virtues and our failings are inseparable, like force and
+            matter. When they separate, man is no more.”
+          </strong>
+          <i>— Nikola Tesla</i>
+        </h2>
+      </Quote>
+      <GalleyWrapper>
+        <div className="wrapper">
+          <div className="shape shape__01">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__02">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__03">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__04">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__05">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__06">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="group_01">
+            <div className="shape shape__07">
+              <Image src={someImage} alt="" objectFit="cover" />
+            </div>
+            <div className="shape shape__08">
+              <Image src={someImage} alt="" objectFit="cover" />
+            </div>
+          </div>
+          <div className="group_02">
+            <div className="shape shape__09">
+              <Image src={someImage} alt="" objectFit="cover" />
+            </div>
+            <div className="shape shape__10">
+              <Image src={someImage} alt="" objectFit="cover" />
+            </div>
+            <div className="shape shape__11">
+              <Image src={someImage} alt="" objectFit="cover" />
+            </div>
+            <div className="shape shape__12">
+              <Image src={someImage} alt="" objectFit="cover" />
+            </div>
+            <div className="shape shape__13">
+              <Image src={someImage} alt="" objectFit="cover" />
+            </div>
+            <div className="shape shape__14">
+              <Image src={someImage} alt="" objectFit="cover" />
+            </div>
+            <div className="shape shape__15">
+              <Image src={someImage} alt="" objectFit="cover" />
+            </div>
+            <div className="shape shape__16">
+              <Image src={someImage} alt="" objectFit="cover" />
+            </div>
+          </div>
+        </div>
+      </GalleyWrapper>
+      {/* <Footer /> */}
     </PageContainer>
   );
 }
@@ -37,4 +100,215 @@ const PageContainer = styled.div`
   align-items: center;
   /* overflow-x: hidden; */
   background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
+`;
+
+const Header = styled.div``;
+
+const Quote = styled.div`
+  width: 580px;
+  margin-top: 10rem;
+
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    color: #d9d9d9;
+    i {
+      font-weight: 300;
+    }
+  }
+`;
+
+const GalleyWrapper = styled.div`
+  height: 1200px;
+  width: 100%;
+
+  .wrapper {
+    position: relative;
+  }
+
+  .group_01 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: 1200px) {
+      left: -600px;
+      top: 120px;
+    }
+    @media screen and (max-width: 576px) {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .group_02 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @media screen and (max-width: 1600px) {
+      left: -396px;
+    }
+    @media screen and (max-width: 1200px) {
+      left: -600px;
+      top: 120px;
+    }
+    @media screen and (max-width: 576px) {
+      left: 0;
+      top: 0;
+    }
+  }
+  .shape {
+    position: absolute;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    background: #20303c;
+    display: block;
+    height: 160px;
+    width: 188px;
+    box-shadow: inset 0px 0px 190px rgb(0 0 0 / 90%);
+    img {
+      object-position: center;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      transform: scale(1.5);
+      opacity: 0.2;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        box-shadow: inset 0px 0px 0px rgb(0 0 0 / 90%);
+        background-size: cover;
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    &__01 {
+      left: 0;
+      top: 120px;
+      @media screen and (max-width: 576px) {
+        left: -50px;
+      }
+    }
+    &__02 {
+      left: 205px;
+      top: 0;
+      @media screen and (max-width: 576px) {
+        left: 90px;
+        top: 40px;
+      }
+    }
+    &__03 {
+      left: 205px;
+      top: 240px;
+      @media screen and (max-width: 576px) {
+        left: 230px;
+        top: 120px;
+      }
+    }
+    &__04 {
+      left: 406px;
+      top: 120px;
+      @media screen and (max-width: 576px) {
+        left: 90px;
+        top: 200px;
+      }
+    }
+    &__05 {
+      left: 406px;
+      top: 360px;
+      @media screen and (max-width: 576px) {
+        left: -50px;
+        top: 280px;
+      }
+    }
+    &__06 {
+      left: 606px;
+      top: 240px;
+      @media screen and (max-width: 576px) {
+        top: 280px;
+        left: 230px;
+      }
+    }
+    &__07 {
+      left: 606px;
+      top: 480px;
+      @media screen and (max-width: 1200px) {
+        top: 240px;
+      }
+      @media screen and (max-width: 576px) {
+        top: 440px;
+        left: 230px;
+      }
+    }
+    &__08 {
+      left: 804px;
+      top: 360px;
+      @media screen and (max-width: 576px) {
+        left: -50px;
+        top: 440px;
+      }
+    }
+    &__09 {
+      left: 804px;
+      top: 600px;
+      @media screen and (max-width: 576px) {
+        left: 90px;
+        top: 520px;
+      }
+    }
+    &__10 {
+      left: 606px;
+      top: 720px;
+      @media screen and (max-width: 576px) {
+        top: 600px;
+        left: 230px;
+      }
+    }
+    &__11 {
+      left: 804px;
+      top: 840px;
+      @media screen and (max-width: 576px) {
+        left: 90px;
+        top: 680px;
+      }
+    }
+    &__12 {
+      left: 606px;
+      top: 960px;
+      @media screen and (max-width: 576px) {
+        left: -50px;
+        top: 760px;
+      }
+    }
+    &__13 {
+      left: 1000px;
+      top: 960px;
+      @media screen and (max-width: 576px) {
+        left: 90px;
+        top: 840px;
+      }
+    }
+    &__14 {
+      left: 1000px;
+      top: 720px;
+      @media screen and (max-width: 576px) {
+        left: 230px;
+        top: 760px;
+      }
+    }
+    &__15 {
+      left: 1198px;
+      top: 840px;
+      @media screen and (max-width: 576px) {
+        left: 230px;
+        top: 760px;
+      }
+    }
+    &__16 {
+      left: 1198px;
+      top: 600px;
+      @media screen and (max-width: 576px) {
+        left: 90px;
+        top: 1000px;
+      }
+    }
+  }
 `;
