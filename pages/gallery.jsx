@@ -112,12 +112,19 @@ const Quote = styled.div`
   width: 580px;
   margin-top: 10rem;
 
+  @media screen and (max-width: 576px) {
+    width: 300px;
+  }
+
   h2 {
     font-size: 32px;
     line-height: 40px;
     color: #d9d9d9;
     i {
       font-weight: 300;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 24px;
     }
   }
 `;
@@ -167,6 +174,10 @@ const GalleyWrapper = styled.div`
     @media screen and (max-width: 992px) {
       left: 286px;
       top: -235px;
+    }
+    @media screen and (max-width: 576px) {
+      left: 40px;
+    top: -178px;
     }
   }
 
