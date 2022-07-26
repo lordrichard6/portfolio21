@@ -62,10 +62,9 @@ animation tri 5.9s
     height: 0;
     border-left: 150vw solid rgba(255, 0, 0, 0);
     border-right: 150vw solid rgba(255, 0, 0, 0);
-    /* border-bottom: 60vw solid rgba(0, 0, 0, 0.372); */
-    border-bottom: 60vw solid ;
+    border-bottom: 60vw solid #1D2124;
+    /* border-bottom: 60vw solid; */
     animation: tri 0.6s 0.8s linear forwards;
-    border-image-source: url({someImage});
   }
 
   @keyframes tri {
