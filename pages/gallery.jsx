@@ -130,6 +130,9 @@ const GalleyWrapper = styled.div`
   @media screen and (max-width: 1200px) {
     height: 1530px;
   }
+  @media screen and (max-width: 992px) {
+    height: 1970px;
+  }
 
   .wrapper {
     position: relative;
@@ -142,6 +145,9 @@ const GalleyWrapper = styled.div`
     @media screen and (max-width: 1200px) {
       width: 855px;
     }
+    @media screen and (max-width: 992px) {
+      width: 650px;
+    }
     @media screen and (max-width: 576px) {
       width: 470px;
     }
@@ -151,6 +157,17 @@ const GalleyWrapper = styled.div`
     position: absolute;
     top: -208px;
     left: 680px;
+    @media screen and (max-width: 1600px) {
+      left: 480px;
+    }
+    @media screen and (max-width: 1200px) {
+      left: 340px;
+      top: -272px;
+    }
+    @media screen and (max-width: 992px) {
+      left: 286px;
+      top: -235px;
+    }
   }
 
   .group_01 {
@@ -254,6 +271,10 @@ const GalleyWrapper = styled.div`
     &__06 {
       left: 606px;
       top: 240px;
+      @media screen and (max-width: 992px) {
+        left: 0;
+        top: 1320px;
+      }
       @media screen and (max-width: 576px) {
         top: 280px;
         left: 230px;
@@ -329,6 +350,10 @@ const GalleyWrapper = styled.div`
     &__15 {
       left: 1198px;
       top: 840px;
+      @media screen and (max-width: 992px) {
+        left: 804px;
+        top: 1320px;
+      }
       @media screen and (max-width: 576px) {
         left: -50px;
         top: 920px;
@@ -337,6 +362,10 @@ const GalleyWrapper = styled.div`
     &__16 {
       left: 1198px;
       top: 600px;
+      @media screen and (max-width: 992px) {
+        left: 1000px;
+        top: 1200px;
+      }
       @media screen and (max-width: 576px) {
         left: 90px;
         top: 1000px;
