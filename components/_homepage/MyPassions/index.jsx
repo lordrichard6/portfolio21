@@ -24,28 +24,28 @@ export default function MyPassions() {
       </HexagonBig>
       <HobbyElements>
         <div className="hobby hobby__01">
-          <Image src={Hobby_01} layout="fixed" alt="" />
+          <Image src={Hobby_01} layout="responsive" alt="" />
           <div className="text">
             <h1>FITNESS_&_GYM</h1>
             <h2>dsfsdfsd sdfsdfsd dsf sfsdf sdfsdf sdfsdfs</h2>
           </div>
         </div>
         <div className="hobby hobby__02">
-          <Image src={Hobby_02} layout="fixed" alt="" />
+          <Image src={Hobby_02} layout="responsive" alt="" />
           <div className="text">
             <h1>CODE_&_LEARN</h1>
             <h2>dsfsdfsd sdfsdfsd dsf sfsdf sdfsdf sdfsdfs</h2>
           </div>
         </div>
         <div className="hobby hobby__03">
-          <Image src={Hobby_03} layout="fixed" alt="" />
+          <Image src={Hobby_03} layout="responsive" alt="" />
           <div className="text">
             <h1>HIKING_&_NATURE</h1>
             <h2>dsfsdfsd sdfsdfsd dsf sfsdf sdfsdf sdfsdfs</h2>
           </div>
         </div>
         <div className="hobby hobby__04">
-          <Image src={Hobby_04} layout="fixed" alt="" />
+          <Image src={Hobby_04} layout="responsive" alt="" />
           <div className="text">
             <h1>COOK_&_INVENT</h1>
             <h2>dsfsdfsd sdfsdfsd dsf sfsdf sdfsdf sdfsdfs</h2>
@@ -53,7 +53,7 @@ export default function MyPassions() {
         </div>
       </HobbyElements>
       <div className="polygons">
-      <Image src={Polygons} layout="fixed" alt="" />
+      <Image src={Polygons} layout="responsive" alt="" />
       </div>
     </SectionContainer>
   );
@@ -71,6 +71,10 @@ const SectionContainer = styled.div`
   color: ${Colors.white};
   /* background: url("/pattern.png"), ${Colors.primary}; */
   background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
+
+  @media screen and (max-width: 764px) {
+    min-height: unset;
+  }
 
   h1 {
     font-size: 4rem;
@@ -95,6 +99,13 @@ const HexagonBig = styled.div`
   left: -200px;
   margin-top: 180px;
   z-index: 1;
+
+  @media screen and (max-width: 764px) {
+    width: 90%;
+    left: 50%;
+    top: 210px;
+    transform: translateX(-50%);
+  }
 `;
 
 const HobbyElements = styled.div`
@@ -103,16 +114,30 @@ const HobbyElements = styled.div`
   width: 100%;
   position: relative;
 
+  @media screen and (max-width: 764px) {
+    height: 70vh;
+  }
+
   .hobby {
+    width: 250px;
+    height: auto;
     z-index: 2;
     margin-right: auto;
     cursor: pointer;
+
+    @media screen and (max-width: 764px) {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+
     :hover {
         .text {
           opacity: 1;
           left: 0;
         }
       }
+
     .text {
       z-index: 2;
       position: absolute;
@@ -121,22 +146,81 @@ const HobbyElements = styled.div`
       transform: translate(5%, -100%);
       opacity: 0;
       transition: all 0.4s ease-in-out;
+
+      h1 {
+        @media screen and (max-width: 764px) {
+          font-size: 1.8rem;
+        }
+      }
+      h2 {
+        @media screen and (max-width: 764px) {
+          font-size: 1.2rem;
+        }
+      }
+
     }
     
     &__01 {
       margin-left: 70px;
+      @media screen and (max-width: 764px) {
+        margin: 0;
+        top: 130px;
+        left: 0;
+      }
+
+      .text {
+        @media screen and (max-width: 764px) {
+          top: 0;
+          left: 0;
+          transform: translate(45%,50%);
+        }
+      }
     }
     &__02 {
       margin-left: 514px;
       margin-bottom: 200px;
-
+      @media screen and (max-width: 764px) {
+        margin: 0;
+        top: 60px;
+        left: 25%;
+      }
+      .text {
+        @media screen and (max-width: 764px) {
+          top: 0;
+          left: -50%;
+          transform: translate(0,100%);
+        }
+      }
     }
     &__03 {
       margin-left: 514px;
-
+      @media screen and (max-width: 764px) {
+        margin: 0;
+        top: 60px;
+        left: 50%;
+      }
+      .text {
+        @media screen and (max-width: 764px) {
+          top: 0;
+          left: -50%!important;
+          transform: translate(-28%,100%);
+        }
+      }
     }
     &__04 {
       margin-left: 70px;
+      @media screen and (max-width: 764px) {
+        margin: 0;
+        top: 120px;
+        left: 75%;
+      }
+      .text {
+        @media screen and (max-width: 764px) {
+          top: 0;
+          left: -50%;
+          transform: translate(-70%,50%);
+        }
+      }
     }
   }
 `;
