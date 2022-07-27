@@ -74,7 +74,7 @@ const InnerContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 992px) {
     flex-direction: column;
   }
   @media screen and (min-width: 1280px) {
@@ -91,7 +91,7 @@ const LeftContainer = styled.div`
   margin-right: 0.5rem;
   color: #eee;
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 992px) {
     width: 100%;
     margin: 0;
   }
@@ -133,9 +133,10 @@ const RightContainer = styled.div`
   /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
   cursor: pointer;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     width: 100%;
     margin: 0;
+    justify-content: center;
   }
   .dark {
     z-index: 1;
