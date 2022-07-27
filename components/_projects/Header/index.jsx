@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Image from "next/image";
-import someImage from "../../../assets/images/homepage/hobby_02.jpg";
 
 export default function Header() {
   return (

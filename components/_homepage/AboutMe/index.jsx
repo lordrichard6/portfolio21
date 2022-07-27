@@ -3,7 +3,8 @@ import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 
 import { Colors } from "../../../assets/variables";
-import { aboutMe } from "../../../assets/data";
+import meDark from "../../../assets/images/homepage/about-me_02.png";
+import meLight from "../../../assets/images/homepage/about-me_01.png";
 
 export default function AboutMe() {
   let { t } = useTranslation();
@@ -28,7 +29,12 @@ export default function AboutMe() {
           </p>
         </LeftContainer>
         <RightContainer>
-          {/* <Image src={aboutMe.sideImg} alt={aboutMe.imgAlt} objectFit="cover" /> */}
+          <div className="dark">
+            <Image src={meDark} alt="" objectFit="cover" />
+          </div>
+          <div className="light">
+            <Image src={meLight} alt="" objectFit="cover" />
+          </div>
         </RightContainer>
       </InnerContainer>
     </SectionContainer>
@@ -50,10 +56,15 @@ const SectionContainer = styled.div`
 
 const BackgroundGradient = styled.div`
   position: absolute;
-  
+
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.2) 38.54%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.2) 38.54%,
+    rgba(0, 0, 0, 0) 100%
+  );
 `;
 
 const InnerContainer = styled.div`
@@ -119,14 +130,33 @@ const RightContainer = styled.div`
   width: 50%;
   height: 100%;
   margin-left: 0.5rem;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
   cursor: pointer;
 
   @media screen and (max-width: 768px) {
     width: 100%;
     margin: 0;
   }
-  ::after {
+  .dark {
+    z-index: 1;
+    transition: 0.2s ease-in-out;
+  }
+  .light {
+    position: absolute;
+    z-index: 0;
+    transition: 0.2s ease-in-out;
+  }
+
+  :hover {
+    .dark {
+    z-index: 0;
+    }
+    .light {
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  /* ::after {
     --slice-0: inset(50% 50% 50% 50%);
     --slice-1: inset(80% -6px 0 0);
     --slice-2: inset(50% -6px 30% 0);
@@ -143,9 +173,9 @@ const RightContainer = styled.div`
     background: linear-gradient(45deg, transparent 3%, #ffffff89 10%);
     text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
     clip-path: var(--slice-0);
-  }
+  } */
 
-  :hover::after {
+  /* :hover::after {
     animation: 1s glitch infinite;
     animation-timing-function: steps(2, end);
   }
@@ -204,6 +234,6 @@ const RightContainer = styled.div`
     100% {
       clip-path: var(--slice-1);
       transform: translate(0);
-    }
-  }
+    } */
+  /* } */
 `;
