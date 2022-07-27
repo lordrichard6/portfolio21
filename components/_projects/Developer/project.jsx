@@ -97,8 +97,7 @@ const ProjectWrapper = styled.div`
     margin-bottom: 0;
     letter-spacing: 2px;
     opacity: 0;
-    transition: 0.5s;
-    transition-timing-function: linear;
+    transition: 0.5s linear;
     transform: translateY(-10px);
 
     @media screen and (max-width: 764px) {
@@ -116,8 +115,7 @@ const ProjectWrapper = styled.div`
     font-size: 3rem;
     opacity: 0;
     transform: translateY(10px);
-    transition: 0.5s;
-    transition-timing-function: linear;
+    transition: 0.5s linear;
     margin: 0.5rem 0;
 
     @media screen and (max-width: 764px) {
@@ -144,8 +142,7 @@ const ProjectWrapper = styled.div`
     line-height: 1.2;
     opacity: 0;
     transform: translateY(10px);
-    transition: 0.5s;
-    transition-timing-function: linear;
+    transition: 0.5s linear;
     .link {
       cursor: pointer;
       font-size: 1.5rem;
@@ -161,17 +158,17 @@ const ProjectWrapper = styled.div`
       h2 {
         transform: translateY(0);
         opacity: 1;
-        transition-delay: 1.6s;
+        transition-delay: 0.4s;
       }
       .icon {
         transform: translateY(0);
         opacity: 1;
-        transition-delay: 1.7s;
+        transition-delay: 0.6s;
       }
       .link-wrap {
         transform: translateY(0);
         opacity: 1;
-        transition-delay: 1.9s;
+        transition-delay: 0.7s;
       }
     }
   }
