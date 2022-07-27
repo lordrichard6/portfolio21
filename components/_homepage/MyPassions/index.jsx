@@ -217,7 +217,7 @@ const HobbyElements = styled.div`
       .text {
         @media screen and (max-width: 764px) {
           top: 0;
-          left: -50%;
+          left: -50%!important;
           transform: translate(-70%,50%);
         }
       }
