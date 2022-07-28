@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Image from "next/image"
+import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 
 import {
@@ -9,7 +9,7 @@ import {
   FaLinkedin,
   FaGithub,
   FaDiscord,
-  FaWhatsapp
+  FaWhatsapp,
 } from "react-icons/fa";
 // import { HiMail } from "react-icons/hi";
 import { Colors } from "../../assets/variables";
@@ -40,11 +40,18 @@ export default function Contacts() {
       </IconContainer>
 
       <ContactWrapper>
-      <Button>
+        <ButtonV2>
+          <div className="button _1">
+            <a href="https://drive.google.com/file/d/19uYAAnvRa-fi_LpG1GhA9HQVGeBQAIuF/view?usp=sharing">{t("common:downloadCV")}</a>
+            <div className="back"></div>
+          </div>
+        </ButtonV2>
+        {/* very cool button but brings performance issues */}
+        {/* <Button>
         <a href="https://drive.google.com/file/d/19uYAAnvRa-fi_LpG1GhA9HQVGeBQAIuF/view?usp=sharing">
           {t("common:downloadCV")}
         </a>
-      </Button>
+      </Button> */}
         {/* <ImageWrapper>
         <Image src={QRcode} alt="paulo reizinho qr" />
         </ImageWrapper> */}
@@ -116,6 +123,105 @@ const ContactWrapper = styled.div`
 
   @media screen and (max-width: 390px) {
     width: 80%;
+  }
+`;
+
+const ButtonV2 = styled.div`
+  /* https://freefrontend.com/css-buttons/ */
+  /* https://codepen.io/dev_loop/pen/agqYaN */
+  /* width: calc(4 * 200px);
+  height: calc(4 * 100px); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .button {
+    position: relative;
+    width: calc(0.8 * 200px);
+    height: calc(0.7 * 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 0.8rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0, 0.22, 0.3, 1);
+    border-radius: 16px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    a {
+      color: #fff;
+      font-size: 1rem;
+      z-index: 10;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    &._1 {
+      background: #2980b9;
+    }
+    &._2 {
+      background: #8e44ad;
+    }
+    &._3 {
+      background: #16a085;
+    }
+    &._4 {
+      background: #e74c3c;
+    }
+
+    .back {
+      position: absolute;
+      width: 0;
+      height: 0;
+      filter: url(#filter);
+      border-radius: 50%;
+      z-index: 5;
+      transition: all 2.5s cubic-bezier(0.1, 0.22, 0.3, 1);
+    }
+
+    &._1 .back {
+      left: -50%;
+      top: -50%;
+      background: #27ae60;
+    }
+    &._2 .back {
+      right: -50%;
+      top: -50%;
+      background: #c0392b;
+    }
+    &._3 .back {
+      left: -50%;
+      bottom: -50%;
+      background: #34495e;
+    }
+    &._4 .back {
+      right: -50%;
+      bottom: -50%;
+      background: #2980b9;
+    }
+
+    &:hover .back {
+      width: calc(2 * 200px);
+      height: calc(2 * 100px);
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    flex-direction: column;
+  }
+  .button {
+    margin: 0.8rem 0;
   }
 `;
 
