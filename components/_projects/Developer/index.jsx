@@ -10,7 +10,7 @@ export default function Developer() {
 
   return (
     <SectionContainer>
-      <h1>{t("projects:dev_title")}</h1>
+      {/* <h1>{t("projects:dev_title")}</h1> */}
       <Projects>
         {projectsDev.secondary.map((item, i) => {
           return (
@@ -46,7 +46,6 @@ export default function Developer() {
 
 const SectionContainer = styled.div`
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

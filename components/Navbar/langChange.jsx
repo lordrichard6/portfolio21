@@ -1,10 +1,14 @@
 import styled from "styled-components";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import pt from '../../assets/images/pt.svg'
+import en from '../../assets/images/en.svg'
 
 export default function LangChange() {
   let router = useRouter();
 
+  // <Image src={locale} layout="responsive" alt="" />
   return (
     <NavMenu>
       {router.locales.map((locale) => (

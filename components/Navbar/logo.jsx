@@ -29,7 +29,7 @@ const LogoContainer = styled.div`
     letter-spacing: -1px;
     margin: 0;
 
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 768px) {
       display: none;
     }
   }

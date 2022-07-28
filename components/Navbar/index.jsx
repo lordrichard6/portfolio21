@@ -22,7 +22,7 @@ export default function Navbar({ toggle }) {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   });
-  
+
   let navbarClasses = ["navbar"];
   if (scrolled) {
     navbarClasses.push("scrolled");
@@ -37,7 +37,9 @@ export default function Navbar({ toggle }) {
         <Logo />
         <ItemsWrapper>
           <NavItems />
-          <LangChange />
+          <div className="lang">
+            <LangChange />
+          </div>
         </ItemsWrapper>
       </NavbarContainer>
     </Nav>
@@ -76,7 +78,7 @@ const NavbarContainer = styled.div`
 const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 768px) {
     transform: translate(-100%, 40%) !important;
     font-size: 1.8rem !important;
   }
@@ -94,4 +96,10 @@ const MobileIcon = styled.div`
 
 const ItemsWrapper = styled.div`
   display: flex;
+
+  .lang {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
 `;

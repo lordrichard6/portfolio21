@@ -13,7 +13,7 @@ export default function Footer() {
     <FooterContainer>
       <InnerContainer>
         <Thanks />
-        <SiteMap />
+        {/* <SiteMap /> */}
         <Contacts />
       </InnerContainer>
       <CopyrightWrapper>
@@ -39,9 +39,9 @@ const FooterContainer = styled.footer`
 const InnerContainer = styled.div`
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 764px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -53,7 +53,7 @@ const CopyrightWrapper = styled.div`
   p {
     margin-bottom: 0;
 
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 764px) {
       font-size: 0.8rem;
     }
   }

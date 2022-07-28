@@ -9,10 +9,10 @@ import bannerEdu from "../images/homepage/banner_02.jpg";
 import backgroundHome from "../images/homepage/header_01.jpg";
 import logoWhite from "../../public/logo_signature.png";
 import aboutMeImg from "../images/homepage/blue_01.jpg";
-import hobby_01 from "../images/homepage/hobby_01.jpg";
-import hobby_02 from "../images/homepage/hobby_02.jpg";
-import hobby_03 from "../images/homepage/hobby_03.jpg";
-import hobby_04 from "../images/homepage/hobby_04.jpg";
+// import hobby_01 from "../images/homepage/hobby_01.jpg";
+// import hobby_02 from "../images/homepage/hobby_02.jpg";
+// import hobby_03 from "../images/homepage/hobby_03.jpg";
+// import hobby_04 from "../images/homepage/hobby_04.jpg";
 
 // Projects
 import backgroundProjects from "../images/projects/header_02.jpg";
@@ -103,28 +103,28 @@ export const aboutMe = {
 export const hobbies = [
   {
     title: "home:hobbies_title01",
-    imgSrc: hobby_01,
+    // imgSrc: hobby_01,
     alt: "computer",
     text: "home:hobbies_text01",
     className: "hobby",
   },
   {
     title: "home:hobbies_title02",
-    imgSrc: hobby_02,
+    // imgSrc: hobby_02,
     alt: "gym",
     text: "home:hobbies_text02",
     className: "hobby-reverse",
   },
   {
     title: "home:hobbies_title03",
-    imgSrc: hobby_03,
+    // imgSrc: hobby_03,
     alt: "hiking",
     text: "home:hobbies_text03",
     className: "hobby",
   },
   {
     title: "home:hobbies_title04",
-    imgSrc: hobby_04,
+    // imgSrc: hobby_04,
     alt: "cooking",
     text: "home:hobbies_text04",
     className: "hobby-reverse",
@@ -148,15 +148,15 @@ export const projectsDev = {
   //   },
   // ],
   secondary: [
-    {
-      id: 1,
-      image: dev_sardinha,
-      alt: "patricia project",
-      title: "Private Chauffeur",
-      text: "A project for a friend that has her own driving service.",
-      link: "https://patricia-vila-nova.vercel.app/",
-      icon: <SiNextdotjs />,
-    },
+    // {
+    //   id: 1,
+    //   image: dev_sardinha,
+    //   alt: "patricia project",
+    //   title: "Private Chauffeur",
+    //   text: "A project for a friend that has her own driving service.",
+    //   link: "https://patricia-vila-nova.vercel.app/",
+    //   icon: <SiNextdotjs />,
+    // },
     {
       id: 2,
       image: dev_myPortfolio,
@@ -166,15 +166,15 @@ export const projectsDev = {
       link: "/",
       icon: <SiNextdotjs />,
     },
-    {
-      id: 3,
-      image: dev_leftBastards,
-      alt: "left bastards",
-      title: "Left Bastards",
-      text: "The official website of the car lovers group called, Left Bastards",
-      link: "https://left-bastards.vercel.app/",
-      icon: <SiNextdotjs />,
-    },
+    // {
+    //   id: 3,
+    //   image: dev_leftBastards,
+    //   alt: "left bastards",
+    //   title: "Left Bastards",
+    //   text: "The official website of the car lovers group called, Left Bastards",
+    //   link: "https://left-bastards.vercel.app/",
+    //   icon: <SiNextdotjs />,
+    // },
     {
       id: 4,
       image: dev_blueVariant,

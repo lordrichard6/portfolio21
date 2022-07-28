@@ -27,18 +27,19 @@ export default function Sidebar({isOpen, toggle}) {
               <a>{t('common:projects')}</a>
             </Link>
           </NavItem>
-          <NavItem onClick={toggle}>
+          {/* <NavItem onClick={toggle}>
             <Link href="/skills">
               <a>{t('common:skills')}</a>
             </Link>
-          </NavItem>
+          </NavItem> */}
 
           {/* <NavItem onClick={toggle}>
             <Link href="/404">
               <a>myBlog</a>
             </Link>
           </NavItem> */}
-          {/* <LangChange /> */}
+          <br />
+          <LangChange />
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
@@ -58,7 +59,9 @@ const SidebarContainer = styled.aside`
     transition: 0.3s ease-in-out;
     opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
     top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-    background: url("/pattern.png"), ${Colors.primary};
+    /* background: url("/pattern.png"), ${Colors.primary}; */
+    background: url("/pattern.png"), linear-gradient(to bottom,#0f2027,#203a43,#2c5364);
+    z-index: 1000;
 `;
 
 
