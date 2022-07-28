@@ -1,74 +1,82 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import someImage from "../../../assets/images/homepage/hobby_02.jpg";
+import someImage from "../../../assets/images/homepage/about-me_02.png";
 import coolGuy from "../../../assets/images/homepage/gallery_cool.png";
 
 export default function GalleryItems() {
+
   return (
     <GalleyWrapper>
-        <div className="wrapper">
-          <div className="cool">
-            <Image src={coolGuy} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__01">
+      <div className="wrapper">
+        <div className="cool">
+          <Image src={coolGuy} alt="" objectFit="cover" />
+        </div>
+        <div className="shape shape__01">
+          <Image src={someImage} alt="" objectFit="cover" />
+        </div>
+        <div className="shape shape__02">
+          <Image src={someImage} alt="" objectFit="cover" />
+        </div>
+        <div className="shape shape__03">
+          <Image src={someImage} alt="" objectFit="cover" />
+        </div>
+        <div className="shape shape__04">
+          <Image src={someImage} alt="" objectFit="cover" />
+        </div>
+        <div className="shape shape__05">
+          <Image src={someImage} alt="" objectFit="cover" />
+        </div>
+        <div className="shape shape__06">
+          <Image src={someImage} alt="" objectFit="cover" />
+        </div>
+        <div className="group_01">
+          <div className="shape shape__07">
             <Image src={someImage} alt="" objectFit="cover" />
           </div>
-          <div className="shape shape__02">
+          <div className="shape shape__08">
             <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__03">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__04">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__05">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__06">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="group_01">
-            <div className="shape shape__07">
-              <Image src={someImage} alt="" objectFit="cover" />
-            </div>
-            <div className="shape shape__08">
-              <Image src={someImage} alt="" objectFit="cover" />
-            </div>
-          </div>
-          <div className="group_02">
-            <div className="shape shape__09">
-              <Image src={someImage} alt="" objectFit="cover" />
-            </div>
-            <div className="shape shape__10">
-              <Image src={someImage} alt="" objectFit="cover" />
-            </div>
-            <div className="shape shape__11">
-              <Image src={someImage} alt="" objectFit="cover" />
-            </div>
-            <div className="shape shape__12">
-              <Image src={someImage} alt="" objectFit="cover" />
-            </div>
-            <div className="shape shape__13">
-              <Image src={someImage} alt="" objectFit="cover" />
-            </div>
-            <div className="shape shape__14">
-              <Image src={someImage} alt="" objectFit="cover" />
-            </div>
-            <div className="shape shape__15">
-              <Image src={someImage} alt="" objectFit="cover" />
-            </div>
-            <div className="shape shape__16">
-              <Image src={someImage} alt="" objectFit="cover" />
-            </div>
           </div>
         </div>
-      </GalleyWrapper>
+        <div className="group_02">
+          <div className="shape shape__09">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__10">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__11">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__12">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__13">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__14">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__15">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+          <div className="shape shape__16">
+            <Image src={someImage} alt="" objectFit="cover" />
+          </div>
+        </div>
+      </div>
+      <Ocean>
+        <div clasNames="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+        <div className="wave"></div>
+      </Ocean>
+    </GalleyWrapper>
   );
 }
 
 const GalleyWrapper = styled.div`
+  position: relative;
   height: 1400px;
   width: 100%;
   display: flex;
@@ -116,7 +124,7 @@ const GalleyWrapper = styled.div`
     }
     @media screen and (max-width: 576px) {
       left: 40px;
-    top: -178px;
+      top: -178px;
     }
   }
 
@@ -322,4 +330,61 @@ const GalleyWrapper = styled.div`
       }
     }
   }
+`;
+
+const Ocean = styled.div`
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #0f2027;
+
+.wave {
+  /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;  */
+  background-image: url('/wave.svg');
+  background-repeat: repeat-x;
+  position: absolute;
+  bottom: 0;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -170px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+.wave:nth-of-type(3) {
+  top: -150px;
+  animation: wave 7s cubic-bezier( 0.46, 0.45, 0.73, 0.53) -.125s infinite, swell 6s ease -1.15s infinite;
+  opacity: 1;
+}
+
+.wave:nth-of-type(3) {
+  top: -150px;
+  animation: wave 7s cubic-bezier( 0.26, 0.55, 0.63, 0.53) -.125s infinite, swell 6s ease -1.15s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
 `;

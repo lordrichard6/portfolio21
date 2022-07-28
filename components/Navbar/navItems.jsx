@@ -19,6 +19,11 @@ export default function NavItems() {
           <a>{t('common:projects')}</a>
         </Link>
       </NavItem>
+      <NavItem>
+        <Link href="/gallery">
+          <a>{t('common:gallery')}</a>
+        </Link>
+      </NavItem>
       {/* <NavItem>
         <Link href="/skills">
           <a>{t('common:skills')}</a>

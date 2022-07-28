@@ -27,6 +27,12 @@ export default function Sidebar({isOpen, toggle}) {
               <a>{t('common:projects')}</a>
             </Link>
           </NavItem>
+          <NavItem onClick={toggle}>
+            <Link href="/gallery">
+              <a>{t('common:gallery')}</a>
+            </Link>
+          </NavItem>
+          
           {/* <NavItem onClick={toggle}>
             <Link href="/skills">
               <a>{t('common:skills')}</a>
