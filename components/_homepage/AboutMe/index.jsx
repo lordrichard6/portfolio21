@@ -52,6 +52,10 @@ const SectionContainer = styled.div`
   /* background: ${Colors.primary}; */
   /* background: url("/pattern.png"), ${Colors.primary}; */
   background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
+
+  @media screen and (max-width: 764px) {
+    padding: 4rem 0;
+  }
 `;
 
 const BackgroundGradient = styled.div`
