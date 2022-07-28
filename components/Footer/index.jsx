@@ -41,7 +41,7 @@ const InnerContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 764px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -53,7 +53,7 @@ const CopyrightWrapper = styled.div`
   p {
     margin-bottom: 0;
 
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 764px) {
       font-size: 0.8rem;
     }
   }

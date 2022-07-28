@@ -38,7 +38,8 @@ export default function Sidebar({isOpen, toggle}) {
               <a>myBlog</a>
             </Link>
           </NavItem> */}
-          {/* <LangChange /> */}
+          <br />
+          <LangChange />
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
