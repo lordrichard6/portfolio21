@@ -15,8 +15,14 @@ import Hobby_04 from "../../../assets/images/homepage/hobby_04.png";
 
 export default function MyPassions() {
   let { t } = useTranslation();
+  const br = `\n`
 
-  const code = ['“if (☕️ === true) {', <br />, "code( );",<br />, "} else {",<br />, "fetch(☕️);",<br />,"}" ]
+  // const code = ['“if (☕️ === true) {', <br />, "code( );",<br />, "} else {",<br />, "fetch(☕️);",<br />,"}" ]
+  const code1 = `“if (☕️ === true) {`
+  const code2 = `code( );`
+  const code3 = `} else {`
+  const code4 = `fetch(☕️);"`
+  const code5 = `}"`
 
 
   return (
@@ -41,7 +47,7 @@ export default function MyPassions() {
           <Image src={Hobby_02} layout="responsive" alt="" />
           <div className="text">
             <h1>CODE_&_LEARN</h1>
-            <h2>{code}</h2>
+            <h2>{code1}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{code2}<br />&nbsp;&nbsp;{code3}<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{code4}<br />&nbsp;&nbsp;{code5}</h2>
           </div>
         </div>
         <div className="hobby hobby__03">
@@ -188,6 +194,9 @@ const HobbyElements = styled.div`
       transform: translate(5%, -100%);
       opacity: 0;
       transition: all 0.4s ease-in-out;
+      @media screen and (max-width: 764px) {
+        width: 210px;
+      }
 
       h1 {
         @media screen and (max-width: 764px) {
@@ -213,9 +222,7 @@ const HobbyElements = styled.div`
       .text {
         top: 60%;
         @media screen and (max-width: 764px) {
-          top: 46px;
-          left: 0;
-          transform: translate(45%, 50%);
+          transform: translate(40%,50%);
         }
       }
     }
@@ -229,9 +236,7 @@ const HobbyElements = styled.div`
       }
       .text {
         @media screen and (max-width: 764px) {
-          top: -50px;
-          left: -50%;
-          transform: translate(0, 100%);
+          transform: translate(0,50%);
         }
       }
     }
@@ -244,9 +249,7 @@ const HobbyElements = styled.div`
       }
       .text {
         @media screen and (max-width: 764px) {
-          top: 16px;
-          left: -50% !important;
-          transform: translate(-28%, 100%);
+          transform: translate(-50%,60%);
         }
       }
     }
@@ -260,9 +263,7 @@ const HobbyElements = styled.div`
       .text {
         top: 65%;
         @media screen and (max-width: 764px) {
-          top: 46px;
-          left: -50% !important;
-          transform: translate(-70%, 50%);
+          transform: translate(-90%,40%);
         }
       }
     }
