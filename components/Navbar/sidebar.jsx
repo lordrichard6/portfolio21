@@ -58,7 +58,9 @@ const SidebarContainer = styled.aside`
     transition: 0.3s ease-in-out;
     opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
     top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-    background: url("/pattern.png"), ${Colors.primary};
+    /* background: url("/pattern.png"), ${Colors.primary}; */
+    background: url("/pattern.png"), linear-gradient(to bottom,#0f2027,#203a43,#2c5364);
+    z-index: 1000;
 `;
 
 

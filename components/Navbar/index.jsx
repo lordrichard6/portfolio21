@@ -76,7 +76,7 @@ const NavbarContainer = styled.div`
 const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 768px) {
     transform: translate(-100%, 40%) !important;
     font-size: 1.8rem !important;
   }
