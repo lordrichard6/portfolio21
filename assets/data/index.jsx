@@ -40,6 +40,24 @@ import creative_02 from "../images/projects/creative_02.jpg";
 import creative_03 from "../images/projects/creative_03.jpg";
 import creative_04 from "../images/projects/creative_04.jpg";
 
+// Gallery
+import gal_01 from "../images/gallery/gal_01.jpg";
+import gal_02 from "../images/gallery/gal_02.jpg";
+import gal_03 from "../images/gallery/gal_03.jpg";
+import gal_04 from "../images/gallery/gal_04.jpg";
+import gal_05 from "../images/gallery/gal_05.jpg";
+import gal_06 from "../images/gallery/gal_06.jpg";
+import gal_07 from "../images/gallery/gal_07.jpg";
+import gal_08 from "../images/gallery/gal_08.jpg";
+import gal_09 from "../images/gallery/gal_09.jpg";
+import gal_10 from "../images/gallery/gal_10.jpg";
+import gal_11 from "../images/gallery/gal_11.jpg";
+import gal_12 from "../images/gallery/gal_12.jpg";
+import gal_13 from "../images/gallery/gal_13.jpg";
+import gal_14 from "../images/gallery/gal_14.jpg";
+import gal_15 from "../images/gallery/gal_15.jpg";
+import gal_16 from "../images/gallery/gal_16.jpg";
+
 // Skills
 import backgroundSkills from "../images/skills/header_03.jpg";
 
@@ -465,4 +483,95 @@ export const education = [
     school: "Udemy",
     text: "skills:ed05_text",
   },
+];
+
+// GALLERY ---------------------------------------------------------------------------------------------
+export const gallery01 = [
+  {
+    imgSrc: gal_01,
+    alt: "peronal pictures",
+    className: "shape shape__01",
+  },
+  {
+    imgSrc: gal_02,
+    alt: "peronal pictures",
+    className: "shape shape__02",
+  },
+  {
+    imgSrc: gal_03,
+    alt: "peronal pictures",
+    className: "shape shape__03",
+  },
+  {
+    imgSrc: gal_04,
+    alt: "peronal pictures",
+    className: "shape shape__04",
+  },
+  {
+    imgSrc: gal_05,
+    alt: "peronal pictures",
+    className: "shape shape__05",
+  },
+  {
+    imgSrc: gal_06,
+    alt: "peronal pictures",
+    className: "shape shape__06",
+  }
+];
+
+export const gallery02 = [
+  {
+    imgSrc: gal_07,
+    alt: "peronal pictures",
+    className: "shape shape__07",
+  },
+  {
+    imgSrc: gal_08,
+    alt: "peronal pictures",
+    className: "shape shape__08",
+  }
+];
+
+export const gallery03 = [
+  {
+    imgSrc: gal_09,
+    alt: "peronal pictures",
+    className: "shape shape__09",
+  },
+  {
+    imgSrc: gal_10,
+    alt: "peronal pictures",
+    className: "shape shape__10",
+  },
+  {
+    imgSrc: gal_11,
+    alt: "peronal pictures",
+    className: "shape shape__11",
+  },
+  {
+    imgSrc: gal_12,
+    alt: "peronal pictures",
+    className: "shape shape__12",
+  },
+  {
+    imgSrc: gal_13,
+    alt: "peronal pictures",
+    className: "shape shape__13",
+  },
+  {
+    imgSrc: gal_14,
+    alt: "peronal pictures",
+    className: "shape shape__14",
+  },
+  {
+    imgSrc: gal_15,
+    alt: "peronal pictures",
+    className: "shape shape__15",
+  },
+  {
+    imgSrc: gal_16,
+    alt: "peronal pictures",
+    className: "shape shape__16",
+  },
+  
 ];

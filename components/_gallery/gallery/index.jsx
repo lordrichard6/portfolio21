@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+import { gallery01, gallery02, gallery03} from "../../../assets/data";
 import someImage from "../../../assets/images/homepage/about-me_02.png";
 import coolGuy from "../../../assets/images/homepage/gallery_cool.png";
 
@@ -12,57 +13,30 @@ export default function GalleryItems() {
         <div className="cool">
           <Image src={coolGuy} alt="" objectFit="cover" />
         </div>
-        <div className="shape shape__01">
-          <Image src={someImage} alt="" objectFit="cover" />
-        </div>
-        <div className="shape shape__02">
-          <Image src={someImage} alt="" objectFit="cover" />
-        </div>
-        <div className="shape shape__03">
-          <Image src={someImage} alt="" objectFit="cover" />
-        </div>
-        <div className="shape shape__04">
-          <Image src={someImage} alt="" objectFit="cover" />
-        </div>
-        <div className="shape shape__05">
-          <Image src={someImage} alt="" objectFit="cover" />
-        </div>
-        <div className="shape shape__06">
-          <Image src={someImage} alt="" objectFit="cover" />
-        </div>
+        {gallery01.map((item, i) => {
+          return (
+            <div key={i} className={item.className}>
+              <Image src={item.imgSrc} alt={item.alt} objectFit="cover" layout="fill" />
+            </div>
+          );
+        })}
         <div className="group_01">
-          <div className="shape shape__07">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__08">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
+        {gallery02.map((item, i) => {
+          return (
+            <div key={i} className={item.className}>
+              <Image src={item.imgSrc} alt={item.alt} objectFit="cover" layout="fill" />
+            </div>
+          );
+        })}
         </div>
         <div className="group_02">
-          <div className="shape shape__09">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__10">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__11">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__12">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__13">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__14">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__15">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
-          <div className="shape shape__16">
-            <Image src={someImage} alt="" objectFit="cover" />
-          </div>
+        {gallery03.map((item, i) => {
+          return (
+            <div key={i} className={item.className}>
+              <Image src={item.imgSrc} alt={item.alt} objectFit="cover" layout="fill" />
+            </div>
+          );
+        })}
         </div>
       </div>
       <Ocean>
@@ -91,6 +65,7 @@ const GalleyWrapper = styled.div`
   .wrapper {
     position: relative;
     margin-top: 200px;
+    margin-bottom: 200px;
     width: 1450px;
     height: fit-content;
     @media screen and (max-width: 1600px) {
