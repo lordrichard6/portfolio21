@@ -31,8 +31,8 @@ export default function Navbar({ toggle }) {
   return (
     <Nav className={navbarClasses.join(" ")}>
       <NavbarContainer>
-        <MobileIcon onClick={toggle}>
-          <FaBars alt="burger menu" />
+        <MobileIcon >
+          <FaBars alt="burger menu" onClick={toggle}/>
         </MobileIcon>
         <Logo />
         <ItemsWrapper>
@@ -102,6 +102,7 @@ const MobileIcon = styled.div`
     font-size: 1.8rem !important;
   }
   @media screen and (max-width: 1024px) {
+    width: max-content;
     display: block;
     position: absolute;
     top: 0;
