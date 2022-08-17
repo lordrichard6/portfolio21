@@ -56,11 +56,30 @@ const Nav = styled.nav`
   width: 100vw;
   z-index: 200;
   transition: 0.8s all ease;
+  animation: showNav 2s linear;
   /* background: url("/pattern.png"), ${Colors.primary}; */
 
   @media screen and (max-width: 1024px) {
     transition: 0.8s all ease;
     margin-top: 16px;
+  }
+
+  @keyframes showNav {
+    0% {
+      filter: blur(0) brightness(1);
+      opacity: 0;
+    }
+    86% {
+      filter: brightness(1) blur(0);
+      opacity: 0;
+    }
+    90% {
+      filter: brightness(10) blur(0.5rem);
+      opacity: 1;
+    }
+    100% {
+      filter: blur(0) brightness(1);
+    }
   }
 `;
 

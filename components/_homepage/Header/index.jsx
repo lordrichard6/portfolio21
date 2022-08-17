@@ -57,8 +57,25 @@ const SectionContainer = styled.section`
   justify-content: center;
   align-items: center;
   padding: 6rem 0;
+  animation: flash 3.1s linear;
+
   @media screen and (max-width: 500px) {
     height: 100%;
+  }
+
+  @keyframes flash {
+    0% {
+      filter: blur(0) brightness(1);
+    }
+    96% {
+      filter: brightness(1) blur(0);
+    }
+    98% {
+      filter: brightness(10) blur(0.5rem);
+    }
+    100% {
+      filter: blur(0) brightness(1);
+    }
   }
 `;
 
@@ -109,10 +126,36 @@ const SloganContainer = styled.div`
 const ImageContainer = styled.div`
   width: 50%;
   height: auto;
+  animation: showHead 3s linear;
   /* filter: drop-shadow(10px 10px 5px #1a1a1a); */
 
   @media screen and (max-width: 768px) {
     width: 100%;
+  }
+
+  @keyframes showHead {
+    0% {
+      filter: blur(10rem) brightness(8);
+      transform: scale(2) translate(-20%, 0);
+    }
+    50% {
+      filter: blur(0) brightness(2);
+      transform: scale(2) translate(-20%, 0);
+    }
+    60% {
+      transform: scale(2) translate(-20%, 0);
+    }
+
+    96% {
+      filter: blur(0) brightness(2);
+    }
+    98% {
+      transform: scale(1) translate(0, 0);
+      filter: blur(5rem) brightness(10);
+    }
+    100% {
+      filter: blur(0) brightness(2);
+    }
   }
 `;
 
@@ -123,6 +166,7 @@ const Title = styled.div`
   color: #eee;
   display: flex;
   flex-direction: column;
+  animation: showTitle 3.8s linear;
 
   @media screen and (max-width: 768px) {
     font-size: 2.8rem;
@@ -130,13 +174,51 @@ const Title = styled.div`
   @media screen and (min-width: 2560px) {
     font-size: 5rem;
   }
+
+  @keyframes showTitle {
+    0% {
+      filter: blur(0) brightness(1);
+      opacity: 0;
+    }
+    96% {
+      filter: brightness(1) blur(0);
+      opacity: 0;
+    }
+    98% {
+      filter: brightness(10) blur(0.5rem);
+      opacity: 1;
+    }
+    100% {
+      filter: blur(0) brightness(1);
+    }
+  }
 `;
 
 const SubTitle = styled.h2`
   font-size: 1.5rem;
-  font-weight: normal;
+  font-weight: 600;
   color: #eee;
   letter-spacing: 0.2em;
+  animation: bringText 3.5s linear;
+
+  @keyframes bringText {
+    0% {
+      transform: translate(-200%, 0);
+    }
+    80% {
+      transform: translate(-200%, 0);
+    }
+    96% {
+      filter: blur(0) brightness(1);
+      transform: translate(0, 0);
+    }
+    98% {
+      filter: blur(1rem) brightness(10);
+    }
+    100% {
+      filter: blur(0) brightness(1);
+    }
+  }
 
   @media screen and (max-width: 768px) {
     text-align: center;
