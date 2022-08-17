@@ -486,7 +486,7 @@ export const education = [
 ];
 
 // GALLERY ---------------------------------------------------------------------------------------------
-export const gallery01 = [
+export const gallery = [
   {
     imgSrc: gal_01,
     alt: "peronal pictures",
@@ -516,10 +516,7 @@ export const gallery01 = [
     imgSrc: gal_06,
     alt: "peronal pictures",
     className: "shape shape__06",
-  }
-];
-
-export const gallery02 = [
+  },
   {
     imgSrc: gal_07,
     alt: "peronal pictures",
@@ -529,10 +526,7 @@ export const gallery02 = [
     imgSrc: gal_08,
     alt: "peronal pictures",
     className: "shape shape__08",
-  }
-];
-
-export const gallery03 = [
+  },
   {
     imgSrc: gal_09,
     alt: "peronal pictures",
@@ -573,5 +567,4 @@ export const gallery03 = [
     alt: "peronal pictures",
     className: "shape shape__16",
   },
-  
 ];

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Sidebar from "../components/Navbar/sidebar";
 import Navbar from "../components/Navbar";
 import GalleryItems from "../components/_gallery/gallery/index"
+import Waves from "../components/_gallery/waves/index"
 import QuoteComponent from "../components/_gallery/quote/index"
 import HeaderComponent from "../components/_gallery/header/index"
 
@@ -24,6 +25,7 @@ export default function GalleryPage() {
       <HeaderComponent />
       <QuoteComponent />
       <GalleryItems />
+      <Waves />
       <Footer />
     </PageContainer>
   );

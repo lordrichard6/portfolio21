@@ -2,11 +2,19 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
-import { gallery01, gallery02, gallery03} from "../../../assets/data";
+import Modal from './modal'
+import { gallery } from "../../../assets/data";
 import coolGuy from "../../../assets/images/homepage/gallery_cool.png";
 
 export default function GalleryItems() {
-  const [visible, setVisible] = useState(true);
+  const [clickedImg, setClickedImg] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(null);
+
+
+  const handelClick = (item, index) => {
+    setCurrentIndex(index);
+    setClickedImg(item.imgSrc);
+  }
 
   return (
     <GalleyWrapper>
@@ -14,38 +22,17 @@ export default function GalleryItems() {
         <div className="cool">
           <Image src={coolGuy} alt="" objectFit="cover" />
         </div>
-        {gallery01.map((item, i) => {
+        {gallery.map((item, i) => {
           return (
             <div key={i} className={item.className}>
-              <Image src={item.imgSrc} alt={item.alt} objectFit="cover" layout="fill" />
+              <Image src={item.imgSrc} alt={item.alt} objectFit="cover" layout="fill" onClick={() => handelClick(item, i)} />
             </div>
           );
         })}
-        <div className="group_01">
-        {gallery02.map((item, i) => {
-          return (
-            <div key={i} className={item.className}>
-              <Image src={item.imgSrc} alt={item.alt} objectFit="cover" layout="fill" />
-            </div>
-          );
-        })}
-        </div>
-        <div className="group_02">
-        {gallery03.map((item, i) => {
-          return (
-            <div key={i} className={item.className}>
-              <Image src={item.imgSrc} alt={item.alt} objectFit="cover" layout="fill" />
-            </div>
-          );
-        })}
-        </div>
+        {clickedImg && (
+          <Modal clickedImg={clickedImg} setClickedImg={setClickedImg}/>
+        )}
       </div>
-      <Ocean>
-        <div clasNames="wave"></div>
-        <div className="wave"></div>
-        <div className="wave"></div>
-        <div className="wave"></div>
-      </Ocean>
     </GalleyWrapper>
   );
 }
@@ -56,19 +43,22 @@ const GalleyWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 150px;
   @media screen and (max-width: 1200px) {
     height: 1530px;
   }
   @media screen and (max-width: 992px) {
-    height: 1970px;
+    height: 1770px;
+  }
+  @media screen and (max-width: 576px) {
+    height: 1470px;
   }
 
   .wrapper {
     position: relative;
     margin-top: 200px;
-    margin-bottom: 200px;
     width: 1450px;
-    height: fit-content;
+    height: auto;
     @media screen and (max-width: 1600px) {
       width: 1050px;
     }
@@ -80,6 +70,7 @@ const GalleyWrapper = styled.div`
     }
     @media screen and (max-width: 576px) {
       width: 470px;
+      left: -15%;
     }
   }
 
@@ -104,48 +95,18 @@ const GalleyWrapper = styled.div`
     }
   }
 
-  .group_01 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    @media screen and (max-width: 1200px) {
-      left: -600px;
-      top: 120px;
-    }
-    @media screen and (max-width: 576px) {
-      left: 0;
-      top: 0;
-    }
-  }
-
-  .group_02 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    @media screen and (max-width: 1600px) {
-      left: -396px;
-    }
-    @media screen and (max-width: 1200px) {
-      left: -600px;
-      top: 120px;
-    }
-    @media screen and (max-width: 576px) {
-      left: 0;
-      top: 0;
-    }
-  }
   .shape {
     position: absolute;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     background: #20303c;
     display: block;
     height: 220px;
-    width: 248px;
+    width: 250px;
     box-shadow: inset 0px 0px 190px rgb(0 0 0 / 90%);
 
     @media screen and (max-width: 576px) {
       height: 160px;
-      width: 188px;
+      width: 200px;
     }
     img {
       object-position: center;
@@ -154,7 +115,7 @@ const GalleyWrapper = styled.div`
       height: 100%;
       cursor: pointer;
       transform: scale(1.5);
-      opacity: 0.2;
+      opacity: 0.4;
       transition: all 0.5s ease-in-out;
       &:hover {
         box-shadow: inset 0px 0px 0px rgb(0 0 0 / 90%);
@@ -167,43 +128,43 @@ const GalleyWrapper = styled.div`
       left: 0;
       top: 120px;
       @media screen and (max-width: 576px) {
-        left: -50px;
+        left: 0;
       }
     }
     &__02 {
-      left: 205px;
+      left: 200px;
       top: 0;
       @media screen and (max-width: 576px) {
-        left: 90px;
+        left: 150px;
         top: 40px;
       }
     }
     &__03 {
-      left: 205px;
+      left: 200px;
       top: 240px;
       @media screen and (max-width: 576px) {
-        left: 230px;
+        left: 300px;
         top: 120px;
       }
     }
     &__04 {
-      left: 406px;
+      left: 400px;
       top: 120px;
       @media screen and (max-width: 576px) {
-        left: 90px;
+        left: 150px;
         top: 200px;
       }
     }
     &__05 {
-      left: 406px;
+      left: 400px;
       top: 360px;
       @media screen and (max-width: 576px) {
-        left: -50px;
+        left: 0;
         top: 280px;
       }
     }
     &__06 {
-      left: 606px;
+      left: 600px;
       top: 240px;
       @media screen and (max-width: 992px) {
         left: 0;
@@ -211,156 +172,136 @@ const GalleyWrapper = styled.div`
       }
       @media screen and (max-width: 576px) {
         top: 280px;
-        left: 230px;
+        left: 300px;
       }
     }
     &__07 {
-      left: 606px;
+      left: 600px;
       top: 480px;
       @media screen and (max-width: 1200px) {
-        top: 240px;
+        top: 480px;
+        left: 200px;
       }
       @media screen and (max-width: 576px) {
         top: 440px;
-        left: 230px;
+        left: 300px;
       }
     }
     &__08 {
-      left: 804px;
+      left: 800px;
       top: 360px;
+      @media screen and (max-width: 1200px) {
+        top: 600px;
+        left: 0;
+      }
       @media screen and (max-width: 576px) {
-        left: -50px;
+        left: 0;
         top: 440px;
       }
     }
     &__09 {
-      left: 804px;
+      left: 800px;
       top: 600px;
+      @media screen and (max-width: 1200px) {
+        top: 840px;
+        left: 0;
+      }
       @media screen and (max-width: 576px) {
-        left: 90px;
+        left: 150px;
         top: 520px;
       }
     }
     &__10 {
-      left: 606px;
+      left: 600px;
       top: 720px;
+      @media screen and (max-width: 992px) {
+        top: 840px;
+        left: 400px;
+      }
       @media screen and (max-width: 576px) {
         top: 600px;
-        left: 230px;
+        left: 300px;
       }
     }
     &__11 {
-      left: 804px;
+      left: 800px;
       top: 840px;
+      @media screen and (max-width: 1200px) {
+        left: 400px;
+        top: 1080px;
+      }
       @media screen and (max-width: 576px) {
-        left: 90px;
+        left: 150px;
         top: 680px;
       }
     }
     &__12 {
-      left: 606px;
+      left: 600px;
       top: 960px;
+      @media screen and (max-width: 992px) {
+        top: 1080px;
+        left: 0;
+      }
       @media screen and (max-width: 576px) {
-        left: -50px;
+        left: 0;
         top: 760px;
       }
     }
     &__13 {
       left: 1000px;
       top: 960px;
+      @media screen and (max-width: 1600px) {
+        left: 200px;
+        top: 960px;
+      }
       @media screen and (max-width: 576px) {
-        left: -50px;
+        left: 0;
         top: 1080px;
       }
     }
     &__14 {
       left: 1000px;
       top: 720px;
+      @media screen and (max-width: 1600px) {
+        left: 200px;
+        top: 720px;
+      }
       @media screen and (max-width: 576px) {
-        left: 230px;
+        left: 300px;
         top: 760px;
       }
     }
     &__15 {
-      left: 1198px;
+      left: 1200px;
       top: 840px;
+      @media screen and (max-width: 1600px) {
+        left: 400px;
+        top: 840px;
+      }
       @media screen and (max-width: 992px) {
-        left: 804px;
+        left: 400px;
         top: 1320px;
       }
       @media screen and (max-width: 576px) {
-        left: -50px;
+        left: 0;
         top: 920px;
       }
     }
     &__16 {
-      left: 1198px;
+      left: 1200px;
       top: 600px;
+      @media screen and (max-width: 1600px) {
+        left: 400px;
+        top: 600px;
+      }
       @media screen and (max-width: 992px) {
-        left: 1000px;
+        left: 200px;
         top: 1200px;
       }
       @media screen and (max-width: 576px) {
-        left: 90px;
+        left: 150px;
         top: 1000px;
       }
     }
   }
-`;
-
-const Ocean = styled.div`
-  height: 5%;
-  width:100%;
-  position:absolute;
-  bottom:0;
-  left:0;
-  background: #0f2027;
-
-.wave {
-  /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;  */
-  background-image: url('/wave.svg');
-  background-repeat: repeat-x;
-  position: absolute;
-  bottom: 0;
-  width: 6400px;
-  height: 198px;
-  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0);
-}
-
-.wave:nth-of-type(2) {
-  top: -170px;
-  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-  opacity: 1;
-}
-
-.wave:nth-of-type(3) {
-  top: -150px;
-  animation: wave 7s cubic-bezier( 0.46, 0.45, 0.73, 0.53) -.125s infinite, swell 6s ease -1.15s infinite;
-  opacity: 1;
-}
-
-.wave:nth-of-type(3) {
-  top: -150px;
-  animation: wave 7s cubic-bezier( 0.26, 0.55, 0.63, 0.53) -.125s infinite, swell 6s ease -1.15s infinite;
-  opacity: 1;
-}
-
-@keyframes wave {
-  0% {
-    margin-left: 0;
-  }
-  100% {
-    margin-left: -1600px;
-  }
-}
-
-@keyframes swell {
-  0%, 100% {
-    transform: translate3d(0,-25px,0);
-  }
-  50% {
-    transform: translate3d(0,5px,0);
-  }
-}
 `;
