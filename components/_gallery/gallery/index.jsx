@@ -79,6 +79,7 @@ const GalleyWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  padding-top: 50px;
   /* margin-bottom: 150px; */
   overflow: hidden;
   @media screen and (max-width: 1200px) {
