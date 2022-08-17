@@ -1,11 +1,12 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
 import { gallery01, gallery02, gallery03} from "../../../assets/data";
-import someImage from "../../../assets/images/homepage/about-me_02.png";
 import coolGuy from "../../../assets/images/homepage/gallery_cool.png";
 
 export default function GalleryItems() {
+  const [visible, setVisible] = useState(true);
 
   return (
     <GalleyWrapper>
