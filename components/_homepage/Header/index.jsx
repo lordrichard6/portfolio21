@@ -129,6 +129,10 @@ const ImageContainer = styled.div`
   animation: showHead 3s linear;
   /* filter: drop-shadow(10px 10px 5px #1a1a1a); */
 
+  @media screen and (max-width: 1024px) {
+    animation: showHeadMobile 3s linear;
+  }
+
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -144,6 +148,31 @@ const ImageContainer = styled.div`
     }
     60% {
       transform: scale(2) translate(-20%, 0);
+    }
+
+    96% {
+      filter: blur(0) brightness(2);
+    }
+    98% {
+      transform: scale(1) translate(0, 0);
+      filter: blur(5rem) brightness(10);
+    }
+    100% {
+      filter: blur(0) brightness(2);
+    }
+  }
+
+  @keyframes showHeadMobile {
+    0% {
+      filter: blur(10rem) brightness(8);
+      transform: scale(2) translate(0, 0);
+    }
+    50% {
+      filter: blur(0) brightness(2);
+      transform: scale(2) translate(0, 0);
+    }
+    60% {
+      transform: scale(2) translate(0, 0);
     }
 
     96% {
