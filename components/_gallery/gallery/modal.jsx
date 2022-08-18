@@ -40,7 +40,7 @@ const Container = styled.div`
 
   .picture-wrapper {
     position: absolute;
-    top: 0;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, 20%);
     width: 60%;
@@ -51,7 +51,7 @@ const Container = styled.div`
     }
     @media screen and (max-width: 576px) {
       width: 90%;
-	  top: 10%;
+      top: 10%;
     }
   }
   .close {
@@ -60,7 +60,7 @@ const Container = styled.div`
     margin-bottom: 16px;
     display: flex;
     justify-content: flex-end;
-	z-index: 1000;
+    z-index: 1000;
   }
   .image-container {
     border-radius: 16px;

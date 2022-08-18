@@ -75,21 +75,22 @@ export default function GalleryItems() {
 
 const GalleyWrapper = styled.div`
   position: relative;
-  height: 1550px;
+  height: 1600px;
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 100px;
   /* margin-bottom: 150px; */
   overflow: hidden;
   @media screen and (max-width: 1200px) {
-    height: 1530px;
+    height: 1700px;
   }
   @media screen and (max-width: 992px) {
-    height: 1770px;
+    height: 1980px;
   }
   @media screen and (max-width: 576px) {
-    height: 1470px;
+    height: 1600px;
+    padding-top: 0;
   }
 
   .wrapper {
@@ -285,7 +286,6 @@ const GalleyWrapper = styled.div`
     transform: scaleX(-1);
     height: auto;
     width: 400px;
-    z-index: 2;
     @media screen and (min-width: 1600px) {
       top: 345px;
       left: 0px;
