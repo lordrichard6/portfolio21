@@ -13,7 +13,8 @@ export default function Logo() {
           <Image src={logo} alt="paulo lopes reizinho" />
         </Link>
       </LogoWrapper>
-      <h1>Paulo Lopes Reizinho</h1>
+      <h1 className="fullname">Paulo Lopes Reizinho</h1>
+      <h1 className="partialname">Paulo Lopes R</h1>
     </LogoContainer>
   );
 }
@@ -29,8 +30,27 @@ const LogoContainer = styled.div`
     letter-spacing: -1px;
     margin: 0;
 
-    @media screen and (max-width: 768px) {
-      display: none;
+    &.fullname{
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
+      @media screen and (max-width: 1024px) {
+        display: block;
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    &.partialname {
+      @media screen and (min-width: 1200px) {
+        display: none;
+      }
+      @media screen and (max-width: 1200px) {
+        display: block;
+      }
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
     }
   }
 `;
