@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
@@ -6,13 +7,22 @@ import Sun from '../../../assets/images/projects/sun.png'
 import CometsComponent from '../../_homepage/Header/comets'
 
 export default function MoonAndSun() {
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       <CometsComponent />
-      <MoonContainer>
+      <MoonContainer style={{ transform: `translate(-50%,${offsetY * 0.5}px) rotate(180deg)` }}>
         <Image src={Moon} alt="" />
       </MoonContainer>
-      <SunContainer>
+      <SunContainer style={{ transform: `translate(50%,${offsetY * 0.5}px) rotate(45deg)` }}>
         <Image src={Sun} alt="" />
       </SunContainer>
     </>
@@ -23,7 +33,6 @@ const MoonContainer = styled.div`
   position: absolute;
   top: 10%;
   left: 50%;
-  transform: translate(-50%, 0) rotate(180deg);
   width: 500px;
   height: auto;
   z-index: 2;
@@ -44,7 +53,6 @@ const SunContainer = styled.div`
   position: absolute;
   top: 10%;
   right: 50%;
-  transform: translate(50%, 10%) rotate(45deg);
   width: 500px;
   height: auto;
   z-index: 1;
