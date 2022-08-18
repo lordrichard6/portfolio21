@@ -63,7 +63,10 @@ const Container = styled.div`
     @media screen and (min-width: 1200px) {
       bottom: -320vw;
     }
-    
+    @media screen and (min-width: 2000px) {
+      bottom: -340vw;
+    }
+
     @media screen and (max-width: 764px) {
       border-left: 180vw solid rgba(255, 0, 0, 0);
       border-right: 220vw solid rgba(255, 0, 0, 0);
