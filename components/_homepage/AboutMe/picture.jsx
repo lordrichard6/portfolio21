@@ -1,17 +1,15 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import meDark from "../../../assets/images/homepage/about-me_02.png";
-import meLight from "../../../assets/images/homepage/about-me_01.png";
+import MeFormal from "../../../assets/images/homepage/about-me.png";
 
 export default function AboutPictureComponent() {
   return (
     <RightContainer>
-      <div className="dark">
-        <Image src={meDark} alt="" objectFit="cover" />
-      </div>
-      <div className="light">
-        <Image src={meLight} alt="" objectFit="cover" />
+      <div className="outer">
+        <div className="picture">
+          <Image src={MeFormal} alt="" objectFit="cover" />
+        </div>
       </div>
     </RightContainer>
   );
@@ -30,23 +28,42 @@ const RightContainer = styled.div`
     margin: 0;
     justify-content: center;
   }
-  .dark {
-    z-index: 1;
-    transition: 0.2s ease-in-out;
-  }
-  .light {
-    position: absolute;
-    z-index: 0;
-    transition: 0.2s ease-in-out;
+
+  .outer {
+    position: relative;
+    background: #20303c;
+    width: 600px;
+    height: 800px;
+    overflow: hidden;
+
+    @media screen and (max-width: 764px) {
+      width: 90%;
+      height: 600px;
+    }
+    @media screen and (max-width: 400px) {
+        width: 95%;
+        height: 500px;
+      }
+
+    .picture {
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      width: 800px;
+      z-index: 0;
+      transition: all 500ms ease-in-out;
+
+      @media screen and (max-width: 764px) {
+        width: 600px;
+      }
+      @media screen and (max-width: 400px) {
+        width: 400px;
+      }
+  
+      &:hover {
+        transform: translateX(-50%) scale(1.2) ;
+      }
+    }
   }
 
-  :hover {
-    .dark {
-      z-index: 0;
-    }
-    .light {
-      position: absolute;
-      z-index: 1;
-    }
-  }
 `;
