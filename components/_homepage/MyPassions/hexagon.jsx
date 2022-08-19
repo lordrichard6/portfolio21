@@ -69,7 +69,7 @@ const HexagonBig = styled.div`
   overflow: hidden;
 
   @media screen and (max-width: 764px) {
-    top: 300px;
+    top: 230px;
     left: 50%;
     transform: translateX(-50%);
     height: 300px;

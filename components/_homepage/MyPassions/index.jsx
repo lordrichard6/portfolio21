@@ -7,6 +7,7 @@ import Polygons from "../../../assets/images/homepage/poligons.svg";
 import Evolution from "../../../assets/images/homepage/evolution.png";
 import HobbiesComponent from './hobbies'
 import HexagonComponent from './hexagon'
+import EvolutionComponent from './evolution'
 
 export default function MyPassions() {
 
@@ -19,9 +20,7 @@ export default function MyPassions() {
       <h1>{t("home:hobbies_title")}</h1>
       <HexagonComponent />
       <HobbiesComponent />
-      <div className="evolution">
-        <Image src={Evolution} layout="fixed" width="1600px" height="580px" alt="" />
-      </div>
+      <EvolutionComponent />
       <div className="polygons">
         <Image src={Polygons} layout="responsive" alt="" />
       </div>
@@ -44,8 +43,7 @@ const SectionContainer = styled.div`
   background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
 
   @media screen and (max-width: 764px) {
-    min-height: unset;
-    padding: 4rem 0;
+    min-height: 1200px;
   }
 
   h1 {
@@ -58,16 +56,6 @@ const SectionContainer = styled.div`
     }
     @media screen and (max-width: 764px) {
       margin: 0;
-    }
-  }
-
-  .evolution {
-    bottom: -70px;
-    left: 290px;
-    width: 1600px;
-    position: absolute;
-    @media screen and (max-width: 764px) {
-      left: 0;
     }
   }
 
