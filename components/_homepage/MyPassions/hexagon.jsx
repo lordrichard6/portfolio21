@@ -59,7 +59,7 @@ const HexagonBig = styled.div`
   /* left: -200px; */
   left: 50%;
   transform: translateX(-50%);
-  top: 500px;
+  top: 420px;
   height: 700px;
   width: 800px;
   z-index: 100;
@@ -67,14 +67,13 @@ const HexagonBig = styled.div`
   background: #20303c;
   background: linear-gradient(to top, #283e51, #0a2342);
   overflow: hidden;
-  /* background: url("/stars.png"); */
 
   @media screen and (max-width: 764px) {
     top: 300px;
     left: 50%;
     transform: translateX(-50%);
-    height: 250px;
-    width: 300px;
+    height: 300px;
+    width: 350px;
   }
 
   .earth {
@@ -82,5 +81,8 @@ const HexagonBig = styled.div`
     top: 500px;
     height: 100%;
     width: 100%;
+    @media screen and (max-width: 764px) {
+      top: 210px;
+    }
   }
 `;

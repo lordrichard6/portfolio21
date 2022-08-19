@@ -33,7 +33,7 @@ const SectionContainer = styled.div`
   position: relative;
   width: 100%;
   min-height: 120vh;
-  padding: 5rem 0;
+  /* padding: 5rem 0; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
