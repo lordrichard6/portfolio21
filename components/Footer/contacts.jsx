@@ -14,6 +14,7 @@ import {
 // import { HiMail } from "react-icons/hi";
 import { Colors } from "../../assets/variables";
 // import QRcode from '../../assets/images/qr.png';
+import SocialLinksComponent from './social_links'
 
 export default function Contacts() {
   let { t } = useTranslation();
@@ -21,23 +22,7 @@ export default function Contacts() {
   return (
     <SectionContainer>
       <h1>{t("common:info")}</h1>
-      <IconContainer>
-        <Icon href="https://www.linkedin.com/in/pauloreizinho/" target="_blank">
-          <FaLinkedin alt="github paulo reizinho profile" />
-        </Icon>
-        <Icon href="https://www.instagram.com/l0rdr1chard/" target="_blank">
-          <FaInstagram alt="instagram paulo reizinho profile" />
-        </Icon>
-        <Icon href="https://github.com/paulo_reizinho/" target="_blank">
-          <FaGithub alt="github paulo reizinho profile" />
-        </Icon>
-        <Icon href="https://discord.gg/2UPrkCUU" target="_blank">
-          <FaDiscord alt="discord paulo reizinho" />
-        </Icon>
-        <Icon href="https://wa.link/sru6m7" target="_blank">
-          <FaWhatsapp alt="whatsapp paulo reizinho" />
-        </Icon>
-      </IconContainer>
+      <SocialLinksComponent />
 
       <ContactWrapper>
         <ButtonV2>
