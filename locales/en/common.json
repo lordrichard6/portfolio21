@@ -4,6 +4,7 @@
     "gallery": "myGallery",
     "skills": "mySkills",
     "goTop": "Go to Top",
+    "gallery_title": "Gallery",
     
     "info": "myInfo",
     "sitemap": "siteMap",
@@ -11,5 +12,7 @@
     "adress": "Currently living in Zurich",
     "sitePowered": "This website is powered by:",
     "downloadCV": "Download my CV",
-    "allRights": "All rights reserved"
+    "allRights": "All rights reserved",
+
+    "gallery_quote_01": "Our virtues and our failings are inseparable, like force and matter. When they separate, man is no more."
 }

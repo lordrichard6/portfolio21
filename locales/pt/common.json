@@ -4,6 +4,7 @@
     "projects":"Projectos",
     "gallery": "Album",
     "goTop": "Ir para o topo",
+    "gallery_title": "Album",
     
     "info": "Contacto",
     "sitemap": "Mapa do site",
@@ -11,5 +12,7 @@
     "adress": "Actualmente a viver em Zurich",
     "sitePowered": "Este website usa:",
     "downloadCV": "Saka o meu CV",
-    "allRights": "Todos os direitos reservados."
+    "allRights": "Todos os direitos reservados.",
+
+    "gallery_quote_01": "As nossas virtudes e as nossas falhas são inseparáveis, como a força e a matéria. Quando elas se separam, o homem deixa de existir."
 }

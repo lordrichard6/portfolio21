@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import React, { useState, useEffect } from "react";
+import useTranslation from "next-translate/useTranslation";
 
 export default function TitleComponent() {
   const [offsetY, setOffsetY] = useState(0);
+
+  let { t } = useTranslation();
 
   const handleScroll = () => setOffsetY(window.pageYOffset);
 
@@ -13,7 +16,7 @@ export default function TitleComponent() {
 
   return (
     <Container>
-      <h1 style={{ transform: `translateY(${offsetY * 0.3}px)` }}>Gallery</h1>
+      <h1 style={{ transform: `translateY(${offsetY * 0.3}px)` }}>{t("common:gallery_title")}</h1>
     </Container>
   );
 }
