@@ -33,7 +33,9 @@ const FooterContainer = styled.footer`
   color: #eee;
   /* background-color: ${Colors.secondary}; */
   /* background: url("/pattern.png"), ${Colors.secondary}; */
-  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  /* background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364); */
+  background: #0f2027;
+
   z-index: 1;
 `;
 

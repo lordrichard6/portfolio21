@@ -8,6 +8,7 @@ import Evolution from "../../../assets/images/homepage/evolution.png";
 import HobbiesComponent from './hobbies'
 import HexagonComponent from './hexagon'
 import EvolutionComponent from './evolution'
+import PoligonsAnimationComponent from './poligons_animation'
 
 export default function MyPassions() {
 
@@ -21,9 +22,7 @@ export default function MyPassions() {
       <HexagonComponent />
       <HobbiesComponent />
       <EvolutionComponent />
-      <div className="polygons">
-        <Image src={Polygons} layout="responsive" alt="" />
-      </div>
+      <PoligonsAnimationComponent />
     </SectionContainer>
   );
 }
@@ -58,13 +57,6 @@ const SectionContainer = styled.div`
       margin: 0;
     }
   }
-
-  .polygons {
-    bottom: -90px;
-    right: 0;
-    width: 485px;
-    position: absolute;
-  }
 `;
 
 const BackgroundGradient = styled.div`
@@ -78,5 +70,5 @@ const BackgroundGradient = styled.div`
     #0f2027 0%,
     rgba(15, 32, 39, 0.2) 38.54%,
     rgba(15, 32, 39, 0) 100%
-  );
+);
 `;
