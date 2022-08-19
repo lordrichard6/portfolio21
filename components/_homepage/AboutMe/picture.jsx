@@ -1,11 +1,24 @@
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { FaInfo } from "react-icons/fa";
+import useTranslation from "next-translate/useTranslation";
 
 import MeFormal from "../../../assets/images/homepage/about-me.png";
 import SocialLinksComponent from "../../Footer/social_links";
 
 export default function AboutPictureComponent() {
+  const [offsetY, setOffsetY] = useState(0);
+
+  let { t } = useTranslation();
+
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <RightContainer>
       <div className="wrapper">
@@ -66,15 +79,15 @@ export default function AboutPictureComponent() {
             <span className="card__infoicon">
               <FaInfo className="fa fa-info" />
             </span>
-            <h1 className="card__title">I am available for work!</h1>
+            <h1 className="card__title">{t("home:about_i_title")}</h1>
             <SocialLinksComponent color="yellow" />
 
             <p className="card__credits">
-              Here is also my email -{" "}
+              {t("home:about_i_text")} -{" "}
               <strong>paulolopesreizinho@gmail.com</strong>
             </p>
           </div>
-          <div className="picture">
+          <div className="picture" style={{ transform: `translate(-50%,${offsetY * -0.09}px)` }}>
             <Image src={MeFormal} alt="" objectFit="cover" />
           </div>
         </div>
@@ -209,9 +222,9 @@ const RightContainer = styled.div`
 
     .picture {
       position: absolute;
-      top: 0;
+      top: 10%;
       left: 50%;
-      transform: translateX(-50%);
+      /* transform: translateX(-50%); */
       width: 800px;
       z-index: 0;
       filter: grayscale(100%);
@@ -221,6 +234,7 @@ const RightContainer = styled.div`
         width: 600px;
       }
       @media screen and (max-width: 400px) {
+        top: 30%;
         width: 400px;
       }
 
