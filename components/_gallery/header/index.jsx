@@ -3,12 +3,14 @@ import React from "react";
 
 import Animation from "./animation";
 import TitleComponent from "./title";
+import BackgroundComponent from './background'
 
 export default function HeaderComponent() {
     return (
     <Container>
         <TitleComponent />
-        <Animation />
+        <BackgroundComponent />
+        {/* <Animation /> */}
     </Container>
     );
 }

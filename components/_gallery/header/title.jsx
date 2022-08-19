@@ -1,85 +1,114 @@
 import styled from "styled-components";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function TitleComponent() {
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Container>
-      <div className="patterns">
-        <svg width="100%" height="100%">
-          <defs>
-            <pattern
-              id="polka-dots"
-              x="0"
-              y="0"
-              width="100"
-              height="100"
-              patternUnits="userSpaceOnUse"
-            >
-              <circle fill="#4C436B" cx="25" cy="25" r="3"></circle>
-            </pattern>
-            <style></style>
-          </defs>
-
-          <text x="50%" y="60%" textAnchor="middle">
-            Gallery
-          </text>
-        </svg>
-      </div>
+      <h1 style={{ transform: `translateY(${offsetY * 0.3}px)` }}>Gallery</h1>
     </Container>
   );
 }
 
 const Container = styled.div`
   position: absolute;
+  top: 35%;
+  left: 100px;
   z-index: 1;
   width: 100%;
   height: auto;
-  animation: showText 6s linear;
+  animation: showText 3s ease-in-out;
 
-
-  .patterns {
-    height: 100vh;
+  @media screen and (max-width: 768px) {
+    top: 40%;
+    left: 0;
   }
 
-  svg text {
-    letter-spacing: 10px;
-    stroke: #4c436b;
-    font-size: 150px;
-    font-weight: 800;
-    stroke-width: 3;
-    text-transform: uppercase;
+  h1 {
+    font-size: calc(20px + 18vh);
+    line-height: calc(20px + 20vh);
+    /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+    font-family: "Sacramento", cursive;
+    animation: blink 12s infinite;
 
-    animation: textAnimate 5s infinite alternate;
+    @media screen and (max-width: 768px) {
+      font-size: calc(20px + 12vh);
+      text-align: center;
+    }
+  }
 
-	@media screen and (max-width: 576px) {
-		font-size: 80px;
-		letter-spacing: 4px;
-	}
+  @-webkit-keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      /*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+      text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+        0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    }
+  }
+
+  @keyframes blink {
+    20%,
+    24%,
+    55% {
+      color: #111;
+      text-shadow: none;
+    }
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+      /*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+      text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+        0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      color: #fff6a9;
+    }
   }
 
   @keyframes showText {
     0% {
-      opacity: 0;
+      transform: translateY(80%) rotate(-30deg);
     }
-	60% {
-      opacity: 0;
+    90% {
+      transform: translateY(-5%) rotate(-5deg);
     }
     100% {
-		opacity: 1;
-    }
-  }
-
-  @keyframes textAnimate {
-    0% {
-      stroke-dasharray: 0 50%;
-      stroke-dashoffset: 20%;
-      fill: #b2d6bc;
-    }
-
-    100% {
-      stroke-dasharray: 50% 0;
-      stroke-dashoffstet: -20%;
-      fill: hsla(189, 68%, 75%, 0%);
+      transform: translateY(0) rotate(0);
     }
   }
 `;
