@@ -3,24 +3,75 @@ import Image from "next/image";
 import { FaInfo } from "react-icons/fa";
 
 import MeFormal from "../../../assets/images/homepage/about-me.png";
-import SocialLinksComponent from '../../Footer/social_links'
+import SocialLinksComponent from "../../Footer/social_links";
 
 export default function AboutPictureComponent() {
-
-  
   return (
     <RightContainer>
       <div className="wrapper">
-        <div className="outer">
+        <div className="outer outer-layer">
+          <div className="stars">
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+            <div className="star"></div>
+          </div>
           <div className="card" tabIndex="0">
             <span className="card__infoicon">
-              <FaInfo className="fa fa-info"/>
+              <FaInfo className="fa fa-info" />
             </span>
             <h1 className="card__title">I am available for work!</h1>
             <SocialLinksComponent color="yellow" />
 
             <p className="card__credits">
-              Here is also my email - <strong>paulolopesreizinho@gmail.com</strong>
+              Here is also my email -{" "}
+              <strong>paulolopesreizinho@gmail.com</strong>
             </p>
           </div>
           <div className="picture">
@@ -51,7 +102,7 @@ const RightContainer = styled.div`
 
   .outer {
     position: relative;
-    background: #20303c;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
     width: 600px;
     height: 800px;
     z-index: 1;
@@ -97,17 +148,17 @@ const RightContainer = styled.div`
         color: #20303c;
         transition: ease-out 0.3s;
 
-      @media screen and (max-width: 764px) {
-        font-size: 1.75em;
-        top: 16px;
-        right: 18px;
-      }
+        @media screen and (max-width: 764px) {
+          font-size: 1.75em;
+          top: 16px;
+          right: 18px;
+        }
 
-      @media screen and (max-width: 400px) {
-        font-size: 1.75em;
-        top: 14px;
-        right: 18px;
-      }
+        @media screen and (max-width: 400px) {
+          font-size: 1.75em;
+          top: 14px;
+          right: 18px;
+        }
       }
       &__title {
         color: #20303c;
@@ -129,7 +180,7 @@ const RightContainer = styled.div`
       }
       &__credits {
         strong {
-          color: #0094B5;
+          color: #0094b5;
         }
         margin: 0;
         padding: 4px 0;
