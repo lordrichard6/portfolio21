@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { FaInfo } from "react-icons/fa";
@@ -8,16 +7,7 @@ import MeFormal from "../../../assets/images/homepage/about-me.png";
 import SocialLinksComponent from "../../Footer/social_links";
 
 export default function AboutPictureComponent() {
-  const [offsetY, setOffsetY] = useState(0);
-
   let { t } = useTranslation();
-
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <RightContainer>
@@ -87,7 +77,7 @@ export default function AboutPictureComponent() {
               <strong>paulolopesreizinho@gmail.com</strong>
             </p>
           </div>
-          <div className="picture" style={{ transform: `translate(-50%,${offsetY * -0.09}px)` }}>
+          <div className="picture">
             <Image src={MeFormal} alt="" objectFit="cover" />
           </div>
         </div>
@@ -108,9 +98,6 @@ const RightContainer = styled.div`
     width: 100%;
     margin: 0;
     justify-content: center;
-  }
-
-  .wrapper {
   }
 
   .outer {
@@ -222,9 +209,9 @@ const RightContainer = styled.div`
 
     .picture {
       position: absolute;
-      top: 10%;
+      top: 0;
       left: 50%;
-      /* transform: translateX(-50%); */
+      transform: translateX(-50%);
       width: 800px;
       z-index: 0;
       filter: grayscale(100%);
