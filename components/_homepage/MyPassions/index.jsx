@@ -22,7 +22,7 @@ export default function MyPassions() {
       <HexagonComponent />
       <HobbiesComponent />
       <EvolutionComponent />
-      <PoligonsAnimationComponent />
+      {/* <PoligonsAnimationComponent /> */}
     </SectionContainer>
   );
 }

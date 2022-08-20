@@ -5,3 +5,387 @@
     background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
     margin-top: 0 !important;
 }
+
+#text_01 {
+    h2, h3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 6rem;
+        text-align: center;
+        color: #fcedd8;
+        // font-family: 'Niconne', cursive;
+        font-weight: 700;
+        text-shadow: 5px 5px 0px #eb452b, 
+                    10px 10px 0px #efa032, 
+                    15px 15px 0px #46b59b, 
+                    20px 20px 0px #017e7f, 
+                    25px 25px 0px #052939;
+
+        @media screen and (max-width: 764px) {
+            font-size: 2.5rem;
+        }
+        &:nth-child(1) {
+            transform: translate(-45%,10%) rotate(-35deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(-25%,-40%) rotate(-45deg);
+            }
+        }
+        &:nth-child(2) {
+            transform: translate(300%,-100%) rotate(15deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(420%,-50%) rotate(15deg);
+            }
+        }
+        &:nth-child(3) {
+            transform: translate(60%,10%) rotate(35deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(100%,-10%) rotate(45deg);
+            }
+        }
+    }
+    h3 {
+        color: #dbec45;
+        font-size: 3.5rem;
+        transform: translate(0,120%) rotate(10deg);
+        @media screen and (max-width: 764px) {
+            font-size: 2rem;
+            transform: translate(-10%,110%) rotate(10deg);
+        }
+    }
+    .gif {
+        position: absolute;
+        width: 200px;
+        top: 200px;
+        right: 160px;
+        border-radius: 16px;
+        overflow: hidden;
+        transform: translate(0,0) rotate(10deg);
+        @media screen and (max-width: 764px) {
+            width: 120px;
+            top: 80px;
+            right: 80px;
+        }
+    }
+}
+
+#text_02 {
+    h2 {
+        animation: flashingPink 5s ease-in-out infinite;
+    }
+    h2, h3 
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: 'Mr Dafoe';
+        margin: 0;
+        font-size: 10em;
+        font-weight: 400;
+        color: white;
+        text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+
+        @media screen and (max-width: 764px) {
+            font-size: 4em;
+        }
+
+        &:nth-child(1) {
+            transform: translate(0%,-30%) rotate(-7deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(20%,-50%) rotate(-7deg);
+            }
+        }
+        &:nth-child(2) {
+            transform: translate(220%,-35%) rotate(-7deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(240%,-45%) rotate(-7deg);
+            }
+        }
+        &:nth-child(3) {
+            transform: translate(40%,15%) rotate(-7deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(60%,15%) rotate(-7deg);
+            }
+        }
+    }
+    @keyframes flashingPink {
+        0% {
+            text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+        }
+        38% {
+            text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+        }
+        41% {
+            text-shadow: 0 0 0.08em #fff, 0 0 0.4em #fe05e1, 0 0 0.6em #fe05e1;
+        }
+        44% {
+            text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+        }
+        47% {
+            text-shadow: 0 0 0.08em #fff, 0 0 0.4em #fe05e1, 0 0 0.6em #fe05e1;
+        }
+        50% {
+            text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+        }
+        88% {
+            text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+        }
+        91% {
+            text-shadow: 0 0 0.1em #fff, 0 0 0.6em #fe05e1, 0 0 0.8em #fe05e1;
+        }
+        94% {
+            text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+        }
+        100% {
+            text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+        }
+    }
+    h3 {
+        color: black;
+        font-size: 3.5em;
+        text-shadow: 0 0 0.05em #fff, 0 0 0.2em #06f512, 0 0 0.3em #06f512;
+
+        @media screen and (max-width: 764px) {
+            font-size: 2em;
+        }
+        &:nth-child(4) {
+            transform: translate(10%,200%) rotate(-7deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(10%,180%) rotate(-7deg);
+            }
+        }
+        &:nth-child(5) {
+            transform: translate(70%,260%) rotate(-7deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(70%,250%) rotate(-7deg);
+            }
+        }
+        &:nth-child(6) {
+            transform: translate(30%,330%) rotate(-7deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(50%,320%) rotate(-7deg);
+            }
+        }
+        &:nth-child(7) {
+            transform: translate(30%,390%) rotate(-7deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(50%,370%) rotate(-7deg);
+            }
+        }
+        &:nth-child(8) {
+            transform: translate(120%,480%) rotate(-7deg);
+
+            @media screen and (max-width: 764px) {
+                transform: translate(140%,470%) rotate(-7deg);
+            }
+        }
+    }
+    .gif {
+        position: absolute;
+        width: 150px;
+        top: 320px;
+        right: 40px;
+        @media screen and (max-width: 764px) {
+            width: 60px;
+            top: 40px;
+            right: 180px;
+        }
+    }
+}
+
+#text_03 {
+
+    h2, h3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-family: 'Bangers', cursive;
+        color: hsl(50, 50%, 50%);
+        z-index: 2;
+        font-size: 8em;
+        letter-spacing: 15px;
+        text-transform: uppercase;
+        text-shadow: 1px 1px hsl(50, 50%, 45%),
+                    2px 2px hsl(50, 50%, 40%),
+                    3px 3px hsl(50, 50%, 35%),
+                    4px 4px hsl(50, 50%, 34%),
+                    5px 5px hsl(50, 50%, 33%),
+                    6px 6px hsl(50, 50%, 32%),
+                    7px 7px hsl(50, 50%, 31%),
+                    8px 8px hsl(50, 50%, 30%),
+                    9px 9px #6f6325,
+                    10px 10px hsl(50, 50%, 28%),
+                    10px 10px 30px rgba(0,0,0,.7);
+
+        @media screen and (max-width: 764px){
+            font-size: 3em;
+        }
+        &:nth-child(1) {
+            transform: translate(10%,-110%) rotate(-10deg);
+        }
+        &:nth-child(2) {
+            transform: translate(200%,-50%) rotate(-10deg);
+        }
+        &:nth-child(3) {
+            transform: translate(10%,0%) rotate(-10deg);
+        }
+    }
+
+    h3 {
+        font-size: 2em;
+        letter-spacing: 4px;
+        transform: translate(10%,155%) rotate(-10deg);
+        color: #ADFF2F;
+        @media screen and (max-width: 764px) {
+            font-size: 0.85em;
+            letter-spacing: 2px;
+            transform: translate(5%,240%) rotate(-10deg);
+        }
+    }
+    .gif {
+        position: absolute;
+        width: 150px;
+        top: 255px;
+        right: 50%;
+        transform: translateX(-50%) rotate(-10deg) rotateY(0deg) ;
+        animation: bearWalking 12s ease-in-out infinite;
+        @media screen and (max-width: 764px) {
+            width: 75px;
+            top: 120px
+        }
+    }
+    .mountains {
+        position: absolute;
+        width: 400px;
+        top: 220px;
+        right: 50%;
+        transform: translateX(50%) rotate(-10deg);
+        @media screen and (max-width: 764px) {
+            width: 200px;
+            top: 100px;
+        }
+    }
+    @keyframes bearWalking {
+        0% {
+            transform: translate(-50%, 0) rotate(-10deg) rotateY(0deg);
+        }
+        45% {
+            transform: translate(180%, -40%) rotate(-10deg) rotateY(0deg);
+        }
+        50% {
+            transform: translate(180%, -40%) rotate(-10deg) rotateY(180deg);
+        }
+        95% {
+            transform: translate(-50%, 0) rotate(-10deg) rotateY(180deg);
+        }
+        100% {
+            transform: translate(-50%, 0) rotate(-10deg) rotateY(0deg);
+        }
+    }
+}
+
+#text_04 {
+    h2, h3 {
+        z-index: 1;
+        position: absolute;
+        display: inline-block;
+        color: white;
+        font-family: 'Righteous', serif;
+        font-size: 10em; 
+        text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+        &:after {
+            content: attr(data-shadow);
+            position: absolute;
+            top: .06em; 
+            left: .06em;
+            z-index: -1;
+            text-shadow: none;
+            background-image:linear-gradient(
+                45deg,
+                transparent 45%,
+                hsla(48,20%,90%,1) 45%,
+                hsla(48,20%,90%,1) 55%,
+                transparent 0
+                );
+            background-size: .05em .05em;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shad-anim 15s linear infinite;
+        }
+
+        @media screen and (max-width: 764px) {
+            font-size: 4em; 
+        }
+        
+        @keyframes shad-anim {
+            0% {background-position: 0 0}
+            0% {background-position: 100% -100%}
+            }
+        &:nth-child(1) {
+            transform: translate(0%,-110%) rotate(-10deg);
+            @media screen and (max-width: 764px) {
+                transform: translate(20%,-120%) rotate(-10deg);
+            }
+        }
+        &:nth-child(2) {
+            transform: translate(500%,-50%) rotate(0deg);
+            @media screen and (max-width: 764px) {
+                transform: translate(600%,-60%) rotate(0deg);
+            }
+        }
+        &:nth-child(3) {
+            transform: translate(-10%,0%) rotate(10deg);
+            @media screen and (max-width: 764px) {
+                transform: translate(0%,-20%) rotate(10deg);
+            }
+        }
+    }
+    h3 {
+        font-size: 4em; 
+        line-height: 1em;
+        transform: translate(10%,110%) rotate(10deg);
+        text-shadow: .06em .06em 0 rgb(179, 101, 77);
+        &:after {
+            top: .15em; 
+            left: .15em;
+        }
+
+        @media screen and (max-width: 764px) {
+            font-size: 1.6em;
+            transform: translate(0%,120%) rotate(10deg);
+        }
+    }
+    .gif {
+        position: absolute;
+        width: 140px;
+        top: 270px;
+        right: 75%;
+        transform: translateX(-50%);
+        @media screen and (max-width: 764px) {
+            width: 70px;
+            top: 90px;
+        }
+    }
+    .cook {
+        position: absolute;
+        width: 200px;
+        top: 20px;
+        right: 38%;
+        transform: translateX(50%);
+        z-index: 0;
+        @media screen and (max-width: 764px) {
+            width: 70px;
+            top: 0px;
+        }
+    }
+}

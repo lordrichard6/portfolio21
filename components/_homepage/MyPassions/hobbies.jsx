@@ -6,15 +6,22 @@ import Hobby_01 from "../../../assets/images/homepage/hobby_01.png";
 import Hobby_02 from "../../../assets/images/homepage/hobby_02.png";
 import Hobby_03 from "../../../assets/images/homepage/hobby_03.png";
 import Hobby_04 from "../../../assets/images/homepage/hobby_04.png";
+import Mountains from "../../../assets/images/homepage/mountains.png"
+import MiaCook from "../../../assets/images/homepage/mia_cook.png"
+import AniCode from "../../../assets/images/homepage/ani_code.gif"
+import AniFat from "../../../assets/images/homepage/ani_fat.gif"
+import AniBear from "../../../assets/images/homepage/ani_bear.gif"
+import AniCook from "../../../assets/images/homepage/ani_cook.gif"
 
 export default function HobbiesComponent() {
   let { t } = useTranslation();
+
   const br = `\n`;
 
   const code1 = `“if (☕️ === true) {`;
   const code2 = `code( );`;
   const code3 = `} else {`;
-  const code4 = `fetch(☕️);"`;
+  const code4 = `fetch(☕️);`;
   const code5 = `}"`;
 
   return (
@@ -25,8 +32,13 @@ export default function HobbiesComponent() {
         </div>
       </Hobby>
       <Text id="text_01">
-        <h2>FITNESS_&_GYM</h2>
-        <h3>“Sweat is your fat crying!”</h3>
+        <h2>{t("home:hobbies_title01_01")}</h2>
+        <h2>&</h2>
+        <h2>{t("home:hobbies_title01_02")}</h2>
+        <h3>“{t("home:hobbies_text01")}”</h3>
+        <div className="gif">
+          <Image src={AniFat} layout="responsive" alt="" />
+        </div>
       </Text>
       <Hobby className="hobby__02">
         <div className="image">
@@ -34,18 +46,17 @@ export default function HobbiesComponent() {
         </div>
       </Hobby>
       <Text id="text_02">
-        <h2>CODE_&_LEARN</h2>
-        <h3>
-          {code1}
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{code2}
-          <br />
-          &nbsp;&nbsp;{code3}
-          <br />
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{code4}
-          <br />
-          &nbsp;&nbsp;{code5}
-        </h3>
+        <h2>{t("home:hobbies_title02_01")}</h2>
+        <h2>&</h2>
+        <h2>{t("home:hobbies_title02_02")}</h2>
+        <h3>{code1}</h3>
+        <h3>{code2}</h3>
+        <h3>{code3}</h3>
+        <h3>{code4}</h3>
+        <h3>{code5}</h3>
+        <div className="gif">
+          <Image src={AniCode} layout="responsive" alt="" />
+        </div>
       </Text>
       <Hobby className="hobby__03">
         <div className="image">
@@ -53,11 +64,16 @@ export default function HobbiesComponent() {
         </div>
       </Hobby>
       <Text id="text_03">
-        <h2>HIKING_&_NATURE</h2>
-        <h3>
-          “The nature holds answers to questions man has not yet learned to
-          ask.”🗻🌊
-        </h3>
+        <h2>{t("home:hobbies_title03_01")}</h2>
+        <h2>&</h2>
+        <h2>{t("home:hobbies_title03_02")}</h2>
+        <h3>“{t("home:hobbies_text03")}”</h3>
+        <div className="mountains">
+          <Image src={Mountains} layout="responsive" alt="" />
+        </div>
+        <div className="gif">
+          <Image src={AniBear} layout="responsive" alt="" />
+        </div>
       </Text>
       <Hobby className="hobby__04">
         <div className="image">
@@ -65,8 +81,16 @@ export default function HobbiesComponent() {
         </div>
       </Hobby>
       <Text id="text_04">
-        <h2>COOK_&_INVENT</h2>
-        <h3>“STRESSED is DESSERTS spelled backwards.”</h3>
+        <h2 data-shadow='Cook'>{t("home:hobbies_title04_01")}</h2>
+        <h2 data-shadow='&'>&</h2>
+        <h2 data-shadow='Alchemy'>{t("home:hobbies_title04_02")}</h2>
+        <h3 data-shadow='"STRESSED is DESSERTS spelled backwards."'>“{t("home:hobbies_text04")}”</h3>
+        <div className="cook">
+          <Image src={MiaCook} layout="responsive" alt="" />
+        </div>
+        <div className="gif">
+          <Image src={AniCook} layout="responsive" alt="" />
+        </div>
       </Text>
     </HobbyElements>
   );
@@ -105,7 +129,7 @@ const Hobby = styled.div`
   position: absolute;
   width: 200px;
   height: 200px;
-  z-index: 2;
+  z-index: 10;
   cursor: pointer;
   border-radius: 50%;
   /* clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
@@ -115,7 +139,8 @@ const Hobby = styled.div`
   align-items: center;
   transition: all 500ms ease-in-out;
   &:hover {
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;  
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+      rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   }
 
   @media screen and (max-width: 764px) {
@@ -183,27 +208,18 @@ const Text = styled.div`
   top: 330px;
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
+  width: 500px;
   opacity: 0;
   filter: blur(30px) brightness(10);
   transition: all 500ms ease-in-out;
-  text-shadow: 0px 3px 30px #000000, 0px 3px 30px #000000, 0px 3px 30px #000000,
-    0px 3px 30px #000000, 0px 3px 30px #000000;
 
   @media screen and (max-width: 764px) {
     top: 200px;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
+    width: 250px;
   }
 
-  h2 {
-    font-size: 3rem;
-    text-align: center;
-    @media screen and (max-width: 764px) {
-      font-size: 1.6rem;
-    }
-  }
   h3 {
     font-size: 2rem;
     line-height: 2;
