@@ -89,7 +89,6 @@ export default function AboutPictureComponent() {
 const RightContainer = styled.div`
   position: relative;
   display: flex;
-  width: 50%;
   height: 100%;
   margin-left: 0.5rem;
   cursor: pointer;
@@ -214,21 +213,20 @@ const RightContainer = styled.div`
       transform: translateX(-50%);
       width: 800px;
       z-index: 0;
-      filter: grayscale(100%);
+      /* filter: grayscale(100%); */
       transition: all 500ms ease-in-out;
 
       @media screen and (max-width: 764px) {
         width: 600px;
       }
       @media screen and (max-width: 400px) {
-        top: 30%;
         width: 400px;
       }
 
-      &:hover {
+      /* &:hover {
         filter: grayscale(0);
         transform: translateX(-50%) scale(1.1);
-      }
+      } */
     }
   }
 `;

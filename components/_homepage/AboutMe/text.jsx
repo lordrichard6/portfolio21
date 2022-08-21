@@ -25,12 +25,10 @@ export default function AboutTextComponent() {
 
 const LeftContainer = styled.div`
   z-index: 1;
-  width: 50%;
   margin-right: 0.5rem;
   color: #eee;
 
   @media screen and (max-width: 992px) {
-    width: 100%;
     margin: 0;
   }
   h1 {

@@ -1,11 +1,47 @@
 import styled from "styled-components";
 import Image from "next/image";
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import Earth from '../../../assets/images/homepage/earth.svg'
 
 export default function HexagonComponent() {
-  return (
-    <HexagonBig>
+  const bringUp = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: "-50%",
+      transition: { duration: 2.5, type: 'spring', bounce: 0.4 },
+    },
+    hidden: {
+      opacity: 0,
+      y: 100,
+      x: "-50%",
+    },
+  };
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.4
+  });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
+  }, [controls, inView]);
+  
+  return (        
+    <HexagonBig 
+        as={motion.div}
+        ref={ref}
+        variants={bringUp}
+        initial="hidden"
+        animate={controls}
+    >
       <div className="hexagon-container">
         <div className="sub-container">
           <div className="sky">

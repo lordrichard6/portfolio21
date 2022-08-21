@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import Hobby_01 from "../../../assets/images/homepage/hobby_01.png";
 import Hobby_02 from "../../../assets/images/homepage/hobby_02.png";
@@ -16,7 +19,34 @@ import AniCook from "../../../assets/images/homepage/ani_cook.gif"
 export default function HobbiesComponent() {
   let { t } = useTranslation();
 
-  const br = `\n`;
+  const bringUp = {
+    visible: {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
+      // y: 0,
+      transition: { duration: 3, type: "spring", bounce: 0.4 },
+    },
+    hidden: {
+      opacity: 0,
+      scale: 0,
+      rotate: 90
+      // y: 100,
+    },
+  };
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.6,
+  });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
+  }, [controls, inView]);
 
   const code1 = `“if (☕️ === true) {`;
   const code2 = `code( );`;
@@ -25,7 +55,14 @@ export default function HobbiesComponent() {
   const code5 = `}"`;
 
   return (
-    <HobbyElements>
+    <HobbyElements
+    as={motion.div}
+    ref={ref}
+    variants={bringUp}
+    initial="hidden"
+    animate={controls}
+    
+    >
       <Hobby className="hobby__01">
         <div className="image">
           <Image src={Hobby_01} layout="responsive" alt="" />
@@ -193,6 +230,10 @@ const Hobby = styled.div`
     left: 80%;
     top: 990px;
     transform: translateX(-80%);
+
+    .image {
+      width: 150px;
+    }
     @media screen and (max-width: 764px) {
       margin: 0;
       top: 470px;

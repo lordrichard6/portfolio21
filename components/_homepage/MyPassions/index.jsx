@@ -1,27 +1,58 @@
 import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
-import Image from "next/image";
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import { Colors } from "../../../assets/variables";
-import Polygons from "../../../assets/images/homepage/poligons.svg";
-import Evolution from "../../../assets/images/homepage/evolution.png";
-import HobbiesComponent from './hobbies'
-import HexagonComponent from './hexagon'
-import EvolutionComponent from './evolution'
-import PoligonsAnimationComponent from './poligons_animation'
+import HobbiesComponent from "./hobbies";
+import HexagonComponent from "./hexagon";
+import EvolutionComponent from "./evolution";
+// import PoligonsAnimationComponent from './poligons_animation'
 
 export default function MyPassions() {
-
   let { t } = useTranslation();
-  const br = `\n`
+
+  const bringUp = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 2.5, type: 'spring', bounce: 0.4 },
+    },
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+  };
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.4
+  });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
+  }, [controls, inView]);
+  
 
   return (
     <SectionContainer>
       <BackgroundGradient></BackgroundGradient>
-      <h1>{t("home:hobbies_title")}</h1>
-      <HexagonComponent />
-      <HobbiesComponent />
-      <EvolutionComponent />
+        <motion.h1
+          ref={ref}
+          variants={bringUp}
+          initial="hidden"
+          animate={controls}
+        >
+          {t("home:hobbies_title")}
+        </motion.h1>
+        <HexagonComponent />
+        <HobbiesComponent />
+        <EvolutionComponent />
       {/* <PoligonsAnimationComponent /> */}
     </SectionContainer>
   );
@@ -70,5 +101,5 @@ const BackgroundGradient = styled.div`
     #0f2027 0%,
     rgba(15, 32, 39, 0.2) 38.54%,
     rgba(15, 32, 39, 0) 100%
-);
+  );
 `;
