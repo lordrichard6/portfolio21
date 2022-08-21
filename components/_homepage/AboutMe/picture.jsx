@@ -2,6 +2,9 @@ import styled from "styled-components";
 import Image from "next/image";
 import { FaInfo } from "react-icons/fa";
 import useTranslation from "next-translate/useTranslation";
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import MeFormal from "../../../assets/images/homepage/about-me.png";
 import SocialLinksComponent from "../../Footer/social_links";
@@ -9,8 +12,39 @@ import SocialLinksComponent from "../../Footer/social_links";
 export default function AboutPictureComponent() {
   let { t } = useTranslation();
 
+  const bringUp = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 2.1, type: "spring", bounce: 0.4 },
+    },
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+  };
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.4,
+  });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
+  }, [controls, inView]);
+
   return (
-    <RightContainer>
+    <RightContainer
+      as={motion.div}
+      ref={ref}
+      variants={bringUp}
+      initial="hidden"
+      animate={controls}
+    >
       <div className="wrapper">
         <div className="outer outer-layer">
           <div className="stars">

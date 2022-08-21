@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import Left from "./left";
 import Right from "./right";
@@ -7,12 +10,48 @@ import Right from "./right";
 export default function Sardinha() {
   let { t } = useTranslation();
 
+  const bringUp = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 2.1, type: "spring", bounce: 0.4 },
+    },
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+  };
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
+  }, [controls, inView]);
+
   return (
     <SectionContainer className="background-blue">
-      <Title>
+      <Title
+        as={motion.div}
+        variants={bringUp}
+        initial="hidden"
+        animate={controls}
+      >
         <h1>{t("home:sardinha_title")}</h1>
       </Title>
-      <InnerContainer>
+      <InnerContainer
+        ref={ref}
+        as={motion.div}
+        variants={bringUp}
+        initial="hidden"
+        animate={controls}
+      >
         <Left />
         <Right />
       </InnerContainer>

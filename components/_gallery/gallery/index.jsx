@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
+import { useAnimation, motion } from "framer-motion";
 
 import Modal from './modal'
-import { gallery } from "../../../assets/data";
+import { gallery, animals } from "../../../assets/data/gallery";
 import GalleryAnimals from './animals'
+import PicturesComponent from './pictures'
 
 
 export default function GalleryItems() {
@@ -17,15 +19,42 @@ export default function GalleryItems() {
     setClickedImg(item.imgSrc);
   }
 
+  const bringUp = {
+    visible: {
+      y: 0,
+      transition: { duration: 3.1, type: "spring", bounce: 0.4 },
+    },
+    hidden: {
+      y: 400,
+    },
+  };
+
+  const controls = useAnimation();
+
   return (
     <GalleyWrapper>
       <div className="wrapper">
-        <GalleryAnimals />
+        <div className="animal-wrapper">
+          {animals.map((item, i) => {
+            return (
+              <GalleryAnimals 
+                key={i}
+                image={item.imgSrc}
+                alt={item.alt}
+                className={item.className}
+              />
+            )
+          })}
+        </div>
         {gallery.map((item, i) => {
           return (
-            <div key={i} className={item.className}>
-              <Image src={item.imgSrc} alt={item.alt} objectFit="cover" layout="fill" onClick={() => handelClick(item, i)} />
-            </div>
+            <PicturesComponent 
+              key={i} 
+              className={item.className}
+              imgSrc={item.imgSrc}
+              alt={item.alt}
+              onClick={() => handelClick(item , i)}
+            />
           );
         })}
         {clickedImg && (
@@ -74,6 +103,13 @@ const GalleyWrapper = styled.div`
       width: 470px;
       left: -15%;
     }
+  }
+
+  .animal-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .shape {

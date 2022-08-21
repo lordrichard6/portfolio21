@@ -22,6 +22,7 @@ export default function Developer() {
               text={item.text}
               link={item.link}
               tech={item.icon}
+              show={item.show}
             />
           );
         })}
@@ -36,6 +37,7 @@ export default function Developer() {
               title={item.title}
               tech={item.icon}
               link={item.link}
+              show={item.show}
             />
           );
         })}

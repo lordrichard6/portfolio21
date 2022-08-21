@@ -40,24 +40,6 @@ import creative_02 from "../images/projects/creative_02.jpg";
 import creative_03 from "../images/projects/creative_03.jpg";
 import creative_04 from "../images/projects/creative_04.jpg";
 
-// Gallery
-import gal_01 from "../images/gallery/gal_01.jpg";
-import gal_02 from "../images/gallery/gal_02.jpg";
-import gal_03 from "../images/gallery/gal_03.jpg";
-import gal_04 from "../images/gallery/gal_04.jpg";
-import gal_05 from "../images/gallery/gal_05.jpg";
-import gal_06 from "../images/gallery/gal_06.jpg";
-import gal_07 from "../images/gallery/gal_07.jpg";
-import gal_08 from "../images/gallery/gal_08.jpg";
-import gal_09 from "../images/gallery/gal_09.jpg";
-import gal_10 from "../images/gallery/gal_10.jpg";
-import gal_11 from "../images/gallery/gal_11.jpg";
-import gal_12 from "../images/gallery/gal_12.jpg";
-import gal_13 from "../images/gallery/gal_13.jpg";
-import gal_14 from "../images/gallery/gal_14.jpg";
-import gal_15 from "../images/gallery/gal_15.jpg";
-import gal_16 from "../images/gallery/gal_16.jpg";
-
 // Skills
 import backgroundSkills from "../images/skills/header_03.jpg";
 
@@ -183,6 +165,7 @@ export const projectsDev = {
       text: "This very own website a marvel of design.",
       link: "/",
       icon: <SiNextdotjs />,
+      show: 0.23
     },
     // {
     //   id: 3,
@@ -201,6 +184,7 @@ export const projectsDev = {
       text: "The first version of this website's design",
       link: "https://lordrichard-cv-blue.netlify.app/",
       icon: <FaReact />,
+      show: 0.13
     },
   ],
   other: [
@@ -212,6 +196,7 @@ export const projectsDev = {
       text: "A beautifull car rental website made with React using typescript. Used styled-components together with tailwind to style the page.",
       link: "https://lordrichard-rentfast.netlify.app/",
       icon: <FaReact />,
+      show: 0.3
     },
     {
       id: 2,
@@ -221,6 +206,7 @@ export const projectsDev = {
       text: "Created with React.js with and elengant and simplistic design",
       link: "https://reizinhocv.netlify.app/",
       icon: <FaReact />,
+      show: 0.1
     },
     {
       id: 3,
@@ -230,6 +216,7 @@ export const projectsDev = {
       text: "This project was initially built using html and Sass, then later I converted to React maintaning the Sass styling system, elegant design of a tours agency.",
       link: "https://reizinho-skytours.netlify.com/",
       icon: <FaReact />,
+      show: 0.14
     },
     {
       id: 4,
@@ -239,6 +226,7 @@ export const projectsDev = {
       text: "Built with Next.js imitating the design of the famous movie streaming platform Hulu, using the database of an API movie site TMDB.",
       link: "https://hulu-clone-rosy.vercel.app/",
       icon: <SiNextdotjs />,
+      show: 0.31
     },
     {
       id: 5,
@@ -248,6 +236,7 @@ export const projectsDev = {
       text: "A mocking E-comerce to sell monkeys, with a credit card payment implemented.",
       link: "https://monkeycircus-2z4e865i4.now.sh",
       icon: <SiNextdotjs />,
+      show: 0.17
     },
     {
       id: 6,
@@ -257,6 +246,7 @@ export const projectsDev = {
       text: "A very creative portfolio with a comic theme.",
       link: "https://new-cv-parallax.netlify.app/",
       icon: <FaReact />,
+      show: 0.22
     },
     {
       id: 7,
@@ -266,6 +256,7 @@ export const projectsDev = {
       text: "My first play with Three.js.",
       link: "https://lordrichard-threejs-sphere.netlify.app/",
       icon: <SiJavascript />,
+      show: 0.34
     },
     {
       id: 8,
@@ -275,6 +266,7 @@ export const projectsDev = {
       text: "A project build with Next.js using the google search API.",
       link: "https://paul-search.vercel.app/",
       icon: <SiNextdotjs />,
+      show: 0.26
     },
   ],
 };
@@ -287,6 +279,7 @@ export const projectsDesign = [
     title: "This website mockups",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
     icon: <FaFigma />,
+    show: 2.0
   },
   {
     id: 2,
@@ -295,6 +288,7 @@ export const projectsDesign = [
     title: "Left Bastards mockups",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
     icon: <FaFigma />,
+    show: 2.0
   },
   {
     id: 3,
@@ -303,6 +297,7 @@ export const projectsDesign = [
     title: "Private Chauffeur mockups",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
     icon: <FaFigma />,
+    show: 2.0
   },
 ];
 
@@ -482,89 +477,5 @@ export const education = [
     finish: "Mar 21",
     school: "Udemy",
     text: "skills:ed05_text",
-  },
-];
-
-// GALLERY ---------------------------------------------------------------------------------------------
-export const gallery = [
-  {
-    imgSrc: gal_01,
-    alt: "peronal pictures",
-    className: "shape shape__01",
-  },
-  {
-    imgSrc: gal_02,
-    alt: "peronal pictures",
-    className: "shape shape__02",
-  },
-  {
-    imgSrc: gal_03,
-    alt: "peronal pictures",
-    className: "shape shape__03",
-  },
-  {
-    imgSrc: gal_04,
-    alt: "peronal pictures",
-    className: "shape shape__04",
-  },
-  {
-    imgSrc: gal_05,
-    alt: "peronal pictures",
-    className: "shape shape__05",
-  },
-  {
-    imgSrc: gal_06,
-    alt: "peronal pictures",
-    className: "shape shape__06",
-  },
-  {
-    imgSrc: gal_07,
-    alt: "peronal pictures",
-    className: "shape shape__07",
-  },
-  {
-    imgSrc: gal_08,
-    alt: "peronal pictures",
-    className: "shape shape__08",
-  },
-  {
-    imgSrc: gal_09,
-    alt: "peronal pictures",
-    className: "shape shape__09",
-  },
-  {
-    imgSrc: gal_10,
-    alt: "peronal pictures",
-    className: "shape shape__10",
-  },
-  {
-    imgSrc: gal_11,
-    alt: "peronal pictures",
-    className: "shape shape__11",
-  },
-  {
-    imgSrc: gal_12,
-    alt: "peronal pictures",
-    className: "shape shape__12",
-  },
-  {
-    imgSrc: gal_13,
-    alt: "peronal pictures",
-    className: "shape shape__13",
-  },
-  {
-    imgSrc: gal_14,
-    alt: "peronal pictures",
-    className: "shape shape__14",
-  },
-  {
-    imgSrc: gal_15,
-    alt: "peronal pictures",
-    className: "shape shape__15",
-  },
-  {
-    imgSrc: gal_16,
-    alt: "peronal pictures",
-    className: "shape shape__16",
   },
 ];

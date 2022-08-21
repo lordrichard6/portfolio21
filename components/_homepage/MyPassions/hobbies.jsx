@@ -25,7 +25,7 @@ export default function HobbiesComponent() {
       scale: 1,
       rotate: 0,
       // y: 0,
-      transition: { duration: 3, type: "spring", bounce: 0.4 },
+      transition: { duration: 2, type: "spring", bounce: 0.4 },
     },
     hidden: {
       opacity: 0,

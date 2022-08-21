@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
@@ -6,11 +7,20 @@ import Night from '../../../assets/images/projects/nightsky.jpg'
 import MoonAndSun from './sky'
 
 export default function Header() {
+  const [offsetY, setOffsetY] = useState(0);
+
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <SectionContainer id="top">
       <MoonAndSun />
       <Animation />
-      <div className="night">
+      <div className="night" style={{ transform: `translateY(${offsetY * 0.1}px)` }}>
         <Image src={Night} alt="" objectFit="cover" layout="fill" />
       </div>
     </SectionContainer>
@@ -27,6 +37,10 @@ const SectionContainer = styled.div`
   border: 0;
 
   .night {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
     transition: 2s all ease;
     animation: bringNight 4.2s linear;
   }
