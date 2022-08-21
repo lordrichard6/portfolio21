@@ -7,6 +7,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import MeFormal from "../../../assets/images/homepage/about-me.png";
+import MeFormalG from "../../../assets/images/homepage/about-me_g.png";
 import SocialLinksComponent from "../../Footer/social_links";
 
 export default function AboutPictureComponent() {
@@ -113,6 +114,9 @@ export default function AboutPictureComponent() {
           </div>
           <div className="picture">
             <Image src={MeFormal} alt="" objectFit="cover" />
+          </div>
+          <div className="picture glasses">
+            <Image src={MeFormalG} alt="" objectFit="cover" />
           </div>
         </div>
       </div>
@@ -257,10 +261,12 @@ const RightContainer = styled.div`
         width: 400px;
       }
 
-      /* &:hover {
-        filter: grayscale(0);
-        transform: translateX(-50%) scale(1.1);
-      } */
+      &.glasses {
+        &:hover {
+          /* filter: grayscale(0); */
+          opacity: 0;
+        }
+      }
     }
   }
 `;
