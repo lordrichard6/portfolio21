@@ -2,19 +2,24 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-// import pt from '../../assets/images/pt.svg'
-// import en from '../../assets/images/en.svg'
+import pt from "../../assets/images/pt.svg";
+import en from "../../assets/images/en.svg";
 
 export default function LangChange() {
   let router = useRouter();
 
-  // <Image src={locale} layout="responsive" alt="" />
+  console.log(router.locales);
   return (
     <NavMenu>
       {router.locales.map((locale) => (
         <NavItem key={locale}>
           <Link href={router.asPath} locale={locale}>
-            <a>{locale}</a>
+            <a className={router.locales === locale ? "selected" : ""}>
+              <div className="flag">
+                {locale === "en" && <Image src={en} objectFit="cover" alt="" />}
+                {locale === "pt" && <Image src={pt} objectFit="cover" alt="" />}
+              </div>
+            </a>
           </Link>
         </NavItem>
       ))}
@@ -42,11 +47,30 @@ const NavMenu = styled.ul`
 `;
 
 const NavItem = styled.li`
-  padding:0 0.3rem;
+  padding: 0 0.3rem;
   a {
     cursor: pointer;
 
+    .flag {
+      display: flex;
+      width: 46px;
+      height: 32px;
+      border-radius: 10px;
+      &:hover {
+        border: 4px solid #fff;
+      }
+      span {
+        border-radius: 10px;
+      }
+    }
+    &.selected {
+      .flag {
+        border: 4px solid #fff;
+      }
+    }
+
     &:hover {
+      font-weight: 800;
     }
   }
 `;

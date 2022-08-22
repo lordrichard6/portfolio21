@@ -131,6 +131,21 @@ export const hobbies = [
   },
 ];
 
+export const navItems = [
+  {
+    to: "/",
+    tabName: "common:home",
+  },
+  {
+    to: "/projects",
+    tabName: "common:projects",
+  },
+  {
+    to: "/gallery",
+    tabName: "common:gallery",
+  },
+];
+
 // Projects ---------------------------------------------------------------
 export const projectsHeader = {
   backgroundImage: backgroundProjects,

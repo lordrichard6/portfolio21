@@ -1,49 +1,36 @@
 import styled from "styled-components";
 import Link from "next/link";
-import useTranslation from 'next-translate/useTranslation'
+import {useRouter} from "next/router";
+import useTranslation from "next-translate/useTranslation";
 
 import { FaTimes } from "react-icons/fa";
 import { Colors } from "../../assets/variables";
-import LangChange from './langChange'
+import LangChange from "./langChange";
+import { navItems } from "../../assets/data";
 
-export default function Sidebar({isOpen, toggle}) {
-  let {t} = useTranslation()
+export default function Sidebar({ isOpen, toggle }) {
+  const router = useRouter();
+  
+  let { t } = useTranslation();
 
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
-
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <NavItem onClick={toggle}>
-            <Link href="/">
-              <a>{t('common:home')}</a>
-            </Link>
-          </NavItem>
-          <NavItem onClick={toggle}>
-            <Link href="/projects">
-              <a>{t('common:projects')}</a>
-            </Link>
-          </NavItem>
-          <NavItem onClick={toggle}>
-            <Link href="/gallery">
-              <a>{t('common:gallery')}</a>
-            </Link>
-          </NavItem>
-          
-          {/* <NavItem onClick={toggle}>
-            <Link href="/skills">
-              <a>{t('common:skills')}</a>
-            </Link>
-          </NavItem> */}
-
-          {/* <NavItem onClick={toggle}>
-            <Link href="/404">
-              <a>myBlog</a>
-            </Link>
-          </NavItem> */}
+          {navItems.map((item, i) => {
+            return (
+              <NavItem key={i} onClick={toggle}>
+                <Link prefetch href={item.to}>
+                  <a className={router.pathname === item.to ? "selected" : ""}>
+                    {t(item.tabName)}
+                  </a>
+                </Link>
+              </NavItem>
+            );
+          })}
           <br />
           <LangChange />
         </SidebarMenu>
@@ -53,27 +40,27 @@ export default function Sidebar({isOpen, toggle}) {
 }
 
 const SidebarContainer = styled.aside`
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    height: 100vh;
-    /* background: ${Colors.primary}; */
-    display: grid;
-    align-items: center;
-    top: 0;
-    left: 0;
-    transition: 0.3s ease-in-out;
-    opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
-    top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-    /* background: url("/pattern.png"), ${Colors.primary}; */
-    background: url("/pattern.png"), linear-gradient(to bottom,#0f2027,#203a43,#2c5364);
-    z-index: 1000;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  /* background: ${Colors.primary}; */
+  display: grid;
+  align-items: center;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
+  top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+  /* background: url("/pattern.png"), ${Colors.primary}; */
+  background: url("/pattern.png"),
+    linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  z-index: 1000;
 `;
-
 
 const Icon = styled.div`
   position: absolute;
-  top: 1.2rem;
+  top: 1.5rem;
   right: 1.5rem;
   background: transparent;
   font-size: 2rem;
@@ -85,8 +72,7 @@ const CloseIcon = styled(FaTimes)`
   color: ${Colors.white};
 `;
 
-const SidebarWrapper = styled.div`
-`;
+const SidebarWrapper = styled.div``;
 
 const SidebarMenu = styled.div`
   display: grid;
@@ -97,23 +83,25 @@ const SidebarMenu = styled.div`
 `;
 
 const NavItem = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    list-style: none;
-    margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  margin: 1rem 0;
 
-
-    a {
-        transition: 0.2s ease-in-out;
-        z-index: 200;
-        cursor: pointer;
-        color: ${Colors.white};
-        font-size: 2rem;
-        font-weight: 400;
-        &:hover {
-            transition: 0.2s ease-in-out;
-        }
+  a {
+    transition: 0.2s ease-in-out;
+    z-index: 200;
+    cursor: pointer;
+    color: ${Colors.white};
+    font-size: 2rem;
+    font-weight: 400;
+    &.selected {
+      font-weight: 800;
     }
-`
+    &:hover {
+      transition: 0.2s ease-in-out;
+    }
+  }
+`;
