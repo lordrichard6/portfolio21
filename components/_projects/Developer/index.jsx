@@ -46,7 +46,7 @@ export default function Developer() {
   );
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: column;

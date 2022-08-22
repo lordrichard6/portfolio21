@@ -75,7 +75,7 @@ const LeftContainer = styled.div`
       text-align: center;
     }
     @media screen and (max-width: 1024px) {
-      font-size: 3.5rem;
+      font-size: 3rem;
     }
     @media screen and (min-width: 1440px) {
       font-size: 5rem;

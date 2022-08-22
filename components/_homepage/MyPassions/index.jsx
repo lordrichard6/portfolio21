@@ -58,7 +58,7 @@ export default function MyPassions() {
   );
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.section`
   position: relative;
   width: 100%;
   min-height: 120vh;
@@ -82,7 +82,7 @@ const SectionContainer = styled.div`
     text-shadow: 1px 2px 3px #00000081;
 
     @media screen and (max-width: 1024px) {
-      font-size: 3.5rem;
+      font-size: 3.0rem;
     }
     @media screen and (max-width: 764px) {
       margin: 0;

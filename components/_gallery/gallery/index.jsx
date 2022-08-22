@@ -65,7 +65,7 @@ export default function GalleryItems() {
   );
 }
 
-const GalleyWrapper = styled.div`
+const GalleyWrapper = styled.section`
   position: relative;
   height: 1600px;
   width: 100%;

@@ -15,7 +15,7 @@ export default function HeaderComponent() {
     );
 }
 
-const Container = styled.div`
+const Container = styled.header`
     position: relative;
     width: 100vw;
     height: 100vh;

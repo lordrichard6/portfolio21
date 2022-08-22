@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useRouter } from "next/router";
 
 import Hobby_01 from "../../../assets/images/homepage/hobby_01.png";
 import Hobby_02 from "../../../assets/images/homepage/hobby_02.png";
@@ -18,6 +19,7 @@ import AniCook from "../../../assets/images/homepage/ani_cook.gif"
 
 export default function HobbiesComponent() {
   let { t } = useTranslation();
+  let router = useRouter();
 
   const bringUp = {
     visible: {
@@ -72,7 +74,7 @@ export default function HobbiesComponent() {
         <h2>{t("home:hobbies_title01_01")}</h2>
         <h2>&</h2>
         <h2>{t("home:hobbies_title01_02")}</h2>
-        <h3>“{t("home:hobbies_text01")}”</h3>
+        <h3 className={router.locale === 'pt' ? "portuguese" : ''} >“{t("home:hobbies_text01")}”</h3>
         <div className="gif">
           <Image src={AniFat} layout="responsive" alt="" />
         </div>
@@ -101,10 +103,10 @@ export default function HobbiesComponent() {
         </div>
       </Hobby>
       <Text id="text_03">
-        <h2>{t("home:hobbies_title03_01")}</h2>
-        <h2>&</h2>
-        <h2>{t("home:hobbies_title03_02")}</h2>
-        <h3>“{t("home:hobbies_text03")}”</h3>
+        <h2 className={router.locale === 'pt' ? "portuguese" : ''}>{t("home:hobbies_title03_01")}</h2>
+        <h2 className={router.locale === 'pt' ? "portuguese" : ''}>&</h2>
+        <h2 className={router.locale === 'pt' ? "portuguese" : ''}>{t("home:hobbies_title03_02")}</h2>
+        <h3 className={router.locale === 'pt' ? "portuguese" : ''}>“{t("home:hobbies_text03")}”</h3>
         <div className="mountains">
           <Image src={Mountains} layout="responsive" alt="" />
         </div>
@@ -118,10 +120,24 @@ export default function HobbiesComponent() {
         </div>
       </Hobby>
       <Text id="text_04">
-        <h2 data-shadow='Cook'>{t("home:hobbies_title04_01")}</h2>
-        <h2 data-shadow='&'>&</h2>
-        <h2 data-shadow='Alchemy'>{t("home:hobbies_title04_02")}</h2>
-        <h3 data-shadow='"STRESSED is DESSERTS spelled backwards."'>“{t("home:hobbies_text04")}”</h3>
+        {router.locale === 'en' && (
+          <>
+            <h2 data-shadow='Cook'>{t("home:hobbies_title04_01")}</h2>
+            <h2 data-shadow='&'>&</h2>
+            <h2 data-shadow='Alchemy'>{t("home:hobbies_title04_02")}</h2>
+            <h3 data-shadow='"STRESSED is DESSERTS spelled backwards."'>“{t("home:hobbies_text04")}”</h3>
+          </>
+        )
+        }
+        {router.locale === 'pt' && (
+          <>
+            <h2 data-shadow='Cozinhar'>{t("home:hobbies_title04_01")}</h2>
+            <h2 data-shadow='&'>&</h2>
+            <h2 data-shadow='Alquimia'>{t("home:hobbies_title04_02")}</h2>
+            <h3 data-shadow='"STRESSED é DESSERTS escrito ao contrário."'>“{t("home:hobbies_text04")}”</h3>
+          </>
+        )
+        }
         <div className="cook">
           <Image src={MiaCook} layout="responsive" alt="" />
         </div>

@@ -24,50 +24,58 @@
 
         @media screen and (max-width: 764px) {
             font-size: 2.5rem;
+            text-shadow: 3px 3px 0px #eb452b, 
+            6px 6px 0px #efa032, 
+            9px 9px 0px #46b59b, 
+            12px 12px 0px #017e7f, 
+            15px 15px 0px #052939;
         }
         &:nth-child(1) {
-            transform: translate(-45%,10%) rotate(-35deg);
+            transform: translate(0,-80%) rotate(-15deg);
 
             @media screen and (max-width: 764px) {
-                transform: translate(-25%,-40%) rotate(-45deg);
+                transform: translate(20%,-80%) rotate(-15deg);
             }
         }
         &:nth-child(2) {
-            transform: translate(300%,-100%) rotate(15deg);
+            transform: translate(500%,-100%) rotate(-15deg);
 
             @media screen and (max-width: 764px) {
-                transform: translate(420%,-50%) rotate(15deg);
+                transform: translate(600%,-100%) rotate(-15deg);
             }
         }
         &:nth-child(3) {
-            transform: translate(60%,10%) rotate(35deg);
+            transform: translate(10%,10%) rotate(-15deg);
 
             @media screen and (max-width: 764px) {
-                transform: translate(100%,-10%) rotate(45deg);
+                transform: translate(10%,10%) rotate(-15deg);
             }
         }
     }
     h3 {
         color: #dbec45;
         font-size: 3.5rem;
-        transform: translate(0,120%) rotate(10deg);
+        transform: translate(-10%,120%) rotate(10deg);
         @media screen and (max-width: 764px) {
             font-size: 2rem;
             transform: translate(-10%,110%) rotate(10deg);
+            &.portuguese {
+                font-size: 1.9rem;
+                transform: translate(-5%,120%) rotate(10deg);
+            }
         }
     }
     .gif {
         position: absolute;
         width: 200px;
-        top: 200px;
-        right: 160px;
+        top: 0;
+        right: 0;
         border-radius: 16px;
         overflow: hidden;
-        transform: translate(0,0) rotate(10deg);
+        transform: translate(-20%,210%) rotate(0deg);
         @media screen and (max-width: 764px) {
             width: 120px;
-            top: 80px;
-            right: 80px;
+            transform: translate(10%,130%) rotate(0deg);
         }
     }
 }
@@ -83,31 +91,31 @@
         left: 0;
         font-family: 'Mr Dafoe';
         margin: 0;
-        font-size: 10em;
+        font-size: 8em;
         font-weight: 400;
         color: white;
         text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
 
         @media screen and (max-width: 764px) {
-            font-size: 4em;
+            font-size: 3.5em;
         }
 
         &:nth-child(1) {
-            transform: translate(0%,-30%) rotate(-7deg);
+            transform: translate(10%,-30%) rotate(-7deg);
 
             @media screen and (max-width: 764px) {
-                transform: translate(20%,-50%) rotate(-7deg);
+                transform: translate(30%,-40%) rotate(-7deg);
             }
         }
         &:nth-child(2) {
             transform: translate(220%,-35%) rotate(-7deg);
 
             @media screen and (max-width: 764px) {
-                transform: translate(240%,-45%) rotate(-7deg);
+                transform: translate(280%,-45%) rotate(-7deg);
             }
         }
         &:nth-child(3) {
-            transform: translate(40%,15%) rotate(-7deg);
+            transform: translate(50%,15%) rotate(-7deg);
 
             @media screen and (max-width: 764px) {
                 transform: translate(60%,15%) rotate(-7deg);
@@ -148,35 +156,35 @@
     }
     h3 {
         color: black;
-        font-size: 3.5em;
+        font-size: 3em;
         text-shadow: 0 0 0.05em #fff, 0 0 0.2em #06f512, 0 0 0.3em #06f512;
 
         @media screen and (max-width: 764px) {
             font-size: 2em;
         }
         &:nth-child(4) {
-            transform: translate(10%,200%) rotate(-7deg);
+            transform: translate(20%,200%) rotate(-7deg);
 
             @media screen and (max-width: 764px) {
                 transform: translate(10%,180%) rotate(-7deg);
             }
         }
         &:nth-child(5) {
-            transform: translate(70%,260%) rotate(-7deg);
+            transform: translate(90%,260%) rotate(-7deg);
 
             @media screen and (max-width: 764px) {
                 transform: translate(70%,250%) rotate(-7deg);
             }
         }
         &:nth-child(6) {
-            transform: translate(30%,330%) rotate(-7deg);
+            transform: translate(50%,330%) rotate(-7deg);
 
             @media screen and (max-width: 764px) {
                 transform: translate(50%,320%) rotate(-7deg);
             }
         }
         &:nth-child(7) {
-            transform: translate(30%,390%) rotate(-7deg);
+            transform: translate(40%,390%) rotate(-7deg);
 
             @media screen and (max-width: 764px) {
                 transform: translate(50%,370%) rotate(-7deg);
@@ -193,12 +201,12 @@
     .gif {
         position: absolute;
         width: 150px;
-        top: 320px;
-        right: 40px;
+        top: 0px;
+        right: 0px;
+        transform: translate(0%,200%) rotate(-7deg);
         @media screen and (max-width: 764px) {
             width: 60px;
-            top: 40px;
-            right: 180px;
+            transform: translate(0%,200%) rotate(-7deg);
         }
     }
 }
@@ -227,17 +235,50 @@
                     10px 10px hsl(50, 50%, 28%),
                     10px 10px 30px rgba(0,0,0,.7);
 
+
         @media screen and (max-width: 764px){
             font-size: 3em;
         }
+
+        // &.portuguese {
+        //     font-size: 6em;
+        //     @media screen and (max-width: 764px){
+        //         font-size: 2.3em;
+        //         letter-spacing: 10px;
+        //     }
+        // }
+
         &:nth-child(1) {
             transform: translate(10%,-110%) rotate(-10deg);
+            &.portuguese {
+                transform: translate(0%,-110%) rotate(-10deg);
+                @media screen and (max-width: 764px) {
+                    font-size: 2.2em;
+                    letter-spacing: 10px;
+                }
+            }
         }
         &:nth-child(2) {
-            transform: translate(200%,-50%) rotate(-10deg);
+            transform: translate(300%,20%) rotate(0deg);
+            @media screen and (max-width: 764px) {
+                font-size: 2em;
+            }
+            &.portuguese {
+                transform: translate(250%,-30%) rotate(0deg);
+                @media screen and (max-width: 764px) {
+                    transform: translate(250%,-10%) rotate(0deg);
+                }
+            }
         }
         &:nth-child(3) {
-            transform: translate(10%,0%) rotate(-10deg);
+            transform: translate(10%,40%) rotate(-10deg);
+            &.portuguese {
+                transform: translate(-10%,40%) rotate(-10deg);
+                @media screen and (max-width: 764px) {
+                    font-size: 2.2em;
+                    letter-spacing: 10px;
+                }
+            }
         }
     }
 
@@ -250,6 +291,10 @@
             font-size: 0.85em;
             letter-spacing: 2px;
             transform: translate(5%,240%) rotate(-10deg);
+            &.portuguese {
+                font-size: 0.75em;
+                transform: translate(5%,280%) rotate(-10deg);
+            }
         }
     }
     .gif {

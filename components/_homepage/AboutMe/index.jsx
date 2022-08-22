@@ -17,7 +17,7 @@ export default function AboutMe() {
   );
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.section`
   position: relative;
   width: 100%;
   padding: 8rem 0;

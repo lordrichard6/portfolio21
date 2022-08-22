@@ -27,7 +27,7 @@ export default function Header() {
   );
 }
 
-const SectionContainer = styled.div`
+const SectionContainer = styled.header`
   position: relative;
   height: 100vh;
   width: 100%;

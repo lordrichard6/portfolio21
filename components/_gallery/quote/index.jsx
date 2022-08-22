@@ -54,7 +54,7 @@ export default function QuoteComponent() {
   );
 }
 
-const Container = styled.div`
+const Container = styled.section`
   position: relative;
   width: 100%;
   height: auto;
