@@ -18,10 +18,10 @@ export default function SocialLinksComponent() {
         <Icon href="https://www.linkedin.com/in/pauloreizinho/" target="_blank">
           <FaLinkedin alt="github paulo reizinho profile" />
         </Icon>
-        <Icon href="https://www.instagram.com/l0rdr1chard/" target="_blank">
+        <Icon href="https://www.instagram.com/paulo_reizinho/" target="_blank">
           <FaInstagram alt="instagram paulo reizinho profile" />
         </Icon>
-        <Icon href="https://github.com/paulo_reizinho/" target="_blank">
+        <Icon href="https://https://github.com/lordrichard6" target="_blank">
           <FaGithub alt="github paulo reizinho profile" />
         </Icon>
         <Icon href="https://discord.gg/2UPrkCUU" target="_blank">
@@ -42,13 +42,13 @@ const IconContainer = styled.div`
 
 const Icon = styled.a`
   color: ${(props) => props.theme.color};
-  margin: 0.5rem;
+  margin: 0.6rem;
   font-size: 2.5rem;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 
   &:hover {
     color: ${Colors.primary};
-    transform: scale(1.05) translateY(-0.5rem);
+    transform: scale(1.05) translateY(-0.5rem) rotateY(360deg);
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
   }
 `;
