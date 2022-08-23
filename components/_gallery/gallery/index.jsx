@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Image from "next/image";
-import { useAnimation, motion } from "framer-motion";
+
 
 import Modal from './modal'
 import { gallery, animals } from "../../../assets/data/gallery";
@@ -13,23 +12,10 @@ export default function GalleryItems() {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
 
-
   const handelClick = (item, index) => {
     setCurrentIndex(index);
     setClickedImg(item.imgSrc);
   }
-
-  const bringUp = {
-    visible: {
-      y: 0,
-      transition: { duration: 3.1, type: "spring", bounce: 0.4 },
-    },
-    hidden: {
-      y: 400,
-    },
-  };
-
-  const controls = useAnimation();
 
   return (
     <GalleyWrapper>

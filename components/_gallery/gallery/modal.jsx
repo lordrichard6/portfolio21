@@ -37,15 +37,17 @@ const Container = styled.div`
   height: 100%;
   background: #20303ca7;
   z-index: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .picture-wrapper {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, 20%);
     width: 60%;
-    height: auto;
-    max-height: 15%;
+    height: 90%;
+    @media screen and (min-width: 1800px) {
+      width: 40%;
+    }
     @media screen and (max-width: 992px) {
       width: 80%;
     }
@@ -63,6 +65,8 @@ const Container = styled.div`
     z-index: 1000;
   }
   .image-container {
+    max-height: 100%;
+    width: 100%;
     border-radius: 16px;
     overflow: hidden;
   }

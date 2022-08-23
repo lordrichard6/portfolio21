@@ -54,7 +54,7 @@ const InnerContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 1280px) {
     flex-direction: column;
   }
   @media screen and (min-width: 1280px) {

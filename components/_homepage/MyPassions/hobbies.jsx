@@ -10,12 +10,12 @@ import Hobby_01 from "../../../assets/images/homepage/hobby_01.png";
 import Hobby_02 from "../../../assets/images/homepage/hobby_02.png";
 import Hobby_03 from "../../../assets/images/homepage/hobby_03.png";
 import Hobby_04 from "../../../assets/images/homepage/hobby_04.png";
-import Mountains from "../../../assets/images/homepage/mountains.png"
-import MiaCook from "../../../assets/images/homepage/mia_cook.png"
-import AniCode from "../../../assets/images/homepage/ani_code.gif"
-import AniFat from "../../../assets/images/homepage/ani_fat.gif"
-import AniBear from "../../../assets/images/homepage/ani_bear.gif"
-import AniCook from "../../../assets/images/homepage/ani_cook.gif"
+import Mountains from "../../../assets/images/homepage/mountains.png";
+import MiaCook from "../../../assets/images/homepage/mia_cook.png";
+import AniCode from "../../../assets/images/homepage/ani_code.gif";
+import AniFat from "../../../assets/images/homepage/ani_fat.gif";
+import AniBear from "../../../assets/images/homepage/ani_bear.gif";
+import AniCook from "../../../assets/images/homepage/ani_cook.gif";
 
 export default function HobbiesComponent() {
   let { t } = useTranslation();
@@ -32,7 +32,7 @@ export default function HobbiesComponent() {
     hidden: {
       opacity: 0,
       scale: 0,
-      rotate: 90
+      rotate: 90,
       // y: 100,
     },
   };
@@ -58,12 +58,11 @@ export default function HobbiesComponent() {
 
   return (
     <HobbyElements
-    as={motion.div}
-    ref={ref}
-    variants={bringUp}
-    initial="hidden"
-    animate={controls}
-    
+      as={motion.div}
+      ref={ref}
+      variants={bringUp}
+      initial="hidden"
+      animate={controls}
     >
       <Hobby className="hobby__01">
         <div className="image">
@@ -74,7 +73,9 @@ export default function HobbiesComponent() {
         <h2>{t("home:hobbies_title01_01")}</h2>
         <h2>&</h2>
         <h2>{t("home:hobbies_title01_02")}</h2>
-        <h3 className={router.locale === 'pt' ? "portuguese" : ''} >“{t("home:hobbies_text01")}”</h3>
+        <h3 className={router.locale === "pt" ? "portuguese" : ""}>
+          “{t("home:hobbies_text01")}”
+        </h3>
         <div className="gif">
           <Image src={AniFat} layout="responsive" alt="" />
         </div>
@@ -103,10 +104,16 @@ export default function HobbiesComponent() {
         </div>
       </Hobby>
       <Text id="text_03">
-        <h2 className={router.locale === 'pt' ? "portuguese" : ''}>{t("home:hobbies_title03_01")}</h2>
-        <h2 className={router.locale === 'pt' ? "portuguese" : ''}>&</h2>
-        <h2 className={router.locale === 'pt' ? "portuguese" : ''}>{t("home:hobbies_title03_02")}</h2>
-        <h3 className={router.locale === 'pt' ? "portuguese" : ''}>“{t("home:hobbies_text03")}”</h3>
+        <h2 className={router.locale === "pt" ? "portuguese" : ""}>
+          {t("home:hobbies_title03_01")}
+        </h2>
+        <h2 className={router.locale === "pt" ? "portuguese" : ""}>&</h2>
+        <h2 className={router.locale === "pt" ? "portuguese" : ""}>
+          {t("home:hobbies_title03_02")}
+        </h2>
+        <h3 className={router.locale === "pt" ? "portuguese" : ""}>
+          “{t("home:hobbies_text03")}”
+        </h3>
         <div className="mountains">
           <Image src={Mountains} layout="responsive" alt="" />
         </div>
@@ -120,24 +127,16 @@ export default function HobbiesComponent() {
         </div>
       </Hobby>
       <Text id="text_04">
-        {router.locale === 'en' && (
-          <>
-            <h2 data-shadow='Cook'>{t("home:hobbies_title04_01")}</h2>
-            <h2 data-shadow='&'>&</h2>
-            <h2 data-shadow='Alchemy'>{t("home:hobbies_title04_02")}</h2>
-            <h3 data-shadow='"STRESSED is DESSERTS spelled backwards."'>“{t("home:hobbies_text04")}”</h3>
-          </>
-        )
-        }
-        {router.locale === 'pt' && (
-          <>
-            <h2 data-shadow='Cozinhar'>{t("home:hobbies_title04_01")}</h2>
-            <h2 data-shadow='&'>&</h2>
-            <h2 data-shadow='Alquimia'>{t("home:hobbies_title04_02")}</h2>
-            <h3 data-shadow='"STRESSED é DESSERTS escrito ao contrário."'>“{t("home:hobbies_text04")}”</h3>
-          </>
-        )
-        }
+        <h2 className={router.locale === "pt" ? "portuguese" : ""} data-shadow={t("home:hobbies_title04_01")}>
+          {t("home:hobbies_title04_01")}
+        </h2>
+        <h2 data-shadow="&">&</h2>
+        <h2 data-shadow={t("home:hobbies_title04_02")}>
+          {t("home:hobbies_title04_02")}
+        </h2>
+        <h3 data-shadow={t("home:hobbies_text04")}>
+          {t("home:hobbies_text04")}
+        </h3>
         <div className="cook">
           <Image src={MiaCook} layout="responsive" alt="" />
         </div>
@@ -158,6 +157,14 @@ const HobbyElements = styled.div`
 
   @media screen and (max-width: 764px) {
     height: 910px;
+  }
+
+  .shadow {
+    z-index: 0;
+    filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5)) sepia(1);
+    &:hover {
+      filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5)) sepia(0);
+    }
   }
 
   .hobby__01:hover + #text_01 {
@@ -184,8 +191,18 @@ const Hobby = styled.div`
   height: 200px;
   z-index: 10;
   cursor: pointer;
-  border-radius: 50%;
-  /* clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); */
+
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+
   background: #20303c;
   display: flex;
   justify-content: center;
@@ -203,58 +220,63 @@ const Hobby = styled.div`
 
   .image {
     transition: all 500ms ease-in-out;
+    filter: sepia(1) blur(2px);
     width: 100%;
     &:hover {
-      transform: scale(1.4);
+      transform: scale(1.2);
+      filter: sepia(0) blur(0px);
     }
   }
 
   &.hobby__01 {
     left: 20%;
-    top: 50px;
-    transform: translateX(-20%);
+    top: 0;
+    transform: translate(-20%, 0);
     @media screen and (max-width: 764px) {
       margin: 0;
-      top: 470px;
-      left: 20%;
-      transform: translateX(-20%);
+      top: 54%;
+      left: 15%;
+      transform: translate(-15%, 0);
     }
   }
   &.hobby__02 {
     left: 80%;
-    top: 50px;
-    transform: translateX(-80%);
+    top: 0;
+    transform: translate(-80%, 0);
     @media screen and (max-width: 764px) {
       margin: 0;
       top: 10px;
-      left: 20%;
-      transform: translateX(-20%);
+      left: 15%;
+      transform: translate(-15%, 0);
     }
   }
   &.hobby__03 {
     left: 20%;
     top: 990px;
-    transform: translateX(-20%);
+    transform: translate(-20%, 0);
     @media screen and (max-width: 764px) {
       margin: 0;
       top: 10px;
-      left: 80%;
-      transform: translateX(-80%);
+      left: 85%;
+      transform: translate(-85%, 0);
     }
   }
   &.hobby__04 {
     left: 80%;
     top: 990px;
-    transform: translateX(-80%);
+    transform: translate(-80%, 0);
 
-    .image {
-      width: 150px;
-    }
     @media screen and (max-width: 764px) {
       margin: 0;
-      top: 470px;
-      left: 80%;
-      transform: translateX(-80%);
+      top: 54%;
+      left: 85%;
+      transform: translate(-85%, 0);
+    }
+    .image {
+      width: 150px;
+      @media screen and (max-width: 764px) {
+        width: 100px;
+      }
     }
   }
 `;

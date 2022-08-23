@@ -4,6 +4,8 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+import AboutTitleComponent from "./title";
+
 export default function AboutTextComponent() {
   let { t } = useTranslation();
 
@@ -40,7 +42,7 @@ export default function AboutTextComponent() {
       initial="hidden"
       animate={controls}
     >
-      <h1>{t("home:about_title")}</h1>
+      <AboutTitleComponent title={t("home:about_title")} />
       <p>
         {t("home:about_text01")}
         <br />
@@ -64,22 +66,6 @@ const LeftContainer = styled.div`
 
   @media screen and (max-width: 992px) {
     margin: 0;
-  }
-  h1 {
-    font-size: 4rem;
-    font-weight: 800;
-    text-shadow: -10px 10px 0px #2f3030b0, -20px 20px 0px #494b4b7f,
-      -30px 30px 0px #5858583d;
-
-    @media screen and (max-width: 390px) {
-      text-align: center;
-    }
-    @media screen and (max-width: 1024px) {
-      font-size: 3rem;
-    }
-    @media screen and (min-width: 1440px) {
-      font-size: 5rem;
-    }
   }
   p {
     font-weight: 400;

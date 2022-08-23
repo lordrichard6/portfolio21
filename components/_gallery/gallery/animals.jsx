@@ -7,7 +7,7 @@ export default function GalleryAnimals({image, className, alt}) {
   const bringUp = {
     visible: {
       opacity: 1,
-      transition: { delay: 2, duration: 2.1, type: "spring", bounce: 0.4 },
+      transition: { delay: 6, duration: 2.1, type: "spring", bounce: 0.4 },
     },
     hidden: {
       opacity: 0,
