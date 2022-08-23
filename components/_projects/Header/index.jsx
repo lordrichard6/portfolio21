@@ -5,6 +5,7 @@ import Image from "next/image";
 import Animation from './animation'
 import Night from '../../../assets/images/projects/nightsky.jpg'
 import MoonAndSun from './sky'
+import StarsComponent from '../../_homepage/Header/stars'
 
 export default function Header() {
   const [offsetY, setOffsetY] = useState(0);
@@ -23,6 +24,7 @@ export default function Header() {
       <div className="night" style={{ transform: `translateY(${offsetY * 0.1}px)` }}>
         <Image src={Night} alt="" objectFit="cover" layout="fill" />
       </div>
+      <StarsComponent />
     </SectionContainer>
   );
 }

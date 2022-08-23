@@ -4,12 +4,14 @@ import React from "react";
 import Animation from "./animation";
 import TitleComponent from "./title";
 import BackgroundComponent from './background'
+import StarsComponent from '../../_homepage/Header/stars'
 
 export default function HeaderComponent() {
     return (
     <Container>
         <TitleComponent />
         <BackgroundComponent />
+        <StarsComponent />
         {/* <Animation /> */}
     </Container>
     );

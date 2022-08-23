@@ -5,6 +5,7 @@ import { homeHeader } from "../../../assets/data";
 import CometsComponent from './comets'
 import HomepageTitleComponent from './title'
 import HeaderImageComponent from './image'
+import StarsComponent from './stars'
 
 
 export default function Header() {
@@ -18,6 +19,7 @@ export default function Header() {
         objectPosition="center"
         alt="paulo reizinho header"
       />
+      <StarsComponent />
       <CometsComponent />
       <InnerContainer>
         <HomepageTitleComponent />

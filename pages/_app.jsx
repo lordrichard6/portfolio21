@@ -7,6 +7,7 @@ import "../styles/hexagon.scss";
 import "../styles/aboutme.scss";
 import "../styles/gallery.scss"
 import "../styles/hobbies.scss"
+import "../styles/stars.scss"
 import 'nprogress/nprogress.css'; //styles of nprogress
 
 //Binding events. 
