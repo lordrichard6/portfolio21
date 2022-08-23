@@ -1,6 +1,5 @@
 import Router from 'next/router';
 import NProgress from 'nprogress'; //nprogress module
-import 'nprogress/nprogress.css'; //styles of nprogress
 
 import "../styles/globals.scss";
 import "../styles/custom.scss";
@@ -8,6 +7,7 @@ import "../styles/hexagon.scss";
 import "../styles/aboutme.scss";
 import "../styles/gallery.scss"
 import "../styles/hobbies.scss"
+import 'nprogress/nprogress.css'; //styles of nprogress
 
 //Binding events. 
 Router.events.on('routeChangeStart', () => NProgress.start()); 
