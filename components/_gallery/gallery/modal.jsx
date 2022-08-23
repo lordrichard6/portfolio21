@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import { ImCross } from "react-icons/im";
 
@@ -9,13 +11,78 @@ export default function Modal({ clickedImg, setClickedImg }) {
     setClickedImg(null);
   };
 
+  const bringUp = {
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 1.1 },
+    },
+    hidden: {
+      opacity: 0,
+      scale: 0,
+    },
+  };
+
+  const bringPicture = {
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: { delay: 1.5, duration: 3.1, type: "spring", bounce: 0.4 },
+    },
+    hidden: {
+      opacity: 0,
+      scale: 0,
+      y: 500
+    },
+  };
+
+  const bringCross = {
+    visible: {
+      x: 0,
+      transition: { delay: 2.5, duration: 3.1, type: "spring", bounce: 0.4 },
+    },
+    hidden: {
+      x: -1500,
+    },
+  };
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
+  }, [controls, inView]);
+
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      ref={ref}
+      variants={bringUp}
+      initial="hidden"
+      animate={controls}
+    >
       <div className="picture-wrapper">
-        <div className="close">
+        <motion.div 
+          className="close"
+          variants={bringCross}
+          initial="hidden"
+          animate={controls}
+        >
           <ImCross style={{ cursor: "pointer" }} onClick={handleClick} />
-        </div>
-        <div className="image-container">
+        </motion.div>
+        <motion.div 
+          className="image-container"
+          variants={bringPicture}
+          initial="hidden"
+          animate={controls}
+        >
           <Image
             src={clickedImg}
             alt=""
@@ -23,7 +90,7 @@ export default function Modal({ clickedImg, setClickedImg }) {
             layout="responsive"
             quality="100"
           />
-        </div>
+        </motion.div>
       </div>
     </Container>
   );
@@ -54,6 +121,7 @@ const Container = styled.div`
     @media screen and (max-width: 576px) {
       width: 90%;
       top: 10%;
+      padding-top: 28px;
     }
   }
   .close {
