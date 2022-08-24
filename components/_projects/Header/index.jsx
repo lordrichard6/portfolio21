@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import Animation from './animation'
 import Night from '../../../assets/images/projects/nightsky.jpg'
+import Day from '../../../assets/images/projects/day.jpg'
 import MoonAndSun from './sky'
 import StarsComponent from '../../_homepage/Header/stars'
 
@@ -19,6 +20,9 @@ export default function Header() {
 
   return (
     <SectionContainer id="top">
+      <div className="day">
+        <Image src={Day} alt="" objectFit="cover" layout="fill" />
+      </div>
       <MoonAndSun />
       <Animation />
       <div className="night" style={{ transform: `translateY(${offsetY * 0.1}px)` }}>
@@ -37,6 +41,13 @@ const SectionContainer = styled.header`
   margin: 0;
   padding: 0;
   border: 0;
+
+  .day {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   .night {
     position: absolute;

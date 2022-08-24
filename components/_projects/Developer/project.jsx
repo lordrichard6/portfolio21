@@ -1,14 +1,29 @@
 import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import useTranslation from "next-translate/useTranslation";
 
 import { Colors } from "../../../assets/variables";
-import Button from "./button";
+import Button01Component from "../../Footer/button";
+import { CgBrowser } from "react-icons/cg";
 
-export default function Project({ src, alt, title, text, link, tech, show }) {
+export default function Project({
+  src,
+  alt,
+  title,
+  text,
+  link,
+  tech,
+  show,
+  backgroundColor,
+}) {
+  const [btnGone, setBtnGone] = useState(0);
+
+  let { t } = useTranslation();
+
   const bringUp = {
     visible: {
       opacity: 1,
@@ -17,7 +32,7 @@ export default function Project({ src, alt, title, text, link, tech, show }) {
     },
     hidden: {
       opacity: 0,
-      y: 100,
+      y: 300,
     },
   };
 
@@ -36,29 +51,29 @@ export default function Project({ src, alt, title, text, link, tech, show }) {
 
   return (
     <ProjectWrapper
-    ref={ref}
-    as={motion.div}
-    variants={bringUp}
-    initial="hidden"
-    animate={controls}
-    transition={{delay: show, duration: 2.1, type: "spring", bounce: 0.4}}
+      ref={ref}
+      as={motion.div}
+      variants={bringUp}
+      initial="hidden"
+      animate={controls}
+      transition={{ delay: show, duration: 2.6, type: "spring", bounce: 0.4 }}
+      className={backgroundColor}
     >
-      <ImageWrapper>
+      <ImageWrapper className="image">
         <Image src={src} objectFit="cover" objectPosition="center" alt={alt} />
       </ImageWrapper>
-      <div className="overlay"></div>
-      <div className="overlay2"></div>
-      <div className="text">
+      <div className="content">
         <h2>{title}</h2>
         <div className="icon">{tech}</div>
-        {/* <p>{text}</p> */}
-        <div className="link-wrap">
-          <Link href={link}>
-            <a target="_blank">
-              <Button />
-            </a>
-          </Link>
+        <div className={`btnWrapper ${backgroundColor}`}>
+          <a href={link} target="_blank" rel="noreferrer"><CgBrowser className="browser" alt="send paulo reizinho email" /></a>
         </div>
+        <Button01Component
+          onClick={() => setBtnGone(1)}
+          animation={btnGone ? "ani" : null}
+          color="_2"
+          text={t("projects:dev_button")}
+        />
       </div>
     </ProjectWrapper>
   );
@@ -68,142 +83,197 @@ const ProjectWrapper = styled.div`
   position: relative;
   text-align: center;
   overflow: hidden;
+  flex: 0 0 33.333333%;
 
-  .small-text {
-    @media screen and (max-width: 764px) {
-      font-size: 0.8rem;
-      margin: 0;
-    }
+  @media screen and (min-width: 1600px) {
+    flex: 0 0 25%;
   }
-  .small-title {
-    @media screen and (max-width: 764px) {
-      font-size: 1rem;
-      margin: 2px;
-      margin-bottom: 4px;
-    }
+  @media screen and (max-width: 992px) {
+    flex: 0 0 50%;
   }
-  .mobile-none {
-    @media screen and (max-width: 764px) {
-      display: none;
-    }
+  @media screen and (max-width: 576px) {
+    flex: 0 0 100%;
+    height: 360px;
   }
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-blend-mode: color-burn;
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.5);
-  }
-  .overlay2 {
-    position: absolute;
-    top: 0;
-    left: -150%;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    -moz-backdrop-filter: blur(10px);
 
-    /* transform: skewX(-30deg); */
-    transition: 0.5s;
-  }
-  .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    color: ${Colors.dark};
-    box-sizing: border-box;
-    padding: 25px;
-    z-index: 100;
-    text-shadow: 5px 5px 10px black;
-  }
-  h2 {
-    position: relative;
-    color: #eee;
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    letter-spacing: 2px;
-    opacity: 0;
-    transition: 0.5s linear;
-    transform: translateY(-10px);
-
-    @media screen and (max-width: 764px) {
-      font-size: 1.2rem;
-      /* letter-spacing: 10px; */
-    }
-
-    @media screen and (min-width: 2560px) {
-      font-size: 3rem;
-      letter-spacing: 10px;
-    }
-  }
-  .icon {
-    color: ${Colors.white};
-    font-size: 3rem;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: 0.5s linear;
-    margin: 0.5rem 0;
-
-    @media screen and (max-width: 764px) {
-      font-size: 2.5rem;
-    }
-
-    @media screen and (min-width: 2560px) {
-      font-size: 4rem;
-      /* letter-spacing: 10px; */
-    }
-  }
-  h3 {
-    @media screen and (min-width: 2560px) {
-      font-size: 1.8rem;
-      /* letter-spacing: 10px; */
-    }
-  }
-  .link-wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: ${Colors.white};
-    line-height: 1.2;
-    opacity: 0;
-    transform: translateY(10px);
-    transition: 0.5s linear;
-    .link {
-      cursor: pointer;
-      font-size: 1.5rem;
-      margin-left: 0.5rem;
-    }
-  }
   &:hover {
-    .overlay2 {
-      left: 0%;
-      /* filter: blur(12px); */
+    .image {
+      filter: blur(5px);
+      transform: scale(1.1);
+      opacity: 0.2;
     }
-    .text {
-      h2 {
-        transform: translateY(0);
-        opacity: 1;
-        transition-delay: 0.4s;
+    .content {
+      opacity: 1;
+      animation: bounce-in-top 1.1s both;
+    }
+  }
+
+  &.blue {
+    background: #0a212f;
+  }
+  &.red {
+    background: #36100c;
+  }
+  &.yellow {
+    background: #b5c021;
+  }
+  &.green {
+    background: #2ec021;
+  }
+  &.lightpurple {
+    background: #6b6b83;
+  }
+  &.orange {
+    background: #f5af19;
+  }
+  &.lightblue {
+    background: #00b4db;
+  }
+  &.darkpurple {
+    background: #240b36;
+  }
+  &.strongred {
+    background: #c31432;
+  }
+
+  .content {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    opacity: 0;
+
+    .icon {
+      font-size: 3rem;
+    }
+
+    .btnWrapper {
+      z-index: 0;
+      position: absolute;
+      top: 64%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: calc(0.3 * 200px);
+      height: calc(0.6 * 100px);
+      /* background: #1d2124; */
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      filter: brightness(1);
+      &:hover {
+        svg {
+          font-size: 2.5rem;
+        }
       }
-      .icon {
-        transform: translateY(0);
-        opacity: 1;
-        transition-delay: 0.6s;
+      svg {
+        font-size: 2rem;
+        transition: all 0.3s;
       }
-      .link-wrap {
-        transform: translateY(0);
+      &.blue {
+        background: #0a212f;
+      }
+      &.red {
+        background: #36100c;
+      }
+      &.yellow {
+        background: #b5c021;
+      }
+      &.green {
+        background: #2ec021;
+      }
+      &.lightpurple {
+        background: #6b6b83;
+      }
+      &.orange {
+        background: #f5af19;
+      }
+      &.lightblue {
+        background: #00b4db;
+      }
+      &.darkpurple {
+        background: #240b36;
+      }
+      &.strongred {
+        background: #c31432;
+      }
+    }
+
+    .ani {
+      transform: translateY(200%) rotate(0);
+      animation: slide-out-blurred-top 0.65s
+        cubic-bezier(0.755, 0.05, 0.855, 0.06) both;
+    }
+    @keyframes slide-out-blurred-top {
+      0% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
         opacity: 1;
-        transition-delay: 0.7s;
+      }
+      100% {
+        -webkit-transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+        transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+      }
+    }
+    @keyframes bounce-in-top {
+      0% {
+        -webkit-transform: translateY(-500px);
+        transform: translateY(-500px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 0;
+      }
+      38% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+      }
+      55% {
+        -webkit-transform: translateY(-65px);
+        transform: translateY(-65px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+      }
+      72% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+      }
+      81% {
+        -webkit-transform: translateY(-28px);
+        transform: translateY(-28px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+      }
+      90% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+      }
+      95% {
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+      }
+      100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
       }
     }
   }
@@ -214,4 +284,5 @@ const ImageWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
+  transition: all 0.3s;
 `;

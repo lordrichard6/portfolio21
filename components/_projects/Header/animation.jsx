@@ -1,12 +1,10 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 export default function Animation() {
   return (
     <Container>
       <div className="gradient"></div>
       <div className="tri">
-        {/* <Image src={someImage} alt="" objectFit="cover" layout="fill" /> */}
       </div>
       <div className="squ">
         <div></div>
@@ -96,7 +94,8 @@ const Container = styled.div`
     left: calc((50% - 50px));
     width: 100px;
     height: 100px;
-    background: #3a6e9a;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     border-radius: 50%;
     transform: scale(0);
     @media screen and (max-width: 992px) {

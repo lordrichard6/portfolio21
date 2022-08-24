@@ -172,16 +172,16 @@ export const projectsDev = {
     //   link: "https://patricia-vila-nova.vercel.app/",
     //   icon: <SiNextdotjs />,
     // },
-    {
-      id: 2,
-      image: dev_myPortfolio,
-      alt: "paulo reizinho portfolio",
-      title: "Portfolio",
-      text: "This very own website a marvel of design.",
-      link: "/",
-      icon: <SiNextdotjs />,
-      show: 0.23
-    },
+    // {
+    //   id: 2,
+    //   image: dev_myPortfolio,
+    //   alt: "paulo reizinho portfolio",
+    //   title: "Portfolio",
+    //   text: "This very own website a marvel of design.",
+    //   link: "/",
+    //   icon: <SiNextdotjs />,
+    //   show: 0.23
+    // },
     // {
     //   id: 3,
     //   image: dev_leftBastards,
@@ -191,153 +191,110 @@ export const projectsDev = {
     //   link: "https://left-bastards.vercel.app/",
     //   icon: <SiNextdotjs />,
     // },
+    // {
+    //   id: 4,
+    //   image: dev_blueVariant,
+    //   alt: "paulo reizinho portfolio",
+    //   title: "Portfolio old",
+    //   text: "The first version of this website's design",
+    //   link: "https://lordrichard-cv-blue.netlify.app/",
+    //   icon: <FaReact />,
+    //   show: 0.13
+    // },
+  ],
+  other: [
     {
-      id: 4,
       image: dev_blueVariant,
       alt: "paulo reizinho portfolio",
       title: "Portfolio old",
       text: "The first version of this website's design",
       link: "https://lordrichard-cv-blue.netlify.app/",
       icon: <FaReact />,
+      backgroundColor: 'blue',
       show: 0.13
     },
-  ],
-  other: [
     {
-      id: 1,
       image: dev_fastRent,
       alt: "car rental website",
       title: "FastRent",
       text: "A beautifull car rental website made with React using typescript. Used styled-components together with tailwind to style the page.",
       link: "https://lordrichard-rentfast.netlify.app/",
       icon: <FaReact />,
+      backgroundColor: 'red',
       show: 0.3
     },
     {
-      id: 2,
       image: dev_lastPortfolio,
       alt: "old portfolio",
       title: "An old Portfolio",
       text: "Created with React.js with and elengant and simplistic design",
       link: "https://reizinhocv.netlify.app/",
       icon: <FaReact />,
-      show: 0.1
+      backgroundColor: 'yellow',
+      show: 0.37
     },
     {
-      id: 3,
       image: dev_skyTours,
       alt: "world tours website",
       title: "Skytours",
       text: "This project was initially built using html and Sass, then later I converted to React maintaning the Sass styling system, elegant design of a tours agency.",
       link: "https://reizinho-skytours.netlify.com/",
       icon: <FaReact />,
-      show: 0.14
+      backgroundColor: 'green',
+      show: 0.54
     },
     {
-      id: 4,
       image: dev_hulu,
       alt: "movie streaming platform hulu",
       title: "Hulu clone",
       text: "Built with Next.js imitating the design of the famous movie streaming platform Hulu, using the database of an API movie site TMDB.",
       link: "https://hulu-clone-rosy.vercel.app/",
       icon: <SiNextdotjs />,
-      show: 0.31
+      backgroundColor: 'lightpurple',
+      show: 0.61
     },
     {
-      id: 5,
       image: dev_trainedMonkeys,
       alt: "eshop for trained monkeys",
       title: "Monkey Circus",
       text: "A mocking E-comerce to sell monkeys, with a credit card payment implemented.",
       link: "https://monkeycircus-2z4e865i4.now.sh",
       icon: <SiNextdotjs />,
-      show: 0.17
+      backgroundColor: 'orange',
+      show: 0.66
     },
     {
-      id: 6,
       image: dev_comicPortfolio,
       alt: "portfolio design based on comics",
       title: "Comic Portfolio",
       text: "A very creative portfolio with a comic theme.",
       link: "https://new-cv-parallax.netlify.app/",
       icon: <FaReact />,
-      show: 0.22
+      backgroundColor: 'lightblue',
+      show: 0.78
     },
     {
-      id: 7,
       image: dev_sphere,
       alt: "three.js project",
       title: "The Sphere",
       text: "My first play with Three.js.",
       link: "https://lordrichard-threejs-sphere.netlify.app/",
       icon: <SiJavascript />,
-      show: 0.34
+      backgroundColor: 'darkpurple',
+      show: 0.79
     },
     {
-      id: 8,
       image: dev_paulsEngine,
       alt: "google api used",
       title: "Paul's Engine",
       text: "A project build with Next.js using the google search API.",
       link: "https://paul-search.vercel.app/",
       icon: <SiNextdotjs />,
-      show: 0.26
+      backgroundColor: 'strongred',
+      show: 0.9
     },
   ],
 };
-
-export const projectsDesign = [
-  {
-    id: 1,
-    imgSrc: design_project_portfolio,
-    alt: "the mockups of this website",
-    title: "This website mockups",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-    icon: <FaFigma />,
-    show: 2.0
-  },
-  {
-    id: 2,
-    imgSrc: design_project_leftBastards,
-    alt: "the mockups of the left bastards website",
-    title: "Left Bastards mockups",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-    icon: <FaFigma />,
-    show: 2.0
-  },
-  {
-    id: 3,
-    imgSrc: design_project_patricia,
-    alt: "the mockups of patricia website",
-    title: "Private Chauffeur mockups",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-    icon: <FaFigma />,
-    show: 2.0
-  },
-];
-
-export const projectsCreative = [
-  {
-    id: 1,
-    imgSrc: creative_01,
-    alt: "project",
-  },
-  {
-    id: 2,
-    imgSrc: creative_02,
-    alt: "project",
-  },
-  {
-    id: 3,
-    imgSrc: creative_03,
-    alt: "project",
-  },
-  {
-    id: 4,
-    imgSrc: creative_04,
-    alt: "project",
-  },
-];
 
 // Skills ---------------------------------------------------------------
 export const skillsHeader = {

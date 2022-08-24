@@ -10,8 +10,7 @@ export default function Developer() {
 
   return (
     <SectionContainer>
-      {/* <h1>{t("projects:dev_title")}</h1> */}
-      <Projects>
+      {/* <Projects>
         {projectsDev.secondary.map((item, i) => {
           return (
             <Project
@@ -26,7 +25,7 @@ export default function Developer() {
             />
           );
         })}
-      </Projects>
+      </Projects> */}
       <OtherProjects>
         {projectsDev.other.map((item, i) => {
           return (
@@ -38,6 +37,7 @@ export default function Developer() {
               tech={item.icon}
               link={item.link}
               show={item.show}
+              backgroundColor={item.backgroundColor}
             />
           );
         })}
@@ -48,11 +48,13 @@ export default function Developer() {
 
 const SectionContainer = styled.section`
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: ${Colors.white};
+  overflow: hidden;
   h1 {
     font-size: 4rem;
     font-weight: 400;
@@ -60,23 +62,19 @@ const SectionContainer = styled.section`
   }
 `;
 
-const Projects = styled.div`
-  width: 100%;
-  columns: 2;
-  gap: 0;
+// const Projects = styled.div`
+//   width: 100%;
+//   columns: 2;
+//   gap: 0;
 
-  @media screen and (max-width: 390px) {
-    display: flex;
-    flex-direction: column;
-  }
-`;
+//   @media screen and (max-width: 390px) {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// `;
 
 const OtherProjects = styled.div`
   width: 100%;
-  column-count: 4;
-  gap: 0;
-
-  @media screen and (max-width: 390px) {
-    columns: 2;
-  }
+  display: flex;
+  flex-wrap: wrap;
 `;

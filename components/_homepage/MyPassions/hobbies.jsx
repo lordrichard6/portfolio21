@@ -220,10 +220,10 @@ const Hobby = styled.div`
 
   .image {
     transition: all 500ms ease-in-out;
-    filter: sepia(1) blur(2px);
+    filter: sepia(1) blur(20px);
     width: 100%;
     &:hover {
-      transform: scale(1.2);
+      /* transform: scale(1.2); */
       filter: sepia(0) blur(0px);
     }
   }

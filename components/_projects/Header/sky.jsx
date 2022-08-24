@@ -53,7 +53,8 @@ const SunContainer = styled.div`
   position: absolute;
   top: 10%;
   right: 50%;
-  width: 500px;
+  width: 250px;
+  margin-top: 130px;
   height: auto;
   z-index: 1;
   animation: moveSun 4s linear;
