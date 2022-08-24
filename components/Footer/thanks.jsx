@@ -32,9 +32,9 @@ export default function Thanks() {
     if (inView) {
       controls.start("visible");
     }
-    if (!inView) {
-      controls.start("hidden");
-    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
   }, [controls, inView]);
 
   return (
@@ -65,7 +65,7 @@ const SectionContainer = styled.section`
   align-items: center;
 
   @media screen and (max-width: 390px) {
-    order: 3;
+    order: 2;
     margin-bottom: 1rem;
   }
   h1 {

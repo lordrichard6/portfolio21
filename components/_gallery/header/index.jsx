@@ -8,7 +8,7 @@ import StarsComponent from '../../_homepage/Header/stars'
 
 export default function HeaderComponent() {
     return (
-    <Container>
+    <Container id="top">
         <TitleComponent />
         <BackgroundComponent />
         <StarsComponent />

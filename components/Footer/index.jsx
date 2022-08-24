@@ -5,6 +5,8 @@ import { Colors } from "../../assets/variables";
 import Thanks from "./thanks";
 import SiteMap from "./siteMap";
 import Contacts from "./contacts";
+import CopyrightComponent from './copyright'
+import MarioAnimationComponent from './mario'
 
 export default function Footer() {
   let { t } = useTranslation(); 
@@ -13,18 +15,17 @@ export default function Footer() {
     <FooterContainer>
       <InnerContainer>
         <Thanks />
-        {/* <SiteMap /> */}
+        <SiteMap />
         <Contacts />
       </InnerContainer>
-      <CopyrightWrapper>
-        <p>Copyright &copy; {new Date().getFullYear()} Paulo Lopes Reizinho.</p>
-        <p>{t('common:allRights')}</p>
-      </CopyrightWrapper>
+      <MarioAnimationComponent />
+      <CopyrightComponent />
     </FooterContainer>
   );
 }
 
 const FooterContainer = styled.footer`
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,22 +44,9 @@ const FooterContainer = styled.footer`
 const InnerContainer = styled.div`
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   @media screen and (max-width: 764px) {
     grid-template-columns: 1fr;
-  }
-`;
-
-const CopyrightWrapper = styled.div`
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  p {
-    margin-bottom: 0;
-
-    @media screen and (max-width: 764px) {
-      font-size: 0.8rem;
-    }
   }
 `;

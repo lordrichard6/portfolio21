@@ -54,6 +54,9 @@ export default function AboutTextComponent() {
         <br />
         <br />
         {t("home:about_text04")}
+        <br />
+        <br />
+        {t("home:about_text05")}
       </p>
     </LeftContainer>
   );

@@ -1,16 +1,19 @@
 import styled from "styled-components";
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
 
 import { Colors } from "../../assets/variables";
 // import QRcode from '../../assets/images/qr.png';
 import SocialLinksComponent from './social_links'
+import {MdEmail} from "react-icons/md";
+import {SiMinutemailer} from "react-icons/si";
 
 export default function Contacts() {
+  const [btnGone, setBtnGone] = useState(0)
+
   let { t } = useTranslation();
 
   const bringFromRight = {
@@ -33,11 +36,14 @@ export default function Contacts() {
     if (inView) {
       controls.start("visible");
     }
-    if (!inView) {
-      controls.start("hidden");
-    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
   }, [controls, inView]);
 
+  const openMail = () => {
+    window.open('mailto:paulolopesreizinho@gmail.com?subject=CV%20Request&body=Dear%20Paulo,%20can%20you%20send%20me%20your%20awesome%20CV?')
+  }
 
   return (
     <SectionContainer
@@ -51,9 +57,20 @@ export default function Contacts() {
       <SocialLinksComponent />
 
       <ContactWrapper>
-        <ButtonV2>
+        <EmailButton>
+          <div onClick={openMail} className="btnWrapper">
+            <p>Ask me by</p>
+            <MdEmail className="close" alt="send paulo reizinho email" />
+            <SiMinutemailer className="open" alt="send paulo reizinho email" />
+          </div>
+        </EmailButton>
+        <ButtonV2
+          onClick={() => setBtnGone(1)}
+          className={btnGone ? 'ani' : null}
+        >
           <div className="button _1">
-            <a href="https://drive.google.com/file/d/19uYAAnvRa-fi_LpG1GhA9HQVGeBQAIuF/view?usp=sharing">{t("common:downloadCV")}</a>
+            {/* <a href="https://drive.google.com/file/d/19uYAAnvRa-fi_LpG1GhA9HQVGeBQAIuF/view?usp=sharing">{t("common:downloadCV")}</a> */}
+            <a>{t("common:downloadCV")}</a>
             <div className="back"></div>
           </div>
         </ButtonV2>
@@ -93,32 +110,13 @@ const SectionContainer = styled.section`
   align-items: center;
 
   @media screen and (max-width: 764px) {
-    order: 2;
+    order: 3;
     margin: 2rem 0;
   }
   h1 {
     font-weight: 400;
     text-decoration: underline;
     font-size: 1.8rem;
-  }
-`;
-
-const IconContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`;
-
-const Icon = styled.a`
-  color: ${Colors.white};
-  margin: 0.5rem;
-  font-size: 2.5rem;
-  transition: 0.3s ease-in-out;
-
-  &:hover {
-    color: ${Colors.primary};
-    transform: scale(1.05) translateY(-0.5rem);
-    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
   }
 `;
 
@@ -137,6 +135,51 @@ const ContactWrapper = styled.div`
   }
 `;
 
+const EmailButton = styled.div`
+  position: absolute;
+  width: calc(0.8 * 200px);
+  height: calc(0.7 * 100px);
+  border-radius: 16px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  .btnWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .close, p {
+    filter: blur(0);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .open {
+    position: absolute;
+    opacity: 0;
+    filter: blur(10px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  svg {
+    font-size: 2rem;
+    margin-left: 0.4rem;
+  }
+  &:hover {
+    .open {
+      opacity: 1;
+      filter: blur(0);
+    }
+    .close, p {
+      filter: blur(0);
+      opacity: 0;
+    }
+  }
+`
+
 const ButtonV2 = styled.div`
   /* https://freefrontend.com/css-buttons/ */
   /* https://codepen.io/dev_loop/pen/agqYaN */
@@ -145,6 +188,10 @@ const ButtonV2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  &.ani {
+    transform: translateY(200%) rotate(0);
+    animation: fallButton 1.2s linear;
+  }
 
   .button {
     position: relative;
@@ -234,6 +281,24 @@ const ButtonV2 = styled.div`
   .button {
     margin: 0.8rem 0;
   }
+
+  @keyframes fallButton {
+    0%{
+    transform: translateY(0) rotate(0);
+    }
+  15% {
+    transform: translateY(15%) rotate(15deg);
+  }
+  50% {
+    transform: translateY(15%) rotate(15deg);
+  }
+  75% {
+    transform: translateY(200%) rotate(15deg);
+  }
+  100% {
+    transform: translateY(200%) rotate(15deg);
+  }
+}
 `;
 
 const Button = styled.button`
@@ -293,24 +358,3 @@ const Button = styled.button`
       inset 0 0 0.5em 0.25em var(--glow-color);
   }
 `;
-
-// const BlueIcon = styled.span`
-//   background-color: ${Colors.primary};
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   border-radius: 9999px;
-//   color: ${Colors.white};
-//   padding: 0.5rem;
-//   margin-right: 0.5rem;
-//   font-size: 1.5rem;
-// `;
-
-// const ImageWrapper = styled.div`
-//   width: 50%;
-//   height: auto;
-
-//   @media screen and (max-width: 764px) {
-//     display: none;
-//   }
-// `
