@@ -18,7 +18,7 @@ const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  /* z-index: 10; */
   &.ani {
     transform: translateY(200%) rotate(0);
     animation: fallButton 1.2s linear;

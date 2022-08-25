@@ -65,6 +65,9 @@ export default function HobbiesComponent() {
       animate={controls}
     >
       <Hobby className="hobby__01">
+        <div className="word">
+          <h1>Gym</h1>
+          </div>
         <div className="image">
           <Image src={Hobby_01} layout="responsive" alt="" />
         </div>
@@ -81,6 +84,9 @@ export default function HobbiesComponent() {
         </div>
       </Text>
       <Hobby className="hobby__02">
+      <div className="word">
+          <h1>Coding</h1>
+          </div>
         <div className="image">
           <Image src={Hobby_02} layout="responsive" alt="" />
         </div>
@@ -99,6 +105,9 @@ export default function HobbiesComponent() {
         </div>
       </Text>
       <Hobby className="hobby__03">
+      <div className="word">
+          <h1>Outside</h1>
+          </div>
         <div className="image">
           <Image src={Hobby_03} layout="responsive" alt="" />
         </div>
@@ -122,6 +131,9 @@ export default function HobbiesComponent() {
         </div>
       </Text>
       <Hobby className="hobby__04">
+      <div className="word">
+          <h1>Eating</h1>
+          </div>
         <div className="image">
           <Image src={Hobby_04} layout="responsive" alt="" />
         </div>
@@ -211,21 +223,34 @@ const Hobby = styled.div`
   &:hover {
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
       rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+      .word {
+        opacity: 0;
+        filter: blur(10px);
+      }
+      .image {
+        filter: sepia(0) blur(0px);
+      }
   }
 
   @media screen and (max-width: 764px) {
     width: 140px;
     height: 140px;
   }
+  .word {
+    position: absolute;
+    font-size: 2rem;
+    z-index: 1;
+    transition: all 500ms ease-in-out;
+
+    @media screen and (max-width: 764px) {
+      font-size: 1.5rem;
+    }
+  }
 
   .image {
     transition: all 500ms ease-in-out;
     filter: sepia(1) blur(20px);
     width: 100%;
-    &:hover {
-      /* transform: scale(1.2); */
-      filter: sepia(0) blur(0px);
-    }
   }
 
   &.hobby__01 {

@@ -44,7 +44,7 @@ export default function Contacts() {
 
   const openMail = () => {
     window.open(
-      "mailto:paulolopesreizinho@gmail.com?subject=CV%20Request&body=Dear%20Paulo,%20can%20you%20send%20me%20your%20awesome%20CV?"
+      "mailto:paulolopesreizinho@gmail.com?subject=CV%20Request&body=Dear%20Paulo%20can%20you%20send%20me%20your%20awesome%20CV?"
     );
   };
 
@@ -104,7 +104,7 @@ const ContactWrapper = styled.div`
     font-size: 1.2rem;
   }
   .ani {
-    transform: translateY(200%) rotate(0);
+    transform: translateY(300%) rotate(0);
     animation: fallButton 1.2s linear;
   }
 
@@ -169,10 +169,12 @@ const EmailButton = styled.div`
       transform: translateY(15%) rotate(15deg);
     }
     75% {
-      transform: translateY(200%) rotate(15deg);
+      transform: translateY(300%) rotate(15deg);
+      opacity: 1;
     }
     100% {
-      transform: translateY(200%) rotate(15deg);
+      transform: translateY(300%) rotate(15deg);
+      opacity: 0;
     }
   }
 `;
