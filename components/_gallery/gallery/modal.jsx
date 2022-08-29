@@ -77,7 +77,7 @@ export default function Modal({ clickedImg, setClickedImg }) {
         >
           <ImCross style={{ cursor: "pointer" }} onClick={handleClick} />
         </motion.div>
-        <motion.div 
+        <motion.figure 
           className="image-container"
           variants={bringPicture}
           initial="hidden"
@@ -90,7 +90,7 @@ export default function Modal({ clickedImg, setClickedImg }) {
             layout="responsive"
             quality="100"
           />
-        </motion.div>
+        </motion.figure>
       </div>
     </Container>
   );

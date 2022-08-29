@@ -112,12 +112,12 @@ export default function AboutPictureComponent() {
               <strong>paulolopesreizinho@gmail.com</strong>
             </p>
           </div>
-          <div className="picture">
-            <Image src={MeFormal} alt="" objectFit="cover" />
-          </div>
-          <div className="picture glasses">
-            <Image src={MeFormalG} alt="" objectFit="cover" />
-          </div>
+          <figure className="picture">
+            <Image src={MeFormal} alt="paulo reizinho" objectFit="cover" />
+          </figure>
+          <figure className="picture glasses">
+            <Image src={MeFormalG} alt="paulo reizinho" objectFit="cover" />
+          </figure>
         </div>
       </div>
     </RightContainer>

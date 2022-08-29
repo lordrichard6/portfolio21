@@ -68,9 +68,9 @@ export default function HobbiesComponent() {
         <div className="word">
           <h1>Gym</h1>
           </div>
-        <div className="image">
-          <Image src={Hobby_01} layout="responsive" alt="" />
-        </div>
+        <figure className="image">
+          <Image src={Hobby_01} layout="responsive" alt="fallout" />
+        </figure>
       </Hobby>
       <Text id="text_01">
         <h2>{t("home:hobbies_title01_01")}</h2>
@@ -79,17 +79,17 @@ export default function HobbiesComponent() {
         <h3 className={router.locale === "pt" ? "portuguese" : ""}>
           “{t("home:hobbies_text01")}”
         </h3>
-        <div className="gif">
-          <Image src={AniFat} layout="responsive" alt="" />
-        </div>
+        <figure className="gif">
+          <Image src={AniFat} layout="responsive" alt="fat gif" />
+        </figure>
       </Text>
       <Hobby className="hobby__02">
       <div className="word">
           <h1>Coding</h1>
           </div>
-        <div className="image">
-          <Image src={Hobby_02} layout="responsive" alt="" />
-        </div>
+        <figure className="image">
+          <Image src={Hobby_02} layout="responsive" alt="fallout" />
+        </figure>
       </Hobby>
       <Text id="text_02">
         <h2>{t("home:hobbies_title02_01")}</h2>
@@ -100,17 +100,17 @@ export default function HobbiesComponent() {
         <h3>{code3}</h3>
         <h3>{code4}</h3>
         <h3>{code5}</h3>
-        <div className="gif">
-          <Image src={AniCode} layout="responsive" alt="" />
-        </div>
+        <figure className="gif">
+          <Image src={AniCode} layout="responsive" alt="coding gif" />
+        </figure>
       </Text>
       <Hobby className="hobby__03">
       <div className="word">
           <h1>Outside</h1>
           </div>
-        <div className="image">
-          <Image src={Hobby_03} layout="responsive" alt="" />
-        </div>
+        <figure className="image">
+          <Image src={Hobby_03} layout="responsive" alt="fallout" />
+        </figure>
       </Hobby>
       <Text id="text_03">
         <h2 className={router.locale === "pt" ? "portuguese" : ""}>
@@ -123,20 +123,20 @@ export default function HobbiesComponent() {
         <h3 className={router.locale === "pt" ? "portuguese" : ""}>
           “{t("home:hobbies_text03")}”
         </h3>
-        <div className="mountains">
-          <Image src={Mountains} layout="responsive" alt="" />
-        </div>
-        <div className="gif">
-          <Image src={AniBear} layout="responsive" alt="" />
-        </div>
+        <figure className="mountains">
+          <Image src={Mountains} layout="responsive" alt="mountains shape" />
+        </figure>
+        <figure className="gif">
+          <Image src={AniBear} layout="responsive" alt="bear gif" />
+        </figure>
       </Text>
       <Hobby className="hobby__04">
       <div className="word">
           <h1>Eating</h1>
           </div>
-        <div className="image">
-          <Image src={Hobby_04} layout="responsive" alt="" />
-        </div>
+        <figure className="image">
+          <Image src={Hobby_04} layout="responsive" alt="fallout" />
+        </figure>
       </Hobby>
       <Text id="text_04">
         <h2 className={router.locale === "pt" ? "portuguese" : ""} data-shadow={t("home:hobbies_title04_01")}>
@@ -149,12 +149,12 @@ export default function HobbiesComponent() {
         <h3 data-shadow={t("home:hobbies_text04")}>
           {t("home:hobbies_text04")}
         </h3>
-        <div className="cook">
-          <Image src={MiaCook} layout="responsive" alt="" />
-        </div>
-        <div className="gif">
-          <Image src={AniCook} layout="responsive" alt="" />
-        </div>
+        <figure className="cook">
+          <Image src={MiaCook} layout="responsive" alt="cat cook" />
+        </figure>
+        <figure className="gif">
+          <Image src={AniCook} layout="responsive" alt="cook gif" />
+        </figure>
       </Text>
     </HobbyElements>
   );

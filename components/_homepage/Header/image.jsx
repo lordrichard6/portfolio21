@@ -11,7 +11,7 @@ export default function HeaderImageComponent() {
   );
 }
 
-const ImageContainer = styled.div`
+const ImageContainer = styled.figure`
   width: 50%;
   height: auto;
   animation: showHead 3s linear;

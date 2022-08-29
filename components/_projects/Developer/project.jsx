@@ -279,7 +279,7 @@ const ProjectWrapper = styled.div`
   }
 `;
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled.figure`
   position: relative;
   display: flex;
   width: 100%;

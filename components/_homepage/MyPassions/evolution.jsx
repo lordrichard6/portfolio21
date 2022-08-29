@@ -12,36 +12,35 @@ import Man_08 from "../../../assets/images/homepage/evo_08.png";
 import Man_09 from "../../../assets/images/homepage/evo_09.png";
 
 export default function EvolutionComponent() {
-
   return (
     <Container>
-      <div className="evolution evo_01">
-        <Image src={Man_01} layout="responsive" alt="" />
-      </div>
-      <div className="evolution evo_02">
-        <Image src={Man_02} layout="responsive" alt="" />
-      </div>
-      <div className="evolution evo_03">
-        <Image src={Man_03} layout="responsive" alt="" />
-      </div>
-      <div className="evolution evo_04">
-        <Image src={Man_04} layout="responsive" alt="" />
-      </div>
-      <div className="evolution evo_05">
-        <Image src={Man_05} layout="responsive" alt="" />
-      </div>
-      <div className="evolution evo_06">
-        <Image src={Man_06} layout="responsive" alt="" />
-      </div>
-      <div className="evolution evo_07">
-        <Image src={Man_07} layout="responsive" alt="" />
-      </div>
-      <div className="evolution evo_08">
-        <Image src={Man_08} layout="responsive" alt="" />
-      </div>
-      <div className="evolution evo_09">
-        <Image src={Man_09} layout="responsive" alt="" />
-      </div>
+      <figure className="evolution evo_01">
+        <Image src={Man_01} layout="responsive" alt="mankind evolution" />
+      </figure>
+      <figure className="evolution evo_02">
+        <Image src={Man_02} layout="responsive" alt="mankind evolution" />
+      </figure>
+      <figure className="evolution evo_03">
+        <Image src={Man_03} layout="responsive" alt="mankind evolution" />
+      </figure>
+      <figure className="evolution evo_04">
+        <Image src={Man_04} layout="responsive" alt="mankind evolution" />
+      </figure>
+      <figure className="evolution evo_05">
+        <Image src={Man_05} layout="responsive" alt="mankind evolution" />
+      </figure>
+      <figure className="evolution evo_06">
+        <Image src={Man_06} layout="responsive" alt="mankind evolution" />
+      </figure>
+      <figure className="evolution evo_07">
+        <Image src={Man_07} layout="responsive" alt="mankind evolution" />
+      </figure>
+      <figure className="evolution evo_08">
+        <Image src={Man_08} layout="responsive" alt="mankind evolution" />
+      </figure>
+      <figure className="evolution evo_09">
+        <Image src={Man_09} layout="responsive" alt="mankind evolution" />
+      </figure>
     </Container>
   );
 }
@@ -305,7 +304,3 @@ const Container = styled.div`
     }
   }
 `;
-
-
-
-

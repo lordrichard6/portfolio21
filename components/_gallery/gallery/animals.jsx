@@ -28,7 +28,7 @@ export default function GalleryAnimals({image, className, alt}) {
   }, [controls, inView]);
 
   return (
-        <motion.div 
+        <motion.figure 
           className={className}
           variants={bringUp}
           initial="hidden"
@@ -36,7 +36,7 @@ export default function GalleryAnimals({image, className, alt}) {
           ref={ref}
         >
           <Image src={image} alt={alt} objectFit="cover" />
-        </motion.div>
+        </motion.figure>
 
   );
 }

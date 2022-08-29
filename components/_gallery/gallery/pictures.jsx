@@ -33,7 +33,7 @@ export default function PicturesComponent({ className, imgSrc, alt, onClick }) {
 
   return (
     <>
-      <motion.div
+      <motion.figure
         ref={ref}
         className={className}
         variants={bringUp}
@@ -47,7 +47,7 @@ export default function PicturesComponent({ className, imgSrc, alt, onClick }) {
           layout="fill"
           onClick={onClick}
         />
-      </motion.div>
+      </motion.figure>
     </>
   );
 }
