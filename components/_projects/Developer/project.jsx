@@ -70,8 +70,8 @@ export default function Project({
         <div className="techs">{techs}</div>
         <div className="btnWrapper">
           <div className={`button ${backgroundColor}`}>
-            <Link href={link} target="_blank">
-              <a>
+            <Link href={link}>
+              <a target="_blank">
                 <CgBrowser
                   className="browser"
                   alt="paulo reizinho project website"
@@ -80,8 +80,8 @@ export default function Project({
             </Link>
           </div>
           <div className={`button ${backgroundColor}`}>
-            <Link href={github} target="_blank">
-              <a>
+            <Link href={github}>
+              <a target="_blank">
                 <RiGithubFill
                   className="browser"
                   alt="paulo reizinho project repository"
