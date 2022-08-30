@@ -20,7 +20,7 @@ export default function ProjectsPage() {
 }
 
 const MainProjects = styled.section`
-  width: 100%;
+  width: 100vw;
   position: relative;
   display: flex;
   flex-direction: row;

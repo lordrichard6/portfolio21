@@ -1,33 +1,14 @@
 import styled from "styled-components";
-import useTranslation from "next-translate/useTranslation";
 
-import { projectsDev } from "../../../assets/data";
+import { projects } from "../../../assets/data/projects";
 import { Colors } from "../../../assets/variables";
 import Project from "./project";
 
 export default function Developer() {
-  let { t } = useTranslation();
-
   return (
     <SectionContainer>
-      {/* <Projects>
-        {projectsDev.secondary.map((item, i) => {
-          return (
-            <Project
-              key={i}
-              src={item.image}
-              alt={item.alt}
-              title={item.title}
-              text={item.text}
-              link={item.link}
-              tech={item.icon}
-              show={item.show}
-            />
-          );
-        })}
-      </Projects> */}
       <OtherProjects>
-        {projectsDev.other.map((item, i) => {
+        {projects.map((item, i) => {
           return (
             <Project
               key={i}
@@ -37,6 +18,8 @@ export default function Developer() {
               tech={item.icon}
               link={item.link}
               show={item.show}
+              github={item.github}
+              techs={item.techs}
               backgroundColor={item.backgroundColor}
             />
           );
@@ -61,17 +44,6 @@ const SectionContainer = styled.section`
     text-shadow: 1px 2px 4px #00000081;
   }
 `;
-
-// const Projects = styled.div`
-//   width: 100%;
-//   columns: 2;
-//   gap: 0;
-
-//   @media screen and (max-width: 390px) {
-//     display: flex;
-//     flex-direction: column;
-//   }
-// `;
 
 const OtherProjects = styled.div`
   width: 100%;

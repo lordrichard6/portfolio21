@@ -6,9 +6,9 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import useTranslation from "next-translate/useTranslation";
 
-import { Colors } from "../../../assets/variables";
 import Button01Component from "../../Footer/button";
 import { CgBrowser } from "react-icons/cg";
+import { RiGithubFill } from "react-icons/ri";
 
 export default function Project({
   src,
@@ -18,6 +18,8 @@ export default function Project({
   link,
   tech,
   show,
+  github,
+  techs,
   backgroundColor,
 }) {
   const [btnGone, setBtnGone] = useState(0);
@@ -65,8 +67,28 @@ export default function Project({
       <div className="content">
         <h2>{title}</h2>
         <div className="icon">{tech}</div>
-        <div className={`btnWrapper ${backgroundColor}`}>
-          <a href={link} target="_blank" rel="noreferrer"><CgBrowser className="browser" alt="send paulo reizinho email" /></a>
+        <div className="techs">{techs}</div>
+        <div className="btnWrapper">
+          <div className={`button ${backgroundColor}`}>
+            <Link href={link} target="_blank">
+              <a>
+                <CgBrowser
+                  className="browser"
+                  alt="paulo reizinho project website"
+                />
+              </a>
+            </Link>
+          </div>
+          <div className={`button ${backgroundColor}`}>
+            <Link href={github} target="_blank">
+              <a>
+                <RiGithubFill
+                  className="browser"
+                  alt="paulo reizinho project repository"
+                />
+              </a>
+            </Link>
+          </div>
         </div>
         <Button01Component
           onClick={() => setBtnGone(1)}
@@ -78,6 +100,15 @@ export default function Project({
     </ProjectWrapper>
   );
 }
+
+const ImageWrapper = styled.figure`
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  margin: 0;
+`;
 
 const ProjectWrapper = styled.div`
   position: relative;
@@ -149,53 +180,68 @@ const ProjectWrapper = styled.div`
     .btnWrapper {
       z-index: 0;
       position: absolute;
-      top: 64%;
+      top: 68%;
       left: 50%;
       transform: translate(-50%, 0);
-      width: calc(0.3 * 200px);
-      height: calc(0.6 * 100px);
+      /* width: calc(0.3 * 200px);
+      height: calc(0.6 * 100px); */
       /* background: #1d2124; */
-      border-radius: 16px;
+      /* border-radius: 16px; */
       display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
+      /* justify-content: center;
+      align-items: center; */
+      /* cursor: pointer; */
       filter: brightness(1);
-      &:hover {
-        svg {
-          font-size: 2.5rem;
-        }
-      }
-      svg {
-        font-size: 2rem;
+
+      .button {
+        width: calc(0.3 * 200px);
+        height: calc(0.6 * 100px);
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 0 4px;
         transition: all 0.3s;
-      }
-      &.blue {
-        background: #0a212f;
-      }
-      &.red {
-        background: #36100c;
-      }
-      &.yellow {
-        background: #b5c021;
-      }
-      &.green {
-        background: #2ec021;
-      }
-      &.lightpurple {
-        background: #6b6b83;
-      }
-      &.orange {
-        background: #f5af19;
-      }
-      &.lightblue {
-        background: #00b4db;
-      }
-      &.darkpurple {
-        background: #240b36;
-      }
-      &.strongred {
-        background: #c31432;
+
+        &:hover {
+          transform: translate(0, -5px);
+          svg {
+            /* font-size: 2.5rem; */
+          }
+        }
+        svg {
+          font-size: 2rem;
+          transition: all 0.3s;
+        }
+
+        &.blue {
+          background: #0a212f;
+        }
+        &.red {
+          background: #36100c;
+        }
+        &.yellow {
+          background: #b5c021;
+        }
+        &.green {
+          background: #2ec021;
+        }
+        &.lightpurple {
+          background: #6b6b83;
+        }
+        &.orange {
+          background: #f5af19;
+        }
+        &.lightblue {
+          background: #00b4db;
+        }
+        &.darkpurple {
+          background: #240b36;
+        }
+        &.strongred {
+          background: #c31432;
+        }
       }
     }
 
@@ -277,12 +323,4 @@ const ProjectWrapper = styled.div`
       }
     }
   }
-`;
-
-const ImageWrapper = styled.figure`
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: all 0.3s;
 `;

@@ -17,20 +17,6 @@ import aboutMeImg from "../images/homepage/blue_01.jpg";
 // Projects
 import backgroundProjects from "../images/projects/header_02.jpg";
 
-import dev_fastRent from "../images/projects/dev/p10-min.jpg";
-import dev_lastPortfolio from "../images/projects/dev/p09-min.jpg";
-import dev_skyTours from "../images/projects/dev/p06-min.jpg";
-import dev_hulu from "../images/projects/dev/p08-min.jpg";
-import dev_trainedMonkeys from "../images/projects/dev/p05-min.jpg";
-import dev_paulsEngine from "../images/projects/dev/p07-min.jpg";
-import dev_netflix from "../images/projects/dev/p02-min.jpg";
-import dev_sphere from "../images/projects/dev/p11-min.jpg";
-import dev_comicPortfolio from "../images/projects/dev/p14-min.jpg";
-import dev_blueVariant from "../images/projects/dev/latest_01.jpg";
-import dev_leftBastards from "../images/projects/dev/latest_03.jpg";
-import dev_sardinha from "../images/projects/dev/latest_02.jpg";
-import dev_myPortfolio from "../images/projects/dev/latest_04.jpg";
-
 import design_project_portfolio from "../images/projects/project_portfolio.png";
 import design_project_leftBastards from "../images/projects/project_leftBastards.png";
 import design_project_patricia from "../images/projects/project_patricia.png";
@@ -78,6 +64,10 @@ export const bannerSkills = {
   alt: "lisbon portugal",
   logo: logoWhite,
   text: "Education page",
+};
+
+export const projectsHeader = {
+  backgroundImage: backgroundProjects,
 };
 
 // Home ---------------------------------------------------------------
@@ -145,156 +135,6 @@ export const navItems = [
     tabName: "common:gallery",
   },
 ];
-
-// Projects ---------------------------------------------------------------
-export const projectsHeader = {
-  backgroundImage: backgroundProjects,
-};
-
-export const projectsDev = {
-  // main: [
-  //   {
-  //     id: 1,
-  //     image: dev_sardinha,
-  //     alt: "patricia project",
-  //     title: "Private Chauffeur",
-  //     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius",
-  //     link: "https://patricia-vila-nova.vercel.app/",
-  //   },
-  // ],
-  secondary: [
-    // {
-    //   id: 1,
-    //   image: dev_sardinha,
-    //   alt: "patricia project",
-    //   title: "Private Chauffeur",
-    //   text: "A project for a friend that has her own driving service.",
-    //   link: "https://patricia-vila-nova.vercel.app/",
-    //   icon: <SiNextdotjs />,
-    // },
-    // {
-    //   id: 2,
-    //   image: dev_myPortfolio,
-    //   alt: "paulo reizinho portfolio",
-    //   title: "Portfolio",
-    //   text: "This very own website a marvel of design.",
-    //   link: "/",
-    //   icon: <SiNextdotjs />,
-    //   show: 0.23
-    // },
-    // {
-    //   id: 3,
-    //   image: dev_leftBastards,
-    //   alt: "left bastards",
-    //   title: "Left Bastards",
-    //   text: "The official website of the car lovers group called, Left Bastards",
-    //   link: "https://left-bastards.vercel.app/",
-    //   icon: <SiNextdotjs />,
-    // },
-    // {
-    //   id: 4,
-    //   image: dev_blueVariant,
-    //   alt: "paulo reizinho portfolio",
-    //   title: "Portfolio old",
-    //   text: "The first version of this website's design",
-    //   link: "https://lordrichard-cv-blue.netlify.app/",
-    //   icon: <FaReact />,
-    //   show: 0.13
-    // },
-  ],
-  other: [
-    {
-      image: dev_blueVariant,
-      alt: "paulo reizinho portfolio",
-      title: "Portfolio old",
-      text: "The first version of this website's design",
-      link: "https://lordrichard-cv-blue.netlify.app/",
-      icon: <FaReact />,
-      backgroundColor: 'blue',
-      show: 0.13
-    },
-    {
-      image: dev_fastRent,
-      alt: "car rental website",
-      title: "FastRent",
-      text: "A beautifull car rental website made with React using typescript. Used styled-components together with tailwind to style the page.",
-      link: "https://lordrichard-rentfast.netlify.app/",
-      icon: <FaReact />,
-      backgroundColor: 'red',
-      show: 0.3
-    },
-    {
-      image: dev_lastPortfolio,
-      alt: "old portfolio",
-      title: "An old Portfolio",
-      text: "Created with React.js with and elengant and simplistic design",
-      link: "https://reizinhocv.netlify.app/",
-      icon: <FaReact />,
-      backgroundColor: 'yellow',
-      show: 0.37
-    },
-    {
-      image: dev_skyTours,
-      alt: "world tours website",
-      title: "Skytours",
-      text: "This project was initially built using html and Sass, then later I converted to React maintaning the Sass styling system, elegant design of a tours agency.",
-      link: "https://reizinho-skytours.netlify.com/",
-      icon: <FaReact />,
-      backgroundColor: 'green',
-      show: 0.54
-    },
-    {
-      image: dev_hulu,
-      alt: "movie streaming platform hulu",
-      title: "Hulu clone",
-      text: "Built with Next.js imitating the design of the famous movie streaming platform Hulu, using the database of an API movie site TMDB.",
-      link: "https://hulu-clone-rosy.vercel.app/",
-      icon: <SiNextdotjs />,
-      backgroundColor: 'lightpurple',
-      show: 0.61
-    },
-    {
-      image: dev_trainedMonkeys,
-      alt: "eshop for trained monkeys",
-      title: "Monkey Circus",
-      text: "A mocking E-comerce to sell monkeys, with a credit card payment implemented.",
-      link: "https://monkeycircus-2z4e865i4.now.sh",
-      icon: <SiNextdotjs />,
-      backgroundColor: 'orange',
-      show: 0.66
-    },
-    {
-      image: dev_comicPortfolio,
-      alt: "portfolio design based on comics",
-      title: "Comic Portfolio",
-      text: "A very creative portfolio with a comic theme.",
-      link: "https://new-cv-parallax.netlify.app/",
-      icon: <FaReact />,
-      backgroundColor: 'lightblue',
-      show: 0.78
-    },
-    {
-      image: dev_sphere,
-      alt: "three.js project",
-      title: "The Sphere",
-      text: "My first play with Three.js.",
-      link: "https://lordrichard-threejs-sphere.netlify.app/",
-      icon: <SiJavascript />,
-      backgroundColor: 'darkpurple',
-      show: 0.79
-    },
-    {
-      image: dev_paulsEngine,
-      alt: "google api used",
-      title: "Paul's Engine",
-      text: "A project build with Next.js using the google search API.",
-      link: "https://paul-search.vercel.app/",
-      icon: <SiNextdotjs />,
-      backgroundColor: 'strongred',
-      show: 0.9
-    },
-  ],
-};
 
 // Skills ---------------------------------------------------------------
 export const skillsHeader = {
