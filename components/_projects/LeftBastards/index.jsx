@@ -52,7 +52,7 @@ export default function LeftBastards() {
         initial="hidden"
         animate={controls}
       >
-        <Left />
+        {/* <Left /> */}
         <Right />
       </InnerContainer>
     </SectionContainer>
@@ -60,7 +60,7 @@ export default function LeftBastards() {
 }
 
 const SectionContainer = styled.section`
-  width: 100%;
+  width: 50%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -74,8 +74,9 @@ const SectionContainer = styled.section`
   background-position: center;
   background-size: cover;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 992px) {
     height: 100%;
+    width: 100%;
   }
 `;
 
@@ -87,6 +88,7 @@ const Title = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  z-index: 10;
 
   h1 {
     margin-top: 0;

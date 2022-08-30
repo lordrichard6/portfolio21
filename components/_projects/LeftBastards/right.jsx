@@ -57,7 +57,7 @@ export default function Right() {
 }
 
 const RightContainer = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,7 +65,7 @@ const RightContainer = styled.div`
   z-index: 1;
   margin: 4rem 0;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 992px) {
     width: 100%;
   }
 `;
@@ -83,7 +83,7 @@ const ImageContainer = styled.div`
     z-index: 20;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 764px) {
     order: 2;
     width: 60%;
   }
@@ -98,7 +98,7 @@ const SubTitle = styled.h2`
   z-index: 1;
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     order: 1;
     text-align: center;
   }
@@ -116,7 +116,7 @@ const Text = styled.h2`
   text-align: center;
   text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     order: 3;
     text-align: center;
   }
@@ -132,7 +132,7 @@ const IconWrapper = styled.div`
   align-items: space-between;
   margin: 2rem 0;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 764px) {
     order: 4;
     width: 80%;
   }
