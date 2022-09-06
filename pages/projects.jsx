@@ -4,14 +4,18 @@ import Developer from "../components/_projects/Developer";
 import Sardinha from "../components/_projects/Sardinha";
 import LeftBastards from "../components/_projects/LeftBastards";
 import Layout from "../components/Layout";
+import AltynaiFashion from "../components/_projects/AltynaiFashion";
 
 export default function ProjectsPage() {
   return (
     <Layout>
       <Header />
       <MainProjects>
-        <LeftBastards />
-        <Sardinha />
+        <div className="secondary">
+          <LeftBastards />
+          <Sardinha />
+        </div>
+        <AltynaiFashion />
         <BackgroundGradient></BackgroundGradient>
       </MainProjects>
       <Developer />
@@ -23,11 +27,16 @@ const MainProjects = styled.section`
   width: 100vw;
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
-  @media screen and (max-width: 992px) {
+  .secondary {
+    display: flex;
+    flex-direction: row;
+    
+    @media screen and (max-width: 992px) {
     height: 100%;
     flex-direction: column;
+  }
   }
 `;
 
