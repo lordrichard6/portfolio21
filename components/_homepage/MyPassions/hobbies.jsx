@@ -25,15 +25,13 @@ export default function HobbiesComponent() {
     visible: {
       opacity: 1,
       scale: 1,
-      rotate: 0,
-      // y: 0,
+      y: 0,
       transition: { duration: 2, type: "spring", bounce: 0.4 },
     },
     hidden: {
       opacity: 0,
       scale: 0,
-      rotate: 90,
-      // y: 100,
+      y: 100,
     },
   };
 

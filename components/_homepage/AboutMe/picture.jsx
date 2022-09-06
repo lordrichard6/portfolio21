@@ -152,7 +152,7 @@ const RightContainer = styled.div`
       margin-left: auto;
       margin-right: auto;
     }
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 412px) {
       width: 95%;
       height: 500px;
     }
@@ -171,7 +171,7 @@ const RightContainer = styled.div`
         clip-path: circle(6% at 93% 10%);
       }
 
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 412px) {
         clip-path: circle(7% at 90% 11%);
       }
 
@@ -191,9 +191,9 @@ const RightContainer = styled.div`
           right: 18px;
         }
 
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 412px) {
           font-size: 1.75em;
-          top: 14px;
+          top: 16px;
           right: 18px;
         }
       }
@@ -204,7 +204,7 @@ const RightContainer = styled.div`
         font-size: 3em;
         line-height: 1.8;
 
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 412px) {
           font-size: 2em;
           line-height: 1.2;
         }
@@ -257,7 +257,7 @@ const RightContainer = styled.div`
       @media screen and (max-width: 764px) {
         width: 600px;
       }
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 412px) {
         width: 400px;
       }
 
