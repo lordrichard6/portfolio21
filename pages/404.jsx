@@ -1,34 +1,164 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 import Image from "next/image";
-import Link from 'next/link'
+import Link from "next/link";
 
-import { Colors } from '../assets/variables'
-import logo from '../public/icon.png'
+import { Colors } from "../assets/variables";
+import logo from "../public/icon.png";
 
 export default function Page404() {
-    return (
-            <PageContainer>
-                <Link href='/'><a><Image src={logo} alt="logo" height={300} width={300} /></a></Link>
-                <Title>Coming Soon</Title>
-                <Title>Be Patient!!</Title>
-            </PageContainer>
-    )
+  return (
+    <PageContainer>
+      <div className="container-404 container-star">
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-1"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+        <div className="star-2"></div>
+      </div>
+      <div className="container container-bird">
+        <div className="bird bird-anim">
+          <div className="bird-container">
+            <div className="wing wing-left">
+              <div className="wing-left-top"></div>
+            </div>
+            <div className="wing wing-right">
+              <div className="wing-right-top"></div>
+            </div>
+          </div>
+        </div>
+        <div className="bird bird-anim">
+          <div className="bird-container">
+            <div className="wing wing-left">
+              <div className="wing-left-top"></div>
+            </div>
+            <div className="wing wing-right">
+              <div className="wing-right-top"></div>
+            </div>
+          </div>
+        </div>
+        <div className="bird bird-anim">
+          <div className="bird-container">
+            <div className="wing wing-left">
+              <div className="wing-left-top"></div>
+            </div>
+            <div className="wing wing-right">
+              <div className="wing-right-top"></div>
+            </div>
+          </div>
+        </div>
+        <div className="bird bird-anim">
+          <div className="bird-container">
+            <div className="wing wing-left">
+              <div className="wing-left-top"></div>
+            </div>
+            <div className="wing wing-right">
+              <div className="wing-right-top"></div>
+            </div>
+          </div>
+        </div>
+        <div className="bird bird-anim">
+          <div className="bird-container">
+            <div className="wing wing-left">
+              <div className="wing-left-top"></div>
+            </div>
+            <div className="wing wing-right">
+              <div className="wing-right-top"></div>
+            </div>
+          </div>
+        </div>
+        <div className="bird bird-anim">
+          <div className="bird-container">
+            <div className="wing wing-left">
+              <div className="wing-left-top"></div>
+            </div>
+            <div className="wing wing-right">
+              <div className="wing-right-top"></div>
+            </div>
+          </div>
+        </div>
+        <div className="container-title">
+          <div className="title">
+            <div className="number">4</div>
+            <div className="moon">
+              <div className="face">
+                <div className="mouth"></div>
+                <div className="eyes">
+                  <div className="eye-left"></div>
+                  <div className="eye-right"></div>
+                </div>
+              </div>
+            </div>
+            <div className="number">4</div>
+          </div>
+          <div className="subtitle">Heyy! This page has never been born.</div>
+          <button><Link prefetch href="/">
+              <a>
+              Go back
+              </a>
+            </Link></button>
+        </div>
+      </div>
+    </PageContainer>
+  );
 }
 
 const PageContainer = styled.div`
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-`
-
-const Title = styled.h1`
-        margin: 0;
-        color: ${Colors.primary};
-        font-size: 3.25rem;
-        font-weight: 400;
-        letter-spacing: 0.1em;
-`
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+`;
