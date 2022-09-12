@@ -6,6 +6,7 @@ import {
   FaTwitter,
   FaLinkedin,
   FaReact,
+  FaAngular
 } from "react-icons/fa";
 import { SiNextdotjs, SiJavascript } from "react-icons/si";
 
@@ -23,6 +24,7 @@ import currentFirstV from "../images/projects/dev/current01.png";
 import dev_leftBastards from "../images/projects/dev/latest_03.jpg";
 import dev_sardinha from "../images/projects/dev/latest_02.jpg";
 import dev_myPortfolio from "../images/projects/dev/latest_04.jpg";
+import book_shop from "../images/projects/dev/a16-book-shop.png";
 
 export const leftBastards = [
   {
@@ -67,6 +69,18 @@ export const sardinhaDrive = [
 ];
 
 export const projects = [
+  {
+    image: book_shop,
+    alt: "online book shop",
+    title: "BookShop",
+    text: "",
+    techs: 'Angular16 - FireBase - TailwindCSS',
+    link: "https://book-store-51c18.web.app/",
+    github: 'https://github.com/lordrichard6/angular-14-book-shop',
+    icon: <FaAngular />,
+    backgroundColor: "blue",
+    show: 0.2,
+  },
   {
     image: dev_fastRent,
     alt: "car rental website",

@@ -91,6 +91,7 @@ const SectionContainer = styled.section`
     }
   }
   .name {
+    text-align: center;
     width: 50%;
     @media screen and (max-width: 500px) {
       width: 80%;
