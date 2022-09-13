@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import ReactTypingEffect from "react-typing-effect";
 import useTranslation from "next-translate/useTranslation";
 
 import { Colors } from "../../../assets/variables";
@@ -11,41 +10,42 @@ export default function HomepageTitleComponent() {
     <SloganContainer>
       <Title>
         <div id="title1" className="glitch" data-text={t("home:header_01")}>
-          <span className="glitch__color glitch__color--red">{t("home:header_01")}</span>
-          <span className="glitch__color glitch__color--blue">{t("home:header_01")}</span>
-          <span className="glitch__color glitch__color--green">{t("home:header_01")}</span>
+          <span className="glitch__color glitch__color--red">
+            {t("home:header_01")}
+          </span>
+          <span className="glitch__color glitch__color--blue">
+            {t("home:header_01")}
+          </span>
+          <span className="glitch__color glitch__color--green">
+            {t("home:header_01")}
+          </span>
           <span className="glitch__main">{t("home:header_01")}</span>
-
         </div>
         <div id="title2" className="glitch" data-text={t("home:header_02")}>
-          <span className="glitch__color glitch__color--red">{t("home:header_02")}</span>
-          <span className="glitch__color glitch__color--blue">{t("home:header_02")}</span>
-          <span className="glitch__color glitch__color--green">{t("home:header_02")}</span>
+          <span className="glitch__color glitch__color--red">
+            {t("home:header_02")}
+          </span>
+          <span className="glitch__color glitch__color--blue">
+            {t("home:header_02")}
+          </span>
+          <span className="glitch__color glitch__color--green">
+            {t("home:header_02")}
+          </span>
           <span className="glitch__main">{t("home:header_02")}</span>
         </div>
         <div id="title3" className="glitch" data-text={t("home:header_03")}>
-          <span className="glitch__color glitch__color--red">{t("home:header_03")}</span>
-          <span className="glitch__color glitch__color--blue">{t("home:header_03")}</span>
-          <span className="glitch__color glitch__color--green">{t("home:header_03")}</span>
+          <span className="glitch__color glitch__color--red">
+            {t("home:header_03")}
+          </span>
+          <span className="glitch__color glitch__color--blue">
+            {t("home:header_03")}
+          </span>
+          <span className="glitch__color glitch__color--green">
+            {t("home:header_03")}
+          </span>
           <span className="glitch__main">{t("home:header_03")}</span>
         </div>
-        {/* <ReactTypingEffect
-          text={t("home:header_01")}
-          speed={120}
-          eraseDelay={700}
-        />
-        <ReactTypingEffect
-          text={t("home:header_02")}
-          speed={140}
-          eraseDelay={700}
-        />
-        <ReactTypingEffect
-          text={t("home:header_03")}
-          speed={100}
-          eraseDelay={700}
-        /> */}
       </Title>
-      {/* <Animation /> */}
       <SubTitle>{t("home:header_slogan")}</SubTitle>
     </SloganContainer>
   );
@@ -65,7 +65,6 @@ const SloganContainer = styled.div`
 const Title = styled.div`
   font-size: 3rem;
   font-weight: 900;
-  /* font-family: orbitron, sans-serif; */
   line-height: 1.2;
   text-transform: uppercase;
 
@@ -91,7 +90,6 @@ const Title = styled.div`
     /* text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary}; */
     animation: glitch-skew 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s infinite;
     position: relative;
-    /* text-align: center; */
     transform-origin: center top;
 
     &__main {
@@ -201,21 +199,6 @@ const Title = styled.div`
       top: 100%;
     }
   }
-
-  /* typing style
-  text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary};
-  color: #eee;
-  display: flex;
-  flex-direction: column;
-  animation: showTitle 3.8s linear;
-
-  @media screen and (max-width: 768px) {
-    font-size: 2.5rem;
-  }
-  @media screen and (min-width: 2560px) {
-    font-size: 5rem;
-    font-weight: 600;
-  } */
 
   @keyframes showTitle {
     0% {

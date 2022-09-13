@@ -2,46 +2,34 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import { homeHeader } from "../../../assets/data";
-import CometsComponent from './comets'
-import HomepageTitleComponent from './title'
-import HeaderImageComponent from './image'
-import StarsComponent from './stars'
-
+import CometsComponent from "./comets";
+import HomepageTitleComponent from "./title";
+import HeaderImageComponent from "./image";
+import StarsComponent from "./stars";
 
 export default function Header() {
-
   return (
-    <SectionContainer id="top">
-      <Background
+    <SectionContainer id="top" className="h-screen w-full flex justify-center itens-center">
+      <Image
         src={homeHeader.backgroundImage}
         layout="fill"
         objectFit="cover"
         objectPosition="center"
         alt="paulo reizinho header"
+        className="z-0"
       />
       <StarsComponent />
       <CometsComponent />
-      <InnerContainer>
+      <div className="w-4/5 lg:w-3/4 relative flex flex-col-reverse lg:flex-row justify-center items-center text-center lg:text-left py-24">
         <HomepageTitleComponent />
         <HeaderImageComponent />
-      </InnerContainer>
+      </div>
     </SectionContainer>
   );
 }
 
 const SectionContainer = styled.header`
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6rem 0;
   animation: flash 3.1s linear;
-
-  @media screen and (max-width: 500px) {
-    height: 100%;
-  }
 
   @keyframes flash {
     0% {
@@ -57,24 +45,4 @@ const SectionContainer = styled.header`
       filter: blur(0) brightness(1);
     }
   }
-`;
-
-const InnerContainer = styled.div`
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (max-width: 1024px) {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-  @media screen and (min-width: 1080px) {
-    width: 70%;
-  }
-`;
-
-const Background = styled(Image)`
-  z-index: 0;
 `;
