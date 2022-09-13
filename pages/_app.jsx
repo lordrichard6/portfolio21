@@ -1,14 +1,7 @@
 import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
 
-import "../styles/globals.scss";
-import "../styles/custom.scss";
-import "../styles/hexagon.scss";
-import "../styles/aboutme.scss";
-import "../styles/gallery.scss";
-import "../styles/hobbies.scss";
-import "../styles/stars.scss";
-import "../styles/404.scss";
+import "../styles/main.scss";
 import "nprogress/nprogress.css"; //styles of nprogress
 
 //Binding events.

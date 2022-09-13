@@ -10,8 +10,8 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Paulo Reizinho</title>
           <meta name="description" content="Paulo Reizinho portfolio" />
+          <meta name="google-site-verification" content="fz36mAU8oe5cQ1weXZqrsHihiDBj-G6u72mdREUjVYk" />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>

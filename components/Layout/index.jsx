@@ -17,12 +17,6 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>Paulo Reizinho</title>
-        <meta name="description" content="Paulo Reizinho Developer Portfolio" />
-        <meta
-          name="google-site-verification"
-          content="fz36mAU8oe5cQ1weXZqrsHihiDBj-G6u72mdREUjVYk"
-        />
-        <link rel="icon" href="/logo_clean.png" />
       </Head>
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
@@ -38,6 +32,6 @@ const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
+  background: $primary-background;
   /* overflow-x: hidden; */
 `;
