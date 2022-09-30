@@ -2,9 +2,9 @@ import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
-import { API, BlogArticleType } from "src/types";
+import { API, BlogArticleType } from "../types";
 
-const articlesDirectory = join(process.cwd(), "src/articles");
+const articlesDirectory = join(process.cwd(), "../articles");
 
 function getRawArticleBySlug(slug: string): matter.GrayMatterFile<string> {
   const fullPath = join(articlesDirectory, `${slug}.mdx`);

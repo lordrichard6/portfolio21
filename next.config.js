@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextTranslate = require("next-translate");
 
-module.exports = {
+const nextConfig = {
+  // basePath: '/',
   reactStrictMode: false,
   ...nextTranslate(),
 }
+
+module.exports = nextConfig
