@@ -21,10 +21,10 @@ export default function SocialLinksComponent() {
         <Icon href="https://www.instagram.com/paulo_reizinho/" target="_blank">
           <FaInstagram alt="instagram paulo reizinho profile" />
         </Icon>
-        <Icon href="https://https://github.com/lordrichard6" target="_blank">
+        <Icon href="https://github.com/lordrichard6" target="_blank">
           <FaGithub alt="github paulo reizinho profile" />
         </Icon>
-        <Icon href="https://discord.gg/2UPrkCUU" target="_blank">
+        <Icon href="https://discord.gg/3seHDYvu" target="_blank">
           <FaDiscord alt="discord paulo reizinho" />
         </Icon>
         <Icon href="https://wa.link/sru6m7" target="_blank">
