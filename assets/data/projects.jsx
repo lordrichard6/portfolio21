@@ -21,8 +21,9 @@ import dev_sphere from "../images/projects/dev/p11-min.jpg";
 import dev_comicPortfolio from "../images/projects/dev/p14-min.jpg";
 import dev_blueVariant from "../images/projects/dev/latest_01.jpg";
 import currentFirstV from "../images/projects/dev/current01.png";
-import dev_leftBastards from "../images/projects/dev/latest_03.jpg";
-import dev_sardinha from "../images/projects/dev/latest_02.jpg";
+import dev_leftBastards from "../images/projects/dev/left.png";
+import dev_sardinha from "../images/projects/dev/sardinha.png";
+import dev_altynay from "../images/projects/dev/altynay.png";
 import dev_myPortfolio from "../images/projects/dev/latest_04.jpg";
 import book_shop from "../images/projects/dev/a16-book-shop.png";
 
@@ -70,16 +71,40 @@ export const sardinhaDrive = [
 
 export const projects = [
   {
-    image: book_shop,
-    alt: "online book shop",
-    title: "BookShop",
+    image: dev_altynay,
+    alt: "online clothing shop",
+    title: "Altynay Fashion",
     text: "",
-    techs: 'Angular16 - FireBase - TailwindCSS',
-    link: "https://book-store-51c18.web.app/",
-    github: 'https://github.com/lordrichard6/angular-14-book-shop',
-    icon: <FaAngular />,
-    backgroundColor: "blue",
+    techs: 'NextJS - MongoDB - TailwindCSS',
+    link: "https://altynai-fashion.vercel.app/",
+    github: 'https://github.com/lordrichard6/altynai-ecommerce-shop',
+    icon: <SiNextdotjs />,
+    backgroundColor: "red",
+    show: 0.1,
+  },
+  {
+    image: dev_leftBastards,
+    alt: "left bastards",
+    title: "Left Bastards",
+    text: "",
+    techs: 'NextJS - styled-components - typescript',
+    link: "https://left-bastards.vercel.app/",
+    github: 'https://github.com/lordrichard6/left_bastards',
+    icon: <SiNextdotjs />,
+    backgroundColor: "yellow",
     show: 0.2,
+  },
+  {
+    image: dev_sardinha,
+    alt: "sardinha drive",
+    title: "Sardinha Drive",
+    text: "",
+    techs: 'NextJS - styled-components - typescript',
+    link: "https://www.sardinhadrive.ch/",
+    github: 'https://github.com/lordrichard6/patricia_project',
+    icon: <SiNextdotjs />,
+    backgroundColor: "blue",
+    show: 0.25,
   },
   {
     image: dev_fastRent,

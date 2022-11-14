@@ -11,14 +11,9 @@ export default function ProjectsPage() {
     <Layout>
       <Header />
       <MainProjects>
-        <div className="secondary">
-          <LeftBastards />
-          <Sardinha />
-        </div>
-        <AltynaiFashion />
-        <BackgroundGradient></BackgroundGradient>
+        {/* <BackgroundGradient></BackgroundGradient> */}
+        <Developer />
       </MainProjects>
-      <Developer />
     </Layout>
   );
 }
@@ -32,17 +27,17 @@ const MainProjects = styled.section`
   .secondary {
     display: flex;
     flex-direction: row;
-    
+
     @media screen and (max-width: 992px) {
-    height: 100%;
-    flex-direction: column;
-  }
+      height: 100%;
+      flex-direction: column;
+    }
   }
 `;
 
 const BackgroundGradient = styled.div`
   position: absolute;
-
+  z-index: 10;
   width: 100%;
   height: 100%;
   background: linear-gradient(
