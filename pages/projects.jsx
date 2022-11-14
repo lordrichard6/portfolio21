@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import Header from "../components/_projects/Header";
 import Developer from "../components/_projects/Developer";
-import Sardinha from "../components/_projects/Sardinha";
-import LeftBastards from "../components/_projects/LeftBastards";
 import Layout from "../components/Layout";
-import AltynaiFashion from "../components/_projects/AltynaiFashion";
 
 export default function ProjectsPage() {
   return (
@@ -12,8 +9,8 @@ export default function ProjectsPage() {
       <Header />
       <MainProjects>
         {/* <BackgroundGradient></BackgroundGradient> */}
-        <Developer />
       </MainProjects>
+      <Developer />
     </Layout>
   );
 }

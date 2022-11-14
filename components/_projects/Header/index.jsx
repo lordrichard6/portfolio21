@@ -26,7 +26,7 @@ export default function Header() {
       <MoonAndSun />
       <Animation />
       <div className="night" style={{ transform: `translateY(${offsetY * 0.1}px)` }}>
-        <Image src={Night} alt="" objectFit="cover" layout="fill" />
+        {/* <Image src={Night} alt="" objectFit="cover" layout="fill" /> */}
       </div>
       <StarsComponent />
     </SectionContainer>
@@ -52,8 +52,9 @@ const SectionContainer = styled.header`
   .night {
     position: absolute;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, #283E51, #0A2342);
     transition: 2s all ease;
     animation: bringNight 4.2s linear;
   }

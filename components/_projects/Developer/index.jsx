@@ -7,7 +7,7 @@ import Project from "./project";
 export default function Developer() {
   return (
     <SectionContainer>
-      <OtherProjects>
+      <ProjectsContainer>
         {projects.map((item, i) => {
           return (
             <Project
@@ -24,7 +24,7 @@ export default function Developer() {
             />
           );
         })}
-      </OtherProjects>
+      </ProjectsContainer>
     </SectionContainer>
   );
 }
@@ -45,7 +45,7 @@ const SectionContainer = styled.section`
   }
 `;
 
-const OtherProjects = styled.div`
+const ProjectsContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;

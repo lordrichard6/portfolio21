@@ -1,13 +1,4 @@
-import {
-  FaInstagram,
-  FaFacebookF,
-  FaLaptop,
-  FaYoutubeSquare,
-  FaTwitter,
-  FaLinkedin,
-  FaReact,
-  FaAngular
-} from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
 import { SiNextdotjs, SiJavascript } from "react-icons/si";
 
 import dev_fastRent from "../images/projects/dev/p10-min.jpg";
@@ -16,7 +7,6 @@ import dev_skyTours from "../images/projects/dev/p06-min.jpg";
 import dev_hulu from "../images/projects/dev/p08-min.jpg";
 import dev_trainedMonkeys from "../images/projects/dev/p05-min.jpg";
 import dev_paulsEngine from "../images/projects/dev/p07-min.jpg";
-import dev_netflix from "../images/projects/dev/p02-min.jpg";
 import dev_sphere from "../images/projects/dev/p11-min.jpg";
 import dev_comicPortfolio from "../images/projects/dev/p14-min.jpg";
 import dev_blueVariant from "../images/projects/dev/latest_01.jpg";
@@ -24,50 +14,48 @@ import currentFirstV from "../images/projects/dev/current01.png";
 import dev_leftBastards from "../images/projects/dev/left.png";
 import dev_sardinha from "../images/projects/dev/sardinha.png";
 import dev_altynay from "../images/projects/dev/altynay.png";
-import dev_myPortfolio from "../images/projects/dev/latest_04.jpg";
-import book_shop from "../images/projects/dev/a16-book-shop.png";
 
-export const leftBastards = [
-  {
-    href: "https://www.instagram.com/left_bastards/",
-    icon: <FaInstagram className="hover" alt="instagram left bastards" />,
-  },
-  {
-    href: "https://www.facebook.com/groups/728183861271658/?ref=share",
-    icon: <FaFacebookF className="hover" alt="facebook left bastards" />,
-  },
-  {
-    href: "https://www.youtube.com/channel/UCFDqsXZSVve8LXMa5uevdyg",
-    icon: <FaYoutubeSquare className="hover" alt="youtube left bastards" />,
-  },
-  {
-    href: "https://left-bastards.vercel.app/",
-    icon: <FaLaptop className="hover" alt="official website left bastards" />,
-  },
-];
+// export const leftBastards = [
+//   {
+//     href: "https://www.instagram.com/left_bastards/",
+//     icon: <FaInstagram className="hover" alt="instagram left bastards" />,
+//   },
+//   {
+//     href: "https://www.facebook.com/groups/728183861271658/?ref=share",
+//     icon: <FaFacebookF className="hover" alt="facebook left bastards" />,
+//   },
+//   {
+//     href: "https://www.youtube.com/channel/UCFDqsXZSVve8LXMa5uevdyg",
+//     icon: <FaYoutubeSquare className="hover" alt="youtube left bastards" />,
+//   },
+//   {
+//     href: "https://left-bastards.vercel.app/",
+//     icon: <FaLaptop className="hover" alt="official website left bastards" />,
+//   },
+// ];
 
-export const sardinhaDrive = [
-  {
-    href: "https://www.instagram.com/sardinhadrive/",
-    icon: <FaInstagram className="hover" alt="instagram sardinha drive" />,
-  },
-  {
-    href: "https://www.facebook.com/sardinhadrive",
-    icon: <FaFacebookF className="hover" alt="facebook sardinha drive" />,
-  },
-  {
-    href: "https://www.linkedin.com/company/sardinha-drive",
-    icon: <FaLinkedin className="hover" alt="linkedin sardinha drive" />,
-  },
-  {
-    href: "https://twitter.com/SardinhaDrive",
-    icon: <FaTwitter className="hover" alt="twitter sardinha drive" />,
-  },
-  {
-    href: "https://patricia-vila-nova.vercel.app/",
-    icon: <FaLaptop className="hover" alt="official website sardinha drive" />,
-  },
-];
+// export const sardinhaDrive = [
+//   {
+//     href: "https://www.instagram.com/sardinhadrive/",
+//     icon: <FaInstagram className="hover" alt="instagram sardinha drive" />,
+//   },
+//   {
+//     href: "https://www.facebook.com/sardinhadrive",
+//     icon: <FaFacebookF className="hover" alt="facebook sardinha drive" />,
+//   },
+//   {
+//     href: "https://www.linkedin.com/company/sardinha-drive",
+//     icon: <FaLinkedin className="hover" alt="linkedin sardinha drive" />,
+//   },
+//   {
+//     href: "https://twitter.com/SardinhaDrive",
+//     icon: <FaTwitter className="hover" alt="twitter sardinha drive" />,
+//   },
+//   {
+//     href: "https://patricia-vila-nova.vercel.app/",
+//     icon: <FaLaptop className="hover" alt="official website sardinha drive" />,
+//   },
+// ];
 
 export const projects = [
   {
@@ -75,9 +63,9 @@ export const projects = [
     alt: "online clothing shop",
     title: "Altynay Fashion",
     text: "",
-    techs: 'NextJS - MongoDB - TailwindCSS',
+    techs: "NextJS - MongoDB - TailwindCSS",
     link: "https://altynai-fashion.vercel.app/",
-    github: 'https://github.com/lordrichard6/altynai-ecommerce-shop',
+    github: "https://github.com/lordrichard6/altynai-ecommerce-shop",
     icon: <SiNextdotjs />,
     backgroundColor: "red",
     show: 0.1,
@@ -87,9 +75,9 @@ export const projects = [
     alt: "left bastards",
     title: "Left Bastards",
     text: "",
-    techs: 'NextJS - styled-components - typescript',
+    techs: "NextJS - styled-components - typescript",
     link: "https://left-bastards.vercel.app/",
-    github: 'https://github.com/lordrichard6/left_bastards',
+    github: "https://github.com/lordrichard6/left_bastards",
     icon: <SiNextdotjs />,
     backgroundColor: "yellow",
     show: 0.2,
@@ -99,9 +87,9 @@ export const projects = [
     alt: "sardinha drive",
     title: "Sardinha Drive",
     text: "",
-    techs: 'NextJS - styled-components - typescript',
+    techs: "NextJS - styled-components - typescript",
     link: "https://www.sardinhadrive.ch/",
-    github: 'https://github.com/lordrichard6/patricia_project',
+    github: "https://github.com/lordrichard6/patricia_project",
     icon: <SiNextdotjs />,
     backgroundColor: "blue",
     show: 0.25,
@@ -111,9 +99,9 @@ export const projects = [
     alt: "car rental website",
     title: "FastRent",
     text: "A beautifull car rental website made with React using typescript. Used styled-components together with tailwind to style the page.",
-    techs: 'ReactJS - Redux - StyledC',
+    techs: "ReactJS - Redux - StyledC",
     link: "https://lordrichard-rentfast.netlify.app/",
-    github: 'https://github.com/lordrichard6/rent-fast',
+    github: "https://github.com/lordrichard6/rent-fast",
     icon: <FaReact />,
     backgroundColor: "red",
     show: 0.3,
@@ -123,9 +111,9 @@ export const projects = [
     alt: "world tours website",
     title: "Skytours",
     text: "This project was initially built using html and Sass, then later I converted to React maintaning the Sass styling system, elegant design of a tours agency.",
-    techs: 'ReactJS - SASS - Jest',
+    techs: "ReactJS - SASS - Jest",
     link: "https://reizinho-skytours.netlify.com/",
-    github: 'https://github.com/lordrichard6/skytours',
+    github: "https://github.com/lordrichard6/skytours",
     icon: <FaReact />,
     backgroundColor: "green",
     show: 0.54,
@@ -135,7 +123,7 @@ export const projects = [
     alt: "movie streaming platform hulu",
     title: "Hulu clone",
     text: "Built with Next.js imitating the design of the famous movie streaming platform Hulu, using the database of an API movie site TMDB.",
-    techs: 'NextJS - Tailwind - MovieDB APi',
+    techs: "NextJS - Tailwind - MovieDB APi",
     link: "https://hulu-clone-rosy.vercel.app/",
     github: "https://github.com/lordrichard6/hulu_clone",
     icon: <SiNextdotjs />,
@@ -161,7 +149,7 @@ export const projects = [
     text: "My first play with Three.js.",
     techs: "JavaScript - ThreeJS",
     link: "https://lordrichard-threejs-sphere.netlify.app/",
-    github:"https://github.com/lordrichard6/threejs_sphere",
+    github: "https://github.com/lordrichard6/threejs_sphere",
     icon: <SiJavascript />,
     backgroundColor: "darkpurple",
     show: 0.79,
@@ -183,9 +171,9 @@ export const projects = [
     alt: "paulo reizinho forth portfolio first version",
     title: "Current Portfolio v1.0",
     text: "The first version of this website's design",
-    techs: 'NextJS - StyledC - FramerMotion',
+    techs: "NextJS - StyledC - FramerMotion",
     link: "https://pauloreizinho21.netlify.app/",
-    github: '',
+    github: "",
     icon: <FaReact />,
     backgroundColor: "blue",
     show: 0.14,
@@ -195,9 +183,9 @@ export const projects = [
     alt: "paulo reizinho third portfolio",
     title: "3rd Portfolio",
     text: "The first version of this website's design",
-    techs: 'ReactJS - Typescript - StyledC',
+    techs: "ReactJS - Typescript - StyledC",
     link: "https://lordrichard-cv-blue.netlify.app/",
-    github: 'https://github.com/lordrichard6/react_cv_blue',
+    github: "https://github.com/lordrichard6/react_cv_blue",
     icon: <SiNextdotjs />,
     backgroundColor: "blue",
     show: 0.13,
@@ -207,9 +195,9 @@ export const projects = [
     alt: "paulo reizinho portfolio design based on comics",
     title: "2nd Portfolio",
     text: "A very creative portfolio with a comic theme.",
-    techs: 'ReactJS - Tailwind - StyledC',
+    techs: "ReactJS - Tailwind - StyledC",
     link: "https://new-cv-parallax.netlify.app/",
-    github: 'https://github.com/lordrichard6/react_cv_parallax',
+    github: "https://github.com/lordrichard6/react_cv_parallax",
     icon: <FaReact />,
     backgroundColor: "lightblue",
     show: 0.78,
@@ -219,9 +207,9 @@ export const projects = [
     alt: "paulo reizinho first portfolio",
     title: "1st Portfolio",
     text: "Created with React.js with and elengant and simplistic design",
-    techs: 'ReactJS - SASS',
+    techs: "ReactJS - SASS",
     link: "https://reizinhocv.netlify.app/",
-    github: 'https://github.com/lordrichard6/reactCV',
+    github: "https://github.com/lordrichard6/reactCV",
     icon: <FaReact />,
     backgroundColor: "yellow",
     show: 0.37,
