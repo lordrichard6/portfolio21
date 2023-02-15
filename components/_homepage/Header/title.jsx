@@ -53,12 +53,13 @@ const SloganContainer = styled.div`
 const Title = styled.div`
   text-align: center;
   padding-right: 2rem;
-  font-size: 2rem;
-  font-weight: 900;
+  font-size: 2.4rem;
   color: #eee;
-  font-family: orbitron, sans-serif;
+  font-family: 'Work Sans', sans-serif;
   line-height: 1.2;
   text-transform: uppercase;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary};
+  animation: showTitle 3.8s linear;
 
   @media screen and (max-width: 768px) {
     font-size: 1.5rem;
@@ -69,7 +70,10 @@ const Title = styled.div`
     font-weight: 600;
   }
 
-
+  h1 {
+    margin: 0;
+    font-weight: 900;
+  }
   /* typing style
   text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary};
   color: #eee;
