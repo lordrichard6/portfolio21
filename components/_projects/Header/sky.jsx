@@ -20,10 +20,10 @@ export default function MoonAndSun() {
     <>
       <CometsComponent />
       <MoonContainer style={{ transform: `translate(-50%,${offsetY * 0.5}px) rotate(180deg)` }}>
-        <Image src={Moon} alt="" />
+        <Image className="img" src={Moon} alt="" />
       </MoonContainer>
       <SunContainer style={{ transform: `translate(50%,${offsetY * 0.5}px) rotate(45deg)` }}>
-        <Image src={Sun} alt="" />
+        <Image className="img" src={Sun} alt="" />
       </SunContainer>
     </>
   );
@@ -37,6 +37,11 @@ const MoonContainer = styled.div`
   height: auto;
   z-index: 2;
   animation: moveMoon 4s linear;
+
+  .img {
+    width: 100%;
+    height: auto;
+  }
   
   @keyframes moveMoon {
     0% {
@@ -58,6 +63,11 @@ const SunContainer = styled.div`
   height: auto;
   z-index: 1;
   animation: moveSun 4s linear;
+
+  .img {
+    width: 100%;
+    height: auto;
+  }
 
   @keyframes moveSun {
     0% {
