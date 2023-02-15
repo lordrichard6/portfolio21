@@ -6,7 +6,7 @@ import Mario from "../../assets/images/mario.gif";
 export default function MarioAnimationComponent() {
   return (
     <Container>
-      <Image src={Mario} alt="" />
+      <Image className="mario" src={Mario} alt="" />
     </Container>
   );
 }
@@ -21,6 +21,11 @@ const Container = styled.div`
   @media screen and (max-width: 576px) {
     left: -200px;
     animation: moveMarioMobile 30s infinite;
+  }
+
+  .mario {
+    height: 100%;
+    width: 100%;
   }
 
   @keyframes moveMario {
