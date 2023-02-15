@@ -140,8 +140,8 @@ const RightContainer = styled.div`
   .outer {
     position: relative;
     background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-    width: 600px;
-    height: 800px;
+    width: 550px;
+    height: 750px;
     z-index: 1;
     overflow: hidden;
     border-radius: 16px;
@@ -249,7 +249,7 @@ const RightContainer = styled.div`
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 800px;
+      width: 700px;
       z-index: 0;
       /* filter: grayscale(100%); */
       transition: all 500ms ease-in-out;
