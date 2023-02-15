@@ -113,10 +113,10 @@ export default function AboutPictureComponent() {
             </p>
           </div>
           <figure className="picture">
-            <Image src={MeFormal} alt="paulo reizinho" objectFit="cover" />
+            <Image className="me" src={MeFormal} alt="paulo reizinho" />
           </figure>
           <figure className="picture glasses">
-            <Image src={MeFormalG} alt="paulo reizinho" objectFit="cover" />
+            <Image className="me" src={MeFormalG} alt="paulo reizinho" />
           </figure>
         </div>
       </div>
@@ -259,6 +259,11 @@ const RightContainer = styled.div`
       }
       @media screen and (max-width: 412px) {
         width: 400px;
+      }
+
+      .me {
+        width: 100%;
+        height: auto;
       }
 
       &.glasses {
