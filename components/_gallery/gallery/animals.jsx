@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
+import styled from "styled-components";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function GalleryAnimals({image, className, alt}) {
+export default function GalleryAnimals({ image, className, alt }) {
   const bringUp = {
     visible: {
       opacity: 1,
@@ -28,15 +29,24 @@ export default function GalleryAnimals({image, className, alt}) {
   }, [controls, inView]);
 
   return (
-        <motion.figure 
-          className={className}
-          variants={bringUp}
-          initial="hidden"
-          animate={controls}
-          ref={ref}
-        >
-          <Image src={image} alt={alt} objectFit="cover" />
-        </motion.figure>
-
+    <Container>
+      <motion.figure
+        className={className}
+        variants={bringUp}
+        initial="hidden"
+        animate={controls}
+        ref={ref}
+      >
+        <Image className="img" src={image} alt={alt} objectFit="cover" />
+      </motion.figure>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  .img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+`;
