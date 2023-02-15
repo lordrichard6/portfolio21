@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <SectionContainer id="top">
       <div className="day">
-        <Image src={Day} alt="" objectFit="cover" layout="fill" />
+        <Image src={Day} alt="" cover fill />
       </div>
       <MoonAndSun />
       <Animation />
