@@ -33,7 +33,7 @@ export default function Modal({ clickedImg, setClickedImg }) {
     hidden: {
       opacity: 0,
       scale: 0,
-      y: 500
+      y: 500,
     },
   };
 
@@ -69,7 +69,7 @@ export default function Modal({ clickedImg, setClickedImg }) {
       animate={controls}
     >
       <div className="picture-wrapper">
-        <motion.div 
+        <motion.div
           className="close"
           variants={bringCross}
           initial="hidden"
@@ -77,19 +77,13 @@ export default function Modal({ clickedImg, setClickedImg }) {
         >
           <ImCross style={{ cursor: "pointer" }} onClick={handleClick} />
         </motion.div>
-        <motion.figure 
+        <motion.figure
           className="image-container"
           variants={bringPicture}
           initial="hidden"
           animate={controls}
         >
-          <Image
-            src={clickedImg}
-            alt=""
-            objectFit="cover"
-            layout="responsive"
-            quality="100"
-          />
+          <Image className="mainImage" src={clickedImg} alt="" quality="100" />
         </motion.figure>
       </div>
     </Container>
@@ -122,6 +116,12 @@ const Container = styled.div`
       width: 90%;
       top: 10%;
       padding-top: 28px;
+    }
+
+    .mainImage {
+      object-fit: cover;
+      height: auto;
+      width: 100%;
     }
   }
   .close {
