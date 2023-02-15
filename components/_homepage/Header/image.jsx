@@ -6,7 +6,7 @@ import { homeHeader } from "../../../assets/data";
 export default function HeaderImageComponent() {
   return (
     <ImageContainer>
-      <Image src={homeHeader.logo} alt="paulo reizinho logo" />
+      <LogoWrapper responsive src={homeHeader.logo} alt="paulo reizinho logo" />
     </ImageContainer>
   );
 }
@@ -14,6 +14,7 @@ export default function HeaderImageComponent() {
 const ImageContainer = styled.figure`
   width: 50%;
   height: auto;
+  z-index: 1;
   animation: showHead 3s linear;
   /* filter: drop-shadow(10px 10px 5px #1a1a1a); */
 
@@ -75,3 +76,8 @@ const ImageContainer = styled.figure`
     }
   }
 `;
+
+const LogoWrapper = styled(Image)`
+  width: 100%;
+  height: auto;
+`
