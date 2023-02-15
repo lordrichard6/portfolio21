@@ -164,6 +164,7 @@ const HobbyElements = styled.div`
   flex-direction: column;
   width: 100%;
   height: 1680px;
+  z-index: 1;
 
   @media screen and (max-width: 764px) {
     height: 910px;

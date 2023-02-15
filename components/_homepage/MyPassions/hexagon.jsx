@@ -98,7 +98,7 @@ const HexagonBig = styled.div`
   top: 420px;
   height: 700px;
   width: 800px;
-  z-index: 100;
+  /* z-index: 100; */
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   background: #20303c;
   background: linear-gradient(to top, #283e51, #0a2342);
