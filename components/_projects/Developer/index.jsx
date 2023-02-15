@@ -7,6 +7,7 @@ import Project from "./project";
 export default function Developer() {
   return (
     <SectionContainer>
+      <BackgroundGradient></BackgroundGradient>
       <ProjectsContainer>
         {projects.map((item, i) => {
           return (
@@ -30,6 +31,7 @@ export default function Developer() {
 }
 
 const SectionContainer = styled.section`
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -49,4 +51,17 @@ const ProjectsContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+`;
+
+const BackgroundGradient = styled.div`
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    #1d2124 0%,
+    rgba(0, 0, 0, 0.2) 38.54%,
+    rgba(0, 0, 0, 0) 100%
+  );
 `;

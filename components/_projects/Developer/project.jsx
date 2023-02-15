@@ -62,7 +62,7 @@ export default function Project({
       className={backgroundColor}
     >
       <ImageWrapper className="image">
-        <Image src={src} objectFit="cover" objectPosition="center" alt={alt} />
+        <Image className="projectImage" src={src} alt={alt} />
       </ImageWrapper>
       <div className="content">
         <h2>{title}</h2>
@@ -104,6 +104,12 @@ const ImageWrapper = styled.figure`
   height: 100%;
   transition: all 0.3s;
   margin: 0;
+
+  .projectImage {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
 `;
 
 const ProjectWrapper = styled.div`

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Image from "next/image";
 
 import Animation from './animation'
-import Night from '../../../assets/images/projects/nightsky.jpg'
 import Day from '../../../assets/images/projects/day.jpg'
 import MoonAndSun from './sky'
 import StarsComponent from '../../_homepage/Header/stars'
@@ -26,7 +25,6 @@ export default function Header() {
       <MoonAndSun />
       <Animation />
       <div className="night" style={{ transform: `translateY(${offsetY * 0.1}px)` }}>
-        {/* <Image src={Night} alt="" objectFit="cover" layout="fill" /> */}
       </div>
       <StarsComponent />
     </SectionContainer>
