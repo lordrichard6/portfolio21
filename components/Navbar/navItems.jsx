@@ -19,10 +19,15 @@ export default function NavItems() {
       {navItems.map((item, i) => {
         return (
           <NavItem key={i}>
-            <Link prefetch href={item.to}>
-              <a className={router.pathname === item.to ? "selected" : ""}>
-                {t(item.tabName)}
-              </a>
+            <Link
+              prefetch
+              href={item.to}
+              className={router.pathname === item.to ? "selected" : ""}
+              passHref
+            >
+              {/* <a className={router.pathname === item.to ? "selected" : ""}> */}
+              {t(item.tabName)}
+              {/* </a> */}
             </Link>
           </NavItem>
         );

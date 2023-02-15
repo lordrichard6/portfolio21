@@ -51,9 +51,7 @@ export default function AltynaiFashion() {
         A E-Commerce fashion shop with a simplistic approach and good taste.
       </Text>
       <Link href="https://altynai-fashion.vercel.app/" passHref>
-        <a target="_blank">
           <FaLaptop className="hover" alt="official website altynai fashion" />
-        </a>
       </Link>
     </SectionContainer>
   );

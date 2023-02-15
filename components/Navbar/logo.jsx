@@ -8,11 +8,15 @@ import logo from "../../public/logo_clean.png";
 export default function Logo() {
   return (
     <LogoContainer>
-      <LogoWrapper>
+      <div>
         <Link href="/" passHref>
-          <Image src={logo} alt="paulo lopes reizinho" />
+          <LogoWrapper
+            src={logo}
+            alt="paulo lopes reizinho"
+            responsive
+          />
         </Link>
-      </LogoWrapper>
+      </div>
       <h1 className="fullname">Paulo Lopes Reizinho</h1>
       <h1 className="partialname">Paulo Lopes R</h1>
     </LogoContainer>
@@ -30,7 +34,7 @@ const LogoContainer = styled.div`
     letter-spacing: -1px;
     margin: 0;
 
-    &.fullname{
+    &.fullname {
       @media screen and (max-width: 1200px) {
         display: none;
       }
@@ -55,7 +59,7 @@ const LogoContainer = styled.div`
   }
 `;
 
-const LogoWrapper = styled.div`
+const LogoWrapper = styled(Image)`
   width: 80px;
   height: 80px;
   margin-right: 0.5rem;

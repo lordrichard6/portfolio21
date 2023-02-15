@@ -70,23 +70,19 @@ export default function Project({
         <div className="techs">{techs}</div>
         <div className="btnWrapper">
           <div className={`button ${backgroundColor}`}>
-            <Link href={link}>
-              <a target="_blank">
+            <Link href={link} passHref>
                 <CgBrowser
                   className="browser"
                   alt="paulo reizinho project website"
                 />
-              </a>
             </Link>
           </div>
           <div className={`button ${backgroundColor}`}>
-            <Link href={github}>
-              <a target="_blank">
+            <Link href={github} passHref>
                 <RiGithubFill
                   className="browser"
                   alt="paulo reizinho project repository"
                 />
-              </a>
             </Link>
           </div>
         </div>

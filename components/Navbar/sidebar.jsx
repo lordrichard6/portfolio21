@@ -23,10 +23,10 @@ export default function Sidebar({ isOpen, toggle }) {
           {navItems.map((item, i) => {
             return (
               <NavItem key={i} onClick={toggle}>
-                <Link prefetch href={item.to}>
-                  <a className={router.pathname === item.to ? "selected" : ""}>
+                <Link prefetch href={item.to} className={router.pathname === item.to ? "selected" : ""} passHref>
+                  {/* <a className={router.pathname === item.to ? "selected" : ""}> */}
                     {t(item.tabName)}
-                  </a>
+                  {/* </a> */}
                 </Link>
               </NavItem>
             );

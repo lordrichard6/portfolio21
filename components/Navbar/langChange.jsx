@@ -13,13 +13,22 @@ export default function LangChange() {
     <NavMenu>
       {router.locales.map((locale) => (
         <NavItem key={locale}>
-          <Link href={router.asPath} locale={locale}>
-            <a className={router.locales === locale ? "selected" : ""}>
-              <div className="flag">
-                {locale === "en" && <Image src={en} objectFit="cover" alt="" />}
-                {locale === "pt" && <Image src={pt} objectFit="cover" alt="" />}
-              </div>
-            </a>
+          <Link
+            href={router.asPath}
+            locale={locale}
+            passHref
+          >
+            {/* 
+            USE FLAGS
+            <div className="flag">
+              {locale === "en" && <Image src={en} cover alt="" />}
+              {locale === "pt" && <Image src={pt} cover alt="" />}
+            </div> 
+            */}
+            <div className={router.locales === locale ? "selected" : ""}>
+            {locale === "pt" && <h3>pt</h3>}
+            {locale === "en" && <h3>en</h3>}
+            </div>
           </Link>
         </NavItem>
       ))}
@@ -48,29 +57,40 @@ const NavMenu = styled.ul`
 
 const NavItem = styled.li`
   padding: 0 0.3rem;
-  a {
-    cursor: pointer;
 
-    .flag {
-      display: flex;
-      width: 46px;
-      height: 32px;
-      border-radius: 10px;
-      &:hover {
-        border: 4px solid #fff;
-      }
-      span {
-        border-radius: 10px;
-      }
-    }
-    &.selected {
-      .flag {
-        border: 4px solid #fff;
-      }
-    }
-
+  h3 {
+    margin: 0;
+    font-weight: 200;
     &:hover {
-      font-weight: 800;
+    font-weight: 600;
+  }
+  }
+  &.selected {
+    h3 {
+      font-weight: 4200;
     }
   }
+
+  /* FLAG STYLING
+  .flag {
+    display: flex;
+    width: 46px;
+    height: 32px;
+    border-radius: 10px;
+    &:hover {
+      border: 4px solid #fff;
+    }
+    span {
+      border-radius: 10px;
+    }
+  }
+  &.selected {
+    .flag {
+      border: 4px solid #fff;
+    }
+  }
+
+  &:hover {
+    font-weight: 800;
+  } */
 `;
