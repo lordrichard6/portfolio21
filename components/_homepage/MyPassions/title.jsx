@@ -10,7 +10,7 @@ import HexagonComponent from "./hexagon";
 import EvolutionComponent from "./evolution";
 // import PoligonsAnimationComponent from './poligons_animation'
 
-export default function HobbiesTitleComponent() {
+export default function HobbiesTitleComponent({title}) {
   let { t } = useTranslation();
 
   const bringUp = {
@@ -49,7 +49,7 @@ export default function HobbiesTitleComponent() {
           animate={controls}
           id="hobbies-title"
         >
-            <h1>{t("home:hobbies_title")}</h1>
+            <h1>{title}</h1>
         </Container>
   );
 }

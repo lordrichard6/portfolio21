@@ -5,7 +5,7 @@ import { Colors } from "../../../assets/variables";
 import HobbiesComponent from "./hobbies";
 import HexagonComponent from "./hexagon";
 import EvolutionComponent from "./evolution";
-import HobbiesTitleComponent from './title'
+import HobbiesTitleComponent from "./title";
 // import PoligonsAnimationComponent from './poligons_animation'
 
 export default function MyPassions() {
@@ -14,11 +14,11 @@ export default function MyPassions() {
   return (
     <SectionContainer>
       <BackgroundGradient></BackgroundGradient>
-      <HobbiesTitleComponent />
+      <HobbiesTitleComponent title={t("home:hobbies_title")} />
 
-        <HexagonComponent />
-        <HobbiesComponent />
-        <EvolutionComponent />
+      <HexagonComponent />
+      <HobbiesComponent />
+      <EvolutionComponent />
       {/* <PoligonsAnimationComponent /> */}
     </SectionContainer>
   );
