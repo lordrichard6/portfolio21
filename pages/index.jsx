@@ -10,7 +10,7 @@ export default function Home() {
     <Layout>
         <Header />
         <AboutMe />
-        {/* <Techs /> */}
+        <Techs />
         <MyPassions />
     </Layout>
   );
