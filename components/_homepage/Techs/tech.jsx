@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SingleTech({ key, tech, icon, text }) {
   return (
-    <div className="w-3/4 mx-auto" key={key}>
+    <div className="w-3/4 mx-auto md:h-40" key={key}>
       <div className="flex items-center">
         <div className="text-4xl border-solid border-2 p-1 mr-2 rounded">
           {icon}
