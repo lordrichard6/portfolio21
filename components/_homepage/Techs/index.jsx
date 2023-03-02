@@ -1,31 +1,47 @@
-import React from "react";
-import styled from "styled-components";
-
 import HobbiesTitleComponent from "../MyPassions/title";
+import SingleTech from "./tech";
+import { frontTechs, backTechs } from "../../../assets/data/techs";
 
 export default function Techs() {
   return (
-    <SectionContainer>
+    <section className="my-40">
       <HobbiesTitleComponent title="Techs" />
-      <div className="container">
+      <div className="text-slate-100 grid grid-cols-2 w-full divide-x-4 my-4">
         <div className="left">
-          <h2>Front-end</h2>
+          <h2 className="my-6 text-center text-4xl antialiased font-semibold uppercase underline decoration-wavy decoration-2 underline-offset-6 drop-shadow-lg -skew-y-6">
+            Front-end
+          </h2>
+          <div className="grid grid-cols-2 gap-6 mx-4 place-items-end">
+            {frontTechs.map((tech, i) => {
+              return (
+                <SingleTech
+                  key={i}
+                  tech={tech.tech}
+                  icon={tech.icon}
+                  text={tech.text}
+                />
+              );
+            })}
+          </div>
         </div>
         <div className="right">
-          <h2>Back-end</h2>
+          <h2 className="my-6 text-center text-4xl antialiased font-semibold uppercase underline decoration-wavy decoration-2 underline-offset-6 drop-shadow-lg -skew-y-6">
+            Back-end
+          </h2>
+          <div className="grid grid-cols-2 gap-6 mx-4 place-items-end">
+            {backTechs.map((tech, i) => {
+              return (
+                <SingleTech
+                  key={i}
+                  tech={tech.tech}
+                  icon={tech.icon}
+                  text={tech.text}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
-    </SectionContainer>
+    </section>
   );
 }
-
-const SectionContainer = styled.section`
-  h2 {
-    color: #fff;
-  }
-  .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: spa
-  }
-`;
