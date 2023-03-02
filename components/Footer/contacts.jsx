@@ -55,13 +55,14 @@ export default function Contacts() {
       variants={bringFromRight}
       initial="hidden"
       animate={controls}
+      className="mt-6"
     >
-      <h1>{t("common:info")}</h1>
-      <SocialLinksComponent />
+      {/* <h1>{t("common:info")}</h1>
+      <SocialLinksComponent /> */}
 
       <ContactWrapper>
         <EmailButton>
-          <div onClick={openMail} className="btnWrapper">
+          <div onClick={openMail} className="btnWrapper text-slate-100">
             <p>Ask me by</p>
             <MdEmail className="close" alt="send paulo reizinho email" />
             <SiMinutemailer className="open" alt="send paulo reizinho email" />
@@ -104,7 +105,7 @@ const ContactWrapper = styled.div`
     font-size: 1.2rem;
   }
   .ani {
-    transform: translateY(300%) rotate(0);
+    transform: translateY(800%) rotate(0);
     animation: fallButton 1.2s linear;
   }
 
@@ -169,11 +170,11 @@ const EmailButton = styled.div`
       transform: translateY(15%) rotate(15deg);
     }
     75% {
-      transform: translateY(300%) rotate(15deg);
+      transform: translateY(800%) rotate(15deg);
       opacity: 1;
     }
     100% {
-      transform: translateY(300%) rotate(15deg);
+      transform: translateY(800%) rotate(15deg);
       opacity: 0;
     }
   }

@@ -4,7 +4,7 @@ import useTranslation from "next-translate/useTranslation";
 import { Colors } from "../../assets/variables";
 import Thanks from "./thanks";
 import SiteMap from "./siteMap";
-import Contacts from "./contacts";
+// import Contacts from "./contacts";
 import CopyrightComponent from './copyright'
 import MarioAnimationComponent from './mario'
 
@@ -16,7 +16,7 @@ export default function Footer() {
       <InnerContainer>
         <Thanks />
         <SiteMap />
-        <Contacts />
+        {/* <Contacts /> */}
       </InnerContainer>
       <MarioAnimationComponent />
       <CopyrightComponent />
@@ -44,7 +44,7 @@ const FooterContainer = styled.footer`
 const InnerContainer = styled.div`
   width: 80%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   @media screen and (max-width: 764px) {
     grid-template-columns: 1fr;

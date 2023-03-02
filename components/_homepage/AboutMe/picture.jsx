@@ -100,7 +100,7 @@ export default function AboutPictureComponent() {
             <div className="star"></div>
             <div className="star"></div>
           </div>
-          <div className="card" tabIndex="0">
+          {/* <div className="card" tabIndex="0">
             <span className="card__infoicon">
               <FaInfo className="fa fa-info" />
             </span>
@@ -111,7 +111,7 @@ export default function AboutPictureComponent() {
               {t("home:about_i_text")} -{" "}
               <strong>paulolopesreizinho@gmail.com</strong>
             </p>
-          </div>
+          </div> */}
           <figure className="picture">
             <Image className="me" src={MeFormal} alt="paulo reizinho" />
           </figure>

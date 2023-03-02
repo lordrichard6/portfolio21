@@ -15,19 +15,19 @@ export default function SocialLinksComponent() {
 
   return (
       <IconContainer>
-        <Icon href="https://www.linkedin.com/in/pauloreizinho/" target="_blank">
+        <Icon className="z-10" href="https://www.linkedin.com/in/pauloreizinho/" target="_blank">
           <FaLinkedin alt="github paulo reizinho profile" />
         </Icon>
-        <Icon href="https://www.instagram.com/paulo_reizinho/" target="_blank">
+        <Icon className="z-10" href="https://www.instagram.com/paulo_reizinho/" target="_blank">
           <FaInstagram alt="instagram paulo reizinho profile" />
         </Icon>
-        <Icon href="https://github.com/lordrichard6" target="_blank">
+        <Icon className="z-10" href="https://github.com/lordrichard6" target="_blank">
           <FaGithub alt="github paulo reizinho profile" />
         </Icon>
-        <Icon href="https://discord.gg/3seHDYvu" target="_blank">
+        <Icon className="z-10" href="https://discord.gg/3seHDYvu" target="_blank">
           <FaDiscord alt="discord paulo reizinho" />
         </Icon>
-        <Icon href="https://wa.link/sru6m7" target="_blank">
+        <Icon className="z-10" href="https://wa.link/sru6m7" target="_blank">
           <FaWhatsapp alt="whatsapp paulo reizinho" />
         </Icon>
       </IconContainer>
@@ -41,7 +41,8 @@ const IconContainer = styled.div`
 `;
 
 const Icon = styled.a`
-  color: ${(props) => props.theme.color};
+  /* color: ${(props) => props.theme.color}; */
+  color: #fff;
   margin: 0.6rem;
   font-size: 2.5rem;
   transition: 0.5s ease-in-out;

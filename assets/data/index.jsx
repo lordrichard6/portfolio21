@@ -134,6 +134,10 @@ export const navItems = [
     to: "/gallery",
     tabName: "common:gallery",
   },
+  {
+    to: "/contact",
+    tabName: "myContact",
+  },
 ];
 
 // Skills ---------------------------------------------------------------
