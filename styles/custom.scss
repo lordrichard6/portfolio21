@@ -19,7 +19,7 @@
     h1 {
         font-family: Nintendoid1;
         color: #eee;
-        font-size: 5em;
+        // font-size: 5em;
         line-height: 1;
         text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
         letter-spacing: 0.125em;
@@ -27,10 +27,6 @@
         animation-name: textflicker;
         animation-iteration-count: infinite;
         animation-direction: alternate;
-
-        @media screen and (max-width: 764px) {
-            font-size: 1.5em;
-        }
     }
 
     @keyframes textflicker {

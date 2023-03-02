@@ -43,7 +43,7 @@ export default function HobbiesTitleComponent({title}) {
           animate={controls}
           id="hobbies-title"
         >
-            <h1 className="text-center">{title}</h1>
+            <h1 className="text-center text-4xl md:text-7xl">{title}</h1>
         </Container>
   );
 }
