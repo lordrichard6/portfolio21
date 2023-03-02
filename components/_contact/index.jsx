@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { SiMinutemailer } from "react-icons/si";
 import { MdLocationOn } from "react-icons/md";
 
@@ -11,8 +14,40 @@ import SocialLinksComponent from "../Footer/social_links";
 export default function ContactCard() {
   let { t } = useTranslation();
 
+  const bringUp = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 2.1, type: "spring", bounce: 0.4 },
+    },
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+  };
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
+  }, [controls, inView]);
+
   return (
-    <Card className="h-96 sm:h-64 w-80 sm:w-96 rounded-md relative">
+    <Card
+      as={motion.div}
+      ref={ref}
+      variants={bringUp}
+      initial="hidden"
+      animate={controls}
+      className="h-96 sm:h-64 w-80 sm:w-96 rounded-md relative"
+    >
       <h2 className="hidden sm:block blur-[1px] text-slate-100 text-xl text-center">
         Hover with your mouse
       </h2>
