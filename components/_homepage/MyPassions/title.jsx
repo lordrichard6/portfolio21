@@ -1,23 +1,16 @@
-import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import { Colors } from "../../../assets/variables";
-import HobbiesComponent from "./hobbies";
-import HexagonComponent from "./hexagon";
-import EvolutionComponent from "./evolution";
-// import PoligonsAnimationComponent from './poligons_animation'
-
-export default function HobbiesTitleComponent({title}) {
+export default function HobbiesTitleComponent({ title }) {
   let { t } = useTranslation();
 
   const bringUp = {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 2.5, type: 'spring', bounce: 0.4 },
+      transition: { duration: 2.5, type: "spring", bounce: 0.4 },
     },
     hidden: {
       opacity: 0,
@@ -27,7 +20,7 @@ export default function HobbiesTitleComponent({title}) {
 
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.4
+    threshold: 0.4,
   });
   useEffect(() => {
     if (inView) {
@@ -37,22 +30,17 @@ export default function HobbiesTitleComponent({title}) {
     //   controls.start("hidden");
     // }
   }, [controls, inView]);
-  
 
   return (
-
-        <Container
-          as={motion.div}
-          ref={ref}
-          variants={bringUp}
-          initial="hidden"
-          animate={controls}
-          id="hobbies-title"
-        >
-            <h1>{title}</h1>
-        </Container>
+    <div
+      as={motion.div}
+      ref={ref}
+      variants={bringUp}
+      initial="hidden"
+      animate={controls}
+      id="hobbies-title"
+    >
+      <h1 className="text-center">{title}</h1>
+    </div>
   );
 }
-
-const Container = styled.div`
-`;
