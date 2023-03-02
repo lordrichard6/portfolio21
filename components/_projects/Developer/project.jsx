@@ -177,12 +177,14 @@ const ProjectWrapper = styled.div`
 
     .icon {
       font-size: 3rem;
+      display: flex;
+      justify-content: center;
     }
 
     .btnWrapper {
       z-index: 0;
       position: absolute;
-      top: 68%;
+      top: 60%;
       left: 50%;
       transform: translate(-50%, 0);
       /* width: calc(0.3 * 200px);
