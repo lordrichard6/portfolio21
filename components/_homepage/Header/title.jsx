@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ReactTypingEffect from "react-typing-effect";
+// import ReactTypingEffect from "react-typing-effect";
 import useTranslation from "next-translate/useTranslation";
 
 import { Colors } from "../../../assets/variables";
@@ -8,13 +8,19 @@ export default function HomepageTitleComponent() {
   let { t } = useTranslation();
 
   return (
-    <SloganContainer>
-      <Title>
-          <h1>{t("home:header_01")}</h1>
+    <SloganContainer className="text-slate-100">
+      <Title className="mb-4 text-5xl md:text-7xl uppercase font-black leading-tight text-center">
+        <h1>
+          {t("home:header_01")}
+        </h1>
 
-          <h1>{t("home:header_02")}</h1>
+        <h1>
+          {t("home:header_02")}
+        </h1>
 
-          <h1>{t("home:header_03")}</h1>
+        <h1>
+          {t("home:header_03")}
+        </h1>
 
         {/* 
         TYPING EFFECT
@@ -34,7 +40,7 @@ export default function HomepageTitleComponent() {
           eraseDelay={700}
         /> */}
       </Title>
-      <SubTitle>{t("home:header_slogan")}</SubTitle>
+      <SubTitle className="text-2xl 2xl:text-4xl text-center font-medium">{t("home:header_slogan")}</SubTitle>
     </SloganContainer>
   );
 }
@@ -51,43 +57,9 @@ const SloganContainer = styled.div`
 `;
 
 const Title = styled.div`
-  text-align: center;
-  padding-right: 2rem;
-  font-size: 2.4rem;
-  color: #eee;
-  font-family: 'Work Sans', sans-serif;
-  line-height: 1.2;
-  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
   text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary};
   animation: showTitle 3.8s linear;
-
-  @media screen and (max-width: 768px) {
-    font-size: 1.5rem;
-    padding-right: 0;
-  }
-  @media screen and (min-width: 2560px) {
-    font-size: 5rem;
-    font-weight: 600;
-  }
-
-  h1 {
-    margin: 0;
-    font-weight: 900;
-  }
-  /* typing style
-  text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary};
-  color: #eee;
-  display: flex;
-  flex-direction: column;
-  animation: showTitle 3.8s linear;
-
-  @media screen and (max-width: 768px) {
-    font-size: 2.5rem;
-  }
-  @media screen and (min-width: 2560px) {
-    font-size: 5rem;
-    font-weight: 600;
-  } */
 
   @keyframes showTitle {
     0% {
@@ -109,9 +81,6 @@ const Title = styled.div`
 `;
 
 const SubTitle = styled.h2`
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #eee;
   letter-spacing: 0.2em;
   text-shadow: 1px 1px 1px #000, 3px 3px 5px ${Colors.primary};
   animation: bringText 3.5s linear;
@@ -133,12 +102,5 @@ const SubTitle = styled.h2`
     100% {
       filter: blur(0) brightness(1);
     }
-  }
-
-  @media screen and (max-width: 768px) {
-    text-align: center;
-  }
-  @media screen and (min-width: 2560px) {
-    font-size: 3rem;
   }
 `;
