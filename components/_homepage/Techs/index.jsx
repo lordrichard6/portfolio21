@@ -26,7 +26,7 @@ export default function Techs() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 2.5, type: "spring", bounce: 0.4 },
+      transition: { delay: 0.4, duration: 2.5, type: "spring", bounce: 0.4 },
     },
     hidden: {
       opacity: 0,
@@ -38,7 +38,7 @@ export default function Techs() {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 2.5, type: "spring", bounce: 0.4 },
+      transition: { delay: 0.6, duration: 2.5, type: "spring", bounce: 0.4 },
     },
     hidden: {
       opacity: 0,
@@ -48,7 +48,7 @@ export default function Techs() {
 
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.6,
+    threshold: 0.8,
   });
   useEffect(() => {
     if (inView) {
@@ -66,6 +66,7 @@ export default function Techs() {
         variants={bringUp}
         initial="hidden"
         animate={controls}
+        ref={ref}
         className="text-slate-100 mx-auto text-xl w-3/4 md:w-1/2 mt-8 mb-12"
       >
         <p>{t("home:techs_description")}</p>
@@ -73,7 +74,6 @@ export default function Techs() {
       <div className="text-slate-100 grid grid-cols-1 md:grid-cols-2 w-full md:divide-x-4 mt-10">
         <motion.div 
         variants={bringFromLeft}
-        ref={ref}
         initial="hidden"
         animate={controls}
         className="left">
@@ -95,7 +95,6 @@ export default function Techs() {
         </motion.div>
         <motion.div 
                 variants={bringFromRight}
-                ref={ref}
                 initial="hidden"
                 animate={controls}
                 className="right">
