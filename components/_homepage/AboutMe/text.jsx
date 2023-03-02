@@ -41,9 +41,10 @@ export default function AboutTextComponent() {
       variants={bringUp}
       initial="hidden"
       animate={controls}
+      className="text-slate-100 mt-12"
     >
       <AboutTitleComponent title={t("home:about_title")} />
-      <p>
+      <p className="text-xl font-normal my-6">
         {t("home:about_text01")}
         <br />
         <br />
@@ -65,20 +66,8 @@ export default function AboutTextComponent() {
 const LeftContainer = styled.div`
   z-index: 1;
   margin-right: 0.5rem;
-  color: #eee;
 
   @media screen and (max-width: 992px) {
     margin: 0;
-  }
-  p {
-    font-weight: 400;
-    font-size: 1.4rem;
-
-    @media screen and (max-width: 1024px) {
-      font-size: 1.3rem;
-    }
-    @media screen and (min-width: 2560px) {
-      font-size: 1.8rem;
-    }
   }
 `;
