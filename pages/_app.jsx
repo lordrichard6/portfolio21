@@ -2,6 +2,7 @@ import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
 
 import "../styles/globals.scss";
+import "../styles/globals.css";
 import "../styles/custom.scss";
 import "../styles/hexagon.scss";
 import "../styles/aboutme.scss";
