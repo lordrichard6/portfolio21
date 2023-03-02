@@ -31,34 +31,34 @@
             15px 15px 0px #052939;
         }
         &:nth-child(1) {
-            transform: translate(0,-120%) rotate(-15deg);
+            transform: translate(0, -50%) rotate(-15deg);
 
             @media screen and (max-width: 764px) {
-                transform: translate(20%,-80%) rotate(-15deg);
+                transform: translate(20%,-30%) rotate(-15deg);
             }
         }
         &:nth-child(2) {
-            transform: translate(500%,-140%) rotate(-15deg);
+            transform: translate(500%,-60%) rotate(-15deg);
 
             @media screen and (max-width: 764px) {
-                transform: translate(600%,-100%) rotate(-15deg);
+                transform: translate(600%,-20%) rotate(-15deg);
             }
         }
         &:nth-child(3) {
-            transform: translate(10%,-10%) rotate(-15deg);
+            transform: translate(10%,30%) rotate(-15deg);
 
             @media screen and (max-width: 764px) {
-                transform: translate(10%,10%) rotate(-15deg);
+                transform: translate(10%,50%) rotate(-15deg);
             }
         }
     }
     h3 {
         color: #dbec45;
         font-size: 3.5rem;
-        transform: translate(-10%,100%) rotate(10deg);
+        transform: translate(-10%,140%) rotate(10deg);
         @media screen and (max-width: 764px) {
             font-size: 2rem;
-            transform: translate(-10%,110%) rotate(10deg);
+            transform: translate(-10%,150%) rotate(10deg);
             &.portuguese {
                 font-size: 1.9rem;
                 transform: translate(-5%,120%) rotate(10deg);
@@ -67,12 +67,12 @@
     }
     .gif {
         position: absolute;
-        width: 200px;
+        width: 260px;
         top: 0;
         right: 0;
         border-radius: 16px;
         overflow: hidden;
-        transform: translate(-20%,180%) rotate(0deg);
+        transform: translate(0,130%) rotate(0deg);
         @media screen and (max-width: 764px) {
             width: 120px;
             transform: translate(10%,130%) rotate(0deg);
@@ -220,7 +220,7 @@
         font-family: 'Bangers', cursive;
         color: hsl(50, 50%, 50%);
         z-index: 2;
-        font-size: 8em;
+        font-size: 7rem;
         letter-spacing: 15px;
         text-transform: uppercase;
         text-shadow: 1px 1px hsl(50, 50%, 45%),
@@ -237,7 +237,7 @@
 
 
         @media screen and (max-width: 764px){
-            font-size: 3em;
+            font-size: 3rem;
         }
 
         // &.portuguese {
@@ -249,7 +249,7 @@
         // }
 
         &:nth-child(1) {
-            transform: translate(10%,-150%) rotate(-10deg);
+            transform: translate(10%,-35%) rotate(-10deg);
             &.portuguese {
                 transform: translate(-5%,-150%) rotate(-10deg);
                 letter-spacing: 10px;
@@ -261,9 +261,9 @@
             }
         }
         &:nth-child(2) {
-            transform: translate(200%,-70%) rotate(-10deg);
+            transform: translate(200%,20%) rotate(-10deg);
             @media screen and (max-width: 764px) {
-                transform: translate(300%,-40%) rotate(-10deg);
+                transform: translate(300%,50%) rotate(-10deg);
                 font-size: 2em;
             }
             &.portuguese {
@@ -274,7 +274,7 @@
             }
         }
         &:nth-child(3) {
-            transform: translate(10%,0%) rotate(-10deg);
+            transform: translate(10%,70%) rotate(-10deg);
             &.portuguese {
                 transform: translate(-10%,0%) rotate(-10deg);
                 letter-spacing: 10px;
@@ -287,14 +287,14 @@
     }
 
     h3 {
-        font-size: 2em;
+        font-size: 2rem;
         letter-spacing: 4px;
-        transform: translate(10%,155%) rotate(-10deg);
+        transform: translate(10%,190%) rotate(-10deg);
         color: #ADFF2F;
         @media screen and (max-width: 764px) {
             font-size: 0.85em;
             letter-spacing: 2px;
-            transform: translate(5%,240%) rotate(-10deg);
+            transform: translate(5%,290%) rotate(-10deg);
             &.portuguese {
                 font-size: 0.75em;
                 transform: translate(5%,280%) rotate(-10deg);
@@ -304,13 +304,13 @@
     .gif {
         position: absolute;
         width: 150px;
-        top: 255px;
+        top: 295px;
         right: 50%;
-        transform: translateX(-50%) rotate(-10deg) rotateY(0deg) ;
+        transform: translate(50%,-50%) rotate(-10deg) rotateY(0deg) ;
         animation: bearWalking 12s ease-in-out infinite;
         @media screen and (max-width: 764px) {
             width: 75px;
-            top: 120px
+            top: 135px;
         }
     }
     .mountains {
@@ -318,7 +318,7 @@
         width: 400px;
         top: 220px;
         right: 50%;
-        transform: translateX(50%) rotate(-10deg);
+        transform: translate(50%,20%) rotate(-10deg);
         @media screen and (max-width: 764px) {
             width: 200px;
             top: 100px;
@@ -383,9 +383,9 @@
             0% {background-position: 100% -100%}
             }
         &:nth-child(1) {
-            transform: translate(30%,-140%) rotate(-10deg);
+            transform: translate(30%,-50%) rotate(-10deg);
             @media screen and (max-width: 764px) {
-                transform: translate(20%,-120%) rotate(-10deg);
+                transform: translate(20%,-30%) rotate(-10deg);
             }
 
             &.portuguese {
@@ -393,22 +393,22 @@
             }
         }
         &:nth-child(2) {
-            transform: translate(650%,-50%) rotate(0deg);
+            transform: translate(650%,20%) rotate(0deg);
             @media screen and (max-width: 764px) {
-                transform: translate(600%,-60%) rotate(0deg);
+                transform: translate(600%,40%) rotate(0deg);
             }
         }
         &:nth-child(3) {
-            transform: translate(5%,0%) rotate(10deg);
+            transform: translate(5%,80%) rotate(10deg);
             @media screen and (max-width: 764px) {
-                transform: translate(0%,-20%) rotate(10deg);
+                transform: translate(0%,100%) rotate(10deg);
             }
         }
     }
     h3 {
-        font-size: 4em; 
+        font-size: 3.5rem; 
         line-height: 1em;
-        transform: translate(10%,80%) rotate(10deg);
+        transform: translate(10%,190%) rotate(10deg);
         text-shadow: .06em .06em 0 rgb(179, 101, 77);
         &:after {
             top: .15em; 
@@ -417,7 +417,7 @@
 
         @media screen and (max-width: 764px) {
             font-size: 1.6em;
-            transform: translate(0%,120%) rotate(10deg);
+            transform: translate(0%,240%) rotate(10deg);
         }
     }
     .gif {
@@ -425,22 +425,22 @@
         width: 140px;
         top: 0;
         left: 0;
-        transform: translate(-80%, 80%);
+        transform: translate(-80%, 130%);
         @media screen and (max-width: 764px) {
             width: 70px;
-            transform: translate(10%, 260%);
+            transform: translate(-75%, 100%);
         }
     }
     .cook {
         position: absolute;
         width: 150px;
-        top: 10%px;
+        top: 10%;
         right: 38%;
-        transform: translateX(50%);
+        transform: translate(50%, 30%);
         z-index: 0;
         @media screen and (max-width: 764px) {
             width: 70px;
-            top: 0px;
+            top: 25px;
         }
     }
 }

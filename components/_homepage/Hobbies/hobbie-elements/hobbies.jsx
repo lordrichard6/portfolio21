@@ -6,16 +6,16 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useRouter } from "next/router";
 
-import Hobby_01 from "../../../assets/images/homepage/hobby_01.png";
-import Hobby_02 from "../../../assets/images/homepage/hobby_02.png";
-import Hobby_03 from "../../../assets/images/homepage/hobby_03.png";
-import Hobby_04 from "../../../assets/images/homepage/hobby_04.png";
-import Mountains from "../../../assets/images/homepage/mountains.png";
-import MiaCook from "../../../assets/images/homepage/mia_cook.png";
-import AniCode from "../../../assets/images/homepage/ani_code.gif";
-import AniFat from "../../../assets/images/homepage/ani_fat.gif";
-import AniBear from "../../../assets/images/homepage/ani_bear.gif";
-import AniCook from "../../../assets/images/homepage/ani_cook.gif";
+import Hobby_01 from "../../../../assets/images/homepage/hobby_01.png";
+import Hobby_02 from "../../../../assets/images/homepage/hobby_02.png";
+import Hobby_03 from "../../../../assets/images/homepage/hobby_03.png";
+import Hobby_04 from "../../../../assets/images/homepage/hobby_04.png";
+import Mountains from "../../../../assets/images/homepage/mountains.png";
+import MiaCook from "../../../../assets/images/homepage/mia_cook.png";
+import AniCode from "../../../../assets/images/homepage/ani_code.gif";
+import AniFat from "../../../../assets/images/homepage/ani_fat.gif";
+import AniBear from "../../../../assets/images/homepage/ani_bear.gif";
+import AniCook from "../../../../assets/images/homepage/ani_cook.gif";
 
 export default function HobbiesComponent() {
   let { t } = useTranslation();
@@ -165,9 +165,11 @@ const HobbyElements = styled.div`
   width: 100%;
   height: 1680px;
   z-index: 1;
+  margin-top: 8rem;
 
   @media screen and (max-width: 764px) {
     height: 910px;
+    margin-top: 1.5rem;
   }
 
   .shadow {
@@ -237,7 +239,8 @@ const Hobby = styled.div`
   }
   .word {
     position: absolute;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
     z-index: 1;
     transition: all 500ms ease-in-out;
 

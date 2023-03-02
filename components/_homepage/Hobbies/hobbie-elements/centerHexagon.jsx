@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import Earth from '../../../assets/images/homepage/earth.svg'
+// import Earth from '../../../assets/images/homepage/earth.svg'
 
-export default function HexagonComponent() {
+export default function CenterHexagonComponent() {
   const bringUp = {
     visible: {
       opacity: 1,
@@ -62,7 +62,7 @@ export default function HexagonComponent() {
             <li></li>
           </ul>
         </div>
-        <div className="tentacle"></div>
+        {/* <div className="tentacle"></div>
         <div className="flag">
           <div className="small-tentacle"></div>
         </div>
@@ -72,19 +72,19 @@ export default function HexagonComponent() {
             <div className="pod"></div>
             <div className="fuselage"></div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="shooting-star"></div>
 
-      <div className="windmill">
+      {/* <div className="windmill">
         <div className="light"></div>
         <div className="blades"></div>
       </div>
 
       <div className="earth">
         <Image src={Earth} layout="responsive" alt="" />
-      </div>
+      </div> */}
       
     </HexagonBig>
   );
@@ -98,7 +98,7 @@ const HexagonBig = styled.div`
   top: 420px;
   height: 700px;
   width: 800px;
-  /* z-index: 100; */
+  z-index: 1;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   background: #20303c;
   background: linear-gradient(to top, #283e51, #0a2342);

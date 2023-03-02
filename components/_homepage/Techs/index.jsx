@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import HobbiesTitleComponent from "../MyPassions/title";
+import HobbiesTitleComponent from "../Hobbies/title";
 import SingleTech from "./tech";
 import { frontTechs, backTechs } from "../../../assets/data/techs";
 

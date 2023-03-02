@@ -2,8 +2,8 @@ import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
 
 import { Colors } from "../../../assets/variables";
-import HobbiesComponent from "./hobbies";
-import HexagonComponent from "./hexagon";
+import HobbiesComponent from "./hobbie-elements/hobbies";
+import CenterHexagonComponent from "./hobbie-elements/centerHexagon";
 import EvolutionComponent from "./evolution";
 import HobbiesTitleComponent from "./title";
 // import PoligonsAnimationComponent from './poligons_animation'
@@ -15,8 +15,7 @@ export default function MyPassions() {
     <SectionContainer>
       <BackgroundGradient></BackgroundGradient>
       <HobbiesTitleComponent title={t("home:hobbies_title")} />
-
-      <HexagonComponent />
+      <CenterHexagonComponent />
       <HobbiesComponent />
       <EvolutionComponent />
       {/* <PoligonsAnimationComponent /> */}
