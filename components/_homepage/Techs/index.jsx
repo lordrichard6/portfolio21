@@ -8,9 +8,9 @@ export default function Techs() {
   let { t } = useTranslation();
 
   return (
-    <section className="my-10 lg:my-20">
+    <section className="mt-10 mb-20 lg:mb-40 md:mx-10">
       <HobbiesTitleComponent title="Techs" />
-      <p className="text-slate-100 mx-auto text-xl w-3/4 md:w-1/2 mt-8">
+      <p className="text-slate-100 mx-auto text-xl w-3/4 md:w-1/2 mt-8 mb-12">
       {t("home:techs_description")}
       </p>
       <div className="text-slate-100 grid grid-cols-1 md:grid-cols-2 w-full md:divide-x-4 mt-10">
