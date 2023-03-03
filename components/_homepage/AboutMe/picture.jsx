@@ -6,6 +6,8 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
+import { bringUp } from "../../../utilities/framer-animations";
+
 import NoGlasses from "../../../assets/images/homepage/about-me.png";
 import WithGlasses from "../../../assets/images/homepage/about-me_g.png";
 // import SocialLinksComponent from "../../Footer/social_links";
@@ -13,22 +15,11 @@ import WithGlasses from "../../../assets/images/homepage/about-me_g.png";
 export default function AboutPictureComponent() {
   let { t } = useTranslation();
 
-  const bringUp = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 2.1, type: "spring", bounce: 0.4 },
-    },
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-  };
-
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.4,
   });
+
   useEffect(() => {
     if (inView) {
       controls.start("visible");
