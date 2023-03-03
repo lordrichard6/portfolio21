@@ -1,66 +1,32 @@
 import styled from "styled-components";
 
 import { Colors } from "../../../assets/variables";
+
 import AboutTextComponent from "./text";
 import AboutPictureComponent from "./picture";
 
 export default function AboutMe() {
-
   return (
-    <SectionContainer className="background">
-      <BackgroundGradient></BackgroundGradient>
-      <InnerContainer>
+    <SectionContainer className="relative w-screen flex flex-row justify-center items-center py-24 md:py-32">
+      <BackgroundGradient className="absolute w-full h-full" />
+      <div className="w-4/5 2xl:w-3/5 flex flex-col xl:flex-row justify-center items-center">
         <AboutTextComponent />
         <AboutPictureComponent />
-      </InnerContainer>
+      </div>
     </SectionContainer>
   );
 }
 
 const SectionContainer = styled.section`
-  position: relative;
-  width: 100%;
-  padding: 8rem 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  /* background: ${Colors.primary}; */
   /* background: url("/pattern.png"), ${Colors.primary}; */
-  background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
-
-  @media screen and (max-width: 764px) {
-    padding: 4rem 0;
-  }
+  background: ${Colors.primary_background};
 `;
 
 const BackgroundGradient = styled.div`
-  position: absolute;
-
-  width: 100%;
-  height: 100%;
   background: linear-gradient(
     180deg,
     #000000 0%,
     rgba(0, 0, 0, 0.2) 38.54%,
     rgba(0, 0, 0, 0) 100%
   );
-`;
-
-const InnerContainer = styled.div`
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  @media screen and (max-width: 1280px) {
-    flex-direction: column;
-  }
-  @media screen and (min-width: 1280px) {
-    width: 80%;
-  }
-  @media screen and (min-width: 2560px) {
-    width: 60%;
-  }
 `;

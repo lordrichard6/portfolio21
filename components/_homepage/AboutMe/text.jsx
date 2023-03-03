@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
@@ -35,16 +34,16 @@ export default function AboutTextComponent() {
   }, [controls, inView]);
 
   return (
-    <LeftContainer
+    <motion.div
       as={motion.div}
       ref={ref}
       variants={bringUp}
       initial="hidden"
       animate={controls}
-      className="text-slate-100 mt-12"
+      className="text-slate-100 mt-12 mr-0 lg:mr-2 z-10"
     >
       <AboutTitleComponent title={t("home:about_title")} />
-      <p className="text-xl font-normal my-6">
+      <p className="text-xl 2xl:text-2xl font-normal my-6">
         {t("home:about_text01")}
         <br />
         <br />
@@ -59,15 +58,6 @@ export default function AboutTextComponent() {
         <br />
         {t("home:about_text05")}
       </p>
-    </LeftContainer>
+    </motion.div>
   );
 }
-
-const LeftContainer = styled.div`
-  z-index: 1;
-  margin-right: 0.5rem;
-
-  @media screen and (max-width: 992px) {
-    margin: 0;
-  }
-`;

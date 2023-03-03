@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import Image from "next/image";
-import { FaInfo } from "react-icons/fa";
+// import { FaInfo } from "react-icons/fa";
 import useTranslation from "next-translate/useTranslation";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import MeFormal from "../../../assets/images/homepage/about-me.png";
-import MeFormalG from "../../../assets/images/homepage/about-me_g.png";
-import SocialLinksComponent from "../../Footer/social_links";
+import NoGlasses from "../../../assets/images/homepage/about-me.png";
+import WithGlasses from "../../../assets/images/homepage/about-me_g.png";
+// import SocialLinksComponent from "../../Footer/social_links";
 
 export default function AboutPictureComponent() {
   let { t } = useTranslation();
@@ -100,6 +100,7 @@ export default function AboutPictureComponent() {
             <div className="star"></div>
             <div className="star"></div>
           </div>
+          {/* INFO BOX */}
           {/* <div className="card" tabIndex="0">
             <span className="card__infoicon">
               <FaInfo className="fa fa-info" />
@@ -113,10 +114,10 @@ export default function AboutPictureComponent() {
             </p>
           </div> */}
           <figure className="picture">
-            <Image className="me" src={MeFormal} alt="paulo reizinho" />
+            <Image className="me" src={NoGlasses} alt="paulo reizinho" />
           </figure>
           <figure className="picture glasses">
-            <Image className="me" src={MeFormalG} alt="paulo reizinho" />
+            <Image className="me" src={WithGlasses} alt="paulo reizinho" />
           </figure>
         </div>
       </div>
@@ -139,7 +140,8 @@ const RightContainer = styled.div`
 
   .outer {
     position: relative;
-    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    background: url("/pattern.png"),
+      radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
     width: 550px;
     height: 750px;
     z-index: 1;
@@ -175,7 +177,7 @@ const RightContainer = styled.div`
         clip-path: circle(7% at 90% 11%);
       }
 
-      &__infoicon {
+      /* &__infoicon {
         position: absolute;
 
         top: 8px;
@@ -196,8 +198,8 @@ const RightContainer = styled.div`
           top: 16px;
           right: 18px;
         }
-      }
-      &__title {
+      } */
+      /* &__title {
         color: #20303c;
         margin: 0;
 
@@ -208,14 +210,14 @@ const RightContainer = styled.div`
           font-size: 2em;
           line-height: 1.2;
         }
-      }
-      &__description {
+      } */
+      /* &__description {
         margin: 0;
 
         font-size: 1.1em;
         line-height: 1.6;
-      }
-      &__credits {
+      } */
+      /* &__credits {
         strong {
           color: #0094b5;
         }
@@ -223,9 +225,9 @@ const RightContainer = styled.div`
         padding: 4px 0;
 
         font-size: 1.1em;
-      }
+      } */
 
-      &:hover,
+      /* &:hover,
       &:focus {
         clip-path: circle(75%);
         border-radius: 20px;
@@ -237,11 +239,11 @@ const RightContainer = styled.div`
         .card__infoicon {
           opacity: 0;
         }
-      }
-      &:focus {
+      } */
+      /* &:focus {
         box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.12),
           0px 3px 18px rgba(0, 0, 0, 0.08), 0px 0px 0px 4px rgba(0, 0, 0, 0.2);
-      }
+      } */
     }
 
     .picture {
