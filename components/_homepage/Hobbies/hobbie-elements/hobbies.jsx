@@ -17,23 +17,11 @@ import AniFat from "../../../../assets/images/homepage/ani_fat.gif";
 import AniBear from "../../../../assets/images/homepage/ani_bear.gif";
 import AniCook from "../../../../assets/images/homepage/ani_cook.gif";
 
+import { bringUp } from "../../../../utilities/framer-animations";
+
 export default function HobbiesComponent() {
   let { t } = useTranslation();
   let router = useRouter();
-
-  const bringUp = {
-    visible: {
-      opacity: 1,
-      scale: 1,
-      y: 0,
-      transition: { duration: 2, type: "spring", bounce: 0.4 },
-    },
-    hidden: {
-      opacity: 0,
-      scale: 0,
-      y: 100,
-    },
-  };
 
   const controls = useAnimation();
   const [ref, inView] = useInView({

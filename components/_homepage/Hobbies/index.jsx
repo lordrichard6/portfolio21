@@ -6,7 +6,6 @@ import HobbiesComponent from "./hobbie-elements/hobbies";
 import CenterHexagonComponent from "./hobbie-elements/centerHexagon";
 import EvolutionComponent from "./evolution";
 import HobbiesTitleComponent from "./title";
-// import PoligonsAnimationComponent from './poligons_animation'
 
 export default function MyPassions() {
   let { t } = useTranslation();
@@ -18,7 +17,6 @@ export default function MyPassions() {
       <CenterHexagonComponent />
       <HobbiesComponent />
       <EvolutionComponent />
-      {/* <PoligonsAnimationComponent /> */}
     </SectionContainer>
   );
 }
@@ -27,15 +25,13 @@ const SectionContainer = styled.section`
   position: relative;
   width: 100%;
   min-height: 120vh;
-  /* padding: 5rem 0; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   color: ${Colors.white};
   overflow-x: hidden;
-  /* background: url("/pattern.png"), ${Colors.primary}; */
-  background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
+  background: ${Colors.primary_background};
 
   @media screen and (max-width: 764px) {
     min-height: 1200px;

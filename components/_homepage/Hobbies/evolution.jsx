@@ -11,36 +11,59 @@ import Man_07 from "../../../assets/images/homepage/evo_07.png";
 import Man_08 from "../../../assets/images/homepage/evo_08.png";
 import Man_09 from "../../../assets/images/homepage/evo_09.png";
 
+const mankind = [
+  {
+    classEvo: "evo_01",
+    img: Man_01,
+  },
+  {
+    classEvo: "evo_02",
+    img: Man_02,
+  },
+  {
+    classEvo: "evo_03",
+    img: Man_03,
+  },
+  {
+    classEvo: "evo_04",
+    img: Man_04,
+  },
+  {
+    classEvo: "evo_05",
+    img: Man_05,
+  },
+  {
+    classEvo: "evo_06",
+    img: Man_06,
+  },
+  {
+    classEvo: "evo_07",
+    img: Man_07,
+  },
+  {
+    classEvo: "evo_08",
+    img: Man_08,
+  },
+  {
+    classEvo: "evo_09",
+    img: Man_09,
+  },
+];
+
+function ManEvo({ key, classEvo, img }) {
+  return (
+    <figure key={key} className={`evolution ${classEvo}`}>
+      <Image src={img} responsive alt="mankind evolution" />
+    </figure>
+  );
+}
+
 export default function EvolutionComponent() {
   return (
     <Container>
-      <figure className="evolution evo_01">
-        <Image src={Man_01} layout="responsive" alt="mankind evolution" />
-      </figure>
-      <figure className="evolution evo_02">
-        <Image src={Man_02} layout="responsive" alt="mankind evolution" />
-      </figure>
-      <figure className="evolution evo_03">
-        <Image src={Man_03} layout="responsive" alt="mankind evolution" />
-      </figure>
-      <figure className="evolution evo_04">
-        <Image src={Man_04} layout="responsive" alt="mankind evolution" />
-      </figure>
-      <figure className="evolution evo_05">
-        <Image src={Man_05} layout="responsive" alt="mankind evolution" />
-      </figure>
-      <figure className="evolution evo_06">
-        <Image src={Man_06} layout="responsive" alt="mankind evolution" />
-      </figure>
-      <figure className="evolution evo_07">
-        <Image src={Man_07} layout="responsive" alt="mankind evolution" />
-      </figure>
-      <figure className="evolution evo_08">
-        <Image src={Man_08} layout="responsive" alt="mankind evolution" />
-      </figure>
-      <figure className="evolution evo_09">
-        <Image src={Man_09} layout="responsive" alt="mankind evolution" />
-      </figure>
+      {mankind.map((man, i) => {
+        return <ManEvo key={i} classEvo={man.classEvo} img={man.img} />;
+      })}
     </Container>
   );
 }
