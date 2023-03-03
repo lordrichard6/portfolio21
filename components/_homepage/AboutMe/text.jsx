@@ -33,7 +33,7 @@ export default function AboutTextComponent() {
       className="text-slate-100 mt-12 mr-0 lg:mr-2 z-10"
     >
       <AboutTitleComponent title={t("home:about_title")} />
-      <p className="text-xl 2xl:text-2xl font-normal my-6">
+      <p className="text-xl 2xl:text-2xl font-normal antialiased my-6">
         {t("home:about_text01")}
         <br />
         <br />

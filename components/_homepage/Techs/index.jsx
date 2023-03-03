@@ -3,10 +3,14 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import { bringUp, bringFromLeft, bringFromRight } from "../../../utilities/framer-animations";
+import {
+  bringUp,
+  bringFromLeft,
+  bringFromRight,
+} from "../../../utilities/framer-animations";
 
 import HobbiesTitleComponent from "../Hobbies/title";
-import SingleTech from "./tech";
+import SectionComponent from "./section";
 
 import { frontTechs, backTechs } from "../../../assets/data/techs";
 
@@ -34,52 +38,26 @@ export default function Techs() {
         initial="hidden"
         animate={controls}
         ref={ref}
-        className="text-slate-100 mx-auto text-xl w-3/4 md:w-1/2 mt-8 mb-12"
+        className="mx-auto w-3/4 md:w-1/2 2xl:w-1/3 mt-8 mb-12"
       >
-        <p>{t("home:techs_description")}</p>
+        <p className="normal-text">{t("home:techs_description")}</p>
       </motion.div>
-      <div className="text-slate-100 grid grid-cols-1 md:grid-cols-2 w-full md:divide-x-4 mt-10">
-        <motion.div 
-        variants={bringFromLeft}
-        initial="hidden"
-        animate={controls}
-        className="left">
-          <h2 className="my-6 text-center text-4xl antialiased font-semibold uppercase underline decoration-wavy decoration-2 underline-offset-6 drop-shadow-lg -skew-y-6">
-            Front-end
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-4 place-items-end">
-            {frontTechs.map((tech, i) => {
-              return (
-                <SingleTech
-                  key={i}
-                  tech={tech.tech}
-                  icon={tech.icon}
-                  text={t(tech.text)}
-                />
-              );
-            })}
-          </div>
+      <div className="text-slate-100 grid grid-cols-1 md:grid-cols-2 w-full 2xl:w-4/5 md:divide-x-4 mt-10 mx-auto">
+        <motion.div
+          variants={bringFromLeft}
+          initial="hidden"
+          animate={controls}
+          className="left"
+        >
+          <SectionComponent title="Front-End" side={frontTechs} />
         </motion.div>
-        <motion.div 
-                variants={bringFromRight}
-                initial="hidden"
-                animate={controls}
-                className="right">
-          <h2 className="my-6 text-center text-4xl antialiased font-semibold uppercase underline decoration-wavy decoration-2 underline-offset-6 drop-shadow-lg -skew-y-6">
-            Back-end
-          </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mx-4 place-items-end">
-            {backTechs.map((tech, i) => {
-              return (
-                <SingleTech
-                  key={i}
-                  tech={tech.tech}
-                  icon={tech.icon}
-                  text={t(tech.text)}
-                />
-              );
-            })}
-          </div>
+        <motion.div
+          variants={bringFromRight}
+          initial="hidden"
+          animate={controls}
+          className="right"
+        >
+          <SectionComponent title="Back-End" side={backTechs} />
         </motion.div>
       </div>
     </section>
