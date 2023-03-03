@@ -1,0 +1,105 @@
+// HOMEPAGE
+// HEADER SECTION
+@keyframes flash {
+  0% {
+    filter: blur(0) brightness(1);
+  }
+  96% {
+    filter: brightness(1) blur(0);
+  }
+  98% {
+    filter: brightness(10) blur(0.5rem);
+  }
+  100% {
+    filter: blur(0) brightness(1);
+  }
+}
+
+@keyframes showTitle {
+  0% {
+    filter: blur(0) brightness(1);
+    opacity: 0;
+  }
+  96% {
+    filter: brightness(1) blur(0);
+    opacity: 0;
+  }
+  98% {
+    filter: brightness(10) blur(0.5rem);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(0) brightness(1);
+  }
+}
+
+@keyframes showSubtitle {
+  0% {
+    transform: translate(-200%, 0);
+  }
+  80% {
+    transform: translate(-200%, 0);
+  }
+  96% {
+    filter: blur(0) brightness(1);
+    transform: translate(0, 0);
+  }
+  98% {
+    filter: blur(1rem) brightness(10);
+  }
+  100% {
+    filter: blur(0) brightness(1);
+  }
+}
+
+@keyframes showHead {
+  0% {
+    filter: blur(10rem) brightness(8);
+    transform: scale(2) translate(-20%, 0);
+  }
+  50% {
+    filter: blur(0) brightness(2);
+    transform: scale(2) translate(-20%, 0);
+  }
+  60% {
+    transform: scale(2) translate(-20%, 0);
+  }
+
+  96% {
+    filter: blur(0) brightness(2);
+  }
+  98% {
+    transform: scale(1) translate(0, 0);
+    filter: blur(5rem) brightness(10);
+  }
+  100% {
+    filter: blur(0) brightness(2);
+  }
+}
+
+@keyframes showHeadMobile {
+  0% {
+    filter: blur(10rem) brightness(8);
+    transform: scale(2) translate(0, 0);
+  }
+  50% {
+    filter: blur(0) brightness(2);
+    transform: scale(2) translate(0, 0);
+  }
+  60% {
+    transform: scale(2) translate(0, 0);
+  }
+
+  96% {
+    filter: blur(0) brightness(2);
+  }
+  98% {
+    transform: scale(1) translate(0, 0);
+    filter: blur(5rem) brightness(10);
+  }
+  100% {
+    filter: blur(0) brightness(2);
+  }
+}
+// HOMEPAGE
+// --------------------------------------------------------------------
