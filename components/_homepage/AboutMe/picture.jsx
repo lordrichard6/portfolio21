@@ -118,7 +118,7 @@ export default function AboutPictureComponent() {
 
 const RightContainer = styled.div`
   position: relative;
-  display: flex;
+  /* display: flex; */
   height: 100%;
   margin-left: 0.5rem;
   cursor: pointer;
