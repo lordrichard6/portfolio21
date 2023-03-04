@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Moon from '../../../assets/images/projects/moon.png'
 import Sun from '../../../assets/images/projects/sun.png'
-import CometsComponent from '../../_homepage/Header/comets'
+import CometsComponent from '../../_homepage/Header/stars'
 
 export default function MoonAndSun() {
   const [offsetY, setOffsetY] = useState(0);
