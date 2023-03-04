@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
-import Moon from '../../../assets/images/projects/moon.png'
-import Sun from '../../../assets/images/projects/sun.png'
-import CometsComponent from '../../_homepage/Header/stars'
+import Moon from "../../../assets/images/projects/moon.png";
+import Sun from "../../../assets/images/projects/sun.png";
+import { CometsComponent } from "../../_homepage/Header/stars";
 
 export default function MoonAndSun() {
   const [offsetY, setOffsetY] = useState(0);
@@ -19,10 +19,16 @@ export default function MoonAndSun() {
   return (
     <>
       <CometsComponent />
-      <MoonContainer style={{ transform: `translate(-50%,${offsetY * 0.5}px) rotate(180deg)` }}>
+      <MoonContainer
+        style={{
+          transform: `translate(-50%,${offsetY * 0.5}px) rotate(180deg)`,
+        }}
+      >
         <Image className="img" src={Moon} alt="" />
       </MoonContainer>
-      <SunContainer style={{ transform: `translate(50%,${offsetY * 0.5}px) rotate(45deg)` }}>
+      <SunContainer
+        style={{ transform: `translate(50%,${offsetY * 0.5}px) rotate(45deg)` }}
+      >
         <Image className="img" src={Sun} alt="" />
       </SunContainer>
     </>
@@ -42,7 +48,7 @@ const MoonContainer = styled.div`
     width: 100%;
     height: auto;
   }
-  
+
   @keyframes moveMoon {
     0% {
       transform: translate(-200%, 0) rotate(200deg);
