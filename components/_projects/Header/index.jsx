@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
-import Animation from './animation'
-import Day from '../../../assets/images/projects/day.jpg'
-import MoonAndSun from './sky'
-import StarsComponent from '../../_homepage/Header/stars'
+import Animation from "./animation";
+import Day from "../../../assets/images/projects/day.jpg";
+import MoonAndSun from "./sky";
+import { StarsComponent } from "../../_homepage/Header/stars";
 
 export default function Header() {
   const [offsetY, setOffsetY] = useState(0);
@@ -24,8 +24,10 @@ export default function Header() {
       </div>
       <MoonAndSun />
       <Animation />
-      <div className="night" style={{ transform: `translateY(${offsetY * 0.1}px)` }}>
-      </div>
+      <div
+        className="night"
+        style={{ transform: `translateY(${offsetY * 0.1}px)` }}
+      ></div>
       <StarsComponent />
     </SectionContainer>
   );
@@ -52,14 +54,14 @@ const SectionContainer = styled.header`
     top: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to top, #283E51, #0A2342);
+    background: linear-gradient(to top, #283e51, #0a2342);
     transition: 2s all ease;
     animation: bringNight 4.2s linear;
   }
 
   @keyframes bringNight {
     0% {
-      opacity: 0;;
+      opacity: 0;
     }
     85% {
       opacity: 0;
