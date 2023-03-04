@@ -2,6 +2,8 @@ import Head from "next/head";
 import React, { useState } from "react";
 import styled from "styled-components";
 
+import { Colors } from "../../assets/variables";
+
 import Sidebar from "../Navbar/sidebar";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
@@ -38,6 +40,6 @@ const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(to right, #20303c, #478995, #b2d6bc);
+  background: ${Colors.primary_background};
   /* overflow-x: hidden; */
 `;

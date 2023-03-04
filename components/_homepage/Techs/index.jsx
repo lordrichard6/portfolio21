@@ -19,7 +19,7 @@ export default function Techs() {
 
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.8,
+    threshold: 0.2,
   });
   useEffect(() => {
     if (inView) {
@@ -31,17 +31,8 @@ export default function Techs() {
   }, [controls, inView]);
 
   return (
-    <section className="mt-10 mb-20 lg:mb-40 md:mx-10">
-      <HobbiesTitleComponent title="Techs" />
-      <motion.div
-        variants={bringUp}
-        initial="hidden"
-        animate={controls}
-        ref={ref}
-        className="mx-auto w-3/4 md:w-1/2 2xl:w-1/3 mt-8 mb-12"
-      >
-        <p className="normal-text">{t("home:techs_description")}</p>
-      </motion.div>
+    <section ref={ref} className="mt-10 mb-20 lg:mb-40 md:mx-10">
+      <HobbiesTitleComponent title="Techs" text={t("home:techs_description")} />
       <div className="text-slate-100 grid grid-cols-1 md:grid-cols-2 w-full 2xl:w-4/5 md:divide-x-4 mt-10 mx-auto">
         <motion.div
           variants={bringFromLeft}

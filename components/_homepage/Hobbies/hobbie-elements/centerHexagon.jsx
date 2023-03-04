@@ -92,10 +92,9 @@ export default function CenterHexagonComponent() {
 
 const HexagonBig = styled.div`
   position: absolute;
-  /* left: -200px; */
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  top: 420px;
+  transform: translate(-50%,-30%)!important;
   height: 700px;
   width: 800px;
   z-index: 1;
@@ -105,20 +104,8 @@ const HexagonBig = styled.div`
   overflow: hidden;
 
   @media screen and (max-width: 764px) {
-    top: 230px;
-    left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,25%)!important;
     height: 300px;
     width: 350px;
-  }
-
-  .earth {
-    position: absolute;
-    top: 500px;
-    height: 100%;
-    width: 100%;
-    @media screen and (max-width: 764px) {
-      top: 210px;
-    }
   }
 `;
