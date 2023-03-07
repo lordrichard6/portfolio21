@@ -12,7 +12,7 @@ function StringMapper({string}) {
   const charComponents = chars.map((char, index) => {
     // return <span key={index}>{char}</span>;
     return (
-      <div key={index} className="wrapper">
+      <div key={index} className="wrapper text-4xl md:text-7xl lg:text-8xl">
         <div id="L" className="letter">
           {char}
         </div>

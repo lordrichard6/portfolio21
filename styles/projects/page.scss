@@ -1,0 +1,36 @@
+.profissional {
+    @apply border-r-[1rem] mr-auto ml-2;
+    .slide {
+        @apply rounded-l-md ml-auto sm:justify-start;
+    }
+    .icon {
+        @apply mr-28 lg:mr-36 right-0;
+    }
+    button {
+        @apply  mr-6 right-0;
+    }
+    h1 {
+        @apply md:mr-6;
+    }
+    h3 {
+        @apply -right-10;
+    }
+}
+.personal {
+    @apply border-l-[1rem] ml-auto mr-2 justify-end;
+    .slide {
+        @apply rounded-r-md mr-auto sm:justify-end;
+    }
+    .icon {
+        @apply ml-28 lg:ml-36 left-0;
+    }
+    button {
+        @apply ml-6 md:ml-5 left-0;
+    }
+    h1 {
+        @apply text-right md:ml-6; 
+    }
+    h3 {
+        @apply -left-10;
+    }
+}

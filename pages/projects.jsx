@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Header from "../components/_projects/Header";
-import Developer from "../components/_projects/Developer";
+import Developer from "../components/_projects";
 import Layout from "../components/Layout";
 
 export default function ProjectsPage() {
