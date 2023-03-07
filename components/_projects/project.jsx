@@ -25,6 +25,9 @@ export default function ProjectComponent({ type, title, link, date, icon, icon1,
 }
 
 const Container = styled.div`
+  &:last-child {
+    
+  }
   .slide {
     &:hover {
       width: auto;

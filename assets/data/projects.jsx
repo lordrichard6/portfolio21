@@ -71,7 +71,7 @@ export const projects = [
     backgroundColor: "",
     show: 0.1,
     type: 'profissional',
-    date: '2022/12'
+    date: '2022/06'
   },
   {
     image: '',
@@ -185,7 +185,7 @@ export const projects = [
     backgroundColor: "lightpurple",
     show: 0.61,
     type: 'personal',
-    date: '2022/12'
+    date: '2021/04'
   },
   {
     image: dev_trainedMonkeys,

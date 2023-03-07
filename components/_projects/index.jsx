@@ -6,6 +6,8 @@ import TitleRefexion from "./title";
 import ProjectComponent from "./project";
 
 export default function Developer() {
+  const sortedProjectsByDate = [...projects].sort((a, b) => a.date.localeCompare(b.date)).reverse();
+
   return (
     <SectionContainer>
       <BackgroundGradient></BackgroundGradient>
@@ -14,9 +16,13 @@ export default function Developer() {
         <TitleRefexion word="PERSONAL" />
       </div>
       <div className="w-full flex flex-col z-10">
-      {projects.map((item, i) => {
+      {sortedProjectsByDate.map((item, i) => {
         return <ProjectComponent key={i} date={item.date} icon={item.icon}icon1={item.icon1} icon2={item.icon2} type={item.type} title={item.title} link={item.link} />;
       })}
+        <div className="w-1/2 h-44 border-slate-100 py-2 border-r-[1rem] mr-auto ml-2">
+
+        </div>
+
       </div>
     </SectionContainer>
   );
