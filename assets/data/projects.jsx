@@ -1,5 +1,5 @@
 import { FaReact } from "react-icons/fa";
-import { SiNextdotjs, SiJavascript } from "react-icons/si";
+import { SiNextdotjs, SiJavascript, SiAngular, SiDjango, SiJoomla } from "react-icons/si";
 
 import dev_fastRent from "../images/projects/dev/p10-min.jpg";
 import dev_lastPortfolio from "../images/projects/dev/p09-min.jpg";
@@ -59,6 +59,50 @@ import dev_altynay from "../images/projects/dev/altynay.png";
 
 export const projects = [
   {
+    image: '',
+    alt: "",
+    title: "FahrerZentrale",
+    text: "",
+    techs: "",
+    link: "",
+    github: "",
+    icon1: <SiAngular />,
+    icon2: <SiDjango />,
+    backgroundColor: "",
+    show: 0.1,
+    type: 'profissional',
+    date: '2022/12'
+  },
+  {
+    image: '',
+    alt: "",
+    title: "Pickwings",
+    text: "",
+    techs: "",
+    link: "",
+    github: "",
+    icon1: <SiAngular />,
+    icon2: <SiDjango />,
+    backgroundColor: "",
+    show: 0.1,
+    type: 'profissional',
+    date: '2022/05'
+  },
+  {
+    image: '',
+    alt: "",
+    title: "Helping Hand",
+    text: "",
+    techs: "",
+    link: "",
+    github: "",
+    icon1: <SiJoomla />,
+    backgroundColor: "",
+    show: 0.1,
+    type: 'profissional',
+    date: '2021/06'
+  },
+  {
     image: dev_altynay,
     alt: "online clothing shop",
     title: "Altynay Fashion",
@@ -66,9 +110,11 @@ export const projects = [
     techs: "NextJS - MongoDB - TailwindCSS",
     link: "https://altynai-fashion.vercel.app/",
     github: "https://github.com/lordrichard6/altynai-ecommerce-shop",
-    icon: <SiNextdotjs />,
+    icon1: <SiNextdotjs />,
     backgroundColor: "red",
     show: 0.1,
+    type: 'personal',
+    date: '2022/09'
   },
   {
     image: dev_leftBastards,
@@ -78,9 +124,11 @@ export const projects = [
     techs: "NextJS - styled-components - typescript",
     link: "https://left-bastards.vercel.app/",
     github: "https://github.com/lordrichard6/left_bastards",
-    icon: <SiNextdotjs />,
+    icon1: <SiNextdotjs />,
     backgroundColor: "yellow",
     show: 0.2,
+    type: 'personal',
+    date: '2021/12'
   },
   {
     image: dev_sardinha,
@@ -90,9 +138,12 @@ export const projects = [
     techs: "NextJS - styled-components - typescript",
     link: "https://www.sardinhadrive.ch/",
     github: "https://github.com/lordrichard6/patricia_project",
-    icon: <SiNextdotjs />,
+    icon1: <SiNextdotjs />,
+    icon2: <FaReact />,
     backgroundColor: "blue",
     show: 0.25,
+    type: 'personal',
+    date: '2021/11'
   },
   {
     image: dev_fastRent,
@@ -105,6 +156,8 @@ export const projects = [
     icon: <FaReact />,
     backgroundColor: "red",
     show: 0.3,
+    type: 'personal',
+    date: '2021/06'
   },
   {
     image: dev_skyTours,
@@ -117,6 +170,8 @@ export const projects = [
     icon: <FaReact />,
     backgroundColor: "green",
     show: 0.54,
+    type: 'personal',
+    date: '2021/04'
   },
   {
     image: dev_hulu,
@@ -129,6 +184,8 @@ export const projects = [
     icon: <SiNextdotjs />,
     backgroundColor: "lightpurple",
     show: 0.61,
+    type: 'personal',
+    date: '2022/12'
   },
   {
     image: dev_trainedMonkeys,
@@ -141,6 +198,8 @@ export const projects = [
     icon: <SiNextdotjs />,
     backgroundColor: "orange",
     show: 0.66,
+    type: 'personal',
+    date: '2020/03'
   },
   {
     image: dev_sphere,
@@ -153,6 +212,8 @@ export const projects = [
     icon: <SiJavascript />,
     backgroundColor: "darkpurple",
     show: 0.79,
+    type: 'personal',
+    date: '2021/06'
   },
   {
     image: dev_paulsEngine,
@@ -165,6 +226,8 @@ export const projects = [
     icon: <SiNextdotjs />,
     backgroundColor: "strongred",
     show: 0.9,
+    type: 'personal',
+    date: '2021/04'
   },
   {
     image: currentFirstV,
@@ -177,6 +240,8 @@ export const projects = [
     icon: <FaReact />,
     backgroundColor: "blue",
     show: 0.14,
+    type: 'personal',
+    date: '2022/02'
   },
   {
     image: dev_blueVariant,
@@ -189,6 +254,8 @@ export const projects = [
     icon: <SiNextdotjs />,
     backgroundColor: "blue",
     show: 0.13,
+    type: 'personal',
+    date: '2021/09'
   },
   {
     image: dev_comicPortfolio,
@@ -201,6 +268,8 @@ export const projects = [
     icon: <FaReact />,
     backgroundColor: "lightblue",
     show: 0.78,
+    type: 'personal',
+    date: '2021/07'
   },
   {
     image: dev_lastPortfolio,
@@ -213,5 +282,77 @@ export const projects = [
     icon: <FaReact />,
     backgroundColor: "yellow",
     show: 0.37,
+    type: 'personal',
+    date: '2020/04'
+  },
+  {
+    image: '',
+    alt: "",
+    title: "Limmatstadt",
+    text: "",
+    techs: "",
+    link: "https://www.limmatstadt.ch/",
+    github: "",
+    icon: <FaReact />,
+    backgroundColor: "yellow",
+    show: 0.37,
+    type: 'profissional',
+    date: '2020/02'
+  },
+  {
+    image: '',
+    alt: "",
+    title: "Protier",
+    text: "",
+    techs: "",
+    link: "https://www.protier.ch/",
+    github: "",
+    icon: <FaReact />,
+    backgroundColor: "yellow",
+    show: 0.37,
+    type: 'profissional',
+    date: '2020/01'
+  },
+  {
+    image: '',
+    alt: "",
+    title: "Bezahlbare Wohnungen",
+    text: "",
+    techs: "",
+    link: "https://feinheit.ch/projekte/mehr-bezahlbare-wohnungen/",
+    github: "",
+    icon: <FaReact />,
+    backgroundColor: "yellow",
+    show: 0.37,
+    type: 'profissional',
+    date: '2019/11'
+  },
+  {
+    image: '',
+    alt: "",
+    title: "Feinheit",
+    text: "",
+    techs: "",
+    link: "https://feinheit.ch/",
+    github: "",
+    icon: <FaReact />,
+    backgroundColor: "yellow",
+    show: 0.37,
+    type: 'profissional',
+    date: '2019/10'
+  },
+  {
+    image: '',
+    alt: "",
+    title: "FCZ",
+    text: "",
+    techs: "",
+    link: "https://www.fcz.ch/",
+    github: "",
+    icon: <FaReact />,
+    backgroundColor: "yellow",
+    show: 0.37,
+    type: 'profissional',
+    date: '2019/08'
   },
 ];
