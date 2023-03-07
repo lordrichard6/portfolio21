@@ -4,5 +4,6 @@ export const Colors = {
     white:'#fff',
     dark: '#1d2124',
 
-    primary_background: 'linear-gradient(to right, #20303c, #478995, #b2d6bc)'
+    // primary_background: 'linear-gradient(to right, #20303c, #478995, #b2d6bc)'
+    primary_background: 'linear-gradient(to right, #20303c, #478995)',
 }
