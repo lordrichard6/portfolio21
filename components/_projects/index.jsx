@@ -1,18 +1,22 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
+import useTranslation from "next-translate/useTranslation";
 
 import { projects } from "../../assets/data/projects";
 import { Colors } from "../../assets/variables";
 import TitleRefexion from "./title";
 import ProjectComponent from "./project";
+import ProjectsIntro from './text';
 
 export default function Developer() {
   const sortedProjectsByDate = [...projects].sort((a, b) => a.date.localeCompare(b.date)).reverse();
   let router = useRouter();
+  let { t } = useTranslation();
   
   return (
     <SectionContainer>
       <BackgroundGradient></BackgroundGradient>
+      <ProjectsIntro pageIntro={t("projects:projects_intro")} />
       <div className="flex w-full justify-around">
         <TitleRefexion word="PROFISSIONAL" />
         <TitleRefexion word={router.locale === 'pt' ? 'PESSOAL' : 'PERSONAL'} />
