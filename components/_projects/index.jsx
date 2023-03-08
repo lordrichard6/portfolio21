@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useRouter } from "next/router";
 
 import { projects } from "../../assets/data/projects";
 import { Colors } from "../../assets/variables";
@@ -7,13 +8,14 @@ import ProjectComponent from "./project";
 
 export default function Developer() {
   const sortedProjectsByDate = [...projects].sort((a, b) => a.date.localeCompare(b.date)).reverse();
-
+  let router = useRouter();
+  
   return (
     <SectionContainer>
       <BackgroundGradient></BackgroundGradient>
       <div className="flex w-full justify-around">
         <TitleRefexion word="PROFISSIONAL" />
-        <TitleRefexion word="PERSONAL" />
+        <TitleRefexion word={router.locale === 'pt' ? 'PESSOAL' : 'PERSONAL'} />
       </div>
       <div className="w-full flex flex-col z-10">
       {sortedProjectsByDate.map((item, i) => {
