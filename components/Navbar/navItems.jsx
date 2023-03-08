@@ -1,10 +1,8 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 
-import { Colors } from "../../assets/variables";
 import { navItems } from "../../assets/data";
 
 export default function NavItems() {
@@ -15,10 +13,13 @@ export default function NavItems() {
   console.log(navItems);
 
   return (
-    <NavMenu>
+    <NavMenu className="flex flex-row justify-end m-0 z-10 list-none">
       {navItems.map((item, i) => {
         return (
-          <NavItem key={i}>
+          <NavItem
+            className="hidden lg:inline-block font-extralight text-3xl text-slate-100 px-4"
+            key={i}
+          >
             <Link
               prefetch
               href={item.to}
@@ -36,26 +37,9 @@ export default function NavItems() {
   );
 }
 
-const NavMenu = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  list-style: none;
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 200;
-  margin: 0;
-  z-index: 2;
-
-  @media screen and (max-width: 1024px) {
-    display: none;
-  }
-`;
+const NavMenu = styled.ul``;
 
 const NavItem = styled.li`
-  padding-right: 1rem;
-  padding-left: 1rem;
-
   a {
     cursor: pointer;
     position: relative;
@@ -83,7 +67,7 @@ const NavItem = styled.li`
       font-weight: 800;
     }
     :hover {
-      font-weight: 800;
+      /* font-weight: 400; */
     }
 
     :hover::after {
