@@ -7,6 +7,7 @@ import { useInView } from "react-intersection-observer";
 
 import ContactCard from './card'
 import MapComponent from './map'
+import CVButton from '../Footer/cvButton'
 
 export default function ContactsPage() {
   let { t } = useTranslation();
@@ -43,10 +44,11 @@ export default function ContactsPage() {
       variants={bringUp}
       initial="hidden"
       animate={controls}
-      className="overflow-y-hidden h-screen flex flex-col justify-center items-center pt-36 pb-10"
+      className="overflow-hidden h-screen flex flex-col justify-center items-center pt-36 pb-10"
     >
       <ContactCard />
       <MapComponent />
+      <CVButton />
     </Container>
   );
 }

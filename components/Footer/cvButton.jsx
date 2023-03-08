@@ -5,14 +5,11 @@ import React, { useState, useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import { Colors } from "../../assets/variables";
-// import QRcode from '../../assets/images/qr.png';
-import SocialLinksComponent from "./social_links";
 import Button01Component from "./button";
 import { MdEmail } from "react-icons/md";
 import { SiMinutemailer } from "react-icons/si";
 
-export default function Contacts() {
+export default function CVButton() {
   const [btnGone, setBtnGone] = useState(0);
 
   let { t } = useTranslation();
@@ -57,9 +54,6 @@ export default function Contacts() {
       animate={controls}
       className="mt-6"
     >
-      {/* <h1>{t("common:info")}</h1>
-      <SocialLinksComponent /> */}
-
       <ContactWrapper>
         <EmailButton>
           <div onClick={openMail} className="btnWrapper text-slate-100">
