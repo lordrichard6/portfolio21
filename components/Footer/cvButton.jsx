@@ -79,7 +79,6 @@ const SectionContainer = styled.section`
   align-items: center;
 
   @media screen and (max-width: 764px) {
-    order: 3;
     margin: 2rem 0;
   }
   h1 {
