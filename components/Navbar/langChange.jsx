@@ -8,10 +8,10 @@ export default function LangChange() {
   console.log("languages", router.locales);
   console.log("selected language", JSON.stringify(router.locale));
   return (
-    <NavMenu className="flex flex-row justify-center items-center list-none ">
+    <NavMenu className="flex flex-row justify-center items-center list-none ml-2">
       {router.locales.map((locale) => (
         <li
-          className="text-2xl text-slate-100 font-normal uppercase m-0 px-1"
+          className="text-2xl lg:text-xl text-slate-100 font-normal uppercase m-0 px-1"
           key={locale}
         >
           <Link href={router.asPath} locale={locale} passHref>
