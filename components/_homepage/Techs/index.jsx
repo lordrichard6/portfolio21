@@ -4,7 +4,6 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import {
-  bringUp,
   bringFromLeft,
   bringFromRight,
 } from "../../../utilities/framer-animations";
