@@ -76,9 +76,9 @@ export default function ContactForm() {
   return (
     <ChakraProvider resetCSS={false} theme={theme}>
       <Container maxW="450px" mt={12}>
-        <Heading textAlign="center">Contact</Heading>
+      <h1 className="text-4xl font-semibold mt-6 mb-2/ text-center">Send me a quick message</h1>
         {error && (
-          <Text color="red.300" my={4} fontSize="xl">
+          <Text className="text-center" color="red.300" my={4} fontSize="xl">
             {error}
           </Text>
         )}

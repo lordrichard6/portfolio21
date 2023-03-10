@@ -48,8 +48,8 @@ export default function ContactsPage() {
       className="overflow-hidden flex flex-col justify-center items-center pt-36 pb-10"
     >
       <ContactCard />
-      <MapComponent />
       <CVButton />
+      <MapComponent />
       <ContactForm />
     </Container>
   );

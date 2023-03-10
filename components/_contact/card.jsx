@@ -13,49 +13,54 @@ export default function ContactCard() {
   let { t } = useTranslation();
 
   return (
-    <Card className="h-96 w-80 sm:w-[40rem] sm:h-[25rem] rounded-md relative">
-      <h2 className="hidden sm:block blur-[1px] text-slate-100 text-xl text-center">
-        Hover with your mouse
-      </h2>
-      <h2 className="sm:hidden blur-[1px] text-slate-100 text-xl text-center">
-        Press on the card
-      </h2>
-      <div className="card__side card__side--front shadow-xl flex justify-center items-center max-h-full rounded-md overflow-hidden ">
-        <div className="z-0 w-full sm:w-3/4 opacity-20 blur-[4px] absolute right-[-40px] top-[-25px] sm:top-[-45px]">
-          <Image src={MeFormalG} alt="paulo reizinho" />
+    <>
+    <h1 className="text-4xl font-semibold mb-6">My contact card</h1>
+      <Card className="h-96 w-80 sm:w-[40rem] sm:h-[25rem] rounded-md relative">
+        <h2 className="hidden sm:block blur-[1px] text-slate-100 text-xl text-center">
+          Hover with your mouse
+        </h2>
+        <h2 className="sm:hidden blur-[1px] text-slate-100 text-xl text-center">
+          Press on the card
+        </h2>
+        <div className="card__side card__side--front shadow-xl flex justify-center items-center max-h-full rounded-md overflow-hidden ">
+          <div className="z-0 w-full sm:w-3/4 opacity-20 blur-[4px] absolute right-[-40px] top-[-25px] sm:top-[-45px]">
+            <Image src={MeFormalG} alt="paulo reizinho" />
+          </div>
+          <div className="w-3/4 sm:w-1/2">
+            <Image src={logo} alt="paulo lopes reizinho" responsive />
+          </div>
         </div>
-        <div className="w-3/4 sm:w-1/2">
-          <Image src={logo} alt="paulo lopes reizinho" responsive />
-        </div>
-      </div>
 
-      <div className="card__side card__side--back card__side--back shadow-xl flex flex-column justify-center items-center max-h-full overflow-hidden">
-        <div className="z-0 w-full sm:w-3/4 opacity-60 blur-[1px] absolute right-[-40px] top-[-15px] sm:top-[-45px]">
-          <Image src={MeFormalG} alt="paulo reizinho" />
+        <div className="card__side card__side--back card__side--back shadow-xl flex flex-column justify-center items-center max-h-full overflow-hidden">
+          <div className="z-0 w-full sm:w-3/4 opacity-60 blur-[1px] absolute right-[-40px] top-[-15px] sm:top-[-45px]">
+            <Image src={MeFormalG} alt="paulo reizinho" />
+          </div>
+          <SocialLinksComponent />
+          <div className="flex text-slate-100 justify-center items-end z-10">
+            <SiMinutemailer
+              className="text-xl mr-2"
+              alt="github paulo reizinho profile"
+            />
+            <p>
+              <a href="mailto: paulolopesreizinho@gmail.com">
+                paulolopesreizinho@gmail.com
+              </a>
+            </p>
+          </div>
+          <div className="flex text-slate-100 justify-center items-end z-10">
+            <MdLocationOn
+              className="text-xl mr-2"
+              alt="github paulo reizinho profile"
+            />
+            <p>
+              <a href="https://goo.gl/maps/9v4ozkK13GCxri2C9">
+                Zurich - Schweiz
+              </a>
+            </p>
+          </div>
         </div>
-        <SocialLinksComponent />
-        <div className="flex text-slate-100 justify-center items-end z-10">
-          <SiMinutemailer
-            className="text-xl mr-2"
-            alt="github paulo reizinho profile"
-          />
-          <p>
-            <a href="mailto: paulolopesreizinho@gmail.com">
-              paulolopesreizinho@gmail.com
-            </a>
-          </p>
-        </div>
-        <div className="flex text-slate-100 justify-center items-end z-10">
-          <MdLocationOn
-            className="text-xl mr-2"
-            alt="github paulo reizinho profile"
-          />
-          <p>
-            <a href="https://goo.gl/maps/9v4ozkK13GCxri2C9">Zurich - Schweiz</a>
-          </p>
-        </div>
-      </div>
-    </Card>
+      </Card>
+    </>
   );
 }
 
