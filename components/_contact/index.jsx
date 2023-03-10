@@ -7,6 +7,7 @@ import { useInView } from "react-intersection-observer";
 
 import ContactCard from './card'
 import MapComponent from './map'
+import ContactForm from './contactForm'
 import CVButton from '../Footer/cvButton'
 
 export default function ContactsPage() {
@@ -49,6 +50,7 @@ export default function ContactsPage() {
       <ContactCard />
       <MapComponent />
       <CVButton />
+      <ContactForm />
     </Container>
   );
 }
