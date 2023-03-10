@@ -98,16 +98,16 @@ const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 768px) {
-    transform: translate(-100%, 40%) !important;
+    transform: translate(-100%, -50%) !important;
     font-size: 1.8rem !important;
   }
   @media screen and (max-width: 1024px) {
     width: max-content;
     display: block;
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, -50%);
     font-size: 2rem;
     cursor: pointer;
     color: #fff;
