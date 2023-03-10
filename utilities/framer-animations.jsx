@@ -14,7 +14,7 @@ export const bringFromLeft = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { delay: 0.4, duration: 2.5, type: "spring", bounce: 0.4 },
+    transition: { delay: 0.4, duration: 2.0, type: "spring", bounce: 0.4 },
   },
   hidden: {
     opacity: 0,
@@ -26,7 +26,7 @@ export const bringFromRight = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { delay: 0.6, duration: 2.5, type: "spring", bounce: 0.4 },
+    transition: { delay: 0.4, duration: 2.0, type: "spring", bounce: 0.4 },
   },
   hidden: {
     opacity: 0,
