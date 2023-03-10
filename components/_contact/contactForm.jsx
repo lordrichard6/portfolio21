@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 
 import theme from "../../config/theme";
+delete theme.styles.global
 
 const initValues = {
   name: "",
@@ -49,6 +50,7 @@ export default function ContactForm() {
     }));
 
   const onSubmit = async () => {
+    event.preventDefault();
     setState((prev) => ({
       ...prev,
       isLoading: true,
@@ -74,7 +76,7 @@ export default function ContactForm() {
   };
 
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider resetCSS={false} theme={theme}>
       <Container maxW="450px" mt={12}>
         <Heading>Contact</Heading>
         {error && (
