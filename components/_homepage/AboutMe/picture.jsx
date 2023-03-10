@@ -1,42 +1,15 @@
 import styled from "styled-components";
 import Image from "next/image";
-// import { FaInfo } from "react-icons/fa";
 import useTranslation from "next-translate/useTranslation";
-import React, { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-
-import { bringUp } from "../../../utilities/framer-animations";
 
 import NoGlasses from "../../../assets/images/homepage/about-me.png";
 import WithGlasses from "../../../assets/images/homepage/about-me_g.png";
-// import SocialLinksComponent from "../../Footer/social_links";
 
 export default function AboutPictureComponent() {
   let { t } = useTranslation();
 
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: 0.4,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-    // if (!inView) {
-    //   controls.start("hidden");
-    // }
-  }, [controls, inView]);
-
   return (
-    <RightContainer
-      as={motion.div}
-      ref={ref}
-      variants={bringUp}
-      initial="hidden"
-      animate={controls}
-    >
+    <RightContainer>
       <div className="wrapper">
         <div className="outer outer-layer">
           <div className="stars">
@@ -91,19 +64,6 @@ export default function AboutPictureComponent() {
             <div className="star"></div>
             <div className="star"></div>
           </div>
-          {/* INFO BOX */}
-          {/* <div className="card" tabIndex="0">
-            <span className="card__infoicon">
-              <FaInfo className="fa fa-info" />
-            </span>
-            <h1 className="card__title">{t("home:about_i_title")}</h1>
-            <SocialLinksComponent color="yellow" />
-
-            <p className="card__credits">
-              {t("home:about_i_text")} -{" "}
-              <strong>paulolopesreizinho@gmail.com</strong>
-            </p>
-          </div> */}
           <figure className="picture">
             <Image className="me" src={NoGlasses} alt="paulo reizinho" />
           </figure>
@@ -117,8 +77,6 @@ export default function AboutPictureComponent() {
 }
 
 const RightContainer = styled.div`
-  position: relative;
-  /* display: flex; */
   height: 100%;
   margin-left: 0.5rem;
   cursor: pointer;
@@ -133,7 +91,7 @@ const RightContainer = styled.div`
     position: relative;
     background: url("/pattern.png"),
       radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-    width: 550px;
+    /* width: 550px; */
     height: 750px;
     z-index: 1;
     overflow: hidden;
@@ -167,74 +125,6 @@ const RightContainer = styled.div`
       @media screen and (max-width: 412px) {
         clip-path: circle(7% at 90% 11%);
       }
-
-      /* &__infoicon {
-        position: absolute;
-
-        top: 8px;
-        right: 14px;
-
-        font-size: 2em;
-        color: #20303c;
-        transition: ease-out 0.3s;
-
-        @media screen and (max-width: 764px) {
-          font-size: 1.75em;
-          top: 16px;
-          right: 18px;
-        }
-
-        @media screen and (max-width: 412px) {
-          font-size: 1.75em;
-          top: 16px;
-          right: 18px;
-        }
-      } */
-      /* &__title {
-        color: #20303c;
-        margin: 0;
-
-        font-size: 3em;
-        line-height: 1.8;
-
-        @media screen and (max-width: 412px) {
-          font-size: 2em;
-          line-height: 1.2;
-        }
-      } */
-      /* &__description {
-        margin: 0;
-
-        font-size: 1.1em;
-        line-height: 1.6;
-      } */
-      /* &__credits {
-        strong {
-          color: #0094b5;
-        }
-        margin: 0;
-        padding: 4px 0;
-
-        font-size: 1.1em;
-      } */
-
-      /* &:hover,
-      &:focus {
-        clip-path: circle(75%);
-        border-radius: 20px;
-        box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.12),
-          0px 3px 18px rgba(0, 0, 0, 0.08);
-        background: #ffffff;
-
-        outline: none;
-        .card__infoicon {
-          opacity: 0;
-        }
-      } */
-      /* &:focus {
-        box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.12),
-          0px 3px 18px rgba(0, 0, 0, 0.08), 0px 0px 0px 4px rgba(0, 0, 0, 0.2);
-      } */
     }
 
     .picture {
