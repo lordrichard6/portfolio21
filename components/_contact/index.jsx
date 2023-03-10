@@ -45,7 +45,7 @@ export default function ContactsPage() {
       variants={bringUp}
       initial="hidden"
       animate={controls}
-      className="overflow-hidden h-screen flex flex-col justify-center items-center pt-36 pb-10"
+      className="overflow-hidden flex flex-col justify-center items-center pt-36 pb-10"
     >
       <ContactCard />
       <MapComponent />

@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 
 import theme from "../../config/theme";
-delete theme.styles.global
+delete theme.styles.global;
 
 const initValues = {
   name: "",
@@ -78,14 +78,17 @@ export default function ContactForm() {
   return (
     <ChakraProvider resetCSS={false} theme={theme}>
       <Container maxW="450px" mt={12}>
-        <Heading>Contact</Heading>
+        <Heading textAlign="center">Contact</Heading>
         {error && (
           <Text color="red.300" my={4} fontSize="xl">
             {error}
           </Text>
         )}
         <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
-          <FormLabel>Name</FormLabel>
+          <div className="flex items-baseline">
+            <FormLabel>Name</FormLabel>
+            <FormErrorMessage mt={0}>Required</FormErrorMessage>
+          </div>
           <Input
             errorBorderColor="red.300"
             type="text"
@@ -94,14 +97,17 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={onBlur}
           />
-          <FormErrorMessage>Required</FormErrorMessage>
+          {/* <FormErrorMessage>Required</FormErrorMessage> */}
         </FormControl>
         <FormControl
           isRequired
           isInvalid={touched.email && !values.email}
           mb={5}
         >
-          <FormLabel>Email</FormLabel>
+          <div className="flex items-baseline">
+            <FormLabel>Email</FormLabel>
+            <FormErrorMessage mt={0}>Required</FormErrorMessage>
+          </div>
           <Input
             type="email"
             name="email"
@@ -109,14 +115,16 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={onBlur}
           />
-          <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
         <FormControl
           isRequired
           isInvalid={touched.subject && !values.subject}
           mb={5}
         >
-          <FormLabel>Subject</FormLabel>
+          <div className="flex items-baseline">
+            <FormLabel>Subject</FormLabel>
+            <FormErrorMessage mt={0}>Required</FormErrorMessage>
+          </div>
           <Input
             type="text"
             name="subject"
@@ -124,14 +132,16 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={onBlur}
           />
-          <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
         <FormControl
           isRequired
           isInvalid={touched.message && !values.message}
           mb={5}
         >
-          <FormLabel>Message</FormLabel>
+          <div className="flex items-baseline">
+            <FormLabel>Message</FormLabel>
+            <FormErrorMessage mt={0}>Required</FormErrorMessage>
+          </div>
           <Textarea
             rows={4}
             type="text"
@@ -140,19 +150,23 @@ export default function ContactForm() {
             onChange={handleChange}
             onBlur={onBlur}
           />
-          <FormErrorMessage>Required</FormErrorMessage>
         </FormControl>
-        <Button
-          variant="outline"
-          colorScheme="white"
-          disabled={
-            !values.name || !values.email || !values.subject || !values.message
-          }
-          onClick={onSubmit}
-          isLoading={isLoading}
-        >
-          Submit
-        </Button>
+        <div className="flex justify-center">
+          <Button
+            variant="outline"
+            colorScheme="white"
+            disabled={
+              !values.name ||
+              !values.email ||
+              !values.subject ||
+              !values.message
+            }
+            onClick={onSubmit}
+            isLoading={isLoading}
+          >
+            Submit
+          </Button>
+        </div>
       </Container>
     </ChakraProvider>
   );
