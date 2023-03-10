@@ -26,13 +26,13 @@ const initValues = {
   message: "",
 };
 
-const initState = { values: initValues };
+const initState = { isLoading: false, error: "", values: initValues };
 
 export default function ContactForm() {
   const [state, setState] = useState(initState);
   const [touched, setTouched] = useState({});
-
   const toast = useToast();
+
   let { t } = useTranslation();
 
   const { values, isLoading, error } = state;
@@ -50,7 +50,6 @@ export default function ContactForm() {
     }));
 
   const onSubmit = async () => {
-    event.preventDefault();
     setState((prev) => ({
       ...prev,
       isLoading: true,
@@ -72,7 +71,6 @@ export default function ContactForm() {
         error: error.message,
       }));
     }
-    await sendContactForm(values);
   };
 
   return (
