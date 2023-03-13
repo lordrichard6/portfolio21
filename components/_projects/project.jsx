@@ -1,23 +1,36 @@
 import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
 
-
-export default function ProjectComponent({ type, title, link, date, icon, icon1, icon2 }) {
+export default function ProjectComponent({
+  type,
+  title,
+  link,
+  date,
+  icon,
+  icon1,
+  icon2,
+}) {
   let { t } = useTranslation();
 
   return (
     <Container>
       <div className={`${type} relative w-1/2 border-slate-100 py-2`}>
         <div className="slide flex justify-center sm:items-center h-20 sm:h-14 lg:h-20 bg-orange-400 md:w-fit">
-          <h1 className="tracking-tight mx-1 sm:mx-4 text-2xl lg:text-5xl xl:text-6xl">{title}</h1>
+          <h1 className="tracking-tight mx-1 sm:mx-4 text-2xl lg:text-5xl xl:text-6xl">
+            {title}
+          </h1>
           <div className="icon flex md:opacity-0 mt-3 sm:mt-0 text-2xl md:text-4xl absolute top-1/2 -translate-y-1/2">
-          {icon}{icon1}{icon2}
+            {icon}
+            {icon1}
+            {icon2}
           </div>
           <button
             className="button-74 md:opacity-0 mt-3 sm:mt-0 absolute top-1/2 -translate-y-1/2"
             role="button"
           >
-            <a href={link} target="_blank" rel="noopener noreferrer">{t("projects:dev_button")}</a>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              {t("projects:dev_button")}
+            </a>
           </button>
           <h3 className="absolute text-gray-900 bg-slate-100 rounded-md px-1 top-1/2 -translate-y-1/2">
             {date}

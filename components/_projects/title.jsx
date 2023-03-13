@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 
 import { bringUp } from "../../utilities/framer-animations";
 
-function StringMapper({string}) {
+function StringMapper({ string }) {
   const chars = string.split("");
 
   const charComponents = chars.map((char, index) => {
@@ -24,7 +24,7 @@ function StringMapper({string}) {
   return <>{charComponents}</>;
 }
 
-export default function TitleReflexion({word}) {
+export default function TitleReflexion({ word }) {
   let { t } = useTranslation();
 
   const controls = useAnimation();
