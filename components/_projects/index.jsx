@@ -1,34 +1,78 @@
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 
 import { projects } from "../../assets/data/projects";
 import { Colors } from "../../assets/variables";
+import {
+  bringUp,
+  bringFromLeft,
+  bringFromRight,
+} from "../../utilities/framer-animations";
+
 import TitleRefexion from "./title";
 import ProjectComponent from "./project";
-import ProjectsIntro from './text';
+import ProjectsIntro from "./text";
 
 export default function Developer() {
-  const sortedProjectsByDate = [...projects].sort((a, b) => a.date.localeCompare(b.date)).reverse();
+  const sortedProjectsByDate = [...projects]
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .reverse();
   let router = useRouter();
   let { t } = useTranslation();
-  
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
+  }, [controls, inView]);
+  console.log("show projects", projects);
   return (
     <SectionContainer>
       <BackgroundGradient></BackgroundGradient>
-      <ProjectsIntro pageIntro={t("projects:projects_intro")} />
+      <motion.div
+        variants={bringUp}
+        initial="hidden"
+        animate={controls}
+        className="w-full flex justify-center"
+        ref={ref}
+      >
+        <ProjectsIntro pageIntro={t("projects:projects_intro")} />
+      </motion.div>
       <div className="flex w-full justify-around">
         <TitleRefexion word="PROFISSIONAL" />
-        <TitleRefexion word={router.locale === 'pt' ? 'PESSOAL' : 'PERSONAL'} />
+        <TitleRefexion word={router.locale === "pt" ? "PESSOAL" : "PERSONAL"} />
       </div>
       <div className="w-full flex flex-col z-10">
-      {sortedProjectsByDate.map((item, i) => {
-        return <ProjectComponent key={i} date={item.date} icon={item.icon}icon1={item.icon1} icon2={item.icon2} type={item.type} title={item.title} link={item.link} />;
-      })}
-        <div className="w-1/2 h-44 border-slate-100 py-2 border-r-[1rem] mr-auto ml-2">
-
-        </div>
-
+        {sortedProjectsByDate.map((item, i) => {
+          return (
+            <ProjectComponent
+              key={i}
+              date={item.date}
+              icon={item.icon}
+              type={item.type}
+              title={item.title}
+              creator={item.creator}
+              contribution={item.myContribution}
+              projectImage={item.image}
+              alt={item.alt}
+              text={item.text}
+              techs={item.techs}
+              link={item.link}
+            />
+          );
+        })}
+        <div className="w-1/2 h-44 border-slate-100 py-2 border-r-[1rem] mr-auto ml-2"></div>
       </div>
     </SectionContainer>
   );
