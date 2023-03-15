@@ -135,6 +135,10 @@ export const navItems = [
     tabName: "common:gallery",
   },
   {
+    to: "/blog",
+    tabName: "myBlog",
+  },
+  {
     to: "/contact",
     tabName: "myContact",
   },
