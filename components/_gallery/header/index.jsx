@@ -6,7 +6,7 @@ import TitleComponent from "./title";
 import BackgroundComponent from "./background";
 import { StarsComponent } from "../../_homepage/Header/stars";
 
-export default function HeaderComponent() {
+export default function GalleryHeaderSection() {
   return (
     <Container id="top">
       <TitleComponent />

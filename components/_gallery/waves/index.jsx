@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function Waves() {
+export default function WavesComponent() {
 
   return (
     <Container>

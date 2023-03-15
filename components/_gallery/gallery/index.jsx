@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-
-import Modal from './modal'
+import Modal from "./modal";
 import { gallery, animals } from "../../../assets/data/gallery";
-import GalleryAnimals from './animals'
-import PicturesComponent from './pictures'
+import GalleryAnimals from "./animals";
+import PicturesComponent from "./pictures";
 
-
-export default function GalleryItems() {
+export default function GallerySection() {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
 
   const handelClick = (item, index) => {
     setCurrentIndex(index);
     setClickedImg(item.imgSrc);
-  }
+  };
 
   return (
     <GalleyWrapper>
@@ -23,28 +21,28 @@ export default function GalleryItems() {
         <div className="animal-wrapper">
           {animals.map((item, i) => {
             return (
-              <GalleryAnimals 
+              <GalleryAnimals
                 key={i}
                 image={item.imgSrc}
                 alt={item.alt}
                 className={item.className}
               />
-            )
+            );
           })}
         </div>
         {gallery.map((item, i) => {
           return (
-            <PicturesComponent 
-              key={i} 
+            <PicturesComponent
+              key={i}
               className={item.className}
               imgSrc={item.imgSrc}
               alt={item.alt}
-              onClick={() => handelClick(item , i)}
+              onClick={() => handelClick(item, i)}
             />
           );
         })}
         {clickedImg && (
-          <Modal clickedImg={clickedImg} setClickedImg={setClickedImg}/>
+          <Modal clickedImg={clickedImg} setClickedImg={setClickedImg} />
         )}
       </div>
     </GalleyWrapper>
