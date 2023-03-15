@@ -13,7 +13,7 @@ import {
 import AboutTextComponent from "./text";
 import AboutPictureComponent from "./picture";
 
-export default function AboutMe() {
+export default function AboutMeSection() {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.2,

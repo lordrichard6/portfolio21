@@ -13,7 +13,7 @@ import SectionComponent from "./section";
 
 import { frontTechs, backTechs } from "../../../assets/data/techs";
 
-export default function Techs() {
+export default function TechsSection() {
   let { t } = useTranslation();
 
   const controls = useAnimation();

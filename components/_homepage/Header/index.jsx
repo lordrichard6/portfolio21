@@ -8,7 +8,7 @@ import LogoComponent from "./logo";
 import { StarsComponent, CometsComponent } from "./stars";
 import HomepageTitleComponent from "./title";
 
-export default function Header() {
+export default function HeaderSection() {
   return (
     <SectionContainer
       className="w-screen h-screen relative flex justify-center items-center py-24"

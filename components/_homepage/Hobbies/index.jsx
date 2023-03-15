@@ -6,7 +6,7 @@ import HobbiesComponent from "./hobbie-elements/hobbies";
 import CenterHexagonComponent from "./hobbie-elements/centerHexagon";
 import HobbiesTitleComponent from "./title";
 
-export default function MyHobbies() {
+export default function MyHobbiesSection() {
   let { t } = useTranslation();
 
   return (
