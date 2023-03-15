@@ -7,7 +7,7 @@ import Day from "../../../assets/images/projects/day.jpg";
 import MoonAndSun from "./sky";
 import { StarsComponent } from "../../_homepage/Header/stars";
 
-export default function Header() {
+export default function ProjectsHeaderSection() {
   const [offsetY, setOffsetY] = useState(0);
 
   const handleScroll = () => setOffsetY(window.pageYOffset);

@@ -1,10 +1,8 @@
 import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
-
 import { useDisclosure } from "@chakra-ui/react";
 
 import ModalComponent from "./modalComponent";
-import { projects } from "../../assets/data/projects";
 
 export default function ProjectComponent({
   type,
@@ -17,7 +15,7 @@ export default function ProjectComponent({
   text,
   techs,
   date,
-  icon
+  icon,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   let { t } = useTranslation();
@@ -47,7 +45,18 @@ export default function ProjectComponent({
           </h3>
         </div>
       </div>
-      <ModalComponent techs={techs} text={text} link={link} alt={alt} projectImage={projectImage} contribution={contribution} creator={creator} title={title} openIt={isOpen} closeIt={onClose} />
+      <ModalComponent
+        techs={techs}
+        text={text}
+        link={link}
+        alt={alt}
+        projectImage={projectImage}
+        contribution={contribution}
+        creator={creator}
+        title={title}
+        openIt={isOpen}
+        closeIt={onClose}
+      />
     </Container>
   );
 }

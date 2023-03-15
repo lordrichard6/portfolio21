@@ -4,13 +4,12 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import { bringUp } from "../../utilities/framer-animations";
+import { bringUp } from "../../../utilities/framer-animations";
 
 function StringMapper({ string }) {
   const chars = string.split("");
 
   const charComponents = chars.map((char, index) => {
-    // return <span key={index}>{char}</span>;
     return (
       <div key={index} className="wrapper text-4xl md:text-7xl lg:text-8xl">
         <div id="L" className="letter">
@@ -49,8 +48,6 @@ export default function TitleReflexion({ word }) {
         ref={ref}
         className="w-full"
       >
-        {/* <div className="overlay"></div> */}
-
         <div className="text mx-8">
           <StringMapper string={word} />
         </div>
