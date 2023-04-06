@@ -47,6 +47,25 @@ import { SiNextdotjs, SiJavascript, SiAngular, SiDjango, SiJoomla, SiMongodb } f
 
 export const projects = [
   {
+    image: "/projects/thinkbig.png",
+    alt: "think big homepage",
+    title: "ThinkBig",
+    creator: "Paulo Reizinho",
+    myContribution: "100%",
+    text: ["Design made with figma;","Elegant and modern UI/UX;","Developed with ReactJS;","TailwindCSS to make life easier and everything more readable;"],
+    // text: [
+    //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sit nulla est ex deserunt exercitation anim occaecat.", 
+    //   "Sit nulla est ex deserunt exercitation anim occaecat.",
+    //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
+    // ],
+    techs: ["React.js", "TailwindCSS"],
+    link: "https://think-big.vercel.app/",
+    github: "",
+    icon: [<FaReact key={0}/>],
+    type: 'personal',
+    date: '2023/04'
+  },
+  {
     image: "/projects/fahrezentrale.png",
     alt: "fahrezentrale homepage",
     title: "FahrerZentrale",
