@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
+// import Image from "next/image";
 
 import { useDisclosure } from "@chakra-ui/react";
 
 import ModalComponent from "./modalComponent";
-import { projects } from "../../assets/data/projects";
 
 export default function ProjectComponent({
   type,
@@ -17,14 +18,34 @@ export default function ProjectComponent({
   text,
   techs,
   date,
-  icon
+  // icon,
 }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   let { t } = useTranslation();
 
   return (
     <Container>
-      <div className={`${type} relative w-1/2 border-slate-100 py-2`}>
+      <div
+        className={`${type} relative w-4/5 h-[100px] lg:h-[200px] my-4 overflow-hidden`}
+      >
+        <img
+          className="h-full w-1/2 object-cover object-center"
+          src={projectImage}
+          alt={alt}
+        />
+        <div className="gradient-side absolute top-0 h-full w-full py-4 px-8 lg:px-12 2xl:px-36">
+          <h1 className="tracking-tight truncate text-2xl lg:text-4xl xl:text-5xl">
+            {title}
+          </h1>
+          <div className="w-full flex flex-row lg:flex-col">
+            <h3 className="italic mt-2">{date}</h3>
+            <button className="button-74 w-fit mt-1 lg:mt-4 mx-4 lg:mx-0" role="button" onClick={onOpen}>
+              {t("projects:dev_button")}
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* <div className={`${type} relative w-1/2 border-slate-100 py-2`}>
         <div className="slide flex justify-center sm:items-center h-20 sm:h-14 lg:h-20 bg-orange-400 md:w-fit">
           <h1 className="tracking-tight truncate mx-1 sm:mx-4 text-2xl lg:text-4xl xl:text-5xl">
             {title}
@@ -37,17 +58,28 @@ export default function ProjectComponent({
             role="button"
             onClick={onOpen}
           >
-            {t("projects:dev_button")}
-            {/* <a href={link} target="_blank" rel="noopener noreferrer">
+            {t("projects:dev_button")} */}
+      {/* <a href={link} target="_blank" rel="noopener noreferrer">
               {t("projects:dev_button")}
             </a> */}
-          </button>
+      {/* </button>
           <h3 className="absolute text-gray-900 bg-slate-100 rounded-md px-1 top-1/2 -translate-y-1/2">
             {date}
           </h3>
         </div>
-      </div>
-      <ModalComponent techs={techs} text={text} link={link} alt={alt} projectImage={projectImage} contribution={contribution} creator={creator} title={title} openIt={isOpen} closeIt={onClose} />
+      </div> */}
+      <ModalComponent
+        techs={techs}
+        text={text}
+        link={link}
+        alt={alt}
+        projectImage={projectImage}
+        contribution={contribution}
+        creator={creator}
+        title={title}
+        openIt={isOpen}
+        closeIt={onClose}
+      />
     </Container>
   );
 }
@@ -99,12 +131,12 @@ const Container = styled.div`
 
   .button-74:active {
     box-shadow: #422800 2px 2px 0 0;
-    transform: translate(0%, -48%);
+    transform: translate(0%, 10%);
   }
 
   @media (min-width: 1024px) {
     .button-74 {
-      width: 120px;
+      /* width: 120px; */
       padding: 0 25px;
       line-height: 50px;
     }

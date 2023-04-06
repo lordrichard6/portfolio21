@@ -1,8 +1,9 @@
 {
     "home": "Home",
-    "projects": "myProjects",
-    "gallery": "myGallery",
-    "skills": "mySkills",
+    "projects": "Projects",
+    "gallery": "Gallery",
+    "skills": "Skills",
+    "contact": "Contact",
     "goTop": "Go to Top",
     "gallery_title": "Gallery",
     

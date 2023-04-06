@@ -72,7 +72,7 @@ export default function Developer() {
             />
           );
         })}
-        <div className="w-1/2 h-44 border-slate-100 py-2 border-r-[1rem] mr-auto ml-2"></div>
+        {/* <div className="w-1/2 h-44 border-slate-100 py-2 border-r-[1rem] mr-auto ml-2"></div> */}
       </div>
     </SectionContainer>
   );

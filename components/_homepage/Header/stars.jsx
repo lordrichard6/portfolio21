@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export function StarsComponent() {
   return (
-    <div className="absolute top-0 left-0 w-full h-4/5 overflow-hidden">
+    <div className="absolute top-0 left-0 w-full h-4/5 overflow-hidden 2xl:hidden">
       <div id="stars-group-1"></div>
       <div id="stars-group-2"></div>
       <div id="stars-group-3"></div>

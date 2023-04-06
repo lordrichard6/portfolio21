@@ -136,7 +136,7 @@ export const navItems = [
   },
   {
     to: "/contact",
-    tabName: "myContact",
+    tabName: "common:contact",
   },
 ];
 

@@ -51,7 +51,7 @@ export default function TitleReflexion({ word }) {
       >
         {/* <div className="overlay"></div> */}
 
-        <div className="text mx-8">
+        <div className="text mx-8 2xl:mx-auto max-w-[800px]">
           <StringMapper string={word} />
         </div>
       </motion.div>
