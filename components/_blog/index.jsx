@@ -8,7 +8,7 @@ const posts = [
 export default function MyBlogPage() {
   return (
     <Container className="container h-screen pt-28 grid grid-cols-1 lg:grid-cols-12 gap-12">
-      
+      32min
     </Container>
   );
 }
