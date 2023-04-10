@@ -22,3 +22,15 @@ body {
 .normal-text {
   @apply text-slate-100 text-xl 2xl:text-2xl font-normal antialiased;
 }
+
+.home-about {
+  div {
+    @apply flex justify-between items-center my-2;
+  }
+  h2 {
+    @apply text-2xl lg:text-4xl font-bold antialiased my-4;
+  }
+  .info {
+    @apply text-xl lg:text-4xl antialiased;
+  }
+}

@@ -7,7 +7,7 @@ import Day from "../../../assets/images/projects/day.jpg";
 import MoonAndSun from "./sky";
 import { StarsComponent } from "../../_homepage/Header/stars";
 
-export default function Header() {
+export default function ProjectsHeader() {
   const [offsetY, setOffsetY] = useState(0);
 
   const handleScroll = () => setOffsetY(window.pageYOffset);
@@ -20,7 +20,7 @@ export default function Header() {
   return (
     <SectionContainer id="top">
       <div className="day">
-        <Image src={Day} alt="" cover fill />
+        <Image src={Day} alt="day" cover fill />
       </div>
       <MoonAndSun />
       <Animation />

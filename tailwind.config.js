@@ -8,7 +8,15 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'home-bg': "url('/public/header_01.jpg')",
+      },
+      colors: {
+        'primary-color': '#A4C18B',
+        'secondary-color': '#384230',
+      },
+    },
   },
   plugins: [],
 }

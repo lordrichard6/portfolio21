@@ -11,29 +11,8 @@ export default function HomepageTitleComponent() {
     <div className="text-slate-100 w-full lg:w-1/2 flex flex-col z-10">
       <Title className="mb-4 text-5xl md:text-7xl xl:text-8xl  uppercase font-black leading-tight text-center">
         <h1>{t("home:header_01")}</h1>
-
         <h1>{t("home:header_02")}</h1>
-
         <h1>{t("home:header_03")}</h1>
-
-        {/* 
-        TYPING EFFECT
-        <ReactTypingEffect
-          text={t("home:header_01")}
-          speed={120}
-          eraseDelay={700}
-        />
-        <ReactTypingEffect
-          text={t("home:header_02")}
-          speed={140}
-          eraseDelay={700}
-        />
-        <ReactTypingEffect
-          text={t("home:header_03")}
-          speed={100}
-          eraseDelay={700}
-        /> */}
-        
       </Title>
       <SubTitle className="text-2xl 2xl:text-4xl text-center font-medium">
         {t("home:header_slogan")}

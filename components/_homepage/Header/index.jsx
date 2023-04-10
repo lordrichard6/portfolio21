@@ -5,10 +5,11 @@ import { homeHeader } from "../../../assets/data";
 
 import LogoComponent from "./logo";
 
-import { StarsComponent, CometsComponent } from "./stars";
+
+import { StarsComponent, CometsComponent } from "../../_shared";
 import HomepageTitleComponent from "./title";
 
-export default function Header() {
+export default function HomeHeaderSection() {
   return (
     <SectionContainer
       className="w-screen h-screen relative flex justify-center items-center py-24"
@@ -17,7 +18,7 @@ export default function Header() {
       <Image
         src={homeHeader.backgroundImage}
         fill
-        alt="paulo reizinho header"
+        alt="paulo reizinho space background"
         className="z-0 object-cover object-center"
       />
       <StarsComponent />

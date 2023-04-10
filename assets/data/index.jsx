@@ -131,8 +131,8 @@ export const navItems = [
     tabName: "common:projects",
   },
   {
-    to: "/gallery",
-    tabName: "common:gallery",
+    to: "/about",
+    tabName: "common:about",
   },
   {
     to: "/contact",
