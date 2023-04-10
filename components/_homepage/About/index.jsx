@@ -16,7 +16,7 @@ import { TitleRetro, BtnPrimaryCTA, EntryAnimation } from "../../_shared";
 
 export default function AboutSection() {
   return (
-    <SectionContainer className="relative w-screen flex flex-col justify-center items-center py-24 md:py-44">
+    <SectionContainer className="relative w-screen min-h-screen flex flex-col justify-center items-center py-24 md:py-44">
       <GradientTopDark />
       <EntryAnimation animation={bringUp}>
         <TitleRetro title="About me." />
