@@ -10,8 +10,8 @@ import {
 } from "../../../utilities/framer-animations";
 
 import GradientTopDark from "./gradient_dark_top";
-import LeftPart from "./left";
-import RightPart from "./right";
+import TextComponent from "./text";
+import ImageComponent from "./image";
 import { TitleRetro, BtnPrimaryCTA, EntryAnimation } from "../../_shared";
 
 export default function AboutSection() {
@@ -21,15 +21,15 @@ export default function AboutSection() {
       <EntryAnimation animation={bringUp}>
         <TitleRetro title="About me." />
       </EntryAnimation>
-      <div className="w-4/5 2xl:w-3/5 flex flex-col xl:flex-row justify-center items-center">
+      <div className="w-4/5 2xl:w-3/5 flex flex-col xl:flex-row justify-center items-center my-6 lg:my-10">
         <EntryAnimation style="order-2 w-full" animation={bringFromRight}>
-          <LeftPart />
+          <TextComponent />
         </EntryAnimation>
         <EntryAnimation
           style="order-1 w-full flex flex-col justify-center items-center"
           animation={bringFromLeft}
         >
-          <RightPart />
+          <ImageComponent />
         </EntryAnimation>
       </div>
       <EntryAnimation animation={bringUp}>

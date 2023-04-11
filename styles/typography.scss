@@ -28,9 +28,18 @@ body {
     @apply flex justify-between items-center my-2;
   }
   h2 {
-    @apply text-2xl lg:text-4xl font-bold antialiased my-4;
+    @apply text-6xl lg:text-7xl font-black blur-[1px];
   }
-  .info {
-    @apply text-xl lg:text-4xl antialiased;
+  h3 {
+    @apply text-2xl lg:text-4xl font-light;
+  }
+  h2, h3 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    @apply antialiased my-2;
+    span {
+      div {
+        @apply my-0;
+      }
+    }
   }
 }

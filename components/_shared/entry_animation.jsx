@@ -12,9 +12,9 @@ export default function EntryAnimation({ children, animation, style }) {
     if (inView) {
       controls.start("visible");
     }
-    if (!inView) {
-      controls.start("hidden");
-    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
   }, [controls, inView]);
 
   return (

@@ -2,12 +2,14 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
+import { FaArrowCircleRight } from 'react-icons/fa';
+
 export default function BtnPrimaryCTA({color, text, link, animation, styles}) {
 
   return (
         <Button className={`active:translate-y-0.5 ${styles}`}>
-          <div className={`button ${color} ${animation}`}>
-            <Link href={link}>{text}</Link>
+          <div className={`button py-8 px-10 ${color} ${animation}`}>
+            <Link href={link} className="text-xl lg:text-2xl font-bold flex justify-center items-center">{text} <FaArrowCircleRight className="icon ml-2 transition duration-300 ease-in-out" /></Link>
             <div className='back' ></div>
           </div>
         </Button>
@@ -25,9 +27,10 @@ const Button = styled.div`
   }
 
   .button {
+    /* font-family: 'Yanone Kaffeesatz', sans-serif; */
     position: relative;
-    width: calc(0.8 * 200px);
-    height: calc(0.7 * 100px);
+    /* width: calc(0.8 * 200px);
+    height: calc(0.7 * 100px); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +56,6 @@ const Button = styled.div`
 
     a {
       color: #fff;
-      font-size: 1rem;
       z-index: 10;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -83,29 +85,35 @@ const Button = styled.div`
     }
 
     &._1 .back {
-      left: -50%;
-      top: -50%;
+      left: -20%;
+      top: -40%;
       background: #27ae60;
     }
     &._2 .back {
-      right: -50%;
-      top: -50%;
+      right: -20%;
+      top: -40%;
       background: #c0392b;
     }
     &._3 .back {
-      left: -50%;
-      bottom: -50%;
+      left: -20%;
+      bottom: -40%;
       background: #34495e;
     }
     &._4 .back {
-      right: -50%;
-      bottom: -50%;
+      right: -20%;
+      bottom: -40%;
       background: #2980b9;
     }
 
     &:hover .back {
       width: calc(2 * 200px);
       height: calc(2 * 100px);
+    }
+
+    &:hover {
+      .icon {
+        transform: translateX(6px);
+      }
     }
   }
 

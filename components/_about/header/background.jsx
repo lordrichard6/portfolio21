@@ -19,10 +19,10 @@ export default function BackgroundComponent() {
     <Container>
       <div className="gradient"></div>
       <div className="sky" style={{ transform: `translateY(${offsetY * 0.4}px)` }}>
-        <Image src={header} alt="sky" cover fill />
+        <Image className="object-cover" src={header} alt="sky" cover fill />
       </div>
       <div className="sand">
-        <Image src={Sand} alt="sand" cover fill />
+        <Image className="object-cover" src={Sand} alt="sand" cover fill />
       </div>
     </Container>
   );

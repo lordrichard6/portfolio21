@@ -6,7 +6,7 @@ import EvolutionComponent from "./evolution";
 export default function BottomSection() {
 
   return (
-    <SectionContainer className="mt-24">
+    <SectionContainer className="mt-24 h-[60vh] lg:h-[40vh]">
       <EvolutionComponent />
       <BackgroundGradient />
     </SectionContainer>
@@ -16,7 +16,6 @@ export default function BottomSection() {
 const SectionContainer = styled.section`
   position: relative;
   width: 100%;
-  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

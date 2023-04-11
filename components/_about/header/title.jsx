@@ -31,7 +31,7 @@ const Container = styled.div`
   animation: showText 3s ease-in-out;
 
   @media screen and (max-width: 768px) {
-    top: 40%;
+    top: 60%;
     left: 0;
   }
 
@@ -49,6 +49,7 @@ const Container = styled.div`
 
     @media screen and (max-width: 768px) {
       font-size: calc(20px + 12vh);
+      line-height: 0.5;
       text-align: center;
     }
   }
