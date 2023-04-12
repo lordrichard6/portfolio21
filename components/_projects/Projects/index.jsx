@@ -15,6 +15,7 @@ import { EntryAnimation } from "../../_shared";
 import TitleRefexion from "./title";
 import ProjectComponent from "./project";
 import ProjectsIntro from "./text";
+import ProjectsExplanation from "./projectExplanation";
 
 export default function ProjectsSection() {
   const sortedProjectsByDate = [...projects]
@@ -29,6 +30,7 @@ export default function ProjectsSection() {
       <EntryAnimation style="w-full flex justify-center" animation={bringUp}>
         <ProjectsIntro pageIntro={t("projects:projects_intro")} />
       </EntryAnimation>
+      <ProjectsExplanation />
       <div className="flex w-full justify-around">
         <EntryAnimation style="w-1/2" animation={bringFromLeft}>
           <TitleRefexion word="PROFISSIONAL" />
@@ -80,6 +82,12 @@ const SectionContainer = styled.section`
   align-items: center;
   color: ${Colors.white};
   overflow: hidden;
+  .tutorial-personal {
+    animation: tutoPersonal 4s infinite ease-in-out;
+  }
+  .tutorial-profissional {
+    animation: tutoProfissional 4s 1.4s infinite ease-in-out;
+  }
 `;
 
 const BackgroundGradient = styled.div`

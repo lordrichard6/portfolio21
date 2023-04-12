@@ -16,17 +16,17 @@ import { TitleRetro, BtnPrimaryCTA, EntryAnimation } from "../../_shared";
 
 export default function AboutSection() {
   return (
-    <SectionContainer className="relative w-screen min-h-screen flex flex-col justify-center items-center py-24 md:py-44">
+    <SectionContainer className="relative w-screen min-h-screen custom-center flex-col py-24 md:py-44">
       <GradientTopDark />
       <EntryAnimation animation={bringUp}>
         <TitleRetro title="About me." />
       </EntryAnimation>
-      <div className="w-4/5 2xl:w-3/5 flex flex-col xl:flex-row justify-center items-center my-6 lg:my-10">
-        <EntryAnimation style="order-2 w-full" animation={bringFromRight}>
+      <div className="w-4/5 2xl:w-3/5 custom-center flex-col xl:flex-row my-6 lg:my-10">
+        <EntryAnimation style="order-2 w-[430px] xl:w-full mt-6" animation={bringFromRight}>
           <TextComponent />
         </EntryAnimation>
         <EntryAnimation
-          style="order-1 w-full flex flex-col justify-center items-center"
+          style="order-1 w-full custom-center flex-col"
           animation={bringFromLeft}
         >
           <ImageComponent />

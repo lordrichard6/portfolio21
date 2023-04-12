@@ -56,7 +56,7 @@ const Container = styled.div`
     border-left: 150vw solid rgba(255, 0, 0, 0);
     border-right: 150vw solid rgba(255, 0, 0, 0);
     border-bottom: 60vw solid #1d2124;
-    animation: tri 3.6s 0.2s ease-in-out forwards;
+    animation: tri 1.6s 0.2s ease-in-out forwards;
 
     @media screen and (min-width: 1200px) {
       bottom: -320vw;
@@ -105,31 +105,31 @@ const Container = styled.div`
   }
 
   .squ div:nth-child(1) {
-    animation: squ 0.6s 2.8s cubic-bezier(0, 0.73, 0.54, 2.4) forwards;
+    animation: squ 0.6s 0.2s cubic-bezier(0, 0.73, 0.54, 2.4) forwards;
   }
   .squ div:nth-child(2) {
-    animation: moveSqu_01 0.8s 3.3s forwards;
+    animation: moveSqu_01 0.8s 0.9s forwards;
   }
   .squ div:nth-child(3) {
-    animation: moveSqu_02 0.8s 3.3s forwards;
+    animation: moveSqu_02 0.8s 0.9s forwards;
   }
   .squ div:nth-child(4) {
-    animation: moveSqu_03 0.8s 3.3s forwards;
+    animation: moveSqu_03 0.8s 0.9s forwards;
   }
   .squ div:nth-child(5) {
-    animation: moveSqu_04 0.8s 3.3s forwards;
+    animation: moveSqu_04 0.8s 0.9s forwards;
   }
   .squ div:nth-child(6) {
-    animation: moveSqu_05 0.8s 3.3s forwards;
+    animation: moveSqu_05 0.8s 0.9s forwards;
   }
   .squ div:nth-child(7) {
-    animation: moveSqu_06 0.8s 3.3s forwards;
+    animation: moveSqu_06 0.8s 0.9s forwards;
   }
   .squ div:nth-child(8) {
-    animation: moveSqu_07 0.8s 3.3s forwards;
+    animation: moveSqu_07 0.8s 0.9s forwards;
   }
   .squ div:nth-child(9) {
-    animation: moveSqu_08 0.8s 3.3s forwards;
+    animation: moveSqu_08 0.8s 0.9s forwards;
   }
 
   @keyframes squ {
@@ -332,7 +332,7 @@ const Container = styled.div`
     opacity: 0;
     font-size: 96px;
     font-weight: 800;
-    animation: end 1s 3.7s forwards;
+    animation: end 1s 1.6s forwards;
     @media screen and (max-width: 992px) {
       font-size: 60px;
       width: 60px;

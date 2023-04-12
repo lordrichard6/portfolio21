@@ -44,3 +44,7 @@ figure {
   background: linear-gradient(to right, #20303c, #478995);
   margin-top: 0 !important;
 }
+
+.custom-center {
+  @apply flex justify-center items-center;
+}

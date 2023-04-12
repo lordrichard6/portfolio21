@@ -6,7 +6,7 @@ import EvolutionComponent from "./evolution";
 export default function BottomSection() {
 
   return (
-    <SectionContainer className="mt-24 h-[60vh] lg:h-[40vh]">
+    <SectionContainer className="mt-24 h-[60vh] md:h-[40vh]">
       <EvolutionComponent />
       <BackgroundGradient />
     </SectionContainer>

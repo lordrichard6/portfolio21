@@ -63,7 +63,8 @@ export const projects = [
     github: "",
     icon: [<FaReact key={0}/>],
     type: 'personal',
-    date: '2023/04'
+    date: '2023/04',
+    featured: true,
   },
   {
     image: "/projects/fahrezentrale.png",
@@ -82,7 +83,8 @@ export const projects = [
     github: "",
     icon: [<SiAngular key={0} />,<SiDjango key={1} />],
     type: 'profissional',
-    date: '2022/06'
+    date: '2022/06',
+    featured: true,
   },
   {
     image: '/projects/pickwings.png',
@@ -101,7 +103,8 @@ export const projects = [
     github: "",
     icon: [<SiAngular key={0}/>,<SiDjango key={1}/>],
     type: 'profissional',
-    date: '2022/05'
+    date: '2022/05',
+    featured: false,
   },
   {
     image: '/projects/helping.png',
@@ -122,7 +125,8 @@ export const projects = [
     backgroundColor: "",
     show: 0.1,
     type: 'profissional',
-    date: '2021/06'
+    date: '2021/06',
+    featured: false,
   },
   {
     image: "/projects/altynai.png",
@@ -141,7 +145,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/altynai-ecommerce-shop",
     icon: [<SiNextdotjs key={0}/>, <SiMongodb key={1}/>],
     type: 'personal',
-    date: '2022/09'
+    date: '2022/09',
+    featured: false,
   },
   {
     image: "/projects/bastards.png",
@@ -160,7 +165,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/left_bastards",
     icon: [<SiNextdotjs key={0}/>],
     type: 'personal',
-    date: '2021/12'
+    date: '2021/12',
+    featured: false,
   },
   {
     image: "/projects/sardinha.png",
@@ -179,7 +185,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/patricia_project",
     icon: [<SiNextdotjs key={0}/>],
     type: 'profissional',
-    date: '2021/11'
+    date: '2021/11',
+    featured: false,
   },
   {
     image: "/projects/fastrent.png",
@@ -198,7 +205,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/rent-fast",
     icon: [<FaReact key={0}/>],
     type: 'personal',
-    date: '2021/06'
+    date: '2021/06',
+    featured: true,
   },
   {
     image: "/projects/skytours.png",
@@ -217,7 +225,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/skytours",
     icon: [<FaReact key={0}/>],
     type: 'personal',
-    date: '2021/04'
+    date: '2021/04',
+    featured: false,
   },
   {
     image: "/projects/hulu.png",
@@ -236,7 +245,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/hulu_clone",
     icon: [<SiNextdotjs key={0}/>],
     type: 'personal',
-    date: '2021/04'
+    date: '2021/04',
+    featured: false,
   },
   {
     image: "/projects/monkey.png",
@@ -255,7 +265,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/monkeycircus",
     icon: [<SiNextdotjs key={0}/>],
     type: 'personal',
-    date: '2020/03'
+    date: '2020/03',
+    featured: false,
   },
   {
     image: "/projects/sphere.png",
@@ -274,7 +285,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/threejs_sphere",
     icon: [<SiJavascript key={0}/>, <TbBrandThreejs key={1}/>],
     type: 'personal',
-    date: '2021/06'
+    date: '2021/06',
+    featured: false,
   },
   {
     image: "/projects/paul-engine.png",
@@ -293,7 +305,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/paul-search",
     icon: [<SiNextdotjs key={0}/>],
     type: 'personal',
-    date: '2021/04'
+    date: '2021/04',
+    featured: false,
   },
   {
     image: "/projects/portfolio4.png",
@@ -312,7 +325,8 @@ export const projects = [
     github: "",
     icon: [<SiNextdotjs key={0}/>],
     type: 'personal',
-    date: '2022/02'
+    date: '2022/02',
+    featured: false,
   },
   {
     image: "/projects/portfolio03.png",
@@ -331,7 +345,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/react_cv_blue",
     icon: [<SiNextdotjs key={0}/>],
     type: 'personal',
-    date: '2021/09'
+    date: '2021/09',
+    featured: false,
   },
   {
     image: "/projects/portfolio02.png",
@@ -350,7 +365,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/react_cv_parallax",
     icon: [<FaReact key={0}/>],
     type: 'personal',
-    date: '2021/07'
+    date: '2021/07',
+    featured: false,
   },
   {
     image: "/projects/portfolio01.png",
@@ -369,7 +385,8 @@ export const projects = [
     github: "https://github.com/lordrichard6/reactCV",
     icon: [<FaReact key={0}/>],
     type: 'personal',
-    date: '2020/04'
+    date: '2020/04',
+    featured: false,
   },
   {
     image: '/projects/limmatstadt.png',
@@ -388,7 +405,8 @@ export const projects = [
     github: "",
     icon: [<SiAngular key={0} />,<SiDjango key={1} />],
     type: 'profissional',
-    date: '2020/02'
+    date: '2020/02',
+    featured: false,
   },
   {
     image: '/projects/protier.png',
@@ -407,7 +425,8 @@ export const projects = [
     github: "",
     icon: [<SiAngular key={0} />,<SiDjango key={1} />],
     type: 'profissional',
-    date: '2020/01'
+    date: '2020/01',
+    featured: false,
   },
   {
     image: '/projects/bezahlbare-Wohnungen.png',
@@ -426,7 +445,8 @@ export const projects = [
     github: "",
     icon: [<SiAngular key={0} />,<SiDjango key={1} />],
     type: 'profissional',
-    date: '2019/11'
+    date: '2019/11',
+    featured: false,
   },
   {
     image: '/projects/feinheit.png',
@@ -445,7 +465,8 @@ export const projects = [
     github: "",
     icon: [<SiAngular key={0} />,<SiDjango key={1} />],
     type: 'profissional',
-    date: '2019/10'
+    date: '2019/10',
+    featured: false,
   },
   {
     image: '/projects/fcz.png',
@@ -464,6 +485,7 @@ export const projects = [
     github: "",
     icon: [<SiAngular key={0} />,<SiDjango key={1} />],
     type: 'profissional',
-    date: '2019/08'
+    date: '2019/08',
+    featured: false,
   },
 ];

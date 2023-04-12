@@ -103,3 +103,31 @@
 }
 // HOMEPAGE
 // --------------------------------------------------------------------
+// PROJECTS
+// TUTORIAL SECTION
+@keyframes tutoPersonal {
+  0% {
+    transform: translateX(100%);
+  }
+  70% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+}
+@keyframes tutoProfissional {
+  0% {
+    transform: translateX(-100%);
+  }
+  70% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 0;
+  }
+}
