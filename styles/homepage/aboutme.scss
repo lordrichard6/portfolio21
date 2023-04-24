@@ -106,3 +106,32 @@
     }
   }
 }
+
+.image-hover {
+  --g: 8px; /* the gap */
+  
+  display: grid;
+  clip-path: inset(1px); /* to avoid visual glitchs */
+  & > img {
+    --_p: calc(-1*var(--g));
+    grid-area: 1/1;
+    width: 350px; /* control the size */
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: .4s .1s;
+  }
+  & > img:first-child {
+    clip-path: polygon(0 0, calc(100% + var(--_p)) 0 , 0 calc(100% + var(--_p)))
+  }
+  & > img:last-child {
+    clip-path: polygon(100% 100%, 100% calc(0% - var(--_p)), calc(0% - var(--_p)) 100%)
+  }
+  &:hover > img:last-child,
+  &:hover > img:first-child:hover{
+    --_p: calc(50% - var(--g));
+  }
+  &:hover > img:first-child,
+  &:hover > img:first-child:hover + img{
+    --_p: calc(-50% - var(--g));
+  }
+}

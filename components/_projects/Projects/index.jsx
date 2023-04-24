@@ -31,7 +31,7 @@ export default function ProjectsSection() {
         <ProjectsIntro pageIntro={t("projects:projects_intro")} />
       </EntryAnimation>
       <ProjectsExplanation />
-      <div className="flex w-full justify-around">
+      <div className="flex w-full h-full justify-around">
         <EntryAnimation style="w-1/2" animation={bringFromLeft}>
           <TitleRefexion word="PROFISSIONAL" />
         </EntryAnimation>
