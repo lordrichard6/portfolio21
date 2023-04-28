@@ -8,3 +8,4 @@ export { default as CardPrimary } from './card_primary';
 export { default as StarsComponent } from './background_stars';
 export { default as CometsComponent } from './background_comets';
 export { default as EntryAnimation } from './entry_animation';
+export { default as SocialInclineBlock } from './social_incline_block';

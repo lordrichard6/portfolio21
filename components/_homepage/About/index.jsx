@@ -12,7 +12,14 @@ import {
 import GradientTopDark from "./gradient_dark_top";
 import TextComponent from "./text";
 import ImageComponent from "./image";
-import { TitleRetro, BtnPrimaryCTA, EntryAnimation } from "../../_shared";
+import {
+  TitleRetro,
+  BtnPrimaryCTA,
+  EntryAnimation,
+  SocialInclineBlock,
+} from "../../_shared";
+
+import { SocialMedia } from "../../../assets/data/social_media";
 
 export default function AboutSection() {
   return (
@@ -22,8 +29,23 @@ export default function AboutSection() {
         <TitleRetro title="About me." />
       </EntryAnimation>
       <div className="w-4/5 2xl:w-3/5 custom-center flex-col xl:flex-row my-6 lg:my-10">
-        <EntryAnimation style="order-2 min-w-[290px] lg:w-[430px] xl:w-full mt-6" animation={bringFromRight}>
+        <EntryAnimation
+          style="order-2 min-w-[290px] lg:w-[430px] xl:w-full mt-6"
+          animation={bringFromRight}
+        >
           <TextComponent />
+          <ul className="home-social mt-10 mb-6">
+            {SocialMedia.map((item, i) => {
+              return (
+                <SocialInclineBlock
+                  key={i}
+                  icon={item.icon}
+                  iconName={item.iconName}
+                  link={item.link}
+                />
+              );
+            })}
+          </ul>
         </EntryAnimation>
         <EntryAnimation
           style="order-1 w-full custom-center flex-col"

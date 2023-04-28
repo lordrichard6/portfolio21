@@ -3,7 +3,7 @@ import ReactTypingEffect from "react-typing-effect";
 
 export default function TextComponent() {
   return (
-    <div className="home-about">
+    <div className="home-about max-w-[290px] lg:max-w-full mx-auto">
       <h2>Hello
       <ReactTypingEffect
           text="there!..."
