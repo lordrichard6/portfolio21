@@ -1,0 +1,65 @@
+.cv-page {
+  .left {
+    transition: .4s .1s;
+    // @apply w-1/3;
+    @apply min-w-[100px] w-[100px];
+
+    &:hover {
+      @apply min-w-[410px] w-[410px];
+
+      .left-image {
+        @apply left-1/2 -translate-x-[50%];
+      }
+      .arrow {
+        transform: rotateY(180deg)
+      }
+      .left-info {
+        @apply opacity-100 left-0;
+      }
+    }
+
+    .left-image {
+      transition: .8s .2s;
+      @apply left-0;
+    }
+    .arrow {
+      transition: .8s .2s;
+    }
+    .left-info {
+      transition: .8s .2s;
+      @apply opacity-0 w-[410px];
+    }
+  }
+  .right {
+    .position {
+      transition: .8s .2s;
+      @apply text-slate-100 bg-teal-900 h-[56px] flex items-start my-4 mr-10 py-2 px-2 rounded-xl overflow-hidden;
+
+      &:hover {
+        @apply h-auto;
+
+        .arrow {
+          transform: rotateZ(90deg);
+        }
+      }
+
+      .arrow {
+        transition: .8s .2s;
+        @apply text-4xl;
+      }
+
+      h2 {
+        @apply text-4xl font-semibold;
+      }
+      h3 {
+        @apply text-teal-900 text-2xl font-medium;
+      }
+      h4 {
+        @apply text-teal-900 text-xl;
+      }
+      p {
+        @apply text-teal-900 text-lg whitespace-pre-line;
+      }
+    }
+  }
+}
