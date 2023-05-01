@@ -37,7 +37,7 @@ export default function Navbar({ toggle }) {
         <Logo />
         <ItemsWrapper>
           <NavItems />
-          <div className="lang">
+          <div className="lang flex">
             <LangChange />
           </div>
         </ItemsWrapper>
