@@ -6,7 +6,7 @@ import useTranslation from "next-translate/useTranslation";
 import { FaTimes } from "react-icons/fa";
 import { Colors } from "../../assets/variables";
 import LangChange from "./langChange";
-import { navItems } from "../../assets/data";
+import { navItems } from "../../assets/data/navbar";
 
 export default function Sidebar({ isOpen, toggle }) {
   const router = useRouter();

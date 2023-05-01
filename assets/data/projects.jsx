@@ -3,6 +3,7 @@ import { TbBrandThreejs } from "react-icons/tb";
 import { SiNextdotjs, SiJavascript, SiAngular, SiDjango, SiJoomla, SiMongodb } from "react-icons/si";
 
 
+
 // export const leftBastards = [
 //   {
 //     href: "https://www.instagram.com/left_bastards/",
@@ -58,6 +59,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "projects:project_featured_thinkBig",
     techs: ["React.js", "TailwindCSS"],
     link: "https://think-big.vercel.app/",
     github: "",
@@ -78,6 +80,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "projects:project_featured_fahrezentrale",
     techs: ["Angular", "Django", "Docker"],
     link: "https://fahrerzentrale.ch/en/landing",
     github: "",
@@ -200,6 +203,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "projects:project_featured_fastrent",
     techs: ["ReactJS","Redux","tailwindCSS", "styled-components", "typescript", "Jest"],
     link: "https://lordrichard-rentfast.netlify.app/",
     github: "https://github.com/lordrichard6/rent-fast",

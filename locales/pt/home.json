@@ -1,9 +1,20 @@
 {
-    "header_01": "Um",
-    "header_02": "Gajo",
-    "header_03": "Fullstack",
+    "header_01": "O",
+    "header_02": "Arquiteto",
+    "header_03": "de Code_=>",
     "header_slogan": "As soluções não caem do céu",
+
     "about_title": "Sobre mim",
+    "about_first_line": "Olá",
+    "about_first_line02": "Mundo!...",
+    "about_second_line": "O meu nome é",
+    "about_third_line": "Venho de",
+    "about_forth_line": "Nasci a 4 de Janeiro de",
+    "about_fith_line": "Vivo em",
+    "about_fith_line02": "Suiça",
+
+    "projects_title": "Os meus projectos",
+
     "about_text01": "Senhoras e senhores, permitam-me que vos apresente um indivíduo notável que percorreu um caminho único para se tornar um programador excepcional. Oriundo das costas ensolaradas de Portugal, nasceu a 4 de Janeiro de 1986, e desde muito cedo manifestou interesse pela tecnologia, inovação e desmontar coisas para ver como estas funcionam.",
     "about_text02": "Contudo, foi só mais tarde na vida que descobriu a sua verdadeira paixão pela programação. Sempre foi um entusiasta da tecnologia, mas o momento em que se apaixonou verdadeiramente pela programação chegou quando tentava ensinar a sua mãe a usar o seu novo telemóvel. Após várias horas a tentar explicar como enviar uma mensagem de texto (entre outras coisas), virou-se para o seu próprio computador e disse: `Sabes que mais, és uma máquina, e se eu posso ensinar a minha mãe a usar um smartphone, posso definitivamente aprender a programar, Porra!`",
     "about_text03": "Com essa declaração, embarcou numa viagem de auto-descoberta, dedicando inúmeras horas à aprendizagem de linguagens de programação e dominando a arte de programar. Através de pura determinação e um sentido de humor irônico, ensinou a si próprio as aptidões necessárias para se tornar um programador de sucesso.",

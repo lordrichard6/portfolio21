@@ -98,7 +98,7 @@ const ContactWrapper = styled.div`
     font-size: 1.2rem;
   }
   .ani {
-    transform: translateY(800%) rotate(0);
+    transform: translateY(1800%) rotate(0);
     animation: fallButton 1.2s linear;
   }
 
@@ -109,7 +109,7 @@ const ContactWrapper = styled.div`
 
 const EmailButton = styled.div`
   position: absolute;
-  width: calc(0.8 * 200px);
+  width: calc(0.8 * 230px);
   height: calc(0.7 * 100px);
   border-radius: 16px;
   border: 2px solid #fff;
@@ -163,11 +163,11 @@ const EmailButton = styled.div`
       transform: translateY(15%) rotate(15deg);
     }
     75% {
-      transform: translateY(800%) rotate(15deg);
+      transform: translateY(1800%) rotate(15deg);
       opacity: 1;
     }
     100% {
-      transform: translateY(800%) rotate(15deg);
+      transform: translateY(1800%) rotate(15deg);
       opacity: 0;
     }
   }
