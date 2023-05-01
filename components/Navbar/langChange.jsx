@@ -35,6 +35,7 @@ export default function LangChange() {
       <div onClick={toggle} className="hidden lg:flex items-center cursor-pointer uppercase font-bold ml-2">
         {router.locale === "pt" && <h3>pt</h3>}
         {router.locale === "en" && <h3>en</h3>}
+        {router.locale === "de" && <h3>de</h3>}
         <BiDownArrow className="arrow ml-1" />
       </div>
       <ul className="dropdown lg:bg-slate-900 flex flex-col justify-center items-center list-none lg:absolute mx-auto top-10 right-0 w-[80px] overflow-hidden rounded-md">
@@ -45,12 +46,14 @@ export default function LangChange() {
           >
             <Link href={router.asPath} locale={locale} passHref>
               <div
+              onClick={toggle}
                 className={
                   router.locale === locale ? "font-bold" : "font-extralight"
                 }
               >
                 {locale === "pt" && <FlagChoice lang="pt" flag="/pt.svg" />}
                 {locale === "en" && <FlagChoice lang="en" flag="/en.svg" />}
+                {locale === "de" && <FlagChoice lang="de" flag="/de.svg" />}
               </div>
             </Link>
           </li>
@@ -69,7 +72,7 @@ const Language = styled.div`
   transition: 0.3s ease-in-out;
   @media (min-width: 1024px) {
     opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
-    height: ${({ isOpen }) => (isOpen ? "80px" : "0px")};
+    height: ${({ isOpen }) => (isOpen ? "110px" : "0px")};
   }
 }
 li {

@@ -1,19 +1,19 @@
 {
-    "header_01": "The",
+    "header_01": "Der",
     "header_02": "Code_=>",
-    "header_03": "Architect",
-    "header_slogan": "Solutions don`t fall from the sky",
+    "header_03": "Architekt",
+    "header_slogan": "Lösungen fallen nicht einfach vom Himmel",
 
-    "about_title": "About Me",
-    "about_first_line": "Hello",
-    "about_first_line02": "World!...",
-    "about_second_line": "My name is",
-    "about_third_line": "I come from",
-    "about_forth_line": "I was born at 4th of January of",
-    "about_fith_line": "I live in",
-    "about_fith_line02": "Switzerland",
-    
-    "projects_title": "My Projects",
+    "about_title": "Uber mich",
+    "about_first_line": "Hallo",
+    "about_first_line02": "Welt!...",
+    "about_second_line": "Ich heisse",
+    "about_third_line": "Ich komme aus",
+    "about_forth_line": "Ich wurde geboren am 4. Januar",
+    "about_fith_line": "Ich lebe in",
+    "about_fith_line02": "Schweiz",
+
+    "projects_title": "Meine Projekte",
 
     "about_text01": "Ladies and gentlemen, allow me to introduce you to a remarkable individual  who has traveled a unique path to become a skilled developer. Hailing from the sunny shores of Portugal, he was born on the 4th of January in 1986, and from an early age he showed an interest in technology, innovation and taking apart stuff to see how it works.",
     "about_text02": "However, it wasn't until later in life that he discovered his true passion for coding. He has always been something of a tech enthusiast, but the moment he truly fell in love with programming came when he was trying to teach his mother how to use her new smartphone. After several hours of trying to explain how to send a text message (among other things), he turned to his own computer and exclaimed, `You know what, you're a machine, and if I can teach my mom how to use a smartphone, I can definitely learn to code, Porra!´",

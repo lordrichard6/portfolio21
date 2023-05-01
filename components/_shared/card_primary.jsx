@@ -16,13 +16,7 @@ export default function CardPrimary({
         <Link href={link} className="main min-h-[500px] max-h-[500px]">
           <img className="tokenImage" src={imageSrc} alt={imageAlt} />
           <h2 className="text-xl mt-4">{cardHeading}</h2>
-          {cardText.map((item, i) => {
-            return (
-              <p key={i} className="description my-2">
-                {item}
-              </p>
-            );
-          })}
+          <p className="description text-ellipsis text-justify my-2">{cardText}</p>
         </Link>
       </div>
     </Container>

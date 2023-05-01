@@ -1,0 +1,22 @@
+{
+    "header01":"mySkills",
+    "header02":"The path to growth is attained only through efford and consistency.",
+    "S&E_title":"Skills & Experience",
+    "S&E_text01":"Based on my personal choice and time spent learning, I have stronger skills on the front-end, the visual aspect is of big importance and on that I feel like a Monet looking to create my Lady with the Umbrella.",
+    "S&E_text02":"I have learned HTML and CSS, then went on to Javascript, then Sass. I decided to go to React as my framework(library) of choice, not because of it`s popularity, but because of it`s component based structure and workflow.",
+    "S&E_text03":"But anyway, i don`t mean to leave you on a cliffhanger but if you want to hear more about my learning path and work experience, feel free to contact me.",
+
+    "exp01_title":"Front-End",
+    "exp01_text":"An Agency for webdesign, online markting, campaining, social media, CMS and IT Infrastructure.",
+
+    "ed01_title":"Administration Certification",
+    "ed01_text":"Administration thought me basic accounting, mathematics, business, etc. in which I worked for a year as a intern secretary/accountant.",
+    "ed02_title":"FullStack Certification",
+    "ed02_text":"A course with 37 hours that gave me knowledge in HTML, CSS, Bootstrap, JavaScript, Node.js, Express.js, React.js with Redux, PostgressSQL, SQL.",
+    "ed03_title":"Introdution to Computer Science",
+    "ed03_text":"Excelente course which goes deep in the basic concepts of computer science such as algorithms and data structures, also C, Python and SQL.",
+    "ed04_title":"React.js Certification",
+    "ed04_text":"52 hours of intense pain with advanced concepts of REACT.js with redux.",
+    "ed05_title":"CSS and Sass Certification",
+    "ed05_text":"This course teaches tons of modern CSS techniques, advanced CSS animations, Flexbox layouts, CSS Grid layouts and more. 28h in total."
+}

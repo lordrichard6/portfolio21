@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import useTranslation from "next-translate/useTranslation";
 
 import { Colors } from "../../../assets/variables";
 
@@ -22,11 +23,13 @@ import {
 import { SocialMedia } from "../../../assets/data/social_media";
 
 export default function AboutSection() {
+  let { t } = useTranslation();
+
   return (
     <SectionContainer className="relative w-screen min-h-screen custom-center flex-col py-24 md:py-44">
       <GradientTopDark />
       <EntryAnimation animation={bringUp}>
-        <TitleRetro title="About me." />
+        <TitleRetro title={t("home:about_title")} />
       </EntryAnimation>
       <div className="w-4/5 2xl:w-3/5 custom-center flex-col xl:flex-row my-6 lg:my-10">
         <EntryAnimation
@@ -57,7 +60,7 @@ export default function AboutSection() {
       <EntryAnimation animation={bringUp}>
         <BtnPrimaryCTA
           color="_2"
-          text="More about me"
+          text={t("common:btn_more_about")}
           link="/about"
           styles="mt-4"
         />

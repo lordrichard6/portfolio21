@@ -5,7 +5,7 @@ import useTranslation from "next-translate/useTranslation";
 import { useRouter } from "next/router";
 
 import { Colors } from "../../assets/variables";
-import { navItems } from "../../assets/data";
+import { navItems } from "../../assets/data/navbar";
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";

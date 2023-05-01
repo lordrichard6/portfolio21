@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 
-import { navItems } from "../../assets/data";
+import { navItems } from "../../assets/data/navbar";
 
 export default function NavItems() {
   const router = useRouter();
@@ -26,9 +26,7 @@ export default function NavItems() {
               className={router.pathname === item.to ? "selected" : ""}
               passHref
             >
-              {/* <a className={router.pathname === item.to ? "selected" : ""}> */}
               {t(item.tabName)}
-              {/* </a> */}
             </Link>
           </NavItem>
         );
