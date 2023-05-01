@@ -61,5 +61,15 @@
         @apply text-teal-900 text-lg whitespace-pre-line;
       }
     }
+    .recomendations {
+      h2, svg {
+        @apply text-4xl font-semibold;
+      }
+    }
+    .certifications {
+      h2, svg {
+        @apply text-4xl font-semibold;
+      }
+    }
   }
 }
