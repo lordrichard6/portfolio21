@@ -68,8 +68,10 @@ const Language = styled.div`
 }
 .dropdown {
   transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
-  height: ${({ isOpen }) => (isOpen ? "80px" : "0px")};
+  @media (min-width: 1024px) {
+    opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
+    height: ${({ isOpen }) => (isOpen ? "80px" : "0px")};
+  }
 }
 li {
   &:hover {
