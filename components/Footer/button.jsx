@@ -22,11 +22,12 @@ const Button = styled.div`
   &.ani {
     transform: translateY(200%) rotate(0);
     animation: fallButton 1.2s linear;
+    opacity: 0;
   }
 
   .button {
     position: relative;
-    width: calc(0.8 * 200px);
+    width: calc(0.8 * 230px);
     height: calc(0.7 * 100px);
     display: flex;
     justify-content: center;
