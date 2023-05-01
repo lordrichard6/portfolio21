@@ -10,7 +10,7 @@ export const FlagChoice = ({ lang, flag }) => {
   let router = useRouter();
   return (
     <div className="flex justify-center items-center my-1">
-      <h3 className="ml-2 font-light uppercase">{lang}</h3>
+      <h3 className="ml-2 uppercase">{lang}</h3>
       <figure className="relative w-[24px] h-[24px] rounded-full overflow-hidden ml-2">
         <Image src={flag} alt={flag} fill />
       </figure>
@@ -33,12 +33,12 @@ export default function LangChange() {
       className="language-dropdown flex relative"
       isOpen={isOpen}
     >
-      <div onClick={toggle} className="flex items-center cursor-pointer uppercase font-bold ml-2">
+      <div onClick={toggle} className="hidden lg:flex items-center cursor-pointer uppercase font-bold ml-2">
         {router.locale === "pt" && <h3>pt</h3>}
         {router.locale === "en" && <h3>en</h3>}
         <BiDownArrow className="arrow ml-1" />
       </div>
-      <ul className="dropdown bg-slate-900 flex flex-col justify-center items-center list-none absolute top-10 right-0 w-[80px] overflow-hidden rounded-md">
+      <ul className="dropdown lg:bg-slate-900 flex flex-col justify-center items-center list-none lg:absolute mx-auto top-10 right-0 w-[80px] overflow-hidden rounded-md">
         {router.locales.map((locale) => (
           <li
             className="text-2xl lg:text-xl text-slate-100 font-normal uppercase m-0"
@@ -47,7 +47,7 @@ export default function LangChange() {
             <Link href={router.asPath} locale={locale} passHref>
               <div
                 className={
-                  router.locale === locale ? "font-semibold" : "font-extralight"
+                  router.locale === locale ? "font-bold" : "font-extralight"
                 }
               >
                 {locale === "pt" && <FlagChoice lang="pt" flag="/pt.svg" />}
