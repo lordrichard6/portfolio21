@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import { BiDownArrow } from "react-icons/bi";
 
 export const FlagChoice = ({ lang, flag }) => {
-  let router = useRouter();
   return (
     <div className="flex justify-center items-center my-1">
       <h3 className="ml-2 uppercase">{lang}</h3>
