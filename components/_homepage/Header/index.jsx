@@ -12,7 +12,7 @@ import HomepageTitleComponent from "./title";
 export default function HomeHeaderSection() {
   return (
     <SectionContainer
-      className="w-screen h-screen relative flex justify-center items-center py-24"
+      className="w-screen min-h-screen relative flex justify-center items-center py-24"
       id="top"
     >
       <Image
