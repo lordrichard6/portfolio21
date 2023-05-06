@@ -7,7 +7,7 @@ import bannerEdu from "../images/homepage/banner_02.jpg";
 
 // Home
 import backgroundHome from "../images/homepage/header_01.jpg";
-import logoWhite from "../../public/logo_signature.png";
+import logoWhite from "../../public/logo_crossed_signature.png";
 import aboutMeImg from "../images/homepage/blue_01.jpg";
 // import hobby_01 from "../images/homepage/hobby_01.jpg";
 // import hobby_02 from "../images/homepage/hobby_02.jpg";
