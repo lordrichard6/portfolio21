@@ -15,7 +15,7 @@ import { EntryAnimation } from "../../_shared";
 import TitleRefexion from "./title";
 import ProjectComponent from "./project";
 import ProjectsIntro from "./text";
-import ProjectsExplanation from "./projectExplanation";
+// import ProjectsExplanation from "./projectExplanation";
 
 export default function ProjectsSection() {
   const sortedProjectsByDate = [...projects]

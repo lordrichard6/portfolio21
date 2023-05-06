@@ -1,18 +1,83 @@
 import styled from "styled-components";
 // import ReactTypingEffect from "react-typing-effect";
 import useTranslation from "next-translate/useTranslation";
+import React, { useEffect } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import { Colors } from "../../../assets/variables";
 
 export default function HomepageTitleComponent() {
   let { t } = useTranslation();
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
+  }, [controls, inView]);
+
+  const bringFromRight = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { delay: 0.4, duration: 2.0, type: "spring", bounce: 0.4 },
+    },
+    hidden: {
+      opacity: 0,
+      x: -200,
+    },
+  };
+  const bringFromRight2 = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { delay: 0.5, duration: 2.0, type: "spring", bounce: 0.4 },
+    },
+    hidden: {
+      opacity: 0,
+      x: -200,
+    },
+  };
+  const bringFromRight3 = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { delay: 0.6, duration: 2.0, type: "spring", bounce: 0.4 },
+    },
+    hidden: {
+      opacity: 0,
+      x: -200,
+    },
+  };
 
   return (
     <div className="text-slate-100 w-full lg:w-1/2 flex flex-col z-10">
       <Title className="mb-4 text-5xl md:text-7xl xl:text-8xl  uppercase font-black lg:leading-tight text-center">
-        <h1>{t("home:header_01")}</h1>
-        <h1>{t("home:header_02")}</h1>
-        <h1>{t("home:header_03")}</h1>
+        <motion.h1
+        ref={ref}
+        variants={bringFromRight}
+        initial="hidden"
+        animate={controls}
+        >{t("home:header_01")}</motion.h1>
+        <motion.h1
+        ref={ref}
+        variants={bringFromRight2}
+        initial="hidden"
+        animate={controls}
+        >{t("home:header_02")}</motion.h1>
+        <motion.h1
+        ref={ref}
+        variants={bringFromRight3}
+        initial="hidden"
+        animate={controls}
+        >{t("home:header_03")}</motion.h1>
       </Title>
       <SubTitle className="mx-auto text-slate-100 lg:text-slate-900 text-2xl xl:text-4xl text-center font-medium h-[50px]">
         {/* {t("home:header_slogan")} */}
