@@ -28,7 +28,7 @@ export default function ProjectComponent({
         className={`${type} relative w-4/5 h-[100px] lg:h-[200px] my-4 overflow-hidden`}
       >
         <ImagesComponent
-          style="img h-full w-1/2 object-cover object-center"
+          style="img relative h-full w-1/2"
           alt={alt}
           src={projectImage}
         />
@@ -79,5 +79,8 @@ const Container = styled.div`
   h1 {
     font-weight: 400;
     text-shadow: 1px 2px 4px #00000081;
+  }
+  .img {
+    width: 50%;
   }
 `;
