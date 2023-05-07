@@ -35,5 +35,5 @@ export default function HomeHeaderSection() {
 }
 
 const SectionContainer = styled.header`
-  animation: flash 3.1s linear;
+  /* animation: flash 3.1s linear; */
 `;

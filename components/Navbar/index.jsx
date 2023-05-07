@@ -1,14 +1,31 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
+import {
+  bringDown
+} from "../../utilities/framer-animations";
 import NavItems from "./navItems";
 import LangChange from "./langChange";
 import Logo from "./logo";
-import { Colors } from "../../assets/variables";
 import { FaBars } from "react-icons/fa";
 
 export default function Navbar({ toggle }) {
   const [scrolled, setScrolled] = useState(false);
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    threshold: 0,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    // if (!inView) {
+    //   controls.start("hidden");
+    // }
+  }, [controls, inView]);
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -29,10 +46,15 @@ export default function Navbar({ toggle }) {
   }
 
   return (
-    <Nav className={navbarClasses.join(" ")}>
-      <NavbarContainer>
-        <MobileIcon >
-          <FaBars alt="burger menu" onClick={toggle}/>
+    <Nav className={navbarClasses.join(" ")} ref={ref}>
+      <motion.div
+        variants={bringDown}
+        initial="hidden"
+        animate={controls}
+        className="flex justify-between items-center w-[80%] 2xl:w[70%]"
+      >
+        <MobileIcon>
+          <FaBars alt="burger menu" onClick={toggle} />
         </MobileIcon>
         <Logo />
         <ItemsWrapper>
@@ -41,7 +63,7 @@ export default function Navbar({ toggle }) {
             <LangChange />
           </div>
         </ItemsWrapper>
-      </NavbarContainer>
+      </motion.div>
     </Nav>
   );
 }
@@ -55,42 +77,9 @@ const Nav = styled.nav`
   justify-content: center;
   width: 100vw;
   z-index: 200;
-  transition: 0.8s all ease;
-  animation: showNav 2s linear;
-  /* background: url("/pattern.png"), ${Colors.primary}; */
 
   @media screen and (max-width: 1024px) {
-    transition: 0.8s all ease;
     margin-top: 16px;
-  }
-
-  @keyframes showNav {
-    0% {
-      filter: blur(0) brightness(1);
-      opacity: 0;
-    }
-    86% {
-      filter: brightness(1) blur(0);
-      opacity: 0;
-    }
-    90% {
-      filter: brightness(10) blur(0.5rem);
-      opacity: 1;
-    }
-    100% {
-      filter: blur(0) brightness(1);
-    }
-  }
-`;
-
-const NavbarContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-
-  @media screen and (min-width: 2024px) {
-    width: 70%;
   }
 `;
 

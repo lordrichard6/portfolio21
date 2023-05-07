@@ -13,7 +13,7 @@ export default function NavItems() {
   console.log(navItems);
 
   return (
-    <NavMenu className="flex flex-row justify-end m-0 z-10 list-none">
+    <ul className="flex flex-row justify-end m-0 z-10 list-none">
       {navItems.map((item, i) => {
         return (
           <NavItem
@@ -31,11 +31,9 @@ export default function NavItems() {
           </NavItem>
         );
       })}
-    </NavMenu>
+    </ul>
   );
 }
-
-const NavMenu = styled.ul``;
 
 const NavItem = styled.li`
   a {
@@ -63,9 +61,6 @@ const NavItem = styled.li`
 
     &.selected {
       font-weight: 800;
-    }
-    :hover {
-      /* font-weight: 400; */
     }
 
     :hover::after {

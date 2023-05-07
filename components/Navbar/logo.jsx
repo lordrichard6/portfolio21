@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,7 +5,7 @@ import logo from "../../public/logo_clean.png";
 
 export default function Logo() {
   return (
-    <LogoContainer className="flex justify-center items-center">
+    <div className="flex justify-center items-center">
       <div>
         <Link href="/" passHref>
           <Image
@@ -20,8 +19,6 @@ export default function Logo() {
       <h1 className="w-10 tracking-tight leading-7 md:leading-6 text-2xl md:text-4xl font-normal text-slate-100">
         Paulo Reizinho
       </h1>
-    </LogoContainer>
+    </div>
   );
 }
-
-const LogoContainer = styled.div``;
