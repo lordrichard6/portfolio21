@@ -1,21 +1,33 @@
 import styled from "styled-components";
-import Image from "next/image";
+import { useAnimation, motion } from "framer-motion";
 
-import { homeHeader } from "../../../assets/data";
+import { EntryAnimation } from "../../_shared";
+import { bringFromRight } from "../../../utilities/framer-animations";
+import { ImagesComponent } from "../../_shared";
+import SignatureComponent from "./signature";
 
 export default function LogoComponent() {
   return (
-    <ImageContainer className="w-full z-10">
-      <Image responsive src={homeHeader.logo} alt="paulo reizinho logo" />
-    </ImageContainer>
+    <LogoContainer className="w-full md:w-1/2 relative z-10">
+      <EntryAnimation style="" animation={bringFromRight}>
+        <ImagesComponent
+          style="z-10"
+          alt="paulo reizinho"
+          src="/logo_crossed.png"
+        />
+      </EntryAnimation>
+      {/* <ImagesComponent
+          style="z-20 absolute bottom-0 signature"
+          alt="paulo reizinho signature"
+          src="/signature.svg"
+        /> */}
+      <SignatureComponent />
+    </LogoContainer>
   );
 }
 
-const ImageContainer = styled.figure`
-  /* animation: showHead 3s linear; */
-  /* filter: drop-shadow(10px 10px 5px #1a1a1a); */
-
-  @media screen and (max-width: 1024px) {
-    /* animation: showHeadMobile 3s linear; */
+const LogoContainer = styled.div`
+  .signature {
+    filter: drop-shadow(0px 0px 10px #34b3c1);
   }
 `;
