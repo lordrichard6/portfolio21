@@ -150,14 +150,14 @@ export const gallery = [
     alt: "paulo reizinho pictures",
     className: "shape shape__14",
   },
-  {
-    imgSrc: gal_15,
-    alt: "paulo reizinho pictures",
-    className: "shape shape__15",
-  },
-  {
-    imgSrc: gal_16,
-    alt: "paulo reizinho pictures",
-    className: "shape shape__16",
-  },
+  // {
+  //   imgSrc: gal_15,
+  //   alt: "paulo reizinho pictures",
+  //   className: "shape shape__15",
+  // },
+  // {
+  //   imgSrc: gal_16,
+  //   alt: "paulo reizinho pictures",
+  //   className: "shape shape__16",
+  // },
 ];
