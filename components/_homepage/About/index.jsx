@@ -26,7 +26,7 @@ export default function AboutSection() {
   let { t } = useTranslation();
 
   return (
-    <SectionContainer className="relative w-screen min-h-screen custom-center flex-col py-24 md:py-44">
+    <section className="relative w-screen min-h-screen custom-center flex-col py-24 md:py-44">
       <GradientTopDark />
       <EntryAnimation animation={bringUp}>
         <TitleRetro title={t("home:about_title")} />
@@ -65,10 +65,6 @@ export default function AboutSection() {
           styles="mt-4"
         />
       </EntryAnimation>
-    </SectionContainer>
+    </section>
   );
 }
-
-const SectionContainer = styled.section`
-  background: ${Colors.primary_background};
-`;
