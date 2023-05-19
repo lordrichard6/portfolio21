@@ -67,6 +67,7 @@ export const projects = [
     type: 'personal',
     date: '2023/04',
     featured: true,
+    cardId: "card2"
   },
   {
     image: "/projects/fahrezentrale.png",
@@ -88,6 +89,7 @@ export const projects = [
     type: 'profissional',
     date: '2022/06',
     featured: true,
+    cardId: "card1"
   },
   {
     image: '/projects/pickwings.png',
@@ -210,7 +212,7 @@ export const projects = [
     icon: [<FaReact key={0}/>],
     type: 'personal',
     date: '2021/06',
-    featured: true,
+    featured: false,
   },
   {
     image: "/projects/skytours.png",

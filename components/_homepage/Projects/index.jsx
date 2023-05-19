@@ -7,6 +7,7 @@ import {
   EntryAnimation,
 } from "../../_shared";
 import { projects } from "../../../assets/data/projects";
+import ProjectCard from './projectCard'
 
 import { bringUp } from "../../../utilities/framer-animations";
 
@@ -22,13 +23,15 @@ export default function ProjectsSection() {
       <EntryAnimation style="flex-row flex-wrap custom-center" animation={bringUp}>
         {featuredProjects.map((item, i) => {
           return (
-            <CardPrimary
+            <ProjectCard
             key={i}
             imageSrc={item.image}
             imageAlt={item.alt}
             cardHeading={item.title}
             cardText={t(item.shortText)}
             link={item.link}
+            cardId={item.cardId}
+            icon={item.icon}
           />
           )
         })}
