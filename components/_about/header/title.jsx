@@ -16,14 +16,14 @@ export default function TitleComponent() {
 
   return (
     <Container>
-      <h1 style={{ transform: `translateY(${offsetY * 0.3}px)` }}>{t("common:about_me")}</h1>
+      <h1 style={{ transform: `translate(${offsetY * 0.3}px, ${offsetY * 0.2}px)` }}>{t("common:about_me")}</h1>
     </Container>
   );
 }
 
 const Container = styled.div`
   position: absolute;
-  top: 35%;
+  top: 55%;
   left: 100px;
   z-index: 1;
   width: 100%;

@@ -15,7 +15,7 @@ export default function GalleryItems() {
   };
 
   return (
-    <section className="min-h-[1200px] md:min-h-full">
+    <section className="min-h-[1200px] md:min-h-full mb-60">
       <TitleSecondary title="Here's some pictures" />
       <div className="wrapper">
         {gallery.map((item, i) => {
