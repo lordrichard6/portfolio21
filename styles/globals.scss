@@ -48,3 +48,7 @@ figure {
 .custom-center {
   @apply flex justify-center items-center;
 }
+
+.section-width {
+  @apply w-11/12 md:w-4/5 lg:w-2/3 2xl:w-6/12 mb-20;
+}

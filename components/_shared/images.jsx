@@ -19,9 +19,9 @@ width: 100%;
 }
 
 .image {
-  object-fit: contain;
+  object-fit: cover;
   width: 100% !important;
   position: relative !important;
-  height: unset !important;
+  /* height: unset !important; */
 }
 `

@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 import HeaderComponent from "../components/_about/header/index"
 import QuoteComponent from "../components/_about/quote/index"
 import AboutMe from "../components/_about/AboutMe"
-import TechsSection from "../components/_about/Techs"
+import SingleService from "../components/_about/services"
 import HobbiesSection from "../components/_about/Hobbies"
 import GalleryItems from "../components/_about/gallery/index"
 import Waves from "../components/_about/waves/index"
@@ -15,7 +15,7 @@ export default function AboutPage() {
       <HeaderComponent />
       <QuoteComponent />
       <AboutMe />
-      <TechsSection />
+      <SingleService />
       <HobbiesSection />
       <GalleryItems />
       <Waves />
