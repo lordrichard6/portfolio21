@@ -10,7 +10,7 @@ export default function AboutPictureComponent() {
 
   return (
     <RightContainer>
-      <div className="wrapper">
+      <div className="about-picture-wrapper">
         <div className="outer outer-layer">
           <div className="stars">
             <div className="star"></div>
