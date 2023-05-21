@@ -11,7 +11,7 @@ export default function HobbiesSection() {
 
   return (
     <SectionContainer className="my-24">
-      <TitlePrimary title="A person is nothing without hobbies" />
+      <TitlePrimary title="Hobbies build character" />
       <CenterHexagonComponent />
       <HobbiesComponent />
     </SectionContainer>
