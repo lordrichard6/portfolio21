@@ -15,9 +15,9 @@ export default function GalleryItems() {
   };
 
   return (
-    <section className="min-h-[1200px] md:min-h-full mb-60">
+    <section className="section-gallery section-y-default">
       <TitlePrimary title="Here's some pictures" />
-      <div className="wrapper">
+      <div className="gallery-wrapper">
         {gallery.map((item, i) => {
           return (
             <PicturesComponent

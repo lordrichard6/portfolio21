@@ -49,7 +49,7 @@ export default function ServicesSection() {
   let { t } = useTranslation();
 
   return (
-    <section className="section-width">
+    <section className="section-width section-y-default">
       <TitlePrimary title="What can I do for you?" />
       <div className="card-wrapper">
         {serviceCardsInfo.map((item, i) => {

@@ -9,9 +9,9 @@ export default function AboutMeSection() {
   let { t } = useTranslation();
 
   return (
-    <section className="relative w-screen flex flex-col justify-center items-center py-24 md:py-32">
+    <section className="section-about section-y-default">
       <TitlePrimary title={t("home:about_title")} />
-      <div className="w-4/5 2xl:w-3/5 flex flex-col xl:grid xl:grid-cols-2 gap-4">
+      <div className="content-wrapper">
         <AboutTextComponent />
         <AboutPictureComponent />
       </div>

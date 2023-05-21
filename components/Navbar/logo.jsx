@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import logo from "../../public/logo_clean.png";
+import logo from "../../public/logo_white.svg";
 
 export default function Logo() {
   return (
@@ -12,7 +12,7 @@ export default function Logo() {
             src={logo}
             alt="paulo lopes reizinho"
             responsive
-            className="w-auto h-16 md:w-20 md:h-20 cursor-pointer"
+            className="w-auto h-16 md:w-20 md:h-20 cursor-pointer my-1"
           />
         </Link>
       </div>
