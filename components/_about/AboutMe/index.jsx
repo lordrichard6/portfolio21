@@ -19,8 +19,8 @@ export default function AboutMeSection() {
 
   return (
     <SectionContainer className="relative w-screen flex flex-col justify-center items-center py-24 md:py-32">
-      <EntryAnimation style="" animation={bringUp}>
-        <TitleUpAndDown title={t("home:about_title")} />
+      <EntryAnimation style="title-seconday-md" animation={bringUp}>
+        <h1>{t("home:about_title")}</h1>
       </EntryAnimation>
       <div className="w-4/5 2xl:w-3/5 flex flex-col xl:flex-row justify-center items-center">
         <EntryAnimation style="w-full" animation={bringFromLeft}>
