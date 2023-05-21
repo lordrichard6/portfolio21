@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function TitleSecondary({ title }) {
+export default function TitlePrimary({ title }) {
   const controls = useAnimation();
   const letters = Array.from(title);
   const [ref, inView] = useInView();

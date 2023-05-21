@@ -1,9 +1,8 @@
 import useTranslation from "next-translate/useTranslation";
 
 import {
-  TitleRetro,
+  TitlePrimary,
   BtnPrimaryCTA,
-  CardPrimary,
   EntryAnimation,
 } from "../../_shared";
 import { projects } from "../../../assets/data/projects";
@@ -14,12 +13,10 @@ import { bringUp } from "../../../utilities/framer-animations";
 export default function ProjectsSection() {
   let { t } = useTranslation();
   const featuredProjects = projects.filter(project => project.featured === true);
-
+  
   return (
     <div>
-      <EntryAnimation animation={bringUp}>
-        <TitleRetro title={t("home:projects_title")} />
-      </EntryAnimation>
+      <TitlePrimary title={t("home:projects_title")} />
       <EntryAnimation style="flex-row flex-wrap custom-center" animation={bringUp}>
         {featuredProjects.map((item, i) => {
           return (

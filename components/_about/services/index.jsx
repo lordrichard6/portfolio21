@@ -7,7 +7,7 @@ import {
   bringFromRight,
 } from "../../../utilities/framer-animations";
 
-import { TitleSecondary, EntryAnimation } from "../../_shared";
+import { TitlePrimary, EntryAnimation } from "../../_shared";
 import SingleService from "./service";
 
 const serviceCardsInfo = [
@@ -47,7 +47,7 @@ export default function ServicesSection() {
   return (
     <section className="section-width">
       <EntryAnimation style="w-full flex justify-center" animation={bringUp}>
-        <TitleSecondary title="What can I do for you?" />
+        <TitlePrimary title="What can I do for you?" />
       </EntryAnimation>
       <div className="card-wrapper">
       {serviceCardsInfo.map((item, i) => {
