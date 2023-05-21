@@ -1,9 +1,10 @@
-.title-seconday-md {
+.title-primary-md {
   font-family: "Yanone Kaffeesatz";
   font-style: normal;
   font-weight: 700;
   line-height: 26px;
   color: #fcfefe;
   text-align: center;
+  text-shadow: 4px 4px 5px $color-dark;
   @apply text-5xl md:text-[72px] mb-[60px];
 }

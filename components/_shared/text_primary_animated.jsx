@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function TextPrimaryAnimated({ text }) {
+export default function TextPrimaryAnimated({ text, style }) {
   const controls = useAnimation();
   const words = text.split(" ");
   const [ref, inView] = useInView();
@@ -52,7 +52,7 @@ export default function TextPrimaryAnimated({ text }) {
       initial="hidden"
       animate={controls}
       ref={ref}
-      className="primary-text flex flex-wrap"
+      className={`primary-text flex flex-wrap ${style}`}
     >
       {words.map((word, index) => (
         <motion.p variants={child} style={{ marginRight: "5px" }} key={index}>

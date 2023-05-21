@@ -49,7 +49,7 @@ export default function TitlePrimary({ title }) {
 
   return (
       <motion.div 
-      className="title-seconday-md overflow-hidden flex justify-center"
+      className="title-primary-md flex justify-center"
       variants={container}
       initial="hidden"
       animate={controls}
