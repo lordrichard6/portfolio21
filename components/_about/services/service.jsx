@@ -17,10 +17,10 @@ export default function SingleService({
       <ImagesComponent src={imgSrc} alt={alt} style="picture" />
       <h2>{serviceName}</h2>
       <p>{textShort}</p>
-      <button>
+      {/* <button>
         <h3>know more</h3>
         <TbArrowBigRightLinesFilled />
-      </button>
+      </button> */}
     </div>
   );
 }
