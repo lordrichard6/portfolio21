@@ -20,6 +20,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.primary-text {
+  font-family: "Yanone Kaffeesatz";
+  @apply text-slate-100 text-xl lg:text-2xl font-light text-justify whitespace-pre-line antialiased;
+}
+
 .normal-text {
   @apply text-slate-100 text-xl 2xl:text-2xl font-normal antialiased;
 }

@@ -1,14 +1,13 @@
 import Image from "next/image";
-import useTranslation from "next-translate/useTranslation";
 
+import { bringFromRight } from "../../../utilities/framer-animations";
+import { EntryAnimation } from "../../_shared";
 import NoGlasses from "../../../assets/images/homepage/about-me.png";
 import WithGlasses from "../../../assets/images/homepage/about-me_g.png";
 
 export default function AboutPictureComponent() {
-  let { t } = useTranslation();
-
   return (
-    <div className="about-right-side">
+    <EntryAnimation style="about-right-side" animation={bringFromRight}>
       <div className="about-picture-wrapper">
         <div className="outer outer-layer">
           <div className="stars">
@@ -71,6 +70,6 @@ export default function AboutPictureComponent() {
           </figure>
         </div>
       </div>
-    </div>
+    </EntryAnimation>
   );
 }
