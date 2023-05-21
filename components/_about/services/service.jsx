@@ -1,6 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { ImagesComponent } from "../../_shared";
+
+import { ImagesComponent, EntryAnimation } from "../../_shared";
+import { bringUp } from "../../../utilities/framer-animations";
 import { TbArrowBigRightLinesFilled } from "react-icons/tb";
 
 export default function SingleService({
@@ -12,8 +13,7 @@ export default function SingleService({
   cardType,
 }) {
   return (
-    <div className={cardType} key={key}>
-      {/* <img src={imgSrc} alt={alt} className="picture bg-sky-300"/> */}
+    <EntryAnimation style={cardType} animation={bringUp} key={key}>
       <ImagesComponent src={imgSrc} alt={alt} style="picture" />
       <h2>{serviceName}</h2>
       <p>{textShort}</p>
@@ -21,6 +21,6 @@ export default function SingleService({
         <h3>know more</h3>
         <TbArrowBigRightLinesFilled />
       </button> */}
-    </div>
+    </EntryAnimation>
   );
 }
