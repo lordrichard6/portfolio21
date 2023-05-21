@@ -7,7 +7,7 @@ import { FaArrowCircleRight } from 'react-icons/fa';
 export default function BtnPrimaryCTA({color, text, link, animation, styles}) {
 
   return (
-        <Button className={`active:translate-y-0.5 ${styles}`}>
+        <Button className={`active:translate-y-1 hover:-translate-y-1 ${styles}`}>
           <div className={`button py-8 px-10 ${color} ${animation}`}>
             <Link href={link} className="text-xl lg:text-2xl font-bold flex justify-center items-center">{text} <FaArrowCircleRight className="icon ml-2 transition duration-300 ease-in-out" /></Link>
             <div className='back' ></div>
@@ -20,6 +20,7 @@ const Button = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s cubic-bezier(0, 0.22, 0.3, 1);
   /* z-index: 10; */
   &.ani {
     transform: translateY(200%) rotate(0);
@@ -42,6 +43,9 @@ const Button = styled.div`
     border-radius: 16px;
     &:active {
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    &:hover {
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2), 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     &:before {
