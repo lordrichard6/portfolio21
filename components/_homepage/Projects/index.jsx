@@ -10,12 +10,12 @@ import ProjectCard from './projectCard'
 
 import { bringUp } from "../../../utilities/framer-animations";
 
-export default function ProjectsSection() {
+export default function HomeProjects() {
   let { t } = useTranslation();
   const featuredProjects = projects.filter(project => project.featured === true);
   
   return (
-    <div>
+    <div className="w-full">
       <TextAnimationLetter className="title-primary-md flex justify-center" text={t("home:projects_title")} />
       <EntryAnimation style="flex-row flex-wrap flex-centered" animation={bringUp}>
         {featuredProjects.map((item, i) => {

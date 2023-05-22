@@ -1,7 +1,8 @@
 import {
-  HomeHeaderSection,
-  AboutSection,
-  ProjectsSection,
+  HomeHeader,
+  HomeQuote,
+  HomeAbout,
+  HomeProjects,
   EvoSection,
 } from "../components/_homepage";
 import Layout from "../components/Layout";
@@ -9,9 +10,10 @@ import Layout from "../components/Layout";
 export default function Home() {
   return (
     <Layout>
-      <HomeHeaderSection />
-      <AboutSection />
-      <ProjectsSection />
+      <HomeHeader />
+      <HomeQuote />
+      <HomeAbout />
+      <HomeProjects />
       <EvoSection />
     </Layout>
   );

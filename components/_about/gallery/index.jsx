@@ -5,7 +5,7 @@ import { gallery } from "../../../assets/data/gallery";
 import PicturesComponent from "./pictures";
 import { TextAnimationLetter } from "../../_shared";
 
-export default function GalleryItems() {
+export default function AboutGallery() {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
 
@@ -15,7 +15,7 @@ export default function GalleryItems() {
   };
 
   return (
-    <section className="section-gallery">
+    <section className="about-section-gallery">
       <TextAnimationLetter className="title-primary-md flex justify-center" text="Here's some pictures" />
       <div className="gallery-wrapper">
         {gallery.map((item, i) => {

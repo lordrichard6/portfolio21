@@ -9,7 +9,7 @@ export default function AboutMeSection() {
   let { t } = useTranslation();
 
   return (
-    <section className="section-about flex-centered section-y-default section-x-default">
+    <section className="about-section-about flex-centered section-y-default section-x-default">
       <TextAnimationLetter className="title-primary-md flex justify-center" text={t("home:about_title")} />
       <div className="content-wrapper">
         <AboutTextComponent />

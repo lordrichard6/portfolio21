@@ -1,8 +1,5 @@
 import React from "react";
-import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
-
-import { Colors } from "../../../assets/variables";
 
 import {
   bringFromLeft,
@@ -10,7 +7,6 @@ import {
   bringUp,
 } from "../../../utilities/framer-animations";
 
-import GradientTopDark from "./gradient_dark_top";
 import TextComponent from "./text";
 import ImageComponent from "./image";
 import {
@@ -22,12 +18,11 @@ import {
 
 import { SocialMedia } from "../../../assets/data/social_media";
 
-export default function AboutSection() {
+export default function HomeAbout() {
   let { t } = useTranslation();
   
   return (
-    <section className="relative w-screen min-h-screen flex-centered flex-col py-24 md:py-44">
-      <GradientTopDark />
+    <section className="relative w-screen min-h-screen flex-centered flex-col">
       <TextAnimationLetter className="title-primary-md flex justify-center" text={t("home:about_title")} />
       <div className="w-4/5 2xl:w-3/5 flex-centered flex-col xl:flex-row my-6 lg:my-10">
         <EntryAnimation

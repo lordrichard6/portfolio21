@@ -45,11 +45,11 @@ const serviceCardsInfo = [
   },
 ];
 
-export default function ServicesSection() {
+export default function AboutSevices() {
   let { t } = useTranslation();
 
   return (
-    <section className="section-services section-x-default section-y-default">
+    <section className="about-section-services section-x-default section-y-default">
       <TextAnimationLetter className="title-primary-md flex justify-center" text="What can I do for you?" />
       <div className="card-wrapper">
         {serviceCardsInfo.map((item, i) => {
