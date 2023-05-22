@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Modal from "./modal";
 import { gallery } from "../../../assets/data/gallery";
 import PicturesComponent from "./pictures";
-import { TitlePrimary } from "../../_shared";
+import { TextAnimationLetter } from "../../_shared";
 
 export default function GalleryItems() {
   const [clickedImg, setClickedImg] = useState(null);
@@ -16,7 +16,7 @@ export default function GalleryItems() {
 
   return (
     <section className="section-gallery">
-      <TitlePrimary title="Here's some pictures" />
+      <TextAnimationLetter className="title-primary-md flex justify-center" text="Here's some pictures" />
       <div className="gallery-wrapper">
         {gallery.map((item, i) => {
           return (

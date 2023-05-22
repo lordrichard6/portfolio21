@@ -16,7 +16,7 @@ export default function SingleService({
     <EntryAnimation style={cardType} animation={bringUp} key={key}>
       <ImagesComponent src={imgSrc} alt={alt} style="picture" />
       <h2>{serviceName}</h2>
-      <p className="primary-text">{textShort}</p>
+      <p className="text-primary">{textShort}</p>
       {/* <button>
         <h3>know more</h3>
         <TbArrowBigRightLinesFilled />

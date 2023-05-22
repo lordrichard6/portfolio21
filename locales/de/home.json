@@ -1,8 +1,10 @@
 {
-    "header_01": "Der",
-    "header_02": "Code_=>",
-    "header_03": "Architekt",
+    "header_01": "Ich",
+    "header_02": "bin",
+    "header_03": "entwickler",
     "header_slogan": "Lösungen fallen nicht einfach vom Himmel",
+    "header_slogan_01": "Lösungen",
+    "header_slogan_02": "fallen einfach nicht vom Himmel",
 
     "about_title": "Uber mich",
     "about_first_line": "Hallo",

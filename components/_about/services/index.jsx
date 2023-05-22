@@ -7,7 +7,7 @@ import {
   bringFromRight,
 } from "../../../utilities/framer-animations";
 
-import { TitlePrimary, EntryAnimation } from "../../_shared";
+import { TextAnimationLetter, EntryAnimation } from "../../_shared";
 import SingleService from "./service";
 
 const serviceCardsInfo = [
@@ -50,7 +50,7 @@ export default function ServicesSection() {
 
   return (
     <section className="section-services section-x-default section-y-default">
-      <TitlePrimary title="What can I do for you?" />
+      <TextAnimationLetter className="title-primary-md flex justify-center" text="What can I do for you?" />
       <div className="card-wrapper">
         {serviceCardsInfo.map((item, i) => {
           return (

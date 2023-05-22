@@ -1,7 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 
 import {
-  TitlePrimary,
+  TextAnimationLetter,
   BtnPrimaryCTA,
   EntryAnimation,
 } from "../../_shared";
@@ -16,7 +16,7 @@ export default function ProjectsSection() {
   
   return (
     <div>
-      <TitlePrimary title={t("home:projects_title")} />
+      <TextAnimationLetter className="title-primary-md flex justify-center" text={t("home:projects_title")} />
       <EntryAnimation style="flex-row flex-wrap flex-centered" animation={bringUp}>
         {featuredProjects.map((item, i) => {
           return (

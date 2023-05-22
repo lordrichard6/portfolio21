@@ -7,7 +7,7 @@ export default function AboutTextComponent() {
   let { t } = useTranslation();
 
   return (
-    <EntryAnimation style="about-left-side primary-text" animation={bringFromLeft}>
+    <EntryAnimation style="about-left-side text-primary" animation={bringFromLeft}>
       <p className="text-primary">{t("about:about_text01")}</p>
       <br />
       <p className="text-primary">{t("about:about_text02")}</p>

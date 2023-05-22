@@ -1,7 +1,7 @@
 export { default as TitleRetro } from './title_retro';
-export { default as TitlePrimary } from './title_primary';
+export { default as TextAnimationLetter } from './ani_text_letter';
 export { default as TitleUpAndDown } from './title_up&down';
-export { default as TextPrimaryAnimated } from './text_primary_animated';
+export { default as TextAnimationWord } from './ani_text_word';
 export { default as BtnPrimaryCTA } from './btn_primary_cta';
 export { default as BtnSecondaryCTA } from './btn_secondary_cta';
 export { default as ImagesComponent } from './images';

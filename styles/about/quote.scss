@@ -12,8 +12,4 @@
       rgba(187, 122, 121, 0) 89.54%
     );
   }
-  .quote {
-    text-shadow: 4px 4px 5px $color-dark;
-    @apply z-10 text-3xl md:text-4xl italic antialiased justify-center leading-loose;
-  }
 }
