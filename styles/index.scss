@@ -5,9 +5,15 @@
 @import './animations.scss';
 @import './homepage/aboutme.scss';
 @import './homepage.scss';
-@import './pageAbout.scss';
 @import './stars.scss';
 @import './homepage/nintendoFont.scss';
 @import './homepage/hexagon.scss';
 @import "./404.scss";
 @import "./projects/page.scss";
+
+// ABOUT
+@import "./about/quote.scss";
+@import "./about/about_me.scss";
+@import "./about/services.scss";
+@import "./about/hobbies.scss";
+@import "./about/gallery.scss";

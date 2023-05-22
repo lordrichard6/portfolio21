@@ -1,19 +1,20 @@
 import useTranslation from "next-translate/useTranslation";
 
-import { TextPrimaryAnimated } from "../../_shared";
+import { EntryAnimation } from "../../_shared";
+import { bringFromLeft } from "../../../utilities/framer-animations";
 
 export default function AboutTextComponent() {
   let { t } = useTranslation();
 
   return (
-    <div className="about-left-side primary-text">
-      <TextPrimaryAnimated text={t("about:about_text01")} />
+    <EntryAnimation style="about-left-side primary-text" animation={bringFromLeft}>
+      <p className="text-primary">{t("about:about_text01")}</p>
       <br />
-      <TextPrimaryAnimated text={t("about:about_text02")} />
+      <p className="text-primary">{t("about:about_text02")}</p>
       <br />
-      <TextPrimaryAnimated text={t("about:about_text03")} />
+      <p className="text-primary">{t("about:about_text03")}</p>
       <br />
-      <TextPrimaryAnimated text={t("about:about_text04")} />
-    </div>
+      <p className="text-primary">{t("about:about_text04")}</p>
+    </EntryAnimation>
   );
 }

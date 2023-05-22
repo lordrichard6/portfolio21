@@ -17,7 +17,7 @@ export default function ProjectsSection() {
   return (
     <div>
       <TitlePrimary title={t("home:projects_title")} />
-      <EntryAnimation style="flex-row flex-wrap custom-center" animation={bringUp}>
+      <EntryAnimation style="flex-row flex-wrap flex-centered" animation={bringUp}>
         {featuredProjects.map((item, i) => {
           return (
             <ProjectCard

@@ -1,4 +1,4 @@
-import "../styles/main.scss";
+import "../styles/index.scss";
 import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
 import { ChakraProvider } from "@chakra-ui/react";

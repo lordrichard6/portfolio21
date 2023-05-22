@@ -9,7 +9,7 @@ export default function AboutMeSection() {
   let { t } = useTranslation();
 
   return (
-    <section className="section-about section-y-default">
+    <section className="section-about flex-centered section-y-default section-x-default">
       <TitlePrimary title={t("home:about_title")} />
       <div className="content-wrapper">
         <AboutTextComponent />

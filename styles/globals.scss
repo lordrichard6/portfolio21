@@ -47,14 +47,18 @@ figure {
   margin-top: 0 !important;
 }
 
-.custom-center {
+.flex-centered {
   @apply flex justify-center items-center;
 }
 
-.section-width {
-  @apply w-11/12 md:w-4/5 lg:w-2/3 2xl:w-6/12 mb-20;
+.section-x-default {
+  @apply w-4/5 lg:w-2/3 2xl:w-6/12;
 }
 
 .section-y-default {
-  @apply min-h-screen py-40;
+  @apply min-h-screen mb-40;
+}
+
+.section-y-short {
+  @apply min-h-[80vh];
 }

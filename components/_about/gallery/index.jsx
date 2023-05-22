@@ -15,7 +15,7 @@ export default function GalleryItems() {
   };
 
   return (
-    <section className="section-gallery section-y-default">
+    <section className="section-gallery">
       <TitlePrimary title="Here's some pictures" />
       <div className="gallery-wrapper">
         {gallery.map((item, i) => {
