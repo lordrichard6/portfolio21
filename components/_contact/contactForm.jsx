@@ -2,6 +2,7 @@ import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
 import React, { useEffect, useState } from "react";
 import { sendContactForm } from "../../lib/api";
+import { TextAnimationLetter } from "../_shared";
 import {
   Container,
   Heading,
@@ -70,10 +71,11 @@ export default function ContactForm() {
   };
 
   return (
-    <Container maxW="450px" mt={12}>
-      <h1 className="text-4xl font-semibold mt-6 mb-2/ text-center">
-        Send me a quick message
-      </h1>
+    <Container maxW="450px" mt={12} mb={12}>
+      <TextAnimationLetter
+        className="title-primary-md flex justify-center"
+        text="Just quickly say HELLO..."
+      />
       {error && (
         <Text className="text-center" color="red.300" my={4} fontSize="xl">
           {error}

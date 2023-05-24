@@ -7,7 +7,7 @@ import { MdLocationOn } from "react-icons/md";
 
 import MeFormalG from "../../assets/images/homepage/about-me_g.png";
 import logo from "../../public/logo_signature.png";
-import SocialLinksComponent from "../Footer/social_links";
+import SocialLinksComponent from "../Layout/Footer/social_links";
 
 export default function ContactCard() {
   let { t } = useTranslation();

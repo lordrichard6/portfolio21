@@ -8,9 +8,9 @@ import { BiDownArrow } from "react-icons/bi";
 
 export const FlagChoice = ({ lang, flag }) => {
   return (
-    <div className="flex justify-center items-center my-1">
-      <h3 className="ml-2 uppercase">{lang}</h3>
-      <figure className="relative w-[24px] h-[24px] rounded-full overflow-hidden ml-2">
+    <div className="flag-choice">
+      <h3>{lang}</h3>
+      <figure className="flag">
         <Image src={flag} alt={flag} fill />
       </figure>
     </div>
@@ -28,25 +28,19 @@ export default function LangChange() {
   // console.log("languages", router.locales);
   // console.log("selected language", JSON.stringify(router.locale));
   return (
-    <Language
-      className="language-dropdown flex relative"
-      isOpen={isOpen}
-    >
-      <div onClick={toggle} className="hidden lg:flex items-center cursor-pointer uppercase font-bold ml-2">
+    <Language className="language-dropdown" isOpen={isOpen}>
+      <div onClick={toggle} className="lang-name">
         {router.locale === "pt" && <h3>pt</h3>}
         {router.locale === "en" && <h3>en</h3>}
         {router.locale === "de" && <h3>de</h3>}
-        <BiDownArrow className="arrow ml-1" />
+        <BiDownArrow className="arrow" />
       </div>
-      <ul className="dropdown lg:bg-slate-900 flex flex-col justify-center items-center list-none lg:absolute mx-auto top-10 right-0 w-[80px] overflow-hidden rounded-md">
+      <ul>
         {router.locales.map((locale) => (
-          <li
-            className="text-2xl lg:text-xl text-slate-100 font-normal uppercase m-0"
-            key={locale}
-          >
+          <li key={locale}>
             <Link href={router.asPath} locale={locale} passHref>
               <div
-              onClick={toggle}
+                onClick={toggle}
                 className={
                   router.locale === locale ? "font-bold" : "font-extralight"
                 }
@@ -64,26 +58,13 @@ export default function LangChange() {
 }
 
 const Language = styled.div`
-.arrow {
-  transition: 0.3s ease-in-out;
-  transform: rotateZ(${({ isOpen }) => (isOpen ? "180deg" : "0deg")});
-}
-.dropdown {
-  transition: 0.3s ease-in-out;
-  @media (min-width: 1024px) {
-    opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
-    height: ${({ isOpen }) => (isOpen ? "110px" : "0px")};
+  .arrow {
+    transform: rotateZ(${({ isOpen }) => (isOpen ? "180deg" : "0deg")});
   }
-}
-li {
-  &:hover {
-    h3 {
-      font-weight: 800;
-    }
-    figure {
-      border-color: #fff;
-      border-width: 2px;
+  ul {
+    @media (min-width: 1024px) {
+      opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
+      height: ${({ isOpen }) => (isOpen ? "110px" : "0px")};
     }
   }
-}
-`
+`;

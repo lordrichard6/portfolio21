@@ -25,13 +25,23 @@ body {
   @apply text-slate-100 text-xl lg:text-2xl font-light text-justify whitespace-pre-line antialiased;
 }
 
+.text-primary-lg {
+  font-family: "Yanone Kaffeesatz";
+  @apply text-slate-100 text-xl lg:text-3xl text-justify whitespace-pre-line antialiased;
+}
+
 .text-quote {
   text-shadow: 4px 4px 5px $color-dark;
-  @apply z-10 text-3xl md:text-4xl italic antialiased justify-center leading-loose;
+  @apply z-10 text-3xl md:text-4xl italic antialiased justify-center leading-relaxed md:leading-loose whitespace-pre-line;
 }
+
 
 .normal-text {
   @apply text-slate-100 text-xl 2xl:text-2xl font-normal antialiased;
+}
+
+.navbar-name {
+  @apply w-10 tracking-tight leading-7 md:leading-6 text-2xl md:text-4xl font-normal text-slate-100;
 }
 
 .home-about {

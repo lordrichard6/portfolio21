@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import Mario from "../../assets/images/mario.gif";
+import Mario from "../../../assets/images/mario.gif";
 
 export default function MarioAnimationComponent() {
   return (

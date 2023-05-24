@@ -1,0 +1,12 @@
+.contact-social-links {
+    a {
+        filter: drop-shadow(0 0 40px #2d9da9);
+        @apply mx-1 transition ease-in-out delay-150;
+
+        &:hover {
+            filter: drop-shadow(0 0 80px #7634c1);
+            color: #34b3c1;
+            transform: translateY(-4px);
+        }
+    }
+}

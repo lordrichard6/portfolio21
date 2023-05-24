@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function EntryAnimation({ children, animation, style }) {
+export default function EntryAnimation({ children, animation, style, threshold }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.2,
+    threshold:  threshold,
   });
 
   useEffect(() => {

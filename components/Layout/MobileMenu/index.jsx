@@ -4,11 +4,11 @@ import {useRouter} from "next/router";
 import useTranslation from "next-translate/useTranslation";
 
 import { FaTimes } from "react-icons/fa";
-import { Colors } from "../../assets/variables";
-import LangChange from "./langChange";
-import { navItems } from "../../assets/data/navbar";
+import { Colors } from "../../../assets/variables";
+import LangChange from "../Navbar/langChange";
+import { navItems } from "../../../assets/data/navbar";
 
-export default function Sidebar({ isOpen, toggle }) {
+export default function MobileMenu({ isOpen, toggle }) {
   const router = useRouter();
   
   let { t } = useTranslation();

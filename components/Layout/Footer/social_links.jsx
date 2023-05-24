@@ -9,7 +9,7 @@ import {
   FaDiscord,
   FaWhatsapp,
 } from "react-icons/fa";
-import { Colors } from "../../assets/variables";
+// import { Colors } from "../../assets/variables";
 
 export default function SocialLinksComponent() {
 
@@ -48,7 +48,7 @@ const Icon = styled.a`
   transition: 0.5s ease-in-out;
 
   &:hover {
-    color: ${Colors.primary};
+    /* color: ${Colors.primary}; */
     animation: vibrate-1 0.3s linear infinite both;
   }
 

@@ -20,17 +20,19 @@ import { SocialMedia } from "../../../assets/data/social_media";
 
 export default function HomeAbout() {
   let { t } = useTranslation();
-  
+
+  const CtaButtonLink = "/about";
+
   return (
-    <section className="relative w-screen min-h-screen flex-centered flex-col">
-      <TextAnimationLetter className="title-primary-md flex justify-center" text={t("home:about_title")} />
-      <div className="w-4/5 2xl:w-3/5 flex-centered flex-col xl:flex-row my-6 lg:my-10">
-        <EntryAnimation
-          style="order-2 min-w-[290px] lg:w-[430px] xl:w-full mt-6"
-          animation={bringFromRight}
-        >
+    <section className="home-section-about section-y-default section-x-default flex-centered">
+      <TextAnimationLetter
+        className="title-primary-md flex-centered"
+        text={t("home:about_title")}
+      />
+      <div className="content-wrapper">
+        <EntryAnimation style="right-wrapper" animation={bringFromRight}>
           <TextComponent />
-          <ul className="home-social mt-10 mb-6">
+          <ul className="home-social">
             {SocialMedia.map((item, i) => {
               return (
                 <SocialInclineBlock
@@ -43,10 +45,7 @@ export default function HomeAbout() {
             })}
           </ul>
         </EntryAnimation>
-        <EntryAnimation
-          style="order-1 w-full flex-centered flex-col"
-          animation={bringFromLeft}
-        >
+        <EntryAnimation style="left-wrapper" animation={bringFromLeft}>
           <ImageComponent />
         </EntryAnimation>
       </div>
@@ -54,8 +53,7 @@ export default function HomeAbout() {
         <BtnPrimaryCTA
           color="_2"
           text={t("common:btn_more_about")}
-          link="/about"
-          styles="mt-4"
+          link={CtaButtonLink}
         />
       </EntryAnimation>
     </section>

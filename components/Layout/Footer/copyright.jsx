@@ -5,7 +5,7 @@ export default function CopyrightComponent() {
   let { t } = useTranslation();
 
   return (
-    <CopyrightWrapper>
+    <CopyrightWrapper className="section-x-default">
       <p>Copyright &copy; {new Date().getFullYear()} Paulo Lopes Reizinho.</p>
       <p>{t("common:allRights")}</p>
     </CopyrightWrapper>
@@ -13,7 +13,6 @@ export default function CopyrightComponent() {
 }
 
 const CopyrightWrapper = styled.div`
-  width: 80%;
   display: flex;
   justify-content: space-between;
   p {

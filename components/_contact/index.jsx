@@ -6,9 +6,10 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import ContactCard from './card'
+import ContactInfo from './contactInfo'
 import MapComponent from './map'
 import ContactForm from './contactForm'
-import CVButton from '../Footer/cvButton'
+import CVButton from '../Layout/Footer/cvButton'
 
 export default function ContactsPage() {
   let { t } = useTranslation();
@@ -45,12 +46,14 @@ export default function ContactsPage() {
       variants={bringUp}
       initial="hidden"
       animate={controls}
-      className="overflow-hidden flex flex-col justify-center items-center pt-36 pb-10"
+      className="section-x-default flex flex-col justify-center items-center pt-36 pb-10"
     >
-      <ContactCard />
+
+      {/* <ContactCard /> */}
+      <ContactInfo />
       <CVButton />
-      <MapComponent />
       <ContactForm />
+      <MapComponent />
     </Container>
   );
 }

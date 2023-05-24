@@ -13,10 +13,13 @@ import { bringUp } from "../../../utilities/framer-animations";
 export default function HomeProjects() {
   let { t } = useTranslation();
   const featuredProjects = projects.filter(project => project.featured === true);
+
+  const CtaButtonLink = "/projects"
   
+  // console.log(Translations(Homepage))
   return (
-    <div className="w-full">
-      <TextAnimationLetter className="title-primary-md flex justify-center" text={t("home:projects_title")} />
+    <div className="home-section-projects">
+      <TextAnimationLetter className="title-primary-md flex-centered" text={t("home:projects_title")} />
       <EntryAnimation style="flex-row flex-wrap flex-centered" animation={bringUp}>
         {featuredProjects.map((item, i) => {
           return (
@@ -37,7 +40,7 @@ export default function HomeProjects() {
         <BtnPrimaryCTA
           color="_3"
           text={t("common:btn_more_projects")}
-          link="/projects"
+          link={CtaButtonLink}
           styles="mt-4"
         />
       </EntryAnimation>
