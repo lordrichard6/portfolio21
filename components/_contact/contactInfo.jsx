@@ -45,8 +45,8 @@ export default function ContactInfo() {
         </a>
       </p>
       <p className="text-primary-lg font-light mb-2">
-        If you rather call or write me on whatsapp:{" "}
-        <a className="underline font-normal" href="tel: +41787989533">
+        If you rather call or write me on whatsapp:
+        <a className="underline underline-offset-2 font-normal whitespace-nowrap" href="tel: +41787989533">
           (+41) 078 798 95 33
         </a>
       </p>
