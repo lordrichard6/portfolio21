@@ -21,13 +21,17 @@ import { SocialMedia } from "../../../assets/data/social_media";
 export default function HomeAbout() {
   let { t } = useTranslation();
 
-  const CtaButtonLink = "/about";
+  const button = {
+    link: "/about",
+    text: "common:more_about"
+  }
+  const title = "home:about_title"
 
   return (
     <section className="home-section-about section-y-default section-x-default flex-centered">
       <TextAnimationLetter
         className="title-primary-md flex-centered"
-        text={t("home:about_title")}
+        text={t(title)}
       />
       <div className="content-wrapper">
         <EntryAnimation style="right-wrapper" animation={bringFromRight}>
@@ -52,8 +56,8 @@ export default function HomeAbout() {
       <EntryAnimation animation={bringUp}>
         <BtnPrimaryCTA
           color="_2"
-          text={t("common:btn_more_about")}
-          link={CtaButtonLink}
+          text={t(button.text)}
+          link={button.link}
         />
       </EntryAnimation>
     </section>

@@ -1,20 +1,19 @@
 {
     "home": "Home",
-    "projects": "Projekte",
-    "gallery": "Galerie",
     "about_me": "Über mich",
-    "skills": "Skills",
-    "contact": "Kontakt",
-    "goTop": "Nach oben",
+    "details": "Details",
+    "back": "zurück",
+    "visit": "Besuchen",
+    "more_about": "Mehr über mich",
+    "more_projects": "Weitere Projekte",
+    "learn_more": "Erfahre mehr",
+    "to_top": "Nach oben",
+    "projects": "Projekte",
     "about": "Über",
-    
-    "btn_more_about": "Mehr über mich",
-    "btn_more_projects": "weitere Projekte",
-    "info": "myInfo",
-    "sitemap": "Standortkarte",
+    "contact": "Kontakt",
     "thanks": "Danke für Ihren Besuch",
-    "adress": "Currently living in Zurich",
-    "sitePowered": "Diese Website wird betrieben von:",
-    "downloadCV": "CV herunterladen",
-    "allRights": "Alle Rechte vorbehalten"
+    "website_powered": "Dieses Website wird betrieben von:",
+    "rights_reserved": "Alle Rechte vorbehalten",
+    "submit": "Absenden",
+    "downloadCV": "Download my CV"
 }

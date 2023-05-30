@@ -69,3 +69,17 @@ export const bringFromRight = {
     x: 200,
   },
 };
+
+export const blured = {
+  visible: {
+    scale: 0,
+    opacity: 1,
+    filter: 'blur(0)',
+    transition: { delay: 0.4, duration: 1, type: "tween", bounce: 0.4 },
+  },
+  hidden: {
+    scale: 1,
+    opacity: 0,
+    filter: 'blur(10px)',
+  },
+};

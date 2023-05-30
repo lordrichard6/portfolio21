@@ -1,20 +1,19 @@
 {
     "home": "Home",
-    "projects": "Projects",
-    "gallery": "Gallery",
     "about_me": "About me",
-    "skills": "Skills",
-    "contact": "Contact",
-    "goTop": "Go to Top",
+    "details": "Details",
+    "back": "back",
+    "visit": "Visit",
+    "more_about": "More about me",
+    "more_projects": "More Projects",
+    "learn_more": "Learn more",
+    "to_top": "To Top",
+    "projects": "Projects",
     "about": "About",
-    
-    "btn_more_about": "More about me",
-    "btn_more_projects": "More Projects",
-    "info": "myInfo",
-    "sitemap": "siteMap",
+    "contact": "Contact",
     "thanks": "Thanks for visiting",
-    "adress": "Currently living in Zurich",
-    "sitePowered": "This website is powered by:",
-    "downloadCV": "Download my CV",
-    "allRights": "All rights reserved"
+    "website_powered": "This website is powered by:",
+    "rights_reserved": "All rights reserved",
+    "submit": "Submit",
+    "downloadCV": "Download my CV"
 }

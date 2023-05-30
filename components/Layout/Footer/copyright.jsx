@@ -7,7 +7,7 @@ export default function CopyrightComponent() {
   return (
     <CopyrightWrapper className="section-x-default">
       <p>Copyright &copy; {new Date().getFullYear()} Paulo Lopes Reizinho.</p>
-      <p>{t("common:allRights")}</p>
+      <p>{t("common:rights_reserved")}</p>
     </CopyrightWrapper>
   );
 }

@@ -12,7 +12,7 @@ export default function FooterSignature() {
   const signature = "/signature.svg";
   const imageAlt = "paulo lopes reizinho signature";
 
-  const t_tech = t("common:sitePowered")
+  const t_tech = t("common:website_powered")
 
   return (
     <EntryAnimation

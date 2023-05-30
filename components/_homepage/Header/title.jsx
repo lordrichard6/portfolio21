@@ -5,35 +5,42 @@ import {
   bringFromLeft,
   bringFromLeft02,
   bringFromLeft03,
-  bringUp,
 } from "../../../utilities/framer-animations";
 
 export default function HomepageTitleComponent() {
   let { t } = useTranslation();
 
+  const texts = {
+    title_01: "home:header_main_title_01",
+    title_02: "home:header_main_title_02",
+    title_03: "home:header_main_title_03",
+    sub_title_01: "home:header_sub_title_01",
+    sub_title_02: "home:header_sub_title_02",
+  };
+
   return (
     <div className="title-container">
       <div className="main-title">
         <EntryAnimation animation={bringFromLeft}>
-          <h1>{t("home:header_01")}</h1>
+          <h1>{t(texts.title_01)}</h1>
         </EntryAnimation>
         <EntryAnimation animation={bringFromLeft02}>
-          <h1>{t("home:header_02")}</h1>
+          <h1>{t(texts.title_02)}</h1>
         </EntryAnimation>
         <EntryAnimation animation={bringFromLeft03}>
-          <h1>{t("home:header_03")}</h1>
+          <h1>{t(texts.title_03)}</h1>
         </EntryAnimation>
       </div>
-      {/* <EntryAnimation style="w-fit mx-auto" animation={bringUp}> */}
-        <div className="sub-title">
-        <TextAnimationLetter className="text text-primary flex flex-wrap" text={t("home:header_slogan_01")} />
-        <TextAnimationLetter className="text text-primary flex flex-wrap" text={t("home:header_slogan_02")} />
-          {/* <div className="font-black">{t("home:header_slogan_01")}</div>
-          <div>
-            <span>{t("home:header_slogan_02")}</span>
-          </div> */}
-        </div>
-      {/* </EntryAnimation> */}
+      <div className="sub-title">
+        <TextAnimationLetter
+          className="text text-primary flex flex-wrap"
+          text={t(texts.sub_title_01)}
+        />
+        <TextAnimationLetter
+          className="text text-primary flex flex-wrap"
+          text={t(texts.sub_title_02)}
+        />
+      </div>
     </div>
   );
 }

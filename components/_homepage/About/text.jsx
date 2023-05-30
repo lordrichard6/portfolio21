@@ -5,23 +5,42 @@ import useTranslation from "next-translate/useTranslation";
 export default function TextComponent() {
   let { t } = useTranslation();
 
+  const texts = {
+    first_line_01: "home:about_first_line_01",
+    first_line_02: "home:about_first_line_02",
+    second_line: "home:about_second_line",
+    third_line: "home:about_third_line",
+    fourth_line_01: "home:about_forth_line_01",
+    fourth_line_02: "home:about_forth_line_02",
+    fifth_line_01: "home:about_fith_line_01",
+    fifth_line_02: "home:about_fith_line_02",
+    fifth_line_03: "home:about_fith_line_03",
+    fifth_line_04: "home:about_fith_line_04",
+    fifth_line_05: "home:about_fith_line_05",
+    name_01: "Paulo",
+    name_02: "Reizinho",
+    town: "Gavião",
+    country: "Portugal",
+    city_actual: "Zurich",
+  };
+
   return (
     <div className="home-about max-w-[290px] lg:max-w-full mx-auto">
       <h2>
-        {t("home:about_first_line")}
+        {t(texts.first_line_01)}
         <ReactTypingEffect
-          text={t("home:about_first_line02")}
+          text={t(texts.first_line_02)}
           speed={60}
           eraseDelay={600}
           className="ml-1"
         />
       </h2>
       <h3>
-        {t("home:about_second_line")}{" "}
+        {t(texts.second_line)}{" "}
         <strong>
-          Paulo
+          {texts.name_01}
           <ReactTypingEffect
-            text="Reizinho"
+            text={texts.name_02}
             speed={120}
             eraseDelay={700}
             className="ml-1"
@@ -29,10 +48,10 @@ export default function TextComponent() {
         </strong>
       </h3>
       <h3>
-        {t("home:about_third_line")} <strong>Gavião</strong>,
+        {t(texts.third_line)} <strong>{texts.town}</strong>,
         <strong>
           <ReactTypingEffect
-            text="Portugal"
+            text={texts.country}
             speed={120}
             eraseDelay={700}
             className="ml-1"
@@ -40,10 +59,10 @@ export default function TextComponent() {
         </strong>
       </h3>
       <h3>
-        {t("home:about_fith_line")} <strong>Zurich</strong>,
+        {t(texts.fourth_line_01)} <strong>{texts.city_actual}</strong>,
         <strong>
           <ReactTypingEffect
-            text={t("home:about_fith_line02")}
+            text={t(texts.fourth_line_02)}
             speed={120}
             eraseDelay={700}
             className="ml-1"
@@ -51,10 +70,10 @@ export default function TextComponent() {
         </strong>
       </h3>
       <h3>
-        I am a
+      {t(texts.fifth_line_01)}
         <strong>
           <ReactTypingEffect
-            text={["developer.", "designer", "UI & UX enthusiast"]}
+            text={t([texts.fifth_line_02, texts.fifth_line_03, texts.fifth_line_04, texts.fifth_line_05])}
             speed={120}
             eraseDelay={700}
             className="ml-1"

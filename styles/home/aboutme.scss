@@ -11,6 +11,10 @@
     .right-wrapper {
       @apply order-2 min-w-[290px] lg:w-[430px] xl:w-full mt-6;
 
+      .home-about {
+        @apply mb-8 lg:mb-16;
+      }
+
       .home-social {
         @apply mt-10 mb-6;
       }

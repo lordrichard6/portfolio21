@@ -14,7 +14,10 @@ export default function HomeProjects() {
   let { t } = useTranslation();
   const featuredProjects = projects.filter(project => project.featured === true);
 
-  const CtaButtonLink = "/projects"
+  const button = {
+    link: "/projects",
+    text: "common:more_projects"
+  }
   
   // console.log(Translations(Homepage))
   return (
@@ -39,8 +42,8 @@ export default function HomeProjects() {
       <EntryAnimation animation={bringUp}>
         <BtnPrimaryCTA
           color="_3"
-          text={t("common:btn_more_projects")}
-          link={CtaButtonLink}
+          text={t(button.text)}
+          link={button.link}
           styles="mt-4"
         />
       </EntryAnimation>

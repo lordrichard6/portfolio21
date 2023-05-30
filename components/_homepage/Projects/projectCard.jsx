@@ -1,5 +1,14 @@
+import useTranslation from "next-translate/useTranslation";
 
 export default function ProjectCard({imageSrc, cardHeading, cardText, cardId, icon, link}) {
+    let { t } = useTranslation();
+
+    const buttons = {
+        front: "common:details",
+        back: "common:back",
+        visit: "common:visit"
+    }
+
   return (
     <div className="cards-homepage">
             <input type="checkbox" id={cardId} className="more" aria-hidden="true" />
@@ -10,7 +19,7 @@ export default function ProjectCard({imageSrc, cardHeading, cardText, cardId, ic
                     <div className="inner">
                         <h2>{cardHeading}</h2>
                         <label for={cardId} className="button" aria-hidden="true">
-                            DETAILS
+                            {t(buttons.front)}
                         </label>
                     </div>
                 </div>
@@ -26,10 +35,10 @@ export default function ProjectCard({imageSrc, cardHeading, cardText, cardId, ic
                         </div>
                         <div className="name">{cardHeading}</div>
                         <label for={cardId} className="button return" aria-hidden="true">
-                            BACK
+                        {t(buttons.back)}
                         </label>
                         <a className="button return visit" href={link} target="_blank" rel="noopener noreferrer" aria-hidden="true">
-                            VISIT
+                        {t(buttons.visit)}
                         </a>
                     </div>
                 </div>
