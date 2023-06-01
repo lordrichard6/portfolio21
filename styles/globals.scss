@@ -71,7 +71,7 @@ figure {
 }
 
 .section-y-short {
-  @apply min-h-[80vh];
+  @apply min-h-screen lg:min-h-[80vh];
 }
 
 .glass-container {

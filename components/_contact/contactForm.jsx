@@ -83,7 +83,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="contact-section-form flex-centered flex-col section-y-short section-x-default">
+    <section className="contact-section-form flex-centered flex-col section-y-short">
         <TextAnimationLetter
           className="title-primary-md flex justify-center"
           text={t(title)}
