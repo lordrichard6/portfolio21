@@ -1,10 +1,12 @@
-import ContactsPage from "../components/_contact";
 import Layout from "../components/Layout";
+import { ContactInfo, ContactForm, MapComponent } from "../components/_contact";
 
 export default function ProjectsPage() {
   return (
     <Layout>
-      <ContactsPage />
+      <ContactInfo />
+      <ContactForm />
+      <MapComponent />
     </Layout>
   );
 }

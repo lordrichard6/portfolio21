@@ -2,7 +2,7 @@ import React from "react";
 
 import { ImagesComponent, EntryAnimation } from "../../_shared";
 import { bringUp } from "../../../utilities/framer-animations";
-import { TbArrowBigRightLinesFilled } from "react-icons/tb";
+// import { TbArrowBigRightLinesFilled } from "react-icons/tb";
 
 export default function SingleService({
   key,

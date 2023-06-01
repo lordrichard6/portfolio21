@@ -6,10 +6,9 @@
     ],
     "defaultLocale": "en",
     "pages": {
-        "*": ["common", "home", "projects"],
+        "*": ["common", "home"],
         "/projects": ["projects"],
         "/about": ["about"],
-        "/contact": ["contact"],
-        "/skills": ["skills"]
+        "/contact": ["contact"]
     }
 }
