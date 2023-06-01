@@ -57,9 +57,9 @@ export default function ContactInfo() {
   let { t } = useTranslation();
 
   return (
-    <section className="contact-section-info section-y-short section-x-default">
+    <section className="contact-section-info section-y-short section-x-default pt-24">
       <TextAnimationLetter
-        className="title-primary-md flex-centered"
+        className="title-primary-md flex-centered mb-10"
         text={t(texts.title)}
       />
       <p>{t(texts.line_01)}</p>

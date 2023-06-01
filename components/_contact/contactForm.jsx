@@ -88,7 +88,7 @@ export default function ContactForm() {
           className="title-primary-md flex justify-center"
           text={t(title)}
         />
-      <Container maxW="480px" mt={12} mb={12}>
+      <Container maxW="480px" mt={6} mb={12}>
         {error && (
           <Text className="text-center" color="red.300" my={4} fontSize="xl">
             {error}

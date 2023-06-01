@@ -6,7 +6,7 @@
   color: #fcfefe;
   text-align: center;
   text-shadow: 4px 4px 5px $color-dark;
-  @apply text-5xl md:text-[72px] mb-[60px];
+  @apply text-5xl md:text-[72px] mb-[35px] lg:mb-[60px];
 }
 
 .loading-screen {
