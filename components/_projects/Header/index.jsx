@@ -47,13 +47,14 @@ const SectionContainer = styled.header`
     border-left: 150vw solid rgba(255, 0, 0, 0);
     border-right: 150vw solid rgba(255, 0, 0, 0);
     border-bottom: 60vw solid #1d2124;
+    z-index: 10;
     
     @media screen and (min-width: 2000px) {
       bottom: -40vw;
     }
     
     @media screen and (max-width: 764px) {
-      bottom: -40vw;
+      bottom: -50vw;
       border-left: 150vw solid rgba(255, 0, 0, 0);
       border-right: 220vw solid rgba(255, 0, 0, 0);
       border-bottom: 140vw solid #1d2124;

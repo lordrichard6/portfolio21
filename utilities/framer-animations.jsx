@@ -72,15 +72,25 @@ export const bringFromRight = {
 
 export const blured = {
   visible: {
-    scale: 1,
     opacity: 1,
     filter: 'blur(0)',
     transition: { delay: 0.4, duration: 1, type: "spring", bounce: 0.4 },
   },
   hidden: {
-    scale: 0,
     opacity: 0,
     filter: 'blur(10px)',
+  },
+};
+
+export const scaled = {
+  visible: {
+    scale: 1,
+    opacity: 1,
+    transition: { delay: 1.4, duration: 1.8, type: "spring", bounce: 0.8 },
+  },
+  hidden: {
+    scale: 0,
+    opacity: 0,
   },
 };
 
