@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function ImagesComponent({ style, alt, src }) {
   return (
     <ImageContainer className={`${style}`}>
-      <Image className="image object-cover object-center drop-shadow-xl" fill src={src} alt={alt} />
+      <Image className="image object-cover object-center drop-shadow-xl overflow-visible" fill src={src} alt={alt} />
     </ImageContainer>
   );
 }

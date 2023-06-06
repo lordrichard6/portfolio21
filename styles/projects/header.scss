@@ -1,0 +1,15 @@
+.projects-section-header {
+  font-family: "Yanone Kaffeesatz";
+  h1:first-of-type {
+    transform: translate(-6px, 134px);
+
+    @media(max-width: 768px) {
+      transform: translate(-3px, 0px);
+    }
+  }
+  h1:last-of-type {
+    @media(max-width: 768px) {
+      transform: translate(0px, -67px);
+    }
+  }
+}
