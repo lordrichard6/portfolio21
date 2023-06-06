@@ -31,7 +31,7 @@ export default function HomeProjects() {
             imageSrc={item.image}
             imageAlt={item.alt}
             cardHeading={item.title}
-            cardText={t(item.shortText)}
+            cardText={item.shortText}
             link={item.link}
             cardId={item.cardId}
             icon={item.icon}

@@ -108,6 +108,9 @@ $accent-color: #0f2027;
         width: 1px;
         background-color: #ccc;
       }
+      h3 {
+        @apply text-3xl;
+      }
       span {
         font-size: 2em;
         font-weight: 700;
@@ -131,6 +134,7 @@ $accent-color: #0f2027;
       overflow: auto;
       color: $accent-color;
       padding-right: 10px;
+      @apply text-justify;
     }
 
     .name {

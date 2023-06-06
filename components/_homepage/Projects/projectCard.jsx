@@ -26,12 +26,13 @@ export default function ProjectCard({imageSrc, cardHeading, cardText, cardId, ic
                 <div className="back">
                     <div className="inner">
                         <div className="info">
+                            <h3>Techs: </h3>
                             <div className="icon">
                                 {icon}
                             </div>
                         </div>
                         <div className="description">
-                            <p>{cardText}</p>
+                            <p>{t(cardText)}</p>
                         </div>
                         <div className="name">{cardHeading}</div>
                         <label for={cardId} className="button return" aria-hidden="true">
