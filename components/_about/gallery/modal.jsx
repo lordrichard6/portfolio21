@@ -5,6 +5,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import { ImCross } from "react-icons/im";
+import { ImagesComponent } from "../../_shared";
 
 export default function Modal({ clickedImg, setClickedImg }) {
   const handleClick = () => {
@@ -39,10 +40,12 @@ export default function Modal({ clickedImg, setClickedImg }) {
 
   const bringCross = {
     visible: {
+      opacity: 1,
       x: 0,
       transition: { delay: 2.5, duration: 3.1, type: "spring", bounce: 0.4 },
     },
     hidden: {
+      opacity: 0,
       x: -1500,
     },
   };
@@ -67,6 +70,7 @@ export default function Modal({ clickedImg, setClickedImg }) {
       variants={bringUp}
       initial="hidden"
       animate={controls}
+      onClick={handleClick}
     >
       <div className="picture-wrapper">
         <motion.div
@@ -83,7 +87,7 @@ export default function Modal({ clickedImg, setClickedImg }) {
           initial="hidden"
           animate={controls}
         >
-          <Image className="mainImage" src={clickedImg} alt="" quality="100" />
+          <ImagesComponent src={clickedImg} alt="me and my family" style="mainImage w-full h-full flex-centered" />
         </motion.figure>
       </div>
     </Container>

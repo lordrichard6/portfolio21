@@ -7,7 +7,7 @@ export default function PicturesComponent({ className, imgSrc, alt, onClick }) {
     <>
       <EntryAnimation style={className} animation={bringUp}>
         <div className="inner-shape" onClick={onClick}>
-          <ImagesComponent src={imgSrc} alt={alt} style="" />
+          <ImagesComponent src={imgSrc} alt={alt} style="w-full h-full flex-centered" />
         </div>
       </EntryAnimation>
     </>

@@ -40,7 +40,11 @@
 
         .text {
           text-shadow: 0 0 80px #7634c1, 0 0 30px #8a4dc7;
+          line-height: 2!important;
           @apply text-slate-100 lg:text-slate-900 uppercase text-2xl xl:text-5xl text-center font-bold flex;
+        }
+        div:first-of-type {
+          @apply pb-4;
         }
         div:last-of-type {
           @apply pt-9 xl:pt-4 border-l-2 xl:border-l-4 border-slate-100;

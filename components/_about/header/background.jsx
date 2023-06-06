@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-import header from "../../../assets/images/gallery/gallery.jpg";
-import Sand from "../../../assets/images/gallery/gallery_sand.png";
+const images = {
+  header: "/gallery/gallery.jpg",
+  sand: "/gallery/gallery_sand.png"
+}
 
 export default function BackgroundComponent() {
 
@@ -10,10 +12,10 @@ export default function BackgroundComponent() {
     <Container>
       <div className="gradient"></div>
       <div className="sky">
-        <Image className="object-cover" src={header} alt="sky" cover fill />
+        <Image className="object-cover" src={images.header} alt="sky" cover fill />
       </div>
       <div className="sand">
-        <Image className="object-cover" src={Sand} alt="sand" cover fill />
+        <Image className="object-cover" src={images.sand} alt="sand" cover fill />
       </div>
     </Container>
   );
