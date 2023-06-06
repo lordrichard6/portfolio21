@@ -8,7 +8,7 @@ export default function BtnPrimaryCTA({color, text, link, animation, styles}) {
 
   return (
         <Button className={`active:translate-y-1 hover:-translate-y-1 ${styles}`}>
-          <div className={`button py-8 px-10 ${color} ${animation}`}>
+          <div className={`button py-4 md:py-8 px-6 md:px-10 ${color} ${animation}`}>
             <Link href={link} className="text-xl lg:text-2xl font-bold flex justify-center items-center">{text} <FaArrowCircleRight className="icon ml-2 transition duration-300 ease-in-out" /></Link>
             <div className='back' ></div>
           </div>

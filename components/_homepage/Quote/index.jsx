@@ -1,7 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 
-import { blured } from "../../../utilities/framer-animations";
-import { TextAnimationWord, EntryAnimation, ImagesComponent } from "../../_shared";
+import { blured, textFromLeft } from "../../../utilities/framer-animations";
+import { EntryAnimation, ImagesComponent } from "../../_shared";
 
 export default function HomeQuote() {
   let { t } = useTranslation();
@@ -10,7 +10,11 @@ export default function HomeQuote() {
     image: "/home/jordan_b&w.png",
     alt: "jordan peterson black and white photoshoped with dipping effect"
   }
-  const quote = "home:quote_home";
+  const quote = {
+    quote: "home:quote_home",
+    author: "Jordan Peterson"
+  }
+    ;
 
   return (
     <section className="home-quote">
@@ -22,10 +26,14 @@ export default function HomeQuote() {
           src={main_image.image}
         />
       </EntryAnimation>
-      <TextAnimationWord
+      <EntryAnimation animation={textFromLeft} style="text-quote section-x-default text-primary flex flex-wrap">
+        <h1 className="font-light text-center">{t(quote.quote)}</h1>
+        <h1 className="font-bold">{quote.author}</h1>
+      </EntryAnimation>
+      {/* <TextAnimationWord
         className="text-quote section-x-default text-primary flex flex-wrap"
         text={t(quote)}
-      />
+      /> */}
     </section>
   );
 }

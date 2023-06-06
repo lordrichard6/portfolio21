@@ -2,6 +2,9 @@ import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import useTranslation from "next-translate/useTranslation";
 
+import { EntryAnimation } from "../../_shared";
+import { textFromRight } from "../../../utilities/framer-animations";
+
 export default function TextComponent() {
   let { t } = useTranslation();
 
@@ -26,60 +29,70 @@ export default function TextComponent() {
 
   return (
     <div className="home-about max-w-[290px] lg:max-w-full mx-auto">
-      <h2>
-        {t(texts.first_line_01)}
-        <ReactTypingEffect
-          text={t(texts.first_line_02)}
-          speed={60}
-          eraseDelay={600}
-          className="ml-1"
-        />
-      </h2>
-      <h3>
-        {t(texts.second_line)}{" "}
-        <strong>
-          {texts.name_01}
+      <EntryAnimation animation={textFromRight} delayTime={2}>
+        <h2>
+          {t(texts.first_line_01)}
           <ReactTypingEffect
-            text={texts.name_02}
-            speed={120}
-            eraseDelay={700}
+            text={t(texts.first_line_02)}
+            speed={60}
+            eraseDelay={600}
             className="ml-1"
           />
-        </strong>
-      </h3>
-      <h3>
-        {t(texts.third_line)} <strong>{texts.town}</strong>,
-        <strong>
-          <ReactTypingEffect
-            text={texts.country}
-            speed={120}
-            eraseDelay={700}
-            className="ml-1"
-          />
-        </strong>
-      </h3>
-      <h3>
-        {t(texts.fourth_line_01)} <strong>{texts.city_actual}</strong>,
-        <strong>
-          <ReactTypingEffect
-            text={t(texts.fourth_line_02)}
-            speed={120}
-            eraseDelay={700}
-            className="ml-1"
-          />
-        </strong>
-      </h3>
-      <h3>
-      {t(texts.fifth_line_01)}
-        <strong>
-          <ReactTypingEffect
-            text={t([texts.fifth_line_02, texts.fifth_line_03, texts.fifth_line_04, texts.fifth_line_05])}
-            speed={120}
-            eraseDelay={700}
-            className="ml-1"
-          />
-        </strong>
-      </h3>
+        </h2>
+      </EntryAnimation>
+      <EntryAnimation animation={textFromRight}>
+        <h3>
+          {t(texts.second_line)}{" "}
+          <strong>
+            {texts.name_01}
+            <ReactTypingEffect
+              text={texts.name_02}
+              speed={120}
+              eraseDelay={700}
+              className="ml-1"
+            />
+          </strong>
+        </h3>
+      </EntryAnimation>
+      <EntryAnimation animation={textFromRight}>
+        <h3>
+          {t(texts.third_line)} <strong>{texts.town}</strong>,
+          <strong>
+            <ReactTypingEffect
+              text={texts.country}
+              speed={80}
+              eraseDelay={700}
+              className="ml-1"
+            />
+          </strong>
+        </h3>
+      </EntryAnimation>
+      <EntryAnimation animation={textFromRight}>
+        <h3>
+          {t(texts.fourth_line_01)} <strong>{texts.city_actual}</strong>,
+          <strong>
+            <ReactTypingEffect
+              text={t(texts.fourth_line_02)}
+              speed={70}
+              eraseDelay={700}
+              className="ml-1"
+            />
+          </strong>
+        </h3>
+      </EntryAnimation>
+      <EntryAnimation animation={textFromRight}>
+        <h3>
+          {t(texts.fifth_line_01)}
+          <strong>
+            <ReactTypingEffect
+              text={t([texts.fifth_line_02, texts.fifth_line_03, texts.fifth_line_04, texts.fifth_line_05])}
+              speed={100}
+              eraseDelay={300}
+              className="ml-1"
+            />
+          </strong>
+        </h3>
+      </EntryAnimation>
     </div>
   );
 }

@@ -3,8 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 
 import {
   bringFromLeft,
-  bringFromRight,
-  bringUp,
+  bringUp
 } from "../../../utilities/framer-animations";
 
 import TextComponent from "./text";
@@ -34,21 +33,23 @@ export default function HomeAbout() {
         text={t(title)}
       />
       <div className="content-wrapper">
-        <EntryAnimation style="right-wrapper" animation={bringFromRight}>
+        <div className="right-wrapper">
           <TextComponent />
-          <ul className="home-social">
-            {SocialMedia.map((item, i) => {
-              return (
-                <SocialInclineBlock
-                  key={i}
-                  icon={item.icon}
-                  iconName={item.iconName}
-                  link={item.link}
-                />
-              );
-            })}
-          </ul>
-        </EntryAnimation>
+          <EntryAnimation animation={bringUp}>
+            <ul className="home-social">
+              {SocialMedia.map((item, i) => {
+                return (
+                  <SocialInclineBlock
+                    key={i}
+                    icon={item.icon}
+                    iconName={item.iconName}
+                    link={item.link}
+                  />
+                );
+              })}
+            </ul>
+          </EntryAnimation>
+        </div>
         <EntryAnimation style="left-wrapper" animation={bringFromLeft}>
           <ImageComponent />
         </EntryAnimation>

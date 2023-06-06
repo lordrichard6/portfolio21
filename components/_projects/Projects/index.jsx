@@ -26,7 +26,7 @@ export default function ProjectsSection() {
 
   return (
     <SectionContainer>
-      <BackgroundGradient></BackgroundGradient>
+      {/* <BackgroundGradient></BackgroundGradient> */}
       <EntryAnimation style="w-full flex justify-center" animation={bringUp}>
         <ProjectsIntro pageIntro={t("projects:projects_intro")} />
       </EntryAnimation>
