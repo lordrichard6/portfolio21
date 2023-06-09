@@ -4,39 +4,53 @@
     // @apply w-1/3;
     @apply min-w-[100px] w-[100px];
 
-    &:hover {
-      @apply min-w-[410px] w-[410px];
+    .arrow {
+      @apply cursor-pointer z-10;
 
-      .left-image {
-        @apply left-1/2 -translate-x-[50%];
-      }
-      .arrow {
-        transform: rotateY(180deg)
-      }
-      .left-info {
-        @apply opacity-100 left-0;
-      }
     }
 
     .left-image {
       transition: .8s .2s;
       @apply left-0;
     }
+
     .arrow {
       transition: .8s .2s;
     }
+
     .left-info {
       transition: .8s .2s;
       @apply opacity-0 w-[410px];
     }
+
+    // LEFT TOGGLED
+    &.toggled {
+      @apply min-w-[410px] w-[410px];
+
+      .left-image {
+        @apply left-1/2 -translate-x-[50%];
+      }
+
+      .arrow {
+        svg {
+          transform: rotateY(180deg);
+        }
+      }
+      .left-info {
+        @apply opacity-100 left-0;
+      }
+    }
   }
   .right {
+
     .position {
       transition: .8s .2s;
-      @apply text-slate-100 bg-teal-900 h-[56px] flex items-start my-4 mr-10 py-2 px-2 rounded-xl overflow-hidden;
+      transition: max-height 1s ease-in-out;
+      max-height: 56px;
+      @apply text-slate-100 bg-teal-900 h-full flex items-start my-4 mr-10 py-2 px-2 rounded-xl overflow-hidden;
 
-      &:hover {
-        @apply h-auto;
+      &.toggled {
+        max-height: 600px;
 
         .arrow {
           transform: rotateZ(90deg);
@@ -45,7 +59,8 @@
 
       .arrow {
         transition: .8s .2s;
-        @apply text-4xl;
+        @apply text-4xl cursor-pointer;
+
       }
 
       h2 {
@@ -61,12 +76,12 @@
         @apply text-teal-900 text-lg whitespace-pre-line;
       }
     }
-    .recomendations {
-      h2, svg {
-        @apply text-4xl font-semibold;
+    .recomendations, .certifications {
+      button {
+        all: initial;
+        font-family: "Dosis";
+        @apply bg-teal-900 text-slate-100 px-4 py-2 mx-4 rounded-md cursor-pointer;
       }
-    }
-    .certifications {
       h2, svg {
         @apply text-4xl font-semibold;
       }

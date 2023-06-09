@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 import { HomeHeaderSection } from "../components/_homepage";
 import { ImagesComponent } from "../components/_shared";
 import { AiOutlineHtml5 } from "react-icons/ai";
@@ -107,9 +109,24 @@ const feinheit = [
 ];
 
 export default function CV_2023() {
+  const [isOpen, setIsOpen] = useState({
+    leftColumn:false,
+    exp1: false,
+    exp2: false,
+    exp3: false,
+    exp4: false,
+  });
+
+  const toggle = (element) => {
+    setIsOpen((prevState) => ({
+      ...prevState,
+      [element]: !prevState[element],
+    }));
+  };
+
   return (
     <div className="cv-page min-h-screen w-screen flex">
-      <div className="left relative z-10 h-screen bg-sky-600 flex flex-col items-center pt-10">
+      <div className={`left ${isOpen.leftColumn ? "toggled" : ""} relative z-10 h-screen bg-sky-600 flex flex-col items-center pt-10`}>
         <div className="left-image absolute">
           <ImagesComponent
             style="w-80 h-80 hover:cursor-pointer border-8 border-sky-600 rounded-full"
@@ -117,7 +134,7 @@ export default function CV_2023() {
             src="/home_me_01.png"
           />
         </div>
-        <div className="arrow absolute top-[360px] -right-10 text-slate-100 text-6xl border-4 border-sky-600 bg-sky-600 rounded-full ">
+        <div onClick={() => toggle('leftColumn')} className="arrow absolute top-[360px] -right-10 text-slate-100 text-6xl border-4 border-sky-600 bg-sky-600 rounded-full">
           <FaRegArrowAltCircleRight />
         </div>
         <div className="left-info absolute -left-20 text-slate-100 mt-80 w-full">
@@ -162,6 +179,11 @@ export default function CV_2023() {
               })}
             </div>
           </div>
+          <div className="w-full flex justify-end">
+          <button className="bg-slate-100 text-sky-600 px-4 py-2 mx-4 rounded-md cursor-pointer w-fit ml-auto">
+              <a href="https://drive.google.com/file/d/1RM1nWl7wQAJoGlOgxfNvSZFOIGsTy0oM/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="text-2xl font-semibold">Download in PDF</a>
+            </button>
+          </div>
         </div>
       </div>
       <div className="right absolute w-full min-h-screen bg-slate-100 pl-[500px] pt-20">
@@ -193,8 +215,8 @@ export default function CV_2023() {
             Profissional Experience
           </h3>
           <hr className="h-1 bg-teal-900" />
-          <div className="position">
-            <FaArrowCircleRight className="arrow mt-1" />
+          <div className={`position ${isOpen.exp1 ? "toggled" : ""}`}>
+            <FaArrowCircleRight onClick={() => toggle('exp1')} className="arrow mt-1" />
             <div className="ml-2">
             <div className="flex">
                 <h2 className="w-[300px]">Aug 2022 - Now!</h2>
@@ -230,8 +252,8 @@ export default function CV_2023() {
             </div>
           </div>
 
-          <div className="position">
-            <FaArrowCircleRight className="arrow mt-1" />
+          <div className={`position ${isOpen.exp2 ? "toggled" : ""}`}>
+            <FaArrowCircleRight onClick={() => toggle('exp2')} className="arrow mt-1" />
             <div className="ml-2">
             <div className="flex">
                 <h2 className="w-[300px]">Feb 2022 - Jul 2022</h2>
@@ -271,14 +293,14 @@ export default function CV_2023() {
             </div>
           </div>
 
-          <div className="position">
-            <FaArrowCircleRight className="arrow mt-1" />
+          <div className={`position ${isOpen.exp3 ? "toggled" : ""}`}>
+            <FaArrowCircleRight onClick={() => toggle('exp3')} className="arrow mt-1" />
             <div className="ml-2">
               <div className="flex">
                 <h2 className="w-[300px]">Apr 2020 - Dez 2021</h2>
                 <h2>| Helping Hand</h2>
               </div>
-              <div className="bg-slate-100 rounded-lg mr-4 mt-2 px-2 py-3">
+              <div className="info bg-slate-100 rounded-lg mr-4 mt-2 px-2 py-3">
                 <h3>Front end developer, Mover, Driver, Assembler</h3>
                 <h4>
                   Reference: Michael Silbermann - CEO at Helping Hand |
@@ -308,8 +330,8 @@ export default function CV_2023() {
             </div>
           </div>
 
-          <div className="position">
-            <FaArrowCircleRight className="arrow mt-1" />
+          <div className={`position ${isOpen.exp4 ? "toggled" : ""}`}>
+            <FaArrowCircleRight onClick={() => toggle('exp4')} className="arrow mt-1" />
             <div className="ml-2">
               <div className="flex">
                 <h2 className="w-[300px]">Aug 2019 - Feb 2020</h2>
@@ -359,28 +381,28 @@ export default function CV_2023() {
           </h3>
           <hr className="h-1 bg-teal-900" />
           <div className="text-teal-900 flex items-center mt-2">
-            <FaCertificate className="cursor-pointer" />
-            <ImagesComponent
+            <FaCertificate />
+            {/* <ImagesComponent
               style="w-[140px] h-[50px] ml-3"
               alt="feinheit"
               src="/pickwings.png"
-            />
-            <div className="bg-teal-900 text-slate-100 px-4 py-2 mx-4 rounded-md">
-              <h3>Check it out</h3>
-            </div>
+            /> */}
+            <button>
+              <a href="https://drive.google.com/file/d/1jchf2W1kNPwqgja7_O8FvrL2a5dR8wfJ/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Check it out</a>
+            </button>
             <h2>Pickwings</h2>
             <p>(DE)</p>
           </div>
           <div className="text-teal-900 flex items-center mt-2">
-            <FaCertificate className="cursor-pointer" />
-            <ImagesComponent
+            <FaCertificate />
+            {/* <ImagesComponent
               style="w-[140px] h-[50px] ml-3"
               alt="feinheit"
               src="/feinheit.png"
-            />
-            <div className="bg-teal-900 text-slate-100 px-4 py-2 mx-4 rounded-md">
-              <h3>Check it out</h3>
-            </div>
+            /> */}
+            <button>
+              <a href="https://drive.google.com/file/d/1nnekEjPDoVEyVdZSn_P-4Fu598DrRRhf/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Check it out</a>
+            </button>
             <h2>Feinheit</h2>
             <p>(DE)</p>
           </div>
@@ -392,40 +414,40 @@ export default function CV_2023() {
           </h3>
           <hr className="h-1 bg-teal-900" />
           <div className="text-teal-900 flex items-center mt-2">
-            <TbCertificate className="cursor-pointer" />
-            <ImagesComponent
+            <TbCertificate />
+            {/* <ImagesComponent
               style="w-[140px] h-[50px] ml-3"
               alt="iefp"
               src="/iefp.png"
-            />
-            <div className="bg-teal-900 text-slate-100 px-4 py-2 mx-4 rounded-md">
-              <h3>Check it out</h3>
-            </div>
+            /> */}
+            <button>
+              <a href="https://drive.google.com/file/d/1GUD5DhtC0MK9tD-ivo-ZVl3N4ub3oqoL/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Check it out</a>
+            </button>
             <h2>Managment and Administration</h2>
             <p>(DE)</p>
           </div>
           <div className="text-teal-900 flex items-center mt-2">
-            <TbCertificate className="cursor-pointer" />
-            <ImagesComponent
+            <TbCertificate />
+            {/* <ImagesComponent
               style="w-[140px] h-[50px] ml-3"
               alt="udemy"
               src="/udemy.png"
-            />
-            <div className="bg-teal-900 text-slate-100 px-4 py-2 mx-4 rounded-md">
-              <h3>Check it out</h3>
-            </div>
+            /> */}
+            <button>
+              <a href="https://drive.google.com/file/d/1dN3f5oHThMCSrBg3Gf9tpr3-GOjoNm9h/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Check it out</a>
+            </button>
             <h2>Complete Web Developer: Zero to Mastery</h2>
           </div>
           <div className="text-teal-900 flex items-center mt-2">
-            <TbCertificate className="cursor-pointer" />
-            <ImagesComponent
+            <TbCertificate />
+            {/* <ImagesComponent
               style="w-[140px] h-[50px] ml-3"
               alt="udemy"
               src="/udemy.png"
-            />
-            <div className="bg-teal-900 text-slate-100 px-4 py-2 mx-4 rounded-md">
-              <h3>Check it out</h3>
-            </div>
+            /> */}
+            <button>
+              <a href="https://drive.google.com/file/d/1h9tkGfllT_CmWCn12ERj8sQfSxc6RRXL/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Check it out</a>
+            </button>
             <h2>Modern React with Redux</h2>
           </div>
         </div>
