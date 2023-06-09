@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import ProjectsHeaderTitle from "./title";
 import ProjectsHeaderImage from "./image";
-import { StarsComponent } from "../../_homepage/Header/stars";
+// import { StarsComponent } from "../../_homepage/Header/stars";
 
 export default function ProjectsHeader() {
   const [offsetY, setOffsetY] = useState(0);
@@ -17,12 +17,9 @@ export default function ProjectsHeader() {
 
   return (
     <SectionContainer className="projects-section-header relative flex-centered" id="top">
-
       <ProjectsHeaderImage />
       <ProjectsHeaderTitle />
       <div className="tri" />
-
-      {/* <StarsComponent /> */}
     </SectionContainer>
   );
 }
