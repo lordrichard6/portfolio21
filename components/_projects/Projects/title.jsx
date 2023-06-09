@@ -6,7 +6,7 @@ function StringMapper({ string }) {
 
   const charComponents = chars.map((char, index) => {
     return (
-      <div key={index} className="wrapper text-4xl md:text-7xl lg:text-8xl">
+      <div key={index} className="letter-wrapper text-4xl md:text-7xl lg:text-8xl">
         <div id="L" className="letter">
           {char}
         </div>
@@ -59,7 +59,7 @@ const Container = styled.div`
     /* transform: translateX(-50%); */
     user-select: none;
 
-    .wrapper {
+    .letter-wrapper {
       padding-top: 20px;
       .letter {
         transition: ease-out 1s;

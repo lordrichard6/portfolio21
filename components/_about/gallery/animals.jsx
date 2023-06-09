@@ -1,3 +1,4 @@
+// DELETE after reuse the FIN
 import Image from "next/image";
 import React, { useEffect } from "react";
 import styled from "styled-components";

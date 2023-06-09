@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+$color-dark: #051719;
+$background-primary: linear-gradient(to right, #20303c, #478995);
+
 html,
 body {
   // scroll-behavior: smooth;
@@ -9,19 +12,19 @@ body {
   margin: 0;
   overflow-x: hidden;
 
-    ::-webkit-scrollbar {
-      width: 5px;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #478995;
+    border-radius: 16px;
+    &:hover {
+      background: #b2d6bc;
     }
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #478995;
-      border-radius: 16px;
-      &:hover {
-        background: #b2d6bc;
-      }
-    }
+  }
 }
 
 a {
@@ -37,6 +40,16 @@ figure {
   margin: 0;
 }
 
+.layout {
+  margin: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $background-primary;
+  /* overflow-x: hidden; */
+}
+
 .scrolled {
   position: fixed !important;
   top: 0;
@@ -45,6 +58,25 @@ figure {
   margin-top: 0 !important;
 }
 
-.custom-center {
+.flex-centered {
   @apply flex justify-center items-center;
+}
+
+.section-x-default {
+  @apply w-4/5 lg:w-2/3 2xl:w-6/12;
+}
+
+.section-y-default {
+  @apply min-h-screen mb-40;
+}
+
+.section-y-short {
+  @apply min-h-screen lg:min-h-[80vh];
+}
+
+.glass-container {
+  background: rgba(148, 148, 148, 0.25);
+  backdrop-filter: blur(10.4px);
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
 }

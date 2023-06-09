@@ -1,34 +1,40 @@
 import useTranslation from "next-translate/useTranslation";
 
 import {
-  TitleRetro,
+  TextAnimationLetter,
   BtnPrimaryCTA,
-  CardPrimary,
   EntryAnimation,
 } from "../../_shared";
 import { projects } from "../../../assets/data/projects";
+import ProjectCard from './projectCard'
 
 import { bringUp } from "../../../utilities/framer-animations";
 
-export default function ProjectsSection() {
+export default function HomeProjects() {
   let { t } = useTranslation();
   const featuredProjects = projects.filter(project => project.featured === true);
 
+  const button = {
+    link: "/projects",
+    text: "common:more_projects"
+  }
+  
+  // console.log(Translations(Homepage))
   return (
-    <div>
-      <EntryAnimation animation={bringUp}>
-        <TitleRetro title={t("home:projects_title")} />
-      </EntryAnimation>
-      <EntryAnimation style="flex-row flex-wrap custom-center" animation={bringUp}>
+    <div className="home-section-projects">
+      <TextAnimationLetter className="title-primary-md flex-centered" text={t("home:projects_title")} />
+      <EntryAnimation style="flex-row flex-wrap flex-centered" animation={bringUp}>
         {featuredProjects.map((item, i) => {
           return (
-            <CardPrimary
+            <ProjectCard
             key={i}
             imageSrc={item.image}
             imageAlt={item.alt}
             cardHeading={item.title}
-            cardText={t(item.shortText)}
+            cardText={item.shortText}
             link={item.link}
+            cardId={item.cardId}
+            icon={item.icon}
           />
           )
         })}
@@ -36,8 +42,8 @@ export default function ProjectsSection() {
       <EntryAnimation animation={bringUp}>
         <BtnPrimaryCTA
           color="_3"
-          text={t("common:btn_more_projects")}
-          link="/projects"
+          text={t(button.text)}
+          link={button.link}
           styles="mt-4"
         />
       </EntryAnimation>

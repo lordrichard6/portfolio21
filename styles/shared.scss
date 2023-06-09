@@ -1,0 +1,106 @@
+.title-primary-md {
+  font-family: "Yanone Kaffeesatz";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  color: #fcfefe;
+  text-align: center;
+  text-shadow: 4px 4px 5px $color-dark;
+  @apply text-5xl md:text-[72px] mb-[35px] lg:mb-[60px];
+}
+
+.loading-screen {
+  @apply min-h-screen flex-centered flex-col bg-slate-900 text-center;
+
+  .word {
+    bottom: 0;
+    color: #fff;
+    font-size: 2.5em;
+    height: 2.5em;
+    left: 0;
+    line-height: 2.5em;
+    margin: 0 auto;
+    right: 0;
+    position: absolute;
+    text-shadow: 0 0 10px rgba(50, 255, 50, 0.5), 0 0 5px rgba(100, 255, 100, 0.5);
+    top: 50%;
+    transform: translateY(-210%);
+  }
+  
+  .word span {
+    // display: inline-block;
+    transform: translateX(100%) scale(0.9);
+    transition: transform 500ms;
+  }
+  
+  .word .done {
+    color: #6f6;
+    transform: translateX(0) scale(1);
+  }
+  
+  .overlay {
+    background-image: linear-gradient(transparent 0%, rgba(10, 16, 10, 0.5) 50%);
+    background-size: 1000px 2px;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+  }
+
+  .clock {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    // background: #333;
+    margin: 10px;
+    border: 5px solid #fff;
+    position: relative;
+    box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.3), inset 0 10px 0 0 rgba(0, 0, 0, 0.3),
+      inset 0 0 0 134px #c33;
+  }
+  
+  .clock:after {
+    content: "";
+    width: 5px;
+    height: 160px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: inset 0px 2px 0 0 #fff, inset 0px 82px 0 0 #333;
+    animation: clock 0.5s linear infinite;
+  }
+  
+  .clock:before {
+    content: "";
+    width: 5px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: inset 0px 2px 0 0 #fff, inset 0px 76px 0 0 #333;
+    animation: clockb 6s linear infinite;
+  }
+  
+  @keyframes clock {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes clockb {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

@@ -15,7 +15,7 @@ import { EntryAnimation } from "../../_shared";
 import TitleRefexion from "./title";
 import ProjectComponent from "./project";
 import ProjectsIntro from "./text";
-import ProjectsExplanation from "./projectExplanation";
+// import ProjectsExplanation from "./projectExplanation";
 
 export default function ProjectsSection() {
   const sortedProjectsByDate = [...projects]
@@ -26,7 +26,7 @@ export default function ProjectsSection() {
 
   return (
     <SectionContainer>
-      <BackgroundGradient></BackgroundGradient>
+      {/* <BackgroundGradient></BackgroundGradient> */}
       <EntryAnimation style="w-full flex justify-center" animation={bringUp}>
         <ProjectsIntro pageIntro={t("projects:projects_intro")} />
       </EntryAnimation>

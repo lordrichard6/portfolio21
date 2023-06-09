@@ -1,310 +1,120 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
 
+import Modal from "./modal";
+import PicturesComponent from "./pictures";
+import { TextAnimationLetter } from "../../_shared";
 
-import Modal from './modal'
-import { gallery, animals } from "../../../assets/data/gallery";
-import GalleryAnimals from './animals'
-import PicturesComponent from './pictures'
+export const gallery = [
+  {
+    imgSrc: "/gallery/my_fotos_01.jpg",
+    alt: "me and my nephew",
+    className: "shape shape__01",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_02.jpg",
+    alt: "me, my brother and my nephew",
+    className: "shape shape__02",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_03.jpg",
+    alt: "me with some friends in zurich lake",
+    className: "shape shape__03",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_04.jpg",
+    alt: "me with the left bastards in a group",
+    className: "shape shape__04",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_05.jpg",
+    alt: "me flexing",
+    className: "shape shape__05",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_06.jpg",
+    alt: "me, my mother and my daughter",
+    className: "shape shape__06",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_07.jpg",
+    alt: "me with my family",
+    className: "shape shape__07",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_08.jpg",
+    alt: "me with my daughter",
+    className: "shape shape__08",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_09.jpg",
+    alt: "me with some friends",
+    className: "shape shape__09",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_10.jpg",
+    alt: "me with my family",
+    className: "shape shape__10",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_11.jpg",
+    alt: "me with my family",
+    className: "shape shape__11",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_12.jpg",
+    alt: "me with my family",
+    className: "shape shape__12",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_13.jpg",
+    alt: "me with my nephew",
+    className: "shape shape__13",
+  },
+  {
+    imgSrc: "/gallery/my_fotos_14.jpg",
+    alt: "me in the gym",
+    className: "shape shape__14",
+  },
+  // {
+  //   imgSrc: gal_15,
+  //   alt: "paulo reizinho pictures",
+  //   className: "shape shape__15",
+  // },
+  // {
+  //   imgSrc: gal_16,
+  //   alt: "paulo reizinho pictures",
+  //   className: "shape shape__16",
+  // },
+];
 
-
-export default function GalleryItems() {
+export default function AboutGallery() {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
 
   const handelClick = (item, index) => {
     setCurrentIndex(index);
     setClickedImg(item.imgSrc);
-  }
+  };
 
   return (
-    <GalleyWrapper>
-      <div className="wrapper">
-        <div className="animal-wrapper">
-          {animals.map((item, i) => {
-            return (
-              <GalleryAnimals 
-                key={i}
-                image={item.imgSrc}
-                alt={item.alt}
-                className={item.className}
-              />
-            )
-          })}
-        </div>
+    <section className="about-section-gallery">
+      <TextAnimationLetter className="title-primary-md flex justify-center" text="Here's some pictures" />
+      <div className="gallery-wrapper">
         {gallery.map((item, i) => {
           return (
-            <PicturesComponent 
-              key={i} 
+            <PicturesComponent
+              key={i}
               className={item.className}
               imgSrc={item.imgSrc}
               alt={item.alt}
-              onClick={() => handelClick(item , i)}
+              onClick={() => handelClick(item, i)}
             />
           );
         })}
         {clickedImg && (
-          <Modal clickedImg={clickedImg} setClickedImg={setClickedImg}/>
+          <Modal clickedImg={clickedImg} setClickedImg={setClickedImg} />
         )}
       </div>
-    </GalleyWrapper>
+    </section>
   );
 }
-
-const GalleyWrapper = styled.section`
-  position: relative;
-  height: 1600px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
-  /* margin-bottom: 150px; */
-  overflow: hidden;
-  @media screen and (max-width: 1200px) {
-    height: 1700px;
-  }
-  @media screen and (max-width: 992px) {
-    height: 1980px;
-  }
-  @media screen and (max-width: 576px) {
-    height: 1600px;
-    padding-top: 0;
-  }
-
-  .wrapper {
-    position: relative;
-    margin-top: 200px;
-    width: 1450px;
-    height: auto;
-    @media screen and (max-width: 1600px) {
-      width: 1050px;
-    }
-    @media screen and (max-width: 1200px) {
-      width: 855px;
-    }
-    @media screen and (max-width: 992px) {
-      width: 650px;
-    }
-    @media screen and (max-width: 576px) {
-      width: 470px;
-      left: -15%;
-    }
-  }
-
-  .animal-wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .shape {
-    position: absolute;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    background: #20303c;
-    display: block;
-    height: 220px;
-    width: 250px;
-    box-shadow: inset 0px 0px 190px rgb(0 0 0 / 90%);
-
-    @media screen and (max-width: 576px) {
-      height: 160px;
-      width: 200px;
-    }
-    img {
-      object-position: center;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-      transform: scale(1.5);
-      opacity: 0.4;
-      transition: all 0.5s ease-in-out;
-      &:hover {
-        box-shadow: inset 0px 0px 0px rgb(0 0 0 / 90%);
-        background-size: cover;
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-    &__01 {
-      left: 0;
-      top: 120px;
-      @media screen and (max-width: 576px) {
-        left: 0;
-      }
-    }
-    &__02 {
-      left: 200px;
-      top: 0;
-      @media screen and (max-width: 576px) {
-        left: 150px;
-        top: 40px;
-      }
-    }
-    &__03 {
-      left: 200px;
-      top: 240px;
-      @media screen and (max-width: 576px) {
-        left: 300px;
-        top: 120px;
-      }
-    }
-    &__04 {
-      left: 400px;
-      top: 120px;
-      @media screen and (max-width: 576px) {
-        left: 150px;
-        top: 200px;
-      }
-    }
-    &__05 {
-      left: 400px;
-      top: 360px;
-      @media screen and (max-width: 576px) {
-        left: 0;
-        top: 280px;
-      }
-    }
-    &__06 {
-      left: 600px;
-      top: 240px;
-      @media screen and (max-width: 992px) {
-        left: 0;
-        top: 1320px;
-      }
-      @media screen and (max-width: 576px) {
-        top: 280px;
-        left: 300px;
-      }
-    }
-    &__07 {
-      left: 600px;
-      top: 480px;
-      @media screen and (max-width: 1200px) {
-        top: 480px;
-        left: 200px;
-      }
-      @media screen and (max-width: 576px) {
-        top: 440px;
-        left: 300px;
-      }
-    }
-    &__08 {
-      left: 800px;
-      top: 360px;
-      @media screen and (max-width: 1200px) {
-        top: 600px;
-        left: 0;
-      }
-      @media screen and (max-width: 576px) {
-        left: 0;
-        top: 440px;
-      }
-    }
-    &__09 {
-      left: 800px;
-      top: 600px;
-      @media screen and (max-width: 1200px) {
-        top: 840px;
-        left: 0;
-      }
-      @media screen and (max-width: 576px) {
-        left: 150px;
-        top: 520px;
-      }
-    }
-    &__10 {
-      left: 600px;
-      top: 720px;
-      @media screen and (max-width: 992px) {
-        top: 840px;
-        left: 400px;
-      }
-      @media screen and (max-width: 576px) {
-        top: 600px;
-        left: 300px;
-      }
-    }
-    &__11 {
-      left: 800px;
-      top: 840px;
-      @media screen and (max-width: 1200px) {
-        left: 400px;
-        top: 1080px;
-      }
-      @media screen and (max-width: 576px) {
-        left: 150px;
-        top: 680px;
-      }
-    }
-    &__12 {
-      left: 600px;
-      top: 960px;
-      @media screen and (max-width: 992px) {
-        top: 1080px;
-        left: 0;
-      }
-      @media screen and (max-width: 576px) {
-        left: 0;
-        top: 760px;
-      }
-    }
-    &__13 {
-      left: 1000px;
-      top: 960px;
-      @media screen and (max-width: 1600px) {
-        left: 200px;
-        top: 960px;
-      }
-      @media screen and (max-width: 576px) {
-        left: 0;
-        top: 1080px;
-      }
-    }
-    &__14 {
-      left: 1000px;
-      top: 720px;
-      @media screen and (max-width: 1600px) {
-        left: 200px;
-        top: 720px;
-      }
-      @media screen and (max-width: 576px) {
-        left: 300px;
-        top: 760px;
-      }
-    }
-    &__15 {
-      left: 1200px;
-      top: 840px;
-      @media screen and (max-width: 1600px) {
-        left: 400px;
-        top: 840px;
-      }
-      @media screen and (max-width: 992px) {
-        left: 400px;
-        top: 1320px;
-      }
-      @media screen and (max-width: 576px) {
-        left: 0;
-        top: 920px;
-      }
-    }
-    &__16 {
-      left: 1200px;
-      top: 600px;
-      @media screen and (max-width: 1600px) {
-        left: 400px;
-        top: 600px;
-      }
-      @media screen and (max-width: 992px) {
-        left: 200px;
-        top: 1200px;
-      }
-      @media screen and (max-width: 576px) {
-        left: 150px;
-        top: 1000px;
-      }
-    }
-  }
-`;

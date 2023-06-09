@@ -1,12 +1,9 @@
 import Head from "next/head";
 import React, { useState } from "react";
-import styled from "styled-components";
 
-import { Colors } from "../../assets/variables";
-
-import Sidebar from "../Navbar/sidebar";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
+import MobileMenu from "./MobileMenu";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 export default function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,27 +16,17 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>Paulo Reizinho</title>
-        <meta name="description" content="Paulo Reizinho Developer Portfolio" />
+        <meta name="Paulo Reizinho" content="Paulo Reizinho Developer Portfolio" />
         <meta
           name="google-site-verification"
           content="fz36mAU8oe5cQ1weXZqrsHihiDBj-G6u72mdREUjVYk"
         />
-        <link rel="icon" href="/logo_clean.png" />
+        <link rel="icon" href="/logo_gold.png" />
       </Head>
-      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <MobileMenu isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      <MainContainer>{children}</MainContainer>
+      <main className="layout">{children}</main>
       <Footer />
     </>
   );
 }
-
-const MainContainer = styled.main`
-  margin: 0;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: ${Colors.primary_background};
-  /* overflow-x: hidden; */
-`;

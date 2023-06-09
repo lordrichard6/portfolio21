@@ -1,0 +1,38 @@
+.contact-section-info {
+  @apply flex flex-col justify-center;
+
+  p {
+    @apply text-primary-lg font-light mb-2;
+
+    &:first-of-type {
+      @apply font-bold;
+    }
+
+    a {
+      @apply underline underline-offset-2 font-normal whitespace-nowrap;
+    }
+  }
+
+  .contact-social-links {
+    @apply flex text-5xl justify-between lg:justify-start lg:text-6xl;
+    a {
+      @apply mx-1 transition ease-in-out delay-150;
+
+      svg {
+        @media (min-width: 1024px) {
+          filter: drop-shadow(0 0 40px #2d9da9);
+        }
+      }
+
+      &:hover {
+        color: #34b3c1;
+        transform: translateY(-4px);
+        svg {
+          @media (min-width: 1024px) {
+            filter: drop-shadow(0 0 80px #7634c1);
+          }
+        }
+      }
+    }
+  }
+}

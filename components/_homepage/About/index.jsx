@@ -1,20 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
-
-import { Colors } from "../../../assets/variables";
 
 import {
   bringFromLeft,
-  bringFromRight,
-  bringUp,
+  bringUp
 } from "../../../utilities/framer-animations";
 
-import GradientTopDark from "./gradient_dark_top";
 import TextComponent from "./text";
 import ImageComponent from "./image";
 import {
-  TitleRetro,
+  TextAnimationLetter,
   BtnPrimaryCTA,
   EntryAnimation,
   SocialInclineBlock,
@@ -22,53 +17,50 @@ import {
 
 import { SocialMedia } from "../../../assets/data/social_media";
 
-export default function AboutSection() {
+export default function HomeAbout() {
   let { t } = useTranslation();
 
+  const button = {
+    link: "/about",
+    text: "common:more_about"
+  }
+  const title = "home:about_title"
+
   return (
-    <SectionContainer className="relative w-screen min-h-screen custom-center flex-col py-24 md:py-44">
-      <GradientTopDark />
-      <EntryAnimation animation={bringUp}>
-        <TitleRetro title={t("home:about_title")} />
-      </EntryAnimation>
-      <div className="w-4/5 2xl:w-3/5 custom-center flex-col xl:flex-row my-6 lg:my-10">
-        <EntryAnimation
-          style="order-2 min-w-[290px] lg:w-[430px] xl:w-full mt-6"
-          animation={bringFromRight}
-        >
+    <section className="home-section-about section-y-default section-x-default flex-centered">
+      <TextAnimationLetter
+        className="title-primary-md flex-centered"
+        text={t(title)}
+      />
+      <div className="content-wrapper">
+        <div className="right-wrapper">
           <TextComponent />
-          <ul className="home-social mt-10 mb-6">
-            {SocialMedia.map((item, i) => {
-              return (
-                <SocialInclineBlock
-                  key={i}
-                  icon={item.icon}
-                  iconName={item.iconName}
-                  link={item.link}
-                />
-              );
-            })}
-          </ul>
-        </EntryAnimation>
-        <EntryAnimation
-          style="order-1 w-full custom-center flex-col"
-          animation={bringFromLeft}
-        >
+          <EntryAnimation animation={bringUp}>
+            <ul className="home-social">
+              {SocialMedia.map((item, i) => {
+                return (
+                  <SocialInclineBlock
+                    key={i}
+                    icon={item.icon}
+                    iconName={item.iconName}
+                    link={item.link}
+                  />
+                );
+              })}
+            </ul>
+          </EntryAnimation>
+        </div>
+        <EntryAnimation style="left-wrapper" animation={bringFromLeft}>
           <ImageComponent />
         </EntryAnimation>
       </div>
       <EntryAnimation animation={bringUp}>
         <BtnPrimaryCTA
           color="_2"
-          text={t("common:btn_more_about")}
-          link="/about"
-          styles="mt-4"
+          text={t(button.text)}
+          link={button.link}
         />
       </EntryAnimation>
-    </SectionContainer>
+    </section>
   );
 }
-
-const SectionContainer = styled.section`
-  background: ${Colors.primary_background};
-`;

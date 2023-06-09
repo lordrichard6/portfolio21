@@ -2,6 +2,7 @@ import styled from "styled-components";
 import useTranslation from "next-translate/useTranslation";
 import React, { useEffect, useState } from "react";
 import { sendContactForm } from "../../lib/api";
+import { TextAnimationLetter } from "../_shared";
 import {
   Container,
   Heading,
@@ -21,6 +22,18 @@ const initValues = {
   subject: "",
   message: "",
 };
+
+const title = "contact:form_title"
+
+const form_labels = {
+  required: "contact:required",
+  name: "contact:name",
+  email: "contact:email",
+  subject: "contact:subject",
+  message: "contact:message",
+}
+
+const button = "common:submit"
 
 const initState = { isLoading: false, error: "", values: initValues };
 
@@ -70,91 +83,107 @@ export default function ContactForm() {
   };
 
   return (
-    <Container maxW="450px" mt={12}>
-      <h1 className="text-4xl font-semibold mt-6 mb-2/ text-center">
-        Send me a quick message
-      </h1>
-      {error && (
-        <Text className="text-center" color="red.300" my={4} fontSize="xl">
-          {error}
-        </Text>
-      )}
-      <FormControl isRequired isInvalid={touched.name && !values.name} mb={5}>
-        <div className="flex items-baseline">
-          <FormLabel>Name</FormLabel>
-          <FormErrorMessage mt={0}>Required</FormErrorMessage>
-        </div>
-        <Input
-          errorBorderColor="red.300"
-          type="text"
-          name="name"
-          value={values.name}
-          onChange={handleChange}
-          onBlur={onBlur}
+    <section className="contact-section-form flex-centered flex-col section-y-short">
+        <TextAnimationLetter
+          className="title-primary-md flex justify-center"
+          text={t(title)}
         />
-        {/* <FormErrorMessage>Required</FormErrorMessage> */}
-      </FormControl>
-      <FormControl isRequired isInvalid={touched.email && !values.email} mb={5}>
-        <div className="flex items-baseline">
-          <FormLabel>Email</FormLabel>
-          <FormErrorMessage mt={0}>Required</FormErrorMessage>
+      <Container maxW="480px" mt={6} mb={12}>
+        {error && (
+          <Text className="text-center" color="red.300" my={4} fontSize="xl">
+            {error}
+          </Text>
+        )}
+        <div className="glass-container p-4 lg:p-6">
+          <FormControl
+            isRequired
+            isInvalid={touched.name && !values.name}
+            mb={5}
+          >
+            <div className="flex items-baseline">
+              <FormLabel>{t(form_labels.name)}</FormLabel>
+              <FormErrorMessage mt={0}>{t(form_labels.required)}</FormErrorMessage>
+            </div>
+            <Input
+              errorBorderColor="red.300"
+              type="text"
+              name="name"
+              value={values.name}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+            {/* <FormErrorMessage>Required</FormErrorMessage> */}
+          </FormControl>
+          <FormControl
+            isRequired
+            isInvalid={touched.email && !values.email}
+            mb={5}
+          >
+            <div className="flex items-baseline">
+              <FormLabel>{t(form_labels.email)}</FormLabel>
+              <FormErrorMessage mt={0}>{t(form_labels.required)}</FormErrorMessage>
+            </div>
+            <Input
+              type="email"
+              name="email"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+          </FormControl>
+          <FormControl
+            isRequired
+            isInvalid={touched.subject && !values.subject}
+            mb={5}
+          >
+            <div className="flex items-baseline">
+              <FormLabel>{t(form_labels.subject)}</FormLabel>
+              <FormErrorMessage mt={0}>{t(form_labels.required)}</FormErrorMessage>
+            </div>
+            <Input
+              type="text"
+              name="subject"
+              value={values.subject}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+          </FormControl>
+          <FormControl
+            isRequired
+            isInvalid={touched.message && !values.message}
+            mb={5}
+          >
+            <div className="flex items-baseline">
+              <FormLabel>{t(form_labels.message)}</FormLabel>
+              <FormErrorMessage mt={0}>{t(form_labels.required)}</FormErrorMessage>
+            </div>
+            <Textarea
+              rows={4}
+              type="text"
+              name="message"
+              value={values.message}
+              onChange={handleChange}
+              onBlur={onBlur}
+            />
+          </FormControl>
+          <div className="flex justify-center">
+            <Button
+              variant="outline"
+              colorScheme="white"
+              disabled={
+                !values.name ||
+                !values.email ||
+                !values.subject ||
+                !values.message
+              }
+              onClick={onSubmit}
+              isLoading={isLoading}
+            >
+              {t(button)}
+            </Button>
+          </div>
         </div>
-        <Input
-          type="email"
-          name="email"
-          value={values.email}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-      </FormControl>
-      <FormControl
-        isRequired
-        isInvalid={touched.subject && !values.subject}
-        mb={5}
-      >
-        <div className="flex items-baseline">
-          <FormLabel>Subject</FormLabel>
-          <FormErrorMessage mt={0}>Required</FormErrorMessage>
-        </div>
-        <Input
-          type="text"
-          name="subject"
-          value={values.subject}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-      </FormControl>
-      <FormControl
-        isRequired
-        isInvalid={touched.message && !values.message}
-        mb={5}
-      >
-        <div className="flex items-baseline">
-          <FormLabel>Message</FormLabel>
-          <FormErrorMessage mt={0}>Required</FormErrorMessage>
-        </div>
-        <Textarea
-          rows={4}
-          type="text"
-          name="message"
-          value={values.message}
-          onChange={handleChange}
-          onBlur={onBlur}
-        />
-      </FormControl>
-      <div className="flex justify-center">
-        <Button
-          variant="outline"
-          colorScheme="white"
-          disabled={
-            !values.name || !values.email || !values.subject || !values.message
-          }
-          onClick={onSubmit}
-          isLoading={isLoading}
-        >
-          Submit
-        </Button>
-      </div>
-    </Container>
+      </Container>
+    </section>
   );
 }

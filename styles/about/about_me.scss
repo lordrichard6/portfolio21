@@ -1,0 +1,94 @@
+.about-section-about {
+  @apply relative flex-col;
+
+  .content-wrapper {
+    @apply flex flex-col xl:grid xl:grid-cols-2 gap-4;
+
+    .about-left-side {
+      @apply z-10;
+    }
+    .about-right-side {
+      @apply h-full cursor-wait;
+    
+      .about-picture-wrapper {
+        filter: drop-shadow(20px 20px 17px #051719);
+      }
+    
+      .outer {
+        position: relative;
+        background: url("/pattern.png"),
+          radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+        /* width: 550px; */
+        height: 750px;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 16px;
+        transition: all ease-in-out 0.3s;
+    
+        @media screen and (max-width: 764px) {
+          width: 100%;
+          height: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @media screen and (max-width: 412px) {
+          width: 100%;
+          height: 500px;
+        }
+    
+        &:hover {
+          background: url("/pattern.png"),
+          radial-gradient(ellipse at bottom, #F37335 0%, #0c0d13 100%);
+        }
+        .card {
+          position: relative;
+          z-index: 2;
+    
+          padding: 42px 32px;
+    
+          clip-path: circle(5% at 95% 11%);
+          transition: all ease-in-out 0.3s;
+          background-color: #ffffff;
+    
+          @media screen and (max-width: 764px) {
+            clip-path: circle(6% at 93% 10%);
+          }
+    
+          @media screen and (max-width: 412px) {
+            clip-path: circle(7% at 90% 11%);
+          }
+        }
+    
+        .picture {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 700px;
+          z-index: 0;
+          /* filter: grayscale(100%); */
+          transition: all 500ms ease-in-out;
+    
+          @media screen and (max-width: 764px) {
+            width: 600px;
+          }
+          @media screen and (max-width: 412px) {
+            width: 400px;
+          }
+    
+          .me {
+            width: 100%;
+            height: auto;
+          }
+    
+          &.glasses {
+            &:hover {
+              /* filter: grayscale(0); */
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

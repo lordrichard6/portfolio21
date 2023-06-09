@@ -1,28 +1,21 @@
 import styled from "styled-components";
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-import header from "../../../assets/images/gallery/gallery.jpg";
-import Sand from "../../../assets/images/gallery/gallery_sand.png";
+const images = {
+  header: "/gallery/gallery.jpg",
+  sand: "/gallery/gallery_sand.png"
+}
 
 export default function BackgroundComponent() {
-  const [offsetY, setOffsetY] = useState(0);
-
-  const handleScroll = () => setOffsetY(window.pageYOffset);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <Container>
       <div className="gradient"></div>
-      <div className="sky" style={{ transform: `translateY(${offsetY * 0.4}px)` }}>
-        <Image className="object-cover" src={header} alt="sky" cover fill />
+      <div className="sky">
+        <Image className="object-cover" src={images.header} alt="sky" cover fill />
       </div>
       <div className="sand">
-        <Image className="object-cover" src={Sand} alt="sand" cover fill />
+        <Image className="object-cover" src={images.sand} alt="sand" cover fill />
       </div>
     </Container>
   );

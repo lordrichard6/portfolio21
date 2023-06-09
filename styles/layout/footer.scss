@@ -1,0 +1,41 @@
+footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  background: #0f2027;
+  overflow: hidden;
+  z-index: 1;
+
+  .inner-wrapper {
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+
+    // @media screen and (max-width: 764px) {
+    //   grid-template-columns: 1fr;
+    // }
+    @apply flex justify-center;
+
+    .thanks-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @apply mb-2;
+
+      @media screen and (max-width: 390px) {
+        order: 2;
+        margin-bottom: 1rem;
+      }
+      .image-container {
+        @apply flex-row mb-4 mt-6;
+
+        .signature-image {
+          @apply w-auto h-28;
+        }
+      }
+    }
+  }
+}

@@ -2,101 +2,97 @@ import React from "react";
 import ReactTypingEffect from "react-typing-effect";
 import useTranslation from "next-translate/useTranslation";
 
+import { EntryAnimation } from "../../_shared";
+import { textFromRight } from "../../../utilities/framer-animations";
+
 export default function TextComponent() {
   let { t } = useTranslation();
 
+  const texts = {
+    first_line_01: "home:about_first_line_01",
+    first_line_02: "home:about_first_line_02",
+    second_line: "home:about_second_line",
+    third_line: "home:about_third_line",
+    fourth_line_01: "home:about_forth_line_01",
+    fourth_line_02: "home:about_forth_line_02",
+    fifth_line_01: "home:about_fith_line_01",
+    fifth_line_02: "home:about_fith_line_02",
+    fifth_line_03: "home:about_fith_line_03",
+    fifth_line_04: "home:about_fith_line_04",
+    fifth_line_05: "home:about_fith_line_05",
+    name_01: "Paulo",
+    name_02: "Reizinho",
+    town: "Gavião",
+    country: "Portugal",
+    city_actual: "Zurich",
+  };
+
   return (
     <div className="home-about max-w-[290px] lg:max-w-full mx-auto">
-      <h2>
-        {t("home:about_first_line")}
-        <ReactTypingEffect
-          text={t("home:about_first_line02")}
-          speed={60}
-          eraseDelay={600}
-          className="ml-1"
-        />
-      </h2>
-      <h3>
-        {t("home:about_second_line")}{" "}
-        <strong>
-          Paulo
+      <EntryAnimation animation={textFromRight} delayTime={2}>
+        <h2>
+          {t(texts.first_line_01)}
           <ReactTypingEffect
-            text="Reizinho"
-            speed={120}
-            eraseDelay={700}
+            text={t(texts.first_line_02)}
+            speed={60}
+            eraseDelay={600}
             className="ml-1"
           />
-        </strong>
-      </h3>
-      <h3>
-        {t("home:about_third_line")} <strong>Gavião</strong>,
-        <strong>
-          <ReactTypingEffect
-            text="Portugal"
-            speed={120}
-            eraseDelay={700}
-            className="ml-1"
-          />
-        </strong>
-      </h3>
-      <h3>
-        {t("home:about_forth_line")}
-        <strong>
-          <ReactTypingEffect
-            text="1986"
-            speed={120}
-            eraseDelay={700}
-            className="ml-1"
-          />
-        </strong>
-      </h3>
-      <h3>
-        {t("home:about_fith_line")} <strong>Zurich</strong>,
-        <strong>
-          <ReactTypingEffect
-            text={t("home:about_fith_line02")}
-            speed={120}
-            eraseDelay={700}
-            className="ml-1"
-          />
-        </strong>
-      </h3>
-      {/* <div>
-        <h2>Name:</h2>
-        <ReactTypingEffect
-          text="Paulo Ricardo Lopes Reizinho"
-          speed={120}
-          eraseDelay={700}
-          className="info"
-        />
-      </div>
-      <div>
-        <h2>Origin:</h2>
-        <ReactTypingEffect
-          text="Gavião, Portugal"
-          speed={120}
-          eraseDelay={700}
-          className="info"
-        />
-      </div>
-      <div>
-        <h2>Birth:</h2>
-        <ReactTypingEffect
-          text="04.01.1986"
-          speed={120}
-          eraseDelay={700}
-          className="info"
-        />
-      </div>
-      <div>
-        <h2>Location:</h2>
-        <ReactTypingEffect
-          text="Zurich"
-          speed={120}
-          eraseDelay={700}
-          className="info"
-        />
-      </div> */}
+        </h2>
+      </EntryAnimation>
+      <EntryAnimation animation={textFromRight}>
+        <h3>
+          {t(texts.second_line)}{" "}
+          <strong>
+            {texts.name_01}
+            <ReactTypingEffect
+              text={texts.name_02}
+              speed={120}
+              eraseDelay={700}
+              className="ml-1"
+            />
+          </strong>
+        </h3>
+      </EntryAnimation>
+      <EntryAnimation animation={textFromRight}>
+        <h3>
+          {t(texts.third_line)} <strong>{texts.town}</strong>,
+          <strong>
+            <ReactTypingEffect
+              text={texts.country}
+              speed={80}
+              eraseDelay={700}
+              className="ml-1"
+            />
+          </strong>
+        </h3>
+      </EntryAnimation>
+      <EntryAnimation animation={textFromRight}>
+        <h3>
+          {t(texts.fourth_line_01)} <strong>{texts.city_actual}</strong>,
+          <strong>
+            <ReactTypingEffect
+              text={t(texts.fourth_line_02)}
+              speed={70}
+              eraseDelay={700}
+              className="ml-1"
+            />
+          </strong>
+        </h3>
+      </EntryAnimation>
+      <EntryAnimation animation={textFromRight}>
+        <h3>
+          {t(texts.fifth_line_01)}
+          <strong>
+            <ReactTypingEffect
+              text={t([texts.fifth_line_02, texts.fifth_line_03, texts.fifth_line_04, texts.fifth_line_05])}
+              speed={100}
+              eraseDelay={300}
+              className="ml-1"
+            />
+          </strong>
+        </h3>
+      </EntryAnimation>
     </div>
   );
 }
