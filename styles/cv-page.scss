@@ -2,6 +2,7 @@ $white-color: #FFFDFA;
 $cv-primary-gradient: linear-gradient(to bottom, #00b4db, #0083b0);
 $cv-dark-blue: #0083b0;
 $cv-light-blue: #00b4db;
+$cv-teal: #134E4A;
 $transition-times: .8s .2s;
 
 .cv-page {
@@ -39,7 +40,7 @@ $transition-times: .8s .2s;
         @apply w-full left-[50%] top-[-30%] translate-x-[-50%] scale-x-[-1] absolute;
 
         &.tog {
-          @apply opacity-0;
+          @apply hidden;
         }
       }
     }
@@ -62,6 +63,19 @@ $transition-times: .8s .2s;
           @apply text-3xl m-2;
         }
       }
+      .btn {
+        @apply w-full flex justify-end;
+
+        button {
+          background: $white-color;
+          color: $cv-dark-blue;
+          @apply px-4 py-2 mx-4 rounded-md cursor-pointer w-fit ml-auto;
+
+          a {
+            @apply text-2xl font-semibold;
+          }
+        }
+      }
     }
 
     // SIDE TOGGLED
@@ -72,8 +86,9 @@ $transition-times: .8s .2s;
         .image-wrapper {
 
           &.tog {
-            @apply opacity-100;
+            @apply block;
           }
+
         }
       }
 
@@ -87,7 +102,34 @@ $transition-times: .8s .2s;
       }
     }
   }
-  .right {
+
+  // MAIN 
+  .main-content {
+    color: $cv-teal;
+    background: $white-color;
+    @apply absolute w-full min-h-screen pl-[500px] pt-20;
+
+    hr {
+      background: $cv-teal;
+      @apply h-1;
+    }
+
+    .my-name {
+      @apply text-6xl font-semibold mb-2;
+    }
+
+    .my-role {
+      color: $cv-dark-blue;
+      @apply text-4xl font-semibold mb-2;
+    }
+
+    .contact {
+      @apply text-2xl font-normal flex items-center my-4;
+
+      a{
+        @apply ml-2 hover:underline;
+      }
+    }
 
     .position {
       transition: $transition-times;

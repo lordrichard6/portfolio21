@@ -38,7 +38,7 @@ const myImage = {
   alt: "paulo reizinho"
 }
 
-const intro =  `Inventive and creative Front End developer with abroad expertise
+const intro = `Inventive and creative Front End developer with abroad expertise
   in the modern Javascript frameworks as well as a strong 6th sense
   on UI/UX & Design. I have a background on Administration and
   management, but i found recently my true call software development
@@ -100,6 +100,8 @@ export default function CVSide() {
     }));
   };
 
+  console.log(isOpen);
+
   return (
     <div className={`sidebar ${isOpen.leftColumn ? "toggled" : ""}`}>
       <div className="side-image">
@@ -108,8 +110,9 @@ export default function CVSide() {
           alt={myImage.alt}
           src={myImage.imgSrc}
         /> */}
-        <video className="image-wrapper noTog" src="/videos/cv_vid.mp4" loop autoPlay muted type="mp4"></video>
-        <video className="image-wrapper tog" src="/videos/cv_vid_tog.mp4" loop autoPlay muted type="mp4"></video>
+        {isOpen.leftColumn === true 
+        ? (<video className="image-wrapper" src="/videos/cv_vid_tog.mp4" loop autoPlay muted type="mp4"></video>) 
+        : (<video className="image-wrapper" src="/videos/cv_vid.mp4" loop autoPlay muted type="mp4"></video>)}
       </div>
       <div onClick={() => toggle('leftColumn')} className="arrow">
         <FaRegArrowAltCircleRight />
@@ -151,9 +154,9 @@ export default function CVSide() {
             })}
           </div>
         </div>
-        <div className="w-full flex justify-end">
-          <button className="bg-slate-100 text-sky-600 px-4 py-2 mx-4 rounded-md cursor-pointer w-fit ml-auto">
-            <a href={button.link} target="_blank" rel="noopener noreferrer" className="text-2xl font-semibold">{button.text}</a>
+        <div className="btn">
+          <button>
+            <a href={button.link} target="_blank" rel="noopener noreferrer">{button.text}</a>
           </button>
         </div>
       </div>
