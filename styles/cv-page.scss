@@ -1,42 +1,88 @@
+$white-color: #FFFDFA;
+$cv-primary-gradient: linear-gradient(to bottom, #00b4db, #0083b0);
+$cv-dark-blue: #0083b0;
+$cv-light-blue: #00b4db;
+$transition-times: .8s .2s;
+
 .cv-page {
-  .left {
-    transition: .4s .1s;
+  // SIDEBAR
+  .sidebar {
+    color: $white-color;
+    transition: $transition-times;
+    background: $cv-primary-gradient;
     // @apply w-1/3;
-    @apply min-w-[100px] w-[100px];
+    @apply min-w-[100px] w-[100px] relative z-10 h-screen flex flex-col items-center pt-10;
+
+    h1 {
+      @apply mt-10 text-2xl font-bold mx-6;
+    }
+
+    h2 {
+      @apply mx-6 text-lg font-bold;
+    }
+
+    p {
+      @apply text-lg mx-6 text-justify;
+    }
+
+    hr {
+      @apply h-2;
+    }
+    
+    .side-image {
+      transition: $transition-times;
+      @apply w-80 h-80 border-8 rounded-full hover:cursor-pointer relative overflow-hidden;
+
+      .image-wrapper {
+        border-color: $white-color;
+        
+        @apply w-full left-[50%] top-[-30%] translate-x-[-50%] scale-x-[-1] absolute;
+
+        &.tog {
+          @apply opacity-0;
+        }
+      }
+    }
 
     .arrow {
-      @apply cursor-pointer z-10;
+      transition: $transition-times;
+      background: $cv-light-blue;
+      border-color: $cv-light-blue;
+      @apply cursor-pointer z-10 absolute top-[360px] -right-10 text-6xl border-4 rounded-full;
+    }
+    
+    .side-info {
+      transition: $transition-times;
+      @apply opacity-0 absolute -left-20 text-slate-100 mt-80 w-[410px];
 
+      .techs-wrapper {
+        @apply mx-6 flex flex-wrap;
+
+        .tech {
+          @apply text-3xl m-2;
+        }
+      }
     }
 
-    .left-image {
-      transition: .8s .2s;
-      @apply left-0;
-    }
-
-    .arrow {
-      transition: .8s .2s;
-    }
-
-    .left-info {
-      transition: .8s .2s;
-      @apply opacity-0 w-[410px];
-    }
-
-    // LEFT TOGGLED
+    // SIDE TOGGLED
     &.toggled {
       @apply min-w-[410px] w-[410px];
 
-      .left-image {
-        @apply left-1/2 -translate-x-[50%];
+      .side-image {
+        .image-wrapper {
+
+          &.tog {
+            @apply opacity-100;
+          }
+        }
       }
 
       .arrow {
         svg {
-          transform: rotateY(180deg);
+          transform: rotateZ(180deg);
         }
       }
-      .left-info {
+      .side-info {
         @apply opacity-100 left-0;
       }
     }
@@ -44,7 +90,7 @@
   .right {
 
     .position {
-      transition: .8s .2s;
+      transition: $transition-times;
       transition: max-height 1s ease-in-out;
       max-height: 56px;
       @apply text-slate-100 bg-teal-900 h-full flex items-start my-4 mr-10 py-2 px-2 rounded-xl overflow-hidden;
@@ -58,7 +104,7 @@
       }
 
       .arrow {
-        transition: .8s .2s;
+        transition: $transition-times;
         @apply text-4xl cursor-pointer;
 
       }
