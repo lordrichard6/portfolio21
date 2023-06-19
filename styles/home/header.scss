@@ -10,6 +10,12 @@
     .logo-container {
       @apply w-full md:w-1/2 relative z-10;
 
+      .image {
+        filter: saturate(0.5);
+
+        @apply z-20 p-0 xl:p-6;
+      }
+
       .signature {
         filter: drop-shadow(0px 0px 10px #34b3c1);
 

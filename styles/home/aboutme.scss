@@ -2,7 +2,7 @@
   @apply relative flex-col;
 
   .content-wrapper {
-    @apply w-full flex-centered flex-col xl:flex-row my-6 lg:my-10;
+    @apply w-full flex-centered flex-col xl:flex-row my-6 lg:my-10 xl:w-[1100px];
 
     .left-wrapper {
       @apply order-1 w-full flex-centered flex-col;

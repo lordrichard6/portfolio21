@@ -7,7 +7,7 @@ export default function LogoComponent() {
     <div className="logo-container">
       <EntryAnimation animation={bringFromRight}>
         <ImagesComponent
-          style="z-10"
+          style="image"
           alt="paulo reizinho crossed arms"
           src="/logo_crossed.png"
         />

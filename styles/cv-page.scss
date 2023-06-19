@@ -6,13 +6,14 @@ $cv-teal: #134E4A;
 $transition-times: .8s .2s;
 
 .cv-page {
+  @apply min-h-screen w-screen flex;
   // SIDEBAR
   .sidebar {
     color: $white-color;
     transition: $transition-times;
     background: $cv-primary-gradient;
     // @apply w-1/3;
-    @apply min-w-[100px] w-[100px] relative z-10 h-screen flex flex-col items-center pt-10;
+    @apply min-w-[40px] lg:min-w-[100px] w-[40px] lg:w-[100px] z-10 h-screen flex flex-col items-center pt-10 fixed;
 
     h1 {
       @apply mt-10 text-2xl font-bold mx-6;
@@ -32,7 +33,7 @@ $transition-times: .8s .2s;
     
     .side-image {
       transition: $transition-times;
-      @apply w-80 h-80 border-8 rounded-full hover:cursor-pointer relative overflow-hidden;
+      @apply w-60 h-60 lg:w-80 lg:h-80 border-8 rounded-full hover:cursor-pointer relative overflow-hidden;
 
       .image-wrapper {
         border-color: $white-color;
@@ -49,12 +50,12 @@ $transition-times: .8s .2s;
       transition: $transition-times;
       background: $cv-light-blue;
       border-color: $cv-light-blue;
-      @apply cursor-pointer z-10 absolute top-[360px] -right-10 text-6xl border-4 rounded-full;
+      @apply cursor-pointer z-50 absolute top-[280px] lg:top-[360px] -right-5 lg:-right-10 text-4xl lg:text-6xl border-4 rounded-full;
     }
     
     .side-info {
       transition: $transition-times;
-      @apply opacity-0 absolute -left-20 text-slate-100 mt-80 w-[410px];
+      @apply opacity-0 absolute lg:-left-20 text-slate-100 mt-60 lg:mt-80 w-full lg:w-[410px];
 
       .techs-wrapper {
         @apply mx-6 flex flex-wrap;
@@ -88,11 +89,11 @@ $transition-times: .8s .2s;
           &.tog {
             @apply block;
           }
-
         }
       }
 
       .arrow {
+        @apply right-0;
         svg {
           transform: rotateZ(180deg);
         }
@@ -107,7 +108,7 @@ $transition-times: .8s .2s;
   .main-content {
     color: $cv-teal;
     background: $white-color;
-    @apply absolute w-full min-h-screen pl-[500px] pt-20;
+    @apply absolute w-full min-h-screen lg:pl-[500px] pt-20;
 
     hr {
       background: $cv-teal;
