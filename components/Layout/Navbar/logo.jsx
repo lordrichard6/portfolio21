@@ -20,7 +20,7 @@ export default function Logo() {
           <ImagesComponent style="logo-image" alt={logoAlt} src={logo} />
         </Link>
       </div>
-      <h1 className="navbar-name">{myName}</h1>
+      {/* <h1 className="navbar-name">{myName}</h1> */}
     </div>
     // </EntryAnimation>
   );
