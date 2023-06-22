@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SocialInclineBlock({ icon, iconName, link }) {
   return (
-    <li className={iconName}>
+    <li className={`icon ${iconName}`}>
       <a href={link} target="_blank" rel="noreferrer">
         {icon}
         <span> - {iconName}</span>
