@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   width: 100vw;
-  z-index: 200;
+  z-index: 199;
   @apply lg:mt-8 py-2;
 
   .inner-container {
@@ -175,6 +175,7 @@
         color: #fff;
       }
       svg {
+        z-index: 201;
         filter: drop-shadow(0 0 80px #34b3c1, 0 0 30px #4dbbc7);
       }
     }

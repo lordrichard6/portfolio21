@@ -20,7 +20,7 @@ export default function HomepageTitleComponent() {
 
   return (
     <div className="title-container">
-      <div className="main-title">
+      <div className="main-title blue-glow">
         <EntryAnimation animation={bringFromLeft}>
           <h1>{t(texts.title_01)}</h1>
         </EntryAnimation>

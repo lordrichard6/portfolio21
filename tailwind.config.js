@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '2000px',
+      },
       backgroundImage: {
         'home-bg': "url('/public/header_01.jpg')",
       },

@@ -4,7 +4,7 @@ import SignatureComponent from "./signature";
 
 export default function LogoComponent() {
   return (
-    <div className="logo-container">
+    <div className="logo-container flex-centered">
       <EntryAnimation animation={bringFromRight}>
         <ImagesComponent
           style="image"

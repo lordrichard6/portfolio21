@@ -8,7 +8,7 @@ export default function HomeHeader() {
 
   return (
     <header className="home-header-section" style={{background: `url(${background})`}} id="top">
-      <div className="elements-wrapper flex-centered">
+      <div className="elements-wrapper flex-centered section-width-default">
         <HomepageTitleComponent />
         <LogoComponent />
       </div>

@@ -41,7 +41,6 @@ export default function MobileMenu({ isOpen, toggle }) {
 
 const SidebarContainer = styled.aside`
   position: fixed;
-  z-index: 100;
   width: 100%;
   height: 100vh;
   /* background: ${Colors.primary}; */
@@ -50,12 +49,12 @@ const SidebarContainer = styled.aside`
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
+  /* opacity: ${({ isOpen }) => (isOpen ? "100" : "0")}; */
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   /* background: url("/pattern.png"), ${Colors.primary}; */
   background: url("/pattern.png"),
-    linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-  z-index: 1000;
+  linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  z-index: 200;
 `;
 
 const Icon = styled.div`

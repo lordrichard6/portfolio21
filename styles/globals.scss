@@ -59,6 +59,10 @@ figure {
   margin-top: 0 !important;
 }
 
+.section-width-default {
+  @apply max-w-[312px] lg:max-w-[880px] xl:max-w-[1040px] 2xl:max-w-[1200px] 3xl:max-w-[1400px];
+}
+
 .flex-centered {
   @apply flex justify-center items-center;
 }
@@ -80,4 +84,16 @@ figure {
   backdrop-filter: blur(10.4px);
   box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
+}
+
+.blue-glow {
+  animation: glow 1s ease-in-out infinite alternate;
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 40px #2d9da9;
+    }
+    to {
+      text-shadow: 0 0 80px #34b3c1, 0 0 30px #4dbbc7;
+    }
+  }
 }
