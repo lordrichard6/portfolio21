@@ -1,4 +1,4 @@
-import LogoComponent from "./logo";
+import MyImage from "./image";
 
 import { StarsComponent, CometsComponent } from "../../_shared";
 import HomepageTitleComponent from "./title";
@@ -10,7 +10,7 @@ export default function HomeHeader() {
     <header className="home-header-section" style={{background: `url(${background})`}} id="top">
       <div className="elements-wrapper flex-centered section-width-default">
         <HomepageTitleComponent />
-        <LogoComponent />
+        <MyImage />
       </div>
       <StarsComponent />
       <CometsComponent />

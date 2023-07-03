@@ -8,7 +8,7 @@ export default function AboutTextComponent() {
 
   return (
     <EntryAnimation style="about-left-side text-primary" animation={bringFromLeft}>
-      <p className="text-primary">{t("about:about_text01")}</p>
+      <p className="text-primary first-paragraph">{t("about:about_text01")}</p>
       <br />
       <p className="text-primary">{t("about:about_text02")}</p>
       <br />

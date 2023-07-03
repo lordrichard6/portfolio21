@@ -6,6 +6,10 @@
 
     .about-left-side {
       @apply z-10;
+      .first-paragraph::first-letter {
+        font-size: 6rem;
+        color: orangered;
+      }
     }
     .about-right-side {
       @apply h-full cursor-wait;
