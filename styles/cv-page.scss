@@ -173,29 +173,61 @@ $section-title: 32px;
           @apply font-semibold;
         }
         h3 {
-          @apply text-2xl font-medium;
+          @apply text-2xl font-bold;
         }
         h4 {
           @apply text-xl;
         }
-        p {
+        p, li {
           @apply text-lg whitespace-pre-line;
         }
+
+        span {
+          color: $dark-color;
+        }
+
+        .tasks {
+          color: $dark-color;
+
+          li {
+            // list-style-type: '➜';
+            margin-left: 1.5rem;
+            padding-inline-start: 0.4em;
+
+            &::marker {
+              content: ">>";
+              font-weight: 700;
+              font-size: 1.5em;
+            }
+          }
+        }
+        .projects {
+          color: $dark-color;
+        }
+
+        .reference {
+          font-size: 1rem;
+          span:first-child::before {
+            content: "Reference:";
+            font-weight: 900;
+            margin-right: 4px;
+          }
+        }
       }
-      .recomendations,
-      .certifications {
-        button {
-          all: initial;
-          font-family: inherit; 
-          background: $dark-color;
-          color: $white-color;
-          
-          @apply px-4 py-2 mx-4 rounded-md cursor-pointer;
-        }
-        h2,
-        svg {
-          @apply text-4xl font-semibold;
-        }
+    }
+    .recomendations,
+    .certifications {
+      button {
+        all: initial;
+        font-family: inherit;
+        background: $dark-color;
+        color: $white-color;
+        
+        @apply px-4 py-2 mx-4 rounded-md cursor-pointer;
+      }
+      h2,
+      svg {
+        @apply text-4xl font-semibold;
       }
     }
   }
