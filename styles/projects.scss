@@ -18,6 +18,14 @@
 .projects-quote {
   @apply relative w-full;
 
+  h1::before {
+    content: '" ';
+  }
+  
+  h1::after {
+    content: ' "';
+  }
+
   .background-gradient {
     position: absolute;
     width: 100%;

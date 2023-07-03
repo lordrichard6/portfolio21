@@ -2,6 +2,14 @@
 .about-quote {
   @apply relative w-full;
 
+  h1::before {
+    content: '" ';
+  }
+  
+  h1::after {
+    content: ' "';
+  }
+
   .background-gradient {
     position: absolute;
     width: 100%;
@@ -32,8 +40,13 @@
     .about-left-side {
       @apply z-10;
       .first-paragraph::first-letter {
-        font-size: 6rem;
+        font-size: 7rem;
+        font-weight: 800;
         color: orangered;
+        float: left;
+        margin-top: 1.2rem;
+        margin-right: 0.6rem;
+        letter-spacing: 0.6px;
       }
     }
     .about-right-side {

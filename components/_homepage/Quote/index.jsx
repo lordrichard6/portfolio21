@@ -28,7 +28,7 @@ export default function HomeQuote() {
       </EntryAnimation>
       <EntryAnimation animation={textFromLeft} style="text-quote section-x-default text-primary flex flex-wrap">
         <h1 className="font-light text-center">{t(quote.quote)}</h1>
-        <h1 className="font-bold">{quote.author}</h1>
+        <h2 className="font-bold">{quote.author}</h2>
       </EntryAnimation>
       {/* <TextAnimationWord
         className="text-quote section-x-default text-primary flex flex-wrap"

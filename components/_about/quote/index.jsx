@@ -28,7 +28,7 @@ export default function AboutQuote() {
       </EntryAnimation>
       <EntryAnimation animation={textFromLeft} style="text-quote section-x-default text-primary flex flex-wrap">
         <h1 className="font-light text-center">{t(quote.quote)}</h1>
-        <h1 className="font-bold">{quote.author}</h1>
+        <h2 className="font-bold">{quote.author}</h2>
       </EntryAnimation>
       {/* <TextAnimationWord className="text-quote section-x-default text-primary flex flex-wrap" text="Do not compare, do not measure. No other way is like yours. All other ways decieve and tempt you. You must fulfill the way that is in you. -Carl Jung" /> */}
     </section>
