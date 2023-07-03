@@ -1,6 +1,6 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 import "../styles/index.scss";
-import Router, {useRouter} from "next/router";
+import Router, { useRouter } from "next/router";
 import NProgress from "nprogress"; //nprogress module
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -10,6 +10,7 @@ import theme from "../config/theme";
 delete theme.styles.global;
 
 import LoadingScreen from "../components/_shared/loading"
+import Layout from "../components/Layout";
 
 //Binding events.
 Router.events.on("routeChangeStart", () => NProgress.start());
@@ -23,6 +24,14 @@ function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
     const handleRouteChange = (url) => {
       setLoading(true)
+      const loadingTimeout = setTimeout(() => {
+        setLoading(false);
+      }, 1000);// Timeout duration in milliseconds
+
+      // Clear the timeout if the route changes before the timeout completes
+      router.events.on("routeChangeComplete", () => {
+        clearTimeout(loadingTimeout);
+      });
     }
 
     const handleRouteChangeComplete = () => {
@@ -39,17 +48,17 @@ function MyApp({ Component, pageProps }) {
   }, [router.events])
 
   return (
-    <>
-    {loading ? (
-      <LoadingScreen />
-    ):(
-      <ChakraProvider resetCSS={false} theme={theme}>
-        <Component {...pageProps} />
-      </ChakraProvider>
+    <Layout>
+      {loading ? (
+        <LoadingScreen />
+      ) : (
+        <ChakraProvider resetCSS={false} theme={theme}>
+          <Component {...pageProps} />
+        </ChakraProvider>
 
-    )
-  }
-    </>
+      )
+      }
+    </Layout>
   );
 }
 

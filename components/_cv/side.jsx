@@ -28,7 +28,7 @@ import {
 } from "react-icons/si";
 
 const titles = {
-  intro: "Introduction",
+  intro: "Intro",
   ed: "Education",
   techs: "Technologies",
 }
@@ -90,7 +90,7 @@ const button = {
 
 export default function CVSide() {
   const [isOpen, setIsOpen] = useState({
-    leftColumn: false,
+    leftColumn: true,
   });
 
   const toggle = (element) => {
@@ -114,9 +114,9 @@ export default function CVSide() {
         ? (<video className="image-wrapper" src="/videos/cv_vid_tog.mp4" loop autoPlay muted type="mp4"></video>) 
         : (<video className="image-wrapper" src="/videos/cv_vid.mp4" loop autoPlay muted type="mp4"></video>)}
       </div>
-      <div onClick={() => toggle('leftColumn')} className="arrow">
+      {/* <div onClick={() => toggle('leftColumn')} className="arrow">
         <FaRegArrowAltCircleRight />
-      </div>
+      </div> */}
       <div className="side-info">
         <div className="w-full">
           <h1>{titles.intro}</h1>

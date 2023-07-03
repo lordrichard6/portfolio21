@@ -10,7 +10,7 @@
 }
 
 .loading-screen {
-  @apply min-h-screen flex-centered flex-col bg-slate-900 text-center;
+  @apply min-h-screen flex-centered flex-col text-center;
 
   .word {
     bottom: 0;

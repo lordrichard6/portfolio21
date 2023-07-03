@@ -1,11 +1,18 @@
-$white-color: #FFFDFA;
-$cv-primary-gradient: linear-gradient(to bottom, #00b4db, #0083b0);
-$cv-dark-blue: #0083b0;
+// COLORS
+$white-color: #fffdfa;
+$cv-primary-gradient: linear-gradient(180deg, #20303c 0%, #262626 100%);
+$dark-color: #262626;
+$light-gray: #afafaf;
 $cv-light-blue: #00b4db;
-$cv-teal: #134E4A;
-$transition-times: .8s .2s;
+
+// ANIMATIONS
+$transition-times: 0.8s 0.2s;
+
+// TEXT
+$section-title: 32px;
 
 .cv-page {
+  font-family: "Yanone Kaffeesatz", sans-serif, -apple-system;
   @apply min-h-screen w-screen flex;
   // SIDEBAR
   .sidebar {
@@ -16,7 +23,7 @@ $transition-times: .8s .2s;
     @apply min-w-[40px] lg:min-w-[100px] w-[40px] lg:w-[100px] z-10 h-screen flex flex-col items-center pt-10 fixed;
 
     h1 {
-      @apply mt-10 text-2xl font-bold mx-6;
+      @apply mt-10 text-3xl font-bold mx-6;
     }
 
     h2 {
@@ -24,20 +31,20 @@ $transition-times: .8s .2s;
     }
 
     p {
-      @apply text-lg mx-6 text-justify;
+      @apply text-lg font-light mx-6 text-justify;
     }
 
     hr {
       @apply h-2;
     }
-    
+
     .side-image {
       transition: $transition-times;
-      @apply w-60 h-60 lg:w-80 lg:h-80 border-8 rounded-full hover:cursor-pointer relative overflow-hidden;
+      @apply w-60 h-60 lg:w-[310px] lg:h-[310px] border-8 rounded-full hover:cursor-pointer relative overflow-hidden;
 
       .image-wrapper {
         border-color: $white-color;
-        
+
         @apply w-full left-[50%] top-[-30%] translate-x-[-50%] scale-x-[-1] absolute;
 
         &.tog {
@@ -52,7 +59,7 @@ $transition-times: .8s .2s;
       border-color: $cv-light-blue;
       @apply cursor-pointer z-50 absolute top-[280px] lg:top-[360px] -right-5 lg:-right-10 text-4xl lg:text-6xl border-4 rounded-full;
     }
-    
+
     .side-info {
       transition: $transition-times;
       @apply opacity-0 absolute lg:-left-20 text-slate-100 mt-60 lg:mt-80 w-full lg:w-[410px];
@@ -69,7 +76,7 @@ $transition-times: .8s .2s;
 
         button {
           background: $white-color;
-          color: $cv-dark-blue;
+          color: $dark-color;
           @apply px-4 py-2 mx-4 rounded-md cursor-pointer w-fit ml-auto;
 
           a {
@@ -85,7 +92,6 @@ $transition-times: .8s .2s;
 
       .side-image {
         .image-wrapper {
-
           &.tog {
             @apply block;
           }
@@ -104,75 +110,92 @@ $transition-times: .8s .2s;
     }
   }
 
-  // MAIN 
+  // MAIN
   .main-content {
-    color: $cv-teal;
+    color: $dark-color;
     background: $white-color;
     @apply absolute w-full min-h-screen lg:pl-[500px] pt-20;
 
     hr {
-      background: $cv-teal;
+      background: $dark-color;
       @apply h-1;
     }
 
+    h2 {
+      font-size: $section-title;
+      @apply font-semibold;
+    }
+
     .my-name {
-      @apply text-6xl font-semibold mb-2;
+      @apply text-8xl font-semibold mb-2;
     }
 
     .my-role {
-      color: $cv-dark-blue;
-      @apply text-4xl font-semibold mb-2;
+      color: $light-gray;
+      @apply text-6xl font-semibold mb-2;
     }
 
     .contact {
       @apply text-2xl font-normal flex items-center my-4;
 
-      a{
+      a {
         @apply ml-2 hover:underline;
       }
     }
+    .experience {
+      .position {
+        transition: $transition-times;
+        transition: max-height 1s ease-in-out;
+        max-height: 56px;
+        background: $cv-primary-gradient;
+        color: $white-color;
+        @apply h-full flex items-start my-4 mr-10 py-2 px-2 rounded-xl overflow-hidden;
 
-    .position {
-      transition: $transition-times;
-      transition: max-height 1s ease-in-out;
-      max-height: 56px;
-      @apply text-slate-100 bg-teal-900 h-full flex items-start my-4 mr-10 py-2 px-2 rounded-xl overflow-hidden;
+        &.toggled {
+          max-height: 600px;
 
-      &.toggled {
-        max-height: 600px;
+          .arrow {
+            transform: rotateZ(90deg);
+          }
+        }
 
         .arrow {
-          transform: rotateZ(90deg);
+          transition: $transition-times;
+          @apply text-4xl cursor-pointer;
+        }
+        h3,
+        h4,
+        p {
+          color: $dark-color;
+        }
+
+        h2 {
+          @apply font-semibold;
+        }
+        h3 {
+          @apply text-2xl font-medium;
+        }
+        h4 {
+          @apply text-xl;
+        }
+        p {
+          @apply text-lg whitespace-pre-line;
         }
       }
-
-      .arrow {
-        transition: $transition-times;
-        @apply text-4xl cursor-pointer;
-
-      }
-
-      h2 {
-        @apply text-4xl font-semibold;
-      }
-      h3 {
-        @apply text-teal-900 text-2xl font-medium;
-      }
-      h4 {
-        @apply text-teal-900 text-xl;
-      }
-      p {
-        @apply text-teal-900 text-lg whitespace-pre-line;
-      }
-    }
-    .recomendations, .certifications {
-      button {
-        all: initial;
-        font-family: "Dosis";
-        @apply bg-teal-900 text-slate-100 px-4 py-2 mx-4 rounded-md cursor-pointer;
-      }
-      h2, svg {
-        @apply text-4xl font-semibold;
+      .recomendations,
+      .certifications {
+        button {
+          all: initial;
+          font-family: inherit; 
+          background: $dark-color;
+          color: $white-color;
+          
+          @apply px-4 py-2 mx-4 rounded-md cursor-pointer;
+        }
+        h2,
+        svg {
+          @apply text-4xl font-semibold;
+        }
       }
     }
   }

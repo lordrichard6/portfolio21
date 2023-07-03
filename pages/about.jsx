@@ -1,6 +1,5 @@
 import React from "react";
 
-import Layout from "../components/Layout";
 import {
   AboutHeader,
   AboutQuote,
@@ -13,7 +12,7 @@ import Waves from "../components/_about/waves/index";
 
 export default function AboutPage() {
   return (
-    <Layout>
+    <>
       <AboutHeader />
       <AboutQuote />
       <AboutMeSection />
@@ -21,6 +20,6 @@ export default function AboutPage() {
       <HobbiesSection />
       <AboutGallery />
       <Waves />
-    </Layout>
+    </>
   );
 }
