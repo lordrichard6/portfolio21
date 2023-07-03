@@ -1,38 +1,21 @@
 @import './globals.css';
-@import './globals.scss';
+@import './variables.scss';
+@import './custom.scss';
 @import './typography.scss';
 @import './animations.scss';
 @import './stars.scss';
 @import "./404.scss";
-@import "./projects/page.scss";
 
-// SHARED
+@import "./layout.scss";
+
+@import "./homepage.scss";
+
+@import "./projects.scss";
+
+@import "./about.scss";
+
+@import "./contact.scss";
+
 @import './shared.scss';
-@import './shared/nintendoFont.scss';
 
-// LAYOUT
-@import './layout/nav.scss';
-@import './layout/footer.scss';
-
-// HOME
-@import './home/header.scss';
-@import './home/quote.scss';
-@import './home/aboutme.scss';
-@import './home/projects.scss';
-
-// PROJECTS
-@import "./projects/header.scss";
-@import "./projects/quote.scss";
-
-// ABOUT
-@import "./about/quote.scss";
-@import "./about/about_me.scss";
-@import "./about/services.scss";
-@import "./about/hobbies.scss";
-@import "./about/gallery.scss";
-
-// CONTACT
-@import "./contact/contact.scss";
-
-//CV
 @import "./cv-page.scss";

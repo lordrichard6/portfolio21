@@ -7,7 +7,7 @@ export default function MyImage() {
     <div className="logo-container flex-centered">
       <EntryAnimation className="w-full" animation={bringFromRight}>
         <ImagesComponent
-          style="image"
+          style="image w-full"
           alt="paulo reizinho crossed arms"
           src="/logo_crossed.png"
         />
