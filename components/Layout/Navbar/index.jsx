@@ -10,12 +10,14 @@ export default function Navbar({ toggle }) {
 
   const handleScroll = () => {
     const offset = window.scrollY;
-    if (offset > 1) {
+    if (offset > 400) {
       setScrolled(true);
     } else {
       setScrolled(false);
     }
   };
+
+  console.log(window.scrollY)
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);

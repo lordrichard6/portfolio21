@@ -12,7 +12,7 @@ export default function MobileMenu({ isOpen, toggle }) {
   let { t } = useTranslation();
 
   return (
-    <side isOpen={isOpen} onClick={toggle} style={{ right: isOpen ? "-60%" : "-100%" }} className="mobile-menu fixed top-0 right-0 w-full h-1/2 rounded-bl-xl flex flex-col z-40">
+    <side isOpen={isOpen} onClick={toggle} style={{ right: isOpen ? "-60%" : "-100%" }} className="mobile-menu fixed top-0 right-0 w-full h-3/5 rounded-bl-xl flex flex-col z-40">
       <div onClick={toggle}>
         <FaTimes className="text-5xl ml-[20%] mt-3" />
       </div>

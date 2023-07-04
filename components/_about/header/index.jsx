@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import React from "react";
 
-// import Animation from "./animation";
 import TitleComponent from "./title";
 import BackgroundComponent from "./background";
 import { StarsComponent } from "../../_shared";
@@ -12,7 +11,6 @@ export default function AboutHeader() {
       <TitleComponent />
       <BackgroundComponent />
       <StarsComponent />
-      {/* <Animation /> */}
     </Container>
   );
 }

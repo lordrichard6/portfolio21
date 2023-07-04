@@ -3,10 +3,7 @@
   background-position: center !important;
   background-size: cover !important;
 
-  @apply w-screen min-h-screen relative flex justify-center items-center py-24;
-
   .elements-wrapper {
-    @apply w-full flex-col-reverse xl:flex-row z-20 relative;
 
     .logo-container {
       @apply w-full xl:w-1/2 relative z-10;
@@ -21,32 +18,6 @@
         filter: drop-shadow(0px 0px 10px #34b3c1);
 
         @apply z-20 absolute -top-[30px] xl:bottom-0 lg:top-[unset] max-w-[700px];
-      }
-    }
-
-    .title-container {
-      @apply text-slate-100 w-full xl:w-1/2 flex flex-col z-30 -mt-40 lg:mt-0 absolute xl:relative -bottom-40 xl:bottom-0;
-
-      .main-title {
-        font-family: "Work Sans", sans-serif;
-        text-shadow: 1px 1px 1px #000, 3px 3px 5px #0094b5;
-
-        @apply mb-4 text-5xl md:text-7xl xl:text-8xl uppercase font-black lg:leading-tight text-center;
-      }
-      .sub-title {
-        @apply flex-centered;
-
-        .text {
-          text-shadow: 0 0 80px #7634c1, 0 0 30px #8a4dc7;
-          line-height: 2 !important;
-          @apply text-slate-100 lg:text-slate-900 uppercase text-2xl lg:text-5xl text-center font-bold flex;
-        }
-        div:first-of-type {
-          @apply pb-4;
-        }
-        div:last-of-type {
-          @apply pt-9 xl:pt-4 border-l-2 xl:border-l-4 border-slate-100;
-        }
       }
     }
   }

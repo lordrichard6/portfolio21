@@ -19,7 +19,7 @@ export default function HomepageTitleComponent() {
   };
 
   return (
-    <div className="title-container">
+    <div className="title-container w-full xl:w-1/2 flex flex-col z-30 -mt-40 lg:mt-0 absolute xl:relative -bottom-40 xl:bottom-0">
       <div className="main-title blue-glow">
         <EntryAnimation animation={bringFromLeft}>
           <h1>{t(texts.title_01)}</h1>
