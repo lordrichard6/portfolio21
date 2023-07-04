@@ -37,6 +37,10 @@ body {
   @apply w-10 tracking-tight leading-7 md:leading-6 text-2xl md:text-4xl font-normal text-slate-100;
 }
 
+.text-navlist {
+  @apply font-extralight text-4xl text-slate-100 tracking-wide px-4;
+}
+
 .home-about {
   div {
     @apply flex justify-between items-center my-2;

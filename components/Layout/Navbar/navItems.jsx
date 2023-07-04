@@ -12,10 +12,10 @@ export default function NavItems() {
   console.log(navItems);
 
   return (
-    <ul className="page-links">
+    <ul className="page-links flex flex-row justify-end m-0 z-10 list-none">
       {navItems.map((item, i) => {
         return (
-          <li key={i}>
+          <li key={i} className="text-navlist">
             <Link
               prefetch
               href={item.to}

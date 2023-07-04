@@ -6,7 +6,6 @@
   align-items: center;
   background: $background-primary;
   /* overflow-x: hidden; */
-  
 }
 
 .scrolled {
@@ -19,22 +18,10 @@
 
 // NAV
 .navbar-container {
-  position: absolute;
-  top: 0;
-  padding: 2px;
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  z-index: 199;
-  @apply lg:mt-8 py-2;
-
   .inner-container {
-    @apply flex justify-between items-center w-[80%] 2xl:w-[70%] relative;
-
     // LOGO
     .logo-container {
       a {
-        @apply cursor-pointer;
         .logo-image {
           @apply w-[46px] h-16 md:w-auto md:h-20 mr-2;
         }
@@ -43,23 +30,14 @@
 
     // NAVIGATION ELEMENTS
     .navigation-items {
-      @apply flex;
-
       .page-links {
-        @apply flex flex-row justify-end m-0 z-10 list-none;
-
         li {
-          display: none;
-          @media screen and (min-width: 1024px) {
-            display: inline-block;
-          }
-          @apply font-extralight text-3xl text-slate-100 px-4;
-
           a {
             cursor: pointer;
             position: relative;
             text-shadow: 0 0 80px #34b3c1, 0 0 30px #4dbbc7;
 
+            // glitch effect
             &::after {
               --slice-0: inset(50% 50% 50% 50%);
               --slice-1: inset(80% -6px 0 0);
@@ -147,86 +125,71 @@
           }
         }
       }
+    }
 
-      //   LANGUAGE CHANGER
-      .language-container {
-        @apply hidden lg:flex;
+    // LANGUAGE NAME
+    .lang-name {
+      h3 {
+        @apply text-2xl mb-1;
+      }
+      .arrow {
+        transition: 0.3s ease-in-out;
+        @apply ml-1;
+      }
+    }
 
-        .language-dropdown {
-          @apply flex relative;
+    // LANGUAGE CHANGER
+    .language-container {
+      @apply hidden lg:flex;
 
-          ul {
-            transition: 0.3s ease-in-out;
-            @apply lg:bg-slate-900 flex flex-col justify-center items-center list-none lg:absolute mx-auto top-10 right-0 w-[80px] overflow-hidden rounded-md;
+      .language-dropdown {
+        @apply flex relative;
 
-            li {
-              @apply text-2xl lg:text-xl text-slate-100 font-normal uppercase m-0;
+        ul {
+          transition: 0.3s ease-in-out;
+          @apply lg:bg-slate-900 flex flex-col justify-center items-center list-none lg:absolute mx-auto top-10 right-0 w-[80px] overflow-hidden rounded-md;
 
-              &:hover {
-                h3 {
-                  font-weight: 800;
-                }
-                figure {
-                  border-color: #fff;
-                  border-width: 2px;
-                }
+          li {
+            @apply text-2xl lg:text-xl text-slate-100 font-normal uppercase m-0;
+
+            &:hover {
+              h3 {
+                font-weight: 800;
+              }
+              figure {
+                border-color: #fff;
+                border-width: 2px;
               }
             }
           }
         }
       }
     }
+  }
+}
 
-    .menu-burger {
-      @apply lg:hidden;
-
-      @media screen and (max-width: 768px) {
-        transform: translate(-100%, -50%) !important;
-        font-size: 1.8rem !important;
+// MOBILE MENU
+.mobile-menu {
+  transition: 0.3s ease-in-out;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  .mobile-item {
+    a {
+      transition: 0.2s ease-in-out;
+      z-index: 200;
+      cursor: pointer;
+      color: $color-white;
+      font-size: 2rem;
+      font-weight: 200;
+      &.selected {
+        font-weight: 800;
       }
-      @media screen and (max-width: 1024px) {
-        width: max-content;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(-100%, -50%);
-        font-size: 2rem;
-        cursor: pointer;
-        color: #fff;
-      }
-      svg {
-        z-index: 201;
-        filter: drop-shadow(0 0 80px #34b3c1, 0 0 30px #4dbbc7);
+      &:hover {
+        transition: 0.2s ease-in-out;
       }
     }
   }
 }
-// LANGUAGE NAME
-.lang-name {
-  display: none;
-  @media screen and (min-width: 1024px) {
-    display: flex;
-  }
-  @apply items-center cursor-pointer uppercase font-bold ml-2;
 
-  .arrow {
-    transition: 0.3s ease-in-out;
-    @apply ml-1;
-  }
-}
-
-//FLAG CHOICE
-.flag-choice {
-  @apply flex justify-center items-center my-1;
-
-  h3 {
-    @apply ml-2 uppercase;
-  }
-
-  .flag {
-    @apply relative w-[24px] h-[24px] rounded-full overflow-hidden ml-2;
-  }
-}
 
 // FOOTER
 footer {

@@ -16,7 +16,7 @@ const Comets = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 100;
+  z-index: 10;
 
   #comets {
     position: relative;

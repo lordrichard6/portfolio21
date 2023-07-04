@@ -8,9 +8,9 @@ import { BiDownArrow } from "react-icons/bi";
 
 export const FlagChoice = ({ lang, flag }) => {
   return (
-    <div className="flag-choice">
-      <h3>{lang}</h3>
-      <figure className="flag">
+    <div className="flag-choice flex justify-center items-center my-1">
+      <h3 className="ml-2 uppercase">{lang}</h3>
+      <figure className="flag relative w-[24px] h-[24px] rounded-full overflow-hidden ml-2">
         <Image src={flag} alt={flag} fill />
       </figure>
     </div>
@@ -29,7 +29,7 @@ export default function LangChange() {
   // console.log("selected language", JSON.stringify(router.locale));
   return (
     <Language className="language-dropdown" isOpen={isOpen}>
-      <div onClick={toggle} className="lang-name">
+      <div onClick={toggle} className="lang-name hidden lg:flex items-center cursor-pointer uppercase font-bold ml-2">
         {router.locale === "pt" && <h3>pt</h3>}
         {router.locale === "en" && <h3>en</h3>}
         {router.locale === "de" && <h3>de</h3>}
@@ -38,7 +38,7 @@ export default function LangChange() {
       <ul>
         {router.locales.map((locale) => (
           <li key={locale}>
-            <Link href={router.asPath} locale={locale} passHref>
+            <Link className="text-2xl" href={router.asPath} locale={locale} passHref>
               <div
                 onClick={toggle}
                 className={
@@ -64,7 +64,7 @@ const Language = styled.div`
   ul {
     @media (min-width: 1024px) {
       opacity: ${({ isOpen }) => (isOpen ? "100" : "0")};
-      height: ${({ isOpen }) => (isOpen ? "110px" : "0px")};
+      height: ${({ isOpen }) => (isOpen ? "120px" : "0px")};
     }
   }
 `;
