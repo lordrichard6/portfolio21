@@ -1,4 +1,4 @@
-// import { ImagesComponent } from "../_shared";
+import { ImagesComponent } from "../_shared";
 import ContactsSection from "./contacts"
 import DownloadButton from "./button"
 import { AiOutlineHtml5 } from "react-icons/ai";
@@ -35,10 +35,10 @@ const titles = {
   techs: "Technologies",
 }
 
-// const myImage = {
-//   imgSrc: "/home_me_01.png",
-//   alt: "paulo reizinho"
-// }
+const myImage = {
+  imgSrc: "/home_me_01.png",
+  alt: "paulo reizinho"
+}
 
 const intro = `Inventive and creative Front End developer with abroad expertise
   in the modern Javascript frameworks as well as a strong 6th sense
@@ -85,11 +85,6 @@ const techs = [
   { icon: <SiAdobephotoshop /> },
 ];
 
-const button = {
-  text: "Download in PDF",
-  link: "https://drive.google.com/file/d/1RM1nWl7wQAJoGlOgxfNvSZFOIGsTy0oM/view?usp=drive_link"
-}
-
 export default function CVSide() {
 
   return (
@@ -106,12 +101,12 @@ export default function CVSide() {
       </div>
 
       <div className="side-image w-[310px] h-[310px] lg:w-[310px] lg:h-[310px] border-8 rounded-full hover:cursor-pointer relative overflow-hidden m-4">
-        {/* <ImagesComponent
-          style="image-wrapper"
+        <ImagesComponent
+          style="image-wrapper lg:hidden"
           alt={myImage.alt}
           src={myImage.imgSrc}
-        /> */}
-        <video className="image-wrapper w-full left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] scale-x-[-1] absolute" src="/videos/cv_vid_tog.mp4" loop autoPlay muted type="mp4"></video>
+        />
+        <video className="image-wrapper w-full hidden lg:block left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] scale-x-[-1] absolute" src="/videos/cv_vid_tog.mp4" loop autoPlay muted type="mp4"></video>
       </div>
       <div className="side-info lg:-left-20 text-slate-100 w-full lg:w-[410px]">
 
