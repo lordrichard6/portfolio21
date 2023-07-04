@@ -17,8 +17,6 @@ export default function Navbar({ toggle }) {
     }
   };
 
-  console.log(window.scrollY)
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   });
