@@ -4,20 +4,13 @@
   background-size: cover !important;
 
   .elements-wrapper {
-
     .logo-container {
-      @apply w-full xl:w-1/2 relative z-10;
-
       .image {
         filter: saturate(0.5);
-
-        @apply z-20 p-0 xl:p-6 max-w-[700px] lg:mx-auto;
       }
 
       .signature {
         filter: drop-shadow(0px 0px 10px #34b3c1);
-
-        @apply z-20 absolute -top-[30px] xl:bottom-0 lg:top-[unset] max-w-[700px];
       }
     }
   }
