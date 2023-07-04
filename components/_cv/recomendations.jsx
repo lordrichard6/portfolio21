@@ -1,7 +1,9 @@
 import {
-  FaCertificate
+  FaCertificate,
+  FaStar
 } from "react-icons/fa";
 
+const title = "Recomendations"
 
 const recomendations = [
   {
@@ -18,20 +20,20 @@ const recomendations = [
 
 export default function RecommendationsSection() {
   return (
-    <div className="recomendations">
-      <h2>
-        Recomendations
+    <div className="recomendations-container">
+      <h2 className="ml-6 text-3xl font-bold mx-6">
+        {title}
       </h2>
       <hr className="h-1" />
       {recomendations.map((item, i) => {
         return (
-          <div key={i} className="flex items-center mt-2">
-            <FaCertificate className="text-4xl" />
-            <button>
+          <div key={i} className="item-container flex items-center m-4">
+            <FaStar className="icon text-4xl" />
+            <button className='btn'>
               <a href={item.link} target="_blank" rel="noopener noreferrer">Check it out</a>
             </button>
-            <h2>{item.company}</h2>
-            <p className="uppercase">{item.language}</p>
+            <h2 className="font-semibold text-2xl lg:text-3xl">{item.company}</h2>
+            <p className="uppercase mb-3">{item.language}</p>
           </div>
         )
       })}

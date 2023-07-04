@@ -36,9 +36,9 @@ export default function ContactsSection() {
     <>
       {contact.map((item, i) => {
         return (
-          <div key={i} className="contact">
+          <div key={i} className="contact text-2xl font-normal flex items-center my-4">
             {item.icon}
-            <a target="_blank" rel="noopener noreferrer" href={item.link}>{item.contact}</a>
+            <a className="ml-2 underline lg:no-underline hover:underline" target="_blank" rel="noopener noreferrer" href={item.link}>{item.contact}</a>
           </div>
         )
       })}

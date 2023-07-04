@@ -26,6 +26,13 @@ import {
   SiWindows,
 } from "react-icons/si";
 
+const staticText = {
+  title: "Profissional Experience",
+  responsabilities: "My role and responsibilities in this company can be resumed in the following list:",
+  projects: "Projects I worked with:",
+  skills: "Techs/skills used/learned:"
+}
+
 const experience = [
   {
     company: "Helping Hand",
@@ -125,48 +132,56 @@ export default function ProfissionalExpSection() {
   };
 
   return (
-    <div className="experience">
-      <h2>
-        Profissional Experience
+    <div className="experience-container mt-8 lg:mt-0">
+      <h2 className="ml-6 text-3xl font-bold mx-6">
+        {staticText.title}
       </h2>
       <hr />
 
       {experience.map((item, i) => {
         return (
-          <div key={i} className={`position max-w-[775px] ${isOpen[item.class] ? "toggled" : ""}`}>
-            <FaArrowCircleRight onClick={() => toggle(item.class)} className="arrow mt-1" />
-            <div className="ml-2 w-full">
-              <div className="flex">
-                <h2 className="w-[240px]">{item.year}</h2>
-                <h2>| {item.company}</h2>
+          <div key={i} className={`position-container ${isOpen[item.class] ? "toggled" : ""}`}>
+            <div className="w-full">
+
+              <div className="position-head flex">
+                <FaArrowCircleRight onClick={() => toggle(item.class)} className="arrow mr-2" />
+                <div className="flex">
+                  <h2 className="w-[160px] lg:w-[240px] font-semibold text-2xl lg:text-3xl">{item.year}</h2>
+                  <h2 className="font-semibold text-2xl lg:text-3xl">| {item.company}</h2>
+                </div>
               </div>
-              <div className="bg-slate-100 rounded-lg mr-4 mt-2 px-2 py-3 w-full">
+
+              <div className="position-info bg-slate-100 rounded-lg mr-4 mt-2 px-2 py-3 w-full">
                 <h3>{item.role}</h3>
-                <p className="whitespace-pre-line mt-2">
-                  My role and responsibilities in this company can be resumed in the following list:
+                <p className="mt-2 text-lg font-bold leading-tight lg:leading-relaxed">
+                  {staticText.responsabilities}
                 </p>
+
                 <ul className="tasks">
                   {item.description.map((tasks, index) => (
-                    <li key={index}>{tasks}</li>
+                    <li className="text-lg leading-tight lg:leading-relaxed" key={index}>{tasks}</li>
                   ))}
                 </ul>
-                <div className="mt-4 projects">
-                  <p className="uppercase font-bold">Projects I worked with:</p>
+
+                <div className="projects-container text-slate-900 mt-4">
+                  <p className="uppercase font-bold">{staticText.projects}</p>
                   <div className="flex flex-wrap">
                     {item.projects.map((project, index) => (
-                      <a className="px-2 font-extrabold hover:underline" key={index} href={project.link} target="_blank" rel="noopener noreferrer">{project.name}</a>
+                      <a className="px-2 underline lg:no-underline font-extrabold hover:underline" key={index} href={project.link} target="_blank" rel="noopener noreferrer">{project.name}</a>
                     ))}
                   </div>
                 </div>
-                <div className="flex justify-between mt-4">
+
+                <div className="bottom-container flex justify-between mt-4">
                   <div className="icons flex flex-col justify-start">
-                    <p className="uppercase font-bold">Techs/skills used/learned:</p>
-                    <div className="flex flex-wrap text-3xl max-w-[300px]">
+                    <p className="uppercase font-bold">{staticText.skills}</p>
+                    <div className="icon-container flex flex-wrap text-3xl max-w-[200px] lg:max-w-[300px]">
                       {item.techs.map((icons, index) => (
-                        <span className="px-2" key={index}>{icons}</span>
+                        <span className="p-1" key={index}>{icons}</span>
                       ))}
                     </div>
                   </div>
+
                   <div className="reference flex flex-col text-slate-900 text-justify">
                     {item.reference.map((ref, index) => (
                       <span key={index}>{ref}</span>
