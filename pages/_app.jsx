@@ -10,7 +10,6 @@ import theme from "../config/theme";
 delete theme.styles.global;
 
 import LoadingScreen from "../components/_shared/loading"
-import Layout from "../components/Layout";
 
 //Binding events.
 Router.events.on("routeChangeStart", () => NProgress.start());
@@ -48,17 +47,17 @@ function MyApp({ Component, pageProps }) {
   }, [router.events])
 
   return (
-    <Layout>
+    <>
+
       {loading ? (
         <LoadingScreen />
       ) : (
         <ChakraProvider resetCSS={false} theme={theme}>
           <Component {...pageProps} />
         </ChakraProvider>
-
       )
       }
-    </Layout>
+    </>
   );
 }
 
