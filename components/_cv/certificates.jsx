@@ -79,7 +79,7 @@ export default function CertificatesSection() {
             <button className='btn' onClick={() => openPopup(i)}>
               {staticText.btnInfo}
             </button>
-            <h2 className='font-semibold text-2xl lg:text-3xl max-w-[160px] lg:max-w-none truncate'>{item.title}</h2>
+            <h2 className='font-semibold text-2xl lg:text-3xl max-w-[160px] lg:max-w-[300px] xl:max-w-none truncate'>{item.title}</h2>
             <p className="uppercase mb-3">{item.language}</p>
             {activeCert === i && (
               <div className="popup transition ease-in-out delay-150 w-full h-full flex-centered backdrop-sepia backdrop-blur-sm">
