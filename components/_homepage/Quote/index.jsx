@@ -17,23 +17,21 @@ export default function HomeQuote() {
     ;
 
   return (
-    <section className="home-quote">
+    <section className="home-quote section-y-short flex-centered relative w-full mb-20 sm:mb-0">
       <div className="background-gradient" />
-      <EntryAnimation animation={blured} style="image-quote">
-        <ImagesComponent
-          style="w-full opacity-50"
-          alt={main_image.alt}
-          src={main_image.image}
-        />
-      </EntryAnimation>
-      <EntryAnimation animation={textFromLeft} style="text-quote section-x-default text-primary flex flex-wrap">
-        <h1 className="font-light text-center">{t(quote.quote)}</h1>
-        <h2 className="font-bold">{quote.author}</h2>
-      </EntryAnimation>
-      {/* <TextAnimationWord
-        className="text-quote section-x-default text-primary flex flex-wrap"
-        text={t(quote)}
-      /> */}
+      <div className="section-width-default flex-centered h-full">
+        <EntryAnimation animation={blured} style="image-quote absolute top-1/2 left-1/2 w-[600px] lg:w-[800px]">
+          <ImagesComponent
+            style="w-full opacity-30"
+            alt={main_image.alt}
+            src={main_image.image}
+          />
+        </EntryAnimation>
+        <EntryAnimation animation={textFromLeft} style="text-quote text-primary flex flex-wrap">
+          <h1 className="text-center">{t(quote.quote)}</h1>
+          <h2 className="font-bold mt-6">{quote.author}</h2>
+        </EntryAnimation>
+      </div>
     </section>
   );
 }

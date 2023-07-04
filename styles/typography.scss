@@ -3,7 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poor+Story&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
 
@@ -24,8 +23,9 @@ body {
 }
 
 .text-quote {
-  text-shadow: 4px 4px 5px $color-dark;
-  @apply z-10 text-3xl md:text-4xl italic antialiased justify-center leading-relaxed md:leading-loose whitespace-pre-line;
+  // text-shadow: 4px 4px 5px $color-dark;
+  font-family: 'Marcellus', serif;
+  @apply z-10 text-2xl md:text-5xl italic antialiased justify-center whitespace-pre-line;
 }
 
 
@@ -55,7 +55,10 @@ body {
       @apply flex-centered;
 
       .text {
-        text-shadow: 0 0 80px #7634c1, 0 0 30px #8a4dc7;
+        text-shadow: 0 0 60px #FCFEFE, 0 0 20px #FCFEFE;
+        @media (min-width: 1280px) {
+          text-shadow: 0 0 80px #7634c1, 0 0 30px #8a4dc7;
+        }
         line-height: 2 !important;
         @apply text-slate-100 lg:text-slate-900 uppercase text-2xl lg:text-5xl text-center font-bold flex;
       }
@@ -69,23 +72,25 @@ body {
   }
 }
 
+// HOME ABOUT
 .home-about {
-  div {
-    @apply flex justify-between items-center my-2;
-  }
+
   h2 {
-    @apply text-6xl lg:text-7xl font-black blur-[1px];
+    @apply text-5xl lg:text-7xl font-black blur-[1.5px];
   }
   h3 {
-    @apply text-2xl lg:text-4xl font-light;
+    @apply text-2xl lg:text-4xl font-light blur-[0.5px];
   }
   h2, h3 {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    @apply antialiased my-2;
+    font-family: 'Dosis', sans-serif;
+    @apply antialiased my-2 tracking-tighter;
     span {
       div {
         @apply my-0;
       }
+    }
+    strong {
+      @apply font-black;
     }
   }
 }

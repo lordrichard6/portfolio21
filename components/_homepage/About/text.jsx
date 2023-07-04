@@ -28,12 +28,12 @@ export default function TextComponent() {
   };
 
   return (
-    <div className="home-about max-w-[290px] lg:max-w-full mx-auto">
+    <div className="home-about glass-container mx-auto px-4 lg:px-8 py-4 w-full">
       <EntryAnimation animation={textFromRight} delayTime={2}>
         <h2>
           {t(texts.first_line_01)}
           <ReactTypingEffect
-            text={t(texts.first_line_02)}
+            text={[t(texts.first_line_02), "👨‍💻", "🌍"]}
             speed={60}
             eraseDelay={600}
             className="ml-1"
@@ -46,7 +46,7 @@ export default function TextComponent() {
           <strong>
             {texts.name_01}
             <ReactTypingEffect
-              text={texts.name_02}
+              text={["Ricardo", "Lopes", texts.name_02]}
               speed={120}
               eraseDelay={700}
               className="ml-1"
@@ -59,7 +59,7 @@ export default function TextComponent() {
           {t(texts.third_line)} <strong>{texts.town}</strong>,
           <strong>
             <ReactTypingEffect
-              text={texts.country}
+              text={[texts.country, "🇵🇹"]}
               speed={80}
               eraseDelay={700}
               className="ml-1"
@@ -72,7 +72,7 @@ export default function TextComponent() {
           {t(texts.fourth_line_01)} <strong>{texts.city_actual}</strong>,
           <strong>
             <ReactTypingEffect
-              text={t(texts.fourth_line_02)}
+              text={[t(texts.fourth_line_02), "🇨🇭"]}
               speed={70}
               eraseDelay={700}
               className="ml-1"

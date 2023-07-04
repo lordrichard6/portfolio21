@@ -5,7 +5,6 @@ export { default as TextAnimationWord } from './ani_text_word';
 export { default as BtnPrimaryCTA } from './btn_primary_cta';
 export { default as BtnSecondaryCTA } from './btn_secondary_cta';
 export { default as ImagesComponent } from './images';
-export { default as ImagesDualEffectComponent } from './imagesDual';
 export { default as CardPrimary } from './card_primary';
 export { default as StarsComponent } from './background_stars';
 export { default as CometsComponent } from './background_comets';

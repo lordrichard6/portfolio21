@@ -18,8 +18,6 @@
 
 // QUOTE
 .home-quote {
-  @apply relative w-full flex-centered section-y-short mb-20 sm:mb-0;
-
   h1::before {
     content: '" ';
   }
@@ -40,51 +38,24 @@
     );
   }
   .image-quote {
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%) !important;
-    @apply absolute w-4/5 lg:w-[800px];
   }
 }
 
-// ABOUT
-.home-section-about {
-  @apply relative flex-col;
-
-  .content-wrapper {
-    @apply w-full flex-centered flex-col xl:flex-row my-6 lg:my-10 xl:w-[1100px];
-
-    .left-wrapper {
-      @apply order-1 w-full flex-centered flex-col;
-    }
-
-    .right-wrapper {
-      @apply order-2 min-w-[290px] lg:w-[430px] xl:w-full mt-6;
-
-      .home-about {
-        @apply mb-8 lg:mb-16;
-      }
-
-      .home-social {
-        @apply mt-10 mb-6;
-      }
-    }
-  }
-}
-
-@mixin sp-layout {
-  @media screen and (max-width: 750px) {
-    @content;
-  }
-}
-
-@function random_range($min, $max) {
-  $rand: random();
-  $random_range: $min + floor($rand * (($max - $min) + 1));
-  @return $random_range;
-}
-
+// STARS
 .outer-layer {
+  @mixin sp-layout {
+    @media screen and (max-width: 750px) {
+      @content;
+    }
+  }
+  
+  @function random_range($min, $max) {
+    $rand: random();
+    $random_range: $min + floor($rand * (($max - $min) + 1));
+    @return $random_range;
+  }
+
   overflow: hidden;
   .stars {
     position: absolute;
