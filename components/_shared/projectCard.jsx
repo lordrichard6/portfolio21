@@ -1,7 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import { SiGithub } from 'react-icons/si';
 
-export default function ProjectCard({ imageSrc, cardHeading, cardText, cardId, icon, link, tags, github }) {
+export default function ProjectCard({ imageSrc, cardHeading, cardText, cardId, icon, link, tags, github, style }) {
     let { t } = useTranslation();
 
     const buttons = {
@@ -11,7 +11,7 @@ export default function ProjectCard({ imageSrc, cardHeading, cardText, cardId, i
     }
 
     return (
-        <div className="cards-shared">
+        <div className={`cards-shared ${style}`}>
             <input type="checkbox" id={cardId} className="more" aria-hidden="true" />
             <div className="content">
                 <div className="front"
