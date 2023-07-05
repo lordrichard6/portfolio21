@@ -52,6 +52,9 @@
 }
 //  PROJECTS
 .projects-section-projects {
+  .projects-title {
+    border-bottom: 3px solid $color-white; 
+  }
   .cards-shared {
     @apply w-[320px] h-[300px] lg:w-[420px] lg:h-[340px];
   }

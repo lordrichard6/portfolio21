@@ -54,15 +54,11 @@ export default function HomeProjects() {
           {[...new Array(ROWS)].map((_, i) => (
             <InfiniteLoopSlider key={i} duration={random(DURATION - 5000, DURATION + 5000)} reverse={i % 2}>
               {shuffle(projects).slice(0, TAGS_PER_ROW).map(item => (
-                <div key={item} className="flex-row flex-wrap flex-centered">
+                <div key={item.cardId} className="flex-row flex-wrap flex-centered">
                   <ProjectCard
                     imageSrc={item.image}
                     imageAlt={item.alt}
                     cardHeading={item.title}
-                    cardText={item.shortText}
-                    link={item.link}
-                    cardId={item.cardId}
-                    icon={item.icon}
                     tags={item.tags}
                   />
                 </div>
@@ -72,22 +68,6 @@ export default function HomeProjects() {
           <div className='fade' />
         </div>
       </div>
-      {/* <EntryAnimation style="flex-row flex-wrap flex-centered" animation={bringUp}>
-        {featuredProjects.map((item, i) => {
-          return (
-            <ProjectCard
-            key={i}
-            imageSrc={item.image}
-            imageAlt={item.alt}
-            cardHeading={item.title}
-            cardText={item.shortText}
-            link={item.link}
-            cardId={item.cardId}
-            icon={item.icon}
-          />
-          )
-        })}
-      </EntryAnimation> */}
       <EntryAnimation animation={bringUp}>
         <BtnPrimaryCTA
           color="_3"

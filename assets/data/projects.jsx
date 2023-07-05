@@ -105,6 +105,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "",
     techs: ["Angular", "Django", "Docker"],
     link: "https://pickwings.ch/de/",
     github: "",
@@ -127,6 +128,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "In this web development project, I collaborated with a moving company to optimize their Joomla website for improved online visibility and user experience. Through targeted alterations and SEO enhancements, I ensured that their website attracts more potential customers and ranks higher in search engine results. Furthermore, I made small alterations to the Joomla website to enhance user experience and streamline navigation.",
     techs: ["Joomla"],
     link: "https://www.helpinghand.ch/",
     github: "",
@@ -151,6 +153,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "In this web development project, I created a modern and user-friendly e-commerce website for your business. The website features a seamless shopping experience, intuitive navigation, and a secure payment gateway. With a responsive design, it ensures a seamless browsing experience across devices. The site also includes inventory management, order tracking, and customer account functionality. By leveraging the latest web technologies, I've provided a solid foundation for your online business to thrive.",
     techs: ["NextJS","MongoDB", "TailwindCSS", "styled-components", "BCrypt", "Axios", "React Paypal"],
     link: "https://altynai-fashion.vercel.app/",
     github: "https://github.com/lordrichard6/altynai-ecommerce-shop",
@@ -173,6 +176,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "In this exciting web development project, I built a dynamic and immersive website using Next.js for a passionate car group of fans. The website serves as a hub for car enthusiasts to connect, share their experiences, and stay up-to-date with the latest automotive news and events.",
     techs: ["NextJS","styled-components", "React Icons", "Typescript"],
     link: "https://left-bastards.vercel.app/",
     github: "https://github.com/lordrichard6/left_bastards",
@@ -195,6 +199,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "In this remarkable web development project, I built a professional and elegant website using Next.js for a chauffeur company. The website serves as a powerful online platform that showcases the company's premium chauffeur services, creating a seamless experience for potential clients.",
     techs: ["NextJS","styled-components", "typescript", "Framer-motion", "Material-ui"],
     link: "https://www.sardinhadrive.ch/",
     github: "https://github.com/lordrichard6/patricia_project",
@@ -240,6 +245,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "In this captivating web development project, I created an immersive and visually stunning website for a tour company using React. The website serves as a captivating platform that showcases the company's extraordinary travel experiences, enticing users to embark on unforgettable journeys.",
     techs: ["ReactJS","SASS", "HTML"],
     link: "https://reizinho-skytours.netlify.com/",
     github: "https://github.com/lordrichard6/skytours",
@@ -262,6 +268,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "In this exciting web development project, I created a streaming platform inspired by Hulu, powered by React and integrated with the MovieDB API. This platform offers a vast collection of movies and TV shows, providing users with a seamless and immersive streaming experience.",
     techs: ["NextJS","TailwindCSS", "MovieDB APi"],
     link: "https://hulu-clone-rosy.vercel.app/",
     github: "https://github.com/lordrichard6/hulu_clone",
@@ -284,6 +291,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "Welcome to Monkey Market, the ultimate online destination for monkey enthusiasts looking to purchase adorable and exotic monkeys as pets. Our website, built with a user-friendly interface and integrated with the PayPal API, offers a secure and convenient platform for buying monkeys from trusted sellers.",
     techs: ["NextJS","Typescript", "SASS", "PAYPAL APi"],
     link: "https://monkeycircus-2z4e865i4.now.sh",
     github: "https://github.com/lordrichard6/monkeycircus",
@@ -416,7 +424,7 @@ export const projects = [
   // },
   {
     image: '/projects/limmatstadt.png',
-    alt: "",
+    alt: "limmastadt website",
     title: "Limmatstadt",
     creator: "Feinheit",
     myContribution: "Small Front-end and back-end changes",
@@ -426,6 +434,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "COMING SOON!",
     techs: ["Angular", "Django"],
     link: "https://www.limmatstadt.ch/",
     github: "",
@@ -438,7 +447,7 @@ export const projects = [
   },
   {
     image: '/projects/protier.png',
-    alt: "",
+    alt: "protier website",
     title: "Protier",
     creator: "Feinheit",
     myContribution: "Front-end implementation",
@@ -448,6 +457,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "COMING SOON!",
     techs: ["Angular", "Django"],
     link: "https://www.protier.ch/",
     github: "",
@@ -460,7 +470,7 @@ export const projects = [
   },
   {
     image: '/projects/bezahlbare-Wohnungen.png',
-    alt: "",
+    alt: "Bezahlbare Wohnungen project",
     title: "Bezahlbare Wohnungen",
     creator: "Feinheit",
     myContribution: "Front-end implementation",
@@ -470,9 +480,10 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "",
     techs: ["Angular", "Django"],
     link: "https://feinheit.ch/projekte/mehr-bezahlbare-wohnungen/",
-    github: "",
+    github: "COMING SOON!",
     icon: [<SiAngular key={0} />,<SiDjango key={1} />],
     type: 'profissional',
     date: '2019/11',
@@ -482,7 +493,7 @@ export const projects = [
   },
   {
     image: '/projects/feinheit.png',
-    alt: "",
+    alt: "Feinheit website",
     title: "Feinheit",
     creator: "Feinheit",
     myContribution: "Front-end small changes",
@@ -492,9 +503,10 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "",
     techs: ["Angular", "Django"],
     link: "https://feinheit.ch/",
-    github: "",
+    github: "COMING SOON!",
     icon: [<SiAngular key={0} />,<SiDjango key={1} />],
     type: 'profissional',
     date: '2019/10',
@@ -504,7 +516,7 @@ export const projects = [
   },
   {
     image: '/projects/fcz.png',
-    alt: "",
+    alt: "fcz website",
     title: "FCZ Website",
     creator: "Feinheit",
     myContribution: "Front-end small changes",
@@ -514,6 +526,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
+    shortText: "COMING SOON!",
     techs: ["Angular", "Django"],
     link: "https://www.fcz.ch/",
     github: "",

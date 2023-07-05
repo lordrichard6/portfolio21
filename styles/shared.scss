@@ -272,14 +272,12 @@ $accent-color: #0f2027;
     .description {
       grid-row: 3;
       grid-column: 1/-1;
-      font-size: 18px;
       border-radius: 5px;
-      font-weight: 600;
       line-height: 1.4em;
       overflow: auto;
       color: $color-white;
       padding-right: 10px;
-      @apply text-justify;
+      @apply text-justify text-lg lg:text-xl font-light;
     }
 
     .name {

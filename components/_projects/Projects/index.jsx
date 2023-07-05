@@ -17,6 +17,8 @@ import { EntryAnimation, ProjectCard } from "../../_shared";
 import ProjectsIntro from "./text";
 // import ProjectsExplanation from "./projectExplanation";
 
+const newIntro = "My portfolio reflects my proficiency in web development, demonstrated through projects utilizing Next.js, React.js, Angular, and other technologies. Whether in professional or personal environments, I have consistently delivered engaging, scalable, and user-friendly experiences with constant improvment in both UI and UX design. With a focus on performance, security, and intuitive design, I strive to create web solutions that drive business growth and exceed customer expectations. Explore my portfolio further to discover the range and depth of my projects."
+
 export default function ProjectsSection() {
   const sortedProjectsByDate = [...projects]
     .sort((a, b) => a.date.localeCompare(b.date))
@@ -28,7 +30,7 @@ export default function ProjectsSection() {
     <SectionContainer className="projects-section-projects">
       {/* <BackgroundGradient></BackgroundGradient> */}
       <EntryAnimation style="w-full flex justify-center" animation={bringUp}>
-        <ProjectsIntro pageIntro={t("projects:projects_intro")} />
+        <ProjectsIntro pageIntro={newIntro} />
       </EntryAnimation>
       {/* <ProjectsExplanation /> */}
       {/* <div className="flex w-full h-full justify-around">
@@ -41,6 +43,9 @@ export default function ProjectsSection() {
           />
         </EntryAnimation>
       </div> */}
+      <EntryAnimation style="projects-title section-width-default mt-6 mb-4" animation={bringUp}>
+        <h1 className="text-5xl lg:text-8xl font-black text-right">WEB DEVELOPMENT</h1>
+      </EntryAnimation>
       <div className="w-full flex-centered flex-wrap z-10">
         {sortedProjectsByDate.map((item, i) => {
           return (
