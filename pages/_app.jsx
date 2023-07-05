@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "../styles/index.scss";
 import Router, { useRouter } from "next/router";
 import NProgress from "nprogress"; //nprogress module
@@ -20,22 +20,14 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
 
-  React.useEffect(() => {
-    const handleRouteChange = (url) => {
-      setLoading(true)
-      const loadingTimeout = setTimeout(() => {
-        setLoading(false);
-      }, 1000);// Timeout duration in milliseconds
-
-      // Clear the timeout if the route changes before the timeout completes
-      router.events.on("routeChangeComplete", () => {
-        clearTimeout(loadingTimeout);
-      });
-    }
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setLoading(true);
+    };
 
     const handleRouteChangeComplete = () => {
-      setLoading(false)
-    }
+      setLoading(false);
+    };
 
     router.events.on('routeChangeStart', handleRouteChange)
     router.events.on('routeChangeComplete', handleRouteChangeComplete)
@@ -48,7 +40,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-
       {loading ? (
         <LoadingScreen />
       ) : (
