@@ -30,7 +30,7 @@ export default function AboutHeader() {
       <motion.div style={{ y: hill3 }} id="hill3" className="jungle">
         <ImagesComponent src="/about/hill3.png" alt="" />
       </motion.div>
-      <motion.h1 style={{ y: title }} id="about-title" className="about-title text-7xl lg:text-[10rem] uppercase font-black text-slate-900 tracking-wider" >About me</motion.h1>
+      <motion.h1 style={{ y: title }} id="about-title" className="about-title text-7xl md:text-[10rem] uppercase font-black text-slate-900 tracking-wider" >About me</motion.h1>
       <motion.div style={{ x: hill4 }} id="hill4" className="jungle">
         <ImagesComponent src="/about/hill4.png" alt="" />
       </motion.div>
