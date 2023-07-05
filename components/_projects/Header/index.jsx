@@ -17,9 +17,10 @@ export default function ProjectsHeader() {
 
   return (
     <SectionContainer className="projects-section-header relative flex-centered" id="top">
+      <div className="gradient"/>
       <ProjectsHeaderImage />
       <ProjectsHeaderTitle />
-      <div className="tri" />
+      {/* <div className="tri" /> */}
     </SectionContainer>
   );
 }
@@ -33,6 +34,14 @@ const SectionContainer = styled.header`
   padding: 0;
   border: 0;
   background: linear-gradient(to top, #283e51, #0a2342);
+
+  .gradient {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, #283e51,#283E51 10%, #0a234224);
+    z-index: 20;
+  }
 
 
   .tri {
