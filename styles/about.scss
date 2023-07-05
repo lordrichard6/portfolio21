@@ -1,3 +1,24 @@
+// HEADER
+.about-section-header {
+  // https://codepen.io/billyysea/pen/nLroLY
+  background: linear-gradient(to bottom, #2d91c2 0%,#1e528e 100%);
+  h1 {
+    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+  }
+  .jungle {
+    @apply absolute bottom-0 left-0 w-[300%] lg:w-[200%] xl:w-full pointer-events-none;
+  }
+  #hill5 {
+    @apply right-0 left-auto xl:right-auto xl:left-0;
+  }
+  #tree {
+    @apply -left-60 lg:left-0;
+  }
+  #leaf {
+    @apply right-0 left-auto xl:right-auto xl:left-0 bottom-auto top-0;
+  }
+}
+
 // QUOTE
 .about-quote {
   @apply relative w-full;
@@ -14,11 +35,17 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    // background: linear-gradient(
+    //   179.46deg,
+    //   #5c4963 5.46%,
+    //   rgba(233, 162, 129, 0.2) 68.65%,
+    //   rgba(187, 122, 121, 0) 89.54%
+    // );
     background: linear-gradient(
-      179.46deg,
-      #5c4963 5.46%,
-      rgba(233, 162, 129, 0.2) 68.65%,
-      rgba(187, 122, 121, 0) 89.54%
+      180deg,
+      #003429,
+      #00342978 50%,
+      #00342900 100%
     );
   }
 

@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
-export default function ImagesComponent({ style, alt, src }) {
+export default function ImagesComponent({ style, alt, src, id }) {
   return (
-    <ImageContainer className={`${style}`}>
+    <ImageContainer id={id} className={`${style}`}>
       <Image className="image object-cover object-center drop-shadow-xl overflow-visible" fill src={src} alt={alt} />
     </ImageContainer>
   );
