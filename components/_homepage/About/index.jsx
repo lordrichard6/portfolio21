@@ -33,10 +33,12 @@ export default function HomeAbout() {
         text={t(title)}
       />
       <div className="content-wrapper w-full flex-centered flex-col xl:flex-row my-6 lg:my-10 xl:w-[1100px]">
-        <div className="right-wrapper order-2 min-w-[290px] lg:w-1/2 w-full mt-6">
+
+        <div className="right-wrapper order-2 min-w-[290px] xl:w-1/2 w-full mt-6">
           <TextComponent />
         </div>
-        <EntryAnimation style="left-wrapper order-1 w-full lg:w-1/2 flex-centered flex-col" animation={bringFromLeft}>
+
+        <EntryAnimation style="left-wrapper order-1 w-full xl:w-1/2 flex-centered flex-col" animation={bringFromLeft}>
           <ImagesDualEffectComponent
             style="w-[260px] lg:w-[400px] h-[260px] lg:h-[400px] image-hover hover:cursor-pointer"
             alt="paulo reizinho"
@@ -45,7 +47,8 @@ export default function HomeAbout() {
           />
         </EntryAnimation>
       </div>
-      <EntryAnimation style="flex-centered w-full lg:h-[200px] my-4" animation={bringUp}>
+
+      <EntryAnimation style="socialmedia-buttons flex-centered w-full lg:h-[200px] my-4" animation={bringUp}>
         <ul className="home-social w-3/4">
           {SocialMedia.map((item, i) => {
             return (
@@ -59,7 +62,8 @@ export default function HomeAbout() {
           })}
         </ul>
       </EntryAnimation>
-      <EntryAnimation animation={bringUp}>
+
+      <EntryAnimation style="cta-button" animation={bringUp}>
         <BtnPrimaryCTA
           color="_2"
           text={t(button.text)}

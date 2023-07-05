@@ -1,6 +1,6 @@
 import useTranslation from "next-translate/useTranslation";
 
-export default function ProjectCard({imageSrc, cardHeading, cardText, cardId, icon, link}) {
+export default function ProjectCard({ imageSrc, cardHeading, cardText, cardId, icon, link, tags }) {
     let { t } = useTranslation();
 
     const buttons = {
@@ -9,14 +9,15 @@ export default function ProjectCard({imageSrc, cardHeading, cardText, cardId, ic
         visit: "common:visit"
     }
 
-  return (
-    <div className="cards-homepage">
+    return (
+        <div className="cards-homepage">
             <input type="checkbox" id={cardId} className="more" aria-hidden="true" />
             <div className="content">
                 <div className="front"
-                      style={{backgroundImage:`url(${imageSrc})`}}
+                    style={{ backgroundImage: `url(${imageSrc})` }}
                 >
-                    <div className="inner">
+                    <div className="inner text-center">
+                        <span className="text-xl font-bold ml-auto text-slate-800">{tags}</span>
                         <h2>{cardHeading}</h2>
                         <label for={cardId} className="button" aria-hidden="true">
                             {t(buttons.front)}
@@ -36,15 +37,15 @@ export default function ProjectCard({imageSrc, cardHeading, cardText, cardId, ic
                         </div>
                         <div className="name">{cardHeading}</div>
                         <label for={cardId} className="button return" aria-hidden="true">
-                        {t(buttons.back)}
+                            {t(buttons.back)}
                         </label>
                         <a className="button return visit" href={link} target="_blank" rel="noopener noreferrer" aria-hidden="true">
-                        {t(buttons.visit)}
+                            {t(buttons.visit)}
                         </a>
                     </div>
                 </div>
 
             </div>
         </div>
-  );
+    );
 }

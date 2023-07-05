@@ -67,7 +67,8 @@ export const projects = [
     type: 'personal',
     date: '2023/04',
     featured: true,
-    cardId: "card2"
+    cardId: "card2",
+    tags: ['web development']
   },
   {
     image: "/projects/fahrezentrale.png",
@@ -89,7 +90,8 @@ export const projects = [
     type: 'profissional',
     date: '2022/06',
     featured: true,
-    cardId: "card1"
+    cardId: "card1",
+    tags: ['web development']
   },
   {
     image: '/projects/pickwings.png',
@@ -110,6 +112,7 @@ export const projects = [
     type: 'profissional',
     date: '2022/05',
     featured: false,
+    tags: ['web development']
   },
   {
     image: '/projects/helping.png',
@@ -152,6 +155,7 @@ export const projects = [
     type: 'personal',
     date: '2022/09',
     featured: false,
+    tags: ['web development']
   },
   {
     image: "/projects/bastards.png",
@@ -212,7 +216,8 @@ export const projects = [
     icon: [<FaReact key={0}/>],
     type: 'personal',
     date: '2021/06',
-    featured: false,
+    featured: true,
+    cardId: "card3"
   },
   {
     image: "/projects/skytours.png",
