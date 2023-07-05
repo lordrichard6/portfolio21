@@ -4,15 +4,15 @@ import {
   TextAnimationLetter,
   BtnPrimaryCTA,
   EntryAnimation,
+  ProjectCard
 } from "../../_shared";
 import { projects } from "../../../assets/data/projects";
-import ProjectCard from './projectCard'
 
 import { bringUp } from "../../../utilities/framer-animations";
 
 
 const DURATION = 15000;
-const ROWS = 2;
+const ROWS = 3;
 const TAGS_PER_ROW = 8;
 
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;

@@ -51,6 +51,11 @@
   }
 }
 //  PROJECTS
+.projects-section-projects {
+  .cards-shared {
+    @apply w-[320px] h-[300px] lg:w-[420px] lg:h-[340px];
+  }
+}
 .profissional {
   @apply rounded-r-xl border-r-[1rem] mr-auto;
   .slide {

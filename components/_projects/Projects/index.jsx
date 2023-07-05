@@ -7,13 +7,13 @@ import { projects } from "../../../assets/data/projects";
 import { Colors } from "../../../assets/variables";
 import {
   bringUp,
-  bringFromLeft,
-  bringFromRight,
+  bringUp2,
 } from "../../../utilities/framer-animations";
-import { EntryAnimation } from "../../_shared";
+import { EntryAnimation, ProjectCard } from "../../_shared";
 
-import TitleRefexion from "./title";
-import ProjectComponent from "./project";
+
+// import TitleRefexion from "./title";
+// import ProjectComponent from "./project";
 import ProjectsIntro from "./text";
 // import ProjectsExplanation from "./projectExplanation";
 
@@ -25,13 +25,13 @@ export default function ProjectsSection() {
   let { t } = useTranslation();
 
   return (
-    <SectionContainer>
+    <SectionContainer className="projects-section-projects">
       {/* <BackgroundGradient></BackgroundGradient> */}
       <EntryAnimation style="w-full flex justify-center" animation={bringUp}>
         <ProjectsIntro pageIntro={t("projects:projects_intro")} />
       </EntryAnimation>
       {/* <ProjectsExplanation /> */}
-      <div className="flex w-full h-full justify-around">
+      {/* <div className="flex w-full h-full justify-around">
         <EntryAnimation style="w-1/2" animation={bringFromLeft}>
           <TitleRefexion word="PROFISSIONAL" />
         </EntryAnimation>
@@ -40,32 +40,24 @@ export default function ProjectsSection() {
             word={router.locale === "pt" ? "PESSOAL" : "PERSONAL"}
           />
         </EntryAnimation>
-      </div>
-      <div className="w-full flex flex-col z-10">
+      </div> */}
+      <div className="w-full flex-centered flex-wrap z-10">
         {sortedProjectsByDate.map((item, i) => {
           return (
-            <EntryAnimation
-              key={i}
-              style=""
-              animation={
-                item.type === "personal" ? bringFromRight : bringFromLeft
-              }
-            >
-              <ProjectComponent
-                date={item.date}
-                icon={item.icon}
-                type={item.type}
-                title={item.title}
-                creator={item.creator}
-                contribution={item.myContribution}
-                projectImage={item.image}
-                alt={item.alt}
-                text={item.text}
-                techs={item.techs}
+            <EntryAnimation key={i} animation={bringUp2(i - 0.9)}>
+              <ProjectCard
+                imageSrc={item.image}
+                imageAlt={item.alt}
+                cardHeading={item.title}
+                cardText={item.shortText}
                 link={item.link}
+                cardId={item.cardId}
+                icon={item.icon}
+                tags={item.tags}
+                github={item.github}
               />
             </EntryAnimation>
-          );
+          )
         })}
       </div>
     </SectionContainer>

@@ -68,7 +68,7 @@ export const projects = [
     date: '2023/04',
     featured: true,
     cardId: "card2",
-    tags: ['web development']
+    tags: ['#react', '#tailwind']
   },
   {
     image: "/projects/fahrezentrale.png",
@@ -91,7 +91,7 @@ export const projects = [
     date: '2022/06',
     featured: true,
     cardId: "card1",
-    tags: ['web development']
+    tags: ['#angular', '#django', '#docker']
   },
   {
     image: '/projects/pickwings.png',
@@ -112,7 +112,8 @@ export const projects = [
     type: 'profissional',
     date: '2022/05',
     featured: false,
-    tags: ['web development']
+    cardId: "card4",
+    tags: ['#angular', '#django', '#docker']
   },
   {
     image: '/projects/helping.png',
@@ -135,6 +136,8 @@ export const projects = [
     type: 'profissional',
     date: '2021/06',
     featured: false,
+    cardId: "card5",
+    tags: ['#joomla']
   },
   {
     image: "/projects/altynai.png",
@@ -155,7 +158,8 @@ export const projects = [
     type: 'personal',
     date: '2022/09',
     featured: false,
-    tags: ['web development']
+    cardId: "card6",
+    tags: ['#nextjs', '#tailwind', '#mongodb']
   },
   {
     image: "/projects/bastards.png",
@@ -176,6 +180,8 @@ export const projects = [
     type: 'personal',
     date: '2021/12',
     featured: false,
+    cardId: "card7",
+    tags: ['#nextjs', '#typescript']
   },
   {
     image: "/projects/sardinha.png",
@@ -196,6 +202,8 @@ export const projects = [
     type: 'profissional',
     date: '2021/11',
     featured: false,
+    cardId: "card8",
+    tags: ['#nextjs', '#typescript', '#framer-motion']
   },
   {
     image: "/projects/fastrent.png",
@@ -217,7 +225,8 @@ export const projects = [
     type: 'personal',
     date: '2021/06',
     featured: true,
-    cardId: "card3"
+    cardId: "card3",
+    tags: ['#reactjs', '#typescript', '#tailwind']
   },
   {
     image: "/projects/skytours.png",
@@ -238,6 +247,8 @@ export const projects = [
     type: 'personal',
     date: '2021/04',
     featured: false,
+    cardId: "card9",
+    tags: ['#reactjs']
   },
   {
     image: "/projects/hulu.png",
@@ -258,6 +269,8 @@ export const projects = [
     type: 'personal',
     date: '2021/04',
     featured: false,
+    cardId: "card10",
+    tags: ['#nextjs', '#tailwind']
   },
   {
     image: "/projects/monkey.png",
@@ -278,6 +291,8 @@ export const projects = [
     type: 'personal',
     date: '2020/03',
     featured: false,
+    cardId: "card11",
+    tags: ['#nextjs', '#typescript']
   },
   // {
   //   image: "/projects/sphere.png",
@@ -418,6 +433,8 @@ export const projects = [
     type: 'profissional',
     date: '2020/02',
     featured: false,
+    cardId: "card12",
+    tags: ['#angular', '#django']
   },
   {
     image: '/projects/protier.png',
@@ -438,6 +455,8 @@ export const projects = [
     type: 'profissional',
     date: '2020/01',
     featured: false,
+    cardId: "card13",
+    tags: ['#angular', '#django']
   },
   {
     image: '/projects/bezahlbare-Wohnungen.png',
@@ -458,6 +477,8 @@ export const projects = [
     type: 'profissional',
     date: '2019/11',
     featured: false,
+    cardId: "card14",
+    tags: ['#angular', '#django']
   },
   {
     image: '/projects/feinheit.png',
@@ -478,6 +499,8 @@ export const projects = [
     type: 'profissional',
     date: '2019/10',
     featured: false,
+    cardId: "card15",
+    tags: ['#angular', '#django']
   },
   {
     image: '/projects/fcz.png',
@@ -498,5 +521,7 @@ export const projects = [
     type: 'profissional',
     date: '2019/08',
     featured: false,
+    cardId: "card16",
+    tags: ['#angular', '#django']
   },
 ];
