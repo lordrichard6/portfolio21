@@ -1,13 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import React from "react";
 
-import {
-  bringUp,
-  bringFromLeft,
-  bringFromRight,
-} from "../../../utilities/framer-animations";
-
-import { TextAnimationLetter, EntryAnimation } from "../../_shared";
+import { TextAnimationLetter } from "../../_shared";
 import SingleService from "./service";
 
 const serviceCardsInfo = [
@@ -49,9 +43,9 @@ export default function AboutSevices() {
   let { t } = useTranslation();
 
   return (
-    <section className="about-section-services section-x-default section-y-default">
+    <section className="about-section-services section-y-default">
       <TextAnimationLetter className="title-primary-md flex justify-center" text="What can I do for you?" />
-      <div className="card-wrapper">
+      <div className="card-wrapper section-width-default flex flex-col sm:grid sm:grid-cols-3 gap-4 -ml-4">
         {serviceCardsInfo.map((item, i) => {
           return (
             <SingleService

@@ -21,8 +21,6 @@
 
 // QUOTE
 .about-quote {
-  @apply relative w-full;
-
   h1::before {
     content: '" ';
   }
@@ -50,22 +48,14 @@
   }
 
   .image-quote {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) !important;
-    @apply absolute w-4/5 lg:w-[800px];
+    transform: translate(-60%, -50%) !important;
   }
 }
 
 // ABOUT
 .about-section-about {
-  @apply relative flex-col;
-
   .content-wrapper {
-    @apply flex flex-col xl:grid xl:grid-cols-2 gap-4 xl:w-[1100px];
-
     .about-left-side {
-      @apply z-10;
       .first-paragraph::first-letter {
         font-size: 7rem;
         font-weight: 800;
@@ -164,14 +154,6 @@
 
 // SERVICES
 .about-section-services {
-  .card-wrapper {
-    @apply flex flex-col sm:grid sm:grid-cols-3 gap-4 -ml-4;
-  }
-
-  .service-card,
-  h3 {
-    font-family: "Yanone Kaffeesatz";
-  }
   .service-card {
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10.4px);
