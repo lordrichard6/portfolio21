@@ -1,8 +1,9 @@
 import useTranslation from "next-translate/useTranslation";
 import React, { useState } from "react";
 
-import { TextAnimationLetter, BtnBlue, ImagesComponent } from "../../_shared";
+import { TextAnimationLetter } from "../../_shared";
 import SingleService from "./service";
+import SevicesModal from "./modal"
 
 const IntroText01 = "Since 2019 I've been focused on my own self-development and I've found my passion in web/software development, but I also discovered that there are other skills worth learning and mastering."
 const IntroText02 = "You need to create and grow your online presence, well, I can help you create your brand, build the architecture and design your website, implement that design with the most modern technologies, develop a digital marketing strategy and can even help you get in shape, learn more in the cards below."
@@ -15,7 +16,17 @@ const serviceCardsInfo = [
     serviceName: "Design",
     textShort:
       "I create a modern design with most modern and intuitive UI and UX.",
-    serviceList:["service","service","service"],
+    serviceList: [
+      "Graphic Design: I've developed a strong foundation in graphic design principles, including color theory, typography, layout, composition, and visual hierarchy.",
+      "Adobe Photoshop: I've become proficient in industry-standard design software. This tool is commonly used for creating and manipulating graphics, illustrations, and layouts.",
+      "User Experience (UX) Design: I understand the principles of UX design, which involves creating intuitive and user-centered experiences. I've learn techniques such as user research, wireframing, prototyping, and usability testing to design effective and engaging interfaces.",
+      "User Interface (UI) Design: I acquired skills in UI design, focusing on crafting visually appealing and functional interfaces. Learn how to create pixel-perfect designs, develop design systems, collaborate with developers and as a developer myself, I make sure not to make the development process a living hell in design implementation.",
+      "Web Design: I've gained knowledge of web design concepts and best practices, including responsive design, grid systems, web typography, and designing for different devices and screen sizes.",
+      "Mobile App Design: I've familiarize yourself with the principles of mobile app design, including designing for iOS and Android platforms, creating app workflows, and understanding mobile design patterns and guidelines.",
+      "Design Thinking: I embraced a design thinking mindset, which involves empathy, problem-solving, iteration, and collaboration. My way to approach design challenges is by understanding users' needs and iterating through multiple design solutions.",
+      "Prototyping Tools: I've familiarize myself with the prototyping tool, Figma, which allow you to create interactive prototypes to showcase your design concepts and interactions.",
+      "Collaboration and Teamwork: I learned to collaborate effectively with other designers, developers, and stakeholders. I know how to give and receive constructive feedback, work in cross-functional teams, and contribute to a positive and collaborative design environment.",
+    ],
     card: "small-card",
   },
   {
@@ -24,7 +35,13 @@ const serviceCardsInfo = [
     serviceName: "Branding",
     textShort:
       "A strong brand is half the battle. You need to define your brand? Contact me.",
-    serviceList:["service","service","service"],
+    serviceList: [
+      "Brand Strategy: I understand the principles of brand strategy and be able to develop comprehensive brand strategies that align with the client's goals and target audience. This includes conducting market research, defining brand positioning, and developing brand attributes and values.",
+      "Brand Identity Design: I strive to create visually cohesive and impactful brand identities that represent the client's brand essence. This involves designing logos, color palettes, typography systems, and visual elements that reflect the brand's personality and values.",
+      "Visual Branding: I will help you develop a consistent visual language for the brand across various touchpoints, including marketing collateral, packaging, signage, digital assets, and social media graphics. Ensuring visual consistency while adapting the brand to different mediums and platforms.",
+      "Logo Design: Designing unique and memorable logos that encapsulate the essence of the brand. Considering scalability, versatility, and the ability to communicate the brand's identity effectively in different sizes and formats.",
+      "Software Proficiency: I'm proficient in industry-standard design software such as Photoshop, and Figma. I've familiarize yourself with tools for creating mockups, presentations, and design prototypes.",
+    ],
     card: "small-card",
   },
   {
@@ -33,7 +50,17 @@ const serviceCardsInfo = [
     serviceName: "Digital Marketing",
     textShort:
       "With SEO & SEM optimization, email and social media management.",
-    serviceList:["service","service","service"],
+    serviceList: [
+      "Digital Marketing Strategy: I've developed a strong understanding of digital marketing principles, channels, and tactics. Be able to create comprehensive digital marketing strategies that align with business goals, target audience, and market trends.",
+      "Market Research and Analysis: I'll conduct thorough market research to identify target audience demographics, behavior, needs, and preferences. I'll analyze market trends, competitors, and industry insights to inform digital marketing strategies and campaigns.",
+      "Content Marketing: Understand the importance of content in digital marketing and develop strategies for creating and distributing valuable, relevant, and engaging content across various channels. I've familiarize myself with content marketing tools, SEO techniques, and content promotion strategies.",
+      "Search Engine Optimization (SEO): I've gained expertise in SEO practices, including keyword research, on-page optimization, technical SEO, and link building. I understand how to optimize website content to improve search engine rankings and organic visibility.",
+      "Paid Advertising: I've familiarize yourself with different paid advertising channels such as Google Ads, social media advertising platforms (e.g., Facebook Ads, Instagram Ads, LinkedIn Ads), and display advertising networks. I've learn to plan, execute, and optimize paid ad campaigns to drive traffic, conversions, and brand visibility.",
+      "Social Media Marketing: I've develop a deep understanding of major social media platforms and their advertising features.",
+      "Email Marketing: I understand the fundamentals of email marketing and automation. Learned how to create effective email campaigns, segment the target audience, personalize content, and measure email campaign performance.",
+      "Data Analytics and Reporting: I've Familiarize myself with web analytics tools like Google Analytics to track and analyze digital marketing performance. I'm able to interpret data, generate actionable insights, and create comprehensive reports to measure the success of digital marketing campaigns.",
+      "Conversion Rate Optimization (CRO): I'll apply techniques to optimize website and landing page elements to improve conversion rates. I understand A/B testing, user experience (UX) design principles, and persuasive copywriting to maximize conversions and ROI."
+    ],
     card: "small-card",
   },
   {
@@ -42,7 +69,7 @@ const serviceCardsInfo = [
     serviceName: "Development",
     textShort:
       "Looking to build a robust online presence? Look no further! I specialize in developing top-notch websites and applications with a focus on SEO optimization. \n\nWith expertise in React, Next.js, and Angular, I can create dynamic and engaging online experiences that not only captivate your audience but also rank high in search engine results.",
-    serviceList:[
+    serviceList: [
       "Proficient in HTML: I understand and use HTML (Hypertext Markup Language) to structure the content of web pages.",
       "CSS Styling: I have a strong grasp of CSS (Cascading Style Sheets) to apply visual styles and layouts to web pages.",
       "JavaScript: I'm proeficient in JavaScript, a programming language that allows you to add interactivity, perform client-side validation, and manipulate web page elements dynamically.",
@@ -58,7 +85,7 @@ const serviceCardsInfo = [
       "Web Accessibility: I understand accessibility standards and guidelines (e.g., WCAG) to create websites that are inclusive and accessible to users with disabilities.",
       "Cross-Browser Compatibility: I'll ensure that your websites function correctly and consistently across different web browsers (e.g., Chrome, Firefox, Safari, Edge) and versions.",
       "Continuous Learning: I make sure to stay updated with the latest web technologies, frameworks, and industry trends by regularly learning and exploring new tools and techniques.",
-      ],
+    ],
     card: "big-card",
   },
   {
@@ -67,7 +94,15 @@ const serviceCardsInfo = [
     serviceName: "Copywriting",
     textShort:
       "Wanna drive client/user to your product or service? You need clever maketing campaings for that effect. Creativity has no limit or bounds.",
-    serviceList:["service","service","service"],
+    serviceList: [
+      "Writing Skills: I believe I have strong writing skills with a command of grammar, spelling, and punctuation. I'm able to write clear, concise, and compelling copy that engages and resonates with the target audience.",
+      "Copywriting Techniques: I'm familiarized with various copywriting techniques such as storytelling, persuasion, emotional appeal, and call-to-action (CTA) writing. I understand how to craft headlines, taglines, body copy, and other copy elements effectively.",
+      "Audience Understanding: I've develop the ability to understand and empathize with the target audience. Through conducting audience research to identify their needs, motivations, pain points, and preferences, and tailor your copy accordingly.",
+      "Brand Voice and Tone: I've learn how to adapt your writing style to match the brand's voice and tone. I understand brand guidelines and be able to consistently reflect the brand's personality and values in your copy.",
+      "SEO Copywriting: I've gained knowledge of search engine optimization (SEO) principles and techniques to write copy that is optimized for search engines. I understand keyword research, on-page optimization, meta tags, and other SEO factors that impact search rankings.",
+      "Digital Copywriting: I've learned to adapt my writing skills for various digital platforms, including websites, landing pages, email campaigns, social media, and online advertisements. I've learned to write concise and impactful copy that engages online readers and drives desired actions.",
+      "Storytelling: I strive to master the art of storytelling in your copywriting. Creating narratives that captivate and connect with the audience, evoke emotions, and effectively convey the brand's message and value proposition.",
+    ],
     card: "medium-card",
   },
   {
@@ -76,7 +111,13 @@ const serviceCardsInfo = [
     serviceName: "Fitness Instructor",
     textShort:
       "With over 15 years experience in the field, countless training plans applied. I can use my knowledge to help you achieve your best shape.",
-    serviceList:["service","service","service"],
+    serviceList: [
+      "Fitness Knowledge: I possess a strong understanding of fitness principles, exercise techniques, anatomy, physiology, and nutrition.",
+      "Exercise Instruction: I will demonstrate proficiency in teaching various exercise modalities, including cardiovascular exercises, strength training, flexibility, and functional movements.",
+      "Program Design: I'll create well-rounded and effective exercise programs tailored to different fitness levels, goals, and special considerations (e.g., injury prevention, modifications for specific populations).",
+      "Personal Training: I'm able to conduct fitness assessments, set realistic goals, design personalized exercise programs, and provide individualized coaching and feedback.",
+      "Self-Care and Wellness: I practice self-care and prioritize your own physical and mental well-being. Strive to be a positive role model for my clients by maintaining my own fitness and healthy lifestyle habits.",
+    ],
     card: "medium-card",
   },
 ];
@@ -115,22 +156,14 @@ export default function AboutSevices() {
               // textShort={t(item.text)}
               />
               {activeService === i && (
-                <div className="popup transition ease-in-out delay-150 w-screen h-screen flex-centered">
-                  <div className="flex-centered relative w-full h-full">
-                    <div onClick={closePopup} className="absolute w-full h-full hue-rotate-180 backdrop-blur-sm" />
-                    <div className="popup-content glass-container relative w-full max-w-[340px] sm:max-w-[600px] lg:max-w-[800px] xl:max-w-[1000px] max-h-full rounded-lg p-4 m-2">
-                      <ImagesComponent src={item.imgSrc} alt={item.alt} style="picture rounded-2xl border-none overflow-hidden max-h-[400px]" />
-                      <h1 className="text-6xl my-4">{item.serviceName}</h1>
-                      <p className="text-primary mb-2">{ListIntro}</p>
-                      <ul className="mb-4 py-2 border-t-2 border-b-2 border-slate-100 max-h-[260px] sm:max-h-[300px] lg:max-h-[400px] xl:max-h-[600px] overflow-y-auto">
-                        {item.serviceList.map((service, index) => <li className="text-lg sm:text-xl font-light my-1" key={index}>{service}</li>)}
-                      </ul>
-                      <div className="w-full flex justify-end">
-                        <BtnBlue onClick={closePopup} text="Contact me" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <SevicesModal
+                  onClick={closePopup}
+                  imgSrc={item.imgSrc}
+                  alt={item.alt}
+                  serviceName={item.serviceName}
+                  text={ListIntro}
+                  serviceList={item.serviceList}
+                />
               )}
             </>
           );

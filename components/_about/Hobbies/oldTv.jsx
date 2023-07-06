@@ -13,7 +13,7 @@ export default function HobbiesSection({hobby_1,hobby_2,hobby_3}) {
   return (
     <EntryAnimation style="w-full h-full relative" animation={bringUp}>
       <div
-        className={`btn-channel ${selectedElement === 1 ? "selected" : ""}`}
+        className={`btn-channel first ${selectedElement === 1 ? "selected" : ""}`}
         onClick={() => handleSelection(1)}
       />
       <div
@@ -61,7 +61,9 @@ export default function HobbiesSection({hobby_1,hobby_2,hobby_3}) {
         <div className={`hobby ${selectedElement === 3 ? "" : "hidden"}`}>
           <ImagesComponent src="/about/gym.jpg" alt="" style="h-full" />
         </div>
-        <div className="h-full w-full bg-slate-900" />
+        <div className="h-full w-full bg-slate-900">
+        <ImagesComponent src="/logo_gold.png" alt="" style="h-full p-10" />
+        </div>
       </div>
     </EntryAnimation>
   );

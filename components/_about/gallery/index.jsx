@@ -87,6 +87,11 @@ export const gallery = [
   // },
 ];
 
+const intro = {
+  paragraph_01: "Want to know more about me? Well check out some pictures of me and my family, I don't mind, in fact I encourage you to find out more about me, I am proud of myself and and my family They helped me come this far.", 
+  paragraph_02: "We should improve ourselves and move forward no just for us, but for those who love us and are there whenever we feel worse, without them we are empthy individuals waiting for the inevitable.",
+}
+
 export default function AboutGallery() {
   const [clickedImg, setClickedImg] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -99,6 +104,10 @@ export default function AboutGallery() {
   return (
     <section className="about-section-gallery">
       <TextAnimationLetter className="title-primary-md flex justify-center" text="Here's some pictures" />
+      <div className="section-width-default mx-auto mb-8">
+        <p className="text-primary">{intro.paragraph_01}</p>
+        <p className="text-primary">{intro.paragraph_02}</p>
+      </div>
       <div className="gallery-wrapper">
         {gallery.map((item, i) => {
           return (

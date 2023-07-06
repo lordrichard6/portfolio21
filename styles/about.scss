@@ -1,9 +1,9 @@
 // HEADER
 .about-section-header {
   // https://codepen.io/billyysea/pen/nLroLY
-  background: linear-gradient(to bottom, #2d91c2 0%,#1e528e 100%);
+  background: linear-gradient(to bottom, #2d91c2 0%, #1e528e 100%);
   h1 {
-    text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
+    text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
   }
   .jungle {
     @apply absolute bottom-0 left-0 w-[300%] md:w-[200%] xl:w-full pointer-events-none;
@@ -24,7 +24,7 @@
   h1::before {
     content: '" ';
   }
-  
+
   h1::after {
     content: ' "';
   }
@@ -39,12 +39,7 @@
     //   rgba(233, 162, 129, 0.2) 68.65%,
     //   rgba(187, 122, 121, 0) 89.54%
     // );
-    background: linear-gradient(
-      180deg,
-      #003429,
-      #00342978 50%,
-      #00342900 100%
-    );
+    background: linear-gradient(180deg, #003429, #00342978 50%, #00342900 100%);
   }
 
   .image-quote {
@@ -155,6 +150,7 @@
     backdrop-filter: blur(10.4px);
     box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.25);
     // border-radius: 20px;
+
     .picture {
       @apply rounded-2xl border-none overflow-hidden;
     }
@@ -211,6 +207,25 @@
     .popup-content {
       // background: $color-dark;
       color: $color-white;
+
+      ul {
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+    
+        &::-webkit-scrollbar-track {
+          background: transparent;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+          background: $color-white;
+          border-radius: 16px;
+        }
+    
+        &::-webkit-scrollbar-thumb:hover {
+          background: #b2d6bc;
+        }
+      }
 
       li {
         list-style-type: circle;
@@ -343,17 +358,21 @@
   .btn-channel {
     background: url("/about/btn-white.png");
 
-    @apply hidden sm:block w-[25px] h-[25px] top-[244px] right-[26px] lg:w-[40px] lg:h-[40px] lg:top-[356px] lg:right-[38px] 2xl:w-[55px] 2xl:h-[55px] 2xl:top-[520px] 2xl:right-[56px] cursor-pointer z-30 rounded-full absolute bg-center bg-cover;
+    @apply hidden sm:block w-[25px] h-[25px] top-[244px] lg:w-[40px] lg:h-[40px] lg:top-[356px] 2xl:w-[55px] 2xl:h-[55px] 2xl:top-[520px] cursor-pointer z-30 rounded-full absolute bg-center bg-cover;
     &:active {
       transform: translate(-2px, -2px);
     }
 
+    &.first {
+      @apply right-[28px] md:right-[126px] lg:right-[38px] xl:right-[198px] 2xl:right-[58px] 3xl:right-[176px];
+    }
+
     &.second {
-      @apply right-[62px] lg:right-[90px] 2xl:right-[134px];
+      @apply right-[62px] md:right-[164px] lg:right-[90px] xl:right-[198px] 2xl:right-[134px] 3xl:right-[254px];
     }
 
     &.third {
-      @apply right-[100px] lg:right-[144px] 2xl:right-[212px];
+      @apply right-[100px] md:right-[200px] lg:right-[144px] xl:right-[198px] 2xl:right-[212px] 3xl:right-[334px];
     }
 
     &.selected {

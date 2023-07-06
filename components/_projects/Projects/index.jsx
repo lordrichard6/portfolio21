@@ -27,7 +27,7 @@ export default function ProjectsSection() {
       <div className="w-full flex-centered flex-wrap z-10">
         {sortedProjectsByDate.map((item, i) => {
           return (
-            <EntryAnimation key={i} animation={bringUp2(i - 0.9)}>
+            <EntryAnimation key={i} animation={bringUp2(0.4)}>
               <ProjectCard
                 style="w-[320px] h-[300px] lg:w-[420px] lg:h-[340px]"
                 imageSrc={item.image}
