@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import MobileMenu from "./MobileMenu";
 import Navbar from "./Navbar";
@@ -11,6 +11,20 @@ export default function Layout({ children }) {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleScroll = () => {
+    if (isOpen) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
 
   return (
     <>
