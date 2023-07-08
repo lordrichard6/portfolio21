@@ -13,6 +13,8 @@ const createElement = root => {
   el.contentEditable = true;
   el.spellcheck = false;
   el.value = '';
+  el.id = 'cmd';
+
 
   root.appendChild(el);
 

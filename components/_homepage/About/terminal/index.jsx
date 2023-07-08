@@ -28,6 +28,14 @@ Type 'help for a list of available commands.
 
 `;
 
+const Mobilebanner = `
+Copyright (c) 2023 Paulo Reizinho
+<paulolopesreizinho@gmail.com>
+
+Type 'help' for a list of commands.
+
+`
+
 // Help text
 const helpText = `
 Available commands:
@@ -171,11 +179,12 @@ const browser = (function () {
 // document.addEventListener('DOMContentLoaded', load);
 
 export default function TerminalComponent() {
+  
   useEffect(() => {
     const load = () => {
       const t = terminal({
         prompt: () => `$ ${browser.pwd()} > `,
-        banner,
+        banner: window.innerWidth >= 640 ? banner : Mobilebanner,
         commands: {
           help: () => helpText,
           pwd: () => browser.pwd(),

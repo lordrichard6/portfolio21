@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import useTranslation from "next-translate/useTranslation";
 
 import {
@@ -24,8 +24,20 @@ const intro = {
   paragraph_02: "This terminal is just a way to give some interactivity to the website and make it more fun and also a way to have a taste of how the terminal works, which is a basic tool for the developer. \n Please enjoy!",
 }
 
+
+
 export default function HomeAbout() {
   let { t } = useTranslation();
+  // const [keyboardValue, setKeyboardValue] = useState('');
+
+  // const handleKeyPress = (key) => {
+  //   setKeyboardValue(prevValue => prevValue + key);
+  //   const textarea = document.getElementById('cmd');
+  //   textarea.value += key;
+  //   textarea.scrollTop = textarea.scrollHeight;
+  //   console.log(key)
+
+  // };
 
   const button = {
     link: "/about",
@@ -45,8 +57,8 @@ export default function HomeAbout() {
       </div>
       <div className="content-wrapper w-full flex-centered flex-col h-[600px] mb-[17rem] sm:h-auto xl:flex-row lg:my-10 xl:w-[1100px] relative">
         <ImagesComponent
-              style="absolute sm:hidden h-[990px] mt-[266px] ml-[18px]"
-              alt=""
+              style="absolute sm:hidden h-[990px] mt-[266px] ml-[18px] overflow-visible"
+              alt="good old nokia 3310"
               src="/home/nokia_3310.png"
             />
         <TerminalComponent />
