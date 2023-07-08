@@ -2,20 +2,27 @@ import React from "react";
 import useTranslation from "next-translate/useTranslation";
 
 import {
-  bringFromLeft,
+  // bringFromLeft,
   bringUp
 } from "../../../utilities/framer-animations";
 
-import TextComponent from "./text";
-import ImagesDualEffectComponent from "./imagesDual";
+// import TextComponent from "./text";
+// import ImagesDualEffectComponent from "./imagesDual";
 import {
   TextAnimationLetter,
   BtnPrimaryCTA,
   EntryAnimation,
-  SocialInclineBlock,
+  ImagesComponent
+  // SocialInclineBlock,
 } from "../../_shared";
 
-import { SocialMedia } from "../../../assets/data/social_media";
+// import { SocialMedia } from "../../../assets/data/social_media";
+import TerminalComponent from "./terminal";
+
+const intro = {
+  paragraph_01: "Want to know more about me? Check below this terminal screen and see if you can find my information, Please keep in mind this requires a little bit of patience and advanced knowledge.", 
+  paragraph_02: "This terminal is just a way to give some interactivity to the website and make it more fun and also a way to have a taste of how the terminal works, which is a basic tool for the developer. \n Please enjoy!",
+}
 
 export default function HomeAbout() {
   let { t } = useTranslation();
@@ -32,23 +39,32 @@ export default function HomeAbout() {
         className="title-primary-md flex-centered"
         text={t(title)}
       />
-      <div className="content-wrapper w-full flex-centered flex-col xl:flex-row my-6 lg:my-10 xl:w-[1100px]">
-
-        <div className="right-wrapper order-2 min-w-[290px] xl:w-1/2 w-full mt-6">
+            <div className="section-width-default mx-auto mb-8">
+        <p className="text-primary">{intro.paragraph_01}</p>
+        <p className="text-primary">{intro.paragraph_02}</p>
+      </div>
+      <div className="content-wrapper w-full flex-centered flex-col h-[600px] mb-[17rem] sm:h-auto xl:flex-row lg:my-10 xl:w-[1100px] relative">
+        <ImagesComponent
+              style="absolute sm:hidden h-[990px] mt-[266px] ml-[18px]"
+              alt=""
+              src="/home/nokia_3310.png"
+            />
+        <TerminalComponent />
+        {/* <div className="right-wrapper order-2 min-w-[290px] xl:w-1/2 w-full mt-6">
           <TextComponent />
-        </div>
+        </div> */}
 
-        <EntryAnimation style="left-wrapper order-1 w-full xl:w-1/2 flex-centered flex-col" animation={bringFromLeft}>
+        {/* <EntryAnimation style="left-wrapper order-1 w-full xl:w-1/2 flex-centered flex-col" animation={bringFromLeft}>
           <ImagesDualEffectComponent
             style="w-[260px] lg:w-[400px] h-[260px] lg:h-[400px] image-hover hover:cursor-pointer"
             alt="paulo reizinho"
             src="/home_me_01.png"
             src2="/home_me_03.png"
           />
-        </EntryAnimation>
+        </EntryAnimation> */}
       </div>
 
-      <EntryAnimation style="socialmedia-buttons flex-centered w-full lg:h-[200px] my-4" animation={bringUp}>
+      {/* <EntryAnimation style="socialmedia-buttons flex-centered w-full lg:h-[200px] my-4" animation={bringUp}>
         <ul className="home-social w-3/4">
           {SocialMedia.map((item, i) => {
             return (
@@ -61,7 +77,7 @@ export default function HomeAbout() {
             );
           })}
         </ul>
-      </EntryAnimation>
+      </EntryAnimation> */}
 
       <EntryAnimation style="cta-button" animation={bringUp}>
         <BtnPrimaryCTA

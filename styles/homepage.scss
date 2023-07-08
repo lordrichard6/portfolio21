@@ -380,3 +380,280 @@
     }
   }
 }
+
+// ABOUT
+.home-section-about {
+  $background-color: transparent;
+  $color: #fff;
+  $base-unit: 1em;
+  $font-size: 22px;
+  $chassis-background: #7b8e78;
+  $tablet-background: #000;
+  $chassis-margin: $base-unit * 3;
+  $interlace-background: linear-gradient(#888 50%, #000 50%);
+  $interlace-size: 4px;
+  $envelope-background: rgba(#000, 0.25);
+  $envelope-margin: 2em;
+  $scanline-background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(255, 250, 250, 1) 50%,
+    rgba(100, 255, 100, 1) 50%,
+    transparent 100%
+  );
+  $output-font-family: 'VT323', monospace;
+  $output-color: #18ff62;
+  $output-text-shadow: rgba(10, 255, 10, 0.8);
+  $output-line-height: 1.25;
+  $gradient-bottom: rgb(0, 30, 30);
+  $gradient-inner: rgb(0, 255, 119);
+  @media (min-width: 768px) {
+        
+  }
+
+  @mixin fill($top: 0, $left: 0, $right: 0, $bottom: 0) {
+    position: absolute;
+    left: $left;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+  }
+  #crt {
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    max-width: 1280px;
+    max-height: 1024px;
+    border-radius: 5em;
+    user-select: none;
+    font-size: $font-size;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    @apply w-[340px] h-[264px] sm:w-[600px] sm:h-[600px] md:w-[668px] md:h-[924px] lg:w-[924px] lg:h-[1266px] xl:w-[1280px] xl:h-[900px];
+
+    @media (min-width: 640px) {
+      background: $tablet-background;
+      border: 2px solid $color-light-gray;
+      border-radius: 2em;
+    }
+    @media (min-width: 1280px) {
+      background: $chassis-background;
+      box-shadow: inset 0.25em 0.25em 2px rgba(255, 255, 255, 0.4),
+      inset -0.25em -0.25em 2px rgba(0, 0, 0, 0.4);
+      border: none;
+      border-radius: $base-unit;
+    }
+  }
+
+  #screen {
+    position: relative;
+    z-index: 20;
+    width: calc(100% - #{$chassis-margin});
+    height: calc(100% - #{$chassis-margin});
+    margin-top: $chassis-margin / 2;
+    margin-left: $chassis-margin / 2;
+    background: #000;
+    border-radius: $base-unit;
+    overflow: hidden;
+    box-shadow: 0 0 1px 3px rgba(10, 10, 10, 0.7);
+
+    &::before {
+      @include fill();
+
+      content: "";
+      z-index: 70;
+      box-shadow: inset 0 0 $base-unit ($base-unit / 2) rgba(#fff, 0.08);
+      border-radius: $base-unit;
+    }
+
+    &::after {
+      @include fill();
+
+      content: "";
+      z-index: 60;
+      opacity: 0.1;
+      background: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.2)
+      );
+    }
+  }
+
+  #wrapper {
+    @include fill();
+
+    z-index: 30;
+    transform-origin: 50% 50%;
+    transform: skewX(0.5deg);
+    animation: pulse 5s linear infinite;
+
+    &::before {
+      @include fill();
+
+      content: "";
+      z-index: 31;
+      background: radial-gradient(
+        ellipse at center,
+        rgba($gradient-bottom, 0) 0%,
+        rgba($gradient-bottom, 0.5) 100%
+      );
+      pointer-events: none;
+    }
+
+    &::after {
+      @include fill();
+
+      content: "";
+      z-index: 32;
+      opacity: 0.5;
+      background: radial-gradient(
+        ellipse at center,
+        rgba($gradient-inner, 1) 0%,
+        rgba($gradient-inner, 0) 100%
+      );
+      pointer-events: none;
+      animation: glowCtr 2s linear infinite;
+    }
+  }
+
+  #interlace {
+    @include fill();
+
+    z-index: 21;
+    opacity: 0.25;
+    background: $interlace-background;
+    background-size: 100% $interlace-size;
+    background-repeat: repeat-y;
+  }
+
+  #envelope {
+    @include fill(
+      0em,
+      0em,
+      0em,
+      0em
+    );
+    @media (min-width: 640px) {
+      @include fill(
+        1em,
+        1em,
+        1em,
+        1em
+      );
+    }
+
+    @media (min-width: 1024px) {
+      @include fill(
+        $envelope-margin,
+        $envelope-margin,
+        $envelope-margin,
+        $envelope-margin
+      );
+    }
+
+    z-index: 40;
+    border-radius: $base-unit / 2;
+    background: $envelope-background;
+    animation: skew 5s linear infinite;
+  }
+
+  #scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $base-unit;
+    opacity: 0.1;
+    background: $scanline-background;
+    animation: scanline 1.25s linear infinite;
+  }
+
+  #terminal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+
+    textarea {
+      display: block;
+      background: transparent;
+      resize: none;
+      width: 100%;
+      height: 100%;
+      border: 0 none;
+      outline: 0 none;
+      box-sizing: border-box;
+      pointer-events: none;
+      margin: 0;
+      overflow: hidden;
+      padding: $base-unit;
+      color: $output-color;
+      text-shadow: 0 0 2px $output-text-shadow;
+      font-family: $output-font-family;
+      // font-size: inherit;
+      animation: blur 5s linear infinite;
+      // line-height: $output-line-height;
+      // white-space: pre-wrap;
+      @apply text-[18px] md:text-[16px] lg:text-[22px] leading-3 md:leading-4 lg:leading-snug text-left whitespace-normal; 
+    }
+  }
+  @keyframes scanline {
+    0% {
+      top: 0;
+    }
+  
+    100% {
+      top: 100%;
+    }
+  }
+  
+  @keyframes skew {
+    0% {
+      transform: skewX(0.5deg);
+    }
+  
+    8% {
+      transform: skewX(1deg) scale(1.0001);
+    }
+  
+    15% {
+      transform: skewX(0.6deg) skewY(-0.05deg);
+    }
+  
+    30% {
+      transform: skewX(0.6deg);
+    }
+  
+    100% {
+      transform: skewX(0.1deg);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.005);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes blur {
+    50% {
+      color: darken($output-color, 10%);
+      text-shadow: 2px 0 2px lighten($output-text-shadow, 50%);
+    }
+  }
+  
+  @keyframes glowCtr {
+    50% {
+      transform: scale(1.2);
+    }
+  }
+}
