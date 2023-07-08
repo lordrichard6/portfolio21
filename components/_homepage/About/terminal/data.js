@@ -173,8 +173,10 @@ export const terminal = (opts) => {
   $element.addEventListener('blur', focus);
   $element.addEventListener('keypress', input);
   $element.addEventListener('keydown', input);
+  $root.addEventListener('touchstart', input);
   window.addEventListener('focus', focus);
   $root.addEventListener('click', focus);
+  $root.addEventListener('touchstart', focus);
   $root.appendChild($element);
 
   render();
