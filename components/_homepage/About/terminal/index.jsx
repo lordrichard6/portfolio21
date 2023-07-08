@@ -43,7 +43,7 @@ cat <filename> - Lists file contents
 `;
 
 const CVLink = `
-Interactive CV - https://www.pauloreizinho.com/cv_1486
+Interactive CV - https://www.pauloreizinho.com/cv_4186
 `
 // Contact texts
 const contactInfo = {
