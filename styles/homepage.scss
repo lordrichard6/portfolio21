@@ -595,7 +595,7 @@
       animation: blur 5s linear infinite;
       // line-height: $output-line-height;
       // white-space: pre-wrap;
-      @apply text-[18px] md:text-[16px] lg:text-[22px] leading-3 md:leading-4 lg:leading-snug text-left whitespace-pre-line; 
+      @apply text-[18px] md:text-[16px] lg:text-[22px] leading-3 md:leading-4 lg:leading-snug text-left whitespace-pre-line z-20; 
     }
   }
   @keyframes scanline {

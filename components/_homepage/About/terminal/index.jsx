@@ -50,9 +50,8 @@ cd <dir> - Enters directory
 cat <filename> - Lists file contents
 `;
 
-const CVLink = `
-Interactive CV - https://www.pauloreizinho.com/cv_4186
-`
+const CVLink = 'https://www.pauloreizinho.com/cv_4186'
+
 // Contact texts
 const contactInfo = {
   email: 'paulolopesreizinho@gmail.com',
@@ -80,6 +79,7 @@ Type 'open to redirect you to the following contact.
 const notFound = `File not found
 
 Type 'help for a list of available commands.
+
 `
 
 const openContact = key => window.open(key === 'email'
