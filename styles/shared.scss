@@ -168,6 +168,32 @@ $accent-color: #0f2027;
     }
   }
 
+  .front-square {
+    transform-style: preserve-3d;
+    z-index: 10;
+    transform: translateZ(60px) scale(0.94);
+    &.top {
+      margin-left: 20px;
+      width: 50%;
+      height: 60%;
+      border-top: 4px solid;
+      border-left: 4px solid;
+      top: 5%;
+      left: 0;
+      // transform: translateY(-50%);
+    }
+    &.bottom {
+      margin-right: 20px;
+      width: 20%;
+      height: 60%;
+      border-bottom: 4px solid;
+      border-right: 4px solid;
+      bottom: 5%;
+      right: 0;
+      // transform: translateY(-50%);
+    }
+  }
+
   .front,
   .back {
     position: absolute;
@@ -183,7 +209,6 @@ $accent-color: #0f2027;
       height: 100%;
       display: grid;
       // padding: 1.5em;
-      transform: translateZ(80px) scale(0.94);
     }
   }
 
@@ -211,6 +236,7 @@ $accent-color: #0f2027;
     .inner {
       grid-template-rows: 5fr 1fr 1fr 2fr 1fr;
       justify-items: center;
+      transform: translateZ(80px) scale(0.94);
     }
 
     h2 {
@@ -244,6 +270,7 @@ $accent-color: #0f2027;
       margin-right: auto;
       color: $color-white;
       grid-row: 3;
+      transform: translateZ(60px) scale(0.94);
       &:not(:first-of-type):before {
         content: "";
         position: absolute;
@@ -287,15 +314,15 @@ $accent-color: #0f2027;
       justify-self: left;
     }
 
-    .button {
+    .button-wrapper {
       grid-column: 1/-1;
       justify-self: center;
+      grid-row: -1;
     }
   }
 
   .button {
     font-size: 32px;
-    grid-row: -1;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
@@ -303,7 +330,7 @@ $accent-color: #0f2027;
     display: block;
     background-color: transparent;
     border: solid 2px #fff;
-    color: #fff;
+    // color: #fff;
     border-radius: 4px;
     text-align: center;
     left: 50%;
@@ -314,25 +341,27 @@ $accent-color: #0f2027;
     @apply px-4 lg:px-8 lg:pt-1 text-2xl lg:text-4xl;
 
     &:hover {
-      background-color: #fff;
+      // background-color: #fff;
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       text-shadow: none;
-      color: $color-white;
+      // color: $color-white;
+      @apply bg-slate-100 text-slate-900;
     }
 
     &.return {
       color: $color-white;
-      border-color: $color-white;
       text-shadow: none;
       grid-column: auto;
+      @apply bg-slate-100 text-slate-900 border-slate-900;
       &:hover {
-        background-color: $color-white;
-        color: #fff;
-        box-shadow: none;
+        @apply bg-slate-900 text-slate-100;
       }
     }
     &.visit {
-      // grid-column: 1/-2;
+      @apply bg-slate-900 text-slate-100 border-slate-100;
+      &:hover {
+        @apply bg-slate-100 text-slate-900;
+      }
     }
   }
 
