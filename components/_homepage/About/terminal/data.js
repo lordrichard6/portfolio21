@@ -177,7 +177,7 @@ export const terminal = (opts) => {
   $element.addEventListener('keydown', input);
   $root.addEventListener('touchstart', input);
   window.addEventListener('focus', focus);
-  $root.addEventListener('click', focus);
+  // $root.addEventListener('click', focus);
   $root.addEventListener('touchstart', focus);
   $root.appendChild($element);
 
