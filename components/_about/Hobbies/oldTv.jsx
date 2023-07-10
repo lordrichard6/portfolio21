@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { bringUp } from "../../../utilities/framer-animations";
 import { ImagesComponent, EntryAnimation } from "../../_shared";
 
-export default function HobbiesSection({hobby_1,hobby_2,hobby_3}) {
+export default function HobbiesSection({ hobby_1, hobby_2, hobby_3 }) {
   const [selectedElement, setSelectedElement] = useState([1]);
 
   const handleSelection = (elementId) => {
@@ -17,15 +17,13 @@ export default function HobbiesSection({hobby_1,hobby_2,hobby_3}) {
         onClick={() => handleSelection(1)}
       />
       <div
-        className={`btn-channel second ${
-          selectedElement === 2 ? "selected" : ""
-        }`}
+        className={`btn-channel second ${selectedElement === 2 ? "selected" : ""
+          }`}
         onClick={() => handleSelection(2)}
       />
       <div
-        className={`btn-channel third ${
-          selectedElement === 3 ? "selected" : ""
-        }`}
+        className={`btn-channel third ${selectedElement === 3 ? "selected" : ""
+          }`}
         onClick={() => handleSelection(3)}
       />
       {/* MOBILE BTNS */}
@@ -61,8 +59,8 @@ export default function HobbiesSection({hobby_1,hobby_2,hobby_3}) {
         <div className={`hobby ${selectedElement === 3 ? "" : "hidden"}`}>
           <ImagesComponent src="/about/gym.jpg" alt="" style="h-full" />
         </div>
-        <div className="h-full w-full bg-slate-900">
-        <ImagesComponent src="/logo_gold.png" alt="" style="h-full p-10" />
+        <div className="h-full w-full bg-slate-900 relative">
+          <ImagesComponent src="/logo_gold.png" alt="" style="absolute top-1/2 -translate-y-[50%] p-[20%] blur-[1px]" />
         </div>
       </div>
     </EntryAnimation>

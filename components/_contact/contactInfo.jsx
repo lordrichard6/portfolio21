@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { TextAnimationLetter } from "../_shared";
 
+import { MdEmail, MdPermPhoneMsg } from "react-icons/md";
 import {
   FaHouseUser,
   FaPhoneAlt,
@@ -24,32 +25,37 @@ const texts = {
   line_05: "contact:text_line_05",
   line_06: "contact:text_line_06",
 };
-const email = {
-  link: "mailto: paulolopesreizinho@gmail.com",
-  email: "paulolopesreizinho@gmail.com",
-};
-
-const tel = {
-  link: "tel: +41787989533",
-  number: "(+41) 078 798 95 33",
-};
 
 const social_media = [
   {
+    link: "mailto: paulolopesreizinho@gmail.com",
+    icon: <MdEmail className="mr-2" alt="email paulo reizinho" />,
+    text: 'paulolopesreizinho@gmail.com'
+  },
+  {
+    link: "tel: +41787989533",
+    icon: <MdPermPhoneMsg className="mr-2" alt="phone number paulo reizinho" />,
+    text: '+41 78 798 95 33'
+  },
+  {
     link: "https://www.linkedin.com/in/pauloreizinho/",
     icon: <FaLinkedin alt="github paulo reizinho profile" />,
+    text: 'www.linkedin.com/in/pauloreizinho/'
   },
   {
     link: "https://www.instagram.com/paulo_reizinho/",
     icon: <FaInstagram alt="instagram paulo reizinho profile" />,
+    text: 'www.instagram.com/paulo_reizinho/'
   },
   {
     link: "https://github.com/lordrichard6",
     icon: <FaGithub alt="github paulo reizinho profile" />,
+    text: 'github.com/lordrichard6'
   },
   {
     link: "https://wa.link/sru6m7",
     icon: <FaWhatsapp alt="whatsapp paulo reizinho" />,
+    text: 'Whatsapp'
   },
 ];
 
@@ -57,32 +63,26 @@ export default function ContactInfo() {
   let { t } = useTranslation();
 
   return (
-    <section className="contact-section-info section-y-short section-x-default pt-24">
-      <TextAnimationLetter
-        className="title-primary-md flex-centered mb-10"
+    <div className="contact-section-info w-full xl:w-1/2 xl:pr-8 mb-8 xl:mb-0">
+      {/* <TextAnimationLetter
+        className="title-primary-md flex justify-center"
         text={t(texts.title)}
-      />
+      /> */}
       <p>{t(texts.line_01)}</p>
       <p>{t(texts.line_02)}</p>
       <p>{t(texts.line_03)}</p>
-      <p>
-        {t(texts.line_04)}
-        <a href={email.link}>{email.email}</a>
-      </p>
-      <p>
-        {t(texts.line_05)}
-        <a href={tel.link}>{tel.number}</a>
-      </p>
-      <p>{t(texts.line_06)}</p>
-      <div className="contact-social-links">
+      <div className="contact-social-links flex flex-col text-5xl justify-between lg:justify-start ml-[10%] xl:ml-0">
         {social_media.map((item, i) => {
           return (
-            <Link className="z-10" href={item.link} target="_blank" key={i}>
+            <span className="flex my-1" key={i}>
               {item.icon}
-            </Link>
+              <Link className="z-10 underline underline-offset-2 font-normal whitespace-nowrap" href={item.link} target="_blank" >
+                {item.text}
+              </Link>
+            </span>
           );
         })}
       </div>
-    </section>
+    </div>
   );
 }

@@ -163,6 +163,7 @@ export default function AboutSevices() {
                   serviceName={item.serviceName}
                   text={ListIntro}
                   serviceList={item.serviceList}
+                  href={'/contact'}
                 />
               )}
             </>

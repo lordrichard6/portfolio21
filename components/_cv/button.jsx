@@ -1,6 +1,6 @@
 const button = {
   text: "Download in PDF",
-  link: "https://drive.google.com/file/d/1RM1nWl7wQAJoGlOgxfNvSZFOIGsTy0oM/view?usp=drive_link"
+  link: "https://drive.google.com/file/d/1IO_-BXGE0MIFm0W-BKwrS5ADnF-mtA97/view?usp=drive_link"
 }
 
 export default function DownloadButton({style}) {

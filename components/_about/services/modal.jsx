@@ -1,7 +1,7 @@
 import { ImCross } from "react-icons/im";
 import { BtnBlue, ImagesComponent } from "../../_shared";
 
-export default function SevicesModal({onClick,imgSrc,alt,serviceName,text,serviceList}) {
+export default function SevicesModal({href, onClick,imgSrc,alt,serviceName,text,serviceList}) {
 
   return (
     <div className="popup transition ease-in-out delay-150 w-screen h-screen flex-centered">
@@ -16,7 +16,7 @@ export default function SevicesModal({onClick,imgSrc,alt,serviceName,text,servic
             {serviceList.map((item, index) => <li className="text-lg sm:text-xl font-light my-1" key={index}>{item}</li>)}
           </ul>
           <div className="w-full flex justify-end">
-            <BtnBlue onClick={onClick} text="Contact me" />
+            <BtnBlue href={href} text="Contact me" />
           </div>
         </div>
       </div>

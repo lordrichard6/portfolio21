@@ -1,6 +1,6 @@
 import useTranslation from "next-translate/useTranslation";
 
-import { blured, textFromLeft } from "../../../utilities/framer-animations";
+import { textFromLeft } from "../../../utilities/framer-animations";
 import { EntryAnimation, ImagesComponent } from "../../_shared";
 
 export default function HomeQuote() {

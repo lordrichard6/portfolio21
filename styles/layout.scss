@@ -195,6 +195,7 @@
 footer {
   position: relative;
   width: 100%;
+  height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,6 +204,7 @@ footer {
   background: #0f2027;
   overflow: hidden;
   z-index: 1;
+  max-height: 220px;
 
   .inner-wrapper {
     // display: grid;
