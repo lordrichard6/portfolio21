@@ -174,6 +174,7 @@ export const terminal = (opts) => {
   $element.addEventListener('focus', () => setSelectionRange($element));
   $element.addEventListener('blur', focus);
   $element.addEventListener('keypress', input);
+  $element.addEventListener('click', input);
   $element.addEventListener('keydown', input);
   $root.addEventListener('touchstart', input);
   window.addEventListener('focus', focus);
