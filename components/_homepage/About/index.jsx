@@ -52,15 +52,15 @@ export default function HomeAbout() {
         text={t(title)}
       />
             <div className="section-width-default mx-auto mb-8">
-        <p className="text-primary">{intro.paragraph_01}</p>
+        <p className="text-primary mb-2">{intro.paragraph_01}</p>
         <p className="text-primary">{intro.paragraph_02}</p>
       </div>
-      <div className="content-wrapper w-full flex-centered flex-col h-[600px] mb-[17rem] sm:h-auto xl:flex-row lg:my-10 xl:w-[1100px] relative">
-        <ImagesComponent
+      <div className="content-wrapper w-full flex-centered flex-col sm:h-auto xl:flex-row lg:my-10 xl:w-[1100px] relative">
+        {/* <ImagesComponent
               style="absolute sm:hidden h-[990px] mt-[266px] ml-[18px] overflow-visible"
               alt="good old nokia 3310"
               src="/home/nokia_3310.png"
-            />
+            /> */}
         <TerminalComponent />
         {/* <div className="right-wrapper order-2 min-w-[290px] xl:w-1/2 w-full mt-6">
           <TextComponent />
