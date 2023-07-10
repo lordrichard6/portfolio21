@@ -352,7 +352,7 @@ $accent-color: #0f2027;
       color: $color-white;
       text-shadow: none;
       grid-column: auto;
-      @apply bg-slate-100 text-slate-900 border-slate-900;
+      @apply bg-transparent text-slate-900 border-slate-900;
       &:hover {
         @apply bg-slate-900 text-slate-100;
       }
