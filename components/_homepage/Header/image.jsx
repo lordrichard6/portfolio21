@@ -10,7 +10,7 @@ export default function MyImage() {
           style="image w-full p-0 xl:p-6 max-w-[700px] lg:mx-auto"
           alt="paulo reizinho crossed arms"
           src="/logo_crossed.png"
-          priority
+          priority="true"
         />
         
       </EntryAnimation>

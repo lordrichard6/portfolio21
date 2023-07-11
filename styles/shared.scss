@@ -263,6 +263,11 @@ $accent-color: #0f2027;
       justify-items: center;
     }
 
+    .middle-stripe {
+      backdrop-filter: invert(100%);
+      -webkit-backdrop-filter: invert(100%);
+    }
+
     .info {
       position: relative;
       display: flex;

@@ -30,7 +30,7 @@ export default function ProjectCard({ imageSrc, cardHeading, cardText, cardId, i
                     </div>
                 </div>
                 <div className="back bg-slate-900 relative">
-                    <div className="absolute w-1/2 h-full top-0 left-[30%] -skew-x-[45deg] backdrop-invert z-10"></div>
+                    <div className="middle-stripe absolute w-1/2 h-full top-0 left-[30%] -skew-x-[45deg] backdrop-invert z-10"></div>
                     <div className="inner p-4">
                         <div className="description">
                             <p>{t(cardText)}</p>

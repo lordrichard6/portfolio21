@@ -52,6 +52,14 @@ const certifications = [
     tags: "Web development",
     skills: ["CSS techniques to create stunning designs and effects: clip-path, background-clip, mask-image, background-blend-mode, shape-outside, filter, backdrop-filter, object-fit, transform, column-count, hyphens, perspective, calc() and custom CSS properties", "Advanced CSS animations with @keyframes, animation, and transition", "Advanced CSS selectors, pseudo-classes, and pseudo-elements required for modern CSS development", "CSS architecture: The 7-1 rule, component-based design, the BEM methodology, writing reusable, maintainable, and scalable code", "Sass: variables, nesting, partials, imports, mixins, functions, extends", "NPM ecosystem", "Advanced responsive design workflows: mobile-first vs desktop-first strategies, selecting breakpoints, em vs rem units and feature queries to test for browser support", "Responsive images in HTML and CSS for faster pageloads: resolution switching, density switching, art direction", "Flexbox layouts: main concepts, introduction to both flex container and flex item-specific properties", "CSS Grid layouts: main concepts, CSS grid vs flexbox, and layout techniques applied to a real-world project",]
   },
+  {
+    title: "Responsive Web Design",
+    school: "FreeCodeCamp",
+    link: "https://drive.google.com/file/d/1hEbPYSURr-R66Ud1n9K67QDyiBXD_zUR/view?usp=drive_link",
+    language: "",
+    tags: "Web development",
+    skills: ["HTML and CSS","Build HTML Forms","CSS Box model, Flexbox, Grid, Animations, Typography, Pseudo selectors", "Responsive design principles"]
+  },
 ]
 
 export default function CertificatesSection() {

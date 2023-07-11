@@ -50,10 +50,10 @@ const mankind = [
   },
 ];
 
-function ManEvo({ key, classEvo, img }) {
+function ManEvo({ classEvo, img }) {
   return (
-    <figure key={key} className={`evolution ${classEvo}`}>
-      <Image src={img} responsive alt="mankind evolution" />
+    <figure className={`evolution ${classEvo}`}>
+      <Image src={img} alt="mankind evolution" />
     </figure>
   );
 }

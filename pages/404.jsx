@@ -147,7 +147,7 @@ export default function Page404() {
           </div>
           <div className="subtitle">Heyy! This page has never been born.</div>
           <button>
-            <Link prefetch href="/" passHref>
+            <Link href="/" passHref>
               Go back
             </Link>
           </button>

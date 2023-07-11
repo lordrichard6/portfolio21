@@ -17,7 +17,6 @@ export default function NavItems() {
         return (
           <li key={i} className="text-navlist">
             <Link
-              prefetch
               href={item.to}
               className={router.pathname === item.to ? "selected" : ""}
               passHref

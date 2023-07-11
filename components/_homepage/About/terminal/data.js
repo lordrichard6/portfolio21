@@ -172,13 +172,13 @@ export const terminal = (opts) => {
     : kbd[ev.type](ev);
 
   $element.addEventListener('focus', () => setSelectionRange($element));
-  $element.addEventListener('blur', focus);
+  // $element.addEventListener('blur', focus);
   $element.addEventListener('keypress', input);
   $element.addEventListener('keydown', input);
-  $root.addEventListener('touchstart', input);
   window.addEventListener('focus', focus);
-  $root.addEventListener('click', focus);
+  $root.addEventListener('touchstart', input);
   $root.addEventListener('touchstart', focus);
+  $root.addEventListener('click', focus);
   $root.appendChild($element);
 
   render();

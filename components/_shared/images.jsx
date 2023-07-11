@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
-export default function ImagesComponent({ style, alt, src, id }) {
+export default function ImagesComponent({ style, alt, src, id, priority }) {
   return (
-    <ImageContainer id={id} className={`${style}`}>
-      <Image className="image object-cover object-center" fill sizes="(max-width: 768px) 100vw, 700px)" src={src} alt={alt} />
+    <ImageContainer id={id} className={`relative ${style}`}>
+      <Image className="image object-cover object-center" fill sizes="(max-width: 768px) 100vw, 700px)" src={src} alt={alt} priority={priority} />
     </ImageContainer>
   );
 }

@@ -1,6 +1,6 @@
 export const header = {
   name: "Paulo Ricardo Lopes Reizinho",
-  title: "👨‍💻 Developer"
+  title: "👨‍💻 Web/Software Developer"
 }
 
 export default function HeaderSection() {

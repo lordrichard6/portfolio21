@@ -3,6 +3,7 @@ import ProfissionalExpSection from "./experience"
 import RecommendationsSection from "./recomendations"
 import CertificatesSection from "./certificates"
 import HeaderSection from './header'
+import TraitsSection from './traits'
 import DownloadButton from "./button"
 
 export default function CVMain() {
@@ -19,6 +20,8 @@ export default function CVMain() {
       <RecommendationsSection /> 
 
       <CertificatesSection />
+
+      {/* <TraitsSection /> */}
 
       <DownloadButton style="dark flex lg:hidden" />
     </div>

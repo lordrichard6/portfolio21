@@ -102,11 +102,11 @@ export default function CVSide() {
 
       <div className="side-image w-[310px] h-[310px] lg:w-[310px] lg:h-[310px] border-8 rounded-full hover:cursor-pointer relative overflow-hidden m-4">
         <ImagesComponent
-          style="image-wrapper lg:hidden"
+          style="image-wrapper"
           alt={myImage.alt}
           src={myImage.imgSrc}
         />
-        <video className="image-wrapper w-full hidden lg:block left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] scale-x-[-1] absolute" src="/videos/cv_vid_tog.mp4" loop autoPlay muted type="mp4"></video>
+        {/* <video className="image-wrapper w-full hidden lg:block left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] scale-x-[-1] absolute" src="/videos/cv_vid_tog.mp4" loop autoPlay muted type="mp4"></video> */}
       </div>
       <div className="side-info lg:-left-20 text-slate-100 w-full lg:w-[410px]">
 

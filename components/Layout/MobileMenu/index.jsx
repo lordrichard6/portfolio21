@@ -21,7 +21,7 @@ export default function MobileMenu({ isOpen, toggle }) {
           {navItems.map((item, i) => {
             return (
               <div className="mobile-item flex-centered" key={i} onClick={toggle}>
-                <Link prefetch href={item.to} className={router.pathname === item.to ? "selected" : ""} passHref>
+                <Link href={item.to} className={router.pathname === item.to ? "selected" : ""} passHref>
                   {t(item.tabName)}
                 </Link>
               </div>

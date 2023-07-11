@@ -12,7 +12,7 @@ import {
   TextAnimationLetter,
   BtnPrimaryCTA,
   EntryAnimation,
-  ImagesComponent
+  // ImagesComponent
   // SocialInclineBlock,
 } from "../../_shared";
 
@@ -21,7 +21,7 @@ import TerminalComponent from "./terminal";
 
 const intro = {
   paragraph_01: "Want to know more about me? Check below this terminal screen and see if you can find my information, Please keep in mind this requires a little bit of patience and advanced knowledge.", 
-  paragraph_02: "This terminal is just a way to give some interactivity to the website and make it more fun and also a way to have a taste of how the terminal works, which is a basic tool for the developer. \n Please enjoy!",
+  paragraph_02: "This terminal is just a way to give some interactivity to the website and make it more fun and also a way to have a taste of how the terminal works, which is a basic tool for the developer. \nType 'help' to start.",
 }
 
 
@@ -51,7 +51,7 @@ export default function HomeAbout() {
         className="title-primary-md flex-centered"
         text={t(title)}
       />
-            <div className="section-width-default mx-auto mb-8">
+      <div className="section-width-default mx-auto mb-8">
         <p className="text-primary mb-2">{intro.paragraph_01}</p>
         <p className="text-primary">{intro.paragraph_02}</p>
       </div>
