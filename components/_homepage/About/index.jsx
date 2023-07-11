@@ -25,7 +25,7 @@ const intro = {
 }
 
 const introMobile = {
-  paragraph_01: "Introduction should be brief and clear, I'm simple guy with an ambition the size of a black hole.",
+  paragraph_01: "Introduction should be brief and clear, I'm a simple guy with an ambition the size of a black hole.",
 }
 
 
