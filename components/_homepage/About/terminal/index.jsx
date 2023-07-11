@@ -221,7 +221,7 @@ export default function TerminalComponent() {
 
   return (
     <>
-      <div id="crt">
+      <div id="crt" className="hidden lg:block">
         <div id="screen">
           <div id="wrapper">
             <div id="interlace"></div>
