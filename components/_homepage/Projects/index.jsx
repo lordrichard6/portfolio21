@@ -51,7 +51,7 @@ export default function HomeProjects() {
           <p className="text-primary">{IntroText}</p>
         </div>
         <div className='tag-list'>
-          {[...new Array(ROWS)].map((_, i) => (
+          {/* {[...new Array(ROWS)].map((_, i) => (
             <InfiniteLoopSlider key={i} duration={random(DURATION - 5000, DURATION + 5000)} reverse={i % 2}>
               {shuffle(projects).slice(0, TAGS_PER_ROW).map(item => (
                 <div key={item.cardId} className="flex-row flex-wrap flex-centered">
@@ -64,7 +64,7 @@ export default function HomeProjects() {
                 </div>
               ))}
             </InfiniteLoopSlider>
-          ))}
+          ))} */}
           <div className='fade' />
         </div>
       </div>

@@ -2,12 +2,8 @@ import React, { useState, useEffect } from "react"
 import "../styles/index.scss";
 import Router, { useRouter } from "next/router";
 import NProgress from "nprogress"; //nprogress module
-import { ChakraProvider } from "@chakra-ui/react";
 
 import "nprogress/nprogress.css"; //styles of nprogress
-
-import theme from "../config/theme";
-delete theme.styles.global;
 
 import LoadingScreen from "../components/_shared/loading"
 
@@ -43,9 +39,7 @@ function MyApp({ Component, pageProps }) {
       {loading ? (
         <LoadingScreen />
       ) : (
-        <ChakraProvider resetCSS={false} theme={theme}>
-          <Component {...pageProps} />
-        </ChakraProvider>
+        <Component {...pageProps} />
       )
       }
     </>

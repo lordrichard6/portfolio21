@@ -1,4 +1,4 @@
-import { ContactInfo, ContactForm, MapComponent } from "../components/_contact";
+import { ContactInfo, MapComponent } from "../components/_contact";
 import Layout from "../components/Layout";
 
 export default function ProjectsPage() {
