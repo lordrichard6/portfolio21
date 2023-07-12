@@ -11,7 +11,7 @@ export default function Logo() {
     <div className="logo-container flex-centered">
       <div>
         <Link className="cursor-pointer" href="/" passHref>
-          <ImagesComponent style="logo-image" alt={logoAlt} src={logo} />
+          <ImagesComponent style="logo-image w-10 md:w-14" alt={logoAlt} src={logo} />
         </Link>
       </div>
       {/* <h1 className="navbar-name">{myName}</h1> */}
