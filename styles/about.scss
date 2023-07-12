@@ -54,7 +54,7 @@
       .first-paragraph::first-letter {
         color: orangered;
         letter-spacing: 0.6px;
-        @apply float-left font-black text-[7rem] mt-5 mr-3;
+        @apply float-left font-black text-5xl lg:text-8xl pt-1 mr-3;
       }
     }
     .about-right-side {

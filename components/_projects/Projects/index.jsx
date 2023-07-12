@@ -24,10 +24,10 @@ export default function ProjectsSection() {
       <EntryAnimation style="projects-title section-width-default mt-6 mb-4" animation={bringUp}>
         <h1 className="text-5xl lg:text-8xl font-black text-right">WEB DEVELOPMENT</h1>
       </EntryAnimation>
-      <div className="w-full flex-centered flex-wrap z-10">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-2 items-center z-10">
         {sortedProjectsByDate.map((item, i) => {
           return (
-            <EntryAnimation key={i} animation={bringUp2(0.4)}>
+            <EntryAnimation style="flex justify-center" key={i} animation={bringUp2(0.4)}>
               <ProjectCard
                 style="w-[320px] h-[300px] lg:w-[420px] lg:h-[340px]"
                 imageSrc={item.image}

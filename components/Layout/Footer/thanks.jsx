@@ -1,5 +1,3 @@
-import styled from "styled-components";
-import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 
 import { SiNextdotjs } from "react-icons/si";
@@ -23,7 +21,7 @@ export default function FooterSignature() {
       {/* <h1>{t("common:thanks")}</h1> */}
       <div className="image-container flex-centered">
         <ImagesComponent
-          style="signature-image"
+          style="signature-image w-[314px]"
           alt={imageAlt}
           src={signature}
         />
