@@ -23,7 +23,7 @@
     .logo-container {
       a {
         .logo-image {
-          @apply w-[46px] h-16 md:w-auto md:h-20 mr-2;
+          @apply w-[46px] h-16 md:w-full md:h-20 mr-2;
         }
       }
     }
