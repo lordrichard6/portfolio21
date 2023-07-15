@@ -103,6 +103,12 @@ export const home_title = {
   sub_title_01: "home:header_sub_title_01",
   sub_title_02: "home:header_sub_title_02",
 }
+export const home_quote = {
+  image: "/home/jordan_b&w.png",
+  alt: "jordan peterson black and white photoshoped with dipping effect",
+  quote: "home:quote_home",
+  author: "Jordan Peterson"
+}
 
 // PROJECTS ---------------------------------------------------------------
 // ABOUT ---------------------------------------------------------------
