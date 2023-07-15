@@ -39,15 +39,15 @@ export default function HomeAbout() {
         text={t(home_about.title)}
       />
       {/* TEXT DESKTOP */}
-      <div className="section-width-default mx-auto mb-8">
+      <div className="section-width-default mx-auto mb-8 hidden lg:block">
         <p className="text-primary mb-4">{home_about.intro_mobile}</p>
         <p className="text-primary mb-4">{home_about.intro_01}</p>
         <p className="text-primary">{home_about.intro_02}</p>
       </div>
       {/* TEXT MOBILE */}
-      {/* <div className="section-width-default mx-auto mb-8 lg:hidden">
+      <div className="section-width-default mx-auto mb-8 lg:hidden">
         <p className="text-primary mb-2">{home_about.intro_mobile}</p>
-      </div> */}
+      </div>
 
       <div className="content-wrapper w-full flex-centered flex-col sm:h-auto xl:flex-row lg:my-10 xl:w-[1100px] relative">
         {/* <ImagesComponent
@@ -60,7 +60,7 @@ export default function HomeAbout() {
         <TerminalComponent />
 
         {/* IMAGES AND TEXT ANIMATION */}
-        {/* <div className="right-wrapper order-2 min-w-[290px] xl:w-1/2 w-full mt-6 lg:hidden">
+        <div className="right-wrapper order-2 min-w-[290px] xl:w-1/2 w-full mt-6 lg:hidden">
           <TextComponent />
         </div>
         <EntryAnimation style="left-wrapper order-1 w-full flex items-center flex-col lg:hidden" animation={bringFromLeft}>
@@ -71,11 +71,11 @@ export default function HomeAbout() {
             src={home_about.dual_img.img_01.img}
             src2={home_about.dual_img.img_02.img}
           />
-        </EntryAnimation> */}
+        </EntryAnimation>
       </div>
 
       {/* SOCIAL BTNS */}
-      {/* <EntryAnimation style="socialmedia-buttons flex justify-center w-full lg:hidden my-4" animation={bringUp}>
+      <EntryAnimation style="socialmedia-buttons flex justify-center w-full lg:hidden my-4" animation={bringUp}>
         <ul className="home-social w-3/4">
           {SocialMedia.map((item, i) => {
             return (
@@ -88,7 +88,7 @@ export default function HomeAbout() {
             );
           })}
         </ul>
-      </EntryAnimation> */}
+      </EntryAnimation>
 
       <EntryAnimation style="cta-button" animation={bringUp}>
         <BtnPrimaryCTA
