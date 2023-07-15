@@ -1,6 +1,7 @@
+import SignatureComponent from "./signature";
 import { EntryAnimation, ImagesComponent } from "../../_shared";
 import { bringFromRight } from "../../../utilities/framer-animations";
-import SignatureComponent from "./signature";
+import { home_heroImage } from "../../../assets/data";
 
 export default function MyImage() {
   return (
@@ -8,8 +9,8 @@ export default function MyImage() {
       <EntryAnimation style="w-full" animation={bringFromRight}>
         <ImagesComponent
           style="image w-full p-0 xl:p-6 max-h-[80vh] max-w-[700px] lg:mx-auto"
-          alt="paulo reizinho crossed arms"
-          src="/logo_crossed.png"
+          alt={home_heroImage.alt}
+          src={home_heroImage.img}
           priority="true"
         />
         

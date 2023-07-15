@@ -77,7 +77,33 @@ export const languages = [
   }
 ]
 
+export const logos = [
+  {
+    img: "/logo_white.svg",
+    alt: "paulo lopes reizinho logo white"
+  },
+  {
+    img: "/logo_gold.png",
+    alt: "paulo lopes reizinho logo gold"
+  },
+]
 // HOMEPAGE ---------------------------------------------------------------
+export const home_heroBackground = {
+  img: "/home/home_header.jpg",
+  alt: "man dream about space"
+}
+export const home_heroImage = {
+  img: "/logo_crossed.png",
+  alt: "paulo reizinho crossed arms"
+}
+export const home_title = {
+  title_01: "home:header_main_title_01",
+  title_02: "home:header_main_title_02",
+  title_03: "home:header_main_title_03",
+  sub_title_01: "home:header_sub_title_01",
+  sub_title_02: "home:header_sub_title_02",
+}
+
 // PROJECTS ---------------------------------------------------------------
 // ABOUT ---------------------------------------------------------------
 // CONTACT ---------------------------------------------------------------
