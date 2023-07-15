@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { BiDownArrow } from "react-icons/bi";
+import { languages } from "../../../assets/data"
 
 export const FlagChoice = ({ lang, flag }) => {
   return (
@@ -30,9 +31,7 @@ export default function LangChange() {
   return (
     <Language className="language-dropdown" isOpen={isOpen}>
       <div onClick={toggle} className="lang-name hidden lg:flex items-center cursor-pointer uppercase font-bold ml-2">
-        {router.locale === "pt" && <h3>pt</h3>}
-        {router.locale === "en" && <h3>en</h3>}
-        {router.locale === "de" && <h3>de</h3>}
+        {languages.map((lang, i) => router.locale === lang.name && <h3 key={i}>{lang.name}</h3>)}
         <BiDownArrow className="arrow" />
       </div>
       <ul>
@@ -45,9 +44,7 @@ export default function LangChange() {
                   router.locale === locale ? "font-bold" : "font-extralight"
                 }
               >
-                {locale === "pt" && <FlagChoice lang="pt" flag="/pt.svg" />}
-                {locale === "en" && <FlagChoice lang="en" flag="/en.svg" />}
-                {locale === "de" && <FlagChoice lang="de" flag="/de.svg" />}
+                {languages.map((lang, i) => locale === lang.name && <FlagChoice key={i} lang={lang.name} flag={lang.flag} />)}
               </div>
             </Link>
           </li>

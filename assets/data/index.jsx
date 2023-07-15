@@ -7,24 +7,10 @@ import bannerEdu from "../images/homepage/banner_02.jpg";
 
 // Home
 import backgroundHome from "../images/homepage/header_01.jpg";
-import logoWhite from "../../public/logo_crossed_signature.png";
 import aboutMeImg from "../images/homepage/blue_01.jpg";
-// import hobby_01 from "../images/homepage/hobby_01.jpg";
-// import hobby_02 from "../images/homepage/hobby_02.jpg";
-// import hobby_03 from "../images/homepage/hobby_03.jpg";
-// import hobby_04 from "../images/homepage/hobby_04.jpg";
 
 // Projects
 import backgroundProjects from "../images/projects/header_02.jpg";
-
-import design_project_portfolio from "../images/projects/project_portfolio.png";
-import design_project_leftBastards from "../images/projects/project_leftBastards.png";
-import design_project_patricia from "../images/projects/project_patricia.png";
-
-import creative_01 from "../images/projects/creative_01.jpg";
-import creative_02 from "../images/projects/creative_02.jpg";
-import creative_03 from "../images/projects/creative_03.jpg";
-import creative_04 from "../images/projects/creative_04.jpg";
 
 // Skills
 import backgroundSkills from "../images/skills/header_03.jpg";
@@ -52,29 +38,77 @@ import {
   SiStyledcomponents,
 } from "react-icons/si";
 // Banners ---------------------------------------------------------------
-export const bannerProjects = {
-  backgroundImage: bannerProj,
-  alt: "city zurich",
-  logo: logoWhite,
-  text: "Projects page",
-};
+// LAYOUT ---------------------------------------------------------------
+export const pageLinks = [
+  {
+    to: "/",
+    tabName: "common:home",
+  },
+  {
+    to: "/projects",
+    tabName: "common:projects",
+  },
+  {
+    to: "/about",
+    tabName: "common:about",
+  },
+  {
+    to: "/contact",
+    tabName: "common:contact",
+  },
+  // {
+  //   to: "/cv_4186",
+  //   tabName: "My CV",
+  // },
+];
 
-export const bannerSkills = {
-  backgroundImage: bannerEdu,
-  alt: "lisbon portugal",
-  logo: logoWhite,
-  text: "Education page",
-};
+export const languages = [
+  {
+    name: "pt",
+    flag:"/pt.svg"
+  },
+  {
+    name: "en",
+    flag:"/en.svg"
+  },
+  {
+    name: "de",
+    flag:"/de.svg"
+  }
+]
+
+// HOMEPAGE ---------------------------------------------------------------
+// PROJECTS ---------------------------------------------------------------
+// ABOUT ---------------------------------------------------------------
+// CONTACT ---------------------------------------------------------------
+
+
+
+
+
+// export const bannerProjects = {
+//   backgroundImage: bannerProj,
+//   alt: "city zurich",
+//   logo: logoWhite,
+//   text: "Projects page",
+// };
+
+// export const bannerSkills = {
+//   backgroundImage: bannerEdu,
+//   alt: "lisbon portugal",
+//   logo: logoWhite,
+//   text: "Education page",
+// };
 
 export const projectsHeader = {
   backgroundImage: backgroundProjects,
 };
 
 // Home ---------------------------------------------------------------
-export const homeHeader = {
-  backgroundImage: backgroundHome,
-  logo: logoWhite,
-};
+// export const homeHeader = {
+//   backgroundImage: backgroundHome,
+//   logo: logoWhite,
+// };
 
 export const aboutMe = {
   pattern: pattern,
