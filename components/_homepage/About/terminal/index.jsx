@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
-import {terminal} from "./data"
-import { SocialMedia } from "../../../../assets/data/social_media";
+import { terminal } from "./data"
+import { SocialMedia, email, CVLink } from "../../../../assets/data";
 
 // Banner text
 const banner = `
@@ -50,11 +50,9 @@ cd <dir> - Enters directory
 cat <filename> - Lists file contents
 `;
 
-const CVLink = 'https://www.pauloreizinho.com/cv_4186'
-
 // Contact texts
 const contactInfo = {
-  email: 'paulolopesreizinho@gmail.com',
+  email: email,
   github: SocialMedia[0].link,
   linkedin: SocialMedia[1].link,
   instagram: SocialMedia[2].link,
@@ -93,30 +91,30 @@ const browser = (function () {
   let current = '/';
 
   let tree = [
-  {
-    location: '/',
-    filename: 'documents',
-    type: 'directory'
-  },
-  {
-    location: '/documents',
-    filename: 'cv',
-    type: 'file',
-    content: CVLink
-  },  
-  {
-    location: '/',
-    filename: 'author',
-    type: 'file',
-    content: `
-    Paulo Reizinho <paulolopesreizinho@gmail.com>
+    {
+      location: '/',
+      filename: 'documents',
+      type: 'directory'
+    },
+    {
+      location: '/documents',
+      filename: 'cv',
+      type: 'file',
+      content: CVLink
+    },
+    {
+      location: '/',
+      filename: 'author',
+      type: 'file',
+      content: `
+    Paulo Reizinho < ${email}>
     I come from Portugal
     Born January 4th, 1986, in a small town Nisa,
     Lived my most my life in Gavião,
     Now I currently live in Zurich, Switzerland.
     `
-  }
-];
+    }
+  ];
 
   const fix = str => str.trim().replace(/\/+/g, '/') || '/';
 
@@ -179,7 +177,7 @@ const browser = (function () {
 // document.addEventListener('DOMContentLoaded', load);
 
 export default function TerminalComponent() {
-  
+
   useEffect(() => {
     const load = () => {
       const t = terminal({
