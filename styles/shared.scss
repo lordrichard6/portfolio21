@@ -408,3 +408,27 @@ $accent-color: #0f2027;
     @apply translate-x-2 mb-1;
   }
 }
+
+// QUOTES
+.shared-quotes {
+  .quote-wrapper {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      height: 80%;
+      width: 80%;
+      filter: blur(60px);
+      transform: translate3d(-50%, -50%, -60px);
+    }
+    h1 {
+      transform: translateZ(25px);
+    }
+  }
+  .image-quote {
+    transform: translate(-50%, -50%);
+  }
+}

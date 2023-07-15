@@ -13,3 +13,4 @@ export { default as EntryAnimation } from './entry_animation';
 export { default as SocialInclineBlock } from './social_incline_block';
 export { default as ProjectCard } from './projectCard';
 export { default as LoadingScreen } from './loading';
+export { default as SharedQuotes } from './quotes';

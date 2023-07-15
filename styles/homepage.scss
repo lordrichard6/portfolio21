@@ -18,14 +18,6 @@
 
 // QUOTE
 .home-quote {
-  h1::before {
-    content: '" ';
-  }
-
-  h1::after {
-    content: ' "';
-  }
-
   .background-gradient {
     position: absolute;
     width: 100%;
@@ -36,9 +28,6 @@
       rgba(0, 0, 0, 0.2) 50%,
       rgba(0, 0, 0, 0) 100%
     );
-  }
-  .image-quote {
-    transform: translate(-50%, -50%) !important;
   }
 }
 

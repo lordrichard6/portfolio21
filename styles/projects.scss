@@ -17,38 +17,16 @@
 
 // QUOTE
 .projects-quote {
-  @apply relative w-full;
-
-  h1::before {
-    content: '" ';
-  }
-
-  h1::after {
-    content: ' "';
-  }
-
   .background-gradient {
     position: absolute;
     width: 100%;
     height: 100%;
-    // background: linear-gradient(
-    //   180deg,
-    //   #1d2124 0%,
-    //   rgba(0, 0, 0, 0.6) 50%,
-    //   rgba(0, 0, 0, 0) 100%
-    // );
     background: linear-gradient(
       180deg,
       #283e51 0%,
       #283e518e 50%,
       rgba(0, 0, 0, 0) 100%
     );
-  }
-
-  .image-quote {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) !important;
   }
 }
 

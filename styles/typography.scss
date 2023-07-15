@@ -25,8 +25,8 @@ body {
 
 .text-quote {
   // text-shadow: 4px 4px 5px $color-dark;
-  font-family: 'Marcellus', serif;
-  @apply z-10 text-2xl md:text-5xl italic antialiased justify-center whitespace-pre-line;
+  font-family: 'PT Mono', monospace;
+  @apply z-10 text-2xl md:text-4xl lg:text-5xl font-normal justify-center whitespace-pre-line tracking-tight;
 }
 
 

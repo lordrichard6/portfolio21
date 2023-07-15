@@ -21,28 +21,15 @@
 
 // QUOTE
 .about-quote {
-  h1::before {
-    content: '" ';
-  }
-
-  h1::after {
-    content: ' "';
-  }
-
   .background-gradient {
     position: absolute;
     width: 100%;
     height: 100%;
-    // background: linear-gradient(
-    //   179.46deg,
-    //   #5c4963 5.46%,
-    //   rgba(233, 162, 129, 0.2) 68.65%,
-    //   rgba(187, 122, 121, 0) 89.54%
-    // );
     background: linear-gradient(180deg, #003429, #00342978 50%, #00342900 100%);
   }
 
   .image-quote {
+    top: 80%!important;
     transform: translate(-60%, -50%) !important;
   }
 }

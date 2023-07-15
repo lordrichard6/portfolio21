@@ -111,7 +111,19 @@ export const home_quote = {
 }
 
 // PROJECTS ---------------------------------------------------------------
+export const projects_quote = {
+  image: "/home/elon_blue.png",
+  alt: "elon musk with mars and a rocket behind him in a blue filter",
+  quote: "projects:quote",
+  author: "Elon Musk"
+}
 // ABOUT ---------------------------------------------------------------
+export const about_quote = {
+  image: "/home/carl_b&w.png",
+  alt: "carl jung black and white image with nature effect",
+  quote: "about:quote",
+  author: "Carl Jung"
+}
 // CONTACT ---------------------------------------------------------------
 
 
