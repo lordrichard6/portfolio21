@@ -16,19 +16,8 @@ import {
   SocialInclineBlock,
 } from "../../_shared";
 
-import { SocialMedia } from "../../../assets/data/social_media";
+import { SocialMedia, home_about } from "../../../assets/data";
 import TerminalComponent from "./terminal";
-
-const intro = {
-  paragraph_01: "Want to know more about me? Check below this terminal screen and see if you can find my information, Please keep in mind this requires a little bit of patience and advanced knowledge.",
-  paragraph_02: "This terminal is just a way to give some interactivity to the website and make it more fun and also a way to have a taste of how the terminal works, which is a basic tool for the developer. \nType 'help' to start.",
-}
-
-const introMobile = {
-  paragraph_01: "Introduction should be brief and clear, I'm a simple guy with an ambition the size of a black hole.",
-}
-
-
 
 export default function HomeAbout() {
   let { t } = useTranslation();
@@ -43,47 +32,50 @@ export default function HomeAbout() {
 
   // };
 
-  const button = {
-    link: "/about",
-    text: "common:more_about"
-  }
-  const title = "home:about_title"
-
   return (
     <section className="home-section-about section-y-default section-x-default flex-centered relative flex-col">
       <TextAnimationLetter
         className="title-primary-md flex-centered"
-        text={t(title)}
+        text={t(home_about.title)}
       />
-      <div className="section-width-default mx-auto mb-8 hidden lg:block">
-        <p className="text-primary mb-2">{intro.paragraph_01}</p>
-        <p className="text-primary">{intro.paragraph_02}</p>
+      {/* TEXT DESKTOP */}
+      <div className="section-width-default mx-auto mb-8">
+        <p className="text-primary mb-4">{home_about.intro_mobile}</p>
+        <p className="text-primary mb-4">{home_about.intro_01}</p>
+        <p className="text-primary">{home_about.intro_02}</p>
       </div>
-      <div className="section-width-default mx-auto mb-8 lg:hidden">
-        <p className="text-primary mb-2">{introMobile.paragraph_01}</p>
-      </div>
+      {/* TEXT MOBILE */}
+      {/* <div className="section-width-default mx-auto mb-8 lg:hidden">
+        <p className="text-primary mb-2">{home_about.intro_mobile}</p>
+      </div> */}
+
       <div className="content-wrapper w-full flex-centered flex-col sm:h-auto xl:flex-row lg:my-10 xl:w-[1100px] relative">
         {/* <ImagesComponent
               style="absolute sm:hidden h-[990px] mt-[266px] ml-[18px] overflow-visible"
               alt="good old nokia 3310"
               src="/home/nokia_3310.png"
             /> */}
+        
+        {/* TERMINAL DESKTOP */}
         <TerminalComponent />
-        <div className="right-wrapper order-2 min-w-[290px] xl:w-1/2 w-full mt-6 lg:hidden">
+
+        {/* IMAGES AND TEXT ANIMATION */}
+        {/* <div className="right-wrapper order-2 min-w-[290px] xl:w-1/2 w-full mt-6 lg:hidden">
           <TextComponent />
         </div>
-
         <EntryAnimation style="left-wrapper order-1 w-full flex items-center flex-col lg:hidden" animation={bringFromLeft}>
           <ImagesDualEffectComponent
             style="w-[260px] md:w-[400px] h-[260px] md:h-[400px] image-hover hover:cursor-pointer"
-            alt="paulo reizinho"
-            src="/home_me_01.png"
-            src2="/home_me_03.png"
+            alt={home_about.dual_img.img_01.alt}
+            alt2={home_about.dual_img.img_02.alt}
+            src={home_about.dual_img.img_01.img}
+            src2={home_about.dual_img.img_02.img}
           />
-        </EntryAnimation>
+        </EntryAnimation> */}
       </div>
 
-      <EntryAnimation style="socialmedia-buttons flex justify-center w-full lg:hidden my-4" animation={bringUp}>
+      {/* SOCIAL BTNS */}
+      {/* <EntryAnimation style="socialmedia-buttons flex justify-center w-full lg:hidden my-4" animation={bringUp}>
         <ul className="home-social w-3/4">
           {SocialMedia.map((item, i) => {
             return (
@@ -96,13 +88,13 @@ export default function HomeAbout() {
             );
           })}
         </ul>
-      </EntryAnimation>
+      </EntryAnimation> */}
 
       <EntryAnimation style="cta-button" animation={bringUp}>
         <BtnPrimaryCTA
           color="_2"
-          text={t(button.text)}
-          link={button.link}
+          text={t(home_about.btn.text)}
+          link={home_about.btn.link}
         />
       </EntryAnimation>
     </section>

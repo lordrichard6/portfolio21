@@ -1,12 +1,7 @@
 // IMPORTS
 import pattern from "../images/pattern.png";
 
-// BANNERS
-import bannerProj from "../images/homepage/banner_01.jpg";
-import bannerEdu from "../images/homepage/banner_02.jpg";
-
 // Home
-import backgroundHome from "../images/homepage/header_01.jpg";
 import aboutMeImg from "../images/homepage/blue_01.jpg";
 
 // Projects
@@ -36,6 +31,9 @@ import {
   SiAdobephotoshop,
   SiTailwindcss,
   SiStyledcomponents,
+  SiGithub,
+  SiInstagram,
+  SiLinkedin
 } from "react-icons/si";
 // Banners ---------------------------------------------------------------
 // LAYOUT ---------------------------------------------------------------
@@ -65,15 +63,15 @@ export const pageLinks = [
 export const languages = [
   {
     name: "pt",
-    flag:"/pt.svg"
+    flag: "/pt.svg"
   },
   {
     name: "en",
-    flag:"/en.svg"
+    flag: "/en.svg"
   },
   {
     name: "de",
-    flag:"/de.svg"
+    flag: "/de.svg"
   }
 ]
 
@@ -109,6 +107,44 @@ export const home_quote = {
   quote: "home:quote_home",
   author: "Jordan Peterson"
 }
+export const home_about = {
+  title: "home:about_title",
+  intro_01: "Want to know more about me? Check below this terminal screen and see if you can find my information, Please keep in mind this requires a little bit of patience and advanced knowledge.",
+  intro_02: "This terminal is just a way to give some interactivity to the website and make it more fun and also a way to have a taste of how the terminal works, which is a basic tool for the developer. \nType 'help' to start.",
+  intro_mobile: "Introduction should be brief and clear, I'm a simple guy with an ambition the size of a black hole.",
+  dual_img: {
+    img_01: {
+      img: "/home_me_01.png",
+      alt: "paulo lopes reizinho black and white"
+    },
+    img_02: {
+      img: "/home_me_03.png",
+      alt: "paulo lopes reizinho formal"
+    }
+  },
+  personal_text: {
+    first_line_01: "home:about_first_line_01",
+    first_line_02: "home:about_first_line_02",
+    second_line: "home:about_second_line",
+    third_line: "home:about_third_line",
+    fourth_line_01: "home:about_forth_line_01",
+    fourth_line_02: "home:about_forth_line_02",
+    fifth_line_01: "home:about_fith_line_01",
+    fifth_line_02: "home:about_fith_line_02",
+    fifth_line_03: "home:about_fith_line_03",
+    fifth_line_04: "home:about_fith_line_04",
+    fifth_line_05: "home:about_fith_line_05",
+    name_01: "Paulo",
+    name_02: "Reizinho",
+    town: "Gavião",
+    country: "Portugal",
+    city_actual: "Zurich"
+  },
+  btn: {
+    link: "/about",
+    text: "common:more_about"
+  }
+}
 
 // PROJECTS ---------------------------------------------------------------
 export const projects_quote = {
@@ -126,9 +162,30 @@ export const about_quote = {
 }
 // CONTACT ---------------------------------------------------------------
 
+// GENERAL ---------------------------------------------------------------
+export const SocialMedia = [
+  {
+    icon: <SiGithub className='fa' />,
+    iconName: "Github",
+    link: "https://github.com/lordrichard6"
+  },
+  {
+    icon: <SiLinkedin className='fa' />,
+    iconName: "Linkedin",
+    link: "https://www.linkedin.com/in/pauloreizinho/"
+  },
+  {
+    icon: <SiInstagram className='fa' />,
+    iconName: "Instagram",
+    link: "https://www.instagram.com/paulo_reizinho/"
+  },
+]
 
+export const email = "paulolopesreizinho@gmail.com"
 
+export const CVLink = 'https://www.pauloreizinho.com/cv_4186'
 
+// .............................................................................................
 
 // export const bannerProjects = {
 //   backgroundImage: bannerProj,
