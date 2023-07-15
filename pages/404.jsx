@@ -2,8 +2,6 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Colors } from "../assets/variables";
-import logo from "../public/icon.png";
 
 export default function Page404() {
   return (
