@@ -430,5 +430,11 @@ $accent-color: #0f2027;
   }
   .image-quote {
     transform: translate(-50%, -50%);
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+      width: 50vw;
+    }
+    @media screen and (max-width: 844px) and (orientation: landscape) {
+      width: 40vw;
+    }
   }
 }

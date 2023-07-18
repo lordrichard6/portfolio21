@@ -17,6 +17,16 @@
   #leaf {
     @apply right-0 left-auto xl:right-auto xl:left-0 bottom-auto top-0;
   }
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    #hill4, #hill5, #leaf {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 844px) and (orientation: landscape) {
+    h1 {
+      @apply text-8xl mb-32 ml-auto mr-10;
+    }
+  }
 }
 
 // QUOTE

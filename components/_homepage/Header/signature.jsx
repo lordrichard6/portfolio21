@@ -17,7 +17,7 @@ const svgVariants = {
 
 export default function SignatureComponent() {
   return (
-    <div className="signature z-20 absolute bottom-0 sm:bottom-[5vh] md:bottom-[10vh] lg:bottom-[20vh] xl:bottom-0 lg:top-[unset] max-w-[700px]">
+    <div className="signature z-20 absolute bottom-0 sm:bottom-[5vh] md:bottom-[10vh] lg:bottom-[20vh] xl:bottom-0 lg:top-[unset] md:max-w-[600px] lg:max-w-[700px]">
       <svg
         width="1548"
         height="552"

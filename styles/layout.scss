@@ -157,6 +157,15 @@
       }
     }
   }
+  @media screen and (max-width: 844px) and (orientation: landscape) {
+    .inner-container {
+      .logo-container {
+        .logo-image {
+          width: 2.5rem;
+        }
+      }
+    }
+  }
 }
 
 // MOBILE MENU

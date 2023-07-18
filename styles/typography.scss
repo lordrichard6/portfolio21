@@ -16,17 +16,17 @@ body {
 }
 
 .text-primary {
-  @apply text-slate-100 text-xl lg:text-2xl font-light text-justify whitespace-pre-line antialiased;
+  @apply text-slate-100 text-xl md:text-2xl font-light text-justify whitespace-pre-line antialiased;
 }
 
 .text-primary-lg {
-  @apply text-slate-100 text-xl lg:text-3xl text-justify whitespace-pre-line antialiased;
+  @apply text-slate-100 text-xl md:text-2xl lg:text-3xl text-justify whitespace-pre-line antialiased;
 }
 
 .text-quote {
   // text-shadow: 4px 4px 5px $color-dark;
   font-family: 'PT Mono', monospace;
-  @apply z-10 text-2xl md:text-4xl lg:text-5xl font-normal justify-center whitespace-pre-line tracking-tight;
+  @apply z-10 text-2xl md:text-2xl lg:text-3xl font-normal justify-center whitespace-pre-line tracking-tight;
 }
 
 
@@ -68,6 +68,30 @@ body {
       }
       div:last-of-type {
         @apply pt-9 xl:pt-4 border-l-2 xl:border-l-4 border-slate-100;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    .title-container {
+      .main-title {
+        @apply mb-4 text-6xl;
+      }
+      .sub-title {
+        .text {
+          @apply mb-4 text-4xl;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 844px) and (orientation: landscape) {
+    .title-container {
+      .main-title {
+        @apply mb-4 text-5xl;
+      }
+      .sub-title {
+        .text {
+          @apply mb-4 text-2xl;
+        }
       }
     }
   }

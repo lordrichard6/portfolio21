@@ -14,6 +14,37 @@
       }
     }
   }
+  @media screen and (max-width: 1024px) and (orientation: landscape) {
+    .image {
+      width: 40vw;
+    }
+    .signature {
+      width: 40vw;
+      bottom: 10vh;
+    }
+  }
+
+  @media screen and (max-width: 844px) and (orientation: landscape) {
+    background-position: bottom !important;
+    .elements-wrapper {
+      @apply flex-row;
+  
+      .title-container {
+        @apply relative bottom-0 w-1/2;
+      }
+      .logo-container {
+        @apply w-1/2 relative;
+        .image {
+          width: 25vw;
+          @apply mx-auto;
+        }
+        .signature {
+          width: 30vw;
+          @apply -top-10;
+        }
+      }
+    }
+  }
 }
 
 // QUOTE
