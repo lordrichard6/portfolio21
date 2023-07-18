@@ -60,6 +60,22 @@ const certifications = [
     tags: "Web development",
     skills: ["HTML and CSS","Build HTML Forms","CSS Box model, Flexbox, Grid, Animations, Typography, Pseudo selectors", "Responsive design principles"]
   },
+  {
+    title: "JavaScript Algorithms and Data Structures",
+    school: "FreeCodeCamp",
+    link: "https://drive.google.com/file/d/1XgAIcAx6WUaOE1Vf8JE2iaHFxjVmLgkN/view?usp=drive_link",
+    language: "",
+    tags: "Web/Software development",
+    skills: ["Fundamental programming concepts in JavaScript","ECMAScript, or ES, is a standardized version of JavaScript","Regular expressions, often shortened to 'regex' or 'regexp'", "Debugging is the process of going through your code, finding any issues, and fixing them.", "Data Structures", "Basic Algorithm Scripting", "OOP, or Object Oriented Programming", "Functional Programming is another popular approach to software development", "Intermediate Algorithm Scripting"]
+  },
+  {
+    title: "Front-End Development Libraries",
+    school: "FreeCodeCamp",
+    link: "https://drive.google.com/file/d/1ik1BKGL5r95Mq7xtp2uSzl2uWLkSz05U/view?usp=drive_link",
+    language: "",
+    tags: "Web/Software development",
+    skills: ["Bootstrap is a front-end framework used to design responsive web pages and applications.","jQuery is one of the most widely used JavaScript libraries in the world.", "Sass, or 'Syntactically Awesome StyleSheets', is a language extension of CSS.", "React is a popular JavaScript library for building reusable, component-driven user interfaces for web pages or applications", "Redux is defined as a 'predictable state container for JavaScript apps' that helps ensure your apps work predictably, and are easier to test.", "React and Redux are often mentioned together, and with good reason."]
+  }
 ]
 
 export default function CertificatesSection() {
