@@ -71,7 +71,7 @@ body {
       }
     }
   }
-  @media screen and (max-width: 1024px) and (orientation: landscape) {
+  @media screen and (max-width: 1180px) and (orientation: landscape) {
     .title-container {
       .main-title {
         @apply mb-4 text-6xl;

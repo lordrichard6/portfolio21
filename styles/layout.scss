@@ -188,6 +188,20 @@
       }
     }
   }
+  @media screen and (max-width: 844px) and (orientation: landscape) {
+    .icon-close {
+      @apply text-4xl;
+    }
+    .list-wrapper {
+      @apply mt-2;
+      .mobile-item {
+        @apply text-2xl mb-2;
+      }
+      br {
+        @apply hidden;
+      }
+    }
+  }
 }
 
 
