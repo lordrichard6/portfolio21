@@ -39,14 +39,14 @@ export default function HomeAbout() {
         text={t(home_about.title)}
       />
       {/* TEXT DESKTOP */}
-      <div className="section-width-default mx-auto mb-8 hidden lg:block">
+      {/* <div className="section-width-default mx-auto mb-8 hidden lg:block">
         <p className="text-primary mb-4">{home_about.intro_mobile}</p>
         <p className="text-primary mb-4">{home_about.intro_01}</p>
         <p className="text-primary">{home_about.intro_02}</p>
-      </div>
+      </div> */}
       {/* TEXT MOBILE */}
-      <div className="section-width-default mx-auto mb-8 lg:hidden">
-        <p className="text-primary mb-2">{home_about.intro_mobile}</p>
+      <div className="section-width-default mx-auto mb-8">
+        <p className="text-2xl lg:text-3xl text-center mb-2">{home_about.intro_mobile}</p>
       </div>
 
       <div className="content-wrapper w-full flex-centered flex-col sm:h-auto xl:flex-row lg:my-10 xl:w-[1100px] relative">
@@ -57,13 +57,13 @@ export default function HomeAbout() {
             /> */}
         
         {/* TERMINAL DESKTOP */}
-        <TerminalComponent />
+        {/* <TerminalComponent /> */}
 
         {/* IMAGES AND TEXT ANIMATION */}
-        <div className="right-wrapper order-2 min-w-[290px] xl:w-1/2 w-full mt-6 lg:hidden">
+        <div className="right-wrapper order-2 min-w-[290px] xl:w-1/2 w-full mt-6">
           <TextComponent />
         </div>
-        <EntryAnimation style="left-wrapper order-1 w-full flex items-center flex-col lg:hidden" animation={bringFromLeft}>
+        <EntryAnimation style="left-wrapper order-1 xl:w-1/2 w-full flex items-center flex-col" animation={bringFromLeft}>
           <ImagesDualEffectComponent
             style="w-[260px] md:w-[400px] h-[260px] md:h-[400px] image-hover hover:cursor-pointer"
             alt={home_about.dual_img.img_01.alt}

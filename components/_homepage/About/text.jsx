@@ -10,7 +10,7 @@ export default function TextComponent() {
   let { t } = useTranslation();
 
   return (
-    <div className="home-about glass-container mx-auto px-6 lg:px-8 py-4 max-w-[420px]">
+    <div className="home-about glass-container mx-auto px-6 lg:px-8 py-4 max-w-[480px] xl:max-w-none">
       <EntryAnimation animation={textFromRight} delayTime={2}>
         <h2>
           {t(home_about.personal_text.first_line_01)}
