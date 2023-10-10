@@ -14,9 +14,10 @@
       }
     }
   }
-  @media screen and (max-width: 1180px) and (orientation: landscape) {
+
+  @media screen and (max-width: 1194px) and (orientation: landscape) {
     .image {
-      width: 40vw;
+      max-width: 30vw;
     }
     .signature {
       width: 40vw;
@@ -24,7 +25,7 @@
     }
   }
 
-  @media screen and (max-width: 844px) and (orientation: landscape) {
+  @media screen and (max-width: 932px) and (orientation: landscape) {
     background-position: bottom !important;
     .elements-wrapper {
       @apply flex-row;
@@ -41,6 +42,17 @@
         .signature {
           width: 30vw;
           @apply -top-10;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 568px) and (orientation: landscape) {
+    .elements-wrapper {
+      max-width: 90vw;
+      .logo-container {
+        .signature {
+          width: 30vw;
+          @apply -top-20;
         }
       }
     }

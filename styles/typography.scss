@@ -84,7 +84,7 @@ body {
       }
     }
   }
-  @media screen and (max-width: 844px) and (orientation: landscape) {
+  @media screen and (max-width: 932px) and (orientation: landscape) {
     .title-container {
       .main-title {
         @apply mb-4 text-5xl;
@@ -92,6 +92,18 @@ body {
       .sub-title {
         .text {
           @apply mb-4 text-2xl;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 568px) and (orientation: landscape) {
+    .title-container {
+      .main-title {
+        @apply mb-2 text-3xl;
+      }
+      .sub-title {
+        .text {
+          @apply mb-2 text-lg;
         }
       }
     }
