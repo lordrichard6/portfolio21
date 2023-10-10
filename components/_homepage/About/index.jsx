@@ -38,15 +38,15 @@ export default function HomeAbout() {
         className="title-primary-md flex-centered"
         text={t(home_about.title)}
       />
-      {/* TEXT DESKTOP */}
+      {/* TEXT Alternative */}
       {/* <div className="section-width-default mx-auto mb-8 hidden lg:block">
         <p className="text-primary mb-4">{home_about.intro_mobile}</p>
         <p className="text-primary mb-4">{home_about.intro_01}</p>
         <p className="text-primary">{home_about.intro_02}</p>
       </div> */}
-      {/* TEXT MOBILE */}
+      {/* TEXT */}
       <div className="section-width-default mx-auto mb-8">
-        <p className="text-2xl lg:text-3xl text-center mb-2">{home_about.intro_mobile}</p>
+        <p className="text-2xl lg:text-3xl text-center mb-2">{t(home_about.intro_mobile)}</p>
       </div>
 
       <div className="content-wrapper w-full flex-centered flex-col sm:h-auto xl:flex-row lg:my-10 xl:w-[1100px] relative">

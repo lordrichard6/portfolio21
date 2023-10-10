@@ -1,10 +1,10 @@
 {
     "header01":"myProjects",
-    "quote": "When something is important enough, you do it even if the odds are not in your favor.",
+    "quote": "Wenn etwas wichtig genug ist, tut man es, auch wenn die Chancen nicht gut stehen.",
     "header02":"A man`s worth is what he can do with the weapons at hand.",
     "dev_title":"Developer",
     "dev_button":"Mehr erfahren",
-    "projects_intro":"Es ist ein Ort, an dem ich meine Projekte und Fähigkeiten vorstelle und versuche, Sie mit meinen Programmierfähigkeiten zu beeindrucken. Ja, ich weiß, was Sie jetzt denken - Programmierkenntnisse? Das klingt nach einer Superkraft! Und wissen Sie was? Sie haben Recht! Meine Programmierkenntnisse sind so fortgeschritten, dass ich CSS-Regeln mit meinem Verstand verbiegen und React-Komponenten mit einem Fingerschnippen herbeirufen kann. \n\nWie auch immer, ich habe mein Herz und meine Seele in diese Projekte gesteckt, und ich bin sicher, dass sie Sie zum Lachen, Weinen und vielleicht sogar zum Hinterfragen Ihrer Existenz bringen werden. Ich habe sie in zwei Kategorien unterteilt, also schauen Sie sich um und lassen Sie sich überraschen. Und wenn Sie Fragen oder Anmerkungen haben, können Sie sich gerne an mich wenden.",
+    "projects_intro":"Mein Portfolio spiegelt meine Kompetenz in der Webentwicklung wider, die ich in Projekten mit Next.js, React.js, Angular und anderen Technologien unter Beweis gestellt habe.\n\n Sowohl im beruflichen als auch im privaten Umfeld habe ich durchgängig ansprechende, skalierbare und benutzerfreundliche Erfahrungen mit ständiger Verbesserung im UI- und UX-Design geliefert. Mit dem Schwerpunkt auf Leistung, Sicherheit und intuitivem Design strebe ich danach, Weblösungen zu entwickeln, die das Geschäftswachstum fördern und die Erwartungen der Kunden übertreffen. Erforschen Sie mein Portfolio, um die Bandbreite und Tiefe meiner Projekte zu entdecken.",
 
     "project_featured_thinkBig":"Ich habe eine Webapp für einen Unternehmerkurs entwickelt, die ein elegantes Design aufweist, das mit Figma erstellt und mit React und Tailwind CSS implementiert wurde. Ich habe mich darauf konzentriert, eine benutzerfreundliche Erfahrung zu schaffen, die es den Studierenden ermöglicht, zu lernen und ihre Ziele im Kurs zu erreichen.",
     "project_featured_fahrezentrale":"Eine von Pickwings entwickelte Jobplattform für Fahrer verschiedener Kategorien, die den Fahrer mit seinem Traumjob zusammenbringen will, ohne viel Aufhebens. Der Anmeldeprozess ist so einfach wie 10 Schritte, und schon können Sie Ihren nächsten Traumjob finden.",

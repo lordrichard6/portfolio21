@@ -7,6 +7,7 @@
     "header_sub_title": "Lösungen fallen nicht vom Himmel",
     "quote_home": "Die besseren Ambitionen haben mit der Entwicklung des Charakters und der Fähigkeiten zu tun, anstatt mit Status und Macht. Status kann man verlieren. Den Charakter trägst du überall hin mit und er ermöglicht es dir, gegen Widrigkeiten zu bestehen.",
     "about_title": "Wer bin ich?",
+    "about_intro": "Die Einleitung sollte kurz und klar sein: Ich bin ein einfacher Mann mit einem Ehrgeiz von der Größe eines schwarzen Lochs.",
     "about_first_line_01": "Grüezi",
     "about_first_line_02": "Welt!...",
     "about_first_line_03": "Fründ!...",
@@ -19,5 +20,6 @@
     "about_fith_line_03": "Designer",
     "about_fith_line_04": "UI & UX enthusiast",
     "about_fith_line_05": "Programmierer",
-    "projects_title": "Was ich gebaut habe"
+    "projects_title": "Was ich gebaut habe",
+    "projects_intro": "Als Entwickler habe ich mich hauptsächlich auf die Web-Entwicklung konzentriert, genauer gesagt auf die Frontend-Entwicklung. In meinem Portfolio finden sich sowohl Projekte, die ich während meiner Anstellung in verschiedenen Unternehmen erstellt habe, als auch Projekte, die ich persönlich entwickelt habe. Mehr Details auf der Projektseite."
 }

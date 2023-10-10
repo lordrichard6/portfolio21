@@ -111,7 +111,7 @@ export const home_about = {
   title: "home:about_title",
   intro_01: "Want to know more about me? Check below this terminal screen and see if you can find my information, Please keep in mind this requires a little bit of patience and advanced knowledge.",
   intro_02: "This terminal is just a way to give some interactivity to the website and make it more fun and also a way to have a taste of how the terminal works, which is a basic tool for the developer. \nType 'help' to start.",
-  intro_mobile: "Introduction should be brief and clear, I'm a simple guy with an ambition the size of a black hole.",
+  intro_mobile: "home:about_intro",
   dual_img: {
     img_01: {
       img: "/home_me_01.png",

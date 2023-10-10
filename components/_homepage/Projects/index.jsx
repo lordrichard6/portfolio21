@@ -18,8 +18,6 @@ const TAGS_PER_ROW = 8;
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 const shuffle = (arr) => [...arr].sort(() => .5 - Math.random());
 
-const IntroText = "As a developer I focused mainly on web development, more specificaly front-end development, in my portfolio there are projects that I've build during my employment in diversed companies aswell as projects I build personaly. More details in the project page."
-
 const InfiniteLoopSlider = ({ children, duration, reverse = false }) => {
   return (
     <div className='loop-slider' style={{
@@ -48,7 +46,7 @@ export default function HomeProjects() {
       <TextAnimationLetter className="title-primary-md flex-centered" text={t("home:projects_title")} />
       <div className='home-projects'>
         <div className="section-width-default mx-auto">
-          <p className="text-primary">{IntroText}</p>
+          <p className="text-primary">{t("home:projects_intro")}</p>
         </div>
         <div className='tag-list'>
           {[...new Array(ROWS)].map((_, i) => (
