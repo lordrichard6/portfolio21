@@ -44,7 +44,7 @@ export default function HomeProjects() {
   }
 
   return (
-    <div className="home-section-projects">
+    <div className="home-section-projects z-10">
       <TextAnimationLetter className="title-primary-md flex-centered" text={t("home:projects_title")} />
       <div className='home-projects'>
         <div className="section-width-default mx-auto">
