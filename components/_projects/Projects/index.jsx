@@ -22,7 +22,7 @@ export default function ProjectsSection() {
         <ProjectsIntro pageIntro={t("projects:projects_intro")} />
       </EntryAnimation>
       <EntryAnimation style="projects-title section-width-default mt-6 mb-4" animation={bringUp}>
-        <h1 className="text-5xl lg:text-8xl font-black text-right">WEB DEVELOPMENT</h1>
+        <h1 className="text-5xl lg:text-8xl font-black text-right">PROJECTS</h1>
       </EntryAnimation>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-2 items-center z-10">
         {sortedProjectsByDate.map((item, i) => {
