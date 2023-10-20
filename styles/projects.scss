@@ -35,6 +35,11 @@
   .projects-title {
     border-bottom: 3px solid $color-white;
   }
+  .filter-buttons {
+    .selected {
+      @apply text-yellow-600 border-yellow-600;
+    }
+  }
   .cards-shared {
     @apply w-[320px] h-[300px] lg:w-[420px] lg:h-[340px];
   }
