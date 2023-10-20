@@ -69,7 +69,7 @@ export const projects = [
     featured: true,
     cardId: "card2",
     tags: ['#react', '#tailwind'],
-    hiddenTags: ['#react', '#tailwind', "#javascript"]
+    hiddenTags: ['#all','#react', '#tailwind', "#javascript"]
   },
   {
     image: "/projects/fahrezentrale.png",
@@ -93,7 +93,7 @@ export const projects = [
     featured: true,
     cardId: "card1",
     tags: ['#angular', '#django', '#docker'],
-    hiddenTags: ['#angular', '#django', '#docker', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', '#docker', "#javascript", "#python"]
   },
   {
     image: '/projects/pickwings.png',
@@ -117,7 +117,7 @@ export const projects = [
     featured: false,
     cardId: "card4",
     tags: ['#angular', '#django', '#docker'],
-    hiddenTags: ['#angular', '#django', '#docker', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', '#docker', "#javascript", "#python"]
   },
   {
     image: '/projects/helping.png',
@@ -167,7 +167,7 @@ export const projects = [
     featured: false,
     cardId: "card6",
     tags: ['#nextjs', '#tailwind', '#mongodb'],
-    hiddenTags: ['#nextjs', '#tailwind', '#mongodb', "#javascript"]
+    hiddenTags: ['#all','#nextjs', '#tailwind', '#mongodb', "#javascript"]
   },
   {
     image: "/projects/bastards.png",
@@ -191,7 +191,7 @@ export const projects = [
     featured: false,
     cardId: "card7",
     tags: ['#nextjs', '#typescript'],
-    hiddenTags: ['#nextjs', '#typescript', "#javascript", "#styled-components"]
+    hiddenTags: ['#all','#nextjs', '#typescript', "#javascript", "#styled-components"]
   },
   {
     image: "/projects/sardinha.png",
@@ -215,7 +215,7 @@ export const projects = [
     featured: false,
     cardId: "card8",
     tags: ['#nextjs', '#typescript', '#framer-motion'],
-    hiddenTags: ['#nextjs', '#typescript', '#framer-motion', "#javascript"]
+    hiddenTags: ['#all','#nextjs', '#typescript', '#framer-motion', "#javascript"]
   },
   {
     image: "/projects/fastrent.png",
@@ -239,7 +239,7 @@ export const projects = [
     featured: true,
     cardId: "card3",
     tags: ['#reactjs', '#typescript', '#tailwind'],
-    hiddenTags: ['#nextjs', '#typescript', '#tailwind', "#javascript"]
+    hiddenTags: ['#all','#nextjs', '#typescript', '#tailwind', "#javascript"]
   },
   {
     image: "/projects/skytours.png",
@@ -263,7 +263,7 @@ export const projects = [
     featured: false,
     cardId: "card9",
     tags: ['#reactjs'],
-    hiddenTags: ['#reactjs', "#javascript"]
+    hiddenTags: ['#all','#reactjs', "#javascript"]
   },
   {
     image: "/projects/hulu.png",
@@ -287,7 +287,7 @@ export const projects = [
     featured: false,
     cardId: "card10",
     tags: ['#nextjs', '#tailwind'],
-    hiddenTags: ['#nextjs', '#tailwind', "#javascript"]
+    hiddenTags: ['#all','#nextjs', '#tailwind', "#javascript"]
   },
   {
     image: "/projects/monkey.png",
@@ -311,7 +311,7 @@ export const projects = [
     featured: false,
     cardId: "card11",
     tags: ['#nextjs', '#typescript'],
-    hiddenTags: ['#nextjs', '#typescript', "#javascript"]
+    hiddenTags: ['#all','#nextjs', '#typescript', "#javascript"]
   },
   // {
   //   image: "/projects/sphere.png",
@@ -455,7 +455,7 @@ export const projects = [
     featured: false,
     cardId: "card12",
     tags: ['#angular', '#django'],
-    hiddenTags: ['#angular', '#django', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"]
   },
   {
     image: '/projects/protier.png',
@@ -479,7 +479,7 @@ export const projects = [
     featured: false,
     cardId: "card13",
     tags: ['#angular', '#django'],
-    hiddenTags: ['#angular', '#django', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"]
   },
   {
     image: '/projects/bezahlbare-Wohnungen.png',
@@ -503,7 +503,7 @@ export const projects = [
     featured: false,
     cardId: "card14",
     tags: ['#angular', '#django'],
-    hiddenTags: ['#angular', '#django', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"]
   },
   {
     image: '/projects/feinheit.png',
@@ -527,7 +527,7 @@ export const projects = [
     featured: false,
     cardId: "card15",
     tags: ['#angular', '#django'],
-    hiddenTags: ['#angular', '#django', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"]
   },
   {
     image: '/projects/fcz.png',
@@ -551,6 +551,6 @@ export const projects = [
     featured: false,
     cardId: "card16",
     tags: ['#angular', '#django'],
-    hiddenTags: ['#angular', '#django', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"]
   },
 ];
