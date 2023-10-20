@@ -29,6 +29,7 @@ export default function ProjectCard({ imageSrc, cardHeading, cardText, cardId, i
                         </label>
                     </div>
                 </div>
+                {/* BACK SIDE */}
                 <div className="back bg-slate-900 relative">
                     <div className="middle-stripe absolute w-1/2 h-full top-0 left-[30%] -skew-x-[45deg] backdrop-invert z-10"></div>
                     <div className="inner p-4">

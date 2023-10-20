@@ -62,7 +62,7 @@ export const projects = [
     shortText: "projects:project_featured_thinkBig",
     techs: ["React.js", "TailwindCSS"],
     link: "https://think-big.vercel.app/",
-    github: "",
+    github: "https://github.com/lordrichard6/think_big",
     icon: [<FaReact key={0}/>],
     type: 'personal',
     date: '2023/04',
@@ -263,7 +263,7 @@ export const projects = [
     featured: false,
     cardId: "card9",
     tags: ['#reactjs'],
-    hiddenTags: ['#all','#reactjs', "#javascript"]
+    hiddenTags: ['#all','#react', "#javascript"]
   },
   {
     image: "/projects/hulu.png",
