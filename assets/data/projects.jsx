@@ -207,7 +207,7 @@ export const projects = [
     // ],
     shortText: "In this remarkable web development project, I built a professional and elegant website using Next.js for a chauffeur company. The website serves as a powerful online platform that showcases the company's premium chauffeur services, creating a seamless experience for potential clients.",
     techs: ["NextJS","styled-components", "typescript", "Framer-motion", "Material-ui"],
-    link: "https://www.sardinhadrive.ch/",
+    link: "https://patricia-vila-nova.vercel.app/",
     github: "https://github.com/lordrichard6/patricia_project",
     icon: [<SiNextdotjs key={0}/>],
     type: 'profissional',
