@@ -10,7 +10,7 @@ import { EntryAnimation, ProjectCard } from "../../_shared";
 
 import ProjectsIntro from "./text";
 
-const tags = ["#all","#javascript", "#python", "#typescript", "#react", "#nextjs", "#angular", "#django", "#styled-components"];
+const tags = ["#all","#javascript", "#python", "#typescript", "#react", "#nextjs", "#angular", "#django"];
 
 export default function ProjectsSection() {
   const [selectedLanguage, setSelectedLanguage] = useState();

@@ -2,13 +2,13 @@
 import pattern from "../images/pattern.png";
 
 // Home
-import aboutMeImg from "../images/homepage/blue_01.jpg";
+// import aboutMeImg from "../images/homepage/blue_01.jpg";
 
 // Projects
-import backgroundProjects from "../images/projects/header_02.jpg";
+// import backgroundProjects from "../images/projects/header_02.jpg";
 
 // Skills
-import backgroundSkills from "../images/skills/header_03.jpg";
+// import backgroundSkills from "../images/skills/header_03.jpg";
 
 import {
   FaReact,
@@ -202,7 +202,7 @@ export const CVLink = 'https://www.pauloreizinho.com/cv_4186'
 // };
 
 export const projectsHeader = {
-  backgroundImage: backgroundProjects,
+  backgroundImage: "backgroundProjects",
 };
 
 // Home ---------------------------------------------------------------
@@ -221,7 +221,7 @@ export const aboutMe = {
   text03:
     "Well, I`ve been learning web Development since 2019 with highs and lows. Focusing on the front-end with a special interest in the design of visually appealing UI and an intuitive UX so people don`t get lost. My main tech is React, but my learning journey will never stop, but I`m leaning more to Next.js. I do my designs with Figma and Photoshop, for styling I like to use a hybrid approach with styled-components and tailwind, which bring a organized and maintainable code and beautifull to look at.",
   text04: "Any more info please contact me, all my contacts are in the footer.",
-  sideImg: aboutMeImg,
+  sideImg: "aboutMeImg",
   imgAlt: "paulo lopes reizinho",
 };
 
@@ -258,7 +258,7 @@ export const hobbies = [
 
 // Skills ---------------------------------------------------------------
 export const skillsHeader = {
-  backgroundImage: backgroundSkills,
+  backgroundImage: "backgroundSkills",
 };
 
 export const skillsAndExperience = {

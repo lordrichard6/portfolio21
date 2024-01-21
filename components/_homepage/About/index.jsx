@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import useTranslation from "next-translate/useTranslation";
 
 import {
@@ -17,7 +17,7 @@ import {
 } from "../../_shared";
 
 import { SocialMedia, home_about } from "../../../assets/data";
-import TerminalComponent from "./terminal";
+// import TerminalComponent from "./terminal";
 
 export default function HomeAbout() {
   let { t } = useTranslation();

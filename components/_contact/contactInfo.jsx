@@ -1,13 +1,14 @@
 import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 
-import { TextAnimationLetter } from "../_shared";
+// import { TextAnimationLetter } from "../_shared";
 
 import { MdEmail, MdPermPhoneMsg } from "react-icons/md";
 import {
-  FaHouseUser,
-  FaPhoneAlt,
+  // FaHouseUser,
+  // FaPhoneAlt,
   FaInstagram,
+  FaAddressCard, 
   FaLinkedin,
   FaGithub,
   FaWhatsapp,
@@ -56,6 +57,11 @@ const social_media = [
     link: "https://wa.link/sru6m7",
     icon: <FaWhatsapp alt="whatsapp paulo reizinho" />,
     text: 'Whatsapp'
+  },
+  {
+    link: "https://www.pauloreizinho.com/cv_4186",
+    icon: <FaAddressCard alt="cv paulo reizinho" />,
+    text: 'Curriculum Vitae'
   },
 ];
 

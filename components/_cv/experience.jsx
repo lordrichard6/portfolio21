@@ -35,17 +35,17 @@ const staticText = {
 
 const experience = [
   {
-    company: "Helping Hand",
-    year: "Aug 2022 - Now!",
+    company: "Richtig Service",
+    year: "Jan 2023 - Now!",
     role: "Front-end developer, Mover, Driver, Assembler",
-    reference: ["Michael Silbermann", "CEO at Helping Hand", "+41 043 443 17 37", "info@helpinghand.ch"],
-    description: ['Alterations and improvements on the company website;', 'Move safely the clients items and furniture;', 'Orient and organize the job with the client as team lead;', 'Drive and deliver packages;', 'Assemble different type of furniture;'],
-    techs: [<SiJoomla key={0} />, <AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiFigma key={0} />, <SiWindows key={0} />, <GiSteeringWheel key={0} />, <FaPeopleCarry key={0} />, <IoIosPeople key={0} />],
+    reference: ["Massimiliano Salihaj", "CEO at Richtig Service", "+41 76 275 35 78", "nfo@richtigservice.ch"],
+    description: ['Alterations and improvements on the company website;', 'Deliver the furniture from clients such as Rolf Benz, Natuzzi and Martinuzzi;', 'Orient and organize the job with the client as team lead;', 'Assemble different type of furniture;'],
+    techs: [<AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiFigma key={0} />, <SiWindows key={0} />, <GiSteeringWheel key={0} />, <FaPeopleCarry key={0} />, <IoIosPeople key={0} />],
     class: 'exp1',
     projects: [
       {
-        name: "Helping Hand",
-        link: "https://www.helpinghand.ch/"
+        name: "Richtig Service",
+        link: "https://www.richtigservice.ch/"
       }
     ]
   },
