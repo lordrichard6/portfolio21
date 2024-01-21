@@ -62,8 +62,25 @@ $section-title: 32px;
 
     .side-info {
       transition: $transition-times;
+      
+      .techs-wrapper {
+        .arrow {
+          animation: continuousSide 1s linear infinite;
+        }
+
+        .CVtechs {
+          background: #262626;
+          transition: $transition-times;
+          transition: max-width 1000ms ease-in-out;
+          @apply flex items-center absolute max-w-0 overflow-hidden ml-20 lg:ml-24 rounded z-50;
+    
+          &.toggled {
+            max-width: 800px;
+          }
+        }
+      }
+
     }
-  
   }
 
   // MAIN
@@ -185,5 +202,14 @@ $section-title: 32px;
         }
       }
     }
+  }
+}
+
+@keyframes continuousSide {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: 10px;
   }
 }
