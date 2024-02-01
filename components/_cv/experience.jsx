@@ -38,7 +38,7 @@ const experience = [
     company: "Richtig Service",
     year: "Jan 2023 - Now!",
     role: "Front-end developer, Transporter, Driver, Assembler, Team Leader",
-    reference: ["Massimiliano Salihaj", "CEO at Richtig Service", "+41 76 275 35 78", "nfo@richtigservice.ch"],
+    reference: ["Massimiliano Salihaj", "CEO at Richtig Service", "+41 76 275 35 78", "info@richtigservice.ch"],
     description: ['Alterations and improvements on the company website;', 'Deliver the furniture from clients such as Rolf Benz, Natuzzi and Martinuzzi;', 'Orient and organize the job with the client as team lead;', 'Assemble different type of furniture;'],
     techs: [<AiOutlineHtml5 key={0} />, <FaCss3Alt key={0} />, <SiFigma key={0} />, <SiWindows key={0} />, <GiSteeringWheel key={0} />, <FaPeopleCarry key={0} />, <IoIosPeople key={0} />],
     class: 'exp1',
