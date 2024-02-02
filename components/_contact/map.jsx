@@ -16,7 +16,7 @@ export default function MapComponent() {
       <p className="text-primary-lg font-bold w-full mb-2">Look for me here...</p>
       <div className="h-96 w-full sm:h-[25rem] rounded-sm shadow-md overflow-hidden">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10821.99129826993!2d8.535821275751589!3d47.304612339133996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa7b868c78e9b%3A0xe8e42096425b0f8f!2s8803%20R%C3%BCschlikon!5e0!3m2!1sen!2sch!4v1696933913380!5m2!1sen!2sch"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86456.44144746946!2d8.454335382075122!3d47.37752842273052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b9749bea219%3A0xe66e8df1e71fdc03!2zWsO8cmljaA!5e0!3m2!1sen!2sch!4v1706894378869!5m2!1sen!2sch"
           allowfullscreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
