@@ -10,9 +10,9 @@ import {
 
 const contact = [
   {
-    contact: "Riemenstrasse 1a, 8803 Rüschlikon",
+    contact: "Zurich",
     icon: <FaSearchLocation />,
-    link: "https://maps.app.goo.gl/NVEk8MDW1zjt3xLP7"
+    link: "https://maps.app.goo.gl/FGzhvvLWBpLTNraD8"
   },
   {
     contact: "+41 078 798 95 33",
