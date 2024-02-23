@@ -33,16 +33,16 @@ const social_media = [
     icon: <MdEmail className="mr-2" alt="email paulo reizinho" />,
     text: 'paulolopesreizinho@gmail.com'
   },
-  {
-    link: "tel: +41787989533",
-    icon: <MdPermPhoneMsg className="mr-2" alt="phone number paulo reizinho" />,
-    text: '+41 78 798 95 33'
-  },
-  {
-    link: "https://www.linkedin.com/in/pauloreizinho/",
-    icon: <FaLinkedin alt="github paulo reizinho profile" />,
-    text: 'www.linkedin.com/in/pauloreizinho/'
-  },
+  // {
+  //   link: "tel: +41787989533",
+  //   icon: <MdPermPhoneMsg className="mr-2" alt="phone number paulo reizinho" />,
+  //   text: '+41 78 798 95 33'
+  // },
+  // {
+  //   link: "https://www.linkedin.com/in/pauloreizinho/",
+  //   icon: <FaLinkedin alt="github paulo reizinho profile" />,
+  //   text: 'www.linkedin.com/in/pauloreizinho/'
+  // },
   {
     link: "https://www.instagram.com/paulo_reizinho/",
     icon: <FaInstagram alt="instagram paulo reizinho profile" />,
@@ -53,16 +53,16 @@ const social_media = [
     icon: <FaGithub alt="github paulo reizinho profile" />,
     text: 'github.com/lordrichard6'
   },
-  {
-    link: "https://wa.link/sru6m7",
-    icon: <FaWhatsapp alt="whatsapp paulo reizinho" />,
-    text: 'Whatsapp'
-  },
-  {
-    link: "https://www.pauloreizinho.com/cv_4186",
-    icon: <FaAddressCard alt="cv paulo reizinho" />,
-    text: 'Curriculum Vitae'
-  },
+  // {
+  //   link: "https://wa.link/sru6m7",
+  //   icon: <FaWhatsapp alt="whatsapp paulo reizinho" />,
+  //   text: 'Whatsapp'
+  // },
+  // {
+  //   link: "https://www.pauloreizinho.com/cv_4186",
+  //   icon: <FaAddressCard alt="cv paulo reizinho" />,
+  //   text: 'Curriculum Vitae'
+  // },
 ];
 
 export default function ContactInfo() {
