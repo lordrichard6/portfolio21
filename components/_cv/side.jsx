@@ -78,60 +78,60 @@ const education = [
 const techStack = [
   {
     techs: [
-      { icon: <AiOutlineHtml5 /> },
-      { icon: <FaCss3Alt /> },
-      { icon: <SiJavascript /> },
-      { icon: <SiTypescript /> },
-      { icon: <SiJquery /> },
-      { icon: <SiReact /> },
-      { icon: <SiNextdotjs /> },
-      { icon: <SiAngular /> },
+      { icon: <AiOutlineHtml5 />, name: "HTML" },
+      { icon: <FaCss3Alt />, name: "CSS" },
+      { icon: <SiJavascript />, name: "Javascript" },
+      { icon: <SiTypescript />, name: "Typescript" },
+      { icon: <SiJquery />, name: "JQuery" },
+      { icon: <SiReact />, name: "React" },
+      { icon: <SiNextdotjs />, name: "Next.js" },
+      { icon: <SiAngular />, name: "Angular" },
     ],
     name: "Front-end",
     class: "front"
   },
   {
     techs: [
-      { icon: <SiPython /> },
-      { icon: <SiDjango /> },
-      { icon: <SiNodedotjs /> },
-      { icon: <SiExpress /> },
+      { icon: <SiPython />, name: "Python" },
+      { icon: <SiDjango />, name: "Django" },
+      { icon: <SiNodedotjs />, name: "Node" },
+      { icon: <SiExpress />, name: "Express.js" },
     ],
     name: "Back-end",
     class: "back"
   },
   {
     techs: [
-      { icon: <SiPostgresql /> },
-      { icon: <AiOutlineConsoleSql /> },
-      { icon: <SiMongodb /> },
-      { icon: <SiGraphql /> },
+      { icon: <SiPostgresql />, name: "Post" },
+      { icon: <AiOutlineConsoleSql />, name: "SQL" },
+      { icon: <SiMongodb />, name: "MongoDB" },
+      { icon: <SiGraphql />, name: "GraphQl" },
     ],
     name: "Database",
     class: "db"
   },
   {
     techs: [
-      { icon: <FaGitAlt /> },
-      { icon: <SiDocker /> },
-      { icon: <FaGitAlt /> },
-      { icon: <SiGithub /> },
-      { icon: <SiNpm /> },
-      { icon: <SiYarn /> },
-      { icon: <SiJenkins /> },
-      { icon: <SiAnsible /> },
-      { icon: <SiKubernetes /> },
+      { icon: <FaGitAlt />, name: "Git" },
+      { icon: <SiDocker />, name: "Docker" },
+      { icon: <FaGitAlt />, name: "Git" },
+      { icon: <SiGithub />, name: "Github" },
+      { icon: <SiNpm />, name: "NPM" },
+      { icon: <SiYarn />, name: "yarn" },
+      { icon: <SiJenkins />, name: "Jenkins" },
+      { icon: <SiAnsible />, name: "Ansible" },
+      { icon: <SiKubernetes />, name: "Kubernetes" },
     ],
     name: "DevOps",
     class: "devops"
   },
   {
     techs: [
-      { icon: <SiAdobephotoshop /> },
-      { icon: <SiAdobepremierepro /> },
-      { icon: <SiFigma /> },
-      { icon: <FaUbuntu /> },
-      { icon: <SiWix /> },
+      { icon: <SiAdobephotoshop />, name: "Photoshop" },
+      { icon: <SiAdobepremierepro />, name: "Premiere pro" },
+      { icon: <SiFigma />, name: "Figma" },
+      { icon: <FaUbuntu />, name: "Ubuntu" },
+      { icon: <SiWix />, name: "Wix" },
     ],
     name: "Other",
     class: "other"
@@ -155,7 +155,7 @@ export default function CVSide() {
   };
 
   return (
-    <div className="sidebar w-full lg:w-[410px] z-10 min-h-screen flex flex-col items-center pt-10 lg:fixed">
+    <div className="sidebar w-full lg:w-[410px] z-10 min-h-screen flex flex-col items-center pt-10">
 
       <div className="header-container mobile-only w-full lg:hidden text-center">
         <h1 className="text-[64px] font-bold tracking-widest leading-none">
@@ -218,14 +218,15 @@ export default function CVSide() {
           {techStack.map((item, i) => {
             return (
               <div key={i} className="techs-wrapper mx-6 flex items-center relative my-1">
-                <h4 onClick={() => toggle(item.class)} className="text-xl lg:text-2xl z-50 cursor-pointer px-2 rounded border-double border-2 border-slate-100">
+                <h4 onClick={() => toggle(item.class)} className="text-xl lg:text-2xl z-40 cursor-pointer px-2 w-24 rounded border-double border-2 border-slate-100">
                   {item.name}
                 </h4>
                 <FaArrowLeft className="arrow text-xl lg:text-2xl ml-1" />
                 <div className={`CVtechs ${isOpen[item.class] ? "toggled" : ""}`}>
                   {item.techs.map((tech, j) => (
-                    <div key={j} className="icon text-2xl lg:text-3xl m-1 lg:m-2">
+                    <div key={j} className="icon relative text-2xl lg:text-3xl m-1 lg:m-2">
                       {tech.icon}
+                      <div className="info-box absolute rounded-md border-slate-100 border-solid border-2 bg-rose-900 px-2 bottom-5 left-5 text-lg z-50">{tech.name}</div>
                     </div>
                   ))}
                 </div>
@@ -235,7 +236,7 @@ export default function CVSide() {
 
         </div>
 
-        <DownloadButton style="white hidden lg:flex absolute bottom-0" />
+        <DownloadButton style="white hidden lg:flex mt-auto" />
 
       </div>
     </div>

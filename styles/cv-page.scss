@@ -72,10 +72,22 @@ $section-title: 32px;
           background: #262626;
           transition: $transition-times;
           transition: max-width 1000ms ease-in-out;
-          @apply flex items-center absolute max-w-0 overflow-hidden ml-20 lg:ml-24 rounded z-50;
+          @apply items-center absolute max-w-0 ml-20 lg:ml-24 rounded z-40 hidden bg-sky-900;
     
           &.toggled {
             max-width: 800px;
+            display: flex;
+          }
+
+          .info-box {
+            @apply hidden;
+          }
+
+          .icon:hover {
+            .info-box {
+              @apply flex;
+            }
+
           }
         }
       }
