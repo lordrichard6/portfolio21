@@ -48,6 +48,30 @@ import { SiNextdotjs, SiJavascript, SiAngular, SiDjango, SiJoomla, SiMongodb } f
 
 export const projects = [
   {
+    image: "/projects/angryfish.jpg",
+    alt: "Angry Fish",
+    title: "Angry Fish",
+    creator: "Paulo Reizinho",
+    myContribution: "100%",
+    text: ["Created with React and typescript;","Back-end with AppWripte","TanStack a powerful and type-safe form state management;","I can't miss TailwindCSS;"],
+    // text: [
+    //   "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Sit nulla est ex deserunt exercitation anim occaecat.", 
+    //   "Sit nulla est ex deserunt exercitation anim occaecat.",
+    //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
+    // ],
+    shortText: "",
+    techs: ["React.js", "TailwindCSS", "AppWrite", "TanStack"],
+    link: "https://angry-fish.vercel.app/",
+    github: "https://github.com/lordrichard6/angry_fish",
+    icon: [<FaReact key={0}/>],
+    type: 'personal',
+    date: '2024/04',
+    featured: true,
+    cardId: "card22",
+    tags: ['#react', '#tailwind'],
+    hiddenTags: ['#all','#react', '#tailwind', "#javascript"]
+  },
+  {
     image: "/projects/thinkbig.png",
     alt: "think big homepage",
     title: "ThinkBig",
