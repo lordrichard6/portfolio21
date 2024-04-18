@@ -8,5 +8,6 @@
 
     "project_featured_thinkBig":"I've built a web application for an entrepreneur course that features an elegant design created with Figma and implemented with React and Tailwind CSS. My focus has been to create a user-friendly experience that empowers students to learn and achieve their goals in the course.",
     "project_featured_fahrezentrale":"A Job platform for drivers of different categories, developed by Pickwings, it strives to connect the driver with his dream job, without a lot of hussle. The registration process is as simple as 10 steps, them you are set to find your next dream job.",
-    "project_featured_fastrent":"A website for a car rental service using Next.js, a popular React framework for server-side rendering, and Tailwind CSS, a utility-first CSS framework. The website features a clean and modern design, optimized for fast loading times and a seamless user experience."
+    "project_featured_fastrent":"A website for a car rental service using Next.js, a popular React framework for server-side rendering, and Tailwind CSS, a utility-first CSS framework. The website features a clean and modern design, optimized for fast loading times and a seamless user experience.",
+    "project_featured_angryFish":"Explore social media with this user-friendly platform that has a nice look and lots of features. Easily create and explore posts, a strong authentication system and quick data fetching using React Query for a smooth user experience."
 }

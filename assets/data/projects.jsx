@@ -59,7 +59,7 @@ export const projects = [
     //   "Sit nulla est ex deserunt exercitation anim occaecat.",
     //   "Lorem ipsum dolor sit amet consectetur adip, Lorem ipsum dolor sit amet consectetur adip"
     // ],
-    shortText: "",
+    shortText: "projects:project_featured_angryFish",
     techs: ["React.js", "TailwindCSS", "AppWrite", "TanStack"],
     link: "https://angry-fish.vercel.app/",
     github: "https://github.com/lordrichard6/angry_fish",
@@ -68,8 +68,9 @@ export const projects = [
     date: '2024/04',
     featured: true,
     cardId: "card22",
-    tags: ['#react', '#tailwind'],
-    hiddenTags: ['#all','#react', '#tailwind', "#javascript"]
+    tags: ['#react', '#tailwind', 'AppWrite'],
+    hiddenTags: ['#all','#react', '#tailwind', "#javascript"],
+    project_type:"Social Media App"
   },
   {
     image: "/projects/thinkbig.png",
@@ -93,7 +94,8 @@ export const projects = [
     featured: true,
     cardId: "card2",
     tags: ['#react', '#tailwind'],
-    hiddenTags: ['#all','#react', '#tailwind', "#javascript"]
+    hiddenTags: ['#all','#react', '#tailwind', "#javascript"],
+    project_type:""
   },
   {
     image: "/projects/fahrezentrale.png",
@@ -117,7 +119,8 @@ export const projects = [
     featured: true,
     cardId: "card1",
     tags: ['#angular', '#django', '#docker'],
-    hiddenTags: ['#all','#angular', '#django', '#docker', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', '#docker', "#javascript", "#python"],
+    project_type:""
   },
   {
     image: '/projects/pickwings.png',
@@ -141,7 +144,8 @@ export const projects = [
     featured: false,
     cardId: "card4",
     tags: ['#angular', '#django', '#docker'],
-    hiddenTags: ['#all','#angular', '#django', '#docker', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', '#docker', "#javascript", "#python"],
+    project_type:""
   },
   {
     image: '/projects/helping.png',
@@ -167,7 +171,8 @@ export const projects = [
     featured: false,
     cardId: "card5",
     tags: ['#joomla'],
-    hiddenTags: ['#joomla']
+    hiddenTags: ['#joomla'],
+    project_type:""
   },
   {
     image: "/projects/altynai.png",
@@ -191,7 +196,8 @@ export const projects = [
     featured: false,
     cardId: "card6",
     tags: ['#nextjs', '#tailwind', '#mongodb'],
-    hiddenTags: ['#all','#nextjs', '#tailwind', '#mongodb', "#javascript"]
+    hiddenTags: ['#all','#nextjs', '#tailwind', '#mongodb', "#javascript"],
+    project_type:""
   },
   {
     image: "/projects/bastards.png",
@@ -215,7 +221,8 @@ export const projects = [
     featured: false,
     cardId: "card7",
     tags: ['#nextjs', '#typescript'],
-    hiddenTags: ['#all','#nextjs', '#typescript', "#javascript", "#styled-components"]
+    hiddenTags: ['#all','#nextjs', '#typescript', "#javascript", "#styled-components"],
+    project_type:""
   },
   {
     image: "/projects/sardinha.png",
@@ -239,7 +246,8 @@ export const projects = [
     featured: false,
     cardId: "card8",
     tags: ['#nextjs', '#typescript', '#framer-motion'],
-    hiddenTags: ['#all','#nextjs', '#typescript', '#framer-motion', "#javascript"]
+    hiddenTags: ['#all','#nextjs', '#typescript', '#framer-motion', "#javascript"],
+    project_type:""
   },
   {
     image: "/projects/fastrent.png",
@@ -263,7 +271,8 @@ export const projects = [
     featured: true,
     cardId: "card3",
     tags: ['#reactjs', '#typescript', '#tailwind'],
-    hiddenTags: ['#all','#nextjs', '#typescript', '#tailwind', "#javascript"]
+    hiddenTags: ['#all','#nextjs', '#typescript', '#tailwind', "#javascript"],
+    project_type:""
   },
   {
     image: "/projects/skytours.png",
@@ -287,7 +296,8 @@ export const projects = [
     featured: false,
     cardId: "card9",
     tags: ['#reactjs'],
-    hiddenTags: ['#all','#react', "#javascript"]
+    hiddenTags: ['#all','#react', "#javascript"],
+    project_type:""
   },
   {
     image: "/projects/hulu.png",
@@ -311,7 +321,8 @@ export const projects = [
     featured: false,
     cardId: "card10",
     tags: ['#nextjs', '#tailwind'],
-    hiddenTags: ['#all','#nextjs', '#tailwind', "#javascript"]
+    hiddenTags: ['#all','#nextjs', '#tailwind', "#javascript"],
+    project_type:""
   },
   {
     image: "/projects/monkey.png",
@@ -335,7 +346,8 @@ export const projects = [
     featured: false,
     cardId: "card11",
     tags: ['#nextjs', '#typescript'],
-    hiddenTags: ['#all','#nextjs', '#typescript', "#javascript"]
+    hiddenTags: ['#all','#nextjs', '#typescript', "#javascript"],
+    project_type:""
   },
   // {
   //   image: "/projects/sphere.png",
@@ -479,7 +491,8 @@ export const projects = [
     featured: false,
     cardId: "card12",
     tags: ['#angular', '#django'],
-    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
+    project_type:""
   },
   {
     image: '/projects/protier.png',
@@ -503,7 +516,8 @@ export const projects = [
     featured: false,
     cardId: "card13",
     tags: ['#angular', '#django'],
-    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
+    project_type:""
   },
   {
     image: '/projects/bezahlbare-Wohnungen.png',
@@ -527,7 +541,8 @@ export const projects = [
     featured: false,
     cardId: "card14",
     tags: ['#angular', '#django'],
-    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
+    project_type:""
   },
   {
     image: '/projects/feinheit.png',
@@ -551,7 +566,8 @@ export const projects = [
     featured: false,
     cardId: "card15",
     tags: ['#angular', '#django'],
-    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
+    project_type:""
   },
   {
     image: '/projects/fcz.png',
@@ -575,6 +591,7 @@ export const projects = [
     featured: false,
     cardId: "card16",
     tags: ['#angular', '#django'],
-    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"]
+    hiddenTags: ['#all','#angular', '#django', "#javascript", "#python"],
+    project_type:""
   },
 ];

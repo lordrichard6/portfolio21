@@ -1,7 +1,7 @@
 import useTranslation from "next-translate/useTranslation";
 import { SiGithub } from 'react-icons/si';
 
-export default function ProjectCard({ imageSrc, cardHeading, cardText, cardId, icon, link, tags, github, style }) {
+export default function ProjectCard({ project_type, imageSrc, cardHeading, cardText, cardId, icon, link, tags, github, style }) {
     let { t } = useTranslation();
 
     const buttons = {
@@ -24,6 +24,7 @@ export default function ProjectCard({ imageSrc, cardHeading, cardText, cardId, i
                             {tags.map((tag, index) => <span className="mx-1" key={index}>{tag}</span>)}
                         </div>
                         <h2 className="card-title">{cardHeading}</h2>
+                        <h3 className="mt-[-10px] text-xl">{project_type}</h3>
                         <label for={cardId} className="button" aria-hidden="true">
                             {t(buttons.front)}
                         </label>

@@ -58,6 +58,7 @@ export default function ProjectsSection() {
                 icon={item.icon}
                 tags={item.tags}
                 github={item.github}
+                project_type={item.project_type}
               />
             </EntryAnimation>
           )
