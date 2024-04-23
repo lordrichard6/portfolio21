@@ -165,11 +165,16 @@ export default function CertificatesSection() {
       {certifications.map((item, i) => {
         return (
           <div key={i} className="flex items-center m-4 h-[36px]">
-            <TbCertificate className="text-4xl min-w-fit" />
-            <button className='btn min-w-fit' onClick={() => openPopup(i)}>
+            <TbCertificate className="text-4xl min-w-[36px]" />
+            <button className='btn min-w-[50px]' onClick={() => openPopup(i)}>
               {staticText.btnInfo}
             </button>
-            <img className='h-12 mx-2' src={item.image} alt={item.school} />
+            {item.image ? (
+              <img className='h-12 mx-2' src={item.image} alt={item.school} />
+            ): (
+              <></>
+            )
+          }
             <h2 className='font-semibold text-2xl lg:text-3xl max-w-[160px] lg:max-w-[300px] xl:max-w-none truncate'>{item.title}</h2>
             <p className="uppercase mb-3">{item.language}</p>
             {/* MODAL */}
@@ -185,12 +190,18 @@ export default function CertificatesSection() {
                       </div>
                       <span onClick={closePopup} className='cursor-pointer'><ImCross className="text-xl" /></span>
                     </div>
+                    {item.skills.length > 1 ? (
+                      <>
                         <p className='text-[16px] font-normal'>{staticText.skills}</p>
                         <ul className='max-h-[400px] lg:max-h-full overflow-y-scroll lg:overflow-y-visible'>
                           {item.skills.map((skill, index) => (
                             <li key={index} className='font-light'>{skill}</li>
                           ))}
                         </ul>
+                      </>
+                    ): (
+                      <></>
+                    )}
                     <div className="flex">
                       <div className="flex justify-end w-full">
                         <TbCertificate className="text-6xl font-thin text-slate-100 mr-2" />
