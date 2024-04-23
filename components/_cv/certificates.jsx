@@ -166,7 +166,7 @@ export default function CertificatesSection() {
         return (
           <div key={i} className="flex items-center m-4 h-[36px]">
             <TbCertificate className="text-4xl min-w-[36px]" />
-            <button className='btn min-w-[50px]' onClick={() => openPopup(i)}>
+            <button className='btn' onClick={() => openPopup(i)}>
               {staticText.btnInfo}
             </button>
             {item.image ? (

@@ -182,6 +182,7 @@ $section-title: 32px;
         font-family: inherit;
         background: $dark-color;
         color: $white-color;
+        min-width: fit-content!important;
 
         @apply px-4 py-2 mx-4 rounded-md cursor-pointer;
       }
