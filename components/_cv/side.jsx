@@ -9,7 +9,8 @@ import {
   FaGitAlt,
   FaUbuntu,
   FaArrowAltCircleRight,
-  FaArrowLeft  
+  FaRegArrowAltCircleRight,
+  FaArrowLeft
 } from "react-icons/fa";
 import {
   SiJavascript,
@@ -36,7 +37,7 @@ import {
   SiAnsible,
   SiKubernetes,
   SiWix,
-  SiAdobepremierepro 
+  SiAdobepremierepro
 } from "react-icons/si";
 
 import { header } from "./header"
@@ -46,6 +47,7 @@ const titles = {
   contacts: "Contacts",
   ed: "Education",
   techs: "Technologies",
+  lang: "Languages"
 }
 
 const myImage = {
@@ -234,6 +236,32 @@ export default function CVSide() {
             )
           })}
 
+        </div>
+        <div className="languages-container w-full mb-4 relative">
+          <h2>{titles.lang}</h2>
+          <hr />
+          <div className="">
+            <div className="flex items-center">
+              <h3 className="text-2xl">Portuguese</h3>
+              <FaRegArrowAltCircleRight   />
+              <h3 className="text-2xl">Native Speaker</h3>
+            </div>
+            <div className="flex items-center">
+              <h3 className="text-2xl">English</h3>
+              <FaRegArrowAltCircleRight   />
+              <h3 className="text-2xl">Fluent</h3>
+            </div>
+            <div className="flex items-center">
+              <h3 className="text-2xl">Spanish</h3>
+              <FaRegArrowAltCircleRight   />
+              <h3 className="text-2xl">Proficient</h3>
+            </div>
+            <div className="flex items-center">
+              <h3 className="text-2xl">German</h3>
+              <FaRegArrowAltCircleRight   />
+              <h3 className="text-2xl">Intermediate</h3>
+            </div>
+          </div>
         </div>
 
         <DownloadButton style="white hidden lg:flex mt-auto" />
