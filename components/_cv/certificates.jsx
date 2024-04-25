@@ -142,6 +142,16 @@ const certifications = [
     showSkills: false,
     skills: [""]
   },
+  {
+    title: "Principles of UX/UI Design",
+    school: "Meta",
+    image: "/cv/meta.png",
+    link: "https://drive.google.com/file/d/1GGKcKrCPG4h27JWQ5y2yeGoMDHcnSxn4/view?usp=drive_link",
+    language: "",
+    tags: "",
+    showSkills: false,
+    skills: [""]
+  },
 ]
 
 export default function CertificatesSection() {
